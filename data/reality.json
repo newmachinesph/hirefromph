@@ -520,44 +520,6 @@
             "why": "Read it once and you will recognise the pattern of a fake job post for the rest of your life."
           }
         ]
-      },
-      {
-        "id": "skills",
-        "title": "Free skills & AI fluency",
-        "note": "Free, real, and directly aimed at the premium described above. No enrolment fee, no upsell, walang catch.",
-        "items": [
-          {
-            "title": "AI Fluency: Framework & Foundations",
-            "org": "Anthropic, free, ~3 hours",
-            "url": "https://www.anthropic.com/learn/claude-for-you",
-            "why": "Teaches four skills, Delegation, Description, Discernment, Diligence. Pay attention to Discernment: judging whether AI output is actually good is LITERALLY the skill that the 40% premium pays for. Do this one first."
-          },
-          {
-            "title": "The All-Remote Handbook",
-            "org": "GitLab",
-            "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/",
-            "why": "The best free resource on async remote work anywhere on the internet, written by a company that has done it at scale for a decade. Read it and you will out-communicate people with five years on you."
-          },
-          {
-            "title": "DigitalJobsPH",
-            "org": "DICT, Philippine government",
-            "url": "https://dict.gov.ph/",
-            "why": "Free government freelancing training. Free is free, take the certificate, then go build the proof that actually gets you hired."
-          }
-        ]
-      },
-      {
-        "id": "business",
-        "title": "Be a real business",
-        "note": "The unglamorous half that quietly separates a ₱15,000/month worker from a ₱90,000/month professional.",
-        "items": [
-          {
-            "title": "Taxes for Freelancers in the Philippines",
-            "org": "Taxumo",
-            "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/",
-            "why": "BIR registration and the 8% flat rate for gross income ≤₱3M. Here's the part nobody says out loud: a registered freelancer can issue a proper invoice, and being invoice-capable is itself a rate differentiator, because it lets a serious client book you as a supplier instead of a favour."
-          }
-        ]
       }
     ]
   },
