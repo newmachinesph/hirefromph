@@ -18,11 +18,14 @@ import {
 
 const toolkit = [
   { title: "The Method", desc: "Six habits that make you self-sufficient: find, deconstruct, learn, vet, ask, unstick.", href: "/method", icon: "compass" },
+  { title: "Micro-Tasks", desc: "Real jobs you can do today with no client. Each one finishes as a portfolio piece — proof, not promises.", href: "/tasks", icon: "target" },
   { title: "Build Labs", desc: "Learn the anatomy and the rules — then write your own resume, portfolio, and SOPs from a blank page.", href: "/build", icon: "pencil-ruler" },
   { title: "AI Leverage", desc: "Learn to write your own prompts, so you never need someone else's prompt library.", href: "/prompts", icon: "sparkles" },
   { title: "Learn Any Tool", desc: "The transferable method for mastering any software in a weekend, not a course.", href: "/tools", icon: "layout-grid" },
   { title: "Find Work", desc: "Source and vet opportunities yourself — search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
+  { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 8 we list are just worked examples.", href: "/niches", icon: "layers" },
+  { title: "Language Premium", desc: "A second language can double your rate. Which ones pay, and where to learn them free in PH.", href: "/languages", icon: "languages" },
 ];
 
 const accentText: Record<string, string> = {

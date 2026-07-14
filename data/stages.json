@@ -14,14 +14,14 @@
     "outcome": "You'll have a working setup and the foundational skills to apply with confidence.",
     "doFirst": [
       { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker — see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
-      { "title": "Watch the full walkthrough", "desc": "Raw and uncut — the real process, no fancy editing.", "href": "#walkthrough", "cta": "Watch" },
+      { "title": "Do your first micro-task", "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.", "href": "/tasks", "cta": "Pick a task" },
       { "title": "Learn the foundation skills", "desc": "The core toolkit every online professional needs before applying.", "href": "/tools", "cta": "Learn tools" },
       { "title": "Build your first documents", "desc": "Learn the anatomy of a resume and a tracker, then write your own. No file to download.", "href": "/build", "cta": "Open Build Labs" },
       { "title": "Pick a direction", "desc": "Explore the niches so you know which lane you're heading toward.", "href": "/niches", "cta": "Explore niches" }
     ],
     "tools": [
       { "label": "Equipment Checker", "href": "/equipment" },
-      { "label": "Foundation Tools", "href": "/tools" },
+      { "label": "Micro-Tasks", "href": "/tasks" },
       { "label": "Build Labs", "href": "/build" },
       { "label": "Niche Explorer", "href": "/niches" }
     ],
@@ -41,17 +41,17 @@
     "quote": "Don't wait until you feel ready. You'll never feel 100% ready. Just apply, learn from every interview, and adjust.",
     "outcome": "You'll have a live pipeline of applications and the prep to convert interviews into offers.",
     "doFirst": [
-      { "title": "Open the Apply directory", "desc": "150+ agencies, platforms, job boards, headhunters, and BPOs — filter and search.", "href": "/apply", "cta": "Where to apply" },
-      { "title": "Fire up your AI co-pilot", "desc": "Resume & cover-letter bots plus a full prompt library for the hiring journey.", "href": "/prompts", "cta": "Open AI tools" },
-      { "title": "Prep for interviews", "desc": "Common questions, strong answers, and how to handle rejection.", "href": "#interview", "cta": "Interview prep" },
+      { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer — build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
+      { "title": "Show proof, not promises", "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.", "href": "/tasks", "cta": "Build proof" },
+      { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practise against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
       { "title": "Build your own tracker", "desc": "Learn the schema and the formulas, then build a tracker you can rebuild for anything.", "href": "/build", "cta": "Build a tracker" },
-      { "title": "Learn to negotiate", "desc": "Know your worth and how to ask for it without fear.", "href": "#negotiate", "cta": "Negotiation tips" }
+      { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof — the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
     ],
     "tools": [
-      { "label": "Apply Directory", "href": "/apply" },
-      { "label": "AI Prompt Library", "href": "/prompts" },
-      { "label": "Build Labs", "href": "/build" },
-      { "label": "Interview & Negotiation", "href": "#interview" }
+      { "label": "Find Work", "href": "/apply" },
+      { "label": "Micro-Tasks", "href": "/tasks" },
+      { "label": "AI Leverage", "href": "/prompts" },
+      { "label": "Build Labs", "href": "/build" }
     ],
     "closing": "Every 'no' moves you closer to the right 'yes'. The system is here — the work now is to apply, consistently, and follow up."
   },

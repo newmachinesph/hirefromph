@@ -29,6 +29,7 @@
     { "label": "Level Up", "href": "/level-up" },
     { "label": "30-Day Plan", "href": "/plan" },
     { "label": "Niches", "href": "/niches" },
+    { "label": "Micro-Tasks", "href": "/tasks" },
     { "label": "Build Labs", "href": "/build" },
     { "label": "AI Leverage", "href": "/prompts" },
     { "label": "Learn Tools", "href": "/tools" },
@@ -40,7 +41,7 @@
   "primaryNav": [
     { "label": "The Method", "href": "/method" },
     { "label": "Start", "href": "/start" },
-    { "label": "Get Hired", "href": "/get-hired" },
+    { "label": "Micro-Tasks", "href": "/tasks" },
     { "label": "Build Labs", "href": "/build" },
     { "label": "Find Work", "href": "/apply" }
   ],

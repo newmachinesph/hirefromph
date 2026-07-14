@@ -24,6 +24,8 @@ export type PathState = {
   equipment: Record<string, boolean>;
   /** saved wizard answers for the plan */
   planAnswers: Record<string, string>;
+  /** micro-task ids the user has completed (each one is a portfolio piece) */
+  tasks: Record<string, boolean>;
 };
 
 const EMPTY: PathState = {
@@ -34,6 +36,7 @@ const EMPTY: PathState = {
   planDays: {},
   equipment: {},
   planAnswers: {},
+  tasks: {},
 };
 
 const KEY = "devup.path.v1";
@@ -49,6 +52,7 @@ type Ctx = {
   togglePlanDay: (n: number) => void;
   toggleEquipment: (id: string) => void;
   setPlanAnswers: (a: Record<string, string>) => void;
+  toggleTask: (id: string) => void;
 };
 
 const PathContext = createContext<Ctx | null>(null);
@@ -120,6 +124,11 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       setState((s) => ({ ...s, planAnswers: a })),
     [],
   );
+  const toggleTask = useCallback(
+    (id: string) =>
+      setState((s) => ({ ...s, tasks: { ...s.tasks, [id]: !s.tasks[id] } })),
+    [],
+  );
 
   const value = useMemo<Ctx>(
     () => ({
@@ -133,6 +142,7 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       togglePlanDay,
       toggleEquipment,
       setPlanAnswers,
+      toggleTask,
     }),
     [
       state,
@@ -144,6 +154,7 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       togglePlanDay,
       toggleEquipment,
       setPlanAnswers,
+      toggleTask,
     ],
   );
 
