@@ -19,7 +19,7 @@ const difficultyTone: Record<string, "emerald" | "amber" | "coral"> = {
   Advanced: "coral",
 };
 
-// Reused from components/path-chooser.tsx — same accent system, same look.
+// Reused from components/path-chooser.tsx, same accent system, same look.
 const accentRing: Record<string, string> = {
   coral: "hover:border-coral/60 data-[active=true]:border-coral data-[active=true]:bg-coral-tint",
   emerald: "hover:border-emerald/60 data-[active=true]:border-emerald data-[active=true]:bg-emerald-tint",
@@ -231,6 +231,22 @@ function DetailCard({
         {track.blurb}
       </p>
 
+      {track.ai && (
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <div className="rounded-2xl border border-line bg-paper-3/60 p-5">
+            <h4 className="kicker flex items-center gap-2">
+              <Icon name="cpu" size={14} weight="bold" />
+              How AI is changing this niche
+            </h4>
+            <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{track.ai.change}</p>
+          </div>
+          <div className="rounded-2xl border border-emerald/30 bg-emerald-tint p-5">
+            <h4 className="kicker text-emerald">Why you are still needed</h4>
+            <p className="mt-2.5 text-sm leading-relaxed text-ink">{track.ai.human}</p>
+          </div>
+        </div>
+      )}
+
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <div>
           <h4 className="kicker">Skills you&rsquo;ll build</h4>
@@ -261,7 +277,7 @@ function DetailCard({
       </div>
 
       <div className="mt-8">
-        <h4 className="kicker">Where to learn it — free</h4>
+        <h4 className="kicker">Where to learn it, free</h4>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {track.learn.map((item) => (
             <li

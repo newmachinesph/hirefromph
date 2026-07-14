@@ -38,14 +38,14 @@ const verdictCopy: Record<
   }
 > = {
   clear: {
-    title: "No red flags checked — still verify independently.",
+    title: "No red flags checked, still verify independently.",
     body: "A clean checklist isn't proof by itself. Run the research steps below before you commit to anything.",
     tone: "emerald",
     icon: ShieldCheck,
   },
   caution: {
     title: "Proceed with caution.",
-    body: "One or two flags aren't always fatal on their own — but they're a reason to slow down and ask more questions before you commit.",
+    body: "One or two flags aren't always fatal on their own, but they're a reason to slow down and ask more questions before you commit.",
     tone: "amber",
     icon: ShieldAlert,
   },
@@ -66,7 +66,7 @@ const toneClasses: Record<"emerald" | "amber" | "coral", string> = {
 /**
  * "Is this opportunity legit?" scorer. Checking a red flag adds its weight
  * to a live score; any weight-3 flag is an immediate hard stop regardless
- * of the total. Local state only — deliberately not tied to path-context,
+ * of the total. Local state only, deliberately not tied to path-context,
  * since this is a one-off check, not a saved profile.
  */
 export function VettingTool() {
@@ -172,7 +172,7 @@ export function VettingTool() {
 /**
  * The apply.json directory, reframed as study material: filter + search the
  * same 150+ real entries, gated behind a chosen path like before. This is a
- * seed list to study and extract patterns from — not the point of the page.
+ * seed list to study and extract patterns from, not the point of the page.
  */
 export function FindWorkDirectory() {
   const [category, setCategory] = useState("all");
@@ -236,7 +236,7 @@ export function FindWorkDirectory() {
 
       <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
         Studying <span className="font-semibold text-ink">{taste.length}</span>{" "}
-        of {apply.entries.length} — extract the pattern, don&rsquo;t just click
+        of {apply.entries.length}, extract the pattern, don&rsquo;t just click
       </p>
 
       <motion.div layout className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

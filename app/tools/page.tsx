@@ -189,7 +189,7 @@ export default function ToolsPage() {
           <SectionHeading
             kicker="Practice targets, not a curriculum"
             title="The tools the market actually asks for"
-            lead="These are not a list to passively work through. They're what real job posts ask for — pick one, run the teardown on it, hit the 60-minute build. The tool is the gym, not the goal."
+            lead="These are not a list to passively work through. They're what real job posts ask for, pick one, run the teardown on it, hit the 60-minute build. The tool is the gym, not the goal."
           />
         </Reveal>
         <div className="mt-10 grid gap-5 md:grid-cols-2">
@@ -361,8 +361,7 @@ export default function ToolsPage() {
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-soft">
               The same five steps work on finding work, deconstructing a
-              deliverable, or getting unstuck. See where else it applies —
-              or go pick a niche to run it on first.
+              deliverable, or getting unstuck. See where else it applies, or go pick a niche to run it on first.
             </p>
             <div className="mt-9 flex flex-wrap justify-center gap-3">
               <ButtonLink href="/method">See the full method</ButtonLink>

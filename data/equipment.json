@@ -1,6 +1,6 @@
 {
   "intro": "The complete work-from-home setup guide for Filipino online professionals. Check what you have. Plan what to buy. All in ₱.",
-  "creed": "You don't need perfect. You need prepared. Your equipment doesn't define your skill — but being prepared shows your client you're professional.",
+  "creed": "You don't need perfect. You need prepared. Your equipment doesn't define your skill, but being prepared shows your client you're professional.",
   "categories": [
     {
       "id": "laptop",
@@ -84,6 +84,18 @@
         { "tier": "Budget", "item": "Laptop riser + cushion + external keyboard", "price": "₱1,500–₱3,000" },
         { "tier": "Standard", "item": "Ergonomic chair", "price": "₱4,000–₱9,000" },
         { "tier": "Pro", "item": "Ergonomic chair + adjustable desk", "price": "₱15,000–₱30,000" }
+      ]
+    },
+    {
+      "id": "lighting",
+      "name": "Focus Lighting",
+      "icon": "lamp",
+      "essential": false,
+      "note": "Light is a focus tool, especially on night shifts. Bright, cool-white light on your desk keeps you alert while you work. A soft light behind the monitor cuts the screen-vs-dark-room contrast that tires your eyes. Never work facing a dark room with only the screen lit.",
+      "tiers": [
+        { "tier": "Budget", "item": "Cool-white (daylight) LED desk lamp", "price": "₱300–₱800" },
+        { "tier": "Standard", "item": "Adjustable desk lamp + LED bias strip behind the monitor", "price": "₱1,000–₱2,500" },
+        { "tier": "Pro", "item": "Monitor light bar + smart bias lighting", "price": "₱2,500–₱6,000" }
       ]
     }
   ],

@@ -1,6 +1,7 @@
 {
   "intro": "Pick your lane. \"I can do anything\" means \"I'm not great at anything specific.\" Choose a niche, go deep, and become the go-to person for that one thing.",
   "note": "Pay bands are typical monthly ranges for Filipino remote professionals working with international clients in 2026. Your rate rises with specialization, results, and a premium language.",
+  "aiFraming": "One more thing before you browse: every niche below now runs on AI, and that is good news, not a threat. Inside each one you will see exactly what AI now does and why the human is still the one getting paid. The pattern never changes: AI takes the repetitive middle, you keep the judgment, the taste, and the relationship. No fear here. Just the honest split.",
   "tracks": [
     {
       "id": "executive-ops",
@@ -22,7 +23,11 @@
         { "type": "Template", "title": "Executive SOP Library", "provider": "In-app" }
       ],
       "certs": ["Google Workspace", "Notion Essentials"],
-      "clients": "Founders, C-suite, and busy solo operators who need one reliable person to run their day."
+      "clients": "Founders, C-suite, and busy solo operators who need one reliable person to run their day.",
+      "ai": {
+        "change": "AI now drafts the emails, summarizes the meetings, and suggests the schedule. The typing part of executive support is disappearing fast.",
+        "human": "But no executive trusts a model with their conflicts, their secrets, or a judgment call. Discretion, priorities, and knowing what the boss really means: that is the job now, and it is a step up, not a step out."
+      }
     },
     {
       "id": "bookkeeping",
@@ -44,7 +49,11 @@
         { "type": "YouTube", "title": "Real-Client Bookkeeping Walkthrough", "provider": "DevUp" }
       ],
       "certs": ["QuickBooks ProAdvisor", "Xero Advisor"],
-      "clients": "E-commerce, agencies, real estate, and medical practices that need clean books monthly."
+      "clients": "E-commerce, agencies, real estate, and medical practices that need clean books monthly.",
+      "ai": {
+        "change": "AI now sorts transactions and drafts monthly reports in seconds. The data-entry half of bookkeeping is basically over.",
+        "human": "Someone still has to catch the strange charge, own the accuracy, and explain what the numbers mean. Clients stopped paying for typing. They pay for a human they trust with their money, and that trust cannot be generated."
+      }
     },
     {
       "id": "social-media",
@@ -66,7 +75,11 @@
         { "type": "YouTube", "title": "30-Day Content System", "provider": "DevUp" }
       ],
       "certs": ["Meta Certified", "HubSpot Social Media"],
-      "clients": "Coaches, local businesses, and DTC brands that need consistent, on-brand content."
+      "clients": "Coaches, local businesses, and DTC brands that need consistent, on-brand content.",
+      "ai": {
+        "change": "AI can write thirty captions and generate a month of graphics before lunch. Content volume is now cheap for everyone, including your client's competitors.",
+        "human": "Which is exactly why strategy and taste got more valuable. Anyone can post. Knowing what to post, what to skip, and what this brand would never say: that judgment is the paid part, and it is yours."
+      }
     },
     {
       "id": "project-management",
@@ -88,7 +101,11 @@
         { "type": "Template", "title": "Ops Dashboard & SOPs", "provider": "In-app" }
       ],
       "certs": ["Google PM", "CAPM (optional)"],
-      "clients": "Agencies and scaling startups that need someone to own delivery, not just tasks."
+      "clients": "Agencies and scaling startups that need someone to own delivery, not just tasks.",
+      "ai": {
+        "change": "AI writes the status updates, the meeting notes, and the task breakdowns now. The admin layer of project management is melting away.",
+        "human": "What is left is the real job: unblocking people, reading the room, and making the call when two deadlines collide. Models do not manage humans. You do, and that is the part that was always worth the most."
+      }
     },
     {
       "id": "customer-success",
@@ -110,7 +127,11 @@
         { "type": "Template", "title": "Macros & Response Library", "provider": "In-app" }
       ],
       "certs": ["HubSpot Service", "Zendesk Support"],
-      "clients": "SaaS and e-commerce brands that live or die by customer retention."
+      "clients": "SaaS and e-commerce brands that live or die by customer retention.",
+      "ai": {
+        "change": "AI now answers the easy tickets instantly. The repetitive half of support is automating fast, and that is fine.",
+        "human": "The tickets that reach you now are the hard, emotional, high-stakes ones, the ones that decide whether a customer stays or leaves. Empathy under pressure is the skill, and it pays better than copy-paste replies ever did."
+      }
     },
     {
       "id": "real-estate",
@@ -132,7 +153,11 @@
         { "type": "Template", "title": "Listing & Feedback Trackers", "provider": "In-app" }
       ],
       "certs": ["Follow Up Boss", "Canva"],
-      "clients": "US-based real estate agents and teams drowning in admin and follow-up."
+      "clients": "US-based real estate agents and teams drowning in admin and follow-up.",
+      "ai": {
+        "change": "AI writes the listings, sends the follow-up sequences, and keeps the CRM filled on its own now.",
+        "human": "But real estate runs on trust and exceptions: the nervous seller, the deal about to fall apart, the agent who just needs it handled. AI runs the sequence. You run the relationship, and the relationship is the business."
+      }
     },
     {
       "id": "tech-automation",
@@ -154,7 +179,11 @@
         { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (free)" }
       ],
       "certs": ["Zapier Expert", "HubSpot Ops"],
-      "clients": "Agencies and startups that need their stack connected and their busywork gone."
+      "clients": "Agencies and startups that need their stack connected and their busywork gone.",
+      "ai": {
+        "change": "AI is the engine of this niche, and it made building radically easier: describe the workflow and it writes half of it for you.",
+        "human": "Someone still has to see the business problem, design the system, and own it when it breaks at 2am. AI multiplied what one builder can deliver and charge. That builder is you."
+      }
     },
     {
       "id": "creative-content",
@@ -176,7 +205,89 @@
         { "type": "Template", "title": "Portfolio Decks (3 styles)", "provider": "In-app" }
       ],
       "certs": ["Canva", "Google UX (optional)"],
-      "clients": "Creators, coaches, and brands that need a steady stream of scroll-stopping content."
+      "clients": "Creators, coaches, and brands that need a steady stream of scroll-stopping content.",
+      "ai": {
+        "change": "AI generates drafts, images, and edits at volume. The blank page is gone, and so is the price of a generic asset.",
+        "human": "Taste is the new scarcity. Directing the tools, keeping a brand coherent, and knowing which of fifty options is the one: a generator has no opinion. You are the opinion, and the opinion is what clients pay for."
+      }
+    },
+    {
+      "id": "streaming-live",
+      "name": "Streaming & Live Commerce",
+      "icon": "broadcast",
+      "accent": "coral",
+      "tagline": "The new work behind live content",
+      "blurb": "Run the machine behind streamers and live sellers: stream setup, chat moderation, clipping, and live-selling ops. A niche that barely existed five years ago.",
+      "pay": "$600–$1,500/mo",
+      "demandLabel": "Rising fast",
+      "demand": 4,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["OBS Studio", "StreamYard", "TikTok Live", "CapCut", "Discord"],
+      "skills": ["Live production & OBS setup", "Chat moderation & community", "Clip & highlight editing", "Live-selling coordination", "Streamer ops & scheduling"],
+      "learn": [
+        { "type": "Course", "title": "OBS Studio Quickstart", "provider": "OBS Project (free)" },
+        { "type": "Course", "title": "Discord Moderator Academy", "provider": "Discord (free)" },
+        { "type": "YouTube", "title": "CapCut short-form editing tutorials", "provider": "CapCut & creators (free)" }
+      ],
+      "certs": ["Discord Moderator Academy", "Canva"],
+      "clients": "Streamers, TikTok live sellers, gaming channels, and e-commerce brands that go live every week.",
+      "ai": {
+        "change": "AI now auto-clips highlights, writes the titles, and helps moderate basic chat. The editing grind behind live content is shrinking fast.",
+        "human": "But live is the one format AI cannot fake. Real-time judgment, hype, and community are human by definition. AI cuts the clips. You run the show."
+      }
+    },
+    {
+      "id": "podcast-audio",
+      "name": "Podcast & Audio Production",
+      "icon": "mic",
+      "accent": "indigo",
+      "tagline": "Every voice needs a producer",
+      "blurb": "Edit episodes, clean the audio, write the show notes, and turn one recording into a month of content for hosts who are too busy to do it themselves.",
+      "pay": "$800–$2,000/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 1,
+      "tools": ["Descript", "Riverside", "Adobe Podcast", "Buzzsprout", "Canva"],
+      "skills": ["Audio editing & cleanup", "Show notes & titles", "Publishing & distribution", "Clip repurposing", "Guest coordination"],
+      "learn": [
+        { "type": "Course", "title": "Descript tutorials & help center", "provider": "Descript (free)" },
+        { "type": "Course", "title": "How to Start a Podcast guides", "provider": "Buzzsprout (free)" },
+        { "type": "Course", "title": "Adobe Podcast Enhance", "provider": "Adobe (free tool)" }
+      ],
+      "certs": ["HubSpot Content Marketing", "Canva"],
+      "clients": "Coaches, B2B founders, and agencies that run podcast retainers and need every episode to just ship.",
+      "ai": {
+        "change": "AI now removes filler words, cleans noisy audio, and drafts the show notes in minutes. The tedious half of production is automating.",
+        "human": "What it cannot do is judge the conversation: which moment is the clip, what the episode is really about, what keeps a listener hooked. Ears and taste are the job. AI is your assistant editor, not your replacement."
+      }
+    },
+    {
+      "id": "faith-wellness",
+      "name": "Faith & Wellness Support",
+      "icon": "heart",
+      "accent": "emerald",
+      "tagline": "Serve communities that run on trust",
+      "blurb": "Support churches, ministries, faith-based coaches, and wellness creators: community care, events, newsletters, and the quiet systems behind them.",
+      "pay": "$600–$1,400/mo",
+      "demandLabel": "Steady",
+      "demand": 3,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["Planning Center", "Canva", "Mailchimp", "YouTube Studio", "Zoom"],
+      "skills": ["Community & member care", "Event & service coordination", "Newsletter & devotional formatting", "Donation & CRM admin", "Sermon clips & social media"],
+      "learn": [
+        { "type": "Course", "title": "Planning Center University", "provider": "Planning Center (free)" },
+        { "type": "Course", "title": "Mailchimp Academy", "provider": "Mailchimp (free)" },
+        { "type": "Course", "title": "Canva Design School", "provider": "Canva (free)" }
+      ],
+      "certs": ["Mailchimp", "Canva"],
+      "clients": "Churches and ministries, faith-based coaches and authors, and wellness or meditation creators worldwide. A natural fit for many Filipinos, and clients here stay for years.",
+      "ai": {
+        "change": "AI now drafts the newsletters, formats the devotionals, and clips sermons into shareable posts. The production side of ministry and wellness work is getting lighter.",
+        "human": "But nobody wants a chatbot at their most human moments. Care, presence, and shared values cannot be generated. AI handles the formatting. You hold the community."
+      }
     }
   ]
 }

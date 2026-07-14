@@ -7,7 +7,7 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 export const metadata = {
   title: "Reality Check",
   description:
-    "What the evidence actually says about remote and online work for Filipinos in 2026–2027. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing — every number with its source, and an honest list of what nobody knows.",
+    "What the evidence actually says about remote and online work for Filipinos in 2026–2027. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
 };
 
 const accentText: Record<string, string> = {
@@ -534,7 +534,7 @@ export default function RealityPage() {
             </p>
           </Reveal>
 
-          {/* proof — freelancers vs employees */}
+          {/* proof, freelancers vs employees */}
           <Reveal i={2}>
             <div className="mt-12 rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
               <h3 className="max-w-2xl font-display text-2xl leading-tight text-balance">
@@ -544,67 +544,15 @@ export default function RealityPage() {
                 {thesis.proof.body}
               </p>
 
-              <div className="mt-6 flex flex-wrap items-center gap-5">
-                <span className="inline-flex items-center gap-2 text-xs font-medium text-paper-2/80">
-                  <span aria-hidden className="h-3 w-3 rounded-sm bg-emerald" />
-                  {thesis.proof.legend.freelancer}
-                </span>
-                <span className="inline-flex items-center gap-2 text-xs font-medium text-paper-2/80">
-                  <span aria-hidden className="h-3 w-3 rounded-sm bg-white/25" />
-                  {thesis.proof.legend.employee}
-                </span>
-              </div>
-
-              <ul className="mt-6 flex flex-col divide-y divide-white/10">
-                {thesis.proof.rows.map((r) => (
-                  <li
-                    key={r.label}
-                    className="grid gap-2 py-4 sm:grid-cols-[minmax(0,14rem)_1fr] sm:items-center sm:gap-6"
-                  >
-                    <p className="text-sm font-medium leading-snug text-paper-2">
-                      {r.label}
-                    </p>
-                    <div className="flex flex-col gap-1.5">
-                      <div className="flex items-center gap-3">
-                        <div className="h-4 flex-1 overflow-hidden rounded-md bg-white/5">
-                          <span
-                            aria-hidden
-                            className="block h-full rounded-r-sm bg-emerald"
-                            style={{ width: `${r.freelancer}%` }}
-                          />
-                        </div>
-                        <span className="w-10 shrink-0 text-right font-mono text-xs font-semibold text-emerald">
-                          {r.freelancer}%
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="h-4 flex-1 overflow-hidden rounded-md bg-white/5">
-                          <span
-                            aria-hidden
-                            className="block h-full rounded-r-sm bg-white/25"
-                            style={{ width: `${r.employee}%` }}
-                          />
-                        </div>
-                        <span className="w-10 shrink-0 text-right font-mono text-xs font-semibold text-paper-2/60">
-                          {r.employee}%
-                        </span>
-                      </div>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-
               <div className="mt-6">
                 <a
-                  href={thesis.proof.source.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-coral"
+                  href="/indispensable"
+                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-coral"
                 >
-                  <span className="text-balance">
-                    Source: {thesis.proof.source.label}
+                  <span className="link-sweep">
+                    See the full freelancer vs employee breakdown on Become Indispensable
                   </span>
-                  <ExternalLink size={11} className="mt-0.5 shrink-0" />
+                  <ExternalLink size={14} className="opacity-70" />
                 </a>
               </div>
             </div>
@@ -631,63 +579,18 @@ export default function RealityPage() {
         </Reveal>
 
         <Reveal i={2}>
-          <p className="mt-10 max-w-2xl text-sm font-medium leading-relaxed text-ink">
-            {pay.tiersNote}
-          </p>
-        </Reveal>
-
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
-          {pay.tiers.map((t, idx) => (
-            <Reveal key={t.id} i={idx % 3}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                <span
-                  aria-hidden
-                  className={`h-1 w-10 rounded-full ${accentBar[t.accent]}`}
-                />
-                <p className={`mt-5 kicker ${accentText[t.accent]}`}>{t.level}</p>
-                <p className="mt-3 font-display text-3xl leading-none">{t.hourly}</p>
-                <p className="mt-2 font-mono text-xs text-ink-faint">{t.monthly}</p>
-                <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {t.what}
-                </p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal i={1}>
-          <div className="mt-5 rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-8 lg:p-10">
-            <h3 className="max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance">
-              {pay.disagreement.title}
-            </h3>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {pay.disagreement.body}
+          <div className="mt-10 rounded-[var(--radius-lg)] border border-line bg-paper-2 p-8 lg:p-10">
+            <p className="max-w-2xl text-sm font-medium leading-relaxed text-ink">
+              {pay.tiersNote}
             </p>
-
-            <div className="mt-7 grid max-w-2xl gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
-              <div className="rounded-2xl border border-line bg-paper-2 p-5 text-center">
-                <p className="kicker">{pay.disagreement.a.label}</p>
-                <p className="mt-3 font-display text-2xl leading-none text-ink">
-                  {pay.disagreement.a.value}
-                </p>
-              </div>
-              <p className="text-center font-display text-xl text-coral">vs</p>
-              <div className="rounded-2xl border border-line bg-paper-2 p-5 text-center">
-                <p className="kicker">{pay.disagreement.b.label}</p>
-                <p className="mt-3 font-display text-2xl leading-none text-ink">
-                  {pay.disagreement.b.value}
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-7 max-w-3xl border-l-2 border-coral pl-5 text-sm font-medium leading-relaxed text-ink">
-              {pay.disagreement.lesson}
+            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
+              We moved the full picture to its own page so it can breathe: the tier
+              ranges, the roles clients are hiring for now, full-time vs hourly vs
+              retainer, and how to price yourself. Same warning label, all the way
+              down.
             </p>
-
-            <div className="mt-7 flex flex-col gap-2 border-t border-line pt-5">
-              {pay.sources.map((s) => (
-                <Source key={s.url} label={s.label} url={s.url} />
-              ))}
+            <div className="mt-6">
+              <ButtonLink href="/salary">Open the 2027 Salary Guide</ButtonLink>
             </div>
           </div>
         </Reveal>
@@ -781,6 +684,17 @@ export default function RealityPage() {
             </div>
           ))}
         </div>
+
+        <Reveal i={1}>
+          <div className="mt-10 flex flex-col gap-3 rounded-2xl border border-line bg-paper-2 p-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="max-w-xl text-sm leading-relaxed text-ink-soft">
+              Looking for free courses, government programs, and YouTube channels
+              to actually build the skills? We keep the whole free shelf, and how
+              to judge any course, on one page.
+            </p>
+            <ArrowLink href="/resources">Open the Free Resources shelf</ArrowLink>
+          </div>
+        </Reveal>
       </section>
 
       {/* ---------------------------------------------------------- CLOSING */}

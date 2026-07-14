@@ -13,7 +13,7 @@
     "quote": "Age doesn't matter. Experience doesn't matter. What matters is your dedication to learning.",
     "outcome": "You'll have a working setup and the foundational skills to apply with confidence.",
     "doFirst": [
-      { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker — see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
+      { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker, see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
       { "title": "Do your first micro-task", "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.", "href": "/tasks", "cta": "Pick a task" },
       { "title": "Learn how to learn", "desc": "Most study habits quietly fail you. Build a study protocol from what the evidence actually supports.", "href": "/learn", "cta": "How to learn" },
       { "title": "Learn the foundation skills", "desc": "The core toolkit every online professional needs before applying.", "href": "/tools", "cta": "Learn tools" },
@@ -37,16 +37,16 @@
     "steps": "Steps 3–5",
     "accent": "amber",
     "kicker": "Stage 02",
-    "subtitle": "Land your first client — systematically",
+    "subtitle": "Land your first client, systematically",
     "summary": "Build assets that get replies, work the directory of 150+ places to apply, track everything, and close the offer. Be systematic, not random.",
     "quote": "Don't wait until you feel ready. You'll never feel 100% ready. Just apply, learn from every interview, and adjust.",
     "outcome": "You'll have a live pipeline of applications and the prep to convert interviews into offers.",
     "doFirst": [
-      { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer — build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
+      { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer, build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
       { "title": "Show proof, not promises", "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.", "href": "/tasks", "cta": "Build proof" },
       { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practise against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
       { "title": "Track every application", "desc": "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", "href": "/tracker", "cta": "Open tracker" },
-      { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof — the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
+      { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof, the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
     ],
     "tools": [
       { "label": "Find Work", "href": "/apply" },
@@ -54,7 +54,7 @@
       { "label": "Micro-Tasks", "href": "/tasks" },
       { "label": "Build Labs", "href": "/build" }
     ],
-    "closing": "Every 'no' moves you closer to the right 'yes'. The system is here — the work now is to apply, consistently, and follow up."
+    "closing": "Every 'no' moves you closer to the right 'yes'. The system is here, the work now is to apply, consistently, and follow up."
   },
   {
     "id": "deliver",
@@ -67,13 +67,13 @@
     "kicker": "Stage 03",
     "subtitle": "Impress your client and become reliable",
     "summary": "Onboard like a pro, systemize your work with SOPs and trackers, and communicate in a way that makes clients trust you with more.",
-    "quote": "Your first week is your audition. It's not about being perfect — it's about being organized, responsive, and showing up.",
-    "outcome": "You'll run your work on systems, not vibes — the reason clients keep and refer you.",
+    "quote": "Your first week is your audition. It's not about being perfect, it's about being organized, responsive, and showing up.",
+    "outcome": "You'll run your work on systems, not vibes, the reason clients keep and refer you.",
     "doFirst": [
       { "title": "Write your own first-week plan", "desc": "Learn what a first week must prove, then write the plan yourself.", "href": "/build", "cta": "Open the lab" },
-      { "title": "Learn any tool, fast", "desc": "The transferable method for mastering software in a weekend — not a tutorial to follow.", "href": "/tools", "cta": "Learn the method" },
+      { "title": "Learn any tool, fast", "desc": "The transferable method for mastering software in a weekend, not a tutorial to follow.", "href": "/tools", "cta": "Learn the method" },
       { "title": "Learn to write SOPs", "desc": "Document any process so well you never explain it twice. You write them; you own them.", "href": "/build", "cta": "Open the lab" },
-      { "title": "Build the trackers your role needs", "desc": "Schema, formulas, and judgment — so you can build a tracker for anything.", "href": "/build", "cta": "Build trackers" },
+      { "title": "Build the trackers your role needs", "desc": "Schema, formulas, and judgment, so you can build a tracker for anything.", "href": "/build", "cta": "Build trackers" },
       { "title": "Communicate like a professional", "desc": "Status updates, async etiquette, and managing expectations.", "href": "/method", "cta": "The ASK method" }
     ],
     "tools": [
@@ -99,9 +99,9 @@
     "outcome": "You'll own a niche, command a premium rate, and build a career that compounds.",
     "doFirst": [
       { "title": "Pick and master a niche", "desc": "Curated learning per specialization in the Niche Learning Hub.", "href": "/niches", "cta": "Choose niche" },
-      { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin can double your rate. Here's where to learn — free.", "href": "/languages", "cta": "Language premium" },
+      { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin can double your rate. Here's where to learn, free.", "href": "/languages", "cta": "Language premium" },
       { "title": "Automate the repetitive", "desc": "Codes for efficiency, Zapier/Make flows, and reusable systems.", "href": "/tools", "cta": "Automation" },
-      { "title": "Build the advanced artifacts", "desc": "Dashboards, decision frameworks, and pro SOPs — built by you, from the rules up.", "href": "/build", "cta": "Open Build Labs" },
+      { "title": "Build the advanced artifacts", "desc": "Dashboards, decision frameworks, and pro SOPs, built by you, from the rules up.", "href": "/build", "cta": "Open Build Labs" },
       { "title": "Teach it back", "desc": "Teaching is how you find the gaps you can't see. It's the last step of mastery.", "href": "/method", "cta": "The method" }
     ],
     "tools": [

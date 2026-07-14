@@ -21,19 +21,19 @@ const ICON_TONE: Record<number, string> = {
 const VERDICT_TIERS = [
   {
     min: 80,
-    label: "Strong niche — go deep",
+    label: "Strong niche, go deep",
     tone: "emerald" as const,
     desc: "It clears the bar across the board. The main risk now is indecision, not the niche itself.",
   },
   {
     min: 60,
-    label: "Workable — mind the weak spots",
+    label: "Workable, mind the weak spots",
     tone: "amber" as const,
     desc: "Solid enough to start. Look at whatever you scored low and have a plan for it before you commit fully.",
   },
   {
     min: 40,
-    label: "Risky — proceed with eyes open",
+    label: "Risky, proceed with eyes open",
     tone: "coral" as const,
     desc: "More than one fundamental is shaky. Not a hard no, but don't bet your first 90 days on this alone.",
   },
@@ -213,7 +213,7 @@ export function NicheScorer() {
                 <ul className="mt-3 flex flex-col gap-2">
                   {weakSpots.map((c) => (
                     <li key={c.id} className="text-xs leading-relaxed text-ink-soft">
-                      <span className="font-semibold text-ink">{c.name}</span> —{" "}
+                      <span className="font-semibold text-ink">{c.name}</span>, {" "}
                       {c.why}
                     </li>
                   ))}
@@ -222,7 +222,7 @@ export function NicheScorer() {
             ) : (
               <p className="flex items-center gap-1.5 text-xs leading-relaxed text-ink-soft">
                 <Sparkles size={13} className="text-emerald" /> No weak spots scored
-                below a 3 — nothing glaring to flag.
+                below a 3, nothing glaring to flag.
               </p>
             )}
           </div>

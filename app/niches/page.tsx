@@ -18,14 +18,14 @@ const CRITERION_ICON_TONE = [
 export const metadata: Metadata = {
   title: "Niche Learning Hub",
   description:
-    "Pick your lane and go deep. Explore 8 online-career niches — pay bands, demand, skills, free courses, and certifications — then choose your path.",
+    "Pick your lane and go deep. Explore 11 online-career niches, including new lanes like streaming, podcast production, and faith-based support, with pay bands, demand, skills, free courses, and how AI is changing each one.",
 };
 
 const steps = [
   {
     n: "01",
     title: "Pick a niche",
-    desc: "Browse the 8 lanes below and see the pay, demand, and skills for each.",
+    desc: "Browse the 11 lanes below and see the pay, demand, and skills for each.",
     icon: "compass",
   },
   {
@@ -37,7 +37,7 @@ const steps = [
   {
     n: "03",
     title: "Get certified",
-    desc: "Earn the certs clients actually look for — most of them free.",
+    desc: "Earn the certs clients actually look for, most of them free.",
     icon: "award",
   },
   {
@@ -121,7 +121,7 @@ export default function NichesPage() {
             <SectionHeading
               kicker="Answer it yourself"
               title="How to research each question"
-              lead="Not vibes, not a course seller's confidence — five concrete moves that get you a real answer."
+              lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer."
             />
           </Reveal>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -160,7 +160,7 @@ export default function NichesPage() {
             <SectionHeading
               kicker="Try it now"
               title="Score a niche yourself"
-              lead="Any niche — including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
+              lead="Any niche, including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
             />
           </Reveal>
           <Reveal i={2} className="mt-8">
@@ -203,7 +203,7 @@ export default function NichesPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <SectionHeading
-            kicker="8 worked examples"
+            kicker="11 worked examples"
             title="Tap a niche to see the full breakdown"
             lead={
               <>
@@ -212,7 +212,17 @@ export default function NichesPage() {
             }
           />
         </Reveal>
-        <Reveal i={1} className="mt-10">
+        <Reveal i={1}>
+          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-emerald/30 bg-emerald-tint p-6">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-emerald text-white">
+              <Icon name="cpu" size={18} />
+            </span>
+            <p className="max-w-3xl text-sm font-medium leading-relaxed text-ink">
+              {tracks.aiFraming}
+            </p>
+          </div>
+        </Reveal>
+        <Reveal i={2} className="mt-10">
           <NicheExplorer />
         </Reveal>
       </section>

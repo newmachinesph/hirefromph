@@ -11,7 +11,7 @@ export default function NotFound() {
         This page wandered off its path.
       </h1>
       <p className="mt-4 max-w-md text-ink-soft">
-        No worries — every online professional takes a wrong turn or two. Let&rsquo;s
+        No worries, every online professional takes a wrong turn or two. Let&rsquo;s
         get you back to something useful.
       </p>
       <div className="mt-8 flex flex-wrap justify-center gap-3">

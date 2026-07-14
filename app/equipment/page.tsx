@@ -53,7 +53,7 @@ export default function EquipmentPage() {
           <SectionHeading
             kicker="Check what you have"
             title="Your setup, mapped to real ₱ prices"
-            lead="Tick off what you already own, pick a tier for the rest, and watch your readiness — and your budget — update live."
+            lead="Tick off what you already own, pick a tier for the rest, and watch your readiness, and your budget, update live."
           />
         </Reveal>
         <div className="mt-10">

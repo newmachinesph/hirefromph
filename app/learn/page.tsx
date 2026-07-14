@@ -139,7 +139,7 @@ export default function LearnPage() {
                   <Icon name="shield-check" size={18} />
                 </span>
                 <div>
-                  <p className="kicker text-coral">VET lesson — who profits?</p>
+                  <p className="kicker text-coral">VET lesson, who profits?</p>
                   <p className="mt-2 text-sm leading-relaxed text-paper-2">
                     {learning.myth.vetLesson}
                   </p>
@@ -156,7 +156,7 @@ export default function LearnPage() {
           <SectionHeading
             kicker="The curriculum"
             title="What actually works"
-            lead="Eight techniques with real evidence behind them — not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
+            lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
           />
         </Reveal>
 
@@ -184,7 +184,7 @@ export default function LearnPage() {
             <SectionHeading
               kicker="The self-deception is the point"
               title="What feels productive but isn't"
-              lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives — it's comfortable, and comfort is not evidence."
+              lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives, it's comfortable, and comfort is not evidence."
             />
           </Reveal>
           <div className="mt-10 flex flex-col gap-4">
@@ -232,8 +232,8 @@ export default function LearnPage() {
         <Reveal>
           <SectionHeading
             kicker="A different job entirely"
-            title="Focus systems — not learning methods"
-            lead="Everything above builds knowledge. Everything below manages your attention and your clock. Confusing the two is the most common mistake on this page's topic — pair one system from here with a few techniques from above, and you have a real session."
+            title="Focus systems, not learning methods"
+            lead="Everything above builds knowledge. Everything below manages your attention and your clock. Confusing the two is the most common mistake on this page's topic, pair one system from here with a few techniques from above, and you have a real session."
           />
         </Reveal>
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -306,7 +306,7 @@ export default function LearnPage() {
             </h2>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-soft">
               A technique changes nothing until you run it on something real.
-              The method page covers how to teach yourself any skill — the
+              The method page covers how to teach yourself any skill, the
               task board is where you put retrieval, spacing, and feedback to
               work today.
             </p>

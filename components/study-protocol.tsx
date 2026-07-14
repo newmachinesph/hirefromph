@@ -86,11 +86,11 @@ function buildProtocol(answers: Record<string, string>): ProtocolSummary | null 
   const text = [
     "MY STUDY PROTOCOL",
     "",
-    `Session shape: ${sessionShape.label} — ${sessionShape.pattern}, ${sessionShape.perDay}`,
+    `Session shape: ${sessionShape.label}, ${sessionShape.pattern}, ${sessionShape.perDay}`,
     sessionShape.desc,
     "",
     "My 3 techniques:",
-    ...techniques.map((t, i) => `${i + 1}. ${t.name} — ${t.how}`),
+    ...techniques.map((t, i) => `${i + 1}. ${t.name}, ${t.how}`),
     "",
     `Why these: ${goalRule.note}`,
     "",
@@ -280,7 +280,7 @@ function ProtocolResult({
         <div>
           <p className="kicker">Your study protocol</p>
           <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
-            {summary.sessionShape.label} —{" "}
+            {summary.sessionShape.label}, {" "}
             <span className="text-coral">{summary.sessionShape.pattern}</span>
           </h3>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">

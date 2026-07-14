@@ -1,21 +1,21 @@
 {
   "kicker": "Learn any tool",
   "headline": "The tool will change. The way you learn it won't.",
-  "intro": "Tools change every year — new CRM, new AI copilot, new dashboard nobody trained you on. Clients don't care which tools you already know. They care whether you can pick up the one they use, fast, without hand-holding. This page does not teach you software. It teaches the method for learning any software, so the next unfamiliar tool is a weekend, not a wall.",
+  "intro": "Tools change every year, new CRM, new AI copilot, new dashboard nobody trained you on. Clients don't care which tools you already know. They care whether you can pick up the one they use, fast, without hand-holding. This page does not teach you software. It teaches the method for learning any software, so the next unfamiliar tool is a weekend, not a wall.",
   "creed": "The tool you learn today will be replaced. The way you learn tools will not. Master the method and every new tool is a weekend, not a course.",
   "method": [
     {
       "n": 1,
       "title": "Define the outcome",
       "desc": "Not \"learn Notion.\" Instead: \"build a client-ready project tracker in Notion, from a blank workspace, with no template.\" A topic never ends. An outcome tells you exactly when you're done.",
-      "doThis": "Write one sentence naming the real job you need to do — the deliverable, not the tool's name.",
+      "doThis": "Write one sentence naming the real job you need to do, the deliverable, not the tool's name.",
       "icon": "target",
       "accent": "coral"
     },
     {
       "n": 2,
       "title": "Find the 20%",
-      "desc": "Every tool has a fat manual and a thin daily reality. Most of what's in the docs, you'll touch once a year or never. Real job posts and real workflows show you which functions actually get used — ignore the rest for now.",
+      "desc": "Every tool has a fat manual and a thin daily reality. Most of what's in the docs, you'll touch once a year or never. Real job posts and real workflows show you which functions actually get used, ignore the rest for now.",
       "doThis": "Read 3 real job posts or workflow guides for the role. List the 5–8 functions they actually mention.",
       "icon": "search",
       "accent": "indigo"
@@ -23,7 +23,7 @@
     {
       "n": 3,
       "title": "Build a real artifact in the first hour",
-      "desc": "Skip the six-hour course. Watch twenty minutes of the fastest reference you can find, then build something real — and probably broken. A broken artifact tells you exactly what you don't know yet. A video never does.",
+      "desc": "Skip the six-hour course. Watch twenty minutes of the fastest reference you can find, then build something real, and probably broken. A broken artifact tells you exactly what you don't know yet. A video never does.",
       "doThis": "Set a 60-minute timer. Produce one finished, if rough, thing: a sheet, an automation, a dashboard. Stop when the timer stops.",
       "icon": "hammer",
       "accent": "emerald"
@@ -31,7 +31,7 @@
     {
       "n": 4,
       "title": "Get feedback that stings",
-      "desc": "Comfortable feedback — \"looks great!\" — teaches nothing. Ask a real person to be blunt, or paste your work into AI and ask it to critique against the rules of the job: the gaps, the missed edge case, what a client would reject.",
+      "desc": "Comfortable feedback, \"looks great!\", teaches nothing. Ask a real person to be blunt, or paste your work into AI and ask it to critique against the rules of the job: the gaps, the missed edge case, what a client would reject.",
       "doThis": "Ask directly: \"What's wrong with this? Be specific and unkind.\" Fix the top three things it names.",
       "icon": "flame",
       "accent": "amber"
@@ -39,30 +39,30 @@
     {
       "n": 5,
       "title": "Teach it back",
-      "desc": "Explaining something out loud — to a beginner, or in a one-page SOP — is the fastest way to find the parts you only half-understand. If you stumble explaining a step, that's the part you haven't actually learned yet.",
+      "desc": "Explaining something out loud, to a beginner, or in a one-page SOP, is the fastest way to find the parts you only half-understand. If you stumble explaining a step, that's the part you haven't actually learned yet.",
       "doThis": "Write a one-page SOP for the artifact you built, as if training someone else to redo it tomorrow.",
       "icon": "graduation-cap",
       "accent": "coral"
     }
   ],
   "teardown": {
-    "intro": "Run this on any tool before you open a single tutorial. Six questions, answered in writing, in about fifteen minutes. It works because every tool — no matter how unfamiliar — is really just a set of nouns (the things it manages) and verbs (what you do to them). Learn those and you've learned the tool.",
+    "intro": "Run this on any tool before you open a single tutorial. Six questions, answered in writing, in about fifteen minutes. It works because every tool, no matter how unfamiliar, is really just a set of nouns (the things it manages) and verbs (what you do to them). Learn those and you've learned the tool.",
     "questions": [
       {
         "q": "What job does this tool exist to do?",
         "why": "One sentence. A CRM exists to track who might buy and who already did. If you can't name the job in a sentence, you haven't found it yet."
       },
       {
-        "q": "What are its core objects — the nouns?",
+        "q": "What are its core objects, the nouns?",
         "why": "Sheets = cells, ranges, formulas. A CRM = contacts, deals, pipelines. A design tool = frames, layers, components. Name the 3–5 things everything else is built from."
       },
       {
-        "q": "What are the 5 actions I'll do daily — the verbs?",
-        "why": "Create, filter, assign, send, report — whatever they are for this tool. Master these five before you touch anything else in the menu."
+        "q": "What are the 5 actions I'll do daily, the verbs?",
+        "why": "Create, filter, assign, send, report, whatever they are for this tool. Master these five before you touch anything else in the menu."
       },
       {
         "q": "How do I import and export?",
-        "why": "Never get locked in. If you can't get your data out in an open format — CSV, PDF, an API — you don't own your work. The vendor does."
+        "why": "Never get locked in. If you can't get your data out in an open format, CSV, PDF, an API, you don't own your work. The vendor does."
       },
       {
         "q": "What breaks, and how do I undo it?",
@@ -70,7 +70,7 @@
       },
       {
         "q": "Where are its real docs?",
-        "why": "The vendor's own help center or docs site — not a stranger's opinion of it in a video. Bookmark it before you need it at 11pm."
+        "why": "The vendor's own help center or docs site, not a stranger's opinion of it in a video. Bookmark it before you need it at 11pm."
       }
     ],
     "principle": "Learning the nouns and verbs of a tool is how you learn it in hours instead of weeks."
@@ -78,12 +78,12 @@
   "evaluate": [
     {
       "title": "Is it in real job posts?",
-      "desc": "Search 10 live listings in your niche. If a tool doesn't show up in any of them, don't front-load it — learn it on demand if a client ever asks.",
+      "desc": "Search 10 live listings in your niche. If a tool doesn't show up in any of them, don't front-load it, learn it on demand if a client ever asks.",
       "icon": "briefcase"
     },
     {
       "title": "Free tier or free certification?",
-      "desc": "If you can't touch it without a company card, it's a bad first tool. Vendors that want adoption make the entry point free — see below.",
+      "desc": "If you can't touch it without a company card, it's a bad first tool. Vendors that want adoption make the entry point free, see below.",
       "icon": "gift"
     },
     {
@@ -98,17 +98,17 @@
     }
   ],
   "freeCerts": {
-    "intro": "Vendors give away certifications on purpose — a certified user is a lifelong user. HubSpot, Google, Meta, Canva, and Notion all fund free certification programs to drive adoption. We won't hand you a list that goes stale in a year. Find your own, live, in under five minutes.",
+    "intro": "Vendors give away certifications on purpose, a certified user is a lifelong user. HubSpot, Google, Meta, Canva, and Notion all fund free certification programs to drive adoption. We won't hand you a list that goes stale in a year. Find your own, live, in under five minutes.",
     "steps": [
       {
         "n": 1,
         "title": "Search the pattern, not a list",
-        "desc": "\"<tool name> certification free\" or \"<tool name> academy.\" Every major vendor runs one, and a live search puts today's real link in front of you — not a dead one from an old blog post."
+        "desc": "\"<tool name> certification free\" or \"<tool name> academy.\" Every major vendor runs one, and a live search puts today's real link in front of you, not a dead one from an old blog post."
       },
       {
         "n": 2,
         "title": "Go to the vendor's own domain",
-        "desc": "hubspot.com/academy, skillshop.withgoogle.com, and so on — never a reseller course pretending to be official. If it isn't on the vendor's own domain, it isn't the free one."
+        "desc": "hubspot.com/academy, skillshop.withgoogle.com, and so on, never a reseller course pretending to be official. If it isn't on the vendor's own domain, it isn't the free one."
       },
       {
         "n": 3,
@@ -118,7 +118,7 @@
     ]
   },
   "codeLiteracy": {
-    "intro": "The snippets below aren't a library to paste blindly — they're worked examples. Study one closely and you can write your own for any spreadsheet or inbox task you actually have.",
+    "intro": "The snippets below aren't a library to paste blindly, they're worked examples. Study one closely and you can write your own for any spreadsheet or inbox task you actually have.",
     "questions": [
       {
         "q": "What triggers it?",
@@ -130,7 +130,7 @@
       },
       {
         "q": "What does it change?",
-        "desc": "Which cell does it write to — and could it silently overwrite something you needed? Test on a copy first, always."
+        "desc": "Which cell does it write to, and could it silently overwrite something you needed? Test on a copy first, always."
       },
       {
         "q": "What happens with different data?",
@@ -141,12 +141,12 @@
   "practice": [
     {
       "title": "The 60-minute build",
-      "desc": "Pick one tool from the landscape below. In one hour, produce a real, finished-if-rough artifact — a sheet, an automation, a dashboard. No tutorial past minute twenty.",
+      "desc": "Pick one tool from the landscape below. In one hour, produce a real, finished-if-rough artifact, a sheet, an automation, a dashboard. No tutorial past minute twenty.",
       "icon": "timer"
     },
     {
       "title": "The teardown run",
-      "desc": "Run the Tool Teardown above on that same tool. Write the six answers down — don't just think them.",
+      "desc": "Run the Tool Teardown above on that same tool. Write the six answers down, don't just think them.",
       "icon": "clipboard-list"
     },
     {

@@ -7,7 +7,7 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 export const metadata = {
   title: "Career Simulator",
   description:
-    "Time does not raise your rate. Set your craft, your AI, and what you sell — then watch 36 months of a generic task-taker and 36 months of a specialist diverge. A model, not a prediction, with every assumption tagged.",
+    "Time does not raise your rate. Set your craft, your AI, and what you sell, then watch 36 months of a generic task-taker and 36 months of a specialist diverge. A model, not a prediction, with every assumption tagged.",
 };
 
 function Source({ label, url }: { label: string; url: string }) {

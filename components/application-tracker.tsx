@@ -46,13 +46,13 @@ const LOW_REPLY_RATE_THRESHOLD = 0.1;
 const inputCls =
   "w-full rounded-xl border border-line-strong bg-paper px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink";
 
-/** Local calendar date — matches what <input type="date"> shows and returns. */
+/** Local calendar date, matches what <input type="date"> shows and returns. */
 function todayISO(): string {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 }
 
-/** UTC-midnight timestamp for a YYYY-MM-DD string — pure calendar-date arithmetic, no TZ drift. */
+/** UTC-midnight timestamp for a YYYY-MM-DD string, pure calendar-date arithmetic, no TZ drift. */
 function toUTCms(iso: string): number {
   const [y, m, d] = iso.split("-").map(Number);
   return Date.UTC(y || 1970, (m || 1) - 1, d || 1);
@@ -190,7 +190,7 @@ export function ApplicationTracker() {
   function handleDelete(app: Application) {
     if (
       confirm(
-        `Delete the application to ${app.company} — ${app.role}? This can't be undone.`,
+        `Delete the application to ${app.company}, ${app.role}? This can't be undone.`,
       )
     ) {
       deleteApplication(app.id);
@@ -229,7 +229,7 @@ export function ApplicationTracker() {
               )}
             >
               {overdue.length === 0
-                ? "Nothing overdue — you're on top of it."
+                ? "Nothing overdue, you're on top of it."
                 : `${overdue.length} application${overdue.length === 1 ? "" : "s"} need${overdue.length === 1 ? "s" : ""} a follow-up now.`}
             </p>
           </div>
@@ -246,7 +246,7 @@ export function ApplicationTracker() {
                 >
                   <div>
                     <p className="text-sm font-semibold text-ink">
-                      {a.company} — {a.role}
+                      {a.company}, {a.role}
                     </p>
                     <p className="text-xs text-ink-faint">
                       {diff === 0
@@ -255,7 +255,7 @@ export function ApplicationTracker() {
                     </p>
                   </div>
                   <select
-                    aria-label={`Update status for ${a.company} — ${a.role}`}
+                    aria-label={`Update status for ${a.company}, ${a.role}`}
                     value={a.status}
                     onChange={(e) =>
                       updateApplication(a.id, {
@@ -306,7 +306,7 @@ export function ApplicationTracker() {
               aria-hidden
             />
             <p className="text-sm leading-relaxed text-[#6b4d00]">
-              Reply rate is under 10% over {stats.total} applications — at this
+              Reply rate is under 10% over {stats.total} applications, at this
               sample size that&rsquo;s not bad luck, it&rsquo;s a signal. The
               problem is probably the application, not the volume.{" "}
               <Link
@@ -437,7 +437,7 @@ export function ApplicationTracker() {
       {/* PIPELINE */}
       <div>
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="kicker">The pipeline — {applications.length} total</p>
+          <p className="kicker">The pipeline, {applications.length} total</p>
           {applications.length > 0 && (
             <CopyButton value={tsv} label="Copy pipeline as TSV" />
           )}
@@ -449,7 +449,7 @@ export function ApplicationTracker() {
             <p className="max-w-md text-sm leading-relaxed text-ink-soft">
               Nothing logged yet. The discipline is simple: every application
               gets a row, and every &ldquo;applied&rdquo; gets a follow-up
-              date. Log your first one above — future you will thank you in
+              date. Log your first one above, future you will thank you in
               four days.
             </p>
           </div>
@@ -509,7 +509,7 @@ function ApplicationRow({
         <div className="flex items-center gap-2">
           <Pill tone={STATUS_TONE[app.status]}>{STATUS_LABEL[app.status]}</Pill>
           <select
-            aria-label={`Change status for ${app.company} — ${app.role}`}
+            aria-label={`Change status for ${app.company}, ${app.role}`}
             value={app.status}
             onChange={(e) =>
               updateApplication(app.id, { status: e.target.value as AppStatus })
@@ -528,15 +528,15 @@ function ApplicationRow({
       <div className="mt-4 grid gap-3 text-xs text-ink-faint sm:grid-cols-4">
         <div>
           <span className="block font-semibold text-ink-soft">Source</span>
-          {app.source || "—"}
+          {app.source || ", "}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Applied</span>
-          {app.appliedAt || "—"}
+          {app.appliedAt || ", "}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Follow-up</span>
-          {app.followUpAt || "—"}
+          {app.followUpAt || ", "}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Link</span>
@@ -550,7 +550,7 @@ function ApplicationRow({
               Open <ArrowUpRight size={11} />
             </a>
           ) : (
-            "—"
+            ", "
           )}
         </div>
       </div>
