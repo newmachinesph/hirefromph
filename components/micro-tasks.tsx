@@ -59,8 +59,11 @@ const KNOWN_ROUTES = [
   "/deliver",
   "/level-up",
   "/languages",
-  "/wins",
   "/equipment",
+  "/reality",
+  "/conduct",
+  "/english",
+  "/simulator",
 ];
 const ROUTE_PATTERN = new RegExp(
   `(${KNOWN_ROUTES.map((r) => r.replace("/", "\\/")).join("|")})(?=[\\s.,)]|$)`,

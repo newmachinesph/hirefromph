@@ -1,10 +1,14 @@
 # DevUp — Online Career Portal
 
-**DevUp** — *developing upwards*: every step compounds on the last, and every skill you gain is one you keep. An awwwards-level, light-mode learning portal that takes Filipinos from zero to a thriving remote career as an **online professional** (never an "assistant"). Next.js 16 · React 19 · Tailwind v4 · `motion`. Frontend only — all content lives in `data/*.json`, no backend.
+**DevUp** — *developing upwards*: every step compounds on the last, and every skill you gain is one you keep. A light-mode learning portal that takes Filipinos from zero to a thriving remote career as an **online professional** (never an "assistant"). Next.js 16 · React 19 · Tailwind v4 · `motion`. Frontend only — all content lives in `data/*.json`, no backend.
 
 ## The idea: path-gated depth
 
-Everything is here (guides, tools, prompts, templates, a hiring directory), but the front stays calm on purpose. A visitor **chooses a career path**, and the depth unlocks — tailored to them. Path choice persists in `localStorage` via `lib/path-context.tsx` and personalizes the header, the `/path` dashboard, and gated sections (`components/path-gate.tsx`).
+Everything is here (methods, labs, tools, a hiring directory), but the front stays calm on purpose. A visitor **chooses a career path**, and the depth unlocks — tailored to them. Path choice persists in `localStorage` via `lib/path-context.tsx` and personalizes the header, the `/path` dashboard, and gated sections (`components/path-gate.tsx`).
+
+## The honesty rule
+
+This site teaches integrity, so it holds itself to it. **No fabricated social proof, ever** — no invented testimonials, no made-up learner counts, no unsourced income claims. Any statistic on the site renders with a visible, clickable link to its primary source, and where good data simply does not exist (time-to-first-client, freelancer churn rates) `/reality` says so out loud rather than inventing a number. If you add content, this is the bar.
 
 ## Run
 
@@ -21,21 +25,28 @@ set PORT=3000 && npx next start      # serve the build (Windows: PORT env, not -
 |---|---|
 | `/` | Home — hero, path chooser, journey, toolkit, language premium |
 | `/start` `/get-hired` `/deliver` `/level-up` | The 4 career stages (9-step roadmap) |
+| `/method` | The six core methods — find, deconstruct, learn, vet, ask, unstick |
+| `/learn` | How to learn — what the evidence on studying actually supports |
+| `/reality` | **Reality check** — sourced market data, what AI is doing to this work, and the claims nobody can back up |
+| `/simulator` | **Career simulator** — model 3 years; see the generalist flatline against a specialist's curve |
+| `/english` | **English at work** — the habits that make fluent English read as junior, plus a live message audit |
+| `/conduct` | **Conduct & integrity** — do's and don'ts, real firing/lawsuit cases, and an oath you write yourself |
+| `/tasks` | Micro-tasks — real jobs you can do today, each finishing as a portfolio piece |
+| `/build` | Build labs — write your own resume, portfolio, and SOPs from a blank page |
 | `/path` | Personalized dashboard (progress, next moves, toolkit) |
 | `/plan` | Interactive 30-day plan wizard (5 questions → tracked day-by-day plan) |
-| `/niches` | Niche explorer — pick a lane, see pay/tools/learning |
-| `/prompts` | AI bots + copy-paste prompt library |
-| `/templates` | In-app template viewer + copy (replaces Google Drive) |
-| `/tools` | Tool tutorials + "codes for efficiency" |
+| `/niches` | Niche explorer + a weighted rubric to evaluate any niche yourself |
+| `/prompts` | AI leverage — learn to write your own prompts |
+| `/tools` | The transferable method for learning any tool fast |
+| `/tracker` | Application pipeline with a follow-up radar |
+| `/apply` | Source and vet opportunities yourself — search operators, red flags |
+| `/languages` | Language premium + where to learn free in PH (TESDA, Japan Foundation, etc.) |
 | `/equipment` | Interactive equipment checker with ₱ estimates |
-| `/apply` | Filterable directory of where to get hired |
-| `/languages` | **New:** language premium + where to learn free in PH (TESDA, Japan Foundation, etc.) |
-| `/wins` | Testimonial gallery (placeholder stories) |
 
 ## Content
 
-All copy and data are in `data/`. Swap the JSON to change the site — no code edits needed. Images are CSS/SVG placeholders (no external assets), ready to replace with real media.
+All copy and data are in `data/`. Swap the JSON to change the site — no code edits needed. Nav and footer both read from `site.json` → `navGroups`, so adding a route to that array is all it takes to surface it in both. Images are CSS/SVG placeholders (no external assets).
 
 ## Design
 
-Warm-paper editorial system: Fraunces display serif × Geist sans, coral signature + emerald "growth" accents, scroll-reveal motion, grain texture. Tokens in `app/globals.css`. Shared conventions in `BUILD_GUIDE.md`.
+Warm-paper editorial system: Bricolage Grotesque display × Geist sans, coral signature + emerald "growth" accents, scroll-reveal motion, grain texture. Tokens in `app/globals.css`. Shared conventions in `BUILD_GUIDE.md` — **read it before building any page.**

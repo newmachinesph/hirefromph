@@ -236,7 +236,7 @@ export function StagePage({ id }: { id: string }) {
               {next ? (
                 <ButtonLink href={next.href}>Continue to {next.title}</ButtonLink>
               ) : (
-                <ButtonLink href="/wins">Share your win</ButtonLink>
+                <ButtonLink href="/simulator">Model your next 3 years</ButtonLink>
               )}
             </div>
           </div>

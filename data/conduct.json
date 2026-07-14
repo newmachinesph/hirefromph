@@ -1,0 +1,260 @@
+{
+  "intro": "Skill gets you hired. Conduct is what keeps you hired — and what quietly ends careers when it fails. This page is not a lecture on being nice. It is the specific, documented behaviour that gets remote professionals fired, sued, delisted, or criminally charged, and the standard that keeps you out of all of it.",
+  "creed": "Your reputation is the only asset a client can't take from you — and the only one you can destroy by yourself, in a single afternoon.",
+  "whyItMatters": "You will be judged on trust long before you are judged on talent. A client who cannot verify your work, your identity, or your hours will not hire you — and after 2024, they are checking. The good news: every single rule below is easy to keep. Almost nobody breaks them by accident. They break them by drifting.",
+
+  "principles": [
+    {
+      "id": "honest-claims",
+      "name": "Honest claims and estimates",
+      "icon": "scale",
+      "tagline": "Be honest and realistic in what you claim and what you promise.",
+      "body": "This is clause I.5 of the IEEE Code of Ethics and section 1.3 of the ACM Code. It is the oldest rule in professional practice and the one most often broken with the best intentions: you want the job, so you round your skills up and your timelines down. Both are lies with a delay on them.",
+      "source": { "label": "IEEE Code of Ethics", "url": "https://www.ieee.org/about/corporate/governance/p7-8" }
+    },
+    {
+      "id": "competence",
+      "name": "Work only where you're competent",
+      "icon": "target",
+      "tagline": "Take the task only if you're qualified — or after fully disclosing what you don't know.",
+      "body": "Both the IEEE and ACM codes (ACM 2.6) say the same thing, and note the escape hatch: you MAY take work above your level, but only after 'full disclosure of pertinent limitations'. Disclosed inexperience is a negotiation. Undisclosed inexperience is fraud that surfaces in week three.",
+      "source": { "label": "ACM Code of Ethics §2.6", "url": "https://www.acm.org/code-of-ethics" }
+    },
+    {
+      "id": "credit",
+      "name": "Credit the work of others",
+      "icon": "quote",
+      "tagline": "Respect the work required to produce ideas, creative work, and code.",
+      "body": "ACM 1.5. A portfolio piece you didn't build, a design you traced, a repo you cloned and rebranded — every one of these is discoverable, and every platform treats it as a permanent-suspension offence, not a warning.",
+      "source": { "label": "ACM Code of Ethics §1.5", "url": "https://www.acm.org/code-of-ethics" }
+    },
+    {
+      "id": "confidentiality",
+      "name": "Honor confidentiality",
+      "icon": "lock",
+      "tagline": "Client information is theirs. It stays theirs after the contract ends.",
+      "body": "ACM 1.7 and 1.6. Confidentiality obligations survive the contract — typically one to five years, and indefinitely for genuine trade secrets. The day you're offboarded is not the day the duty stops.",
+      "source": { "label": "NDA survival periods", "url": "https://www.terms.law/NDA/clause-library/survival-period.html" }
+    },
+    {
+      "id": "authorized-access",
+      "name": "Access only what you're authorized to",
+      "icon": "key-round",
+      "tagline": "Only touch the systems and data you were given, for the purpose you were given them.",
+      "body": "ACM 2.8. 'I still had the login' is not authorization. Neither is 'I was just curious'. Neither is using a client's paid tool for a different client's job.",
+      "source": { "label": "ACM Code of Ethics §2.8", "url": "https://www.acm.org/code-of-ethics" }
+    },
+    {
+      "id": "disclose-conflicts",
+      "name": "Disclose conflicts, don't hide them",
+      "icon": "git-branch",
+      "tagline": "Avoid conflicts of interest where you can — disclose them where you can't.",
+      "body": "IEEE clause I.2. Working for a client's direct competitor isn't automatically wrong. Doing it without telling either of them is. Disclosure converts a fireable secret into a manageable fact.",
+      "source": { "label": "IEEE Code of Ethics", "url": "https://www.ieee.org/about/corporate/governance/p7-8" }
+    }
+  ],
+
+  "philippineAnchor": {
+    "title": "This is not an imported Western standard.",
+    "body": "Executive Order No. 220 (2003) established the Code of Good Governance for the Professions in the Philippines, adopted by the PRC and every Professional Regulatory Board. Its four core principles — integrity, objectivity, professional competence, and global competitiveness — are the base of every profession-specific code of ethics in the country. Filipino professional practice already holds this line. Remote work is not an exception to it; it's just a place where nobody is watching you keep it.",
+    "source": { "label": "Code of Good Governance for the Professions (EO 220, s. 2003)", "url": "https://jur.ph/law/summary/directing-adoption-good-governance-professionals-philippines" }
+  },
+
+  "casesIntro": "These are not cautionary tales. They are documented outcomes, with names, dates, and numbers. Read them as the price list.",
+  "cases": [
+    {
+      "id": "wells-fargo",
+      "tag": "Time-tracking fraud",
+      "accent": "coral",
+      "title": "Wells Fargo fired a dozen people for simulating keyboard activity",
+      "when": "May 2024",
+      "what": "Wells Fargo dismissed more than a dozen employees from its wealth- and investment-management unit. FINRA disclosures filed in June 2024 state they were discharged after review of allegations involving 'simulation of keyboard activity creating impression of active work'. At least one had been at the bank over seven years.",
+      "sting": "Because they were FINRA-registered, the reason for discharge is now permanently attached to their public regulatory record. This is what 'blacklisted' actually means — not a rumour in a Facebook group. A database entry, searchable, forever.",
+      "lesson": "A mouse jiggler costs ₱200. It cost these people their licence to work in their industry.",
+      "source": { "label": "Bloomberg / Banking Dive", "url": "https://www.bankingdive.com/news/wells-fires-employees-faking-productivity-finra/719033/" }
+    },
+    {
+      "id": "besse",
+      "tag": "You can be ordered to pay it back",
+      "accent": "coral",
+      "title": "A remote accountant was ordered to repay her employer CAD $2,756",
+      "when": "2023 · BC Civil Resolution Tribunal",
+      "what": "Karlee Besse, working remotely for Reach CPA, logged 50.76 hours on her timesheets that time-tracking software showed had no corresponding work activity — the software could distinguish work documents from personal streaming. She sued for wrongful dismissal.",
+      "sting": "She lost. The tribunal dismissed her claim and ordered HER to pay the employer CAD $2,756.89 — time theft, an advance, interest and fees — within 30 days.",
+      "lesson": "Padding hours isn't a grey area that ends in an awkward conversation. It is a debt you can be ordered to repay, on top of losing the job.",
+      "source": { "label": "NPR", "url": "https://www.npr.org/2023/01/13/1148985075/time-tracking-software-canadian-woman-reach-cpa-court" }
+    },
+    {
+      "id": "dprk",
+      "tag": "Why clients are paranoid about you",
+      "accent": "indigo",
+      "title": "The DOJ raided 29 'laptop farms' across 16 states",
+      "when": "June 2025",
+      "what": "North Korean IT workers used stolen and fabricated identities to get hired at over 100 US companies, using deepfakes to pass video interviews. The DOJ searched 29 laptop farms across 16 states and seized 29 financial accounts and 21 fraudulent websites. Two US nationals were sentenced for facilitating it — their role was largely just receiving laptops and letting someone else work under a borrowed identity.",
+      "sting": "This is why a client wants you on camera, wants your ID, and wants one verified account. It is not disrespect. It is the last two years of their threat briefings.",
+      "lesson": "Never sell, rent, or share your platform account. Never let anyone work under your name. Never accept money to 'just receive a laptop' for someone. That exact favour is what the facilitators were sentenced for.",
+      "source": { "label": "US Department of Justice", "url": "https://www.justice.gov/opa/pr/justice-department-announces-coordinated-nationwide-actions-combat-north-korean-remote" }
+    },
+    {
+      "id": "hallucination",
+      "tag": "Shipping unchecked AI output",
+      "accent": "amber",
+      "title": "Two lawyers were fined $110,000 for citations an AI invented",
+      "when": "May 2026 · Oregon",
+      "what": "The largest US penalty to date for AI hallucinations in a filing: 23 fabricated citations and 8 invented quotations. It sits at the top of a ladder — $5,000 (Mata v. Avianca, 2023), $10,000 (California, 2025), $110,000 (2026). A public database now tracks roughly 1,490 such court decisions worldwide.",
+      "sting": "None of them were punished for USING AI. They were punished for not checking its output before putting their name on it.",
+      "lesson": "AI use is usually fine if it's disclosed and if you verified every factual claim it produced. The two firing offences are concealment and shipping unverified work. Both are yours, not the tool's.",
+      "source": { "label": "AI Hallucination Cases database (Damien Charlotin, HEC Paris)", "url": "https://www.damiencharlotin.com/hallucinations/" }
+    },
+    {
+      "id": "jss",
+      "tag": "Ghosting has a number attached",
+      "accent": "amber",
+      "title": "Abandoning a contract permanently marks your score",
+      "when": "Ongoing · Upwork",
+      "what": "Upwork's Job Success Score factors in the reasons past contracts ended. Below 79% you start struggling to win work at all; top freelancers sit above 90%. Feedback manipulation — trading reviews, hiring yourself, bribing a client, or threatening bad feedback (Upwork names these 'bribery and extortion') — can permanently block your account. If you're suspended for it, you must wait six months before you can even appeal.",
+      "sting": "Disappearing when a job gets hard feels like escape. It is recorded, it is scored, and it follows you to every future proposal.",
+      "lesson": "You are allowed to end a contract. You are not allowed to vanish from one. Say the hard sentence, hand over the work, take the ending professionally.",
+      "source": { "label": "Upwork — Job Success Score", "url": "https://support.upwork.com/hc/en-us/articles/211068358-Job-Success-Score" }
+    },
+    {
+      "id": "ra10173",
+      "tag": "Philippine law applies to you",
+      "accent": "emerald",
+      "title": "Your laptop in Cebu is a 'Personal Information Processor'",
+      "when": "RA 10173 · Data Privacy Act of 2012",
+      "what": "The Data Privacy Act applies to any person processing personal information — including foreign controllers using equipment located in the Philippines. Your laptop, processing a US client's customer list, is in scope. Breach notification is required within 72 hours of discovery. Penalties run from six months to seven years imprisonment and ₱500,000 to ₱4,000,000 in fines.",
+      "sting": "Most Filipino freelancers handling client customer data have never been given a written processing agreement — and don't know they're entitled to ask for one.",
+      "lesson": "If you handle a client's customer data and they haven't given you a data processing agreement, raise it. It protects YOU. Not asking is the risk.",
+      "source": { "label": "National Privacy Commission", "url": "https://privacy.gov.ph/data-privacy-act/" }
+    }
+  ],
+
+  "dosDontsIntro": "The line is almost never blurry in the moment. It gets blurry in the retelling. Here it is in plain language, before you need it.",
+  "dosDonts": [
+    {
+      "id": "time",
+      "area": "Your hours",
+      "icon": "clock",
+      "accent": "coral",
+      "dos": [
+        "Track only the time you actually worked, to the minute.",
+        "Use the client's official tracker. On Upwork, only tracker-logged time with genuine activity is covered by Hourly Payment Protection — manual time is not.",
+        "If you got stuck for two hours and produced nothing, say so and bill it honestly, or don't bill it. Both are defensible. Hiding it isn't.",
+        "Tell the client before you exceed the agreed hours, not after."
+      ],
+      "donts": [
+        "Never use a mouse jiggler, auto-clicker, or activity simulator. This is the single fastest way to be fired for cause.",
+        "Never round 40 minutes up to an hour 'because it evens out'.",
+        "Never bill two clients for the same hour.",
+        "Never let a tracker run while you're away from the desk."
+      ]
+    },
+    {
+      "id": "ai",
+      "area": "AI in your work",
+      "icon": "sparkles",
+      "accent": "amber",
+      "dos": [
+        "Ask, at the start of the engagement: 'What's your policy on AI-assisted work?' Get the answer in writing.",
+        "Verify every factual claim, number, name, citation, and link an AI gives you. You are shipping it under your name.",
+        "Use AI to draft, structure, and speed up — then own the output as your judgment.",
+        "Disclose AI use when the client asks, when the contract requires it, or when the work is sold as original human craft."
+      ],
+      "donts": [
+        "Never paste client data, customer PII, or credentials into an AI tool without written permission.",
+        "Never present raw AI output as your own reasoning.",
+        "Never hide AI use from a client who forbade it. Fiverr treats misrepresentation of AI usage as a trust breach: order cancelled, client refunded, account permanently suspended.",
+        "Never ship an AI-written deliverable you haven't read end to end."
+      ]
+    },
+    {
+      "id": "data",
+      "area": "Client data & access",
+      "icon": "shield",
+      "accent": "emerald",
+      "dos": [
+        "Insist on your own named account. Shared logins destroy attribution — when five people use one login, the audit log can't prove you DIDN'T do it.",
+        "Keep client data in client-owned systems. Their Drive, their CRM, their repo.",
+        "Use a password manager. Turn on 2FA everywhere.",
+        "Ask for a data processing agreement if you touch personal data. RA 10173 makes this your exposure too.",
+        "Delete client data and confirm deletion when the contract ends."
+      ],
+      "donts": [
+        "Never share a client credential with anyone — not a friend, not a family member, not your own subcontractor.",
+        "Never move client files to your personal Gmail, Drive, or Messenger 'just to work on them'.",
+        "Never keep access after offboarding 'in case they need me'.",
+        "Never take a copy of a client list, database, or asset library when you leave. That's exfiltration, and it's the thing that gets people criminally charged."
+      ]
+    },
+    {
+      "id": "truth",
+      "area": "How you represent yourself",
+      "icon": "user-check",
+      "accent": "indigo",
+      "dos": [
+        "Show only work you actually did. If it was a team effort, say exactly which part was yours.",
+        "State your real experience level. 'I haven't done this specific thing, but here's the closest thing I have done, and here's how I'd approach it' wins more jobs than bluffing.",
+        "Give estimates as a range with the assumption attached: '3–5 days, assuming the API docs are accurate.'",
+        "Correct your own errors, out loud, early."
+      ],
+      "donts": [
+        "Never put someone else's work in your portfolio, even 'as an example of the style'.",
+        "Never buy reviews, trade reviews, or hire yourself through a second account.",
+        "Never threaten a client with bad feedback to get paid — Upwork classes this as extortion and it can permanently block you.",
+        "Never accept a role you cannot do without disclosing exactly what you can't do."
+      ]
+    },
+    {
+      "id": "commitments",
+      "area": "Your commitments",
+      "icon": "handshake",
+      "accent": "coral",
+      "dos": [
+        "If a contract has an exclusivity or 'whole time and attention' clause, read it before signing a second one. Breaching it is a civil matter — termination, and possibly damages.",
+        "Disclose other work when the contract requires disclosure. Moonlighting is legal; hiding it while a contract forbids it is fraud.",
+        "End contracts by saying so, handing over the work, and documenting where things stand.",
+        "Answer messages you're afraid of faster than the ones you're not."
+      ],
+      "donts": [
+        "Never ghost. Not for a day, not when it's going badly, not when you're ashamed.",
+        "Never take on a fourth client you know you can't serve because you're scared to say no to money.",
+        "Never let a client discover a problem you already knew about."
+      ]
+    }
+  ],
+
+  "oath": {
+    "kicker": "The oath",
+    "title": "Write it. Sign it. Nobody is watching — that's the point.",
+    "lead": "There's no file to download here, and there never will be. An oath somebody else wrote for you is a decoration. Read each clause, decide whether you can actually keep it, and then write in your own words why it matters to you — because the version you have to defend in your own language is the one you'll remember at 2am when nobody would ever find out.",
+    "clauses": [
+      { "id": "hours", "text": "I will bill only for time I actually worked. I will never simulate activity, pad an hour, or bill two clients for the same minute." },
+      { "id": "competence", "text": "I will take on work I am qualified to do — or I will disclose exactly what I don't yet know before I accept it." },
+      { "id": "claims", "text": "I will be honest and realistic in my claims and estimates, even when honesty costs me the job." },
+      { "id": "ownwork", "text": "I will show only work I actually did, and I will name my exact contribution when it was a team effort." },
+      { "id": "ai", "text": "I will verify everything an AI produces before I put my name on it, and I will disclose my use of AI whenever the client's rules or the nature of the work require it." },
+      { "id": "data", "text": "I will treat my client's data as theirs, not mine. I will never share a credential, never move their data to my personal accounts, and never take a copy when I leave." },
+      { "id": "confidentiality", "text": "I will keep what I'm told in confidence, and I will keep it after the contract ends." },
+      { "id": "conflicts", "text": "I will disclose conflicts of interest rather than hide them." },
+      { "id": "errors", "text": "I will surface my own mistakes early, in my own words, before someone else finds them." },
+      { "id": "endings", "text": "I will never ghost. I will end things by saying so, handing over my work, and leaving the client no worse than I found them." }
+    ],
+    "commitmentPrompt": "In your own words: which of these will be hardest for you to keep, and what will you do when it gets tested?",
+    "commitmentPlaceholder": "Be specific and be honest — this is for you, not for us. Nothing here is uploaded anywhere; it stays in this browser.\n\nExample shape: \"The hardest one for me is ___, because ___. The moment it will get tested is when ___. When that happens, I will ___.\"",
+    "signPrompt": "Sign it with your name",
+    "signedNote": "Stored in your browser only. Never uploaded, never seen by us.",
+    "selfCritique": [
+      "Did you tick a clause you know you've already broken? Untick it and write down what you'll change first.",
+      "Is your commitment specific enough that a future you could fail it? Vague oaths ('I'll be honest') can't be broken, which means they can't be kept either.",
+      "Does it name the exact moment of temptation — the slow week, the boring hour, the client who'd never check?",
+      "Could you show this to the client you most want to impress? If not, rewrite until you could."
+    ]
+  },
+
+  "honesty": {
+    "title": "What we won't claim",
+    "body": "Not everything working against you is your fault, and we're not going to pretend otherwise to sell you a fix. In controlled experiments on simulated freelancer profiles, researchers found a strong and consistent preference for US-based freelancers — in both hiring and in the ratings given afterwards, for identical work. Some of the ceiling you'll hit is bias, not conduct. Keeping this oath will not delete that bias. What it does is make sure that when a door closes, it wasn't you who closed it — and it keeps your record clean enough that the doors which do open, stay open.",
+    "source": { "label": "Experimental study on freelancer platform bias (arXiv, 2025)", "url": "https://arxiv.org/pdf/2510.13091" }
+  }
+}

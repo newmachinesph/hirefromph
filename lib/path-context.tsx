@@ -55,6 +55,22 @@ export type PathState = {
   tasks: Record<string, boolean>;
   /** the user's live job-application pipeline */
   applications: Application[];
+  /** the integrity oath: clauses accepted, own-words commitment, signature */
+  oath: Oath;
+};
+
+export type Oath = {
+  clauses: Record<string, boolean>;
+  commitment: string;
+  name: string;
+  signedAt: string | null;
+};
+
+const EMPTY_OATH: Oath = {
+  clauses: {},
+  commitment: "",
+  name: "",
+  signedAt: null,
 };
 
 const EMPTY: PathState = {
@@ -67,6 +83,7 @@ const EMPTY: PathState = {
   planAnswers: {},
   tasks: {},
   applications: [],
+  oath: EMPTY_OATH,
 };
 
 const KEY = "devup.path.v1";
@@ -86,6 +103,8 @@ type Ctx = {
   addApplication: (a: Omit<Application, "id">) => void;
   updateApplication: (id: string, patch: Partial<Application>) => void;
   deleteApplication: (id: string) => void;
+  updateOath: (patch: Partial<Oath>) => void;
+  toggleOathClause: (id: string) => void;
 };
 
 const PathContext = createContext<Ctx | null>(null);
@@ -193,6 +212,23 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
     [],
   );
 
+  const updateOath = useCallback(
+    (patch: Partial<Oath>) =>
+      setState((s) => ({ ...s, oath: { ...s.oath, ...patch } })),
+    [],
+  );
+  const toggleOathClause = useCallback(
+    (id: string) =>
+      setState((s) => ({
+        ...s,
+        oath: {
+          ...s.oath,
+          clauses: { ...s.oath.clauses, [id]: !s.oath.clauses[id] },
+        },
+      })),
+    [],
+  );
+
   const value = useMemo<Ctx>(
     () => ({
       state,
@@ -209,6 +245,8 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       addApplication,
       updateApplication,
       deleteApplication,
+      updateOath,
+      toggleOathClause,
     }),
     [
       state,
@@ -224,6 +262,8 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       addApplication,
       updateApplication,
       deleteApplication,
+      updateOath,
+      toggleOathClause,
     ],
   );
 

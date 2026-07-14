@@ -1,0 +1,283 @@
+{
+  "intro": "Almost everyone believes the same thing about a remote career: grind three years, and three years of experience will quietly turn into a higher rate. It will not. Time is not the variable. This page lets you watch that be true — and lets you watch what happens to the person who chose differently.",
+  "hero": {
+    "kicker": "Career simulator · 36 months · a model, not a promise",
+    "titleLine1": "Three years of experience",
+    "titleLine2": "is not three years of leverage.",
+    "lead": "Set your craft, your AI, and what you actually sell. The simulator draws two lines over 36 months: the generic task-taker, and you. The gap between them is the entire lesson — and if there is no gap, that is the lesson too."
+  },
+  "banner": {
+    "title": "Read this before you read a single number.",
+    "body": "This is a MODEL. It is not a prediction, a forecast, a promise, or an offer. Nobody can tell you what you will earn — not us, not a salary guide, not a coach selling a course. What a model can honestly do is show you the shape of a decision: which choices bend the line, and which ones only feel like they do. Every figure below means 'roughly, directionally, if the model is right'. Treat it as a teaching instrument, never as a plan for your rent."
+  },
+  "dataHonesty": {
+    "title": "Why nobody has an honest chart of Philippine freelance rates — including us",
+    "body": "There is no authoritative public dataset of Philippine freelancer rates by seniority. None exists. Every \"2026 salary guide\" you will find is published by a staffing agency, an outsourcing firm, or a training company: pages with no disclosed methodology, no sample size, and a direct commercial reason to skew the number — up if they sell training, down if they sell cheap labour. The base rates in this simulator are the convergent directional picture across several of those sources. That makes them vendor-grade, not survey-grade, and we will not dress them up as anything better.",
+    "disagreement": "How soft is that ground? Take bookkeeping — one role, one year. One vendor guide puts entry-level at $5–6/hr. Another puts entry-level at $10–12/hr. That is a 2x disagreement about the same job. When the sources cannot agree with each other, no one is entitled to present either as fact. So we show you the disagreement instead of hiding it.",
+    "sources": [
+      {
+        "label": "OnlineJobs.ph salary guide",
+        "url": "https://blog.onlinejobs.ph/comprehensive-guide-to-virtual-assistant-salaries-in-the-philippines/"
+      },
+      {
+        "label": "vamasters.com cost guide",
+        "url": "https://vamasters.com/hiring-a-virtual-assistant-in-the-philippines-heres-what-it-costs/"
+      }
+    ]
+  },
+  "controls": {
+    "title": "Your six inputs",
+    "lead": "Only one of these sets your floor. The other five are multipliers — and a multiplier on a small number is still a small number.",
+    "craft": {
+      "legend": "1 · Your craft",
+      "help": "This is the only input that sets your base rate. Everything after it just multiplies whatever this gives you.",
+      "options": [
+        {
+          "id": "none",
+          "label": "No craft yet",
+          "desc": "General task work: inbox, data entry, scheduling, whatever gets handed over. Anyone with a laptop can be swapped in for you tomorrow."
+        },
+        {
+          "id": "building",
+          "label": "Building one",
+          "desc": "You picked a specialisation and you are deliberately getting good at it. Not there yet, but the direction is real."
+        },
+        {
+          "id": "deep",
+          "label": "Genuinely specialised",
+          "desc": "Bookkeeping, ecommerce ops, automation, medical ops, paid media, dev. You are the person they call when it breaks."
+        }
+      ]
+    },
+    "ai": {
+      "legend": "2 · Your AI",
+      "help": "AI multiplies a craft. Look closely at what it does to your line when there is no craft under it.",
+      "options": [
+        {
+          "id": "none",
+          "label": "I don't use it",
+          "desc": "Honest position. Nobody is paying a premium for the absence of it either."
+        },
+        {
+          "id": "user",
+          "label": "I use ChatGPT to work faster",
+          "desc": "You draft faster and reply faster. So does every other person with a browser and a free account."
+        },
+        {
+          "id": "augmented",
+          "label": "I build AI into the delivery",
+          "desc": "Automations, AI QA passes, AI-assisted ops — that you designed, that you own, and that you can fix at 2am when they break."
+        }
+      ]
+    },
+    "ownership": {
+      "legend": "3 · What you actually sell",
+      "help": "Hours have a ceiling: there are only so many of them, and everyone's are the same length.",
+      "options": [
+        {
+          "id": "tasks",
+          "label": "Hours and tasks",
+          "desc": "You do what you're told and bill the time. Someone else decides whether it worked."
+        },
+        {
+          "id": "outcomes",
+          "label": "An outcome, end to end",
+          "desc": "You own the result: the books close, the ads perform, the pipeline runs. Nobody hands you a checklist."
+        }
+      ]
+    },
+    "hours": {
+      "legend": "4 · Billable hours per week",
+      "help": "Hours actually billed — not hours sat at the desk. The two are famously not the same number.",
+      "options": [
+        { "id": "10", "label": "10 hrs", "desc": "Side hustle, on top of a day job." },
+        { "id": "20", "label": "20 hrs", "desc": "Half load." },
+        { "id": "40", "label": "40 hrs", "desc": "Full time." }
+      ]
+    },
+    "language": {
+      "legend": "5 · Language",
+      "help": "English is a national baseline here, not an edge. Treating it as a superpower is how a lot of people end up competing on price.",
+      "options": [
+        { "id": "english", "label": "English", "desc": "The floor everyone in this market already stands on." },
+        {
+          "id": "second",
+          "label": "English + Japanese / Korean / Mandarin",
+          "desc": "A genuinely thinner pool of competitors — which is the only reason a rate moves."
+        }
+      ]
+    },
+    "clients": {
+      "legend": "6 · Where your clients are",
+      "help": "Same work. Different budget on the other end of the call.",
+      "options": [
+        {
+          "id": "foreign",
+          "label": "US / AU / UK clients",
+          "desc": "The reference case. The base rates above already assume this — it is not a bonus."
+        },
+        {
+          "id": "local",
+          "label": "Philippine clients",
+          "desc": "Same work you'd do for a foreign client, priced against local budgets."
+        }
+      ]
+    }
+  },
+  "chart": {
+    "title": "36 months, two lives",
+    "lead": "Both lines are monthly take-home after the unpaid-time tax below. Same hours. Same client market. The only difference is what the person chose to become.",
+    "baselineLabel": "If you stay generic",
+    "pathLabel": "Your path",
+    "riskBandLabel": "Non-payment risk band",
+    "riskBandNote": "The shaded band under your line is not a forecast — it is a warning. Fairwork found 31% of cloudworkers had already experienced outright non-payment and 38% had experienced late payment. Roughly one in three people get stiffed at least once. Your line is not a floor.",
+    "tableCaption": "The same two trajectories as a table — monthly take-home in USD, after the unpaid-time tax.",
+    "colMonth": "Month",
+    "colBaseline": "If you stay generic",
+    "colPath": "Your path"
+  },
+  "results": {
+    "title": "What the model says",
+    "milestoneLabel": "Monthly take-home, after the unpaid-time tax",
+    "billedNote": "billed before the tax",
+    "hourlyLabel": "Effective hourly at month 36",
+    "rangeNote": "Vendor-grade base range for this craft",
+    "modelPill": "Model, not a prediction"
+  },
+  "fx": {
+    "label": "Assumed exchange rate",
+    "suffix": "₱ per $1",
+    "note": "This is an assumption, and FX moves. Change it to whatever today's rate actually is — the peso figures update live. We default to ₱58 because it is a round, recent, entirely arguable number."
+  },
+  "multipliers": {
+    "title": "Every multiplier, and where it came from",
+    "lead": "One of these is sourced. The rest are ours. We are not going to blur the difference — that blurring is exactly how salary-guide pages get built.",
+    "tagSourced": "SOURCED",
+    "tagAssumption": "ASSUMPTION",
+    "baseLabel": "Base hourly rate — from your craft",
+    "baseNote": "Vendor-grade and directional. This number, and only this number, is set by your craft. Read the honesty section above before you trust it to two decimal places.",
+    "items": {
+      "ai-none": {
+        "label": "AI — not used",
+        "note": "No premium, no penalty. The market does not pay you for abstaining."
+      },
+      "ai-user": {
+        "label": "AI — you use ChatGPT",
+        "note": "Being faster at typing is not a differentiator. Everyone has the same free account. We give it a rounding error and nothing more, because that is what it is worth."
+      },
+      "ai-augmented-deep": {
+        "label": "AI — built into a deep craft",
+        "note": "This is the one number on the page with real research behind it, and even here the nuance matters more than the headline. Upwork reports freelancers doing AI work earn over 40% more per hour. Upwork Research Institute MD Kelly Monahan's framing is that the premium accrues to people who already had domain expertise and then layered AI on top."
+      },
+      "ai-augmented-building": {
+        "label": "AI — built into a craft you're still learning",
+        "note": "You get a partial version of the AI premium, because you have a partial craft. The multiplier is honest about that: half-built expertise, half-sized premium."
+      },
+      "ai-augmented-none": {
+        "label": "AI — built on top of no craft",
+        "note": "×1.0. No premium. This is not a bug and it is not us being harsh — see the callout below. AI multiplies a craft. There is nothing here for it to multiply."
+      },
+      "ownership-tasks": {
+        "label": "Ownership — you bill hours",
+        "note": "The reference case. Your ceiling is the clock, and the clock does not get longer."
+      },
+      "ownership-outcomes": {
+        "label": "Ownership — you own an outcome",
+        "note": "Our number, but grounded: Upwork's Future Workforce Index 2025 found the companies with the highest revenue growth are far likelier to buy managed services (50%) and human+AI collaboration (41%). They are buying a delivered result, not a seat-hour. The +25% is our estimate of what that is worth to you."
+      },
+      "language-english": {
+        "label": "Language — English",
+        "note": "×1.0. English is the baseline in this market, not an edge."
+      },
+      "language-second": {
+        "label": "Language — a second language",
+        "note": "Our number, flagged as such. The logic is competition, not merit: a thinner pool moves a rate. And a reality check on the English assumption — the Philippines ranks 28th of 123 on the EF EPI 2025, having fallen six places."
+      },
+      "clients-foreign": {
+        "label": "Clients — US / AU / UK",
+        "note": "×1.0. The base rates already assume this market. It is the reference case, not a bonus."
+      },
+      "clients-local": {
+        "label": "Clients — Philippine",
+        "note": "Our number. Same work, local budgets. It is not a judgement on local clients — it is arithmetic about what they can pay."
+      }
+    },
+    "sources": {
+      "upwork-skills": {
+        "label": "Upwork — 2025's most in-demand skills",
+        "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills"
+      },
+      "axios-ai": {
+        "label": "Axios — AI, vibe coding and the Upwork premium",
+        "url": "https://www.axios.com/2025/06/30/ai-job-vibe-coding-upwork"
+      },
+      "upwork-fwi": {
+        "label": "Upwork — Future Workforce Index 2025",
+        "url": "https://www.upwork.com/research/future-workforce-index-2025"
+      },
+      "ef-epi": {
+        "label": "EF English Proficiency Index 2025 — Philippines",
+        "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/"
+      }
+    }
+  },
+  "aiCallout": {
+    "title": "You layered AI on top of nothing. The model gives you nothing.",
+    "body": "You selected \"I build AI into the delivery\" with no craft underneath it, and your AI multiplier came out at ×1.0 — no premium at all. That is deliberate, and it is the most important line of code on this page. The 40%+ AI premium is real and it is sourced. It just does not belong to you yet.",
+    "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
+    "attribution": "Kelly Monahan, Managing Director, Upwork Research Institute",
+    "closer": "Read that again slowly. The premium accrues to the person who already had the expertise. AI is a multiplier, and a multiplier needs something to multiply. Go pick a craft, get genuinely good at it, and then come back and set this to \"deep\" — the same AI skill you already have will be worth a great deal more.",
+    "cta": "Go pick a craft"
+  },
+  "realityTax": {
+    "title": "The reality tax — applied to every number on this page, always",
+    "unpaid": {
+      "title": "×0.67 · the unpaid third",
+      "body": "The ILO found online workers spend roughly 20 unpaid minutes for every paid hour — hunting for work, doing unpaid tests, vetting clients who ghost. About a third of your working time earns nothing. Every figure in this simulator is already multiplied by 0.67 for it. And a number worth sitting with: average hourly earnings in Asia-Pacific, once you count the unpaid time, come to $2.22/hr.",
+      "source": {
+        "label": "ILO — World Employment and Social Outlook: digital labour platforms",
+        "url": "https://www.ilo.org/media/387316/download"
+      }
+    },
+    "nonPayment": {
+      "title": "31% · the people who never got paid at all",
+      "body": "Fairwork's Cloudwork Ratings 2025 (Oxford Internet Institute; 750+ workers across 100 countries) found 31% of cloudworkers had experienced non-payment and 38% had experienced late payment. That is not a deduction we can average into a line — it is a risk you either survive or don't. So it is drawn as a band under your line instead. Roughly one in three people get stiffed at least once. Contracts, escrow, and deposits are not paranoia; they are the job.",
+      "source": {
+        "label": "Fairwork — Cloudwork Ratings 2025",
+        "url": "https://fair.work/wp-content/uploads/sites/17/2025/05/Fairwork-Cloudwork-Report-2025-FINAL.pdf"
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "id": "flatline",
+      "label": "In three years, this path pays you roughly what it pays you today.",
+      "body": "Look at your line. It climbs for a quarter, and then it is a horizontal ruler for the next thirty-three months. That is not a glitch — it is what a career looks like when the thing you sell is availability. There is nothing underneath to compound, so nothing compounds. You will be busier in month 36 than in month 6. You will not be richer."
+    },
+    {
+      "id": "creeping",
+      "label": "It moves. Barely. Mostly it is still time you are selling.",
+      "body": "Your line lifts a little over three years, but it does not bend — and a line that does not bend is a line that never escapes. Whatever premium you have picked up here is a nice adjustment to a small number. Look at which input is doing the lifting, then look at your craft. That is where the bend has to come from."
+    },
+    {
+      "id": "climbing",
+      "label": "This one bends. You are building something that pays you back.",
+      "body": "There is real separation from the generic line now, and it is widening rather than settling. Notice the shape: the ramp is slow and then it steepens, because craft is slow and then it compounds. The temptation at month 8, when the line is still low and the work is hard, is to conclude it isn't working. That is precisely the month most people quit."
+    },
+    {
+      "id": "compounding",
+      "label": "This is the divergence. Same 36 months, a different life.",
+      "body": "Your line and the generic line started in the same place with the same hours, and they no longer live in the same world. Nothing about that gap is time. Every dollar of it came from a decision: to specialise, to build AI into the delivery instead of just typing into it, to own a result rather than bill an hour. This is what leverage looks like on a chart — and the model is still the optimistic version, because it cannot see the client who doesn't pay."
+    }
+  ],
+  "gapNote": {
+    "same": "At month 36 you and the generic task-taker are earning roughly the same money. Three years, same number. That is the whole point of this page.",
+    "diverged": "At month 36 your path earns about {x}× what the generic task-taker earns — on the same hours, in the same market. Not one hour of that gap was bought with time."
+  },
+  "outro": {
+    "title": "The numbers were never the hard part.",
+    "body": "The hard part is that the highest line on this chart belongs to someone who spent 30 months being worse than they wanted to be, at one specific thing, on purpose. There is no version of this where the line bends and the craft doesn't. Go and get the real market data, then go and pick the thing.",
+    "realityLabel": "See the sourced market data",
+    "nichesLabel": "Pick the craft"
+  }
+}
