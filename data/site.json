@@ -35,11 +35,13 @@
       "title": "Learn to build",
       "links": [
         { "label": "The Method", "href": "/method" },
+        { "label": "AI-First", "href": "/ai-first" },
         { "label": "How to Learn", "href": "/learn" },
         { "label": "Micro-Tasks", "href": "/tasks" },
         { "label": "Build Labs", "href": "/build" },
         { "label": "Learn Any Tool", "href": "/tools" },
-        { "label": "AI Leverage", "href": "/prompts" }
+        { "label": "AI Leverage", "href": "/prompts" },
+        { "label": "Free Resources", "href": "/resources" }
       ]
     },
     {
@@ -55,6 +57,7 @@
       "title": "Grow",
       "links": [
         { "label": "Find Work", "href": "/apply" },
+        { "label": "Own Your Clients", "href": "/clients" },
         { "label": "Tracker", "href": "/tracker" },
         { "label": "30-Day Plan", "href": "/plan" },
         { "label": "Niches", "href": "/niches" },
@@ -65,8 +68,8 @@
   ],
   "primaryNav": [
     { "label": "The Method", "href": "/method" },
+    { "label": "AI-First", "href": "/ai-first" },
     { "label": "Start", "href": "/start" },
-    { "label": "Micro-Tasks", "href": "/tasks" },
     { "label": "Reality Check", "href": "/reality" },
     { "label": "Find Work", "href": "/apply" }
   ]
