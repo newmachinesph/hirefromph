@@ -11,7 +11,6 @@ import {
   ArrowLink,
   ButtonLink,
   Kicker,
-  Marquee,
   Pill,
   SectionHeading,
 } from "@/components/ui";
@@ -31,6 +30,7 @@ const toolkit = [
   { title: "Find Work", desc: "Source and vet opportunities yourself, search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
   { title: "Own Your Clients", desc: "Agency or direct? A fair look at both, and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
   { title: "Salary Guide 2027", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
+  { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
   { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
   { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 8 we list are just worked examples.", href: "/niches", icon: "layers" },
@@ -154,21 +154,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-
-      <div className="mt-16">
-        <Marquee
-          items={[
-            "Bookkeeping",
-            "Executive Ops",
-            "Social Media",
-            "Automation",
-            "Customer Success",
-            "Project Management",
-            "Real Estate",
-            "Creative & Content",
-          ]}
-        />
-      </div>
 
       {/* ---------------------------------------------------- CHOOSE YOUR PATH */}
       <section id="path" className="container-x scroll-mt-24 py-20 lg:py-28">

@@ -63,6 +63,7 @@
         { "label": "Find Work", "href": "/apply" },
         { "label": "Own Your Clients", "href": "/clients" },
         { "label": "Salary Guide", "href": "/salary" },
+        { "label": "Client Markets", "href": "/markets" },
         { "label": "Tracker", "href": "/tracker" },
         { "label": "30-Day Plan", "href": "/plan" },
         { "label": "Niches", "href": "/niches" },

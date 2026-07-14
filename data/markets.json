@@ -1,0 +1,149 @@
+{
+  "hero": {
+    "kicker": "Client markets · time zones · overlap",
+    "line1": "Where your clients are",
+    "line2": "changes everything.",
+    "intro": "Two Filipino professionals with the same skill can live completely different lives, because one works for a US client at 2am and the other works for an Australian client at 9am. The region you target decides your pay ceiling, your sleep, and how you communicate. Most people fall into a market by accident. This page helps you choose one on purpose. The Philippines is on UTC+8, and every number below is measured from there.",
+    "creed": "Do not just chase the highest rate. Chase the rate you can sustain. A great client in the wrong time zone becomes a burnout you quit in six months."
+  },
+
+  "overlap": {
+    "kicker": "The one idea to get first",
+    "title": "Overlap hours decide your life, not just your pay.",
+    "lead": "Overlap is the number of hours per day you and your client are both awake and working. High overlap means live calls and fast replies, but it may mean night shifts. Low overlap means you work async, on your own clock, but you have to communicate in writing like a pro. Neither is better. You just have to know which one you are signing up for before you say yes.",
+    "note": "The quick math: take your client's 9am in their time zone, convert it to Philippine time, and that is roughly where your overlap window sits. Do this before you accept any role, not after."
+  },
+
+  "regions": {
+    "kicker": "The major markets",
+    "title": "US, UK & EU, Australia, and the rest, side by side.",
+    "lead": "These are generalizations to orient you, not rules. Every client is different, and pay is qualitative here on purpose: there is no trustworthy public dataset, so we describe the shape, not a fake number. Verify each real offer against live job posts.",
+    "items": [
+      {
+        "name": "United States",
+        "flag": "🇺🇸",
+        "accent": "coral",
+        "tz": "ET to PT (UTC-5 to -8)",
+        "offset": "About 12 to 16 hours behind PH",
+        "overlap": "PH evening and night lines up with US working hours. Real-time work usually means a night shift.",
+        "pay": "The biggest market and the highest ceiling by far.",
+        "style": "Direct, fast, informal. Rewards initiative, speed, and owning outcomes.",
+        "industries": "SaaS, e-commerce, real estate, marketing agencies, coaching, healthcare admin.",
+        "verdict": "Best pay, hardest hours. Where most Filipino online pros start and where the money is."
+      },
+      {
+        "name": "United Kingdom & Europe",
+        "flag": "🇬🇧",
+        "accent": "emerald",
+        "tz": "GMT to CET (UTC+0 to +2)",
+        "offset": "About 6 to 8 hours behind PH",
+        "overlap": "PH afternoon overlaps their morning. Far more daytime-friendly than the US.",
+        "pay": "Strong. A second language (German, French, Dutch, Spanish) can pay a real premium.",
+        "style": "More formal and process-driven. Values reliability, clarity, and good written English.",
+        "industries": "Agencies, fintech, SaaS, e-commerce, professional and creative services.",
+        "verdict": "Underrated. Sane hours plus a language edge if you have one. See the Languages page."
+      },
+      {
+        "name": "Australia & New Zealand",
+        "flag": "🇦🇺",
+        "accent": "indigo",
+        "tz": "AEST to NZST (UTC+10 to +13)",
+        "offset": "About 2 to 5 hours ahead of PH",
+        "overlap": "Almost a full workday overlap. Your morning is their late morning.",
+        "pay": "Solid, and rising as more AU businesses hire Filipino talent.",
+        "style": "Relaxed but direct. Work-life balance is genuinely part of the culture.",
+        "industries": "Real estate, construction and trades admin, health, e-commerce, bookkeeping.",
+        "verdict": "The best time-zone fit there is. Great pay with a normal, daytime life."
+      },
+      {
+        "name": "Middle East",
+        "flag": "🇦🇪",
+        "accent": "amber",
+        "tz": "Gulf Standard Time (UTC+3 to +4)",
+        "offset": "About 4 to 5 hours behind PH",
+        "overlap": "PH afternoon overlaps most of their workday.",
+        "pay": "Growing, with well-funded clients and often no local income tax on their side.",
+        "style": "Relationship-first and formal. Trust is built slowly, then it is strong.",
+        "industries": "Real estate, e-commerce, hospitality, luxury retail, business services.",
+        "verdict": "A growing market with friendly hours. Worth a serious look."
+      },
+      {
+        "name": "Canada",
+        "flag": "🇨🇦",
+        "accent": "coral",
+        "tz": "ET to PT, like the US",
+        "offset": "About 12 to 16 hours behind PH",
+        "overlap": "The same night-shift reality as the US.",
+        "pay": "Close to US rates, sometimes a touch lower.",
+        "style": "Polite and direct. Often a warmer tone than US clients.",
+        "industries": "SaaS, real estate, agencies, healthcare admin, e-commerce.",
+        "verdict": "US-style work and hours, frequently with a friendlier culture."
+      },
+      {
+        "name": "Singapore, Hong Kong & regional Asia",
+        "flag": "🇸🇬",
+        "accent": "emerald",
+        "tz": "UTC+8, the same as PH",
+        "offset": "No time difference",
+        "overlap": "Perfect overlap. No graveyard shift, ever.",
+        "pay": "Rates often sit closer to regional benchmarks than to US pay.",
+        "style": "Fast, business-like, efficient.",
+        "industries": "Fintech, e-commerce, trading, startups, professional services.",
+        "verdict": "Perfect hours, lower ceiling. The pick if a normal schedule matters most."
+      }
+    ]
+  },
+
+  "strategies": {
+    "kicker": "How you actually work the hours",
+    "title": "Three ways to handle the time gap.",
+    "lead": "Once you know the overlap, you pick a working style. Be honest with yourself about which one you can sustain, and say it out loud to the client before you start.",
+    "items": [
+      {
+        "name": "Full overlap",
+        "icon": "moon",
+        "desc": "You work your client's hours in real time. Live calls, instant replies, you are in the room. This builds the deepest trust and usually pays the most.",
+        "tradeoff": "The cost is your sleep. A US real-time role is a night shift. Protect your health hard, or it protects itself by making you quit."
+      },
+      {
+        "name": "Partial overlap",
+        "icon": "sunrise",
+        "desc": "You share a few hours for meetings and quick questions, then do the rest of the work on your own clock. The best of both worlds, and where most pros settle.",
+        "tradeoff": "You have to be disciplined about the async part, and clear about exactly which hours you are reachable."
+      },
+      {
+        "name": "Fully async",
+        "icon": "send",
+        "desc": "No live hours at all. Everything happens in writing, on your schedule. The best lifestyle by far, and the future of remote work.",
+        "tradeoff": "It only works if your written communication is excellent. A vague message costs a full day when nobody is awake to clarify it."
+      }
+    ],
+    "crossref": { "href": "/english", "label": "Sharpen the written English that makes async work" }
+  },
+
+  "findIndustry": {
+    "kicker": "Finding your market and industry",
+    "title": "How to find who is hiring, and for what.",
+    "lead": "You do not guess which industries hire in which region. You look. Here is the simple way to see the real demand for yourself, so you pick a market and an industry with your eyes open.",
+    "steps": [
+      { "n": 1, "title": "Filter the boards by category", "desc": "On OnlineJobs.ph and the marketplaces, browse by category and read the postings. The industries that keep appearing for your skill are your real options." },
+      { "n": 2, "title": "Read 15 live posts per region", "desc": "Search your niche plus a region, US bookkeeping, AU real estate VA, and read fifteen real posts. You will see the common industries, the tools, and the hours they expect." },
+      { "n": 3, "title": "Match the industry to the region", "desc": "Some pairings are strong: US SaaS and coaching, AU real estate and trades, EU agencies and fintech, Gulf real estate and hospitality. Aim where the demand already is." },
+      { "n": 4, "title": "Choose by your life, not only the rate", "desc": "If you need a daytime schedule, lean AU, EU, or regional Asia. If you want the highest ceiling and can do nights, the US is worth it. Decide honestly, then commit." }
+    ],
+    "crossref": { "href": "/apply", "label": "The full method for sourcing and vetting clients" }
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "Pick the market you can win in for years, not for a month.",
+    "body": "The highest rate in the worst time zone is not the best job. It is the job you burn out of. The best market is the one where the pay, the hours, and the work all fit a life you can actually keep. For many Filipinos that is Australia or Europe for the schedule, or the US when the pay is worth the nights. There is no single right answer. There is only the one that is right for you, chosen on purpose.",
+    "point": "Line this up with the rest of your plan.",
+    "links": [
+      { "href": "/salary", "label": "What each market pays", "desc": "The honest ranges, why the guides disagree, and how to price yourself." },
+      { "href": "/clients", "label": "Own the relationship", "desc": "How to land direct clients in any market, without an agency in the middle." },
+      { "href": "/languages", "label": "The language edge", "desc": "A second language opens Europe, Japan, and Korea, and often doubles your rate." },
+      { "href": "/equipment", "label": "Set up for the shift", "desc": "The internet, backup power, and gear that keep a night shift from falling apart." }
+    ]
+  }
+}
