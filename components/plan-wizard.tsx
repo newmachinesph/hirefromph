@@ -129,7 +129,7 @@ export function PlanWizard() {
   // answers live in localStorage, which is unreadable during the SSR render, so
   // seeding from them in an effect is unavoidable. The `resumed` guard makes it
   // run exactly once, so there is no cascading-render risk.
-  // eslint-disable-next-line react-hooks/set-state-in-effect
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     if (!hydrated || resumed) return;
     const saved = state.planAnswers;
@@ -139,6 +139,7 @@ export function PlanWizard() {
     }
     setResumed(true);
   }, [hydrated, resumed, state.planAnswers]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   useEffect(() => () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);

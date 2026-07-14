@@ -60,10 +60,10 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
   // Load once on mount. localStorage cannot be read during the SSR render, so
   // seeding state from it in a mount effect is the only correct option here —
   // it runs exactly once and is what keeps the server and client markup identical.
-  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (raw) setState({ ...EMPTY, ...(JSON.parse(raw) as PathState) });
     } catch {
       /* ignore corrupt storage */
