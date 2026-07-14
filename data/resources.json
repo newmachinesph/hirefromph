@@ -1,0 +1,105 @@
+{
+  "hero": {
+    "kicker": "Free · real · sourced",
+    "line1": "The free shelf.",
+    "line2": "Everything that actually moves the needle.",
+    "intro": "You do not need to pay for the knowledge to start an online career. Almost everything worth learning is already free — from the world's best universities, from the companies whose tools you'll use, from your own government, and from a few genuinely great teachers on YouTube. The hard part was never access. It's knowing which free thing is worth your week, and how to turn it into proof instead of a pile of half-finished tabs. That's what this page is for.",
+    "creed": "Free is only free if it doesn't cost you a month you can't get back. The skill isn't finding a course. It's judging one before it takes your time — and finishing it with something to show."
+  },
+
+  "judge": {
+    "kicker": "Before you enrol · the filter",
+    "title": "How to judge any free course before it takes your week.",
+    "lead": "There is an ocean of free learning, and most of it is a comfortable way to feel productive without becoming more hireable. Run any course — including the ones we list below — through these five questions first. The ones worth your time survive all five.",
+    "tests": [
+      {
+        "q": "Does it end in a real artifact?",
+        "why": "A course you finish with nothing to show taught you nothing a client can see. Prefer the ones that make you build something — a project, a page, a working sheet — over the ones that just fill your head and hand you a certificate.",
+        "icon": "hammer"
+      },
+      {
+        "q": "Is it from the source, or a reseller?",
+        "why": "The vendor's or institution's own site — hubspot.com/academy, a real university on edX — is current, free, and correct. A stranger repackaging it on a course marketplace is usually neither free nor up to date. Go to the source.",
+        "icon": "badge-check"
+      },
+      {
+        "q": "Is it current?",
+        "why": "AI and tools change every few months. A 2020 course on an AI product is a museum piece. Check when it was last updated before you trust a single click of it — especially for anything with 'AI' in the title.",
+        "icon": "calendar-clock"
+      },
+      {
+        "q": "Free to audit, or free until the paywall?",
+        "why": "Plenty of 'free' courses gate the certificate, the exam, or the real lessons behind a trial that wants a card. Read the fine print for ninety seconds before you commit an afternoon, so the free part is actually the part you need.",
+        "icon": "wallet"
+      },
+      {
+        "q": "Does it teach the method or the buttons?",
+        "why": "A tutorial on where today's buttons are expires with the next redesign. The transferable method — why the tool exists, what it's really for — does not. Learn the version that survives the update.",
+        "icon": "compass"
+      }
+    ],
+    "note": "If a course fails these, it isn't bad — it's just not worth your scarce hours right now. Close the tab without guilt."
+  },
+
+  "shelf": {
+    "kicker": "The shelf · go to the source",
+    "title": "The free resources we actually point people to.",
+    "lead": "Curated, not exhaustive — a shelf, not a warehouse. Each one is free or free-to-audit, from the source, and chosen because it ends in something you can use. Open the ones that fit your lane; ignore the rest. We link the primary site every time, so you always land on the real, current version.",
+    "groups": [
+      {
+        "id": "ai",
+        "title": "AI fluency — start here",
+        "note": "The single highest-leverage free study you can do this month. Learn to work with AI as a professional, not a tourist. Do the first one before anything else on this shelf.",
+        "items": []
+      },
+      {
+        "id": "gov",
+        "title": "Philippine government & public — free by right",
+        "note": "Your taxes already paid for these. Free digital-skills training and certificates from Philippine public programs. Free is free — take the certificate, then go build the proof that actually gets you hired.",
+        "items": []
+      },
+      {
+        "id": "craft",
+        "title": "Craft skills — from the people who made the tools",
+        "note": "The companies whose software you'll use, and the universities, give their courses away on purpose — a skilled user is a lifelong one. Pick the ones in your niche and finish with a project, not just a badge.",
+        "items": []
+      },
+      {
+        "id": "youtube",
+        "title": "YouTube — free teachers worth your time",
+        "note": "The best of YouTube rivals any paid course; the worst is a time sink dressed as learning. These channels are durable and genuinely teach a craft. Watch to build, not to binge.",
+        "items": []
+      }
+    ]
+  },
+
+  "protocol": {
+    "kicker": "How to use the shelf",
+    "title": "Learning without proof is just entertainment.",
+    "lead": "The mistake isn't picking the wrong course — it's finishing five of them and having nothing to show a client. A resource only counts once it turns into evidence. Run every item on this shelf through the same five moves.",
+    "steps": [
+      { "n": 1, "title": "Pick one, tied to your niche", "desc": "Not five. One resource, aimed at the exact outcome your chosen lane needs. Breadth feels productive and builds nothing; depth in one lane is what gets hired." },
+      { "n": 2, "title": "Set the outcome before you start", "desc": "Decide what you'll have built when you finish — a landing page, a reconciled sample ledger, a month of content — not \"complete the course.\" A topic never ends; a deliverable does." },
+      { "n": 3, "title": "Build as you go, not after", "desc": "Pause the video and do the thing on your own file. Passive watching is the illusion of learning; the part where you're stuck is the part where it's actually happening." },
+      { "n": 4, "title": "Collect proof, not certificates", "desc": "A certificate is a receipt that says you attended. A portfolio piece is evidence that you can do the work. Clients hire the second one. Turn every course into a thing you can show." },
+      { "n": 5, "title": "Use it on a real task fast", "desc": "Put the new skill to work within a week — a micro-task, a free project for a cause you like, a rebuild from scratch. A skill you don't use within days is a skill you're about to forget." }
+    ],
+    "crossrefs": [
+      { "href": "/learn", "label": "How to actually learn (the evidence)" },
+      { "href": "/tasks", "label": "Turn learning into proof" },
+      { "href": "/tools", "label": "The learn-any-tool method" }
+    ]
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "The paywall was never the thing standing between you and this career.",
+    "body": "Everything you need to start is on this shelf, for free, right now. What's scarce isn't the courses — it's the judgment to pick the right one, the discipline to finish it, and the habit of turning every hour of study into something a client can see. Those are free too. They just aren't easy, and that's exactly why the people who build them win.",
+    "point": "Start with one. Finish it with something built. Then come back for the next.",
+    "links": [
+      { "href": "/ai-first", "label": "The AI layer", "desc": "Every role runs on AI now. Pair the free AI-fluency course with the craft you're building." },
+      { "href": "/learn", "label": "How to learn", "desc": "What the evidence on studying actually supports — and why the popular habits quietly fail you." },
+      { "href": "/tasks", "label": "Build proof", "desc": "Real micro-tasks that finish as portfolio pieces. The only thing that turns study into a job." }
+    ]
+  }
+}
