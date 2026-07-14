@@ -3,6 +3,7 @@ import salary from "@/data/salary.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { RateCalculator } from "@/components/rate-calculator";
 
 export const metadata = {
   title: "Salary Guide 2027",
@@ -277,6 +278,24 @@ export default function SalaryPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* --------------------------------------------------------- CALCULATOR */}
+      <section className="bg-paper-3/60 py-20 lg:py-24">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              kicker="Do the math yourself"
+              title="Your real rate calculator."
+              lead="Drag the sliders with your own numbers. Watch your headline rate shrink into what you actually take home, once the fees, the costs, the tax, and the unpaid time are counted. This is the honest number to plan your life around."
+            />
+          </Reveal>
+          <Reveal i={1}>
+            <div className="mt-12">
+              <RateCalculator />
+            </div>
+          </Reveal>
         </div>
       </section>
 
