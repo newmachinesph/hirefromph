@@ -93,26 +93,33 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-line bg-paper-2 lg:hidden">
-          <nav className="container-x grid grid-cols-2 gap-1 py-4">
-            {site.nav.map((item) => {
-              const active = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={cn(
-                    "rounded-xl px-4 py-3 text-sm font-medium transition-colors",
-                    active
-                      ? "bg-ink text-paper-2"
-                      : "text-ink-soft hover:bg-paper-3",
-                  )}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
+        <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper-2 lg:hidden">
+          <nav className="container-x flex flex-col gap-6 py-6">
+            {site.navGroups.map((group) => (
+              <div key={group.title}>
+                <h2 className="kicker">{group.title}</h2>
+                <div className="mt-2 grid grid-cols-2 gap-1">
+                  {group.links.map((item) => {
+                    const active = pathname === item.href;
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        onClick={() => setOpen(false)}
+                        className={cn(
+                          "rounded-xl px-4 py-3 text-sm font-medium transition-colors",
+                          active
+                            ? "bg-ink text-paper-2"
+                            : "text-ink-soft hover:bg-paper-3",
+                        )}
+                      >
+                        {item.label}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
           </nav>
         </div>
       )}

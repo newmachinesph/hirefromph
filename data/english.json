@@ -1,0 +1,311 @@
+{
+  "intro": "Your English is not the problem. Filipino professionals score 603 out of 800 on written English — above the global average, and stronger than most of the region. What actually costs you money is smaller and more fixable than 'my English isn't good enough': it's the handful of habits that make a fluent message read as junior.",
+  "creed": "You are not trying to sound American. You are trying to sound like the person in charge of the thing you're in charge of.",
+
+  "baseline": {
+    "kicker": "Start from the truth",
+    "title": "You are already good at English. Stop apologizing for it.",
+    "body": "The Philippines ranks 28th of 123 countries on the EF English Proficiency Index 2025 — 'high proficiency', well above the global average of 488. But look at the split: Writing 603. Reading 573. Listening 567. Speaking 539. Speaking is the weak spot, and even that is high by world standards. Nobody needs to fix your grammar. This page is about the two things the score doesn't measure — how you're understood out loud, and how you're read between the lines.",
+    "scores": [
+      { "skill": "Writing", "value": 603, "note": "Your strongest. Better than most of Europe." },
+      { "skill": "Reading", "value": 573, "note": "Comfortably high." },
+      { "skill": "Listening", "value": 567, "note": "Solid. Fast native speech is the gap." },
+      { "skill": "Speaking", "value": 539, "note": "Your weakest — and where the money is." }
+    ],
+    "source": { "label": "EF English Proficiency Index 2025 — Philippines", "url": "https://www.ef.com/assetscdn/WIBIwq6RdJvcD9bc8RMd/cefcom-epi-site/fact-sheets/2025/ef-epi-fact-sheet-philippines-english.pdf" }
+  },
+
+  "threeCauses": {
+    "kicker": "Be precise about what's actually happening",
+    "title": "Three different things make you read as junior. Only two are yours to fix.",
+    "lead": "Most advice lumps these together and quietly blames you for all three. That's dishonest, and it makes you work on the wrong thing.",
+    "causes": [
+      {
+        "id": "intelligibility",
+        "n": "01",
+        "accent": "coral",
+        "yours": true,
+        "title": "How easily you're understood",
+        "what": "When a listener has to work harder to process what you said, they trust it less. This is not an opinion — in a controlled study, native listeners rated identical trivia statements as LESS TRUE when spoken with a non-native accent, and the effect got stronger the heavier the accent. The mechanism is processing fluency: hard to parse feels like not true. The researchers named job seekers and offshore work explicitly.",
+        "fix": "This is fixable, and not by 'losing your accent'. Keep reading — the fix is smaller than you think.",
+        "source": { "label": "Lev-Ari & Keysar, Journal of Experimental Social Psychology (2010)", "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022103110001459" }
+      },
+      {
+        "id": "pragmatics",
+        "n": "02",
+        "accent": "amber",
+        "yours": true,
+        "title": "How you frame requests, refusals, and status",
+        "what": "Hedging — 'just', 'maybe', 'I think', 'sort of', 'kind of' — signals that you don't stand behind your own idea. Pile enough qualifiers on a correct recommendation and it lands as a guess. This is the cheapest thing on this page to fix and it changes how senior you sound in a single afternoon.",
+        "fix": "Fixable in a week. This is where your leverage is.",
+        "source": { "label": "On hedging and perceived competence", "url": "https://www.stemwomen.com/the-language-women-use-in-the-workplace-and-what-it-means" }
+      },
+      {
+        "id": "bias",
+        "n": "03",
+        "accent": "indigo",
+        "yours": false,
+        "title": "Client-side bias you did not cause",
+        "what": "Researchers ran controlled experiments on simulated freelancer profiles and found a strong, consistent preference for US-based freelancers — in who got selected, AND in the ratings given afterwards for identical work. Some of the ceiling you hit has nothing to do with your English, your skill, or your attitude.",
+        "fix": "Not yours to fix. Know it exists so you stop reading every rejection as a personal failure — and so you aim at the clients and platforms where it bites least.",
+        "source": { "label": "Experimental study on freelancer platform bias (2025)", "url": "https://arxiv.org/pdf/2510.13091" }
+      }
+    ]
+  },
+
+  "honesty": {
+    "title": "What we refuse to tell you",
+    "points": [
+      "We will not claim that better English raises your rate by some percentage. Upwork asserts that strong communication leads to higher rates — but that's a platform's marketing research, not a controlled study. Any specific number you see quoted (\"improve your English, earn 40% more\") is invented.",
+      "We will not tell you that Filipinos are 'too indirect' as a matter of fact. Every article claiming that traces back to BPO and outsourcing-vendor blogs, not research. There is no peer-reviewed study showing Filipino remote workers are perceived as less senior because of po, sir/ma'am, or indirectness. Treat the habits below as things to audit in your own writing — not as a diagnosis of your culture.",
+      "We will not sell you accent reduction. The research field moved away from that decades ago. The goal is being understood, not sounding American — and the two are not the same thing."
+    ]
+  },
+
+  "banlist": {
+    "kicker": "The audit",
+    "title": "The words that shrink you",
+    "lead": "None of these are wrong English. Every one of them is fluent, polite, and correct — that's exactly why they're hard to see. Paste a real message you've sent a client into the lab below and watch how many you've been using.",
+    "categories": [
+      {
+        "id": "hedges",
+        "label": "Hedges",
+        "why": "Each one tells the reader: don't fully trust what I'm about to say. Three in a sentence and your recommendation reads as a guess.",
+        "accent": "coral"
+      },
+      {
+        "id": "apology",
+        "label": "Reflex apologies",
+        "why": "Save 'sorry' for when you actually broke something. Apologizing for existing, for asking, or for taking up space trains the client to see you as a subordinate rather than a peer.",
+        "accent": "coral"
+      },
+      {
+        "id": "deference",
+        "label": "Deference markers",
+        "why": "'Po', 'sir', 'ma'am', 'kindly' are courteous and correct in Philippine register. To a US or AU client they don't read as respectful — they read as servile, and servile people don't get asked for their opinion.",
+        "accent": "amber"
+      },
+      {
+        "id": "dated",
+        "label": "Dated business English",
+        "why": "'Revert back', 'as per', 'do the needful', 'for a while' (on a call). These are common in PH and Indian business English and instantly mark the writer as offshore. Plain modern English is stronger anyway.",
+        "accent": "amber"
+      },
+      {
+        "id": "filler",
+        "label": "Filler and throat-clearing",
+        "why": "'I just wanted to reach out', 'I hope this finds you well', 'basically', 'actually'. Delete the runway and start the plane.",
+        "accent": "indigo"
+      }
+    ]
+  },
+
+  "frameworks": {
+    "kicker": "The structures",
+    "title": "Four shapes that carry every hard message you'll ever send",
+    "lead": "You don't need to be more articulate. You need a shape to pour the message into, so the important part comes first and the decision is obvious.",
+    "items": [
+      {
+        "id": "bluf",
+        "name": "BLUF",
+        "expand": "Bottom Line Up Front",
+        "icon": "arrow-up",
+        "accent": "coral",
+        "use": "Every status update, every email, every Slack message longer than one line.",
+        "rule": "The decision, the ask, or the headline goes in sentence one. Context comes after — for the people who want it. Never make the reader dig for the point.",
+        "anatomy": [
+          "Line 1 — the bottom line. On track / at risk / blocked. Or: the ask.",
+          "Then — what's done since last update.",
+          "Then — what's next.",
+          "Last — blockers, and exactly what you need from them, by when."
+        ],
+        "before": "Hi! I hope you're doing well. So I've been working on the migration this week and there were a few issues that came up with the staging environment, and I also had to wait on the API docs, and I think maybe we might possibly need a bit more time?",
+        "after": "Status: at risk — launch slips 2 days.\n\nDone: migration built and tested locally.\nBlocked: staging failed on the schema step; root cause is the outdated API docs.\nNext: I've rolled back and I'm rebuilding against the live schema.\nNeed from you: confirm we can ship Thursday instead of Tuesday. Your call by 3pm today keeps us on that date.",
+        "source": { "label": "BLUF (Bottom Line Up Front)", "url": "https://en.wikipedia.org/wiki/BLUF_(communication)" }
+      },
+      {
+        "id": "sbar",
+        "name": "SBAR",
+        "expand": "Situation · Background · Assessment · Recommendation",
+        "icon": "siren",
+        "accent": "amber",
+        "use": "Escalating a problem. Delivering bad news. Any handoff.",
+        "rule": "The R is the whole point. Originating in the US Navy and now standard in hospitals worldwide, SBAR forces you to end with a RECOMMENDATION, not a question. 'What should I do?' makes the problem theirs. 'Here's what I recommend — confirm?' makes you the professional who solved it.",
+        "anatomy": [
+          "Situation — what is happening, in one sentence.",
+          "Background — the context they need, and nothing more.",
+          "Assessment — what you think it means. Your read.",
+          "Recommendation — what you propose to do. This is not optional."
+        ],
+        "before": "Hi sir, sorry to bother you. The client data import isn't working and I'm not sure what to do. Should I try again? Please advise.",
+        "after": "Situation: the client data import failed overnight — 1,200 of 4,000 records didn't land.\nBackground: the source CSV changed format on their end last Friday; two columns were renamed.\nAssessment: nothing is corrupted, but the partial import will produce wrong reports until it's cleaned.\nRecommendation: I'll roll back the partial import and re-run against the new format this afternoon — reports will be accurate by 5pm. Say no in the next hour if you'd rather I leave it.",
+        "source": { "label": "SBAR — Institute for Healthcare Improvement", "url": "https://www.ihi.org/library/tools/sbar-tool-situation-background-assessment-recommendation" }
+      },
+      {
+        "id": "tradeoff",
+        "name": "The trade-off",
+        "expand": "How to say no without saying no",
+        "icon": "scale",
+        "accent": "emerald",
+        "use": "Scope creep. Impossible deadlines. The fourth 'quick favor' this week.",
+        "rule": "Never refuse. Price it. A refusal invites an argument you'll lose; a trade-off hands the client a decision only they can make — and quietly teaches them that your time is finite.",
+        "anatomy": [
+          "Name both things as equally real.",
+          "State the constraint honestly — the constraint, not your feelings about it.",
+          "Hand them the choice. Then stop typing."
+        ],
+        "before": "Sorry, I don't think I can do that, I already have a lot on my plate this week and I'm quite busy. Sorry again!",
+        "after": "I can do the landing page by Friday, or the email sequence by Friday — not both. Which is worth more to you this week?",
+        "source": null
+      },
+      {
+        "id": "assumption",
+        "name": "The stated assumption",
+        "expand": "How to ask without looking lost",
+        "icon": "help-circle",
+        "accent": "indigo",
+        "use": "Any brief that's vague. Which is most of them.",
+        "rule": "Don't ask an open question — it puts the work back on the client and makes you look like you need supervision. State the assumption you're about to act on and invite a correction. If they say nothing, you're covered, and you were never blocked.",
+        "anatomy": [
+          "State what you're assuming, specifically.",
+          "State what you'll do on that basis.",
+          "Invite the correction — with a deadline, so silence means yes."
+        ],
+        "before": "Hi, just wanted to check — who is this campaign for exactly? Sorry, I wasn't sure. Let me know when you can, thanks!",
+        "after": "I'm assuming this campaign targets existing US customers only, not new leads and not the AU list. I'll build it that way and have a draft to you Thursday. Tell me before tomorrow noon if that's wrong.",
+        "source": null
+      }
+    ]
+  },
+
+  "estimating": {
+    "kicker": "The one-line fix that makes you sound senior",
+    "title": "Never give a deadline as a single number.",
+    "body": "A single number is a promise you'll break. A range with the assumption attached is a professional judgment — and when the assumption turns out to be false, you were right rather than late.",
+    "bad": "It'll take 3 days.",
+    "good": "3 to 5 days, assuming the API docs are accurate. If they're not, add 2."
+  },
+
+  "speaking": {
+    "kicker": "Out loud",
+    "title": "Do not buy accent reduction. Buy rhythm.",
+    "lead": "The research field abandoned the 'sound native' goal decades ago in favour of the Intelligibility Principle: the target is being easily understood, not sounding American. And when training time is limited, the evidence says rhythm and stress beat drilling individual sounds — by a wide margin. Here is the honest priority order.",
+    "priorities": [
+      {
+        "n": "01",
+        "impact": "Highest",
+        "accent": "coral",
+        "title": "Rate and pausing",
+        "what": "Slow down and put real pauses at clause boundaries. Studies on Philippine English intelligibility specifically found speakers become more intelligible by adjusting rhythm and slowing down — not by changing their accent. This is free, it works today, and it is the single highest-leverage change on this list.",
+        "drill": "Record a 60-second answer to 'walk me through what you did last week.' Play it back. Count your pauses. If there are fewer than five, you're rushing — and rushing is what makes an accent hard to parse."
+      },
+      {
+        "n": "02",
+        "impact": "High",
+        "accent": "amber",
+        "title": "Sentence stress",
+        "what": "English is stress-timed: content words get punched, function words get swallowed. Philippine English is syllable-timed — every syllable gets roughly equal weight. This single difference is the most-documented gap between PH English and US/UK/AU English, and it's what makes listeners work harder even when every word is correct.",
+        "drill": "Take any sentence. Underline only the words that carry meaning — the nouns, verbs, and numbers. Say it again, hitting only those and letting everything else go soft. That's stress-timing."
+      },
+      {
+        "n": "03",
+        "impact": "Medium",
+        "accent": "emerald",
+        "title": "/f/ vs /p/ and /v/ vs /b/",
+        "what": "Worth fixing — not for elegance, but because these two pairs create genuine lexical confusion. Pull versus full. Berry versus very. Best versus vest. When the listener guesses wrong, they lose the sentence.",
+        "drill": "Minimal pairs, two minutes a day, out loud: pull/full, pin/fin, copy/coffee, berry/very, boat/vote, best/vest, curb/curve."
+      },
+      {
+        "n": "04",
+        "impact": "Lowest — do this last",
+        "accent": "indigo",
+        "title": "The 'th' sound",
+        "what": "Genuinely the lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, they are selling you something.",
+        "drill": "Optional. Tongue lightly between the teeth: think, three, this, that. Two minutes, then go back to rhythm work."
+      }
+    ],
+    "source": { "label": "Intelligibility of Philippine English (Languages, MDPI 2025)", "url": "https://www.mdpi.com/2226-471X/10/5/101" }
+  },
+
+  "resources": {
+    "kicker": "Free, live, and honestly priced",
+    "title": "Where to actually practise",
+    "lead": "We checked every one of these, including the price. Two things commonly recommended as 'free' are not free, and we've said so rather than let you find out later.",
+    "items": [
+      {
+        "name": "LanguageTool",
+        "url": "https://languagetool.org",
+        "what": "The best free grammar checker. Runs in your browser, no account needed, around 10,000 characters per check.",
+        "use": "Paste every client email into it for one month. You'll stop needing it.",
+        "cost": "Free",
+        "tone": "emerald"
+      },
+      {
+        "name": "Hemingway Editor",
+        "url": "https://hemingwayapp.com/",
+        "what": "Kills passive voice and verbosity. Free, no account, no limit. It is not a grammar checker — pair it with LanguageTool.",
+        "use": "Your goal is a lower grade level, not a higher one. Aim for grade 8. Senior people write simply.",
+        "cost": "Free",
+        "tone": "emerald"
+      },
+      {
+        "name": "Rachel's English (YouTube)",
+        "url": "https://www.youtube.com/@rachelsenglish",
+        "what": "The best free resource for exactly what the research says matters: connected speech, rhythm, and stress.",
+        "use": "Skip the individual-sound videos at first. Go straight to the rhythm and stress playlists.",
+        "cost": "Free",
+        "tone": "emerald"
+      },
+      {
+        "name": "BBC Learning English",
+        "url": "https://www.bbc.co.uk/learningenglish/",
+        "what": "Daily uploads; '6 Minute English' is the workhorse listening series.",
+        "use": "Listening practice at native speed. Play it at 1.25x once it feels easy.",
+        "cost": "Free",
+        "tone": "emerald"
+      },
+      {
+        "name": "Otter.ai",
+        "url": "https://otter.ai/pricing",
+        "what": "Transcribe your own client calls and read yourself back. Free tier: 300 minutes/month, 30 minutes per session, 3 lifetime file imports.",
+        "use": "The most uncomfortable and most useful drill on this page. Count your hedges. Count your apologies. You will be shocked.",
+        "cost": "Free tier — enough for ~2 calls a week",
+        "tone": "emerald"
+      },
+      {
+        "name": "Grammarly",
+        "url": "https://www.grammarly.com/plans",
+        "what": "Free tier covers grammar and spelling; it detects tone but won't rewrite it for you.",
+        "use": "Fine, but LanguageTool does the free job better and asks for less.",
+        "cost": "Free tier exists — sources disagree on its exact limits, so check before relying on it",
+        "tone": "amber"
+      },
+      {
+        "name": "Toastmasters (District 75, Philippines)",
+        "url": "https://d75.toastmastersdistricts.org/",
+        "what": "Genuinely excellent for speaking under pressure. Several PH clubs meet online.",
+        "use": "Worth it — but budget for it. It is routinely listed as 'free' by blogs that never checked.",
+        "cost": "NOT FREE — about $60 USD per 6 months, plus a $25 joining fee, plus club dues",
+        "tone": "coral"
+      }
+    ]
+  },
+
+  "lab": {
+    "kicker": "The workshop",
+    "title": "Audit a message you actually sent",
+    "lead": "We're not going to hand you scripts to copy — you'd sound like ten thousand other people using the same ones. Paste in a real message you sent a client this week. The lab flags every habit above so you can see your own patterns, then you rewrite it yourself.",
+    "placeholder": "Paste a real Slack message, email, or proposal you sent a client…\n\nTry this one if you don't have anything handy:\n\"Hi Sir, sorry to bother you! I just wanted to kindly follow up on the designs. I think maybe there might be a small issue with the spacing but I'm not sure. Please revert back when you can. Sorry again and thank you po!\"",
+    "cleanTitle": "Nothing flagged.",
+    "cleanBody": "Either your message is already direct — or it's too short to tell. Try a longer one: a real follow-up, a status update, or the last time you had to push back on a client.",
+    "rewritePrompt": "Now rewrite it yourself. Same message, same facts — no hedges, no apology, bottom line first.",
+    "rewritePlaceholder": "Your rewrite. Don't ask us for the answer — the point is that you can do this without us.\n\nRules: start with the point. Delete every flagged word. Give a recommendation, not a question. End with what you need and by when.",
+    "selfCritique": [
+      "Does sentence one contain the actual point, or is it throat-clearing?",
+      "Did you apologize for anything you didn't break?",
+      "Did you end with a question ('what should I do?') or a recommendation ('here's what I'll do — say no by 3pm')?",
+      "If a stranger read only your first line, would they know what you need?",
+      "Read it out loud. Do you sound like the person responsible for this, or like someone asking permission to exist?"
+    ]
+  }
+}

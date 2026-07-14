@@ -24,6 +24,17 @@ Never write copy that implies "download this" / "copy this file and rename it" /
 
 Test for any section you write: *does this make the reader more capable, or more dependent?* If dependent, rewrite it.
 
+## THE HONESTY DOCTRINE (equally non-negotiable)
+
+We ask users to sign an integrity oath. We therefore hold ourselves to it — a site that fakes its own numbers has no standing to teach conduct.
+
+- **No fabricated social proof.** No invented testimonials, no made-up learner counts, no "12,000+ people started". If we don't have it, we don't claim it.
+- **Every statistic ships with a visible, clickable link to its primary source.** No exceptions. Use the `Source` component pattern in `app/conduct/page.tsx`.
+- **Where the data doesn't exist, say so.** There is no credible data on time-to-first-client, freelancer churn, or what fraction succeed. `/reality` states this plainly. Teaching the reader to spot an unsourced number is worth more than a number.
+- **Label vendor-grade data as vendor-grade.** PH rate "guides" are staffing/training-vendor marketing with no disclosed methodology. Cite them if you must, but tag them, and show where they contradict each other.
+- **Never assert a pay figure without a source.** Prefer a qualitative claim to a fabricated precise one.
+- Distinguish **SOURCED** from **ASSUMPTION** anywhere we model or project (see `/simulator`).
+
 ## Voice & rules (non-negotiable)
 - Audience: Filipinos building a remote career. Warm, direct, encouraging. Light Taglish is welcome ("walang bayad, walang catch", "sabi sa'yo eh").
 - **Never** say "virtual assistant" or "assistant". Always **"online professional" / "remote professional"**.
@@ -33,7 +44,7 @@ Test for any section you write: *does this make the reader more capable, or more
 
 ## Design tokens (Tailwind utilities already wired)
 Colors: `paper`, `paper-2`, `paper-3`, `card`, `ink`, `ink-soft`, `ink-faint`, `line`, `line-strong`, `coral`, `coral-deep`, `coral-tint`, `emerald`, `emerald-tint`, `indigo`, `amber`.
-Fonts: `font-display` (Fraunces serif — headings), default sans (Geist), `font-mono` (Geist Mono — kickers/code).
+Fonts: `font-display` (Bricolage Grotesque — headings), default sans (Geist), `font-mono` (Geist Mono — kickers/code).
 Type: `text-[length:var(--text-hero)]`, `--text-display`, `--text-h2`, `--text-h3`, `--text-lead` (pair each with its `--line-height`).
 Radius: `rounded-[var(--radius)]` / `--radius-sm` / `--radius-lg`. Shadows: `shadow-[var(--shadow-sm)]`, `--shadow-md`, `--shadow-lg` (pick one token per class).
 Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotgrid`, `.link-sweep`, `.font-display`.
@@ -67,5 +78,6 @@ Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotg
 - Reference implementation for tone & polish: `app/page.tsx`.
 
 ## Data shapes (in `data/`)
-- `site.json`, `stages.json` (4 stages), `roadmap.json` (9 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json` ({intro,philosophy,beforeYouStart,bots[],categories[],prompts[]}), `plan.json` ({intro,commitment,questions[],weeks[]}), `equipment.json` ({intro,creed,categories[],builds[]}), `apply.json` ({intro,disclaimer,categories[],entries[]}), `templates.json` ({intro,categories[],templates[] with `content` string}), `tools.json` ({intro,categories[],codes}), `languages.json` ({intro,languages[],howto[]}), `wins.json` ({intro,stats[],wins[]}).
+- `site.json` ({brand,mission,standard,contact,stats[],**navGroups**[],primaryNav[]} — `navGroups` drives BOTH the mobile nav and the footer; add a route there and it appears in both), `stages.json` (4 stages), `roadmap.json` (9 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json`, `plan.json`, `equipment.json`, `apply.json`, `tools.json`, `languages.json`, `doctrine.json`, `frameworks.json`, `labs.json`, `tasks.json`, `learning.json`, `findwork.json`, `prompting.json`, `learntools.json`.
+- Honesty-doctrine pages: `conduct.json` ({intro,creed,principles[],philippineAnchor,cases[],dosDonts[],oath{clauses[]},honesty}), `english.json` ({baseline,threeCauses,honesty,banlist,frameworks[],speaking,resources[],lab}), `reality.json`, `simulator.json`. Each carries `source: {label,url}` objects — render them, never strip them.
 Import JSON directly: `import data from "@/data/x.json";`.

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Sparkles, Star } from "lucide-react";
+import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import site from "@/data/site.json";
 import stages from "@/data/stages.json";
 import tracks from "@/data/tracks.json";
@@ -17,6 +17,10 @@ import {
 } from "@/components/ui";
 
 const toolkit = [
+  { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers nobody selling a course will show you. Every claim sourced.", href: "/reality", icon: "scan-eye" },
+  { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic — and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
+  { title: "English at Work", desc: "Your English is fine. The habits that make it read as junior are the fixable part — audit a real message you sent.", href: "/english", icon: "message-square" },
+  { title: "Conduct & Integrity", desc: "What actually gets remote professionals fired, sued, and delisted — and an oath you write yourself.", href: "/conduct", icon: "shield-check" },
   { title: "The Method", desc: "Six habits that make you self-sufficient: find, deconstruct, learn, vet, ask, unstick.", href: "/method", icon: "compass" },
   { title: "Micro-Tasks", desc: "Real jobs you can do today with no client. Each one finishes as a portfolio piece — proof, not promises.", href: "/tasks", icon: "target" },
   { title: "Build Labs", desc: "Learn the anatomy and the rules — then write your own resume, portfolio, and SOPs from a blank page.", href: "/build", icon: "pencil-ruler" },
@@ -104,23 +108,19 @@ export default function Home() {
               </div>
             </Reveal>
             <Reveal i={4}>
-              <div className="mt-10 flex items-center gap-4 text-sm text-ink-soft">
-                <div className="flex -space-x-2">
-                  {["coral", "emerald", "amber", "indigo"].map((c) => (
-                    <span
-                      key={c}
-                      className={`h-8 w-8 rounded-full border-2 border-paper ${accentBar[c]}`}
-                    />
-                  ))}
-                </div>
+              <div className="mt-10 flex items-start gap-3 rounded-2xl border border-line bg-paper-2 p-4 text-sm text-ink-soft">
+                <ShieldCheck size={18} className="mt-0.5 shrink-0 text-emerald" />
                 <span>
-                  <strong className="text-ink">12,000+</strong> Filipinos already
-                  started —{" "}
-                  <span className="inline-flex items-center gap-0.5 align-middle">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star key={i} size={13} className="fill-amber text-amber" />
-                    ))}
-                  </span>
+                  <strong className="font-semibold text-ink">
+                    No fake testimonials here.
+                  </strong>{" "}
+                  This platform is new and has no track record to show off yet —
+                  so we show you the{" "}
+                  <Link href="/reality" className="font-semibold text-ink link-sweep">
+                    real numbers on this career
+                  </Link>{" "}
+                  instead, sources and all. Including the ones that might talk you
+                  out of it.
                 </span>
               </div>
             </Reveal>
@@ -185,8 +185,8 @@ export default function Home() {
             <div className="rounded-2xl border border-line bg-paper-2 p-6">
               <p className="text-sm leading-relaxed text-ink-soft">
                 <Sparkles size={16} className="mb-1 inline text-coral" /> We keep
-                the front calm on purpose. Everything is here — 1,000+ guides,
-                tools, and templates — but it opens{" "}
+                the front calm on purpose. Every workshop, lab, and method is
+                here — but it opens{" "}
                 <strong className="text-ink">as you need it</strong>, tailored to
                 the lane you pick. No overwhelm, no 40-tab rabbit holes.
               </p>
@@ -354,9 +354,11 @@ export default function Home() {
                   <span className="text-coral">double your pay.</span>
                 </h2>
                 <p className="mt-5 max-w-lg text-paper-2/75">
-                  Bilingual Filipino professionals earn ₱70k–₱90k/month in Japanese
-                  roles. We show you exactly which languages pay most — and where to
-                  learn them free, through TESDA and partner institutes.
+                  English is a national baseline in the Philippines — it gets you in
+                  the door, but it doesn&rsquo;t price you above the person next to
+                  you. A second language is one of the few edges that still does. We
+                  show you which ones pay, and where to learn them free through TESDA
+                  and partner institutes.
                 </p>
                 <div className="mt-8">
                   <ButtonLink
@@ -370,8 +372,8 @@ export default function Home() {
               </div>
               <div className="grid gap-3">
                 {[
-                  { flag: "🇯🇵", name: "Japanese", pay: "₱70k–₱90k/mo" },
-                  { flag: "🇰🇷", name: "Korean", pay: "₱50k+/mo" },
+                  { flag: "🇯🇵", name: "Japanese", pay: "Highest premium" },
+                  { flag: "🇰🇷", name: "Korean", pay: "Strong premium" },
                   { flag: "🇨🇳", name: "Mandarin", pay: "Trade premium" },
                 ].map((l) => (
                   <div
@@ -404,7 +406,7 @@ export default function Home() {
                 {site.standard.body}
               </p>
               <div className="mt-7">
-                <ArrowLink href="/wins">See the outcomes it produces</ArrowLink>
+                <ArrowLink href="/reality">See what this career really pays</ArrowLink>
               </div>
             </div>
           </Reveal>

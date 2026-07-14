@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Bricolage_Grotesque } from "next/font/google";
 import "./globals.css";
+import { BASE_URL } from "./sitemap";
 import { PathProvider } from "@/lib/path-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -14,7 +15,7 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://devup.example.com"),
+  metadataBase: new URL(BASE_URL),
   title: {
     default: "DevUp — Developing Upwards. Build Your Online Career, Free.",
     template: "%s · DevUp",

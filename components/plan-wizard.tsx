@@ -58,7 +58,10 @@ const QUESTIONS: Question[] = (plan.questions as unknown as RawQuestion[]).map(
 const TRACK_STEP_INDEX = QUESTIONS.findIndex((q) => q.id === "track");
 const TOTAL_DAYS = plan.weeks.reduce((sum, w) => sum + w.days.length, 0);
 const NAV_LABEL: Record<string, string> = Object.fromEntries(
-  site.nav.map((n) => [n.href, n.label]),
+  [...site.navGroups.flatMap((g) => g.links), ...site.primaryNav].map((n) => [
+    n.href,
+    n.label,
+  ]),
 );
 
 const accentSelected: Record<string, string> = {
