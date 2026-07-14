@@ -60,7 +60,7 @@ function Source({ label, url }: { label: string; url: string }) {
 }
 
 export default function AiFirstPage() {
-  const { hero, shift, fluency, landscape, craft, adopt, guardrails, closing } =
+  const { hero, shift, fluency, landscape, craft, adopt, guardrails, agentic, closing } =
     aifirst;
 
   return (
@@ -364,6 +364,53 @@ export default function AiFirstPage() {
             <ArrowLink href={guardrails.crossref.href}>{guardrails.crossref.label}</ArrowLink>
           </div>
         </Reveal>
+      </section>
+
+      {/* ------------------------------------------------------------ AGENTIC */}
+      <section className="bg-paper-3/60 py-20 lg:py-24">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              kicker={agentic.kicker}
+              title={agentic.title}
+              lead={agentic.lead}
+            />
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {agentic.items.map((it, idx) => (
+              <Reveal key={it.term} i={idx % 3}>
+                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2">
+                    <Icon name={it.icon} size={20} />
+                  </span>
+                  <h3 className="mt-5 font-display text-lg leading-snug">{it.term}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{it.desc}</p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal i={1}>
+            <div className="mt-10 rounded-2xl border border-line-strong bg-paper-2 p-8">
+              <h3 className="font-display text-[length:var(--text-h3)] leading-snug">
+                {agentic.why.title}
+              </h3>
+              <p className="mt-4 max-w-3xl leading-relaxed text-ink-soft">{agentic.why.body}</p>
+              <p className="mt-5 max-w-2xl border-l-2 border-coral pl-5 font-display text-lg leading-snug text-ink">
+                {agentic.note}
+              </p>
+              <a
+                href={agentic.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-5 inline-block text-xs font-semibold text-ink link-sweep"
+              >
+                {agentic.source.label} ↗
+              </a>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       {/* ------------------------------------------------------------ CLOSING */}

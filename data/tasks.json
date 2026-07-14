@@ -2,7 +2,7 @@
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
   "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 20 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Nobody asks whether you were paid for it. They ask whether you can do it. Now you can prove it.",
-  "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it.",
+  "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it free if you don't already have it." },
     { "title": "Resources", "desc": "Real, specific, free resources, official docs, free courses, free tool tiers. No paid tools required for any task on this page." },
@@ -988,6 +988,59 @@
       ],
       "presentIt": "Present as a mini case study: the tool, the core value prop you chose to lead with, and the finished video embedded/linked. Lead with the constraint you nailed: 'Turned raw, unscripted screen capture into a 58-second, problem-solution-CTA explainer.'",
       "stretch": "Cut a second, 15-second vertical version of the same explainer for social/story placements, proving you can adapt one asset across formats, a real recurring client need."
+    },
+    {
+      "id": "pro-bono-project",
+      "title": "Deliver One Pro-Bono Project for a Real Organization",
+      "track": "any",
+      "accent": "emerald",
+      "icon": "heart-handshake",
+      "difficulty": "Starter",
+      "time": "1–2 weeks, a few hours per week",
+      "proves": "You can scope, deliver, and hand over real work for a real stakeholder — with a named organization willing to vouch for it. This is the closest thing to client experience that requires no client.",
+      "prerequisites": [
+        {
+          "skill": "One deliverable you can already produce (from any other task on this page)",
+          "why": "Pro-bono work is where you apply a skill for a real stakeholder, not where you learn it from zero. Bring one thing you can do.",
+          "ifYouDont": "Finish one Starter micro-task above first — it gives you the exact deliverable to offer."
+        }
+      ],
+      "resources": [
+        {
+          "name": "Your own community",
+          "type": "Real clients",
+          "what": "A school, parish, barangay health center, co-op, or small local business — every one of them has a broken spreadsheet, an unmanaged page, or books nobody reconciles.",
+          "free": true,
+          "url": "#"
+        }
+      ],
+      "brief": {
+        "scenario": "Choose one real organization near you and offer one clearly-scoped piece of work, free. Choose where your hours do the most good — a small org with no budget gains more from ten of your hours than a large one ever would, and effective help is targeted: one real problem, solved completely, handed over so they can keep it running without you.",
+        "deliverable": "The finished work itself, plus a one-page handover the org can use after you leave: what you built, how to maintain it, and where everything lives.",
+        "constraints": [
+          "Scope it in writing before you start — one deliverable, one deadline, agreed with a named person. Pro-bono without scope becomes an unpaid job.",
+          "Treat it exactly like paid work: professional communication, deadlines kept, confidentiality respected. This is conduct practice as much as craft practice.",
+          "Deliver a handover document. Work that collapses when you leave helped nobody."
+        ],
+        "steps": [
+          "List 3 organizations you already have a connection to, and for each, one visible problem you could fix.",
+          "Contact the most promising one with a specific offer: the problem, the deliverable, the deadline. Specific offers get yes; vague offers get silence.",
+          "Agree the scope in writing (a message thread counts). Then deliver it like a paid engagement.",
+          "Hand over: walk them through the work, leave the one-page guide, and ask one question — 'may I show this work, with your name, when I apply for jobs?'"
+        ]
+      },
+      "definitionOfDone": [
+        "The deliverable is live and in use by the organization, not just finished on your laptop.",
+        "A named person at the org has the handover document and can run things without you.",
+        "You have written permission to present the work publicly."
+      ],
+      "selfCritique": [
+        "Did I scope this in writing before starting, or did the work grow past the agreement?",
+        "Could the org keep using what I built if I disappeared today?",
+        "Did I pick the org where my hours did the most good, or just the easiest ask?"
+      ],
+      "presentIt": "Present it as your first case study: the organization, the problem, the deliverable, and one real outcome. 'Rebuilt the enrollment sheet for a 40-student tutorial center; staff now update it themselves' beats any certificate on the page.",
+      "stretch": "After handover, offer a second org the same deliverable. Two named organizations plus two handover docs is a portfolio — and a referral network you earned by giving first."
     }
   ]
 }
