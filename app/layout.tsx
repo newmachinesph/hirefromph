@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DevUp, Build the online career you actually own. Free.",
     description:
-      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof. No catch.",
+      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
     url: BASE_URL,
     siteName: "DevUp",
     locale: "en_PH",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DevUp, Build the online career you actually own. Free.",
     description:
-      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof. No catch.",
+      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
   robots: { index: true, follow: true },
 };

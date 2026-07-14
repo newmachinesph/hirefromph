@@ -75,7 +75,7 @@ export default function OpengraphImage() {
             <span style={{ color: "#0d9488" }}>actually own.</span>
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#435551" }}>
-            Free learning for Filipino online professionals. Real talk, no catch.
+            Free learning for Filipino online professionals. Real talk, real sources.
           </div>
         </div>
 
@@ -91,9 +91,9 @@ export default function OpengraphImage() {
         >
           <span style={{ color: "#2f9e46", fontWeight: 700 }}>Developing upwards</span>
           <span>·</span>
-          <span>₱0, permanently</span>
+          <span>Free, permanently</span>
           <span>·</span>
-          <span>we build you, you own it</span>
+          <span>you build it, you own it</span>
         </div>
       </div>
     ),

@@ -117,15 +117,14 @@ export default function Home() {
                 <ShieldCheck size={18} className="mt-0.5 shrink-0 text-emerald" />
                 <span>
                   <strong className="font-semibold text-ink">
-                    No fake testimonials here.
+                    Every claim here is sourced.
                   </strong>{" "}
-                  This platform is new and has no track record to show off yet.
-                  So instead we show you the{" "}
+                  We show you the{" "}
                   <Link href="/reality" className="font-semibold text-ink link-sweep">
                     real numbers on this career
                   </Link>
-                 , sources and all. Including the ones that might talk you out of
-                  it.
+                  , with a link to the primary source every time — including the
+                  numbers that might talk you out of it.
                 </span>
               </div>
             </Reveal>
@@ -536,8 +535,8 @@ function HeroPanel() {
 
       {/* overlay chips */}
       <div className="absolute left-6 top-6 rounded-2xl border border-line bg-ink px-4 py-3 text-paper-2">
-        <p className="font-display text-3xl leading-none">₱0</p>
-        <p className="text-[11px] text-paper-2/60">to begin</p>
+        <p className="font-display text-3xl leading-none">9</p>
+        <p className="text-[11px] text-paper-2/60">steps to the peak</p>
       </div>
       <div className="absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border border-emerald/25 bg-emerald-tint px-3 py-1 text-xs font-semibold text-emerald">
         Developing upwards

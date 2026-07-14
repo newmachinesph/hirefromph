@@ -4,7 +4,7 @@
     "line2": "shows you first."
   },
   "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with a link you can open and check yourself.",
-  "creed": "Encouragement built on a number you can't verify isn't encouragement. It's bait. The truth is more useful, and, as it turns out, more hopeful than the hype.",
+  "creed": "Encouragement built on a number you can't verify isn't encouragement. The truth is more useful — and, as it turns out, more hopeful.",
   "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
   "readANumber": {
@@ -37,10 +37,10 @@
         "why": "\"Writing jobs fell 28%\" sounds like a death sentence, until you learn that ALL job postings fell 8% that year. Half of the panic on the internet is a number with its baseline quietly removed."
       }
     ],
-    "note": "If a claim can't survive all four, it isn't a fact. It's marketing that learned to count."
+    "note": "If a claim can't survive all four, treat it as unverified."
   },
 
-  "mythsIntro": "Each of these is something you have already been told, probably by someone selling a course. On the left is the promise. On the right is what the evidence says. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
+  "mythsIntro": "Each of these is something you have probably already been told. On the left is the promise. On the right is what the evidence says. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
   "myths": [
     {
       "id": "pay",
@@ -418,7 +418,7 @@
         "id": "success-rate",
         "claim": "\"Only X% ever reach a meaningful income.\"",
         "verdict": "No data exists",
-        "why": "Nobody has defined \"meaningful income\", let alone counted who reaches it. Used by pessimists to look rigorous and by course sellers to make you afraid of doing this alone."
+        "why": "Nobody has defined \"meaningful income\", let alone counted who reaches it. Treat any confident version of this number — optimistic or pessimistic — as unverified."
       },
       {
         "id": "85k",
@@ -444,7 +444,7 @@
       {
         "id": "market",
         "title": "Market reports, read the primary source",
-        "note": "These are the documents every freelancing influencer is quoting at you, usually without reading them. Go straight to the source and you will know more than they do by lunchtime.",
+        "note": "These are the primary documents behind most claims you'll hear about this market. Read them yourself — an afternoon at the source is worth a year of secondhand summaries.",
         "items": [
           {
             "title": "The Future of Jobs Report 2025",

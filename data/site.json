@@ -2,16 +2,16 @@
   "brand": "DevUp",
   "wordmarkAccent": "Up",
   "meaning": "Developing upwards",
-  "tagline": "Developing upwards. The enterprise-grade platform for building an online career. Free.",
+  "tagline": "Developing upwards. A complete platform for building an online career. Free.",
   "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. A free, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, not an assistant, a professional. Built to the standard of a real operations team, and given away.",
   "standard": {
     "kicker": "The DevUp standard",
     "title": "We don't hand you files. We make you resourceful.",
-    "body": "Anyone can give you a resume template. It makes you identical to ten thousand other applicants and useless the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and it only ever develops upwards.",
+    "body": "Anyone can give you a resume template. It makes you look like every other applicant, and it stops helping the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and it only ever develops upwards.",
     "principles": [
       { "title": "Method over material", "desc": "Every lab teaches how the thing is built and why, never a file to download and rename.", "icon": "key-round" },
       { "title": "You build it, you own it", "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.", "icon": "pencil-ruler" },
-      { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it. No paywall, no upsell, no dependency by design.", "icon": "unlock" }
+      { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it — every page builds toward that.", "icon": "unlock" }
     ]
   },
   "social": {
@@ -22,7 +22,7 @@
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
     { "value": "6", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick" },
     { "value": "4", "label": "career stages", "sub": "zero to indispensable" },
-    { "value": "₱0", "label": "cost, permanently", "sub": "no paywall, no upsell" }
+    { "value": "20", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
   ],
   "navGroups": [
     {

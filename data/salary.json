@@ -3,7 +3,7 @@
     "kicker": "Salary guide · 2027 · read the warning first",
     "line1": "What online work",
     "line2": "really pays in 2027.",
-    "intro": "Everyone wants a number. Here is the honest version. There is no official, trusted dataset of what Filipino online professionals earn. Every salary guide you find online is made by a staffing company or a course seller, and none of them show their math. So we will give you the ranges people quote, show you where they disagree, and then teach you the one thing that actually works: reading live job posts and pricing your own value. Use this to get your bearings, not to set your rate.",
+    "intro": "Everyone wants a number. Here is the honest version. There is no official, trusted dataset of what Filipino online professionals earn. Every public salary guide comes from a company with its own interests, and none of them show their math. So we will give you the ranges people quote, show you where they disagree, and then teach you the one thing that actually works: reading live job posts and pricing your own value. Use this to get your bearings, not to set your rate.",
     "creed": "A salary guide with no method behind it is a guess with a chart on it. The real number is the one a real client agrees to pay you this month."
   },
 
@@ -180,7 +180,7 @@
       { "href": "/niches", "label": "Pick a lane", "desc": "The specialty that moves you off the falling floor and onto the rising ceiling." },
       { "href": "/ai-first", "label": "Add the AI premium", "desc": "Fold AI into your craft to earn the premium that lands on top of a real skill." },
       { "href": "/clients", "label": "Own the client", "desc": "Direct clients pay more than an agency, because no one takes a cut in the middle." },
-      { "href": "/reality", "label": "See the full market data", "desc": "Every claim about this career, sourced, with the parts nobody selling a course will show you." }
+      { "href": "/reality", "label": "See the full market data", "desc": "Every claim about this career, sourced — including the parts that rarely get quoted." }
     ]
   }
 }
