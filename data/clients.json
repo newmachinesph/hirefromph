@@ -1,0 +1,106 @@
+{
+  "hero": {
+    "kicker": "Independent contractor · not an assistant · not an employee",
+    "line1": "Be a business of one —",
+    "line2": "and own your clients.",
+    "intro": "There are two ways to build an online income. You can be a remote employee inside someone else's company, or you can be an independent contractor — a business of one who chooses the work, sets the price, and owns the relationship. DevUp is built for the second road. It is harder at the start and better at the top, and the single decision that shapes it most is who your clients belong to: an agency, or you.",
+    "creed": "An employee is given clients. A contractor earns them. The earning is the harder path — and the only one where the upside is yours to keep."
+  },
+
+  "mindset": {
+    "kicker": "The mindset shift",
+    "title": "You are not looking for a boss. You are looking for customers.",
+    "lead": "This is the reframe that changes everything about how you apply, price, and behave. An employee optimises to be chosen and kept. A contractor optimises to deliver an outcome and be rehired. Same person, completely different posture — and clients can feel which one you are in the first message.",
+    "rows": [
+      { "dimension": "Who finds the work", "employee": "The company hands it to you.", "contractor": "You source it — and that skill never leaves you." },
+      { "dimension": "Who sets the price", "employee": "A salary band you negotiate once.", "contractor": "You do, per outcome, and you can raise it." },
+      { "dimension": "Who owns the upside", "employee": "The company keeps the margin on your work.", "contractor": "You keep it — and compound it as you specialise." },
+      { "dimension": "Who carries the risk", "employee": "The company absorbs the dry spells.", "contractor": "You do — so you build a runway and a pipeline." },
+      { "dimension": "What you're really selling", "employee": "Your time, forty hours at a stretch.", "contractor": "A result. Once you sell results, hours stop being the ceiling." }
+    ],
+    "note": "The demand for this is not a fad. 77% of business leaders told Upwork they need fractional or independent talent — companies increasingly want a specific capability for a specific window, not another full-time hire. That is a market built for a business of one.",
+    "source": {
+      "label": "Upwork — In-Demand Skills 2026",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
+    }
+  },
+
+  "roads": {
+    "kicker": "The fork in the road",
+    "title": "Agency or direct? Both are valid. Know what each one costs.",
+    "lead": "An agency places you with clients and takes a cut. Direct means the client is yours, with no one in between. Neither is the \"right\" answer — plenty of professionals start with an agency for the pipeline and mentorship, then graduate to direct once they can sell for themselves. What matters is choosing with your eyes open, not by accident.",
+    "agency": {
+      "title": "Working through an agency",
+      "blurb": "A staffing firm or agency finds the client, handles the sale, and places you. You do the work; they manage the relationship and take a margin.",
+      "pros": [],
+      "cons": []
+    },
+    "direct": {
+      "title": "Working with direct clients",
+      "blurb": "You find the client yourself and contract with them directly. No middleman, no margin taken — and no one else doing the parts an agency used to do for you.",
+      "pros": [],
+      "cons": []
+    },
+    "verdict": "A useful rule of thumb: an agency is a great way to start and to stay busy; direct is where the rate and the ownership live. Many pros run both at once — an agency retainer for the floor, direct clients for the ceiling. Choose deliberately, and revisit the choice as your ability to sell for yourself grows."
+  },
+
+  "getDirect": {
+    "kicker": "How to land direct clients",
+    "title": "Direct clients don't fall from the sky. They're built, step by step.",
+    "lead": "This is the part that scares people off direct work — and it's a learnable process, not a personality trait. You do not need to be an extrovert or a salesperson. You need a clear position, real proof, and a repeatable way to start conversations. Here is the sequence.",
+    "steps": [],
+    "note": "None of this requires cold charm or a big following. It requires a specific promise, evidence you can point to, and the discipline to keep the pipeline full before you need it. DevUp has a workshop for each piece — the links above take you there."
+  },
+
+  "protect": {
+    "kicker": "Protect yourself like a business",
+    "title": "No agency is standing behind you now. Your contract is.",
+    "lead": "The freedom of direct work comes with the responsibility an employer used to carry. In the Philippines there is still no dedicated law that will collect an unpaid invoice from a foreign client for you — which is exactly why the habits below are not optional paperwork. They are the only protection that actually holds.",
+    "items": [
+      {
+        "title": "There is still no freelancer protection law",
+        "desc": "The Freelance Workers Protection Act — written contracts, upfront payment, penalties for non-payment — passed the House in 2023 and then stalled. It is not enacted. So you cannot lean on a statute; you have to build the protection into every deal yourself.",
+        "icon": "scale",
+        "source": {
+          "label": "BusinessMirror — Bill seeks protection for freelancers, gig workers",
+          "url": "https://businessmirror.com.ph/2026/05/06/bill-seeks-protection-benefits-for-freelancers-gig-workers/"
+        }
+      },
+      {
+        "title": "Contract, scope, and a deposit — every time",
+        "desc": "Written scope so \"done\" is defined, milestones so you're never carrying weeks of unpaid work, and a deposit before you start. Build the habit now while the stakes are small, so it's automatic when they're large.",
+        "icon": "file-signature",
+        "source": null
+      },
+      {
+        "title": "Register, and invoice like a supplier",
+        "desc": "A registered freelancer in the Philippines can use the 8% flat tax option on gross income up to ₱3M and issue a proper invoice. Being invoice-capable is itself a rate differentiator — it lets a serious client book you as a real supplier, not a favour.",
+        "icon": "receipt-text",
+        "source": {
+          "label": "Taxumo — Taxes for Freelancers in the Philippines",
+          "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/"
+        }
+      },
+      {
+        "title": "Get paid through channels that protect you",
+        "desc": "Use tracked, professional payment rails and keep the paper trail. Never move work off-platform \"to save the fee\" before trust is earned, and treat any unfunded milestone as unpaid work — because that's what it is.",
+        "icon": "shield-check",
+        "source": null
+      }
+    ],
+    "crossref": { "href": "/conduct", "label": "The full conduct & integrity standard" }
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "Own the relationship, and you own the career.",
+    "body": "An agency can hand you a client and take them back just as easily. A skill you can sell yourself — position, proof, a full pipeline — is an asset no one can revoke. Start wherever gets you moving, agency or direct. But build the ability to win a client on your own, because that is the thing that makes you a business instead of a seat someone rents.",
+    "point": "Pick your next move. Each one is a workshop, not a lecture — you leave with something built.",
+    "links": [
+      { "href": "/apply", "label": "Source & vet clients", "desc": "The search operators and red flags for finding real clients yourself — no agency required." },
+      { "href": "/build", "label": "Build the proof", "desc": "A portfolio and case studies written from a blank page, so you have evidence to point to." },
+      { "href": "/tracker", "label": "Run a pipeline", "desc": "A working application and follow-up system. Most direct work is lost to silence, not rejection." },
+      { "href": "/reality", "label": "Price with real data", "desc": "What this work actually pays, why the salary guides disagree, and how to triangulate your rate." }
+    ]
+  }
+}
