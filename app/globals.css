@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Katam-Bray — Design tokens                                         */
+/*  Editorial-modern, light. Warm paper + ink + coral + emerald.       */
+/* ------------------------------------------------------------------ */
+
+:root {
+  /* Surfaces — warm paper, never sterile white */
+  --paper: #f6f3ec;
+  --paper-2: #fffdf8;
+  --paper-3: #efe9dd;
+  --card: #ffffff;
+
+  /* Ink */
+  --ink: #17130d;
+  --ink-soft: #4d463b;
+  --ink-faint: #8b8474;
+  --line: #e4ddce;
+  --line-strong: #d3c9b4;
+
+  /* Signature accent — sunrise coral */
+  --coral: #ef5b34;
+  --coral-deep: #d9451f;
+  --coral-tint: #fdeee7;
+
+  /* Growth / free / verified — emerald */
+  --emerald: #0f7a5e;
+  --emerald-tint: #e6f3ee;
+
+  /* Cool support — used sparingly for info/links */
+  --indigo: #3a3af0;
+  --amber: #f2a900;
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 1px 2px rgba(23, 19, 13, 0.05), 0 2px 8px rgba(23, 19, 13, 0.04);
+  --shadow-md: 0 4px 12px rgba(23, 19, 13, 0.06), 0 16px 40px rgba(23, 19, 13, 0.07);
+  --shadow-lg: 0 8px 24px rgba(23, 19, 13, 0.08), 0 30px 70px rgba(23, 19, 13, 0.10);
+  --shadow-coral: 0 10px 30px rgba(239, 91, 52, 0.28);
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --maxw: 1536px;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-coral: var(--coral);
+  --color-coral-deep: var(--coral-deep);
+  --color-coral-tint: var(--coral-tint);
+  --color-emerald: var(--emerald);
+  --color-emerald-tint: var(--emerald-tint);
+  --color-indigo: var(--indigo);
+  --color-amber: var(--amber);
+
+  --radius-xl2: var(--radius-lg);
+
+  --font-display: var(--font-bricolage);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Fluid type scale */
+  --text-hero: clamp(2.9rem, 1.2rem + 7vw, 7rem);
+  --text-hero--line-height: 0.95;
+  --text-display: clamp(2.2rem, 1rem + 4.4vw, 4.5rem);
+  --text-display--line-height: 1;
+  --text-h2: clamp(1.7rem, 1rem + 2.4vw, 2.9rem);
+  --text-h2--line-height: 1.05;
+  --text-h3: clamp(1.25rem, 1rem + 0.9vw, 1.6rem);
+  --text-lead: clamp(1.05rem, 0.98rem + 0.5vw, 1.32rem);
+}
+
+* {
+  border-color: var(--line);
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-feature-settings: "ss01", "cv01";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Grain / paper texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+::selection {
+  background: var(--coral);
+  color: #fff;
+}
+
+/* Display font helper — grotesk sans, tight tracking */
+.font-display {
+  font-family: var(--font-display), system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+/* Eyebrow / kicker label */
+.kicker {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+/* Container */
+.container-x {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: clamp(1.15rem, 4vw, 2.5rem);
+}
+
+/* Link underline sweep */
+.link-sweep {
+  background-image: linear-gradient(var(--coral), var(--coral));
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s var(--ease);
+}
+.link-sweep:hover {
+  background-size: 100% 2px;
+}
+
+/* Reveal-on-scroll base (JS toggles data-shown) */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  will-change: opacity, transform;
+}
+[data-reveal][data-shown="true"] {
+  opacity: 1;
+  transform: none;
+}
+
+/* Marquee */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+/* Soft dotted grid background for feature panels */
+.dotgrid {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* Focus ring */
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Custom scrollbar (subtle) */
+::-webkit-scrollbar { width: 11px; height: 11px; }
+::-webkit-scrollbar-track { background: var(--paper); }
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 99px;
+  border: 3px solid var(--paper);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .marquee-track { animation: none; }
+}

@@ -1,0 +1,77 @@
+{
+  "intro": "English gets you hired. A second language gets you paid more. Bilingual Filipino professionals command $6–$15/hr versus $4–$7/hr for English-only — and in-country bilingual roles reach ₱70,000–₱90,000/month. Here's what to learn and where, free.",
+  "premiumNote": "Ranked by earning premium for Filipino remote professionals in 2026.",
+  "languages": [
+    {
+      "id": "japanese",
+      "name": "Japanese",
+      "flag": "🇯🇵",
+      "premium": "Highest",
+      "premiumScore": 5,
+      "payNote": "₱70,000–₱90,000/mo in bilingual roles ($1,250–$1,600)",
+      "why": "Japan's aging workforce and deep PH-Japan business ties make Japanese the single most valuable second language. Roles are competitive and demand real capability.",
+      "roles": ["Bilingual support", "Interpretation", "Back-office", "Localization"],
+      "effort": "12–24 months to business level",
+      "learn": [
+        { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Basic Japanese Language & Culture, ~150 hrs. First-come, first-served slots via online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
+        { "name": "Japan Foundation, Manila", "type": "Paid / free events", "detail": "The authority on Japanese-language education in the Philippines. Courses, JLPT prep, resources.", "url": "https://jfmo.org.ph/japanese-language-education/" },
+        { "name": "QC Public Library × Jellyfish Education", "type": "Free (online)", "detail": "Free online Basic Japanese, nationwide, 18+. Needs a device, internet, and Zoom.", "url": "https://quezoncity.gov.ph/" },
+        { "name": "Nihongo Center Foundation", "type": "Paid", "detail": "One of the longest-established Japanese institutions in the country.", "url": "#" }
+      ]
+    },
+    {
+      "id": "korean",
+      "name": "Korean",
+      "flag": "🇰🇷",
+      "premium": "High",
+      "premiumScore": 4,
+      "payNote": "₱50,000+/mo in bilingual roles",
+      "why": "K-content, Korean diaspora markets, and supplier relationships keep demand strong for Korean-speaking support and coordination.",
+      "roles": ["Bilingual support", "Community management", "Coordination", "Content moderation"],
+      "effort": "10–18 months to conversational-plus",
+      "learn": [
+        { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Korean among the free foreign-language programs. Limited slots, online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
+        { "name": "Korean Cultural Center PH", "type": "Paid", "detail": "Basic, Elementary, and Intermediate Korean — speak, write, read, comprehend. Fees ~₱2,000–₱3,000.", "url": "#" },
+        { "name": "King Sejong Institute", "type": "Free / low-cost", "detail": "Official Korean-government language program with PH branches.", "url": "#" }
+      ]
+    },
+    {
+      "id": "mandarin",
+      "name": "Mandarin Chinese",
+      "flag": "🇨🇳",
+      "premium": "High",
+      "premiumScore": 4,
+      "payNote": "Premium for trade, tourism & manufacturing accounts",
+      "why": "Chinese-market businesses — tourism, student markets, and manufacturing relationships — pay a premium for Mandarin-capable professionals.",
+      "roles": ["Bilingual sales", "Support", "Sourcing coordination", "Translation"],
+      "effort": "12–24 months (tones take practice)",
+      "learn": [
+        { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Mandarin included in TESDA's free foreign-language track.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
+        { "name": "CKS College Language Center", "type": "Paid", "detail": "Teaching Mandarin since 1990 — short courses for practical business use.", "url": "#" },
+        { "name": "Confucius Institute (PH campuses)", "type": "Free / low-cost", "detail": "HSK exam prep and structured Mandarin at partner universities.", "url": "#" }
+      ]
+    },
+    {
+      "id": "spanish",
+      "name": "Spanish",
+      "flag": "🇪🇸",
+      "premium": "Moderate",
+      "premiumScore": 3,
+      "payNote": "Premium for US-Hispanic & LATAM accounts",
+      "why": "The huge US-Hispanic and Latin American markets need Spanish support and sales. Familiar to many Filipinos, so faster to reach a working level.",
+      "roles": ["Bilingual support", "Sales", "Content", "Community"],
+      "effort": "6–12 months to conversational",
+      "learn": [
+        { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Spanish among TESDA's free foreign-language offerings.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
+        { "name": "Instituto Cervantes de Manila", "type": "Paid", "detail": "The official Spanish-government cultural institute — structured levels and DELE prep.", "url": "#" },
+        { "name": "Duolingo + immersion", "type": "Free", "detail": "Free daily practice to build a base before formal classes.", "url": "#" }
+      ]
+    }
+  ],
+  "howto": [
+    { "step": "Pick one", "desc": "Choose the language that matches your target market and your patience — don't split focus." },
+    { "step": "Start free", "desc": "Register for a TESDA LSI slot or a free public-library course. Zero cost to test your commitment." },
+    { "step": "Get certified", "desc": "Aim for a recognized level (JLPT N4→N3, TOPIK, HSK, DELE). Certificates are proof clients trust." },
+    { "step": "Stack it on a niche", "desc": "Language + a niche (support, sales, ops) is where the biggest rate jumps happen." }
+  ]
+}

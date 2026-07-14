@@ -1,0 +1,107 @@
+{
+  "intro": "Retired copy-paste library. These entries are kept only as specimens to dissect on the AI Leverage page — read them for the pattern, then write your own.",
+  "philosophy": "AI won't replace you. But people who can write their own prompts will.",
+  "beforeYouStart": [
+    "Have your work history and any past roles ready to paste in.",
+    "Know the exact role or client you're targeting — paste the job post.",
+    "Always fact-check and personalize AI output. It's a co-pilot, not autopilot."
+  ],
+  "bots": [
+    { "id": "resume", "name": "Resume Bot", "icon": "file-text", "desc": "Turns your raw history into a results-focused, ATS-friendly resume for a specific role.", "accent": "coral" },
+    { "id": "cover", "name": "Cover Letter Bot", "icon": "mail", "desc": "Writes a tailored cover letter that mirrors the job post and sounds like you.", "accent": "amber" },
+    { "id": "interview", "name": "Interview Coach Bot", "icon": "messages-square", "desc": "Runs a mock interview for your target role and grades your answers.", "accent": "emerald" },
+    { "id": "profile", "name": "Profile Optimizer Bot", "icon": "user-round", "desc": "Rewrites your Upwork / OnlineJobs / LinkedIn profile to get more replies.", "accent": "indigo" }
+  ],
+  "categories": [
+    { "id": "apply", "label": "Applying" },
+    { "id": "interview", "label": "Interviews" },
+    { "id": "deliver", "label": "On the job" },
+    { "id": "levelup", "label": "Level up" }
+  ],
+  "prompts": [
+    {
+      "id": "p1",
+      "category": "apply",
+      "title": "Tailor my resume to a job post",
+      "desc": "Rewrites your resume to match a specific job's keywords and priorities.",
+      "text": "You are an expert resume writer for remote roles. Here is my current experience: [PASTE]. Here is the job post: [PASTE]. Rewrite my resume summary and 5 bullet points to match this role. Use action verbs, quantify results where possible, and mirror the exact keywords from the post so it passes ATS screening. Keep it truthful to my experience."
+    },
+    {
+      "id": "p2",
+      "category": "apply",
+      "title": "Write a reply-worthy application message",
+      "desc": "A short, human first message that stands out on job boards.",
+      "text": "Write a 120-word application message for this remote role: [PASTE JOB POST]. Open with one specific detail from their post that shows I read it, state the single most relevant thing I can do for them, and end with a low-friction call to action. Warm and confident, no fluff, no 'I am writing to apply'."
+    },
+    {
+      "id": "p3",
+      "category": "apply",
+      "title": "Optimize my OnlineJobs / Upwork profile",
+      "desc": "Rewrites your headline and overview to attract better clients.",
+      "text": "Act as a top-rated freelancer coach. Here's my current profile headline and overview: [PASTE]. Rewrite them for the niche [YOUR NICHE]. Give me 3 headline options and a 150-word overview that leads with client outcomes, names my tools, and includes a clear specialty. Add 8 relevant skill tags."
+    },
+    {
+      "id": "p4",
+      "category": "interview",
+      "title": "Run a mock interview",
+      "desc": "Practice with realistic questions for your exact role.",
+      "text": "You are a hiring manager for a [ROLE] working remotely with a US client. Interview me one question at a time. After each of my answers, give a quick score (1–5) and one concrete improvement, then ask the next question. Cover experience, tools, a scenario/problem-solving question, and 'why should we hire you'. Start now."
+    },
+    {
+      "id": "p5",
+      "category": "interview",
+      "title": "Answer 'What's your expected rate?'",
+      "desc": "Handle the money question without underselling yourself.",
+      "text": "Help me answer 'What are your rate expectations?' for a [ROLE] role. My target is [RANGE]. Give me a confident 3-sentence answer that anchors on the value I deliver, offers a range, and invites them to share their budget — without sounding desperate or arrogant."
+    },
+    {
+      "id": "p6",
+      "category": "interview",
+      "title": "Turn a rejection into a lesson",
+      "desc": "Extract what to improve and keep momentum.",
+      "text": "I got rejected / ghosted after this interview: [DESCRIBE WHAT HAPPENED]. Play the role of a supportive coach. List 3 likely reasons, 3 concrete things to change next time, and a 2-line follow-up message I can send to leave the door open professionally."
+    },
+    {
+      "id": "p7",
+      "category": "deliver",
+      "title": "Draft a first-week client update",
+      "desc": "Look organized and proactive from day one.",
+      "text": "Write a concise end-of-first-week update to my new client. Context: I'm a [ROLE], my main tasks this week were [LIST]. Structure: what I completed, what I learned about your workflow, what I need from you, and my plan for next week. Professional, warm, and confident. Keep it under 200 words."
+    },
+    {
+      "id": "p8",
+      "category": "deliver",
+      "title": "Turn a messy task into an SOP",
+      "desc": "Document any repeatable process so you never re-explain it.",
+      "text": "Turn this rough process into a clean Standard Operating Procedure: [DESCRIBE THE STEPS]. Output a titled SOP with purpose, tools needed, numbered steps with sub-steps, common mistakes to avoid, and a definition of done. Format it so I can paste it into Notion."
+    },
+    {
+      "id": "p9",
+      "category": "deliver",
+      "title": "Write a difficult client message",
+      "desc": "Push back or set a boundary without friction.",
+      "text": "Help me write a message to my client about [SITUATION — e.g. scope creep, a missed deadline, needing more info]. Keep my relationship strong: acknowledge their view, state the issue factually, propose a clear solution, and keep it under 120 words. Give me 2 tone options: warm and firm."
+    },
+    {
+      "id": "p10",
+      "category": "levelup",
+      "title": "Design an automation for a repetitive task",
+      "desc": "Let automation handle the repetitive work.",
+      "text": "I do this repetitive task manually: [DESCRIBE]. I have access to [Zapier / Make / n8n]. Design an automation: list the trigger, the steps, the apps involved, and any edge cases to handle. Explain it simply enough that I could build it today, and suggest what to keep manual."
+    },
+    {
+      "id": "p11",
+      "category": "levelup",
+      "title": "Plan my rate increase",
+      "desc": "Ask for more money with evidence, not vibes.",
+      "text": "I've worked with my client for [TIME] as a [ROLE]. Here are results I've delivered: [LIST]. Help me plan a rate-increase conversation: the right timing, a summary of my value, a specific new rate, and a script that frames it around the outcomes I now own. Make it easy for them to say yes."
+    },
+    {
+      "id": "p12",
+      "category": "levelup",
+      "title": "Build a 90-day niche learning plan",
+      "desc": "Go from generalist to specialist on a schedule.",
+      "text": "I want to specialize in [NICHE]. Build me a 90-day learning plan with weekly goals, free resources to use, one small portfolio project per month, and the certification I should aim for. Assume I can study 1 hour a day. Output as a week-by-week checklist."
+    }
+  ]
+}

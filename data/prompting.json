@@ -1,0 +1,228 @@
+{
+  "kicker": "AI leverage",
+  "headline": "Stop copying prompts. Learn to write them.",
+  "intro": "A copy-pasted prompt solves today's task and leaves you helpless the moment the situation is slightly different — a different client, a different tool, a different day. Learn the six parts of a prompt that actually works and you can write the exact right one, from a blank page, for anything a remote career throws at you.",
+  "creed": "A prompt library makes you dependent on someone else's imagination. Learn the anatomy and you can write a better prompt than any library, for any situation you'll ever face.",
+
+  "anatomy": [
+    {
+      "id": "role",
+      "part": "Role",
+      "purpose": "Sets which expertise and judgment the AI borrows before it writes a single word.",
+      "rule": "Name a specific role with something at stake — not a job title. 'A recruiter who rejects vague resumes' beats 'a helpful assistant.'",
+      "weak": "You are a helpful assistant.",
+      "strong": "You are a senior recruiter for remote ops roles who rejects any resume that buries results in duties."
+    },
+    {
+      "id": "context",
+      "part": "Context",
+      "purpose": "Gives the AI the raw material it needs. Without it, the AI invents facts to fill the gap.",
+      "rule": "Paste the actual source — the job post, your real experience, the client's email — never a summary of it from memory.",
+      "weak": "I have some experience in customer service.",
+      "strong": "Here is my resume: [PASTE FULL TEXT]. Here is the job post I'm targeting: [PASTE FULL TEXT]."
+    },
+    {
+      "id": "task",
+      "part": "Task",
+      "purpose": "The single, concrete action you want performed — the verb that does the work.",
+      "rule": "One task, one verb, one object. Split anything with an 'and' in it into two prompts.",
+      "weak": "Help me with my resume.",
+      "strong": "Rewrite my resume summary and top 3 bullets to match this specific job post."
+    },
+    {
+      "id": "constraints",
+      "part": "Constraints",
+      "purpose": "The boundaries that keep the output usable — length, tone limits, and what it must not do.",
+      "rule": "State limits as numbers and explicit rules, never adjectives. 'Under 150 words' beats 'concise.'",
+      "weak": "Keep it short and professional.",
+      "strong": "Under 120 words. No buzzwords like 'synergy' or 'passionate.' Don't invent metrics I didn't give you."
+    },
+    {
+      "id": "format",
+      "part": "Format",
+      "purpose": "The exact shape the output must take, so you can use it without reformatting it yourself.",
+      "rule": "Specify the structure directly — bullets, headers, a table, a script — not just 'organized.'",
+      "weak": "Give me some ideas.",
+      "strong": "Output as 5 bullet points, each starting with a past-tense action verb, one line each."
+    },
+    {
+      "id": "examples",
+      "part": "Examples",
+      "purpose": "Shows the AI the pattern instead of describing it — the fastest way to close an ambiguity gap.",
+      "rule": "Paste one real example of the output you want, even a rough one, and say 'match this.'",
+      "weak": "Write it in my style.",
+      "strong": "Here's an email I sent last week that landed well: [PASTE]. Match this tone and sentence length."
+    },
+    {
+      "id": "voice",
+      "part": "Voice & tone",
+      "purpose": "Keeps the output sounding like a person — the difference a reader feels in the first sentence.",
+      "rule": "Describe your actual voice with specifics — sentence length, formality, phrases you never say — not just 'friendly.'",
+      "weak": "Sound friendly and professional.",
+      "strong": "Short sentences. No exclamation points. I say 'let's fix this,' not 'I would like to bring to your attention.'"
+    },
+    {
+      "id": "success",
+      "part": "Success criteria",
+      "purpose": "The rubric the AI should judge its own draft against before it ever reaches you.",
+      "rule": "Tell it what a good answer does that a bad one doesn't, then ask it to check its own draft against that before handing it over.",
+      "weak": "Make it good.",
+      "strong": "A good version names one specific result with a number in it. Check your draft against that rule before giving it to me."
+    }
+  ],
+
+  "principles": [
+    {
+      "title": "Specificity beats politeness",
+      "desc": "'Please' and 'thank you' don't improve output. A precise noun does. Trade every 'nicely' for a number, a name, or a real example.",
+      "icon": "crosshair"
+    },
+    {
+      "title": "Give it the rubric you'll judge by",
+      "desc": "Tell the AI what 'good' looks like before it drafts, not after you've read three bad drafts and are guessing why.",
+      "icon": "list-checks"
+    },
+    {
+      "title": "Ask for options, not one answer",
+      "desc": "Request 3 versions and pick the strongest, or merge two. One draft is a guess dressed as an answer; three is an actual choice.",
+      "icon": "layers"
+    },
+    {
+      "title": "Make it critique its own output",
+      "desc": "After it drafts, ask 'what's weak about this, and fix it.' AI catches its own generic phrasing better than you'd expect.",
+      "icon": "refresh-ccw"
+    },
+    {
+      "title": "Never trust a fact it produces",
+      "desc": "Names, numbers, dates, quotes — verify every one against a source you can point to. AI states wrong facts as confidently as right ones.",
+      "icon": "shield-alert"
+    },
+    {
+      "title": "Paste real material instead of describing it",
+      "desc": "Summarizing your resume from memory loses the exact details that make output specific. Paste the actual text, every time.",
+      "icon": "clipboard-paste"
+    }
+  ],
+
+  "iterate": [
+    {
+      "n": 1,
+      "title": "Draft",
+      "desc": "Write your first version using every anatomy part you have real material for. Don't aim for perfect — aim for complete."
+    },
+    {
+      "n": 2,
+      "title": "Run",
+      "desc": "Send it. Read the whole output once before you judge any single line of it."
+    },
+    {
+      "n": 3,
+      "title": "Diagnose",
+      "desc": "Name exactly what's wrong using the signals below — 'this isn't it' isn't a diagnosis.",
+      "signals": [
+        { "symptom": "Too generic — could apply to anyone", "cause": "Missing Context — you described your situation instead of pasting it." },
+        { "symptom": "Right content, wrong shape", "cause": "Missing Format — you never specified structure, length, or template." },
+        { "symptom": "Sounds like AI wrote it", "cause": "Missing Voice — and it had no real sample of you to match." },
+        { "symptom": "Confident, but wrong", "cause": "Missing Constraints — you never told it what not to invent." }
+      ]
+    },
+    {
+      "n": 4,
+      "title": "Change one thing",
+      "desc": "Add or fix the single part you diagnosed as missing. Resist changing three things at once — you won't know which fix worked."
+    },
+    {
+      "n": 5,
+      "title": "Re-run",
+      "desc": "Send the revised prompt. Compare only the issue you targeted. Still off? Loop back to Diagnose."
+    }
+  ],
+
+  "critique": [
+    {
+      "q": "Does it contain a fact I can't verify?",
+      "why": "Names, numbers, claims — if you can't point to where it came from, it might be invented. Check before it goes out under your name."
+    },
+    {
+      "q": "Does it sound like me?",
+      "why": "Read it out loud. If you'd never say it that way, it reads as fake to the person on the other end too."
+    },
+    {
+      "q": "Would I send this exactly as-is?",
+      "why": "If you're already planning to edit half of it, the prompt was missing something — go back to the loop instead of hand-fixing forever."
+    },
+    {
+      "q": "Does it actually follow my constraints?",
+      "why": "AI drifts past word limits and sneaks in the words you banned. Check the numbers, not just the vibe."
+    },
+    {
+      "q": "Is there a better version buried in a longer draft?",
+      "why": "Sometimes the third paragraph is the real opening line. Read the whole thing before you extract anything."
+    }
+  ],
+
+  "slopChecklist": [
+    {
+      "tell": "\"In today's fast-paced world...\" or any throat-clearing opener",
+      "fix": "Delete the first sentence. Almost every draft is stronger starting with the second one."
+    },
+    {
+      "tell": "Padding three-item lists — 'reliable, efficient, and detail-oriented'",
+      "fix": "Cut two of the three. Keep only the one with a number attached to it."
+    },
+    {
+      "tell": "Perfectly balanced sentences with no rough edges",
+      "fix": "Add the specific, slightly awkward detail a real person would actually say."
+    },
+    {
+      "tell": "Em dashes doing the work a period should do",
+      "fix": "Split it into two sentences."
+    },
+    {
+      "tell": "Words nobody says out loud — leverage, utilize, delve, robust, seamless",
+      "fix": "Swap for the plain verb: use, dig into, strong, works."
+    },
+    {
+      "tell": "A closing line that just restates the opening — 'In conclusion...'",
+      "fix": "Delete it. If the piece needs a summary to be understood, the structure is the actual problem."
+    }
+  ],
+
+  "builder": {
+    "intro": "Fill in what you actually know. Skip what you don't have yet — the meter below will tell you exactly what that gap costs you.",
+    "fields": [
+      { "id": "role", "label": "Role", "hint": "Who should the AI be, and what's the stake if it gets this wrong?", "placeholder": "e.g. A meticulous editor who rejects any sentence that could be shorter." },
+      { "id": "context", "label": "Context", "hint": "Paste your real material here — not a summary of it.", "placeholder": "e.g. Paste the actual job post, email, or draft you're working from." },
+      { "id": "task", "label": "Task", "hint": "One verb, one object. What should it actually do?", "placeholder": "e.g. Rewrite the second paragraph to lead with the result." },
+      { "id": "constraints", "label": "Constraints", "hint": "Numbers and rules, not adjectives.", "placeholder": "e.g. Under 150 words. No exclamation points. Don't invent numbers." },
+      { "id": "format", "label": "Format", "hint": "The exact shape you need back.", "placeholder": "e.g. 3 bullet points, each under 15 words." },
+      { "id": "voice", "label": "Voice", "hint": "How you actually sound — sentence length, what you never say.", "placeholder": "e.g. Direct, short sentences, no corporate speak." }
+    ],
+    "qualityLevels": [
+      { "count": 0, "label": "Empty", "tone": "neutral", "note": "A prompt needs at least a Task before it can do anything." },
+      { "count": 1, "label": "Bare", "tone": "coral", "note": "This will produce something generic — it doesn't know your situation yet." },
+      { "count": 2, "label": "Thin", "tone": "coral", "note": "Still mostly guessing. Every gap gets filled with a generic assumption." },
+      { "count": 3, "label": "Half-built", "tone": "amber", "note": "Getting somewhere — but the parts you skipped are exactly where it turns generic." },
+      { "count": 4, "label": "Workable", "tone": "amber", "note": "Usable, but the gaps below will still produce generic output." },
+      { "count": 5, "label": "Strong", "tone": "emerald", "note": "One gap left — usually the difference between output, and output that sounds like you." },
+      { "count": 6, "label": "Complete", "tone": "emerald", "note": "All six parts filled. Copy it, run it, then diagnose whatever's still off." }
+    ]
+  },
+
+  "useCases": [
+    { "id": "research", "title": "Research", "icon": "search", "desc": "Ask it to summarize a client's industry, a tool's docs, or a company before a call — then verify the two facts that matter most, yourself." },
+    { "id": "drafting", "title": "Drafting", "icon": "pen-line", "desc": "Get a fast first version of anything — an email, an SOP, a proposal — then edit it into your own voice before it goes out." },
+    { "id": "critique", "title": "Critique", "icon": "eye", "desc": "Paste your own draft and ask it to find the weakest paragraph, the vaguest claim, or the line a client would push back on." },
+    { "id": "mock-interviews", "title": "Mock interviews", "icon": "messages-square", "desc": "Have it play a skeptical hiring manager and grade your answers — practice handling pressure, not just reciting a script." },
+    { "id": "learning", "title": "Learning a tool fast", "icon": "graduation-cap", "desc": "Ask it to explain the 20% of a tool's features that cover 80% of real jobs, then have it quiz you until you can do it cold." },
+    { "id": "automation-design", "title": "Automation design", "icon": "workflow", "desc": "Describe a repetitive task and ask it to map the trigger, the steps, and the edge cases — before you touch Zapier or Make." }
+  ],
+
+  "specimensIntro": "Four prompts pulled from an old copy-paste library, kept here only as specimens to dissect — not to paste. Read each for the pattern it uses, close the tab, then write your own version from the rule you found.",
+  "specimens": [
+    { "promptId": "p1", "usesParts": ["role", "context", "task", "constraints"], "note": "It never says 'be concise' — it says 'quantify results' and 'mirror the exact keywords.' That's Constraints written as rules, not adjectives." },
+    { "promptId": "p4", "usesParts": ["role", "task", "format"], "note": "Format here is procedural, not a document shape — 'one question at a time, score after each answer.' Format can structure an interaction, not just a page." },
+    { "promptId": "p8", "usesParts": ["task", "format", "success"], "note": "'Definition of done' is Success criteria without naming it. Extract the rule it's using — don't copy the phrase." },
+    { "promptId": "p10", "usesParts": ["context", "task", "constraints"], "note": "'Suggest what to keep manual' is a Constraint framed as a scope boundary, not a word limit — a different flavor of the same part." }
+  ]
+}

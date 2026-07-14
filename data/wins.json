@@ -1,0 +1,17 @@
+{
+  "intro": "Real outcomes from people who used the platform. The system provides the path and the tools; the results are theirs to own.",
+  "note": "Placeholder stories for now — real DevUp outcomes will replace these.",
+  "stats": [
+    { "value": "12,000+", "label": "learners started their path" },
+    { "value": "₱58k", "label": "avg. monthly income, specialized" },
+    { "value": "0", "label": "pesos it costs to begin" }
+  ],
+  "wins": [
+    { "name": "Aira M.", "location": "Cebu", "niche": "Social Media Management", "before": "Fresh grad, no experience", "after": "First client in 5 weeks", "quote": "I followed the 30-day plan exactly. Day 23 I had my first interview, day 26 I signed the contract.", "months": 5 },
+    { "name": "Josh R.", "location": "Davao", "niche": "Bookkeeping", "before": "Call-center burnout", "after": "$1,800/mo, US client", "quote": "Got my QuickBooks cert free through the niche hub. That single certificate changed my whole rate.", "months": 8 },
+    { "name": "Bea L.", "location": "Laguna", "niche": "Executive Operations", "before": "Sari-sari store helper", "after": "Chief of Staff track", "quote": "Age 19, no degree, and now I run an executive's entire calendar. The mindset lessons hit hardest.", "months": 14 },
+    { "name": "Marco T.", "location": "Iloilo", "niche": "Tech & Automation", "before": "Self-taught, no direction", "after": "$2,600/mo automations", "quote": "I learned Make and Zapier from the tutorials, niched hard, and stopped competing on price.", "months": 11 },
+    { "name": "Kim D.", "location": "Quezon City", "niche": "Japanese Bilingual Support", "before": "English-only support", "after": "₱82k/mo bilingual role", "quote": "Took the free TESDA Japanese class the Languages page pointed me to. Doubled my salary in a year.", "months": 16 },
+    { "name": "Nica P.", "location": "Batangas", "niche": "Customer Success", "before": "Unsure where to start", "after": "Retained + referred 3x", "quote": "The first-week deck made me look like a senior on day one. My client referred me to two others.", "months": 7 }
+  ]
+}

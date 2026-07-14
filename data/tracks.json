@@ -1,0 +1,182 @@
+{
+  "intro": "Pick your lane. \"I can do anything\" means \"I'm not great at anything specific.\" Choose a niche, go deep, and become the go-to person for that one thing.",
+  "note": "Pay bands are typical monthly ranges for Filipino remote professionals working with international clients in 2026. Your rate rises with specialization, results, and a premium language.",
+  "tracks": [
+    {
+      "id": "executive-ops",
+      "name": "Executive Operations",
+      "icon": "briefcase",
+      "accent": "coral",
+      "tagline": "The right hand that runs the business",
+      "blurb": "Own an executive's calendar, inbox, travel, and priorities. The path that leads to Chief of Staff.",
+      "pay": "$1,000–$3,000+/mo",
+      "demandLabel": "Very high",
+      "demand": 5,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["Google Workspace", "Notion", "Calendly", "Slack", "1Password"],
+      "skills": ["Calendar & inbox management", "Travel & logistics", "Meeting prep & notes", "Stakeholder comms", "Project coordination"],
+      "learn": [
+        { "type": "YouTube", "title": "Executive Operations Foundations", "provider": "DevUp" },
+        { "type": "Course", "title": "Google Workspace Certification", "provider": "Google (free)" },
+        { "type": "Template", "title": "Executive SOP Library", "provider": "In-app" }
+      ],
+      "certs": ["Google Workspace", "Notion Essentials"],
+      "clients": "Founders, C-suite, and busy solo operators who need one reliable person to run their day."
+    },
+    {
+      "id": "bookkeeping",
+      "name": "Bookkeeping & Accounting",
+      "icon": "calculator",
+      "accent": "emerald",
+      "tagline": "The most stable, highest-retention niche",
+      "blurb": "Keep the books clean with QuickBooks or Xero. Clients rarely leave a good bookkeeper.",
+      "pay": "$1,300–$2,600/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 1,
+      "tools": ["QuickBooks Online", "Xero", "Google Sheets", "Dext", "Bill.com"],
+      "skills": ["Bank reconciliation", "Accounts payable/receivable", "Monthly reporting", "Payroll basics", "Cleanup projects"],
+      "learn": [
+        { "type": "Course", "title": "QuickBooks Online Certification", "provider": "Intuit (free)" },
+        { "type": "Course", "title": "Xero Advisor Certification", "provider": "Xero (free)" },
+        { "type": "YouTube", "title": "Real-Client Bookkeeping Walkthrough", "provider": "DevUp" }
+      ],
+      "certs": ["QuickBooks ProAdvisor", "Xero Advisor"],
+      "clients": "E-commerce, agencies, real estate, and medical practices that need clean books monthly."
+    },
+    {
+      "id": "social-media",
+      "name": "Social Media Management",
+      "icon": "megaphone",
+      "accent": "amber",
+      "tagline": "Turn attention into a business result",
+      "blurb": "Plan, create, and schedule content; grow and engage an audience; report on what worked.",
+      "pay": "$800–$1,600/mo",
+      "demandLabel": "Very high",
+      "demand": 5,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["Canva", "Meta Business Suite", "Buffer", "CapCut", "Metricool"],
+      "skills": ["Content calendars", "Short-form video", "Copywriting", "Community management", "Analytics reporting"],
+      "learn": [
+        { "type": "Course", "title": "Meta Social Media Marketing", "provider": "Meta (free)" },
+        { "type": "Course", "title": "Canva Design Essentials", "provider": "Canva (free)" },
+        { "type": "YouTube", "title": "30-Day Content System", "provider": "DevUp" }
+      ],
+      "certs": ["Meta Certified", "HubSpot Social Media"],
+      "clients": "Coaches, local businesses, and DTC brands that need consistent, on-brand content."
+    },
+    {
+      "id": "project-management",
+      "name": "Project & Operations Management",
+      "icon": "kanban",
+      "accent": "indigo",
+      "tagline": "The person who keeps everything on track",
+      "blurb": "Coordinate teams, deadlines, and deliverables across time zones. The ops backbone.",
+      "pay": "$1,200–$2,500/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": ["Asana", "Monday.com", "ClickUp", "Slack", "Notion"],
+      "skills": ["Sprint & task planning", "Team coordination", "Process documentation", "Reporting dashboards", "Risk tracking"],
+      "learn": [
+        { "type": "Course", "title": "Google Project Management Certificate", "provider": "Google (audit free)" },
+        { "type": "Course", "title": "Asana Academy", "provider": "Asana (free)" },
+        { "type": "Template", "title": "Ops Dashboard & SOPs", "provider": "In-app" }
+      ],
+      "certs": ["Google PM", "CAPM (optional)"],
+      "clients": "Agencies and scaling startups that need someone to own delivery, not just tasks."
+    },
+    {
+      "id": "customer-success",
+      "name": "Customer Success & Support",
+      "icon": "headphones",
+      "accent": "emerald",
+      "tagline": "The friendly voice that keeps customers",
+      "blurb": "Answer, onboard, and retain customers across chat, email, and calls. Warm and organized wins.",
+      "pay": "$900–$1,800/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["Zendesk", "Intercom", "HubSpot", "Gorgias", "Slack"],
+      "skills": ["Ticket handling", "Customer onboarding", "Knowledge-base writing", "Retention & upsell", "Empathy at scale"],
+      "learn": [
+        { "type": "Course", "title": "HubSpot Service Hub", "provider": "HubSpot (free)" },
+        { "type": "YouTube", "title": "Support-to-Success Playbook", "provider": "DevUp" },
+        { "type": "Template", "title": "Macros & Response Library", "provider": "In-app" }
+      ],
+      "certs": ["HubSpot Service", "Zendesk Support"],
+      "clients": "SaaS and e-commerce brands that live or die by customer retention."
+    },
+    {
+      "id": "real-estate",
+      "name": "Real Estate Support Pro",
+      "icon": "home",
+      "accent": "coral",
+      "tagline": "The engine behind busy agents",
+      "blurb": "Handle listings, CRM follow-up, transaction coordination, and lead nurture for US agents.",
+      "pay": "$1,000–$2,200/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": ["KvCore", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
+      "skills": ["Listing management", "CRM & lead follow-up", "Transaction coordination", "Showing feedback", "Marketing collateral"],
+      "learn": [
+        { "type": "YouTube", "title": "Real Estate Support Systems", "provider": "DevUp" },
+        { "type": "Template", "title": "Buyer/Seller Follow-up Scripts", "provider": "In-app" },
+        { "type": "Template", "title": "Listing & Feedback Trackers", "provider": "In-app" }
+      ],
+      "certs": ["Follow Up Boss", "Canva"],
+      "clients": "US-based real estate agents and teams drowning in admin and follow-up."
+    },
+    {
+      "id": "tech-automation",
+      "name": "Tech & Automation Pro",
+      "icon": "workflow",
+      "accent": "indigo",
+      "tagline": "The highest-ceiling online career",
+      "blurb": "Wire up CRMs, build automations, and run no-code systems. Rare skills, premium pay.",
+      "pay": "$1,200–$3,500+/mo",
+      "demandLabel": "Rising fast",
+      "demand": 5,
+      "difficulty": "Advanced",
+      "startStage": 3,
+      "tools": ["Zapier", "Make", "n8n", "GoHighLevel", "Airtable"],
+      "skills": ["Workflow automation", "CRM setup & management", "API basics & webhooks", "No-code app building", "AI integration"],
+      "learn": [
+        { "type": "Course", "title": "Zapier & Make Automation", "provider": "Vendor (free)" },
+        { "type": "YouTube", "title": "Build Your First Automation", "provider": "DevUp" },
+        { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (free)" }
+      ],
+      "certs": ["Zapier Expert", "HubSpot Ops"],
+      "clients": "Agencies and startups that need their stack connected and their busywork gone."
+    },
+    {
+      "id": "creative-content",
+      "name": "Creative & Content",
+      "icon": "pen-tool",
+      "accent": "amber",
+      "tagline": "Make things people want to look at",
+      "blurb": "Design, edit video, and write copy that converts. A portfolio-first niche.",
+      "pay": "$900–$2,400/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 1,
+      "tools": ["Canva", "Figma", "CapCut", "Adobe Express", "Descript"],
+      "skills": ["Graphic design", "Short-form video editing", "Copywriting", "Brand systems", "Thumbnail & ad creative"],
+      "learn": [
+        { "type": "Course", "title": "Figma for Beginners", "provider": "Figma (free)" },
+        { "type": "YouTube", "title": "CapCut Editing Masterclass", "provider": "DevUp" },
+        { "type": "Template", "title": "Portfolio Decks (3 styles)", "provider": "In-app" }
+      ],
+      "certs": ["Canva", "Google UX (optional)"],
+      "clients": "Creators, coaches, and brands that need a steady stream of scroll-stopping content."
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan — specific tasks, the exact portal tools to use, and creators to follow. 100% free. 2–3 hours a day.",
+  "commitment": "2–3 hours daily",
+  "questions": [
+    {
+      "id": "experience",
+      "q": "Where are you starting from?",
+      "options": [
+        { "value": "zero", "label": "Total beginner", "desc": "No remote experience yet" },
+        { "value": "some", "label": "Some skills", "desc": "I've used a few tools / done small gigs" },
+        { "value": "switching", "label": "Career switcher", "desc": "Experienced offline, new to remote" }
+      ]
+    },
+    {
+      "id": "track",
+      "q": "Which direction excites you most?",
+      "fromTracks": true
+    },
+    {
+      "id": "hours",
+      "q": "How much time can you commit daily?",
+      "options": [
+        { "value": "1-2", "label": "1–2 hours", "desc": "Steady and sustainable" },
+        { "value": "2-3", "label": "2–3 hours", "desc": "The recommended pace" },
+        { "value": "4+", "label": "4+ hours", "desc": "All-in sprint mode" }
+      ]
+    },
+    {
+      "id": "equipment",
+      "q": "Is your equipment ready?",
+      "options": [
+        { "value": "ready", "label": "Ready to go", "desc": "Laptop + stable internet" },
+        { "value": "partial", "label": "Almost", "desc": "Missing one or two things" },
+        { "value": "none", "label": "Not yet", "desc": "Still saving up / planning" }
+      ]
+    },
+    {
+      "id": "language",
+      "q": "Want to add a premium language later?",
+      "options": [
+        { "value": "yes", "label": "Yes, tell me more", "desc": "I want the higher pay band" },
+        { "value": "maybe", "label": "Maybe later", "desc": "Focus on getting hired first" },
+        { "value": "no", "label": "Not now", "desc": "English-only for now" }
+      ]
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "title": "Foundation & Setup",
+      "focus": "Get your setup, mindset, and core skills right.",
+      "days": [
+        { "day": 1, "task": "Confirm equipment & workspace with the Equipment Checker.", "tool": "/equipment" },
+        { "day": 2, "task": "Watch the full walkthrough. Take notes on the 9-step roadmap.", "tool": "/start" },
+        { "day": 3, "task": "Learn your first core tool (Google Workspace basics).", "tool": "/tools" },
+        { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches" },
+        { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume — don't write it yet.", "tool": "/build" },
+        { "day": 6, "task": "Practice: complete one small mock task in your chosen niche.", "tool": "/niches" },
+        { "day": 7, "task": "Review week 1. Rest. Write down why you started.", "tool": "/start" }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Build Your Assets",
+      "focus": "Create the profile, resume, and portfolio that get replies.",
+      "days": [
+        { "day": 8, "task": "Find 5 real resumes for your target role. Extract the rules they share.", "tool": "/build" },
+        { "day": 9, "task": "Write your resume from those rules, on a blank page. It's yours.", "tool": "/build" },
+        { "day": 10, "task": "Write your own prompt to critique it — learn the anatomy of a prompt.", "tool": "/prompts" },
+        { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools" },
+        { "day": 12, "task": "Start a free certification for your niche.", "tool": "/niches" },
+        { "day": 13, "task": "Build your own application tracker — schema and formulas, from scratch.", "tool": "/build" },
+        { "day": 14, "task": "Review. Get feedback in the community group.", "tool": "/wins" }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Apply Relentlessly",
+      "focus": "Work the directory. Track everything. Prep to interview.",
+      "days": [
+        { "day": 15, "task": "Open the Apply directory. Shortlist 20 places to apply.", "tool": "/apply" },
+        { "day": 16, "task": "Send 5 tailored applications using the AI message prompt.", "tool": "/prompts" },
+        { "day": 17, "task": "Send 5 more. Log each in your tracker.", "tool": "/build" },
+        { "day": 18, "task": "Run a mock interview with the Interview Coach Bot.", "tool": "/prompts" },
+        { "day": 19, "task": "Send 5 more applications. Follow up on day-1 sends.", "tool": "/apply" },
+        { "day": 20, "task": "Learn the negotiation basics. Set your target rate.", "tool": "/get-hired" },
+        { "day": 21, "task": "Review pipeline. Adjust your message based on replies.", "tool": "/build" }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Interview, Close & Deliver",
+      "focus": "Convert interviews, land the offer, and start strong.",
+      "days": [
+        { "day": 22, "task": "Send 10 applications. Quality over speed.", "tool": "/apply" },
+        { "day": 23, "task": "Do 2 real interviews. Debrief each with AI.", "tool": "/prompts" },
+        { "day": 24, "task": "Handle any rejection: extract the lesson, keep going.", "tool": "/prompts" },
+        { "day": 25, "task": "Negotiate an offer using your prepared script.", "tool": "/get-hired" },
+        { "day": 26, "task": "Prep your first-week onboarding kit.", "tool": "/deliver" },
+        { "day": 27, "task": "Write the SOPs and build the trackers your new role needs.", "tool": "/build" },
+        { "day": 28, "task": "Deliver a proactive first update. Impress early.", "tool": "/deliver" },
+        { "day": 29, "task": "Plan your niche + language path for months 2–3.", "tool": "/level-up" },
+        { "day": 30, "task": "Share your win. Pull the next person up.", "tool": "/wins" }
+      ]
+    }
+  ]
+}
