@@ -152,7 +152,7 @@ export default function EnglishPage() {
 
                 <p className="mt-7 flex items-center gap-2 border-t border-line pt-5 text-xs text-ink-faint">
                   <span aria-hidden className="h-3 w-px bg-ink-faint" />
-                  The vertical line is the global average — {GLOBAL_AVG}. Every one
+                  The vertical line is the global average, {GLOBAL_AVG}. Every one
                   of your four scores clears it.
                 </p>
               </div>
@@ -370,7 +370,7 @@ export default function EnglishPage() {
                   {/* ---- before / after */}
                   <div className="flex flex-col gap-4">
                     <div className="rounded-2xl border border-coral/25 bg-coral-tint/60 p-5">
-                      <p className="kicker text-coral-deep">Before — weak</p>
+                      <p className="kicker text-coral-deep">Before, weak</p>
                       <p className="mt-3 text-sm leading-relaxed whitespace-pre-line text-ink-soft italic">
                         {f.before}
                       </p>
@@ -384,7 +384,7 @@ export default function EnglishPage() {
                     </div>
 
                     <div className="flex-1 rounded-2xl border-2 border-emerald/40 bg-emerald-tint p-5 shadow-[var(--shadow-sm)]">
-                      <p className="kicker text-emerald">After — strong</p>
+                      <p className="kicker text-emerald">After, strong</p>
                       <p className="mt-3 text-sm leading-relaxed whitespace-pre-line font-medium text-ink">
                         {f.after}
                       </p>

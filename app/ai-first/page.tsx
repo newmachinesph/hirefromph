@@ -7,7 +7,7 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 export const metadata = {
   title: "AI-First",
   description:
-    "Every role runs on AI in 2027. Coding agents, open-source and local models, AI image, AI video, and automation — taught as how to fold AI into your craft, with the four habits that turn it into leverage instead of slop. Every claim sourced.",
+    "Every role runs on AI in 2027. Coding agents, open-source and local models, AI image, AI video, and automation, taught as how to fold AI into your craft, with the four habits that turn it into leverage instead of slop. Every claim sourced.",
 };
 
 const accentText: Record<string, string> = {

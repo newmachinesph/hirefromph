@@ -11,28 +11,30 @@ import {
   ArrowLink,
   ButtonLink,
   Kicker,
-  Marquee,
   Pill,
   SectionHeading,
 } from "@/components/ui";
 
 const toolkit = [
   { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers nobody selling a course will show you. Every claim sourced.", href: "/reality", icon: "scan-eye" },
-  { title: "AI-First", desc: "Every role runs on AI in 2027. Coding agents, open-source models, AI image and video — folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
-  { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic — and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
-  { title: "English at Work", desc: "Your English is fine. The habits that make it read as junior are the fixable part — audit a real message you sent.", href: "/english", icon: "message-square" },
-  { title: "Conduct & Integrity", desc: "What actually gets remote professionals fired, sued, and delisted — and an oath you write yourself.", href: "/conduct", icon: "shield-check" },
+  { title: "AI-First", desc: "Every role runs on AI in 2027. Coding agents, open-source models, AI image and video, folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
+  { title: "Become Indispensable", desc: "How to be layoff-proof and the one clients fight to keep. The kinds of intelligence AI can't copy: creative, emotional, judgment, taste.", href: "/indispensable", icon: "gem" },
+  { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic, and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
+  { title: "English at Work", desc: "Your English is fine. The habits that make it read as junior are the fixable part, audit a real message you sent.", href: "/english", icon: "message-square" },
+  { title: "Conduct & Integrity", desc: "What actually gets remote professionals fired, sued, and delisted, and an oath you write yourself.", href: "/conduct", icon: "shield-check" },
   { title: "The Method", desc: "Six habits that make you self-sufficient: find, deconstruct, learn, vet, ask, unstick.", href: "/method", icon: "compass" },
-  { title: "Micro-Tasks", desc: "Real jobs you can do today with no client. Each one finishes as a portfolio piece — proof, not promises.", href: "/tasks", icon: "target" },
-  { title: "Build Labs", desc: "Learn the anatomy and the rules — then write your own resume, portfolio, and SOPs from a blank page.", href: "/build", icon: "pencil-ruler" },
+  { title: "Micro-Tasks", desc: "Real jobs you can do today with no client. Each one finishes as a portfolio piece, proof, not promises.", href: "/tasks", icon: "target" },
+  { title: "Build Labs", desc: "Learn the anatomy and the rules, then write your own resume, portfolio, and SOPs from a blank page.", href: "/build", icon: "pencil-ruler" },
   { title: "AI Leverage", desc: "Learn to write your own prompts, so you never need someone else's prompt library.", href: "/prompts", icon: "sparkles" },
   { title: "Learn Any Tool", desc: "The transferable method for mastering any software in a weekend, not a course.", href: "/tools", icon: "layout-grid" },
-  { title: "Find Work", desc: "Source and vet opportunities yourself — search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
-  { title: "Own Your Clients", desc: "Agency or direct? A fair look at both — and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
-  { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle — plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
+  { title: "Find Work", desc: "Source and vet opportunities yourself, search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
+  { title: "Own Your Clients", desc: "Agency or direct? A fair look at both, and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
+  { title: "Salary Guide 2027", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
+  { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
+  { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
-  { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 8 we list are just worked examples.", href: "/niches", icon: "layers" },
-  { title: "How to Learn", desc: "What the evidence actually supports — and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
+  { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 11 we list, including new lanes like streaming and podcasting, are worked examples.", href: "/niches", icon: "layers" },
+  { title: "How to Learn", desc: "What the evidence actually supports, and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
   { title: "Application Tracker", desc: "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", href: "/tracker", icon: "table" },
   { title: "Language Premium", desc: "A second language can double your rate. Which ones pay, and where to learn them free in PH.", href: "/languages", icon: "languages" },
 ];
@@ -94,12 +96,12 @@ export default function Home() {
             </Reveal>
             <Reveal i={2}>
               <p className="mt-8 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-                We hand out zero templates. Instead we teach you the anatomy, the
-                rules, and the judgment — then{" "}
+                We hand out zero templates. We teach you the anatomy, the rules,
+                and the judgment, then{" "}
                 <strong className="font-semibold text-ink">you build your own</strong>,
                 from a blank page. Become a resourceful{" "}
-                <strong className="font-semibold text-ink">online professional</strong>{" "}
-                — not an assistant, a professional. Free, permanently.
+                <strong className="font-semibold text-ink">online professional</strong>.
+                Not an assistant, a professional. Free, forever.
               </p>
             </Reveal>
             <Reveal i={3}>
@@ -117,19 +119,19 @@ export default function Home() {
                   <strong className="font-semibold text-ink">
                     No fake testimonials here.
                   </strong>{" "}
-                  This platform is new and has no track record to show off yet —
-                  so we show you the{" "}
+                  This platform is new and has no track record to show off yet.
+                  So instead we show you the{" "}
                   <Link href="/reality" className="font-semibold text-ink link-sweep">
                     real numbers on this career
-                  </Link>{" "}
-                  instead, sources and all. Including the ones that might talk you
-                  out of it.
+                  </Link>
+                 , sources and all. Including the ones that might talk you out of
+                  it.
                 </span>
               </div>
             </Reveal>
           </div>
 
-          {/* Hero visual — abstract "path" panel, no external images */}
+          {/* Hero visual, abstract "path" panel, no external images */}
           <Reveal i={2} className="relative">
             <HeroPanel />
           </Reveal>
@@ -153,21 +155,6 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="mt-16">
-        <Marquee
-          items={[
-            "Bookkeeping",
-            "Executive Ops",
-            "Social Media",
-            "Automation",
-            "Customer Success",
-            "Project Management",
-            "Real Estate",
-            "Creative & Content",
-          ]}
-        />
-      </div>
-
       {/* ---------------------------------------------------- CHOOSE YOUR PATH */}
       <section id="path" className="container-x scroll-mt-24 py-20 lg:py-28">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
@@ -189,7 +176,7 @@ export default function Home() {
               <p className="text-sm leading-relaxed text-ink-soft">
                 <Sparkles size={16} className="mb-1 inline text-coral" /> We keep
                 the front calm on purpose. Every workshop, lab, and method is
-                here — but it opens{" "}
+                here, but it opens{" "}
                 <strong className="text-ink">as you need it</strong>, tailored to
                 the lane you pick. No overwhelm, no 40-tab rabbit holes.
               </p>
@@ -314,7 +301,7 @@ export default function Home() {
           <SectionHeading
             kicker="Everything teaches. Nothing spoon-feeds."
             title="Workshops, not downloads"
-            lead="There is no folder of files to grab here. Every section teaches you how the thing is built, hands you the rules, and then makes you build it yourself — so you can rebuild it anywhere, for anyone, forever."
+            lead="There is no folder of files to grab here. Every section teaches you how the thing is built, hands you the rules, and then makes you build it yourself, so you can rebuild it anywhere, for anyone, forever."
           />
         </Reveal>
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -357,7 +344,7 @@ export default function Home() {
                   <span className="text-coral">double your pay.</span>
                 </h2>
                 <p className="mt-5 max-w-lg text-paper-2/75">
-                  English is a national baseline in the Philippines — it gets you in
+                  English is a national baseline in the Philippines, it gets you in
                   the door, but it doesn&rsquo;t price you above the person next to
                   you. A second language is one of the few edges that still does. We
                   show you which ones pay, and where to learn them free through TESDA
@@ -457,30 +444,103 @@ export default function Home() {
 }
 
 function HeroPanel() {
-  const cards = [
-    { n: "04", label: "Level Up", w: "w-[92%]", tone: "bg-indigo/10 text-indigo border-indigo/20" },
-    { n: "03", label: "Deliver", w: "w-[84%]", tone: "bg-emerald/10 text-emerald border-emerald/20" },
-    { n: "02", label: "Get Hired", w: "w-[76%]", tone: "bg-amber/10 text-[#9a6b00] border-amber/25" },
-    { n: "01", label: "Start", w: "w-[68%]", tone: "bg-coral/10 text-coral-deep border-coral/20" },
+  // 4 ascending stages: [x, barTopY, fill, number, label]
+  const bars = [
+    { x: 40, y: 300, fill: "#0d9488", n: "01", label: "Start" },
+    { x: 126, y: 246, fill: "#e39400", n: "02", label: "Get Hired" },
+    { x: 212, y: 182, fill: "#2f9e46", n: "03", label: "Deliver" },
+    { x: 298, y: 104, fill: "#2f6df0", n: "04", label: "Level Up" },
   ];
+  const baseline = 392;
+  const barW = 62;
+  // centres of each bar top, for the rising trend line
+  const nodes = bars.map((b) => [b.x + barW / 2, b.y] as const);
+  const trend = nodes.map(([x, y]) => `${x},${y}`).join(" ") + " 352,74";
+
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[var(--radius-lg)] border border-line bg-paper-2 shadow-[var(--shadow-lg)] lg:aspect-auto lg:h-full">
       <div aria-hidden className="absolute inset-0 dotgrid opacity-60" />
-      <div className="relative flex h-full flex-col justify-end gap-3 p-6">
-        {cards.map((c, i) => (
-          <div
-            key={c.n}
-            className={`flex items-center justify-between rounded-2xl border bg-paper-2/80 px-5 py-4 backdrop-blur-sm ${c.w} ${c.tone}`}
-            style={{ marginLeft: `${i * 6}%` }}
-          >
-            <span className="font-display text-2xl">{c.n}</span>
-            <span className="text-sm font-semibold">{c.label}</span>
-          </div>
+      <div
+        aria-hidden
+        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-coral/10 blur-2xl"
+      />
+
+      <svg
+        viewBox="0 0 400 440"
+        className="absolute inset-0 h-full w-full"
+        preserveAspectRatio="xMidYMid meet"
+        role="img"
+        aria-label="A rising staircase of four career stages, from Start to Level Up, with an upward trend arrow, representing developing upwards."
+      >
+        {/* baseline */}
+        <line x1="28" y1={baseline} x2="372" y2={baseline} stroke="#c3d5ce" strokeWidth="2" />
+
+        {/* ascending stage bars */}
+        {bars.map((b) => (
+          <g key={b.n}>
+            <rect
+              x={b.x}
+              y={b.y}
+              width={barW}
+              height={baseline - b.y}
+              rx="0"
+              fill={b.fill}
+              opacity="0.16"
+            />
+            <rect x={b.x} y={b.y} width={barW} height="6" rx="0" fill={b.fill} />
+            <text
+              x={b.x + barW / 2}
+              y={b.y + 34}
+              textAnchor="middle"
+              className="font-display"
+              fontSize="26"
+              fill={b.fill}
+            >
+              {b.n}
+            </text>
+            <text
+              x={b.x + barW / 2}
+              y={baseline + 22}
+              textAnchor="middle"
+              fontSize="12"
+              fontFamily="var(--font-geist-sans), sans-serif"
+              fill="#798a84"
+            >
+              {b.label}
+            </text>
+          </g>
         ))}
-        <div className="absolute right-6 top-6 rounded-2xl border border-line bg-ink px-4 py-3 text-paper-2">
-          <p className="font-display text-3xl leading-none">₱0</p>
-          <p className="text-[11px] text-paper-2/60">to begin</p>
-        </div>
+
+        {/* rising trend line */}
+        <polyline
+          points={trend}
+          fill="none"
+          stroke="#0d9488"
+          strokeWidth="3"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeDasharray="2 9"
+        />
+        {/* arrowhead */}
+        <path d="M352 74 L338 80 M352 74 L346 88" stroke="#0d9488" strokeWidth="3" strokeLinecap="round" fill="none" />
+        {/* nodes */}
+        {nodes.map(([x, y]) => (
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0d9488" strokeWidth="2.5" />
+        ))}
+        {/* peak flag */}
+        <g transform="translate(329 60)">
+          <line x1="0" y1="0" x2="0" y2="44" stroke="#0e1f1b" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M0 2 L26 9 L0 18 Z" fill="#0d9488" />
+        </g>
+      </svg>
+
+      {/* overlay chips */}
+      <div className="absolute left-6 top-6 rounded-2xl border border-line bg-ink px-4 py-3 text-paper-2">
+        <p className="font-display text-3xl leading-none">₱0</p>
+        <p className="text-[11px] text-paper-2/60">to begin</p>
+      </div>
+      <div className="absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border border-emerald/25 bg-emerald-tint px-3 py-1 text-xs font-semibold text-emerald">
+        Developing upwards
       </div>
     </div>
   );

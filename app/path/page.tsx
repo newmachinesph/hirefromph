@@ -74,7 +74,7 @@ export default function PathPage() {
     },
     {
       title: "Track your applications",
-      desc: "A live pipeline with a follow-up radar — silence loses more offers than rejection.",
+      desc: "A live pipeline with a follow-up radar, silence loses more offers than rejection.",
       href: "/tracker",
       icon: "table",
     },
@@ -323,7 +323,7 @@ export default function PathPage() {
           <SectionHeading
             kicker="Your next moves"
             title="What to do right now"
-            lead={`Curated for ${track.name} — start here.`}
+            lead={`Curated for ${track.name}, start here.`}
           />
         </Reveal>
 
@@ -444,7 +444,7 @@ function NoPathState() {
       </Reveal>
       <Reveal i={2}>
         <p className="mt-5 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-          Pick a niche and this page becomes your personal hub — progress,
+          Pick a niche and this page becomes your personal hub, progress,
           next moves, and your toolkit, tailored to you.
         </p>
       </Reveal>

@@ -1,5 +1,5 @@
 {
-  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan — specific tasks, the exact portal tools to use, and creators to follow. 100% free. 2–3 hours a day.",
+  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan, specific tasks, the exact portal tools to use, and creators to follow. 100% free. 2–3 hours a day.",
   "commitment": "2–3 hours daily",
   "questions": [
     {
@@ -54,7 +54,7 @@
         { "day": 2, "task": "Watch the full walkthrough. Take notes on the 9-step roadmap.", "tool": "/start" },
         { "day": 3, "task": "Learn your first core tool (Google Workspace basics).", "tool": "/tools" },
         { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches" },
-        { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume — don't write it yet.", "tool": "/build" },
+        { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume, don't write it yet.", "tool": "/build" },
         { "day": 6, "task": "Practice: complete one small mock task in your chosen niche.", "tool": "/niches" },
         { "day": 7, "task": "Review week 1. Rest. Write down why you started.", "tool": "/start" }
       ]
@@ -66,10 +66,10 @@
       "days": [
         { "day": 8, "task": "Find 5 real resumes for your target role. Extract the rules they share.", "tool": "/build" },
         { "day": 9, "task": "Write your resume from those rules, on a blank page. It's yours.", "tool": "/build" },
-        { "day": 10, "task": "Write your own prompt to critique it — learn the anatomy of a prompt.", "tool": "/prompts" },
+        { "day": 10, "task": "Write your own prompt to critique it, learn the anatomy of a prompt.", "tool": "/prompts" },
         { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools" },
         { "day": 12, "task": "Start a free certification for your niche.", "tool": "/niches" },
-        { "day": 13, "task": "Build your own application tracker — schema and formulas, from scratch.", "tool": "/build" },
+        { "day": 13, "task": "Build your own application tracker, schema and formulas, from scratch.", "tool": "/build" },
         { "day": 14, "task": "Review. Get feedback in the community group.", "tool": "/wins" }
       ]
     },

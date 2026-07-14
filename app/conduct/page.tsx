@@ -8,7 +8,7 @@ import { Kicker, Pill, SectionHeading } from "@/components/ui";
 export const metadata = {
   title: "Conduct & Integrity",
   description:
-    "The documented behaviour that gets remote professionals fired, sued, and delisted — and the oath that keeps you out of it. Do's, don'ts, real cases, and an oath you write yourself.",
+    "The documented behaviour that gets remote professionals fired, sued, and delisted, and the oath that keeps you out of it. Do's, don'ts, real cases, and an oath you write yourself.",
 };
 
 const accentText: Record<string, string> = {
@@ -77,7 +77,7 @@ export default function ConductPage() {
             <SectionHeading
               kicker="Six principles · borrowed from the codes that govern real professions"
               title="These rules are older than remote work"
-              lead="None of this was invented for freelancers. Engineers, doctors, and accountants have been bound by these exact clauses for decades — we've simply translated them into the situations you'll actually meet."
+              lead="None of this was invented for freelancers. Engineers, doctors, and accountants have been bound by these exact clauses for decades, we've simply translated them into the situations you'll actually meet."
             />
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

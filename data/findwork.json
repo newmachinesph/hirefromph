@@ -1,14 +1,14 @@
 {
-  "intro": "Most people wait for a job post to appear on a board and hope they're one of the first 50 applicants. Professionals go find the work — before it's posted, before the board takes its cut, before it turns into a bidding war. This page teaches you how to source opportunities yourself, how to vet one so you never get scammed, and how to research a client before you apply — skills that outlast any single list, including the one below.",
+  "intro": "Most people wait for a job post to appear on a board and hope they're one of the first 50 applicants. Professionals go find the work, before it's posted, before the board takes its cut, before it turns into a bidding war. This page teaches you how to source opportunities yourself, how to vet one so you never get scammed, and how to research a client before you apply, skills that outlast any single list, including the one below.",
   "creed": "A list of 150 links goes stale in a year. The ability to find and vet opportunities never does. The directory below is here to be studied, not just clicked.",
   "sourcing": [
     {
       "id": "operators",
-      "name": "Search operators — the Google x-ray",
+      "name": "Search operators, the Google x-ray",
       "icon": "search",
       "accent": "coral",
       "how": "Most people type \"remote jobs Philippines\" into Google and scroll for an hour. Professionals write one precise query instead: quotes force an exact phrase, site: narrows to a single domain, a minus sign removes noise, filetype: finds literal documents. A sharp query beats an hour of scrolling.",
-      "why": "Quotes stop Google from loosely matching your words across unrelated pages. site: turns the entire web into one filtered board — a job site, a company's own careers page, even a competitor's site. The minus sign cuts out sources you already know are noisy. Pair any of these with Google's Tools → Any time → Past week filter to kill stale listings — the operator finds the needle, the date filter keeps it fresh.",
+      "why": "Quotes stop Google from loosely matching your words across unrelated pages. site: turns the entire web into one filtered board, a job site, a company's own careers page, even a competitor's site. The minus sign cuts out sources you already know are noisy. Pair any of these with Google's Tools → Any time → Past week filter to kill stale listings, the operator finds the needle, the date filter keeps it fresh.",
       "example": [
         "site:linkedin.com/jobs \"bookkeeper\" \"remote\" \"Philippines\"",
         "\"hiring\" \"remote\" -site:indeed.com",
@@ -21,8 +21,8 @@
       "name": "Reverse-sourcing: find the client, not the job post",
       "icon": "target",
       "accent": "indigo",
-      "how": "A job post means a business already decided to hire and is now fighting off hundreds of other applicants. Reverse-sourcing skips that fight entirely — you find businesses that have the exact problem you solve, and you reach out before they've written a job post at all. This is where the least competition lives.",
-      "why": "You're not searching for the word \"hiring\" — you're searching for the pain that eventually leads to hiring. A solo founder complaining about admin work, a shop with inconsistent posting, a business with no one answering their inbox: each is a future client who hasn't realized yet that they can outsource it. You get there first, with a specific offer instead of a generic application.",
+      "how": "A job post means a business already decided to hire and is now fighting off hundreds of other applicants. Reverse-sourcing skips that fight entirely, you find businesses that have the exact problem you solve, and you reach out before they've written a job post at all. This is where the least competition lives.",
+      "why": "You're not searching for the word \"hiring\", you're searching for the pain that eventually leads to hiring. A solo founder complaining about admin work, a shop with inconsistent posting, a business with no one answering their inbox: each is a future client who hasn't realized yet that they can outsource it. You get there first, with a specific offer instead of a generic application.",
       "example": [
         "\"looking for a bookkeeper\" -site:indeed.com -site:linkedin.com",
         "site:instagram.com \"small business\" \"solo founder\" \"overwhelmed\"",
@@ -34,8 +34,8 @@
       "name": "Mining the hidden job market",
       "icon": "pickaxe",
       "accent": "amber",
-      "how": "Most job posts never touch Indeed, OnlineJobs, or LinkedIn — they live only on the company's own site, in a niche Slack or Discord, in a newsletter, or inside a private community. This is the hidden market. Almost nobody checks it because the big boards feel easier, which is exactly why it has less competition.",
-      "why": "Company career pages post roles before anyone pays to list them on a board. Niche Slack and Discord communities and newsletters exist so insiders hear first — that's the entire point of joining one. Checking these on a schedule puts you ahead of everyone still waiting for a board notification.",
+      "how": "Most job posts never touch Indeed, OnlineJobs, or LinkedIn, they live only on the company's own site, in a niche Slack or Discord, in a newsletter, or inside a private community. This is the hidden market. Almost nobody checks it because the big boards feel easier, which is exactly why it has less competition.",
+      "why": "Company career pages post roles before anyone pays to list them on a board. Niche Slack and Discord communities and newsletters exist so insiders hear first, that's the entire point of joining one. Checking these on a schedule puts you ahead of everyone still waiting for a board notification.",
       "example": [
         "site:*.com/careers \"remote\" \"Philippines\"",
         "\"join our slack\" \"remote jobs\" OR \"we're hiring\"",
@@ -49,7 +49,7 @@
       "icon": "binoculars",
       "accent": "emerald",
       "how": "If you know one person doing the job you want, you have a map to ten more opportunities. Find a company that already hired someone in your target role, then look at who else works there, who they used to work for, and who else is hiring for that same role right now.",
-      "why": "A competitor's employee list and LinkedIn's \"people also viewed\" are a map of who else hires this role, at what kind of company, with what background. Study five profiles the way the DECONSTRUCT method teaches — what job titles, tools, and companies keep repeating? Those repeats are your next searches, not a coincidence.",
+      "why": "A competitor's employee list and LinkedIn's \"people also viewed\" are a map of who else hires this role, at what kind of company, with what background. Study five profiles the way the DECONSTRUCT method teaches, what job titles, tools, and companies keep repeating? Those repeats are your next searches, not a coincidence.",
       "example": [
         "site:linkedin.com/in \"Bookkeeper\" \"Philippines\" \"Remote\"",
         "\"currently hiring\" site:linkedin.com/posts \"[competitor name]\"",
@@ -62,18 +62,18 @@
       "icon": "workflow",
       "accent": "coral",
       "how": "One good search is a lucky find. A pipeline is a system: a short list of sources you check on a fixed day every week, logged somewhere so you never re-check the same dead end twice. This is the habit that eventually replaces needing a directory like the one below at all.",
-      "why": "A tracker turns \"looking for work\" from a mood you wait for into a routine you run. Ten minutes, five sources, the same day every week — and you stop depending on luck, or on any single site staying good forever.",
+      "why": "A tracker turns \"looking for work\" from a mood you wait for into a routine you run. Ten minutes, five sources, the same day every week, and you stop depending on luck, or on any single site staying good forever.",
       "example": [
         "Source | Last checked | New leads found | Action taken | Follow-up date"
       ]
     }
   ],
   "vetting": {
-    "intro": "Not every opportunity that finds you — or that you find — is real. Some are outright scams. Others are legitimate but exploitative. Run every opportunity through the checklist below before you commit any time, money, or personal information. A single hard-stop flag ends it, no matter how good everything else looks.",
+    "intro": "Not every opportunity that finds you, or that you find, is real. Some are outright scams. Others are legitimate but exploitative. Run every opportunity through the checklist below before you commit any time, money, or personal information. A single hard-stop flag ends it, no matter how good everything else looks.",
     "redFlags": [
       {
         "id": "upfront-fees",
-        "flag": "Asks for any upfront fee — \"training\", \"starter kit\", \"registration\"",
+        "flag": "Asks for any upfront fee, \"training\", \"starter kit\", \"registration\"",
         "why": "No legitimate employer or client ever charges you to work for them. This is the single most common scam pattern there is.",
         "weight": 3
       },
@@ -97,7 +97,7 @@
       },
       {
         "id": "no-footprint",
-        "flag": "No verifiable company footprint — no real website, no employees on LinkedIn, no reviews",
+        "flag": "No verifiable company footprint, no real website, no employees on LinkedIn, no reviews",
         "why": "A business that's been operating for any length of time leaves a trail. No trail at all is itself the trail.",
         "weight": 2
       },
@@ -110,13 +110,13 @@
       {
         "id": "unpaid-test",
         "flag": "A \"test task\" that's actually the real deliverable, unpaid",
-        "why": "A short skills check is normal. A full deliverable — a finished design, a working script, a week of \"trial\" work — done for free is not a test. It's free labor.",
+        "why": "A short skills check is normal. A full deliverable, a finished design, a working script, a week of \"trial\" work, done for free is not a test. It's free labor.",
         "weight": 2
       },
       {
         "id": "pay-too-high",
         "flag": "Pay is far above market rate with no real bar to entry",
-        "why": "If a role needs no skill check, no portfolio, no interview, and still pays double the going rate, the money is the hook — not the job.",
+        "why": "If a role needs no skill check, no portfolio, no interview, and still pays double the going rate, the money is the hook, not the job.",
         "weight": 2
       },
       {
@@ -130,7 +130,7 @@
   "research": [
     {
       "title": "Find the primary source",
-      "desc": "Go to the company's actual website and socials before anything else — not a job board's cached summary of them. What do they say about themselves, in their own words?"
+      "desc": "Go to the company's actual website and socials before anything else, not a job board's cached summary of them. What do they say about themselves, in their own words?"
     },
     {
       "title": "Find their people",
@@ -150,11 +150,11 @@
     }
   ],
   "buildYourOwnDirectory": {
-    "intro": "This page's directory will be out of date within a year — platforms shut down, agencies change their process, boards get replaced by better ones. Your own list won't, because you're the one maintaining it.",
+    "intro": "This page's directory will be out of date within a year, platforms shut down, agencies change their process, boards get replaced by better ones. Your own list won't, because you're the one maintaining it.",
     "steps": [
       {
         "title": "Start with what already works",
-        "desc": "Pull 5–10 sources from the directory below that fit your niche and region — that's your seed list, not your finish line."
+        "desc": "Pull 5–10 sources from the directory below that fit your niche and region, that's your seed list, not your finish line."
       },
       {
         "title": "Add every source you personally find",
@@ -170,7 +170,7 @@
       },
       {
         "title": "Keep it wherever you already work",
-        "desc": "A spreadsheet, a Notion page, a notes app — the tool doesn't matter. What matters is that it's yours, it's current, and you don't need anyone else's directory to use it again."
+        "desc": "A spreadsheet, a Notion page, a notes app, the tool doesn't matter. What matters is that it's yours, it's current, and you don't need anyone else's directory to use it again."
       }
     ]
   }

@@ -1,9 +1,9 @@
 {
-  "intro": "Retired copy-paste library. These entries are kept only as specimens to dissect on the AI Leverage page — read them for the pattern, then write your own.",
+  "intro": "Retired copy-paste library. These entries are kept only as specimens to dissect on the AI Leverage page, read them for the pattern, then write your own.",
   "philosophy": "AI won't replace you. But people who can write their own prompts will.",
   "beforeYouStart": [
     "Have your work history and any past roles ready to paste in.",
-    "Know the exact role or client you're targeting — paste the job post.",
+    "Know the exact role or client you're targeting, paste the job post.",
     "Always fact-check and personalize AI output. It's a co-pilot, not autopilot."
   ],
   "bots": [
@@ -52,7 +52,7 @@
       "category": "interview",
       "title": "Answer 'What's your expected rate?'",
       "desc": "Handle the money question without underselling yourself.",
-      "text": "Help me answer 'What are your rate expectations?' for a [ROLE] role. My target is [RANGE]. Give me a confident 3-sentence answer that anchors on the value I deliver, offers a range, and invites them to share their budget — without sounding desperate or arrogant."
+      "text": "Help me answer 'What are your rate expectations?' for a [ROLE] role. My target is [RANGE]. Give me a confident 3-sentence answer that anchors on the value I deliver, offers a range, and invites them to share their budget, without sounding desperate or arrogant."
     },
     {
       "id": "p6",
@@ -80,7 +80,7 @@
       "category": "deliver",
       "title": "Write a difficult client message",
       "desc": "Push back or set a boundary without friction.",
-      "text": "Help me write a message to my client about [SITUATION — e.g. scope creep, a missed deadline, needing more info]. Keep my relationship strong: acknowledge their view, state the issue factually, propose a clear solution, and keep it under 120 words. Give me 2 tone options: warm and firm."
+      "text": "Help me write a message to my client about [SITUATION, e.g. scope creep, a missed deadline, needing more info]. Keep my relationship strong: acknowledge their view, state the issue factually, propose a clear solution, and keep it under 120 words. Give me 2 tone options: warm and firm."
     },
     {
       "id": "p10",

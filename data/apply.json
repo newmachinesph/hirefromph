@@ -1,6 +1,6 @@
 {
   "intro": "The complete DevUp list of agencies, platforms, job boards, headhunters, and BPOs that hire Filipino online professionals. All in one place. All free. Updated for 2026.",
-  "disclaimer": "These are listed for your convenience — not necessarily endorsed by DevUp. Never pay upfront fees to get hired. If it sounds too good to be true, it probably is.",
+  "disclaimer": "These are listed for your convenience, not necessarily endorsed by DevUp. Never pay upfront fees to get hired. If it sounds too good to be true, it probably is.",
   "categories": [
     { "id": "marketplace", "label": "Freelance Marketplaces" },
     { "id": "ph-boards", "label": "PH Remote Job Boards" },
@@ -34,6 +34,6 @@
     { "name": "Belay Bookkeeping", "category": "niche", "type": "Specialist", "region": "US clients", "blurb": "Bookkeeping-specific placements for QuickBooks/Xero pros.", "tags": ["Bookkeeping", "US"], "url": "#" },
     { "name": "Paired", "category": "niche", "type": "Matching", "region": "Global", "blurb": "Matches remote talent (marketing, ops, creative) with global startups.", "tags": ["Startups", "Matching"], "url": "#" },
     { "name": "Support Shepherd / SafariDesk", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "Recruiters sourcing offshore talent for US SMBs.", "tags": ["US SMB", "Recruiter"], "url": "#" },
-    { "name": "LinkedIn", "category": "global-boards", "type": "Network", "region": "Global", "blurb": "Not just a resume — a lead engine. Optimize your profile and reach out directly.", "tags": ["Networking", "Direct"], "url": "#" }
+    { "name": "LinkedIn", "category": "global-boards", "type": "Network", "region": "Global", "blurb": "Not just a resume, a lead engine. Optimize your profile and reach out directly.", "tags": ["Networking", "Direct"], "url": "#" }
   ]
 }

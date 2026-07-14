@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "kicker": "Layoff-proof · sought-after · the human edge",
+    "line1": "Be the one they",
+    "line2": "cannot replace.",
+    "intro": "There are two kinds of online workers. One does tasks anyone with a prompt can do, and quietly competes with the whole internet on price. The other owns outcomes, builds trust, and brings something a model cannot: judgment, taste, and a human a client wants in the room. The first kind is always one cheaper option away from being dropped. The second kind gets fought over. This page is about becoming the second kind.",
+    "creed": "You do not become layoff-proof by being cheaper or faster. You become layoff-proof by being the person whose loss the client cannot afford."
+  },
+
+  "why": {
+    "kicker": "What layoff-proof really means",
+    "title": "Safe is not a skill AI has. It is a relationship you build.",
+    "lead": "Nobody is un-fireable. But some people are far more expensive to lose than to keep, and that is a position you can build on purpose. It comes from two things: owning a result end to end, and being strong at the human skills a model is bad at. The good news is those skills are rising in value, not falling.",
+    "callout": "The world's biggest professional network says the fastest-rising skills are not just technical. Two of its four rising buckets are people skills and judgment: cross-functional collaboration, executive communication, and the ability to make a call. Those are things a model is structurally bad at, and they are getting more valuable, not less.",
+    "source": {
+      "label": "LinkedIn, Skills on the Rise 2026",
+      "url": "https://news.linkedin.com/2026/Skills-on-the-rise-2026"
+    }
+  },
+
+  "intelligences": {
+    "kicker": "You are smarter than one test says",
+    "title": "Intelligence is not one thing. School only measured a slice of it.",
+    "lead": "Being good at math is one kind of smart, and it happens to be the kind AI copies most easily. But there are many kinds of intelligence, and the ones that make you valuable at work are the ones a model does not have. Find the ones that are already your strength, then build the rest on purpose.",
+    "note": "Read these and be honest: which two are already yours? Lead with those. Then pick one weak one and grow it this quarter. That mix is what makes you hard to replace.",
+    "items": [
+      { "name": "Analytical", "icon": "calculator", "accent": "indigo", "what": "Logic, numbers, solving clear problems. The classic 'smart.' Genuinely useful, but it is also the kind of thinking AI imitates best. Necessary, not enough.", "build": "Pair it with a second intelligence below, so you are not competing with a machine on its home court." },
+      { "name": "Creative", "icon": "lightbulb", "accent": "coral", "what": "The angle nobody else saw. A fresh idea, a better hook, real taste. AI remixes what already exists. It does not actually want to say anything. Your point of view is yours alone.", "build": "Collect ideas you admire, then practice putting your own spin on real briefs. Taste grows by making and judging, not by watching." },
+      { "name": "Emotional & social", "icon": "heart-handshake", "accent": "coral", "what": "Reading people. Feeling what a client actually needs, calming a tense message, earning trust. This is where humans are years ahead, and it decides who gets rehired.", "build": "Listen more than you pitch. Name the other person's worry before your solution. Trust is built in small, kind, reliable moments." },
+      { "name": "Communication", "icon": "message-square", "accent": "emerald", "what": "Turning a good idea into words a client acts on. Most remote work is written, so being clear, warm, and persuasive is a multiplier on everything else you know.", "build": "Write shorter. Lead with the point. Read it out loud before you send. Our English at Work page is a full workshop on this." },
+      { "name": "Practical", "icon": "wrench", "accent": "amber", "what": "Street-smarts. Knowing what to actually do when the plan meets messy reality. Common sense is not common, and clients pay a lot for someone who just handles it.", "build": "Volunteer for the unclear tasks. The ones with no instructions are where practical judgment is built the fastest." },
+      { "name": "Adaptive (learning)", "icon": "refresh-ccw", "accent": "indigo", "what": "The meta-skill: learning fast and changing when the world does. The tools will keep changing. The person who picks up the next one fastest is the one still working next year.", "build": "Learn one new tool or skill every month using the transferable method on our Learn Any Tool page. Make learning a habit, not an event." },
+      { "name": "Judgment & taste", "icon": "scan-eye", "accent": "emerald", "what": "Knowing what is good, what matters, and what to cut. Deciding, not just doing. This is the exact skill the AI premium pays for: telling great output from confident nonsense.", "build": "For every piece of work, ask 'would a demanding client accept this?' before you send it. Judgment sharpens every time you hold your own work to a real standard." }
+    ]
+  },
+
+  "soughtAfter": {
+    "kicker": "How clients choose who to keep",
+    "title": "Become the one they fight to keep.",
+    "lead": "When budgets get tight, clients do not keep the cheapest person. They keep the one who makes their life easier and their results better. These are the habits that put you on that list. None of them need talent. All of them need choosing.",
+    "traits": [
+      { "title": "Reliable, always", "desc": "You do what you said, by when you said, every single time. Boring, and it is the entire foundation of trust. A client will forgive a lot for someone they never have to chase.", "icon": "shield-check" },
+      { "title": "Proactive", "desc": "You spot the problem and bring a fix before you are asked. You send solutions, not just questions. This is the single fastest way to look senior.", "icon": "zap" },
+      { "title": "You own the outcome", "desc": "You take responsibility for the result, not just your task. 'It is done' is a worker. 'It worked, and here is what I would do next' is a partner.", "icon": "target" },
+      { "title": "Easy to work with", "desc": "Clear, calm, and kind, even when things go wrong. People rehire people they like being around. Your attitude is part of the product.", "icon": "smile" },
+      { "title": "You make them look good", "desc": "You make your client's day lighter and their boss impressed. Be the reason they get the credit, and they will never let you go.", "icon": "sparkles" },
+      { "title": "You keep leveling up", "desc": "You are visibly better this quarter than last. The client never outgrows you, because you grow faster than their needs do.", "icon": "trending-up" }
+    ]
+  },
+
+  "proof": {
+    "kicker": "And you are already positioned for this",
+    "title": "On the human skills, freelancers are ahead of full-time employees.",
+    "body": "This is not a pep talk, it is in the data. Upwork compared freelancers with full-time employees and found freelancers score higher on exactly the human skills that are rising in value: problem-solving, communication, and critical thinking, on top of AI proficiency. The independent path builds these faster, because you have to. You are not behind. You are, on the evidence, ahead.",
+    "rows": [
+      { "label": "Advanced AI proficiency", "freelancer": 54, "employee": 38 },
+      { "label": "Problem-solving", "freelancer": 49, "employee": 44 },
+      { "label": "Communication", "freelancer": 47, "employee": 40 },
+      { "label": "Critical thinking", "freelancer": 43, "employee": 38 }
+    ],
+    "legend": { "freelancer": "Freelancers", "employee": "Full-time employees" },
+    "source": {
+      "label": "Upwork, Future Workforce Index 2025",
+      "url": "https://www.upwork.com/research/future-workforce-index-2025"
+    }
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "Skills get you hired. These get you kept.",
+    "body": "Anyone can learn a tool. The people who stay employed, and who clients chase, are the ones who pair a real skill with the human intelligences a model will never have: taste, trust, judgment, and the drive to keep getting better. That combination is not something AI is coming for. It is the exact thing that becomes more valuable the more AI there is.",
+    "point": "Build the edge. Each of these is a workshop that grows one of the intelligences above.",
+    "links": [
+      { "href": "/ai-first", "label": "Multiply with AI", "desc": "Fold AI into your craft so your judgment and taste do the part a model cannot." },
+      { "href": "/english", "label": "Communication", "desc": "The professional register that makes a client trust you with a decision." },
+      { "href": "/conduct", "label": "Reliability & trust", "desc": "The conduct that keeps you hired and the reputation nobody can take from you." },
+      { "href": "/tasks", "label": "Build proof", "desc": "Real work that shows judgment and initiative, not just that you can follow steps." }
+    ]
+  }
+}

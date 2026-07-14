@@ -3,14 +3,14 @@
     "line1": "The numbers nobody",
     "line2": "shows you first."
   },
-  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027 — the ugly parts and the genuinely hopeful parts, every number with a link you can open and check yourself.",
-  "creed": "Encouragement built on a number you can't verify isn't encouragement. It's bait. The truth is more useful — and, as it turns out, more hopeful than the hype.",
-  "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it — click one, and see if the page says what we said it says.",
+  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with a link you can open and check yourself.",
+  "creed": "Encouragement built on a number you can't verify isn't encouragement. It's bait. The truth is more useful, and, as it turns out, more hopeful than the hype.",
+  "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
   "readANumber": {
     "kicker": "Before the numbers · the method",
     "title": "How to read any claim about this career",
-    "lead": "You will meet a hundred numbers about freelancing this year, on Facebook, on TikTok, in a coaching ad. Almost none will survive these four questions. Run them on this page too — we'd rather you check us than believe us.",
+    "lead": "You will meet a hundred numbers about freelancing this year, on Facebook, on TikTok, in a coaching ad. Almost none will survive these four questions. Run them on this page too, we'd rather you check us than believe us.",
     "tests": [
       {
         "id": "who",
@@ -22,25 +22,25 @@
         "id": "n",
         "icon": "hash",
         "q": "How many people, and which people?",
-        "why": "\"Freelancers earn $X\" — from how many? Recruited how? A survey of a platform's own top earners will never look like the people trying to get their first contract. Missing sample size is missing on purpose."
+        "why": "\"Freelancers earn $X\", from how many? Recruited how? A survey of a platform's own top earners will never look like the people trying to get their first contract. Missing sample size is missing on purpose."
       },
       {
         "id": "when",
         "icon": "calendar-clock",
         "q": "What year is the data from, not the article?",
-        "why": "A 2026 blog post can be quoting a 2020 survey. The date on the page is not the date of the fact. Chase the citation until you find the primary source — or find that there isn't one."
+        "why": "A 2026 blog post can be quoting a 2020 survey. The date on the page is not the date of the fact. Chase the citation until you find the primary source, or find that there isn't one."
       },
       {
         "id": "baseline",
         "icon": "git-compare",
         "q": "Compared to what?",
-        "why": "\"Writing jobs fell 28%\" sounds like a death sentence — until you learn that ALL job postings fell 8% that year. Half of the panic on the internet is a number with its baseline quietly removed."
+        "why": "\"Writing jobs fell 28%\" sounds like a death sentence, until you learn that ALL job postings fell 8% that year. Half of the panic on the internet is a number with its baseline quietly removed."
       }
     ],
     "note": "If a claim can't survive all four, it isn't a fact. It's marketing that learned to count."
   },
 
-  "mythsIntro": "Each of these is something you have already been told — probably by someone selling a course. On the left is the promise. On the right is what the evidence says. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
+  "mythsIntro": "Each of these is something you have already been told, probably by someone selling a course. On the left is the promise. On the right is what the evidence says. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
   "myths": [
     {
       "id": "pay",
@@ -48,11 +48,11 @@
       "tag": "The pay myth",
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a third of your working time will not be paid at all.",
-      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour — searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one third of working time, invisible and free. Once you count it, average hourly earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa).",
+      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one third of working time, invisible and free. Once you count it, average hourly earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa).",
       "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the ninety minutes it actually took to earn.",
       "lesson": "Never compare a freelance rate to a local salary without the unpaid third, the platform fee, and your own electricity and internet already subtracted. Do that arithmetic before you resign from anything.",
       "source": {
-        "label": "ILO — World Employment and Social Outlook 2021, digital labour platforms",
+        "label": "ILO, World Employment and Social Outlook 2021, digital labour platforms",
         "url": "https://www.ilo.org/media/387316/download"
       },
       "sourceNote": "",
@@ -64,25 +64,25 @@
       "tag": "The timeline myth",
       "myth": "\"Get your first client in 10–14 days.\"",
       "headline": "There is no credible data on time-to-first-client. None. Anywhere.",
-      "body": "We went looking for it properly — labour statistics, platform research, academic work — and it does not exist. Nobody has measured how long it takes a new Filipino online professional to land their first paying contract. Every \"10 days\", \"2 weeks\", \"30 days guaranteed\" you have seen is a marketing figure with nothing underneath it. It was chosen because it converts, not because it was counted.",
-      "sting": "The reason we're telling you a number DOESN'T exist is that this is the most valuable habit on the page: when a claim has no source, the correct response is not \"maybe\" — it's \"then why is it stated so confidently?\"",
+      "body": "We went looking for it properly, labour statistics, platform research, academic work, and it does not exist. Nobody has measured how long it takes a new Filipino online professional to land their first paying contract. Every \"10 days\", \"2 weeks\", \"30 days guaranteed\" you have seen is a marketing figure with nothing underneath it. It was chosen because it converts, not because it was counted.",
+      "sting": "The reason we're telling you a number DOESN'T exist is that this is the most valuable habit on the page: when a claim has no source, the correct response is not \"maybe\", it's \"then why is it stated so confidently?\"",
       "lesson": "Plan for a runway, not a date. Anyone who gives you a timeline for your first client is guessing, and if they're charging you, they're guessing on purpose.",
       "source": {
-        "label": "No primary source exists — this is the point",
+        "label": "No primary source exists, this is the point",
         "url": "https://www.ilo.org/media/387316/download"
       },
-      "sourceNote": "We link the ILO study here only to show you what a real, methodologically documented source looks like — so you can feel the difference when someone shows you nothing at all.",
+      "sourceNote": "We link the ILO study here only to show you what a real, methodologically documented source looks like, so you can feel the difference when someone shows you nothing at all.",
       "source2": null
     },
     {
       "id": "platforms",
       "accent": "coral",
       "tag": "The protection myth",
-      "myth": "\"The platform protects me — that's what the fee is for.\"",
+      "myth": "\"The platform protects me, that's what the fee is for.\"",
       "headline": "31% had been paid nothing. 38% had been paid late.",
       "body": "Fairwork (Oxford Internet Institute) surveyed 750+ cloudwork workers across 100 countries for its 2025 Cloudwork Ratings. 31% had experienced outright non-payment; 38% had experienced late payment. Of the 16 platforms scored, only 4 could show that their workers consistently earn at least their local minimum wage after work-related costs. Only 6 of 16 had contracts that fairly reflected the work being done.",
       "sting": "The fee buys you a marketplace and a dispute form. It does not buy you a guarantee, and the numbers say roughly one in three of us finds that out the hard way.",
-      "lesson": "Milestones, escrow, and written scope are not paranoia — they're the only protection that actually held up in the data. Use the platform's tracker, never work off-platform \"to save the fee\", and treat every unfunded milestone as unpaid work.",
+      "lesson": "Milestones, escrow, and written scope are not paranoia, they're the only protection that actually held up in the data. Use the platform's tracker, never work off-platform \"to save the fee\", and treat every unfunded milestone as unpaid work.",
       "source": {
         "label": "Fairwork Cloudwork Ratings 2025 (Oxford Internet Institute)",
         "url": "https://fair.work/wp-content/uploads/sites/17/2025/05/Fairwork-Cloudwork-Report-2025-FINAL.pdf"
@@ -94,13 +94,13 @@
       "id": "english",
       "accent": "indigo",
       "tag": "The English myth",
-      "myth": "\"Magaling ako mag-English — that's my edge.\"",
+      "myth": "\"Magaling ako mag-English, that's my edge.\"",
       "headline": "It's your entry ticket. It has never been your differentiator.",
-      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries, scoring 569 out of 800 — second in Asia. Genuinely something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
-      "sting": "A client choosing between forty Filipino applicants cannot use English to choose. They will use the thing you can actually prove — the work.",
+      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries, scoring 569 out of 800, second in Asia. Genuinely something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
+      "sting": "A client choosing between forty Filipino applicants cannot use English to choose. They will use the thing you can actually prove, the work.",
       "lesson": "English gets you into the room. Craft gets you paid. If \"good English\" is the strongest line in your pitch, you have not yet given the client a reason to pick you.",
       "source": {
-        "label": "EF English Proficiency Index 2025 — Philippines",
+        "label": "EF English Proficiency Index 2025, Philippines",
         "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/"
       },
       "sourceNote": "",
@@ -112,11 +112,11 @@
       "tag": "The competition myth",
       "myth": "\"There's so much work out there, low competition.\"",
       "headline": "We are the 3rd largest online-work market on Earth.",
-      "body": "PIDS — the Philippine government's own policy think-tank — puts the Philippines third globally in online work, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, free labour, and \"race to the bottom\" wage rates.",
+      "body": "PIDS, the Philippine government's own policy think-tank, puts the Philippines third globally in online work, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, free labour, and \"race to the bottom\" wage rates.",
       "sting": "When your own government's researchers use the phrase \"race to the bottom\" about your industry, the competitive pressure you feel isn't self-doubt. It's real, and it's measured.",
-      "lesson": "You cannot win a race to the bottom — the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what /niches and /tasks are for.",
+      "lesson": "You cannot win a race to the bottom, the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what /niches and /tasks are for.",
       "source": {
-        "label": "PIDS — Online Workers in the Philippines (Discussion Paper 2022-01)",
+        "label": "PIDS, Online Workers in the Philippines (Discussion Paper 2022-01)",
         "url": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps2201.pdf"
       },
       "sourceNote": "",
@@ -128,11 +128,11 @@
       "tag": "The legal myth",
       "myth": "\"If a client cheats me, I have legal protection.\"",
       "headline": "The Freelance Workers Protection Act is still not law.",
-      "body": "It would have required a written contract for every engagement, at least 30% payment upfront, and penalties of ₱50,000 to ₱500,000 for clients who don't pay. It passed the House of Representatives on 6 February 2023 — and then it stopped. It has not been enacted. It has been refiled in the 20th Congress. As of now, a Filipino freelancer stiffed by a foreign client in 2026 has no dedicated statutory remedy to reach for.",
-      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed — passed one chamber, three years ago.",
+      "body": "It would have required a written contract for every engagement, at least 30% payment upfront, and penalties of ₱50,000 to ₱500,000 for clients who don't pay. It passed the House of Representatives on 6 February 2023, and then it stopped. It has not been enacted. It has been refiled in the 20th Congress. As of now, a Filipino freelancer stiffed by a foreign client in 2026 has no dedicated statutory remedy to reach for.",
+      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed, passed one chamber, three years ago.",
       "lesson": "Your contract IS your protection, because nothing else is. Written scope, milestones, escrow, upfront deposit. Build that habit now, while the stakes are small.",
       "source": {
-        "label": "BusinessMirror — Bill seeks protection, benefits for freelancers, gig workers",
+        "label": "BusinessMirror, Bill seeks protection, benefits for freelancers, gig workers",
         "url": "https://businessmirror.com.ph/2026/05/06/bill-seeks-protection-benefits-for-freelancers-gig-workers/"
       },
       "sourceNote": "",
@@ -144,16 +144,16 @@
       "tag": "The on-ramp myth",
       "myth": "\"Entry-level admin work is the safe way to start.\"",
       "headline": "It is the single most scam-targeted category there is.",
-      "body": "SEEK — the parent company of Jobstreet and JobsDB — analysed job fraud from July 2024 to June 2025 and found the Philippines is the 2nd most job-scam-attacked country in Asia-Pacific, absorbing 20% of all job-fraud cases in the region. Admin and office-support roles are the most-targeted category of all, at 29% of job scams. SEEK's own stated reason: \"they typically don't require specialized degrees or extensive experience.\" Separately, the CICC logged 18,633 cybercrime complaints in 2025, with ₱418.187 million lost.",
-      "sting": "The very thing that makes entry-level support work feel safe to enter — no degree, no experience, low barrier — is precisely the reason the scammers aim there. Low barrier for you is low barrier for them.",
+      "body": "SEEK, the parent company of Jobstreet and JobsDB, analysed job fraud from July 2024 to June 2025 and found the Philippines is the 2nd most job-scam-attacked country in Asia-Pacific, absorbing 20% of all job-fraud cases in the region. Admin and office-support roles are the most-targeted category of all, at 29% of job scams. SEEK's own stated reason: \"they typically don't require specialized degrees or extensive experience.\" Separately, the CICC logged 18,633 cybercrime complaints in 2025, with ₱418.187 million lost.",
+      "sting": "The very thing that makes entry-level support work feel safe to enter, no degree, no experience, low barrier, is precisely the reason the scammers aim there. Low barrier for you is low barrier for them.",
       "lesson": "Never pay to work. Never send ID or bank details before a real contract exists. Never accept payment you're asked to forward on. And when you start, start with proof you built yourself, not with a category that a scammer can imitate in an afternoon.",
       "source": {
-        "label": "Manila Bulletin / SEEK — PH 2nd most attacked by job scams",
+        "label": "Manila Bulletin / SEEK, PH 2nd most attacked by job scams",
         "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport"
       },
       "sourceNote": "",
       "source2": {
-        "label": "GMA / CICC — 2025 cybercrime complaints",
+        "label": "GMA / CICC, 2025 cybercrime complaints",
         "url": "https://www.gmanetwork.com/news/topstories/nation/973804/consumer-fraud-topped-cybercrime-complaints-in-2025-cicc/story/"
       }
     }
@@ -168,10 +168,10 @@
       {
         "id": "upwork-5m",
         "title": "Upwork job posts, before and after ChatGPT",
-        "note": "Bloomberry analysed 5 million Upwork posts, comparing November 2022 (ChatGPT's launch) with February 2024. Text-shaped work fell. Work that needs a human eye, hands, and taste rose — in the same market, in the same window.",
+        "note": "Bloomberry analysed 5 million Upwork posts, comparing November 2022 (ChatGPT's launch) with February 2024. Text-shaped work fell. Work that needs a human eye, hands, and taste rose, in the same market, in the same window.",
         "baseline": null,
         "source": {
-          "label": "Bloomberry — I analyzed 5M freelancing jobs",
+          "label": "Bloomberry, I analyzed 5M freelancing jobs",
           "url": "https://bloomberry.com/blog/i-analyzed-5m-freelancing-jobs-to-see-what-jobs-are-being-replaced-by-ai/"
         },
         "items": [
@@ -186,10 +186,10 @@
       {
         "id": "bloomberry-180m",
         "title": "180 million job postings, 2023 → October 2025",
-        "note": "Now the baseline matters. ALL job postings fell 8% in 2025 — the whole market cooled. So the dashed line is the real zero. Writers at −28% are genuinely down against it. But customer service reps at −4% are actually doing BETTER than the market average — a fact that gets left out of every doom post you have ever scrolled past.",
+        "note": "Now the baseline matters. ALL job postings fell 8% in 2025, the whole market cooled. So the dashed line is the real zero. Writers at −28% are genuinely down against it. But customer service reps at −4% are actually doing BETTER than the market average, a fact that gets left out of every doom post you have ever scrolled past.",
         "baseline": { "value": -8, "label": "All postings, 2025: −8%" },
         "source": {
-          "label": "Bloomberry — I analyzed 180M jobs",
+          "label": "Bloomberry, I analyzed 180M jobs",
           "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/"
         },
         "items": [
@@ -207,25 +207,25 @@
       "title": "And it holds up under peer review.",
       "body": "This isn't only a blog finding. A peer-reviewed study in Management Science (\"Who Is AI Replacing?\") measured a 21% drop in job posts for automation-prone writing and coding work within eight months of ChatGPT's release, and a 17% drop for image-creation work. But read the second half of that paper, because almost nobody quotes it: the jobs that SURVIVED are more complex and higher-paid. The distribution didn't shrink evenly. Its bottom got cut off.",
       "source": {
-        "label": "Management Science — Who Is AI Replacing?",
+        "label": "Management Science, Who Is AI Replacing?",
         "url": "https://doi.org/10.1287/mnsc.2024.05420"
       }
     },
     "wef": {
       "title": "The global picture, to 2030",
-      "body": "The World Economic Forum's Future of Jobs Report 2025 puts data entry clerks at the very top of its global decline list, with office and executive support roles showing among the largest absolute declines of any job family. In the same breath it projects 170 million jobs created against 92 million displaced between 2025 and 2030 — a net gain — and estimates that 39% of workers' existing skills will be transformed or outdated in that window. Both halves are true at once. That is the whole story of this decade in one report.",
+      "body": "The World Economic Forum's Future of Jobs Report 2025 puts data entry clerks at the very top of its global decline list, with office and executive support roles showing among the largest absolute declines of any job family. In the same breath it projects 170 million jobs created against 92 million displaced between 2025 and 2030, a net gain, and estimates that 39% of workers' existing skills will be transformed or outdated in that window. Both halves are true at once. That is the whole story of this decade in one report.",
       "source": {
-        "label": "WEF — The Future of Jobs Report 2025",
+        "label": "WEF, The Future of Jobs Report 2025",
         "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/"
       }
     },
     "counter": {
       "kicker": "The counter-evidence · we're including it because it's true",
       "title": "Demand for \"basic\" support work did not vanish.",
-      "body": "If we stopped here you'd conclude that entry-level support work is dead. It isn't, and we won't pretend it is. Upwork's In-Demand Skills 2026 shows that general remote support, data entry and manual transcription are STILL among the top-10 most in-demand skills in its Customer Service & Admin Support category. (Upwork still uses the old title for that first one. We don't — but the demand it names is real.) Their own conclusion: demand \"remained consistently strong year over year, even in categories often assumed to be most vulnerable to automation.\"",
-      "conclusion": "So the work is still there. What collapsed was not the demand — it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. That is the difference between being replaced and being commoditized. You are not being replaced. You are being commoditized. The escape from commoditization is not to work faster. It's to own something a client cannot get from a prompt.",
+      "body": "If we stopped here you'd conclude that entry-level support work is dead. It isn't, and we won't pretend it is. Upwork's In-Demand Skills 2026 shows that general remote support, data entry and manual transcription are STILL among the top-10 most in-demand skills in its Customer Service & Admin Support category. (Upwork still uses the old title for that first one. We don't, but the demand it names is real.) Their own conclusion: demand \"remained consistently strong year over year, even in categories often assumed to be most vulnerable to automation.\"",
+      "conclusion": "So the work is still there. What collapsed was not the demand, it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. That is the difference between being replaced and being commoditized. You are not being replaced. You are being commoditized. The escape from commoditization is not to work faster. It's to own something a client cannot get from a prompt.",
       "source": {
-        "label": "Upwork — In-Demand Skills 2026",
+        "label": "Upwork, In-Demand Skills 2026",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
       }
     }
@@ -233,16 +233,16 @@
 
   "growth": {
     "kicker": "The map · where demand is actually rising",
-    "title": "Now the hopeful half — and it's bigger than the scary half.",
+    "title": "Now the hopeful half, and it's bigger than the scary half.",
     "lead": "Everything above is the floor collapsing. Here is the ceiling rising. These are year-on-year increases in what clients are actively searching and hiring for, from the two largest freelance marketplaces on Earth. You do not need to be able to do all of these. You need to pick one and go deep.",
     "groups": [
       {
         "id": "upwork-ai",
-        "title": "Upwork — AI skills, YoY growth in US client demand",
+        "title": "Upwork, AI skills, YoY growth in US client demand",
         "accent": "emerald",
         "note": "Demand for skills referencing AI grew 109% year over year. Inside that, the specifics:",
         "source": {
-          "label": "Upwork — In-Demand Skills 2026",
+          "label": "Upwork, In-Demand Skills 2026",
           "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
         },
         "items": [
@@ -257,11 +257,11 @@
       },
       {
         "id": "upwork-nonai",
-        "title": "Upwork — and it is NOT only AI",
+        "title": "Upwork, and it is NOT only AI",
         "accent": "indigo",
-        "note": "This is the part the AI-panic posts never mention. Plenty of the fastest-growing demand has nothing to do with models at all — it's business capability a client can't prompt into existence.",
+        "note": "This is the part the AI-panic posts never mention. Plenty of the fastest-growing demand has nothing to do with models at all, it's business capability a client can't prompt into existence.",
         "source": {
-          "label": "Upwork — In-Demand Skills 2026",
+          "label": "Upwork, In-Demand Skills 2026",
           "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
         },
         "items": [
@@ -276,11 +276,11 @@
       },
       {
         "id": "fiverr",
-        "title": "Fiverr — Business Trends Index, June 2026",
+        "title": "Fiverr, Business Trends Index, June 2026",
         "accent": "coral",
         "note": "Fiverr publishes what buyers are searching for. Read this as a live signal of what clients are trying to buy right now and struggling to find.",
         "source": {
-          "label": "Fiverr — Business Trends Index, June 2026",
+          "label": "Fiverr, Business Trends Index, June 2026",
           "url": "https://www.fiverr.com/resources/guides/reports/business-trends-index-june-2026"
         },
         "items": [
@@ -294,10 +294,10 @@
       }
     ],
     "linkedin": {
-      "title": "LinkedIn's four rising buckets — zoom out and look at the shape",
+      "title": "LinkedIn's four rising buckets, zoom out and look at the shape",
       "body": "LinkedIn's Skills on the Rise 2026 doesn't give a single number; it gives a shape, and the shape is the useful part. Four top-level buckets are rising: People skills (cross-functional collaboration, executive communication), Business growth (go-to-market, business development), Technical & strategic AI, and Risk & Compliance / Governance (GRC). Notice what that list is: two of the four are things a model is structurally bad at. Judgment, trust, and talking to humans are appreciating assets, not consolation prizes.",
       "source": {
-        "label": "LinkedIn — Skills on the Rise 2026",
+        "label": "LinkedIn, Skills on the Rise 2026",
         "url": "https://news.linkedin.com/2026/Skills-on-the-rise-2026"
       }
     }
@@ -312,24 +312,24 @@
       "label": "more per hour",
       "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those doing non-AI work. This is the number every AI course in your feed is quoting at you. It is real.",
       "source": {
-        "label": "Upwork — 2025's most in-demand skills",
+        "label": "Upwork, 2025's most in-demand skills",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills"
       }
     },
     "nuance": {
       "title": "But here is the sentence they cut out of the screenshot.",
-      "body": "Kelly Monahan, Managing Director of the Upwork Research Institute, explained where that premium actually lands — and it is not on people who just learned to prompt. It lands on people who already had deep domain expertise and then layered AI on top of it:",
+      "body": "Kelly Monahan, Managing Director of the Upwork Research Institute, explained where that premium actually lands, and it is not on people who just learned to prompt. It lands on people who already had deep domain expertise and then layered AI on top of it:",
       "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
       "attribution": "Kelly Monahan, MD, Upwork Research Institute",
       "source": {
-        "label": "Axios — AI, vibe coding, and the Upwork data",
+        "label": "Axios, AI, vibe coding, and the Upwork data",
         "url": "https://www.axios.com/2025/06/30/ai-job-vibe-coding-upwork"
       }
     },
-    "conclusion": "AI skills alone, with no craft underneath them, do not produce the premium. The multiplier needs something to multiply. A prompt engineer with no domain is a person holding a very fast lever with nothing on the other end of it — and there are already ten thousand of them, competing on price, on the floor we just showed you. Pick a craft. Get genuinely good at the thing itself. THEN put AI under it and watch what your hour is worth.",
+    "conclusion": "AI skills alone, with no craft underneath them, do not produce the premium. The multiplier needs something to multiply. A prompt engineer with no domain is a person holding a very fast lever with nothing on the other end of it, and there are already ten thousand of them, competing on price, on the floor we just showed you. Pick a craft. Get genuinely good at the thing itself. THEN put AI under it and watch what your hour is worth.",
     "proof": {
       "title": "And you are better positioned for this than a full-time employee. Genuinely.",
-      "body": "Upwork's Future Workforce Index 2025 compared freelancers with full-time employees. Freelancers already out-index employees on AI — and, quietly, on exactly the human skills that LinkedIn says are rising. You are not behind. You are, on the evidence, ahead.",
+      "body": "Upwork's Future Workforce Index 2025 compared freelancers with full-time employees. Freelancers already out-index employees on AI, and, quietly, on exactly the human skills that LinkedIn says are rising. You are not behind. You are, on the evidence, ahead.",
       "rows": [
         { "label": "Advanced AI proficiency", "freelancer": 54, "employee": 38 },
         { "label": "Problem-solving", "freelancer": 49, "employee": 44 },
@@ -338,7 +338,7 @@
       ],
       "legend": { "freelancer": "Freelancers", "employee": "Full-time employees" },
       "source": {
-        "label": "Upwork — Future Workforce Index 2025",
+        "label": "Upwork, Future Workforce Index 2025",
         "url": "https://www.upwork.com/research/future-workforce-index-2025"
       }
     }
@@ -346,12 +346,12 @@
 
   "pay": {
     "kicker": "Pay · read the warning label first",
-    "title": "What this actually pays — and why you should distrust this section",
+    "title": "What this actually pays, and why you should distrust this section",
     "warning": {
       "title": "This is the weakest data on the page. We're showing you the weakness on purpose.",
-      "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology. All of them are commercially motivated to move the number — an agency that places workers wants the rate to look low to clients and high to you, and a course wants it high enough to justify the enrolment fee. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
+      "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology. All of them are commercially motivated to move the number, an agency that places workers wants the rate to look low to clients and high to you, and a course wants it high enough to justify the enrolment fee. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
     },
-    "tiersNote": "The convergent range across several vendor pages — useful for orienting yourself, useless for negotiating from:",
+    "tiersNote": "The convergent range across several vendor pages, useful for orienting yourself, useless for negotiating from:",
     "tiers": [
       {
         "id": "entry",
@@ -359,7 +359,7 @@
         "accent": "coral",
         "hourly": "$3–7 / hr",
         "monthly": "≈ $600–1,100 / mo",
-        "what": "Generic, undifferentiated task work. This is the floor described at the top of this page — the one that is actively collapsing. Do not plan to stay here."
+        "what": "Generic, undifferentiated task work. This is the floor described at the top of this page, the one that is actively collapsing. Do not plan to stay here."
       },
       {
         "id": "mid",
@@ -375,23 +375,23 @@
         "accent": "emerald",
         "hourly": "$18–35+ / hr",
         "monthly": "≈ $2,500–4,800+ / mo",
-        "what": "A named, provable specialisation — and this is where the 40% AI premium lands on top of the craft, not instead of it."
+        "what": "A named, provable specialisation, and this is where the 40% AI premium lands on top of the craft, not instead of it."
       }
     ],
     "disagreement": {
-      "title": "Here's the proof that the data is soft — and how to see it for yourself.",
-      "body": "Take one single role: bookkeeping. One vendor page says an entry-level Filipino bookkeeper earns $5–6/hr. Another says entry-level bookkeeping is $10–12/hr. Same role. Same country. Same year. A 2× disagreement — and neither page shows its working.",
+      "title": "Here's the proof that the data is soft, and how to see it for yourself.",
+      "body": "Take one single role: bookkeeping. One vendor page says an entry-level Filipino bookkeeper earns $5–6/hr. Another says entry-level bookkeeping is $10–12/hr. Same role. Same country. Same year. A 2× disagreement, and neither page shows its working.",
       "a": { "label": "Vendor A · entry bookkeeping", "value": "$5–6 / hr" },
       "b": { "label": "Vendor B · entry bookkeeping", "value": "$10–12 / hr" },
-      "lesson": "At least one of them is wrong, and you cannot tell which. That is what an unmethodologied number looks like from the outside. Never take a rate from a single salary guide — triangulate across at least three, then go look at what actual live job posts in your niche are offering this week. Live posts are data. Guides are opinion with a chart on it."
+      "lesson": "At least one of them is wrong, and you cannot tell which. That is what an unmethodologied number looks like from the outside. Never take a rate from a single salary guide, triangulate across at least three, then go look at what actual live job posts in your niche are offering this week. Live posts are data. Guides are opinion with a chart on it."
     },
     "sources": [
       {
-        "label": "OnlineJobs.ph — guide to salaries in the Philippines",
+        "label": "OnlineJobs.ph, guide to salaries in the Philippines",
         "url": "https://blog.onlinejobs.ph/comprehensive-guide-to-virtual-assistant-salaries-in-the-philippines/"
       },
       {
-        "label": "VA Masters — what it costs to hire in the Philippines",
+        "label": "VA Masters, what it costs to hire in the Philippines",
         "url": "https://vamasters.com/hiring-a-virtual-assistant-in-the-philippines-heres-what-it-costs/"
       }
     ]
@@ -424,13 +424,13 @@
         "id": "85k",
         "claim": "\"The median Upwork freelancer earns $85,000 a year.\"",
         "verdict": "SEO-blog origin",
-        "why": "This one gets copied between blog posts endlessly. Chase the citation and it dead-ends — the trail goes blog → blog → blog, and never arrives at a primary source. A number with no origin is not a small problem with a number. It IS the problem."
+        "why": "This one gets copied between blog posts endlessly. Chase the citation and it dead-ends, the trail goes blog → blog → blog, and never arrives at a primary source. A number with no origin is not a small problem with a number. It IS the problem."
       },
       {
         "id": "payoneer",
         "claim": "\"Freelancers earn 57% more with overseas clients.\" (attributed to Payoneer)",
         "verdict": "Not verifiable today",
-        "why": "It is not on Payoneer's live page, and the survey it's traced to dates from 2020 — before ChatGPT, before the 2025 posting collapse, effectively a different market. A stat quoted without its year is a stat hiding its age."
+        "why": "It is not on Payoneer's live page, and the survey it's traced to dates from 2020, before ChatGPT, before the 2025 posting collapse, effectively a different market. A stat quoted without its year is a stat hiding its age."
       }
     ],
     "close": "Notice the pattern in all five: a precise-sounding number, a confident tone, and no way to check. That combination is not evidence. It's a costume."
@@ -439,11 +439,11 @@
   "reading": {
     "kicker": "Read the primary source, not the summary",
     "title": "The reading list",
-    "lead": "Everything cited on this page, plus the free material that actually moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year — and those three things are where the truth lives.",
+    "lead": "Everything cited on this page, plus the free material that actually moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year, and those three things are where the truth lives.",
     "groups": [
       {
         "id": "market",
-        "title": "Market reports — read the primary source",
+        "title": "Market reports, read the primary source",
         "note": "These are the documents every freelancing influencer is quoting at you, usually without reading them. Go straight to the source and you will know more than they do by lunchtime.",
         "items": [
           {
@@ -474,7 +474,7 @@
             "title": "Working Without Borders",
             "org": "World Bank",
             "url": "https://www.worldbank.org/en/news/press-release/2023/09/07/demand-for-online-gig-work-rapidly-rising-in-developing-countries",
-            "why": "The macro view of online gig work in developing countries — the wave you are standing in, described by people with no course to sell you."
+            "why": "The macro view of online gig work in developing countries, the wave you are standing in, described by people with no course to sell you."
           }
         ]
       },
@@ -487,13 +487,13 @@
             "title": "I analyzed 5M freelancing jobs to see what AI is replacing",
             "org": "Bloomberry",
             "url": "https://bloomberry.com/blog/i-analyzed-5m-freelancing-jobs-to-see-what-jobs-are-being-replaced-by-ai/",
-            "why": "The clearest before/after of ChatGPT on the freelance market. Notice the method is described openly — that's what makes it trustworthy."
+            "why": "The clearest before/after of ChatGPT on the freelance market. Notice the method is described openly, that's what makes it trustworthy."
           },
           {
             "title": "I analyzed 180M jobs to see what AI is actually replacing today",
             "org": "Bloomberry",
             "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/",
-            "why": "The follow-up, with the −8% market baseline included. This is what honest data journalism looks like — steal the technique."
+            "why": "The follow-up, with the −8% market baseline included. This is what honest data journalism looks like, steal the technique."
           },
           {
             "title": "Cloudwork Ratings 2025",
@@ -505,7 +505,7 @@
             "title": "Digital labour platforms and the future of work (2021)",
             "org": "International Labour Organization",
             "url": "https://www.ilo.org/media/387316/download",
-            "why": "The unpaid-time finding. Long, and worth it — this is the study that changes how you calculate your own rate."
+            "why": "The unpaid-time finding. Long, and worth it, this is the study that changes how you calculate your own rate."
           },
           {
             "title": "Online Workers in the Philippines",
@@ -520,44 +520,6 @@
             "why": "Read it once and you will recognise the pattern of a fake job post for the rest of your life."
           }
         ]
-      },
-      {
-        "id": "skills",
-        "title": "Free skills & AI fluency",
-        "note": "Free, real, and directly aimed at the premium described above. No enrolment fee, no upsell, walang catch.",
-        "items": [
-          {
-            "title": "AI Fluency: Framework & Foundations",
-            "org": "Anthropic — free, ~3 hours",
-            "url": "https://www.anthropic.com/learn/claude-for-you",
-            "why": "Teaches four skills — Delegation, Description, Discernment, Diligence. Pay attention to Discernment: judging whether AI output is actually good is LITERALLY the skill that the 40% premium pays for. Do this one first."
-          },
-          {
-            "title": "The All-Remote Handbook",
-            "org": "GitLab",
-            "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/",
-            "why": "The best free resource on async remote work anywhere on the internet, written by a company that has done it at scale for a decade. Read it and you will out-communicate people with five years on you."
-          },
-          {
-            "title": "DigitalJobsPH",
-            "org": "DICT — Philippine government",
-            "url": "https://dict.gov.ph/",
-            "why": "Free government freelancing training. Free is free — take the certificate, then go build the proof that actually gets you hired."
-          }
-        ]
-      },
-      {
-        "id": "business",
-        "title": "Be a real business",
-        "note": "The unglamorous half that quietly separates a ₱15,000/month worker from a ₱90,000/month professional.",
-        "items": [
-          {
-            "title": "Taxes for Freelancers in the Philippines",
-            "org": "Taxumo",
-            "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/",
-            "why": "BIR registration and the 8% flat rate for gross income ≤₱3M. Here's the part nobody says out loud: a registered freelancer can issue a proper invoice — and being invoice-capable is itself a rate differentiator, because it lets a serious client book you as a supplier instead of a favour."
-          }
-        ]
       }
     ]
   },
@@ -565,18 +527,18 @@
   "closing": {
     "kicker": "The honest bottom line",
     "title": "The floor is collapsing. The ceiling is rising. Your job for 2027 is to get off the floor.",
-    "body": "That is the whole page in one line, and it is not despair — it's a direction. Generic, undifferentiated task work is being commoditized toward zero, and no amount of hustle, positivity, or working faster reverses that; the price is falling for structural reasons that have nothing to do with how hard you try. But work where a human OWNS an AI-assisted outcome end to end is growing fast and paying more, and that door is wide open right now, in a way it will not stay open forever.",
-    "point": "You are not late. You are early — but only if you move while the premium still exists. Nobody is coming to move you. Start here:",
+    "body": "That is the whole page in one line, and it is not despair, it's a direction. Generic, undifferentiated task work is being commoditized toward zero, and no amount of hustle, positivity, or working faster reverses that; the price is falling for structural reasons that have nothing to do with how hard you try. But work where a human OWNS an AI-assisted outcome end to end is growing fast and paying more, and that door is wide open right now, in a way it will not stay open forever.",
+    "point": "You are not late. You are early, but only if you move while the premium still exists. Nobody is coming to move you. Start here:",
     "links": [
       {
         "href": "/tasks",
         "label": "Build real proof",
-        "desc": "Nobody hires a claim. Ship small, real work you can show — that's the only thing that gets you off the floor."
+        "desc": "Nobody hires a claim. Ship small, real work you can show, that's the only thing that gets you off the floor."
       },
       {
         "href": "/niches",
         "label": "Pick a lane",
-        "desc": "The craft that the AI multiplier will multiply. Choose deliberately, using the framework — not by copying whoever is loudest."
+        "desc": "The craft that the AI multiplier will multiply. Choose deliberately, using the framework, not by copying whoever is loudest."
       },
       {
         "href": "/english",
@@ -594,6 +556,6 @@
         "desc": "Put your own numbers in and watch the floor and the ceiling diverge over three years. It is more persuasive than anything we could write."
       }
     ],
-    "last": "And one last thing. Every number on this page has a link on it. If we ever publish one that doesn't — hold it to the same standard you now hold everyone else's."
+    "last": "And one last thing. Every number on this page has a link on it. If we ever publish one that doesn't, hold it to the same standard you now hold everyone else's."
   }
 }

@@ -91,8 +91,7 @@ export function StagePage({ id }: { id: string }) {
               <blockquote className="font-display text-2xl leading-snug text-ink">
                 {stage.quote}
               </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-ink-soft">
-                — DevUp · {stage.subtitle}
+              <figcaption className="mt-6 text-sm font-medium text-ink-soft">, DevUp · {stage.subtitle}
               </figcaption>
             </figure>
           </Reveal>
@@ -192,7 +191,7 @@ export function StagePage({ id }: { id: string }) {
       <section className="container-x py-16 lg:py-24">
         <Reveal>
           <SectionHeading
-            kicker="Everything you need — nothing you don't"
+            kicker="Everything you need, nothing you don't"
             title="Your tools for this stage"
             lead="These are the only resources you need right now. Focus here before moving on."
           />

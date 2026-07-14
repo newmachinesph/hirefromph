@@ -3,18 +3,21 @@
   "wordmarkAccent": "Up",
   "meaning": "Developing upwards",
   "tagline": "Developing upwards. The enterprise-grade platform for building an online career. Free.",
-  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. A free, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional — not an assistant, a professional. Built to the standard of a real operations team, and given away.",
+  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. A free, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, not an assistant, a professional. Built to the standard of a real operations team, and given away.",
   "standard": {
     "kicker": "The DevUp standard",
     "title": "We don't hand you files. We make you resourceful.",
-    "body": "Anyone can give you a resume template. It makes you identical to ten thousand other applicants and useless the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment — then you build your own, from a blank page, for any situation. That skill is the actual asset — and it only ever develops upwards.",
+    "body": "Anyone can give you a resume template. It makes you identical to ten thousand other applicants and useless the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and it only ever develops upwards.",
     "principles": [
-      { "title": "Method over material", "desc": "Every lab teaches how the thing is built and why — never a file to download and rename.", "icon": "key-round" },
+      { "title": "Method over material", "desc": "Every lab teaches how the thing is built and why, never a file to download and rename.", "icon": "key-round" },
       { "title": "You build it, you own it", "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.", "icon": "pencil-ruler" },
       { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it. No paywall, no upsell, no dependency by design.", "icon": "unlock" }
     ]
   },
-  "contact": { "email": "hello@devup.ph" },
+  "social": {
+    "facebook": "https://www.facebook.com/devupph/",
+    "facebookGroup": "https://www.facebook.com/groups/devupph"
+  },
   "stats": [
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
     { "value": "6", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick" },
@@ -48,6 +51,7 @@
       "title": "Work like a professional",
       "links": [
         { "label": "Reality Check", "href": "/reality" },
+        { "label": "Become Indispensable", "href": "/indispensable" },
         { "label": "English at Work", "href": "/english" },
         { "label": "Conduct & Integrity", "href": "/conduct" },
         { "label": "Career Simulator", "href": "/simulator" }
@@ -58,6 +62,8 @@
       "links": [
         { "label": "Find Work", "href": "/apply" },
         { "label": "Own Your Clients", "href": "/clients" },
+        { "label": "Salary Guide", "href": "/salary" },
+        { "label": "Client Markets", "href": "/markets" },
         { "label": "Tracker", "href": "/tracker" },
         { "label": "30-Day Plan", "href": "/plan" },
         { "label": "Niches", "href": "/niches" },

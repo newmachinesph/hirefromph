@@ -129,7 +129,7 @@ export default function Page() {
           <SectionHeading
             kicker="Before you hit apply"
             title="Research the client before you apply"
-            lead="A generic application gets ignored. A specific one — that names their actual problem — gets a reply."
+            lead="A generic application gets ignored. A specific one, that names their actual problem, gets a reply."
           />
         </Reveal>
         <ol className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -153,13 +153,13 @@ export default function Page() {
         </ol>
       </section>
 
-      {/* THE DIRECTORY — REFRAMED AS STUDY MATERIAL */}
+      {/* THE DIRECTORY, REFRAMED AS STUDY MATERIAL */}
       <section className="container-x pb-10">
         <Reveal>
           <SectionHeading
             kicker="Study material, not a shortcut"
-            title="The directory below — study it, don't just click it"
-            lead="These are real, working places Filipino online professionals get hired. Study the pattern across all of them — who they are, what they need, how they're structured — then use the method above to add your own. This list is a seed, not a substitute for knowing how to find work."
+            title="The directory below, study it, don't just click it"
+            lead="These are real, working places Filipino online professionals get hired. Study the pattern across all of them, who they are, what they need, how they're structured, then use the method above to add your own. This list is a seed, not a substitute for knowing how to find work."
           />
         </Reveal>
       </section>
@@ -205,7 +205,7 @@ export default function Page() {
                 Six habits that make you resourceful, forever
               </h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                FIND and VET — the two methods behind this page — are two of
+                FIND and VET, the two methods behind this page, are two of
                 six. See all of them.
               </p>
               <div className="mt-5">
@@ -220,8 +220,7 @@ export default function Page() {
                 The full Get Hired playbook
               </h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                Assets, outreach, tracking, and closing the offer —
-                systematically, not randomly.
+                Assets, outreach, tracking, and closing the offer, systematically, not randomly.
               </p>
               <div className="mt-5">
                 <ButtonLink href="/get-hired">Go to Get Hired</ButtonLink>
