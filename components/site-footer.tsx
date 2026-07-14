@@ -17,6 +17,7 @@ const groups = [
     title: "Learn to build",
     links: [
       { label: "The Method", href: "/method" },
+      { label: "Micro-Tasks", href: "/tasks" },
       { label: "Build Labs", href: "/build" },
       { label: "AI Leverage", href: "/prompts" },
       { label: "Learn Any Tool", href: "/tools" },
