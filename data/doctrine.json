@@ -1,0 +1,174 @@
+{
+  "kicker": "The method",
+  "title": "We don't give you the file. We teach you to build it.",
+  "creed": "A file solves today. A method solves every tomorrow. Everything on this platform is designed to make you resourceful — so that one day you don't need this platform at all.",
+  "promise": "You will not find a downloadable resume here. You will find how a resume actually works, why each line exists, how to judge a good one, and a workshop that walks you through writing your own. What you build, you own — and you can rebuild it for any role, any client, forever.",
+  "whyItMatters": "A downloaded template makes you identical to 10,000 other applicants and helpless the moment the job is slightly different. The professional who understands *why* the document is shaped that way can produce one for any situation, in any tool, from a blank page. That person never runs out of options. That is the entire point.",
+  "principles": [
+    {
+      "n": 1,
+      "title": "Never ask for the file. Ask for the method.",
+      "desc": "A file is a fish. A method is a net. Anyone who only hands you files keeps you dependent on them — usually so they can sell you the next one.",
+      "icon": "key-round"
+    },
+    {
+      "n": 2,
+      "title": "If you can't rebuild it, you don't own it.",
+      "desc": "The test of understanding is a blank page. If your resume disappeared tonight, could you rebuild it tomorrow — better? If not, you never had a resume, you had a download.",
+      "icon": "pencil-ruler"
+    },
+    {
+      "n": 3,
+      "title": "Copy the thinking, not the artifact.",
+      "desc": "Study five real examples. Find what they all share — that's the skeleton. Find what differs — that's the judgment. Build from the rules you inferred, not from someone else's copy.",
+      "icon": "brain"
+    },
+    {
+      "n": 4,
+      "title": "The answer is findable. The skill is knowing where to look and what to trust.",
+      "desc": "Almost everything you need is public and free. Resourcefulness is not knowing the answer — it's reliably finding it, and being able to tell a good source from a confident one.",
+      "icon": "search"
+    },
+    {
+      "n": 5,
+      "title": "Do it by hand once before you automate it.",
+      "desc": "You cannot automate a process you don't understand. Manual first, so you know what 'correct' looks like. Then let the machine do the boring part.",
+      "icon": "workflow"
+    },
+    {
+      "n": 6,
+      "title": "Being stuck is a step, not a wall.",
+      "desc": "Stuck is the normal state of every professional. The difference is that a professional has a procedure for it — and doesn't wait to be rescued.",
+      "icon": "life-buoy"
+    }
+  ],
+  "methods": [
+    {
+      "id": "find",
+      "name": "FIND",
+      "tagline": "How to find any answer",
+      "icon": "search",
+      "accent": "coral",
+      "summary": "Most people search like a customer. Professionals search like an operator.",
+      "steps": [
+        { "title": "Go to the primary source first", "desc": "The official docs, the actual job post, the company's own site. Not a blog summarizing it, not a reaction video. Primary sources are more accurate and usually faster." },
+        { "title": "Search like an operator", "desc": "Use exact phrases in quotes. Narrow to a site (site:linkedin.com), a file type (filetype:pdf), a date range. Subtract noise with a minus sign. A precise query beats an hour of scrolling." },
+        { "title": "Triangulate before you trust", "desc": "Three independent sources agreeing beats one confident source. If only one place says it, treat it as a rumour." },
+        { "title": "Check recency and incentive", "desc": "Ask two questions of everything you read: When was this true? And who profits if I believe it?" }
+      ],
+      "drill": "Pick something you don't know — a tool, a rate, a process. Find a trustworthy answer in under 10 minutes using only primary sources. Write down the query that worked."
+    },
+    {
+      "id": "deconstruct",
+      "name": "DECONSTRUCT",
+      "tagline": "How to build something you've never built",
+      "icon": "scan-search",
+      "accent": "indigo",
+      "summary": "You never need a template. You need five examples and the ability to see the pattern.",
+      "steps": [
+        { "title": "Collect five real examples", "desc": "Real ones, made by professionals, for the real situation. Not five templates — five artifacts that actually worked." },
+        { "title": "Extract the skeleton", "desc": "List what every single example contains. That common structure is not a style choice — it's the function. That's your skeleton." },
+        { "title": "Name the variables", "desc": "Note what changes between examples. Those differences are the judgment calls you'll have to make. Understand why each one was made." },
+        { "title": "Write the rules", "desc": "Turn what you saw into explicit rules: 'every bullet contains a measurable result', 'the summary names the target role'. Now you have a method, not a copy." },
+        { "title": "Build from the rules", "desc": "Blank page. Apply your rules. What comes out is yours — and it fits your situation, which no template ever could." }
+      ],
+      "drill": "Take any deliverable you've never made. Find five real ones. Produce a written list of rules. Build yours from the rules alone, with the examples closed."
+    },
+    {
+      "id": "learn",
+      "name": "LEARN",
+      "tagline": "How to teach yourself any skill, fast",
+      "icon": "graduation-cap",
+      "accent": "emerald",
+      "summary": "Courses are optional. The ability to learn without one is not.",
+      "steps": [
+        { "title": "Define the outcome, not the topic", "desc": "Not 'learn QuickBooks'. Instead: 'reconcile a month of transactions for a real business without help'. An outcome tells you when you're done." },
+        { "title": "Find the 20% that does 80% of the job", "desc": "Every tool has a handful of functions used daily and hundreds used never. Look at real job posts and real workflows to find which is which. Learn those first." },
+        { "title": "Build a real artifact immediately", "desc": "Don't watch six hours of tutorial. Watch twenty minutes, then produce something real and flawed. The flaws tell you exactly what to learn next." },
+        { "title": "Get feedback that stings a little", "desc": "Show it to someone who'll be honest, or have AI critique it against the rules you wrote. Comfortable feedback teaches nothing." },
+        { "title": "Teach it back", "desc": "Explain it to another beginner, or write the SOP. If you can't explain it simply, you have a gap — and now you know exactly where." }
+      ],
+      "drill": "Pick one tool from your niche. In 48 hours, produce one real artifact with it and write a one-page SOP teaching someone else to do the same."
+    },
+    {
+      "id": "vet",
+      "name": "VET",
+      "tagline": "How to judge information, tools, and opportunities",
+      "icon": "shield-check",
+      "accent": "amber",
+      "summary": "The internet is full of confident people who are wrong, and generous people who are selling. Learn to tell.",
+      "steps": [
+        { "title": "Who benefits if I believe this?", "desc": "Follow the incentive. A course seller telling you that you need a course is not evidence." },
+        { "title": "Is this evidence, or is this vibes?", "desc": "Numbers, sources, and dates are evidence. Confidence, screenshots, and lifestyle are not." },
+        { "title": "Is it still true?", "desc": "Platform rules, rates, and tools change yearly. A 2019 answer about 2026 hiring is a guess wearing a suit." },
+        { "title": "Run the red-flag check", "desc": "Upfront fees, guaranteed income, secrecy, urgency, and vagueness about the actual work are the five signals of a scam or a bad client. Any one of them is a stop." }
+      ],
+      "drill": "Take any opportunity or course you're considering. Run it through the four questions in writing. If you can't produce evidence for it, don't act on it."
+    },
+    {
+      "id": "ask",
+      "name": "ASK",
+      "tagline": "How to ask a question that actually gets answered",
+      "icon": "message-square-quote",
+      "accent": "indigo",
+      "summary": "A well-formed question gets a professional's help. A lazy one gets ignored — everywhere, forever.",
+      "steps": [
+        { "title": "Show what you're trying to do", "desc": "State the actual goal, not the symptom. 'I'm trying to reconcile March' beats 'it's not working'." },
+        { "title": "Show what you already tried", "desc": "This proves you respect the other person's time, and it eliminates the first five things they'd suggest." },
+        { "title": "Show what happened, exactly", "desc": "The literal error, the literal reply, the literal number. Not your paraphrase of it." },
+        { "title": "Ask for the method, not the file", "desc": "'Can you send me the file' makes you a beggar. 'How would you approach this' makes you a colleague — and teaches you something you keep." }
+      ],
+      "drill": "Rewrite the last question you asked anyone into this four-part form. Notice how often you can now answer it yourself."
+    },
+    {
+      "id": "unstick",
+      "name": "UNSTICK",
+      "tagline": "How to get yourself moving again",
+      "icon": "life-buoy",
+      "accent": "coral",
+      "summary": "Every professional is stuck most of the day. They just have a procedure.",
+      "steps": [
+        { "title": "Re-read the actual requirement", "desc": "A surprising share of 'stuck' is solving the wrong problem. Read what was actually asked, word for word." },
+        { "title": "Shrink it to the smallest failing piece", "desc": "Cut the problem in half until you find the exact point where it breaks. Vague problems are unsolvable; small ones are trivial." },
+        { "title": "Change one thing at a time", "desc": "Change two and you learn nothing from the result. Slow is fast." },
+        { "title": "Explain it out loud", "desc": "Say the problem aloud to a wall, a friend, or an AI. The act of forming the sentence solves it more often than you'd believe." },
+        { "title": "Time-box, then ask well", "desc": "Give yourself a hard limit — say 45 minutes. If you're still stuck, stop grinding and ask, using the ASK method. Grinding past the limit is ego, not work." }
+      ],
+      "drill": "Next time you're stuck, run the five steps in order and write down which one freed you. Within a month you'll know your own failure pattern."
+    }
+  ],
+  "antiPatterns": {
+    "title": "Spoon-fed habits to unlearn",
+    "intro": "These feel like progress. None of them are.",
+    "items": [
+      { "bad": "Asking for the file", "good": "Asking how it's built — then building it", "why": "The file expires. The method compounds." },
+      { "bad": "Collecting resources", "good": "Producing one real artifact", "why": "A folder of 400 saved links has taught you nothing. One finished thing has." },
+      { "bad": "Copying without understanding", "good": "Extracting the rule, then writing your own", "why": "You cannot adapt what you don't understand, and the job is always slightly different." },
+      { "bad": "Waiting to be taught", "good": "Finding the primary source yourself", "why": "Nobody is coming. This is the good news — it means you don't have to wait." },
+      { "bad": "Watching tutorials endlessly", "good": "20 minutes of input, then build something broken", "why": "Passive input feels like learning and isn't. The broken thing teaches you." },
+      { "bad": "Buying the course to feel safe", "good": "Running the VET checklist first", "why": "Discomfort is not a signal to spend money. It's a signal to start." }
+    ]
+  },
+  "selfAudit": {
+    "title": "Resourcefulness self-audit",
+    "intro": "Ten honest answers. No score is a verdict — it's a starting point.",
+    "statements": [
+      "When I don't know something, I go to the primary source before I ask a person.",
+      "I can find a trustworthy answer to most questions in under 15 minutes.",
+      "I have built at least one real artifact from a blank page, not a template.",
+      "I can explain why each section of my resume exists.",
+      "When I'm stuck, I have a procedure — I don't just feel bad and stall.",
+      "I ask questions that include what I tried and what happened.",
+      "I check who benefits before I believe a claim about money or careers.",
+      "I would rather be given a method than a finished file.",
+      "I have taught something I learned to someone else.",
+      "If everything I downloaded disappeared, I could rebuild it."
+    ],
+    "levels": [
+      { "min": 0, "max": 3, "label": "Dependent", "desc": "You're relying on other people's files and other people's timing. That's a fixable position — and fixing it is the highest-leverage thing you can do. Start with the FIND and DECONSTRUCT methods." },
+      { "min": 4, "max": 6, "label": "Developing", "desc": "You can find things, but you still reach for a template when the page is blank. Push on DECONSTRUCT: build one real artifact from rules alone this week." },
+      { "min": 7, "max": 8, "label": "Resourceful", "desc": "You can get yourself unstuck and produce real work without hand-holding. Now sharpen VET and ASK — they're what separate a good worker from a trusted one." },
+      { "min": 9, "max": 10, "label": "Self-sufficient", "desc": "You don't need this platform, which was always the goal. Go teach someone. Teaching is how you find the gaps you can't see." }
+    ]
+  }
+}

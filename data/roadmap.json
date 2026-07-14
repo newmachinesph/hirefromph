@@ -1,0 +1,14 @@
+{
+  "intro": "One clear line from zero to a career you own. Nine steps, four stages. You never have to guess what's next.",
+  "steps": [
+    { "n": 1, "stage": 1, "title": "Set up & mindset", "desc": "Confirm your equipment, internet, and workspace. Decide this is real." },
+    { "n": 2, "stage": 1, "title": "Learn the foundation", "desc": "Core remote-work skills, tools, and professional etiquette." },
+    { "n": 3, "stage": 2, "title": "Build your assets", "desc": "Resume, portfolio, and profiles that get replies." },
+    { "n": 4, "stage": 2, "title": "Apply everywhere", "desc": "Work the directory. Track every application. Follow up." },
+    { "n": 5, "stage": 2, "title": "Interview & negotiate", "desc": "Prep answers, handle rejection, close the offer." },
+    { "n": 6, "stage": 3, "title": "Ace your first week", "desc": "Onboard like a pro. Your first week is your audition." },
+    { "n": 7, "stage": 3, "title": "Systemize your work", "desc": "SOPs, trackers, and communication that make you reliable." },
+    { "n": 8, "stage": 3, "title": "Become indispensable", "desc": "Anticipate needs. Own outcomes, not tasks." },
+    { "n": 9, "stage": 4, "title": "Specialize & automate", "desc": "Pick a niche, raise your rate, build a long-term career." }
+  ]
+}

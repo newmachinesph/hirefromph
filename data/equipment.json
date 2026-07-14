@@ -1,0 +1,95 @@
+{
+  "intro": "The complete work-from-home setup guide for Filipino online professionals. Check what you have. Plan what to buy. All in ₱.",
+  "creed": "You don't need perfect. You need prepared. Your equipment doesn't define your skill — but being prepared shows your client you're professional.",
+  "categories": [
+    {
+      "id": "laptop",
+      "name": "Laptop / Computer",
+      "icon": "laptop",
+      "essential": true,
+      "note": "Your single most important tool. Aim for 8GB+ RAM and an SSD.",
+      "tiers": [
+        { "tier": "Budget", "item": "Refurbished business laptop (i5, 8GB, SSD)", "price": "₱9,000–₱15,000" },
+        { "tier": "Standard", "item": "New mid-range laptop (i5/Ryzen 5, 8–16GB, SSD)", "price": "₱25,000–₱38,000" },
+        { "tier": "Pro", "item": "16GB+ laptop for design/video/dev work", "price": "₱45,000–₱70,000" }
+      ]
+    },
+    {
+      "id": "internet",
+      "name": "Internet Connection",
+      "icon": "wifi",
+      "essential": true,
+      "note": "Stable matters more than fast. 25 Mbps+ and a backup are ideal.",
+      "tiers": [
+        { "tier": "Backup", "item": "Prepaid pocket WiFi / mobile data as failover", "price": "₱1,000–₱2,000" },
+        { "tier": "Standard", "item": "Fiber plan, 25–50 Mbps", "price": "₱1,300–₱1,700/mo" },
+        { "tier": "Pro", "item": "Fiber 100 Mbps + second ISP backup", "price": "₱2,500–₱3,500/mo" }
+      ]
+    },
+    {
+      "id": "power",
+      "name": "Power Backup",
+      "icon": "battery-charging",
+      "essential": true,
+      "note": "Brownouts happen. A UPS or power station keeps you online mid-call.",
+      "tiers": [
+        { "tier": "Budget", "item": "Basic UPS (650VA) for short outages", "price": "₱2,000–₱3,500" },
+        { "tier": "Standard", "item": "Mini power station (300–500Wh)", "price": "₱8,000–₱15,000" },
+        { "tier": "Pro", "item": "Power station (1000Wh+) for long brownouts", "price": "₱25,000–₱45,000" }
+      ]
+    },
+    {
+      "id": "headset",
+      "name": "Headset",
+      "icon": "headphones",
+      "essential": true,
+      "note": "Clear audio signals professionalism instantly. Get noise-cancelling mic.",
+      "tiers": [
+        { "tier": "Budget", "item": "Wired USB headset with mic", "price": "₱600–₱1,200" },
+        { "tier": "Standard", "item": "Noise-cancelling USB headset", "price": "₱1,800–₱3,500" },
+        { "tier": "Pro", "item": "Premium headset / dedicated USB mic", "price": "₱4,500–₱9,000" }
+      ]
+    },
+    {
+      "id": "webcam",
+      "name": "Webcam",
+      "icon": "camera",
+      "essential": false,
+      "note": "Most laptop cams are fine to start. Upgrade for client-facing roles.",
+      "tiers": [
+        { "tier": "Free", "item": "Built-in laptop camera", "price": "₱0" },
+        { "tier": "Standard", "item": "1080p external webcam", "price": "₱1,200–₱2,500" },
+        { "tier": "Pro", "item": "Webcam + ring light for great lighting", "price": "₱3,000–₱6,000" }
+      ]
+    },
+    {
+      "id": "monitor",
+      "name": "Second Monitor",
+      "icon": "monitor",
+      "essential": false,
+      "note": "A huge productivity boost once you're working. Not needed to start.",
+      "tiers": [
+        { "tier": "Budget", "item": "Used 22–24\" 1080p monitor", "price": "₱2,500–₱4,500" },
+        { "tier": "Standard", "item": "New 24\" IPS monitor", "price": "₱5,500–₱8,000" },
+        { "tier": "Pro", "item": "27\" QHD monitor", "price": "₱9,000–₱16,000" }
+      ]
+    },
+    {
+      "id": "furniture",
+      "name": "Ergonomic Setup",
+      "icon": "armchair",
+      "essential": false,
+      "note": "You'll sit here for years. Protect your back and wrists.",
+      "tiers": [
+        { "tier": "Budget", "item": "Laptop riser + cushion + external keyboard", "price": "₱1,500–₱3,000" },
+        { "tier": "Standard", "item": "Ergonomic chair", "price": "₱4,000–₱9,000" },
+        { "tier": "Pro", "item": "Ergonomic chair + adjustable desk", "price": "₱15,000–₱30,000" }
+      ]
+    }
+  ],
+  "builds": [
+    { "name": "The Starter", "total": "≈ ₱15,000", "desc": "Refurb laptop, wired headset, backup data, basic UPS. Enough to get hired.", "for": "Absolute beginners on a tight budget." },
+    { "name": "The Standard", "total": "≈ ₱45,000", "desc": "New mid laptop, fiber, NC headset, 1080p webcam, mini power station.", "for": "Serious about landing and keeping clients." },
+    { "name": "The Pro", "total": "≈ ₱110,000", "desc": "16GB laptop, dual monitor, premium audio, big power station, ergo chair.", "for": "Specialists in design, video, dev, or automation." }
+  ]
+}

@@ -1,0 +1,233 @@
+"use client";
+
+import { useId, useMemo, useState } from "react";
+import { AlertTriangle, Sparkles } from "lucide-react";
+import frameworks from "@/data/frameworks.json";
+import { Icon } from "@/components/icon";
+import { cn } from "@/lib/utils";
+
+type Criterion = (typeof frameworks.niche.criteria)[number];
+
+const SCORE_VALUES = [1, 2, 3, 4, 5] as const;
+const DEFAULT_SCORE = 3;
+
+const ICON_TONE: Record<number, string> = {
+  0: "bg-coral-tint text-coral-deep",
+  1: "bg-emerald-tint text-emerald",
+  2: "bg-[#fdf3d9] text-[#9a6b00]",
+  3: "bg-[#e9e9fd] text-indigo",
+};
+
+const VERDICT_TIERS = [
+  {
+    min: 80,
+    label: "Strong niche — go deep",
+    tone: "emerald" as const,
+    desc: "It clears the bar across the board. The main risk now is indecision, not the niche itself.",
+  },
+  {
+    min: 60,
+    label: "Workable — mind the weak spots",
+    tone: "amber" as const,
+    desc: "Solid enough to start. Look at whatever you scored low and have a plan for it before you commit fully.",
+  },
+  {
+    min: 40,
+    label: "Risky — proceed with eyes open",
+    tone: "coral" as const,
+    desc: "More than one fundamental is shaky. Not a hard no, but don't bet your first 90 days on this alone.",
+  },
+  {
+    min: 0,
+    label: "Reconsider this one",
+    tone: "coral" as const,
+    desc: "The fundamentals aren't there yet. Re-run this on a different niche before you invest real time.",
+  },
+];
+
+function initScores(): Record<string, number> {
+  const init: Record<string, number> = {};
+  for (const c of frameworks.niche.criteria) init[c.id] = DEFAULT_SCORE;
+  return init;
+}
+
+export function NicheScorer() {
+  const uid = useId();
+  const [nicheName, setNicheName] = useState("");
+  const [scores, setScores] = useState<Record<string, number>>(initScores);
+
+  const criteria = frameworks.niche.criteria as Criterion[];
+
+  const { pct, tier, weakSpots } = useMemo(() => {
+    const totalWeight = criteria.reduce((sum, c) => sum + c.weight, 0);
+    const weightedSum = criteria.reduce(
+      (sum, c) => sum + (scores[c.id] ?? DEFAULT_SCORE) * c.weight,
+      0,
+    );
+    const weightedAvg = totalWeight > 0 ? weightedSum / totalWeight : 0;
+    const pctValue = Math.round((weightedAvg / 5) * 100);
+    const tierValue =
+      VERDICT_TIERS.find((t) => pctValue >= t.min) ??
+      VERDICT_TIERS[VERDICT_TIERS.length - 1];
+    const weak = criteria.filter((c) => (scores[c.id] ?? DEFAULT_SCORE) <= 2);
+    return { pct: pctValue, tier: tierValue, weakSpots: weak };
+  }, [criteria, scores]);
+
+  function setScore(id: string, value: number) {
+    setScores((prev) => ({ ...prev, [id]: value }));
+  }
+
+  const tierRing: Record<string, string> = {
+    emerald: "var(--emerald)",
+    amber: "var(--amber)",
+    coral: "var(--coral)",
+  };
+
+  return (
+    <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-8">
+      <div className="flex flex-col gap-1">
+        <label htmlFor={`${uid}-niche`} className="kicker">
+          What niche are you evaluating?
+        </label>
+        <input
+          id={`${uid}-niche`}
+          type="text"
+          value={nicheName}
+          onChange={(e) => setNicheName(e.target.value)}
+          placeholder="e.g. AI prompt QA, pet content editing, whatever you're actually considering"
+          className="mt-2 w-full rounded-xl border border-line-strong bg-paper px-4 py-3 text-sm text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink"
+        />
+      </div>
+
+      <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_300px] lg:items-start">
+        <div className="grid gap-4">
+          {criteria.map((c, idx) => {
+            const groupId = `${uid}-${c.id}`;
+            const value = scores[c.id] ?? DEFAULT_SCORE;
+            const low = value <= 2;
+            const labelId = `${groupId}-label`;
+            return (
+              <div
+                key={c.id}
+                role="group"
+                aria-labelledby={labelId}
+                className={cn(
+                  "rounded-2xl border p-4 transition-colors",
+                  low ? "border-coral/40 bg-coral-tint/40" : "border-line bg-paper",
+                )}
+              >
+                <div className="flex items-start gap-3">
+                  <span
+                    className={cn(
+                      "grid h-9 w-9 shrink-0 place-items-center rounded-lg",
+                      ICON_TONE[idx % 4],
+                    )}
+                  >
+                    <Icon name={c.icon} size={16} />
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                      <h3
+                        id={labelId}
+                        className="font-display text-base leading-tight text-ink"
+                      >
+                        {c.name}
+                      </h3>
+                      <span className="text-[11px] font-medium uppercase tracking-wide text-ink-faint">
+                        Weight ×{c.weight}
+                      </span>
+                    </div>
+                    <p className="mt-1 text-sm leading-snug text-ink-soft">
+                      {c.question}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-3 flex items-center gap-1.5 pl-12">
+                  {SCORE_VALUES.map((n) => {
+                    const id = `${groupId}-${n}`;
+                    return (
+                      <div key={n}>
+                        <input
+                          type="radio"
+                          id={id}
+                          name={groupId}
+                          checked={value === n}
+                          onChange={() => setScore(c.id, n)}
+                          className="peer sr-only"
+                        />
+                        <label
+                          htmlFor={id}
+                          className="grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-line-strong text-sm font-semibold text-ink-soft transition-colors hover:border-ink hover:text-ink peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper-2"
+                        >
+                          {n}
+                        </label>
+                      </div>
+                    );
+                  })}
+                  <span className="ml-2 text-xs text-ink-faint">
+                    1 = weak · 5 = strong
+                  </span>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <aside className="flex flex-col gap-6 rounded-2xl border border-line bg-paper p-6 lg:sticky lg:top-24">
+          <div className="flex flex-col items-center text-center" aria-live="polite">
+            <div
+              role="img"
+              aria-label={`${pct} percent score`}
+              className="grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
+              style={{
+                background: `conic-gradient(${tierRing[tier.tone]} ${pct}%, var(--line) ${pct}% 100%)`,
+              }}
+            >
+              <div className="grid h-[72px] w-[72px] place-items-center rounded-full bg-paper">
+                <span className="font-display text-xl text-ink">{pct}%</span>
+              </div>
+            </div>
+            <p className="mt-4 font-display text-lg leading-snug text-balance text-ink">
+              {nicheName.trim() ? nicheName.trim() : "This niche"}
+            </p>
+            <p
+              className={cn(
+                "mt-1 text-sm font-semibold",
+                tier.tone === "emerald" && "text-emerald",
+                tier.tone === "amber" && "text-[#9a6b00]",
+                tier.tone === "coral" && "text-coral-deep",
+              )}
+            >
+              {tier.label}
+            </p>
+            <p className="mt-2 text-xs leading-relaxed text-ink-faint">{tier.desc}</p>
+          </div>
+
+          <div className="border-t border-line pt-5">
+            {weakSpots.length > 0 ? (
+              <>
+                <p className="kicker flex items-center gap-1.5 text-coral-deep">
+                  <AlertTriangle size={13} /> Watch out for
+                </p>
+                <ul className="mt-3 flex flex-col gap-2">
+                  {weakSpots.map((c) => (
+                    <li key={c.id} className="text-xs leading-relaxed text-ink-soft">
+                      <span className="font-semibold text-ink">{c.name}</span> —{" "}
+                      {c.why}
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="flex items-center gap-1.5 text-xs leading-relaxed text-ink-soft">
+                <Sparkles size={13} className="text-emerald" /> No weak spots scored
+                below a 3 — nothing glaring to flag.
+              </p>
+            )}
+          </div>
+        </aside>
+      </div>
+    </div>
+  );
+}
