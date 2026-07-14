@@ -19,7 +19,7 @@ const difficultyTone: Record<string, "emerald" | "amber" | "coral"> = {
   Advanced: "coral",
 };
 
-// Reused from components/path-chooser.tsx — same accent system, same look.
+// Reused from components/path-chooser.tsx, same accent system, same look.
 const accentRing: Record<string, string> = {
   coral: "hover:border-coral/60 data-[active=true]:border-coral data-[active=true]:bg-coral-tint",
   emerald: "hover:border-emerald/60 data-[active=true]:border-emerald data-[active=true]:bg-emerald-tint",
@@ -261,7 +261,7 @@ function DetailCard({
       </div>
 
       <div className="mt-8">
-        <h4 className="kicker">Where to learn it — free</h4>
+        <h4 className="kicker">Where to learn it, free</h4>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {track.learn.map((item) => (
             <li

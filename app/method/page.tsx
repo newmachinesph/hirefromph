@@ -9,9 +9,9 @@ import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "The Method — we teach you to build it",
+  title: "The Method, we teach you to build it",
   description:
-    "We don't give you the file. We teach you to build it. Six principles, six methods, and a self-audit — the resourcefulness curriculum behind everything on this platform.",
+    "We don't give you the file. We teach you to build it. Six principles, six methods, and a self-audit, the resourcefulness curriculum behind everything on this platform.",
 };
 
 const accentText: Record<string, string> = {
@@ -140,7 +140,7 @@ export default function MethodPage() {
             <SectionHeading
               kicker="The curriculum"
               title="Six methods. Master these and you're never stuck."
-              lead="This is the actual skill this platform teaches — not a niche, not a tool, but how to figure anything out. Read each one, then run the drill."
+              lead="This is the actual skill this platform teaches, not a niche, not a tool, but how to figure anything out. Read each one, then run the drill."
             />
           </Reveal>
 

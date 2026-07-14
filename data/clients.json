@@ -1,26 +1,26 @@
 {
   "hero": {
     "kicker": "Independent contractor · not an assistant · not an employee",
-    "line1": "Be a business of one —",
+    "line1": "Be a business of one,",
     "line2": "and own your clients.",
-    "intro": "There are two ways to build an online income. You can be a remote employee inside someone else's company, or you can be an independent contractor — a business of one who chooses the work, sets the price, and owns the relationship. DevUp is built for the second road. It is harder at the start and better at the top, and the single decision that shapes it most is who your clients belong to: an agency, or you.",
-    "creed": "An employee is given clients. A contractor earns them. The earning is the harder path — and the only one where the upside is yours to keep."
+    "intro": "There are two ways to build an online income. You can be a remote employee inside someone else's company, or you can be an independent contractor: a business of one who chooses the work, sets the price, and owns the relationship. DevUp is built for the second road. It is harder at the start and better at the top, and the one decision that shapes it most is who your clients belong to, an agency or you.",
+    "creed": "An employee is given clients. A contractor earns them. The earning is the harder path, and the only one where the upside is yours to keep."
   },
 
   "mindset": {
     "kicker": "The mindset shift",
     "title": "You are not looking for a boss. You are looking for customers.",
-    "lead": "This is the reframe that changes everything about how you apply, price, and behave. An employee optimises to be chosen and kept. A contractor optimises to deliver an outcome and be rehired. Same person, completely different posture — and clients can feel which one you are in the first message.",
+    "lead": "This is the reframe that changes how you apply, price, and behave. An employee tries to be chosen and kept. A contractor tries to deliver an outcome and be rehired. Same person, completely different posture, and clients can feel which one you are in the first message.",
     "rows": [
-      { "dimension": "Who finds the work", "employee": "The company hands it to you.", "contractor": "You source it — and that skill never leaves you." },
-      { "dimension": "Who sets the price", "employee": "A salary band you negotiate once.", "contractor": "You do, per outcome, and you can raise it." },
-      { "dimension": "Who owns the upside", "employee": "The company keeps the margin on your work.", "contractor": "You keep it — and compound it as you specialise." },
-      { "dimension": "Who carries the risk", "employee": "The company absorbs the dry spells.", "contractor": "You do — so you build a runway and a pipeline." },
+      { "dimension": "Who finds the work", "employee": "The company hands it to you.", "contractor": "You source it, and that skill never leaves you." },
+      { "dimension": "Who sets the price", "employee": "A salary you negotiate once.", "contractor": "You do, per outcome, and you can raise it." },
+      { "dimension": "Who owns the upside", "employee": "The company keeps the margin on your work.", "contractor": "You keep it, and grow it as you specialize." },
+      { "dimension": "Who carries the risk", "employee": "The company absorbs the dry spells.", "contractor": "You do, so you build a runway and a pipeline." },
       { "dimension": "What you're really selling", "employee": "Your time, forty hours at a stretch.", "contractor": "A result. Once you sell results, hours stop being the ceiling." }
     ],
-    "note": "The demand for this is not a fad. 77% of business leaders told Upwork they need fractional or independent talent — companies increasingly want a specific capability for a specific window, not another full-time hire. That is a market built for a business of one.",
+    "note": "The demand for this is not a fad. 77% of business leaders told Upwork they need fractional or independent talent. Companies increasingly want a specific skill for a specific window, not another full-time hire. That is a market built for a business of one.",
     "source": {
-      "label": "Upwork — In-Demand Skills 2026",
+      "label": "Upwork, In-Demand Skills 2026",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
     }
   },
@@ -28,62 +28,95 @@
   "roads": {
     "kicker": "The fork in the road",
     "title": "Agency or direct? Both are valid. Know what each one costs.",
-    "lead": "An agency places you with clients and takes a cut. Direct means the client is yours, with no one in between. Neither is the \"right\" answer — plenty of professionals start with an agency for the pipeline and mentorship, then graduate to direct once they can sell for themselves. What matters is choosing with your eyes open, not by accident.",
+    "lead": "An agency places you with clients and takes a cut. Direct means the client is yours, with no one in between. Neither is the right answer. Plenty of professionals start with an agency for the pipeline, then move to direct once they can sell for themselves. What matters is choosing with your eyes open, not by accident.",
     "agency": {
       "title": "Working through an agency",
       "blurb": "A staffing firm or agency finds the client, handles the sale, and places you. You do the work; they manage the relationship and take a margin.",
-      "pros": [],
-      "cons": []
+      "pros": [
+        "A pipeline without the selling. The agency finds and closes clients, so you can start earning while you are still learning to sell yourself.",
+        "They handle the hard parts. Contracts, invoicing, collections, and disputes are their job, not yours.",
+        "A softer landing for beginners: structure, onboarding, and sometimes the mentorship a solo freelancer has to build alone.",
+        "Steadier income. A good agency keeps you booked, which smooths the feast-or-famine that direct work can bring early on.",
+        "A buffer against bad clients. If one pays late, the agency usually still pays you on schedule."
+      ],
+      "cons": [
+        "They take a margin. The client pays more than you receive, and that gap is the agency's cut. It can be large.",
+        "You rarely own the relationship. Leave, and the client almost always stays with the agency. You cannot take them with you.",
+        "Less control over who you work with, the scope, and the rate. You mostly take what is assigned.",
+        "Possible exclusivity or non-compete terms that limit building your own direct clients on the side. Read the contract.",
+        "Your ceiling is their rate card. Raising your price means convincing the agency, not the client."
+      ]
     },
     "direct": {
       "title": "Working with direct clients",
-      "blurb": "You find the client yourself and contract with them directly. No middleman, no margin taken — and no one else doing the parts an agency used to do for you.",
-      "pros": [],
-      "cons": []
+      "blurb": "You find the client yourself and contract with them directly. No middleman, no margin taken, and no one else doing the parts an agency used to do for you.",
+      "pros": [
+        "The whole rate is yours. No middleman margin, so the same client budget goes much further for you.",
+        "You own the relationship and the portfolio. Referrals, testimonials, and repeat work build into an asset nobody can revoke.",
+        "Full control: who you take on, the scope, the price, and how you work.",
+        "You can raise your rate directly with the client as you prove value, on your own timeline.",
+        "Every deal makes you better at sales, a skill that keeps paying for the rest of your career."
+      ],
+      "cons": [
+        "You do your own selling. Finding and closing clients is now your job, and it never fully stops.",
+        "You run the business side: contracts, invoicing, chasing payments, and taxes.",
+        "Income can be lumpy, especially early. You carry the dry spells yourself, so you need a runway and a pipeline.",
+        "No safety net if a client pays late or disappears. Your contract and your systems are the only protection.",
+        "It is simply more to hold at once. The freedom and the responsibility are the same coin."
+      ]
     },
-    "verdict": "A useful rule of thumb: an agency is a great way to start and to stay busy; direct is where the rate and the ownership live. Many pros run both at once — an agency retainer for the floor, direct clients for the ceiling. Choose deliberately, and revisit the choice as your ability to sell for yourself grows."
+    "verdict": "A useful rule of thumb: an agency is a great way to start and to stay busy. Direct is where the rate and the ownership live. Many pros run both at once, an agency retainer for the floor and direct clients for the ceiling. Choose on purpose, and revisit the choice as your ability to sell for yourself grows."
   },
 
   "getDirect": {
     "kicker": "How to land direct clients",
-    "title": "Direct clients don't fall from the sky. They're built, step by step.",
-    "lead": "This is the part that scares people off direct work — and it's a learnable process, not a personality trait. You do not need to be an extrovert or a salesperson. You need a clear position, real proof, and a repeatable way to start conversations. Here is the sequence.",
-    "steps": [],
-    "note": "None of this requires cold charm or a big following. It requires a specific promise, evidence you can point to, and the discipline to keep the pipeline full before you need it. DevUp has a workshop for each piece — the links above take you there."
+    "title": "Direct clients don't fall from the sky. They are built, step by step.",
+    "lead": "This is the part that scares people off direct work, and it is a learnable process, not a personality trait. You do not need to be an extrovert or a salesperson. You need a clear position, real proof, and a repeatable way to start conversations. Here is the sequence.",
+    "steps": [
+      { "title": "Get specific about who you help", "how": "Pick a narrow lane and a clear outcome. I keep Shopify stores' books clean, not I do admin. Specific is easier to refer, easier to trust, and easier to price.", "crossref": { "href": "/niches", "label": "Pick your lane with the rubric" } },
+      { "title": "Build proof before you pitch", "how": "Ship two or three real, visible pieces of work, even self-made or for a cause you like. Nobody hires a claim. They hire evidence they can see.", "crossref": { "href": "/tasks", "label": "Build real proof" } },
+      { "title": "Turn your warm network on first", "how": "Tell everyone you know, former colleagues, batchmates, past clients, exactly what you now do and who you help. Your first direct clients almost always come from people who already trust you.", "crossref": null },
+      { "title": "Do focused outbound", "how": "Make a short list of businesses that fit your lane and reach out with one specific, useful observation about their work, not a generic I am available. A good list beats a big one.", "crossref": { "href": "/apply", "label": "Source & vet clients yourself" } },
+      { "title": "Let content pull people in", "how": "Post what you know where your clients look, a tip, a teardown, a before-and-after. Over time it makes clients come to you, already half-sold. Slow to start, compounding forever.", "crossref": null },
+      { "title": "Run the discovery call like a diagnosis", "how": "Ask more than you pitch. Understand the client's real problem and what a good outcome is worth to them before you ever talk price. You are prescribing, not selling.", "crossref": null },
+      { "title": "Propose the outcome, not the hours", "how": "Send a short proposal that restates their goal, your plan, the deliverables, and a clear price. Sell the result you will produce, not the time you will spend.", "crossref": { "href": "/build", "label": "Write it from a blank page" } },
+      { "title": "Convert one-off wins into retainers", "how": "After you deliver, propose the ongoing version, the monthly relationship that turns a project into predictable income. Retainers are how direct work becomes stable.", "crossref": { "href": "/tracker", "label": "Run a pipeline" } }
+    ],
+    "note": "None of this needs cold charm or a big following. It needs a specific promise, evidence you can point to, and the discipline to keep the pipeline full before you need it. DevUp has a workshop for each piece. The links take you there."
   },
 
   "protect": {
     "kicker": "Protect yourself like a business",
     "title": "No agency is standing behind you now. Your contract is.",
-    "lead": "The freedom of direct work comes with the responsibility an employer used to carry. In the Philippines there is still no dedicated law that will collect an unpaid invoice from a foreign client for you — which is exactly why the habits below are not optional paperwork. They are the only protection that actually holds.",
+    "lead": "The freedom of direct work comes with the responsibility an employer used to carry. In the Philippines there is still no dedicated law that will collect an unpaid invoice from a foreign client for you, which is exactly why the habits below are not optional paperwork. They are the only protection that actually holds.",
     "items": [
       {
         "title": "There is still no freelancer protection law",
-        "desc": "The Freelance Workers Protection Act — written contracts, upfront payment, penalties for non-payment — passed the House in 2023 and then stalled. It is not enacted. So you cannot lean on a statute; you have to build the protection into every deal yourself.",
+        "desc": "The Freelance Workers Protection Act, written contracts, upfront payment, penalties for non-payment, passed the House in 2023 and then stalled. It is not yet law. So you cannot lean on a statute. You have to build the protection into every deal yourself.",
         "icon": "scale",
         "source": {
-          "label": "BusinessMirror — Bill seeks protection for freelancers, gig workers",
+          "label": "BusinessMirror, Bill seeks protection for freelancers, gig workers",
           "url": "https://businessmirror.com.ph/2026/05/06/bill-seeks-protection-benefits-for-freelancers-gig-workers/"
         }
       },
       {
-        "title": "Contract, scope, and a deposit — every time",
-        "desc": "Written scope so \"done\" is defined, milestones so you're never carrying weeks of unpaid work, and a deposit before you start. Build the habit now while the stakes are small, so it's automatic when they're large.",
+        "title": "Contract, scope, and a deposit, every time",
+        "desc": "Written scope so done is defined, milestones so you are never carrying weeks of unpaid work, and a deposit before you start. Build the habit now while the stakes are small, so it is automatic when they are large.",
         "icon": "file-signature",
         "source": null
       },
       {
         "title": "Register, and invoice like a supplier",
-        "desc": "A registered freelancer in the Philippines can use the 8% flat tax option on gross income up to ₱3M and issue a proper invoice. Being invoice-capable is itself a rate differentiator — it lets a serious client book you as a real supplier, not a favour.",
+        "desc": "A registered freelancer in the Philippines can use the 8% flat tax option on gross income up to ₱3M and issue a proper invoice. Being invoice-ready is itself a rate differentiator, because it lets a serious client book you as a real supplier, not a favor.",
         "icon": "receipt-text",
         "source": {
-          "label": "Taxumo — Taxes for Freelancers in the Philippines",
+          "label": "Taxumo, Taxes for Freelancers in the Philippines",
           "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/"
         }
       },
       {
         "title": "Get paid through channels that protect you",
-        "desc": "Use tracked, professional payment rails and keep the paper trail. Never move work off-platform \"to save the fee\" before trust is earned, and treat any unfunded milestone as unpaid work — because that's what it is.",
+        "desc": "Use tracked, professional payment rails and keep the paper trail. Never move work off-platform to save the fee before trust is earned, and treat any unfunded milestone as unpaid work, because that is what it is.",
         "icon": "shield-check",
         "source": null
       }
@@ -94,13 +127,13 @@
   "closing": {
     "kicker": "The honest bottom line",
     "title": "Own the relationship, and you own the career.",
-    "body": "An agency can hand you a client and take them back just as easily. A skill you can sell yourself — position, proof, a full pipeline — is an asset no one can revoke. Start wherever gets you moving, agency or direct. But build the ability to win a client on your own, because that is the thing that makes you a business instead of a seat someone rents.",
-    "point": "Pick your next move. Each one is a workshop, not a lecture — you leave with something built.",
+    "body": "An agency can hand you a client and take them back just as easily. A skill you can sell yourself, position, proof, a full pipeline, is an asset nobody can revoke. Start wherever gets you moving, agency or direct. But build the ability to win a client on your own, because that is the thing that makes you a business instead of a seat someone rents.",
+    "point": "Pick your next move. Each one is a workshop, not a lecture. You leave with something built.",
     "links": [
-      { "href": "/apply", "label": "Source & vet clients", "desc": "The search operators and red flags for finding real clients yourself — no agency required." },
-      { "href": "/build", "label": "Build the proof", "desc": "A portfolio and case studies written from a blank page, so you have evidence to point to." },
+      { "href": "/apply", "label": "Source & vet clients", "desc": "The search operators and red flags for finding real clients yourself, no agency required." },
+      { "href": "/salary", "label": "Price it right", "desc": "What the work pays, why the guides disagree, and how to set a rate you can defend." },
       { "href": "/tracker", "label": "Run a pipeline", "desc": "A working application and follow-up system. Most direct work is lost to silence, not rejection." },
-      { "href": "/reality", "label": "Price with real data", "desc": "What this work actually pays, why the salary guides disagree, and how to triangulate your rate." }
+      { "href": "/indispensable", "label": "Become sought-after", "desc": "The habits that make a client fight to keep you instead of shopping for someone cheaper." }
     ]
   }
 }

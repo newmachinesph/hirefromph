@@ -15,15 +15,15 @@ export const metadata: Metadata = {
 const schema = [
   {
     part: "Company + Role",
-    why: "Your unique row. Two applications to the same company for different roles are two different rows — never merge them.",
+    why: "Your unique row. Two applications to the same company for different roles are two different rows, never merge them.",
   },
   {
     part: "Status (fixed list)",
-    why: "Applied, Replied, Interview, Offer, Rejected — always picked from a dropdown, never typed free-hand. Free text drifts into ten spellings of \"in progress\" within a week.",
+    why: "Applied, Replied, Interview, Offer, Rejected, always picked from a dropdown, never typed free-hand. Free text drifts into ten spellings of \"in progress\" within a week.",
   },
   {
     part: "Applied on",
-    why: "The date you sent it. On its own this is just a log — history, not a tool.",
+    why: "The date you sent it. On its own this is just a log, history, not a tool.",
   },
   {
     part: "Follow up on",
@@ -31,11 +31,11 @@ const schema = [
   },
   {
     part: "Source",
-    why: "Where you found it — LinkedIn, referral, direct. Once your pipeline gets long, this is what you'll filter by to see what's actually working.",
+    why: "Where you found it, LinkedIn, referral, direct. Once your pipeline gets long, this is what you'll filter by to see what's actually working.",
   },
   {
     part: "Notes",
-    why: "Short and free text on purpose — the contact name, the referral, the one detail you'd forget by next week.",
+    why: "Short and free text on purpose, the contact name, the referral, the one detail you'd forget by next week.",
   },
 ];
 
@@ -74,8 +74,7 @@ export default function TrackerPage() {
         </Reveal>
         <Reveal i={2}>
           <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            The #1 reason people lose an offer isn&rsquo;t a bad resume —
-            it&rsquo;s silence after &ldquo;applied&rdquo;. This tracker runs
+            The #1 reason people lose an offer isn&rsquo;t a bad resume, it&rsquo;s silence after &ldquo;applied&rdquo;. This tracker runs
             your job hunt like an operation: log everything, get nudged the
             moment a follow-up is due, and see honestly whether the problem is
             your volume or your application.
@@ -93,11 +92,11 @@ export default function TrackerPage() {
               </p>
               <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
                 Everywhere else on DevUp we refuse to hand you a finished
-                file — we teach you to build your own. This page is the one
+                file, we teach you to build your own. This page is the one
                 exception, on purpose: your job hunt is a tool for{" "}
                 <em>your</em> life, not a deliverable you&rsquo;d hand a
                 client, and you need it running today, not after a lesson. So
-                you get both — a working tracker right here, and below,
+                you get both, a working tracker right here, and below,
                 exactly how it&rsquo;s built, so you can rebuild it in Google
                 Sheets and build the same kind of tracker for any client.
                 That&rsquo;s also the{" "}
@@ -129,8 +128,8 @@ export default function TrackerPage() {
           <Reveal>
             <SectionHeading
               kicker="How this is built"
-              title="The schema behind this tracker — and why each column exists"
-              lead="Every working tracker — applications, invoices, content calendars — is the same underlying pattern. Study this one, then rebuild it for anything."
+              title="The schema behind this tracker, and why each column exists"
+              lead="Every working tracker, applications, invoices, content calendars, is the same underlying pattern. Study this one, then rebuild it for anything."
             />
           </Reveal>
 
@@ -177,11 +176,11 @@ export default function TrackerPage() {
               Add Data → Data Validation on the Status column with a fixed
               list, add a conditional formatting rule to color any row where
               the days-overdue formula goes negative, and set a recurring
-              reminder to review it — a tracker nobody reviews is worse than
+              reminder to review it, a tracker nobody reviews is worse than
               no tracker, because it creates false confidence.
             </p>
             <p className="mt-4 font-display text-lg leading-snug text-ink text-balance">
-              Now go rebuild this yourself — that&rsquo;s the lab at{" "}
+              Now go rebuild this yourself, that&rsquo;s the lab at{" "}
               <Link href="/build" className="text-coral link-sweep">
                 /build
               </Link>

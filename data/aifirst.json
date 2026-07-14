@@ -3,112 +3,132 @@
     "kicker": "AI-first · every role · 2027",
     "line1": "Every role now",
     "line2": "runs on AI.",
-    "intro": "By 2027 there is no such thing as a non-AI role. The bookkeeper reconciles with AI. The social media manager storyboards with AI. The ops person builds their own tools with AI. The question stopped being \"should I use AI?\" years ago. The only question left is whether you run the AI — deliberately, with judgment — or whether the work quietly gets done without you. This page is about becoming the person who runs it.",
-    "creed": "AI does not replace an online professional. A professional who owns an AI-assisted outcome replaces one who still does it all by hand — and charges more for the privilege."
+    "intro": "By 2027 there is no such thing as a non-AI role. The bookkeeper reconciles with AI. The social media manager plans with AI. The ops person builds their own tools with AI. The question stopped being should I use AI years ago. The only question left is whether you run the AI, on purpose and with judgment, or whether the work quietly gets done without you. This page is about becoming the person who runs it.",
+    "creed": "AI does not replace an online professional. A professional who owns an AI-assisted outcome replaces one who still does it all by hand, and charges more for it."
   },
 
   "shift": {
     "kicker": "Why this page exists",
     "title": "The floor is a prompt away for anyone. The ceiling is not.",
-    "lead": "Anyone with a chatbot can now produce a passable version of a generic deliverable — which is exactly why the generic version stopped being worth much. The pay didn't disappear. It moved. It moved to the people who fold AI into a real craft and ship an outcome a client cannot get from a blank prompt box. These three numbers, all from the same marketplace, tell the whole story.",
+    "lead": "Anyone with a chatbot can now make a passable version of a generic deliverable, which is exactly why the generic version stopped being worth much. The pay did not disappear. It moved. It went to the people who fold AI into a real craft and ship an outcome a client cannot get from a blank prompt box. These three numbers, all from the same marketplace, tell the whole story.",
     "stats": [
       {
         "value": "40%+",
         "label": "more per hour with AI",
-        "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those who don't. Real — but read it with the next section, because the premium lands on craft, not on prompting alone.",
-        "source": { "label": "Upwork — 2025's most in-demand skills", "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills" }
+        "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those who don't. Real, but read it with the next section, because that premium lands on a craft, not on prompting alone.",
+        "source": { "label": "Upwork, 2025's most in-demand skills", "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills" }
       },
       {
         "value": "+109%",
         "label": "AI-skill demand, year on year",
-        "body": "Demand for skills that reference AI more than doubled in a single year on Upwork. This is not a wave you watch — it's one you get into, in one specific lane, now.",
-        "source": { "label": "Upwork — In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
+        "body": "Demand for skills that mention AI more than doubled in a single year on Upwork. This is not a wave you watch. It is one you get into, in one specific lane, now.",
+        "source": { "label": "Upwork, In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
       },
       {
         "value": "+329%",
-        "label": "AI video gen & editing demand, YoY",
-        "body": "The single fastest-growing skill in the whole report. AI didn't kill creative work — it made a person who can direct a model worth far more than one who can only click an editor.",
-        "source": { "label": "Upwork — In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
+        "label": "AI video work, year on year",
+        "body": "The single fastest-growing skill in the whole report. AI did not kill creative work. It made a person who can direct a model worth far more than one who can only click an editor.",
+        "source": { "label": "Upwork, In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
       }
     ],
-    "note": "\"Learn AI\" is not a career. \"Learn a craft, then multiply it with AI\" is. Everything below assumes you are building a craft — see the Reality Check for why that one sentence is the whole game.",
+    "note": "Learn AI is not a career. Learn a craft, then multiply it with AI is. Everything below assumes you are building a craft. See the Reality Check for why that one sentence is the whole game.",
     "crossref": { "href": "/reality", "label": "See the market data behind these numbers" }
   },
 
   "fluency": {
     "kicker": "The operating model · before any tool",
     "title": "Four habits turn AI from a toy into leverage.",
-    "lead": "Tools change every quarter. The way a professional works with any of them does not. These four skills are the difference between someone who pastes AI output and hopes, and someone a client trusts to own the result. Learn these before you learn a single tool below.",
+    "lead": "Tools change every few months. The way a professional works with any of them does not. These four skills are the difference between someone who pastes AI output and hopes, and someone a client trusts to own the result. Learn these before you learn a single tool below.",
     "skills": [
       {
         "letter": "1",
         "name": "Delegation",
         "purpose": "Deciding what to hand to AI, what to keep for yourself, and how to split the work.",
-        "doThis": "Before you prompt, name the one part of this task only a human should own — the judgment call, the client relationship, the final sign-off. Give the rest away on purpose.",
+        "doThis": "Before you prompt, name the one part of this task only a human should own: the judgment call, the client relationship, the final sign-off. Give the rest away on purpose.",
         "icon": "split",
         "accent": "coral"
       },
       {
         "letter": "2",
         "name": "Description",
-        "purpose": "Telling the AI precisely what you want — the skill that used to be called prompting.",
-        "doThis": "Give it a role, your real material, the exact task, and the rubric you'll judge it by. Vague in, generic out — every time. This is what /prompts teaches in full.",
+        "purpose": "Telling the AI exactly what you want. The skill that used to be called prompting.",
+        "doThis": "Give it a role, your real material, the exact task, and the rubric you will judge it by. Vague in, generic out, every time. This is what our AI Leverage page teaches in full.",
         "icon": "pen-line",
         "accent": "indigo"
       },
       {
         "letter": "3",
         "name": "Discernment",
-        "purpose": "Judging whether the output is actually good — the skill that the 40% premium is really paying for.",
-        "doThis": "Read the draft as the client's harshest critic. Where is it generic? What did it invent? A person who can tell good output from confident nonsense is worth more than the model.",
+        "purpose": "Judging whether the output is actually good. The skill the 40% premium is really paying for.",
+        "doThis": "Read the draft as the client's harshest critic. Where is it generic? What did it make up? A person who can tell good output from confident nonsense is worth more than the model.",
         "icon": "scan-eye",
         "accent": "emerald"
       },
       {
         "letter": "4",
         "name": "Diligence",
-        "purpose": "Taking responsibility for what you ship — verifying facts, protecting data, and owning the result.",
-        "doThis": "Fact-check every name, number and claim against a real source before it goes out under your name. The AI is not accountable to your client. You are.",
+        "purpose": "Taking responsibility for what you ship: checking facts, protecting data, owning the result.",
+        "doThis": "Fact-check every name, number, and claim against a real source before it goes out under your name. The AI is not accountable to your client. You are.",
         "icon": "shield-check",
         "accent": "amber"
       }
     ],
-    "source": { "label": "", "url": "" },
-    "note": "These four come from a free, ~3-hour course we point to on the Free Resources page. Do that one first — it is the highest-leverage free thing you can study this month."
+    "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (free)", "url": "https://www.anthropic.com/ai-fluency/overview" },
+    "note": "These four are the core of Anthropic's free AI Fluency course, a few hours and no cost. Do it first. It is the highest-leverage free thing you can study this month. It is on the Free Resources page too."
   },
 
   "landscape": {
     "kicker": "The landscape · specimens, not a shopping list",
     "title": "Five layers of AI a modern professional actually uses.",
-    "lead": "These are not tools to memorise — the specific names will change, and half of them will have new competitors by the time you read this. They are here as worked examples of five capabilities you can now put under any craft. For each layer, we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you'll still have the layer.",
-    "note": "Prefer the free and open options while you learn — you should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorising buttons.",
+    "lead": "These are not tools to memorize. The specific names will change, and half of them will have new rivals by the time you read this. They are here as worked examples of five things you can now put under any craft. For each layer we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you will still have the layer.",
+    "note": "Prefer the free and open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons.",
     "categories": [
       {
         "id": "coding",
         "name": "Coding agents",
         "icon": "terminal",
         "accent": "coral",
-        "what": "AI that reads a plain-English request and writes, edits, and runs real code for you — in your terminal or editor. You describe the outcome; it builds the thing.",
+        "what": "AI that reads a plain-English request and writes, edits, and runs real code for you, in your terminal or editor. You describe the outcome, it builds the thing.",
         "unlocks": "You no longer need to be a developer to ship a small internal tool, a landing page, a script that cleans a client's messy spreadsheet, or an automation that saves them hours a week. That is a deliverable a generalist could never offer two years ago.",
-        "tools": []
+        "tools": [
+          { "name": "Claude Code", "url": "https://code.claude.com/docs/en/overview", "cost": "paid", "oneLiner": "Anthropic's agentic coding tool. Describe a task in plain English and it writes, edits, and runs the code from your terminal or editor.", "useInWork": "Build and fix small client deliverables, scripts, data-cleaning tools, site tweaks, without hand-writing the code." },
+          { "name": "Cursor", "url": "https://cursor.com/", "cost": "freemium", "oneLiner": "An AI-first code editor whose agent can read a whole project and make changes from plain-English instructions.", "useInWork": "Ship small client sites, landing pages, and internal tools by describing the changes instead of coding them by hand." },
+          { "name": "GitHub Copilot", "url": "https://github.com/features/copilot", "cost": "freemium", "oneLiner": "GitHub's AI coding assistant: inline completions, chat, and an agent that automates coding tasks.", "useInWork": "Scaffold pages, fix bugs, and make sense of unfamiliar code so a non-expert can still deliver working projects." },
+          { "name": "Replit", "url": "https://replit.com/", "cost": "freemium", "oneLiner": "A browser coding platform whose Agent turns a prompt into a built and hosted web or mobile app, no setup.", "useInWork": "Build and host entire client deliverables, landing pages, dashboards, small tools, straight from chat." },
+          { "name": "v0 (by Vercel)", "url": "https://v0.app/", "cost": "freemium", "oneLiner": "Vercel's AI app builder that generates production-ready web UIs and full-stack apps from a prompt.", "useInWork": "Turn a brief into a polished landing page or app, then publish it or hand off the code to the client." }
+        ]
       },
       {
         "id": "open",
         "name": "Open-source & local AI",
         "icon": "boxes",
         "accent": "indigo",
-        "what": "Models and runtimes you can run on your own machine or cheaply in the cloud, with open weights — no per-message fee, and the data never leaves your control.",
-        "unlocks": "Handle a client's private data without sending it to a third party, work offline, and stop paying per token once your volume grows. Being able to say \"your data stays on my machine\" is itself a selling point to a nervous client.",
-        "tools": []
+        "what": "Models and runtimes you can run on your own machine or cheaply in the cloud, with open weights. No per-message fee, and the data never leaves your control.",
+        "unlocks": "Handle a client's private data without sending it to a third party, work offline, and stop paying per token once your volume grows. Being able to say your data stays on my machine is itself a selling point to a nervous client.",
+        "tools": [
+          { "name": "Ollama", "url": "https://ollama.com/", "cost": "open-source", "oneLiner": "Free, open-source runtime that downloads and runs open models (Llama, Mistral, Qwen, DeepSeek, Gemma) locally with one command.", "useInWork": "Draft, summarize, translate, and code on your own laptop. Client data never leaves it, and there are no per-message fees." },
+          { "name": "LM Studio", "url": "https://lmstudio.ai/", "cost": "free", "oneLiner": "A free desktop app to find, download, and run open models locally through a friendly interface.", "useInWork": "A point-and-click way to run a private, offline AI assistant for confidential client work, no cloud account needed." },
+          { "name": "Hugging Face", "url": "https://huggingface.co/", "cost": "freemium", "oneLiner": "The main hub for open AI. Browse and download tens of thousands of free models and try them in the browser.", "useInWork": "Where you find the actual model files to run in Ollama or LM Studio, and test a model in a free Space first." },
+          { "name": "Mistral AI", "url": "https://mistral.ai/", "cost": "open-source", "oneLiner": "A European lab whose efficient open-weight models, several Apache-2.0, punch above their size.", "useInWork": "Run capable models locally with permissive licensing, a selling point for privacy- or data-conscious clients." },
+          { "name": "DeepSeek", "url": "https://www.deepseek.com/", "cost": "open-source", "oneLiner": "Openly released, high-capability models, including a strong reasoning model, several under permissive licenses.", "useInWork": "Frontier-level reasoning and coding quality you can self-host cheaply, with output that is usable in commercial work." }
+        ]
       },
       {
         "id": "image",
         "name": "AI image & audio",
         "icon": "image",
         "accent": "emerald",
-        "what": "Generate and edit images, brand assets, mockups, and voiceovers from a description — then direct and refine them like an art director, not a button-pusher.",
-        "unlocks": "Thumbnails, ad creative, product mockups, social graphics, and narration — the creative volume a small business needs weekly and can't afford a studio for. Taste and direction are the scarce part; the render is cheap.",
-        "tools": []
+        "what": "Generate and edit images, brand assets, mockups, and voiceovers from a description, then direct and refine them like an art director, not a button-pusher.",
+        "unlocks": "Thumbnails, ad creative, product mockups, social graphics, and narration: the creative volume a small business needs weekly and cannot afford a studio for. Taste and direction are the scarce part. The render is cheap.",
+        "tools": [
+          { "name": "Canva (Magic Studio)", "url": "https://www.canva.com/ai-image-generator/", "cost": "freemium", "oneLiner": "The all-in-one design platform with text-to-image built right into its editor and templates.", "useInWork": "The volume workhorse for social and design gigs: on-brand graphics, thumbnails, and ad banners, fast." },
+          { "name": "Adobe Firefly", "url": "https://www.adobe.com/products/firefly.html", "cost": "freemium", "oneLiner": "Adobe's generative image tool, trained on licensed content and marketed as commercially safe.", "useInWork": "Commercially-safe images plus generative fill for client ad creative where usage rights actually matter." },
+          { "name": "Midjourney", "url": "https://www.midjourney.com/", "cost": "paid", "oneLiner": "The image generator known for the highest-quality, most stylized and photorealistic output.", "useInWork": "Premium hero images, ad creative, and editorial illustration for social, print, and pitch decks. (Paid only.)" },
+          { "name": "Ideogram", "url": "https://ideogram.ai/", "cost": "freemium", "oneLiner": "The image generator that is best at rendering accurate, readable text inside an image.", "useInWork": "The go-to when a deliverable needs real words: posters, ad graphics, logos, and typographic thumbnails." },
+          { "name": "ComfyUI", "url": "https://github.com/comfyanonymous/ComfyUI", "cost": "open-source", "oneLiner": "A free, open, node-based interface for running Stable Diffusion and other image models locally.", "useInWork": "Build repeatable pipelines, consistent characters, batch generation, upscaling, for high volume at zero per-image cost." },
+          { "name": "ElevenLabs", "url": "https://elevenlabs.io/", "cost": "freemium", "oneLiner": "Leading AI text-to-speech and voice cloning, producing natural, multilingual voiceovers.", "useInWork": "Voiceovers for explainers, ads, and narration. Note: the free tier is not for commercial use, so you need a paid plan to sell the work." },
+          { "name": "Suno", "url": "https://suno.com/", "cost": "freemium", "oneLiner": "An AI music generator that writes full songs, with vocals, from a text prompt.", "useInWork": "Custom background music and jingles for client videos and ads. Commercial rights require a paid plan." }
+        ]
       },
       {
         "id": "video",
@@ -116,47 +136,59 @@
         "icon": "clapperboard",
         "accent": "amber",
         "what": "Generate clips from text or images, create talking-avatar videos, and turn one long video into dozens of short, captioned, platform-ready cuts.",
-        "unlocks": "Short-form social clips, UGC-style ads, explainer and avatar videos, and repurposing a single podcast or webinar into a month of content. This is the +329% lane from the top of the page — the demand is real and the supply is still thin.",
-        "tools": []
+        "unlocks": "Short-form social clips, UGC-style ads, explainer and avatar videos, and turning a single podcast or webinar into a month of content. This is the +329% lane from the top of the page. The demand is real and the supply is still thin.",
+        "tools": [
+          { "name": "Runway", "url": "https://runwayml.com/", "cost": "freemium", "oneLiner": "A generative platform for creating and editing video from text and image prompts.", "useInWork": "Cinematic b-roll and product shots for social clips and ads without filming. Restyle or extend a client's footage." },
+          { "name": "Kling AI", "url": "https://kling.ai/", "cost": "freemium", "oneLiner": "A strong text- and image-to-video generator known for high-motion output.", "useInWork": "High-motion image-to-video for UGC ads, product demos, and faceless short-form, at a low cost per clip." },
+          { "name": "Google Flow (Veo)", "url": "https://labs.google/fx/tools/flow", "cost": "freemium", "oneLiner": "Google's AI filmmaking studio, built on the Veo model, generating clips with native audio.", "useInWork": "Short clips with built-in audio for ads and explainers, assembled into multi-shot scenes for client projects." },
+          { "name": "HeyGen", "url": "https://www.heygen.com/", "cost": "freemium", "oneLiner": "An AI avatar platform that turns a script into a realistic talking-head video with multilingual lip-sync.", "useInWork": "Spokesperson, explainer, and training videos with no camera, and one ad localized into many languages." },
+          { "name": "CapCut", "url": "https://www.capcut.com/", "cost": "freemium", "oneLiner": "A widely used all-in-one video editor with AI captions, effects, and templates.", "useInWork": "The everyday editor for short-form delivery: trim, auto-caption, and template Reels, TikToks, and Shorts fast." },
+          { "name": "OpusClip", "url": "https://www.opus.pro/", "cost": "freemium", "oneLiner": "An AI tool that finds the best moments in a long video and cuts them into captioned vertical shorts.", "useInWork": "Bread-and-butter for repurposing retainers: one podcast or webinar becomes a batch of Shorts and Reels." }
+        ]
       },
       {
         "id": "automation",
         "name": "Workflow automation",
         "icon": "workflow",
         "accent": "coral",
-        "what": "Connect the apps a business already uses so that a trigger in one quietly does the right thing in another — no code, or AI-written code, depending on the tool.",
-        "unlocks": "Sell outcomes, not hours: \"every new lead is enriched, tagged, and in your CRM within a minute, automatically.\" Once it's built it runs while you sleep, which is how you escape trading time for money.",
-        "tools": []
+        "what": "Connect the apps a business already uses so a trigger in one quietly does the right thing in another. No code, or AI-written code, depending on the tool.",
+        "unlocks": "Sell outcomes, not hours: every new lead is enriched, tagged, and in your CRM within a minute, automatically. Once it is built it runs while you sleep, which is how you escape trading time for money.",
+        "tools": [
+          { "name": "n8n", "url": "https://n8n.io/", "cost": "freemium", "oneLiner": "A fair-code, self-hostable automation platform: a visual canvas with optional code and native AI nodes.", "useInWork": "Build and sell client workflows, lead capture, CRM sync, AI agents, with a private self-hosted option clients love." },
+          { "name": "Make", "url": "https://www.make.com/en", "cost": "freemium", "oneLiner": "A visual no-code automation platform that connects thousands of apps via drag-and-drop scenarios.", "useInWork": "Automate a client's repetitive work, CRM updates, posting, invoicing, for a setup fee plus a monthly retainer." },
+          { "name": "Zapier", "url": "https://zapier.com/", "cost": "freemium", "oneLiner": "The most widely used no-code automation platform. Connect apps into automated Zaps.", "useInWork": "The beginner-friendly on-ramp to selling automation: wire a client's Gmail, Sheets, Slack, and CRM together." },
+          { "name": "Airtable", "url": "https://www.airtable.com/", "cost": "freemium", "oneLiner": "A no-code database that blends a spreadsheet interface with real database power plus automations.", "useInWork": "Build clients' CRMs, content calendars, and ops trackers as clean custom systems, a productized service." }
+        ]
       }
     ]
   },
 
   "craft": {
     "kicker": "Fold it into your craft",
-    "title": "There is no \"AI job.\" There is your job, multiplied.",
-    "lead": "You do not quit your niche to \"go into AI.\" You stay in your niche and become the person in it who is three times as fast and one level more strategic because AI is doing the mechanical middle. Here is what that looks like across common lanes — read the one that's yours, then imagine the version a client would pay a premium for.",
-    "note": "Notice the pattern in every row: the human keeps the judgment, the relationship, and the sign-off. AI takes the repetitive middle. That division is the job now.",
+    "title": "There is no AI job. There is your job, multiplied.",
+    "lead": "You do not quit your niche to go into AI. You stay in your niche and become the person in it who is three times as fast and one level more strategic, because AI is doing the mechanical middle. Here is what that looks like across common lanes. Read the one that is yours, then picture the version a client would pay a premium for.",
+    "note": "Notice the pattern in every row: the human keeps the judgment, the relationship, and the sign-off. AI takes the repetitive middle. That split is the job now.",
     "rows": [
-      { "niche": "Bookkeeping & finance", "icon": "calculator", "workflow": "AI categorises transactions and drafts the monthly narrative; you catch the anomalies, own the accuracy, and advise the client on what the numbers actually mean." },
-      { "niche": "Social media & content", "icon": "megaphone", "workflow": "AI generates a month of post variations and repurposes one video into thirty clips; you set the strategy, protect the brand voice, and decide what's on-message." },
-      { "niche": "Operations & project mgmt", "icon": "kanban", "workflow": "AI drafts SOPs, meeting notes, and status updates and builds small automations; you design the system, unblock the humans, and keep the whole thing moving." },
-      { "niche": "Customer support & success", "icon": "headset", "workflow": "AI drafts replies and summarises long threads; you handle the hard, emotional, judgment-heavy tickets that keep a customer from leaving — the ones a model can't." },
-      { "niche": "Design & creative", "icon": "palette", "workflow": "AI produces first-draft concepts, variations, and assets at volume; you art-direct, curate, and deliver the taste and coherence a generator has no opinion about." },
-      { "niche": "Writing & marketing", "icon": "pen-tool", "workflow": "AI drafts and researches at speed; you bring the angle, the lived specifics, the fact-checking, and the editorial judgment that makes it worth reading and true." },
-      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI handles listings, follow-up sequences, and data entry automatically; you manage the relationships, the exceptions, and the trust the client hired a human for." }
+      { "niche": "Bookkeeping & finance", "icon": "calculator", "workflow": "AI sorts transactions and drafts the monthly summary. You catch the odd ones out, own the accuracy, and tell the client what the numbers actually mean." },
+      { "niche": "Social media & content", "icon": "megaphone", "workflow": "AI makes a month of post options and turns one video into thirty clips. You set the strategy, protect the brand voice, and decide what is on-message." },
+      { "niche": "Operations & project mgmt", "icon": "kanban", "workflow": "AI drafts SOPs, meeting notes, and status updates and builds small automations. You design the system, unblock the people, and keep the whole thing moving." },
+      { "niche": "Customer support & success", "icon": "headset", "workflow": "AI drafts replies and sums up long threads. You handle the hard, emotional, judgment-heavy tickets that keep a customer from leaving, the ones a model cannot." },
+      { "niche": "Design & creative", "icon": "palette", "workflow": "AI produces first-draft concepts and assets at volume. You art-direct, curate, and deliver the taste and consistency a generator has no opinion about." },
+      { "niche": "Writing & marketing", "icon": "pen-tool", "workflow": "AI drafts and researches at speed. You bring the angle, the real details, the fact-checking, and the judgment that makes it worth reading and true." },
+      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI handles listings, follow-up sequences, and data entry. You manage the relationships, the exceptions, and the trust a client hired a human for." }
     ]
   },
 
   "adopt": {
     "kicker": "How to adopt any AI tool fast",
     "title": "The tool will change. This method won't.",
-    "lead": "You will meet a new model or app roughly every month for the rest of this decade. You cannot take a course each time. So don't learn tools — learn the way to pick one up in an afternoon. This is the same transferable method DevUp uses everywhere, pointed at AI.",
+    "lead": "You will meet a new model or app about every month for the rest of this decade. You cannot take a course each time. So do not learn tools, learn the way to pick one up in an afternoon. This is the same transferable method DevUp uses everywhere, pointed at AI.",
     "steps": [
-      { "n": 1, "title": "Name the outcome, not the tool", "desc": "Not \"learn Runway.\" Instead: \"turn this one client testimonial into three captioned 20-second vertical clips.\" A real deliverable tells you exactly which features to ignore." },
-      { "n": 2, "title": "Find the free tier and ship one real thing", "desc": "Skip the tutorial marathon. Use the free tier to produce one finished-if-rough artifact in the first hour. A broken result teaches you what to learn next; a video never does." },
-      { "n": 3, "title": "Describe, then discern", "desc": "Give it a proper brief, get three options, and judge them hard against what the client actually needs. The skill is not generating — it's choosing and refining." },
-      { "n": 4, "title": "Keep a human in the loop", "desc": "Verify every fact, protect the client's data, and never ship a first draft unread. You are the quality bar and the accountable party, always." },
-      { "n": 5, "title": "Turn it into an offer", "desc": "Once you can do it reliably, name it as a service with a price. \"I turn your long videos into a month of shorts\" is a business. \"I know Runway\" is a hobby." }
+      { "n": 1, "title": "Name the outcome, not the tool", "desc": "Not learn Runway. Instead: turn this one client testimonial into three captioned 20-second vertical clips. A real deliverable tells you exactly which features to ignore." },
+      { "n": 2, "title": "Find the free tier and ship one real thing", "desc": "Skip the tutorial marathon. Use the free tier to make one finished-if-rough thing in the first hour. A broken result teaches you what to learn next. A video never does." },
+      { "n": 3, "title": "Describe, then discern", "desc": "Give it a proper brief, get three options, and judge them hard against what the client actually needs. The skill is not generating. It is choosing and refining." },
+      { "n": 4, "title": "Keep a human in the loop", "desc": "Check every fact, protect the client's data, and never ship a first draft unread. You are the quality bar and the person responsible, always." },
+      { "n": 5, "title": "Turn it into an offer", "desc": "Once you can do it reliably, name it as a service with a price. I turn your long videos into a month of shorts is a business. I know Runway is a hobby." }
     ],
     "crossrefs": [
       { "href": "/prompts", "label": "Learn to write the brief (Description)" },
@@ -168,25 +200,25 @@
   "guardrails": {
     "kicker": "The guardrails · non-negotiable",
     "title": "AI makes you faster. It also makes it faster to get fired.",
-    "lead": "Every capability on this page cuts both ways. The professionals who last are the ones who treat AI with the same care they'd treat a client's bank login. Four rules keep the leverage from becoming a liability.",
+    "lead": "Every skill on this page cuts both ways. The professionals who last are the ones who treat AI with the same care they would give a client's bank login. Four rules keep the leverage from turning into a liability.",
     "items": [
-      { "title": "Verify before you ship", "desc": "AI states wrong facts as confidently as right ones. Every name, number, date, and quote gets checked against a real source before it goes out under your name. Confident and wrong is still wrong.", "icon": "search-check" },
-      { "title": "Protect the client's data", "desc": "Never paste confidential client data, passwords, or personal information into a tool you haven't cleared with them. When in doubt, use a local or private option — that's what the open-source layer is for.", "icon": "lock" },
+      { "title": "Check before you ship", "desc": "AI states wrong facts as confidently as right ones. Every name, number, date, and quote gets checked against a real source before it goes out under your name. Confident and wrong is still wrong.", "icon": "search-check" },
+      { "title": "Protect the client's data", "desc": "Never paste confidential client data, passwords, or personal information into a tool you have not cleared with them. When in doubt, use a local or private option. That is what the open-source layer is for.", "icon": "lock" },
       { "title": "Be honest about how you work", "desc": "If a client asks, tell them you use AI and how. Most expect it in 2027. Hiding it, or passing raw AI output off as bespoke human work, is the kind of thing that ends a reputation.", "icon": "handshake" },
-      { "title": "Don't ship slop", "desc": "Generic, unedited AI output is worth exactly what anyone with a prompt can make — nothing. Your edit, your taste, your specifics are the product. If you'd be embarrassed to sign it, don't send it.", "icon": "sparkles" }
+      { "title": "Don't ship slop", "desc": "Generic, unedited AI output is worth exactly what anyone with a prompt can make, which is nothing. Your edit, your taste, your specifics are the product. If you would be embarrassed to sign it, do not send it.", "icon": "sparkles" }
     ],
     "crossref": { "href": "/conduct", "label": "The full conduct & integrity standard" }
   },
 
   "closing": {
     "kicker": "The honest bottom line",
-    "title": "You are early — but only if you move while the premium still exists.",
-    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft — it is the biggest lever you'll ever be handed for free. The generic floor is collapsing whether you like it or not. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
-    "point": "Pick one layer. Put it under the craft you're already building. Ship something real with it this week.",
+    "title": "You are early, but only if you move while the premium still exists.",
+    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed for free. The generic floor is falling whether you like it or not. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
+    "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
     "links": [
       { "href": "/prompts", "label": "Learn to direct AI", "desc": "Description is the entry skill. Learn to write the brief, from a blank box, for anything." },
-      { "href": "/resources", "label": "The free AI courses", "desc": "Start with the free, ~3-hour AI-fluency course — the highest-leverage free thing on the shelf." },
-      { "href": "/niches", "label": "Pick the craft to multiply", "desc": "AI needs something to multiply. Choose the lane deliberately, using the rubric." },
+      { "href": "/resources", "label": "The free AI courses", "desc": "Start with the free AI-fluency course, the highest-leverage free thing on the shelf." },
+      { "href": "/niches", "label": "Pick the craft to multiply", "desc": "AI needs something to multiply. Choose the lane on purpose, using the rubric." },
       { "href": "/reality", "label": "See the evidence", "desc": "Every number on this page, in context, with the counter-evidence included. Check us." }
     ]
   }

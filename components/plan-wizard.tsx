@@ -35,7 +35,7 @@ type RawQuestion = {
   fromTracks?: boolean;
 };
 
-// Build the question list once — the "track" question pulls its options from
+// Build the question list once, the "track" question pulls its options from
 // tracks.json so the plan wizard stays wired to the same data as the rest of
 // the site (and calling choosePath() keeps everything else personalized too).
 const QUESTIONS: Question[] = (plan.questions as unknown as RawQuestion[]).map(
@@ -248,13 +248,13 @@ export function PlanWizard() {
                 <div>
                   <p className="kicker">Your personalized plan</p>
                   <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
-                    30 days for {trackLabel ?? "your online career"} —{" "}
+                    30 days for {trackLabel ?? "your online career"}, {" "}
                     <span className="text-coral">{hoursLabel} a day.</span>
                   </h3>
                   {experienceLabel && (
                     <p className="mt-2 text-sm text-ink-soft">
                       Starting point: <span className="font-semibold text-ink">{experienceLabel}</span>.
-                      Check off each day as you go — your progress saves automatically.
+                      Check off each day as you go, your progress saves automatically.
                     </p>
                   )}
                 </div>

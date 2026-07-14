@@ -48,7 +48,7 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
   const message = allReady
     ? "You're ready to apply!"
     : readyCount === 0
-      ? "Let's get you prepared — check off what you already have."
+      ? "Let's get you prepared, check off what you already have."
       : `${remaining} essential${remaining === 1 ? "" : "s"} left to go.`;
 
   const estimateTotal = categories.reduce((sum, cat) => {
@@ -114,7 +114,7 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
           <p className="mt-2 text-xs leading-relaxed text-ink-faint">
             One-time estimate for what you haven&rsquo;t checked off yet, at
             your chosen tiers. Monthly costs (like internet) aren&rsquo;t
-            counted here — check each card for the /mo price.
+            counted here, check each card for the /mo price.
           </p>
         </div>
       </aside>

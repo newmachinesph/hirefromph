@@ -17,7 +17,7 @@ type Props = {
 /**
  * Gates deep content behind a one-click path choice.
  * Before a path is chosen: a locked invitation with an inline chooser.
- * After: the deep content renders. Depth is available — but only once the
+ * After: the deep content renders. Depth is available, but only once the
  * visitor commits to a direction, so nothing feels overwhelming up front.
  */
 export function PathGate({ children, teaser, unlocks }: Props) {
@@ -56,7 +56,7 @@ export function PathGate({ children, teaser, unlocks }: Props) {
                 tailored to you.
               </>
             ) : (
-              "the full toolkit opens — tailored to you."
+              "the full toolkit opens, tailored to you."
             )}
           </p>
 
@@ -76,7 +76,7 @@ export function PathGate({ children, teaser, unlocks }: Props) {
                 "animate-in fade-in",
               )}
             >
-              <p className="kicker mb-3 text-center">Pick one — you can change later</p>
+              <p className="kicker mb-3 text-center">Pick one, you can change later</p>
               <PathChooser compact />
             </div>
           )}

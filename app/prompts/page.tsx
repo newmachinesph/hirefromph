@@ -72,7 +72,7 @@ export default function PromptsPage() {
           <SectionHeading
             kicker="The anatomy of a prompt"
             title="Eight parts. Learn them once, use them forever."
-            lead="Every strong prompt is made of the same parts — most weak ones are just missing one. Study the difference below, then build with it."
+            lead="Every strong prompt is made of the same parts, most weak ones are just missing one. Study the difference below, then build with it."
           />
         </Reveal>
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -87,7 +87,7 @@ export default function PromptsPage() {
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">{item.purpose}</p>
                 <p className="mt-3 rounded-xl border border-line bg-paper p-3 text-xs leading-relaxed text-ink-soft">
-                  <span className="font-semibold text-ink">Rule — </span>
+                  <span className="font-semibold text-ink">Rule, </span>
                   {item.rule}
                 </p>
                 <div className="mt-4 grid flex-1 gap-3 sm:grid-cols-2">
@@ -145,7 +145,7 @@ export default function PromptsPage() {
           <SectionHeading
             kicker="The iteration loop"
             title="Draft, run, diagnose, change one thing, re-run"
-            lead="No prompt works on the first try. What separates people who improve fast is a procedure for the second try — not luck."
+            lead="No prompt works on the first try. What separates people who improve fast is a procedure for the second try, not luck."
           />
         </Reveal>
         <ol className="mt-10 space-y-4">
@@ -185,7 +185,7 @@ export default function PromptsPage() {
             <SectionHeading
               kicker="Where to point it"
               title="What a remote career actually uses AI for"
-              lead="Not finished prompts — situations. Use the anatomy above to build the exact prompt each one needs."
+              lead="Not finished prompts, situations. Use the anatomy above to build the exact prompt each one needs."
             />
           </Reveal>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -210,7 +210,7 @@ export default function PromptsPage() {
           <SectionHeading
             kicker="Prompt workshop"
             title="Build yours now"
-            lead="Fill in what you know about your real situation. This assembles into your prompt, live — not ours."
+            lead="Fill in what you know about your real situation. This assembles into your prompt, live, not ours."
           />
         </Reveal>
         <Reveal i={1} className="mt-10">
@@ -263,7 +263,7 @@ export default function PromptsPage() {
                         {s.tell}
                       </p>
                       <p className="mt-1.5 pl-6 text-sm leading-relaxed text-ink-soft">
-                        <span className="font-semibold text-emerald">Fix — </span>
+                        <span className="font-semibold text-emerald">Fix, </span>
                         {s.fix}
                       </p>
                     </li>
@@ -309,7 +309,7 @@ export default function PromptsPage() {
                     {prompt.text}
                   </pre>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                    <span className="font-semibold text-ink">Dissect — </span>
+                    <span className="font-semibold text-ink">Dissect, </span>
                     {specimen.note}
                   </p>
                 </div>
@@ -333,7 +333,7 @@ export default function PromptsPage() {
                 </span>
                 <h3 className="mt-5 font-display text-xl">This is the same method, everywhere</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  Anatomy, judgment, a workshop, self-critique — the six-method framework this
+                  Anatomy, judgment, a workshop, self-critique, the six-method framework this
                   page is built from.
                 </p>
               </div>
@@ -352,7 +352,7 @@ export default function PromptsPage() {
                 </span>
                 <h3 className="mt-5 font-display text-xl">Now use it on a real deliverable</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  Build Labs teach the same way — never a download, always a workshop you build
+                  Build Labs teach the same way, never a download, always a workshop you build
                   yourself.
                 </p>
               </div>

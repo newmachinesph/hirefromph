@@ -37,7 +37,7 @@ const TABS = [
 type TabId = (typeof TABS)[number]["id"];
 
 
-/** Assembles the user's own answers into plain text — never our copy. */
+/** Assembles the user's own answers into plain text, never our copy. */
 function buildDocument(lab: Lab, laAnswers: Record<string, string>): string {
   return lab.builder.steps
     .map((step) => {
@@ -246,7 +246,7 @@ function LabDetail({
       {/* Tabs */}
       <div
         role="tablist"
-        aria-label={`${lab.name} — lab sections`}
+        aria-label={`${lab.name}, lab sections`}
         className="mt-6 flex gap-2 overflow-x-auto pb-2"
       >
         {TABS.map((tab) => {
@@ -312,7 +312,7 @@ function LabDetail({
 function WhyTab({ lab }: { lab: Lab }) {
   return (
     <div className="max-w-2xl">
-      <p className="kicker">Why this — not a download</p>
+      <p className="kicker">Why this, not a download</p>
       <p className="mt-3 text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
         {lab.whyBuild}
       </p>
@@ -332,7 +332,7 @@ function StudyTab({ lab }: { lab: Lab }) {
         <p className="mt-2 text-base leading-relaxed text-ink-soft">{lab.studyFirst.how}</p>
       </div>
       <p className="text-xs italic text-ink-faint">
-        Any examples you find are material to study and extract rules from — not to copy or
+        Any examples you find are material to study and extract rules from, not to copy or
         rename. Do this before you open the workshop.
       </p>
     </div>
@@ -413,7 +413,7 @@ function WorkshopTab({
       <p className="max-w-2xl text-sm leading-relaxed text-ink-soft">{lab.builder.intro}</p>
 
       <div className="mt-6 grid gap-6 lg:grid-cols-2">
-        {/* The form — the user's own words */}
+        {/* The form, the user's own words */}
         <div className="space-y-5">
           {lab.builder.steps.map((step) => {
             const fieldId = `${lab.id}-${step.id}`;
@@ -443,7 +443,7 @@ function WorkshopTab({
           })}
         </div>
 
-        {/* Live preview — assembled from what they wrote, nothing else */}
+        {/* Live preview, assembled from what they wrote, nothing else */}
         <div className="lg:sticky lg:top-24 lg:self-start">
           <div className="overflow-hidden rounded-2xl border border-line-strong bg-paper-2 shadow-[var(--shadow-md)]">
             <div className="flex items-center justify-between gap-3 border-b border-line bg-paper-3/60 px-5 py-3">
@@ -453,7 +453,7 @@ function WorkshopTab({
                   <span className="h-2.5 w-2.5 rounded-full bg-amber/70" />
                   <span className="h-2.5 w-2.5 rounded-full bg-emerald/70" />
                 </span>
-                <p className="text-xs font-medium text-ink-faint">Live preview — your words</p>
+                <p className="text-xs font-medium text-ink-faint">Live preview, your words</p>
               </div>
               <CopyButton value={document} label="Copy what I wrote" />
             </div>
@@ -476,7 +476,7 @@ function WorkshopTab({
             </div>
           </div>
           <p className="mt-3 text-xs leading-relaxed text-ink-faint">
-            This preview is built only from what you typed — never from a pre-written example.
+            This preview is built only from what you typed, never from a pre-written example.
             When it looks right, copy it and open the <strong className="text-ink-soft">Build It For Real</strong> tab.
           </p>
         </div>
@@ -582,7 +582,7 @@ function BuildRealTab({
       </div>
 
       <p className="mt-6 text-xs leading-relaxed text-ink-faint">
-        What you copy here is yours — your words, from your situation. Rebuild it in{" "}
+        What you copy here is yours, your words, from your situation. Rebuild it in{" "}
         {lab.buildIn.tool} rather than living inside this page; that&rsquo;s the version
         you&rsquo;ll actually send.
       </p>
