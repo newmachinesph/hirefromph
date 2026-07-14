@@ -18,6 +18,7 @@ import {
 
 const toolkit = [
   { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers nobody selling a course will show you. Every claim sourced.", href: "/reality", icon: "scan-eye" },
+  { title: "AI-First", desc: "Every role runs on AI in 2027. Coding agents, open-source models, AI image and video — folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
   { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic — and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
   { title: "English at Work", desc: "Your English is fine. The habits that make it read as junior are the fixable part — audit a real message you sent.", href: "/english", icon: "message-square" },
   { title: "Conduct & Integrity", desc: "What actually gets remote professionals fired, sued, and delisted — and an oath you write yourself.", href: "/conduct", icon: "shield-check" },
@@ -27,6 +28,8 @@ const toolkit = [
   { title: "AI Leverage", desc: "Learn to write your own prompts, so you never need someone else's prompt library.", href: "/prompts", icon: "sparkles" },
   { title: "Learn Any Tool", desc: "The transferable method for mastering any software in a weekend, not a course.", href: "/tools", icon: "layout-grid" },
   { title: "Find Work", desc: "Source and vet opportunities yourself — search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
+  { title: "Own Your Clients", desc: "Agency or direct? A fair look at both — and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
+  { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle — plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
   { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 8 we list are just worked examples.", href: "/niches", icon: "layers" },
   { title: "How to Learn", desc: "What the evidence actually supports — and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
