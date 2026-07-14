@@ -40,9 +40,12 @@ const accentText: Record<string, string> = {
   indigo: "text-indigo",
 };
 
-const trackNameById: Record<string, string> = Object.fromEntries(
-  tracksData.tracks.map((t): [string, string] => [t.id, t.name]),
-);
+const trackNameById: Record<string, string> = {
+  any: "Every track",
+  ...Object.fromEntries(
+    tracksData.tracks.map((t): [string, string] => [t.id, t.name]),
+  ),
+};
 
 // Internal routes worth auto-linking when they show up inside "ifYouDont" copy.
 const KNOWN_ROUTES = [

@@ -288,6 +288,32 @@
         "change": "AI now drafts the newsletters, formats the devotionals, and clips sermons into shareable posts. The production side of ministry and wellness work is getting lighter.",
         "human": "But nobody wants a chatbot at their most human moments. Care, presence, and shared values cannot be generated. AI handles the formatting. You hold the community."
       }
+    },
+    {
+      "id": "gtm-engineering",
+      "name": "GTM Engineer",
+      "icon": "rocket",
+      "accent": "coral",
+      "tagline": "The newest role in the stack — sales meets systems",
+      "blurb": "Build the machine that fills a sales pipeline: data enrichment, AI-personalized outreach, and the automations behind them.",
+      "pay": "Premium — new role, rates still forming",
+      "demandLabel": "New & rising",
+      "demand": 4,
+      "difficulty": "Advanced",
+      "startStage": 3,
+      "tools": ["Clay", "HubSpot", "Apollo", "n8n / Zapier", "Claude / GPT"],
+      "skills": ["Outbound automation", "Data enrichment & lead scoring", "AI agent workflows", "Copy that converts", "Funnel analytics"],
+      "learn": [
+        { "type": "Course", "title": "HubSpot Academy — Sales & RevOps", "provider": "HubSpot (free)" },
+        { "type": "Docs", "title": "Clay University", "provider": "Clay (free)" },
+        { "type": "Course", "title": "Google Skillshop — Analytics", "provider": "Google (free)" }
+      ],
+      "certs": ["HubSpot Sales Software", "Clay"],
+      "clients": "B2B startups and agencies that want pipeline built by one systems-minded operator instead of a whole sales team.",
+      "ai": {
+        "change": "This role exists because of AI: one person now runs the research, personalization, and outreach that used to take a team of SDRs.",
+        "human": "The machine sends the messages. You decide who to target, what to promise, and when the data is lying. Judgment is the job."
+      }
     }
   ]
 }

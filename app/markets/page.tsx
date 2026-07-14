@@ -33,7 +33,7 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
 }
 
 export default function MarketsPage() {
-  const { hero, overlap, regions, strategies, findIndustry, closing } = markets;
+  const { hero, overlap, regions, strategies, findIndustry, abroad, closing } = markets;
 
   return (
     <>
@@ -181,6 +181,47 @@ export default function MarketsPage() {
             <ArrowLink href={findIndustry.crossref.href}>{findIndustry.crossref.label}</ArrowLink>
           </div>
         </Reveal>
+      </section>
+
+      {/* ------------------------------------------------------------- ABROAD */}
+      <section className="bg-paper-3/60 py-20 lg:py-24">
+        <div className="container-x">
+          <Reveal>
+            <Kicker>{abroad.kicker}</Kicker>
+            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
+              {abroad.title}
+            </h2>
+            <p className="mt-5 max-w-2xl text-ink-soft">{abroad.lead}</p>
+          </Reveal>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {abroad.items.map((v, idx) => (
+              <Reveal key={v.country} i={idx % 3}>
+                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
+                  <p className="text-3xl" aria-hidden>{v.flag}</p>
+                  <h3 className="mt-4 font-display text-lg leading-snug">{v.country}</h3>
+                  <p className="kicker mt-1 text-coral">{v.visa}</p>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{v.detail}</p>
+                  <a
+                    href={v.source.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 text-xs font-semibold text-ink link-sweep"
+                  >
+                    {v.source.label} ↗
+                  </a>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <Reveal i={1}>
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-soft">{abroad.note}</p>
+            <p className="mt-5 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+              {abroad.point}
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ------------------------------------------------------------ CLOSING */}
