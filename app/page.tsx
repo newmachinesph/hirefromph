@@ -461,10 +461,10 @@ export default function Home() {
 function HeroPanel() {
   // 4 ascending stages: [x, barTopY, fill, number, label]
   const bars = [
-    { x: 40, y: 300, fill: "#ef5b34", n: "01", label: "Start" },
-    { x: 126, y: 246, fill: "#f2a900", n: "02", label: "Get Hired" },
-    { x: 212, y: 182, fill: "#0f7a5e", n: "03", label: "Deliver" },
-    { x: 298, y: 104, fill: "#3a3af0", n: "04", label: "Level Up" },
+    { x: 40, y: 300, fill: "#0d9488", n: "01", label: "Start" },
+    { x: 126, y: 246, fill: "#e39400", n: "02", label: "Get Hired" },
+    { x: 212, y: 182, fill: "#2f9e46", n: "03", label: "Deliver" },
+    { x: 298, y: 104, fill: "#2f6df0", n: "04", label: "Level Up" },
   ];
   const baseline = 392;
   const barW = 62;
@@ -488,7 +488,7 @@ function HeroPanel() {
         aria-label="A rising staircase of four career stages, from Start to Level Up, with an upward trend arrow, representing developing upwards."
       >
         {/* baseline */}
-        <line x1="28" y1={baseline} x2="372" y2={baseline} stroke="#d3c9b4" strokeWidth="2" />
+        <line x1="28" y1={baseline} x2="372" y2={baseline} stroke="#c3d5ce" strokeWidth="2" />
 
         {/* ascending stage bars */}
         {bars.map((b) => (
@@ -518,8 +518,8 @@ function HeroPanel() {
               y={baseline + 22}
               textAnchor="middle"
               fontSize="12"
-              fontFamily="var(--font-geist-mono), monospace"
-              fill="#8b8474"
+              fontFamily="var(--font-geist-sans), sans-serif"
+              fill="#798a84"
             >
               {b.label}
             </text>
@@ -530,22 +530,22 @@ function HeroPanel() {
         <polyline
           points={trend}
           fill="none"
-          stroke="#ef5b34"
+          stroke="#0d9488"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeDasharray="2 9"
         />
         {/* arrowhead */}
-        <path d="M352 74 L338 80 M352 74 L346 88" stroke="#ef5b34" strokeWidth="3" strokeLinecap="round" fill="none" />
+        <path d="M352 74 L338 80 M352 74 L346 88" stroke="#0d9488" strokeWidth="3" strokeLinecap="round" fill="none" />
         {/* nodes */}
         {nodes.map(([x, y]) => (
-          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#fffdf8" stroke="#ef5b34" strokeWidth="2.5" />
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0d9488" strokeWidth="2.5" />
         ))}
         {/* peak flag */}
         <g transform="translate(329 60)">
-          <line x1="0" y1="0" x2="0" y2="44" stroke="#17130d" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M0 2 L26 9 L0 18 Z" fill="#ef5b34" />
+          <line x1="0" y1="0" x2="0" y2="44" stroke="#0e1f1b" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M0 2 L26 9 L0 18 Z" fill="#0d9488" />
         </g>
       </svg>
 

@@ -16,8 +16,8 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px",
-          background: "#f6f3ec",
-          color: "#17130d",
+          background: "#f1f6f4",
+          color: "#0e1f1b",
           fontFamily: "sans-serif",
         }}
       >
@@ -30,7 +30,7 @@ export default function OpengraphImage() {
             width: 520,
             height: 520,
             borderRadius: 520,
-            background: "rgba(239,91,52,0.14)",
+            background: "rgba(13,148,136,0.14)",
             display: "flex",
           }}
         />
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
               width: 76,
               height: 76,
               borderRadius: 20,
-              background: "#ef5b34",
+              background: "#0d9488",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
@@ -54,7 +54,7 @@ export default function OpengraphImage() {
           </div>
           <div style={{ display: "flex", fontSize: 44, fontWeight: 700 }}>
             <span>Dev</span>
-            <span style={{ color: "#ef5b34" }}>Up</span>
+            <span style={{ color: "#0d9488" }}>Up</span>
           </div>
         </div>
 
@@ -72,9 +72,9 @@ export default function OpengraphImage() {
             }}
           >
             Build the online career you&nbsp;
-            <span style={{ color: "#ef5b34" }}>actually own.</span>
+            <span style={{ color: "#0d9488" }}>actually own.</span>
           </div>
-          <div style={{ display: "flex", fontSize: 30, color: "#4d463b" }}>
+          <div style={{ display: "flex", fontSize: 30, color: "#435551" }}>
             Free learning for Filipino online professionals. Real talk, no catch.
           </div>
         </div>
@@ -86,10 +86,10 @@ export default function OpengraphImage() {
             alignItems: "center",
             gap: 16,
             fontSize: 24,
-            color: "#8b8474",
+            color: "#798a84",
           }}
         >
-          <span style={{ color: "#0f7a5e", fontWeight: 700 }}>Developing upwards</span>
+          <span style={{ color: "#2f9e46", fontWeight: 700 }}>Developing upwards</span>
           <span>·</span>
           <span>₱0, permanently</span>
           <span>·</span>
