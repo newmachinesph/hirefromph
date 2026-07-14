@@ -59,8 +59,25 @@ export default function PathPage() {
   const currentStage = stages.find((s) => s.num === state.stage);
   const stageAccent = currentStage?.accent ?? track.accent;
   const doneCount = roadmap.steps.filter((s) => state.steps[s.n]).length;
+  const portfolioCount = Object.values(state.tasks).filter(Boolean).length;
+  const applied = state.applications.length;
+  const interviews = state.applications.filter(
+    (a) => a.status === "interview" || a.status === "offer",
+  ).length;
 
   const nextMoves = [
+    {
+      title: "Build proof with micro-tasks",
+      desc: `Real ${track.name} jobs you can do today with no client. Each one is a portfolio piece.`,
+      href: "/tasks",
+      icon: "target",
+    },
+    {
+      title: "Track your applications",
+      desc: "A live pipeline with a follow-up radar — silence loses more offers than rejection.",
+      href: "/tracker",
+      icon: "table",
+    },
     {
       title: `Build your ${track.name} 30-day plan`,
       desc: "A day-by-day path built around this niche.",
@@ -147,6 +164,29 @@ export default function PathPage() {
             <Pill tone="neutral">{track.difficulty}</Pill>
           </div>
         </Reveal>
+
+        <Reveal i={3}>
+          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
+            {[
+              { value: portfolioCount, label: "portfolio pieces", sub: "micro-tasks completed", href: "/tasks" },
+              { value: applied, label: "applications sent", sub: "live pipeline", href: "/tracker" },
+              { value: interviews, label: "interviews & offers", sub: "converting", href: "/tracker" },
+              { value: `${doneCount}/9`, label: "roadmap steps", sub: "zero to indispensable", href: "#roadmap" },
+            ].map((s) => (
+              <Link
+                key={s.label}
+                href={s.href}
+                className="group bg-paper-2 p-5 transition-colors hover:bg-paper-3/60"
+              >
+                <dt className="font-display text-3xl tracking-tight text-ink">
+                  {s.value}
+                </dt>
+                <dd className="mt-1 text-sm font-medium text-ink">{s.label}</dd>
+                <dd className="text-xs text-ink-faint">{s.sub}</dd>
+              </Link>
+            ))}
+          </dl>
+        </Reveal>
       </section>
 
       {/* ------------------------------------------------------------- STAGE */}
@@ -208,7 +248,10 @@ export default function PathPage() {
       </section>
 
       {/* ----------------------------------------------------------- ROADMAP */}
-      <section className="bg-paper-3/60 py-14 lg:py-20">
+      <section
+        id="roadmap"
+        className="scroll-mt-24 bg-paper-3/60 py-14 lg:py-20"
+      >
         <div className="container-x">
           <Reveal>
             <SectionHeading

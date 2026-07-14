@@ -15,6 +15,7 @@
     "doFirst": [
       { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker — see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
       { "title": "Do your first micro-task", "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.", "href": "/tasks", "cta": "Pick a task" },
+      { "title": "Learn how to learn", "desc": "Most study habits quietly fail you. Build a study protocol from what the evidence actually supports.", "href": "/learn", "cta": "How to learn" },
       { "title": "Learn the foundation skills", "desc": "The core toolkit every online professional needs before applying.", "href": "/tools", "cta": "Learn tools" },
       { "title": "Build your first documents", "desc": "Learn the anatomy of a resume and a tracker, then write your own. No file to download.", "href": "/build", "cta": "Open Build Labs" },
       { "title": "Pick a direction", "desc": "Explore the niches so you know which lane you're heading toward.", "href": "/niches", "cta": "Explore niches" }
@@ -44,13 +45,13 @@
       { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer — build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
       { "title": "Show proof, not promises", "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.", "href": "/tasks", "cta": "Build proof" },
       { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practise against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
-      { "title": "Build your own tracker", "desc": "Learn the schema and the formulas, then build a tracker you can rebuild for anything.", "href": "/build", "cta": "Build a tracker" },
+      { "title": "Track every application", "desc": "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", "href": "/tracker", "cta": "Open tracker" },
       { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof — the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
     ],
     "tools": [
       { "label": "Find Work", "href": "/apply" },
+      { "label": "Application Tracker", "href": "/tracker" },
       { "label": "Micro-Tasks", "href": "/tasks" },
-      { "label": "AI Leverage", "href": "/prompts" },
       { "label": "Build Labs", "href": "/build" }
     ],
     "closing": "Every 'no' moves you closer to the right 'yes'. The system is here — the work now is to apply, consistently, and follow up."

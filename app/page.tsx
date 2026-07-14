@@ -25,6 +25,8 @@ const toolkit = [
   { title: "Find Work", desc: "Source and vet opportunities yourself — search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
   { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 8 we list are just worked examples.", href: "/niches", icon: "layers" },
+  { title: "How to Learn", desc: "What the evidence actually supports — and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
+  { title: "Application Tracker", desc: "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", href: "/tracker", icon: "table" },
   { title: "Language Premium", desc: "A second language can double your rate. Which ones pay, and where to learn them free in PH.", href: "/languages", icon: "languages" },
 ];
 

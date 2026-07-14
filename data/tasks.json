@@ -1,0 +1,993 @@
+{
+  "kicker": "Micro-Tasks · Zero clients required",
+  "headline": "The deadlock ends here.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap — and it's fake. Below are 20 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Nobody asks whether you were paid for it. They ask whether you can do it. Now you can prove it.",
+  "creed": "You don't need permission to do the work. No client, no problem — do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it.",
+  "howItWorks": [
+    { "title": "Prerequisite", "desc": "Know what you need before you start — and exactly where to get it free if you don't already have it." },
+    { "title": "Resources", "desc": "Real, specific, free resources — official docs, free courses, free tool tiers. No paid tools required for any task on this page." },
+    { "title": "The Task", "desc": "A realistic scenario, a concrete deliverable, real constraints, and numbered steps — the same shape of brief a real client would hand you." },
+    { "title": "Prove It", "desc": "What the finished artifact proves you can do, and exactly how to present it so it reads as evidence, not a school assignment." }
+  ],
+  "difficulties": ["Starter", "Intermediate", "Advanced"],
+  "tasks": [
+    {
+      "id": "founder-inbox-triage",
+      "title": "Rescue a Founder's Inbox From Chaos",
+      "track": "executive-ops",
+      "accent": "coral",
+      "icon": "inbox",
+      "difficulty": "Starter",
+      "time": "2–3 hours",
+      "proves": "You can build an inbox system that turns email chaos into a same-day response standard — the #1 thing founders hire executive ops for.",
+      "prerequisites": [
+        { "skill": "Gmail labels, filters, and search operators", "why": "The whole triage system runs on labels + filters — if you can't nest labels or write a filter rule, you can't build the system.", "ifYouDont": "Google's own Gmail Filters & Labels help center (free) — 20 minutes, hands-on." },
+        { "skill": "A basic inbox triage decision framework (e.g. the 4 D's: Do, Delegate, Defer, Delete)", "why": "You need a decision rule for every email, not just folders to dump them in.", "ifYouDont": "DevUp's /method — the UNSTICK and FIND methods teach the same decision-first thinking." }
+      ],
+      "resources": [
+        { "name": "Enron Email Dataset (Kaggle)", "type": "Dataset", "what": "A free, public, real corporate inbox (500k+ emails) — pull a 50-email sample to stand in for your 'client's' inbox.", "free": true, "url": "#" },
+        { "name": "Gmail Filters & Labels", "type": "Docs", "what": "Official how-to for building the label taxonomy and auto-filters you'll design.", "free": true, "url": "#" },
+        { "name": "Google Workspace Learning Center", "type": "Free course", "what": "Fast primer on Gmail power-user features (search operators, multiple inboxes).", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Mara Dizon runs a 3-person SaaS startup solo. She hasn't opened her inbox in nine days — 400+ unread, real client requests buried under cold pitches and newsletters. She's about to miss a contract renewal because of it.",
+        "deliverable": "A 6-label triage taxonomy, a written triage SOP (the decision rule for every incoming email), and a worked example: 50 real emails from the Enron dataset sorted into your taxonomy with a one-line reason for each.",
+        "constraints": [
+          "Maximum 6 labels — more than that isn't a system, it's a new mess.",
+          "Every label needs a plain-English rule for what goes in it.",
+          "Must include a stated response-time promise per label (e.g. 'Client — same business day')."
+        ],
+        "steps": [
+          "Download a 50–100 email sample from the Enron dataset.",
+          "Read all of them once, tallying what categories naturally emerge.",
+          "Design a 6-label taxonomy with a one-sentence rule per label.",
+          "Sort all 50 emails into your taxonomy, noting the reason for each call.",
+          "Write the triage SOP: how a new email gets labeled, when it gets answered, what gets auto-archived.",
+          "Write a 5-line 'inbox zero in 20 minutes' daily routine Mara can run herself."
+        ]
+      },
+      "definitionOfDone": [
+        "Every one of the 50 sample emails has exactly one label.",
+        "Each label has a written rule a stranger could apply consistently.",
+        "The SOP names a response-time commitment for at least 3 of the labels.",
+        "A follow-up filter/search-operator query is written for at least 2 labels."
+      ],
+      "selfCritique": [
+        "Could someone who's never met Mara sort her next 50 emails using only my SOP?",
+        "Did I create categories for how the emails actually clustered, or force them into a template?",
+        "Is any label vague enough that two people would file the same email differently?"
+      ],
+      "presentIt": "Present as a before/after: 'Inbox at 400+ unread, 9 days stale → sorted, labeled, SOP in place in 3 hours.' Screenshot the label sidebar and lead with the response-time promise, not the label names.",
+      "stretch": "Build the actual Gmail filter rules (not just the taxonomy) using search operators, and write a 30-day audit checklist for keeping the inbox at zero."
+    },
+    {
+      "id": "exec-calendar-rescue",
+      "title": "Rebuild an Overbooked Executive's Calendar",
+      "track": "executive-ops",
+      "accent": "coral",
+      "icon": "calendar-clock",
+      "difficulty": "Intermediate",
+      "time": "3–4 hours",
+      "proves": "You can turn a reactive, back-to-back calendar into a protected, priority-driven schedule — the exact skill that gets you promoted to Chief of Staff.",
+      "prerequisites": [
+        { "skill": "Google Calendar (recurring events, color-coding, multiple calendars)", "why": "The rebuild lives entirely in Calendar — you need to move fast in it.", "ifYouDont": "Google Calendar Help Center's 'Get started' guide (free)." },
+        { "skill": "Time-blocking and priority frameworks (Eisenhower matrix or similar)", "why": "You can't decide what to protect without a framework for what matters.", "ifYouDont": "DevUp's Executive Operations track under /niches, or any free Eisenhower Matrix explainer." }
+      ],
+      "resources": [
+        { "name": "Google Calendar", "type": "Free tool", "what": "Build the actual before/after calendar mockup here (a free personal Google account works).", "free": true, "url": "#" },
+        { "name": "Google Calendar Help Center", "type": "Docs", "what": "Recurring events, working hours, and focus-time features you'll use in the rebuild.", "free": true, "url": "#" },
+        { "name": "Eisenhower Matrix — free explainer", "type": "Docs", "what": "The urgent/important framework you'll use to decide what gets protected first.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Dan Reyes is regional director at a mid-size logistics company. His calendar has 11–14 meetings a day, back-to-back, zero focus time, and three standing meetings nobody can explain the purpose of anymore.",
+        "deliverable": "An audit scoring one invented sample week (you build it) against 5 red flags, plus a rebuilt version of that week in a real Google Calendar showing protected focus blocks, a meeting-free morning, and a trimmed recurring-meeting list.",
+        "constraints": [
+          "The rebuilt week must include at least 2 protected 90-minute focus blocks.",
+          "At least 2 of the original recurring meetings must be cut, shortened, or converted to async.",
+          "Every kept meeting needs a one-line stated purpose."
+        ],
+        "steps": [
+          "Construct the messy 'before' week: 12+ meetings across 5 days, mixed durations, no gaps (this is your practice raw material).",
+          "Audit it against 5 red flags: no purpose stated, no prep time, back-to-back with no buffer, recurring with unclear owner, wrong attendee count.",
+          "Decide which meetings to cut, shorten, delegate, or convert to async — write the reason for each.",
+          "Build the 'after' week in a real Google Calendar with color-coded categories and protected focus blocks.",
+          "Write a one-page 'calendar policy' Dan can hand to his team (buffer rules, no-meeting mornings, decline criteria)."
+        ]
+      },
+      "definitionOfDone": [
+        "Before and after week are both viewable (screenshots or shared calendar link).",
+        "Every cut or changed meeting has a documented reason.",
+        "The after week includes real protected focus time, not just fewer meetings.",
+        "The calendar policy doc is one page and usable by someone else."
+      ],
+      "selfCritique": [
+        "Would Dan actually agree to every cut, or did I remove things without a real reason?",
+        "Did I protect focus time in the highest-energy part of the day, or just wherever there was a gap?",
+        "Is the policy doc specific enough to prevent the calendar from drifting back to chaos in a month?"
+      ],
+      "presentIt": "Lead with the number: 'Cut a 14-meeting day to 8, added 3 hours of protected focus time per week.' Show the before/after calendar screenshots side by side.",
+      "stretch": "Add a delegation matrix: for every cut meeting, name who could attend instead and draft the handoff message."
+    },
+    {
+      "id": "quickbooks-reconciliation-cleanup",
+      "title": "Reconcile Three Months of Messy Transactions",
+      "track": "bookkeeping",
+      "accent": "emerald",
+      "icon": "receipt",
+      "difficulty": "Intermediate",
+      "time": "3–5 hours",
+      "proves": "You can take an unreconciled set of books and bring them current and audit-ready — the single skill that makes bookkeepers indispensable to a client.",
+      "prerequisites": [
+        { "skill": "Double-entry bookkeeping basics (debits, credits, chart of accounts)", "why": "Reconciliation is meaningless if you don't understand what a transaction should hit.", "ifYouDont": "Intuit's free QuickBooks Online Certification course covers this from zero." },
+        { "skill": "Bank reconciliation workflow inside QuickBooks Online or Xero", "why": "You need to actually run the reconciliation tool, not just understand the theory.", "ifYouDont": "QuickBooks Online's own free trial plus its in-app guided tour." }
+      ],
+      "resources": [
+        { "name": "QuickBooks Online Certification", "type": "Free course", "what": "Official Intuit training — covers chart of accounts, reconciliation, and reporting.", "free": true, "url": "#" },
+        { "name": "QuickBooks Online free trial", "type": "Free tool", "what": "30-day free trial — do the actual reconciliation work inside the real tool, not a spreadsheet mockup.", "free": true, "url": "#" },
+        { "name": "Kaggle sample bank transaction datasets", "type": "Dataset", "what": "Public sample transaction CSVs you can import as your practice client's messy bank feed.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Riverside Coffee Roasters (a fictional 2-location café) hasn't reconciled its books since a bookkeeper quit three months ago. Owner transactions, duplicate vendor entries, and uncategorized deposits are piling up.",
+        "deliverable": "A QuickBooks Online (free trial) company file with 3 months of sample transactions imported, fully reconciled, chart of accounts cleaned up, and a one-page cleanup report documenting every issue you found and fixed.",
+        "constraints": [
+          "Every transaction must be categorized — nothing left in 'Uncategorized.'",
+          "Any duplicate must be identified and flagged, not silently deleted.",
+          "The reconciliation must tie the ending bank balance to the statement balance exactly."
+        ],
+        "steps": [
+          "Set up a free QuickBooks Online trial and create a practice company.",
+          "Import or manually enter ~60–100 sample transactions across 3 months (use a public sample dataset or build a realistic mix of sales, COGS, payroll, and owner draws).",
+          "Build/clean the chart of accounts to fit a small café business.",
+          "Categorize every transaction, flagging anything ambiguous.",
+          "Run the bank reconciliation for each of the 3 months until it ties out.",
+          "Write a cleanup report: what was wrong, what you fixed, what the owner should watch for going forward."
+        ]
+      },
+      "definitionOfDone": [
+        "All 3 months show 'Reconciled' status with zero variance.",
+        "Zero transactions remain in an uncategorized or ask-my-accountant bucket.",
+        "The cleanup report lists at least 5 specific issues found and how each was resolved.",
+        "A basic P&L for the period can be generated without errors."
+      ],
+      "selfCritique": [
+        "If the owner asked me to explain any single categorization, could I defend it?",
+        "Did I actually investigate ambiguous transactions, or guess and move on?",
+        "Does my cleanup report read like real findings, or like generic bookkeeping advice?"
+      ],
+      "presentIt": "Lead with the before/after: '3 months, 0% reconciled → 100% reconciled, audit-ready in under a week.' Screenshot the reconciliation summary screen — it's the single most convincing proof in bookkeeping.",
+      "stretch": "Add a recurring-transaction rule set (bank rules) that would auto-categorize 80% of future transactions without manual work."
+    },
+    {
+      "id": "ar-aging-cleanup",
+      "title": "Build an Accounts Receivable Aging Cleanup",
+      "track": "bookkeeping",
+      "accent": "emerald",
+      "icon": "banknote",
+      "difficulty": "Intermediate",
+      "time": "2–3 hours",
+      "proves": "You can turn a wall of overdue invoices into a prioritized collection plan — the difference between a bookkeeper and a bookkeeper who actually protects cash flow.",
+      "prerequisites": [
+        { "skill": "Accounts receivable basics (invoice, aging buckets, days sales outstanding)", "why": "You need to know what 30/60/90-day buckets mean before you can triage them.", "ifYouDont": "Xero's free 'Accounts Receivable 101' help articles." },
+        { "skill": "Spreadsheet formulas (SUMIF, conditional formatting)", "why": "The aging report and prioritization live in a spreadsheet you build yourself.", "ifYouDont": "DevUp's tracker-building lab at /build teaches the exact schema pattern you need." }
+      ],
+      "resources": [
+        { "name": "Xero Advisor Certification", "type": "Free course", "what": "Covers AR workflows and aging reports inside Xero.", "free": true, "url": "#" },
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the aging tracker and collection-priority sheet here.", "free": true, "url": "#" },
+        { "name": "SCORE free templates library", "type": "Docs", "what": "Reference real invoice/AR terminology used by small businesses (study only, don't copy).", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Bright Path Tutoring (a fictional small tutoring agency, 30 active family clients) has $18,400 in unpaid invoices, some over 90 days old, and no idea which ones are actually at risk of never getting paid.",
+        "deliverable": "An AR aging spreadsheet (30 invented but realistic invoices) with 30/60/90+ day buckets, a risk score per client, and a written collection plan with a specific message template for each aging bucket.",
+        "constraints": [
+          "Every invoice needs an aging bucket calculated by formula, not typed in by hand.",
+          "The oldest 20% of balances must have an individual follow-up plan, not a generic template.",
+          "Collection messages must escalate in tone/urgency by bucket — 30-day and 90-day can't read the same."
+        ],
+        "steps": [
+          "Build 30 realistic invoice records: client name, invoice date, amount, due date.",
+          "Add a formula-driven aging bucket column (Current / 30 / 60 / 90+).",
+          "Add conditional formatting so overdue severity is visible at a glance.",
+          "Calculate total dollars at risk per bucket and total days sales outstanding.",
+          "Write 3 escalating collection message templates (friendly reminder, firm follow-up, final notice).",
+          "Build a short collection plan prioritizing the highest-dollar, oldest-aging accounts first."
+        ]
+      },
+      "definitionOfDone": [
+        "Aging buckets are 100% formula-driven, not manually assigned.",
+        "Total dollars at risk is calculated and correctly summed per bucket.",
+        "All 3 escalation message templates exist and are meaningfully different in tone.",
+        "The top 5 highest-risk accounts have a specific, individual next action noted."
+      ],
+      "selfCritique": [
+        "If a client asked why I prioritized one overdue account over another, do I have a real reason?",
+        "Would the 90-day message actually get me paid, or does it read as passive as the 30-day one?",
+        "Did I build a formula that recalculates automatically if I change today's date?"
+      ],
+      "presentIt": "Lead with the dollar figure: '$18,400 in receivables triaged into a prioritized 3-week collection plan.' Show the aging summary table as the hero visual — clients respond to the number.",
+      "stretch": "Add a DSO (days sales outstanding) trend chart and a proposed late-payment policy (deposit requirements, interest terms) so the backlog doesn't recur."
+    },
+    {
+      "id": "startup-expense-audit",
+      "title": "Audit a Startup's Spending for Waste",
+      "track": "bookkeeping",
+      "accent": "emerald",
+      "icon": "pie-chart",
+      "difficulty": "Starter",
+      "time": "2 hours",
+      "proves": "You can read raw expense data and surface real savings — proof you think like a financial partner, not just a data-entry clerk.",
+      "prerequisites": [
+        { "skill": "Reading a P&L / expense report and recognizing common waste categories (duplicate subscriptions, unused seats, category creep)", "why": "The whole audit is pattern recognition across real spend categories.", "ifYouDont": "DevUp's /method FIND drill, plus any free 'startup burn rate' explainer." },
+        { "skill": "Basic spreadsheet pivot tables or SUMIF grouping", "why": "You need to group and total expenses by vendor/category to spot the waste.", "ifYouDont": "Google Sheets' own free pivot table tutorial in the Help Center." }
+      ],
+      "resources": [
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the expense audit and pivot summary here.", "free": true, "url": "#" },
+        { "name": "Public SaaS spend benchmark reports", "type": "Docs", "what": "Free published benchmarks on typical SaaS spend per employee — use to judge if a line item looks high.", "free": true, "url": "#" },
+        { "name": "Public startup expense/burn breakdowns (Indie Hackers, r/SaaS threads)", "type": "Docs", "what": "Real founders sharing real expense breakdowns — study the categories, not the numbers.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Loopline (a fictional 12-person B2B SaaS startup) is burning faster than expected. The founder exports a year of expense data and asks: 'Where is this actually going, and what can we cut without hurting the team?'",
+        "deliverable": "A 12-month expense audit (build ~80 realistic line items yourself: software subscriptions, contractor payments, ads, travel) grouped by category, with the top 10 waste candidates flagged and a specific dollar-amount savings recommendation for each.",
+        "constraints": [
+          "Every flagged item needs a stated reason (duplicate tool, unused seats, better alternative, wrong plan tier).",
+          "Recommendations must total to a specific annual savings number, not a vague estimate.",
+          "At least 3 flagged items must be software/SaaS spend — the most common startup leak."
+        ],
+        "steps": [
+          "Build ~80 realistic expense line items across 12 months and 6–8 categories.",
+          "Group and total spend by category and by vendor using pivot tables.",
+          "Identify duplicate or overlapping tools (e.g. two project management apps).",
+          "Flag the top 10 waste candidates with a one-line reason each.",
+          "Calculate the total annual savings if all 10 recommendations were implemented.",
+          "Write a one-page summary memo for the founder, ranked by savings size."
+        ]
+      },
+      "definitionOfDone": [
+        "Pivot table correctly totals spend by category and by vendor.",
+        "10 waste items are flagged, each with a specific dollar impact and reason.",
+        "Total savings figure is calculated, not estimated by eyeballing.",
+        "The memo is ranked biggest-savings-first, not in the order you found them."
+      ],
+      "selfCritique": [
+        "Is every flagged item a real waste pattern, or did I pad the list to hit 10?",
+        "Would cutting my top recommendation actually hurt the team's ability to work?",
+        "Did I total the savings correctly, or is the headline number inflated?"
+      ],
+      "presentIt": "Lead with the annual savings figure in bold: 'Found $14,200/year in recoverable spend across 10 line items.' The pivot table screenshot plus the ranked memo is the whole portfolio piece.",
+      "stretch": "Add a spend policy — approval thresholds and a quarterly subscription-audit cadence — so the waste doesn't come back."
+    },
+    {
+      "id": "public-brand-social-audit",
+      "title": "Audit a Real Public Brand's Social Presence",
+      "track": "social-media",
+      "accent": "amber",
+      "icon": "search",
+      "difficulty": "Starter",
+      "time": "2 hours",
+      "proves": "You can diagnose why a brand's social isn't working using only public data — the exact research skill clients pay a social media manager to have.",
+      "prerequisites": [
+        { "skill": "Reading engagement signals (likes/comments/shares relative to follower count, not absolute numbers)", "why": "A brand with 500k followers and 40 likes per post is doing worse than one with 5k followers and 300 likes — the ratio is what matters, not the raw count.", "ifYouDont": "Meta's free Social Media Marketing course covers engagement-rate basics." },
+        { "skill": "Content calendar structure (pillars, cadence, format mix)", "why": "The audit ends in a calendar recommendation — you need the shape of one first.", "ifYouDont": "DevUp's /build portfolio lab or Canva's free content calendar course." }
+      ],
+      "resources": [
+        { "name": "Meta Social Media Marketing", "type": "Free course", "what": "Official Meta training on content strategy and engagement metrics.", "free": true, "url": "#" },
+        { "name": "Any real public brand's Instagram/TikTok/LinkedIn (your choice)", "type": "Free tool", "what": "Your actual audit subject — no login needed, just their public posts from the last 30 days.", "free": true, "url": "#" },
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "You'll need this to actually design the 3 finished posts for the deliverable.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Pick one real, public local or regional brand (a café, gym, boutique, or small e-commerce shop) with an active but under-performing social account — you're auditing it cold, the way a prospective client would let you.",
+        "deliverable": "A written audit (posting cadence, format mix, engagement-rate calculation, tone consistency, bio/link-in-bio effectiveness) plus a 30-day content calendar and 3 fully finished posts (real graphics in Canva, real captions) that fix the biggest gap you found.",
+        "constraints": [
+          "Audit must cover their last 15+ posts minimum, not a cherry-picked sample.",
+          "You must calculate an actual engagement rate, not describe it qualitatively.",
+          "The 3 finished posts must be publish-ready — full caption, hashtag set, and a real designed graphic."
+        ],
+        "steps": [
+          "Choose a real, public brand's account and log their last 15–20 posts.",
+          "Calculate engagement rate per post and average it; note posting cadence and format mix (photo/video/carousel).",
+          "Identify the single biggest gap (inconsistent posting, weak captions, no video, unclear bio, no CTA).",
+          "Design a 30-day content calendar with 3 content pillars addressing that gap.",
+          "Design and write 3 fully finished posts in Canva that demonstrate the fix.",
+          "Write a one-page audit summary a business owner could read in 3 minutes."
+        ]
+      },
+      "definitionOfDone": [
+        "Engagement rate is calculated with a shown formula, not just stated as a number.",
+        "The single biggest gap is named specifically, backed by evidence from the post data.",
+        "30-day calendar has clear pillars and a stated cadence (e.g. 4x/week).",
+        "All 3 finished posts are complete — graphic, caption, hashtags — ready to publish."
+      ],
+      "selfCritique": [
+        "Would this brand's actual owner recognize the gap I identified as their real problem?",
+        "Do my 3 sample posts sound like this brand's voice, or like generic social media copy?",
+        "Did I calculate engagement rate correctly (engagement ÷ followers, not ÷ posts)?"
+      ],
+      "presentIt": "Present as a case study: brand name, before engagement rate, the gap you found, and your 3 finished posts as visual proof. Never claim you worked for the brand — label it clearly as an unsolicited audit/practice project.",
+      "stretch": "Turn the audit into a cold outreach message pitching the brand owner directly, using the application-message lab's 4-part structure."
+    },
+    {
+      "id": "30-day-content-calendar-system",
+      "title": "Build a Repeatable 30-Day Content Calendar System",
+      "track": "social-media",
+      "accent": "amber",
+      "icon": "calendar-days",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can design a content system that survives past day one — pillars, cadence, and a repeatable production process, not just a list of post ideas.",
+      "prerequisites": [
+        { "skill": "Content pillar strategy (3–5 recurring themes that support a brand's goals)", "why": "A calendar without pillars is just a list of random ideas that runs out in two weeks.", "ifYouDont": "HubSpot's free content strategy course covers pillar-based planning." },
+        { "skill": "Spreadsheet-based tracker design", "why": "The calendar itself is a tracker — status, dates, and an owner column.", "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab teaches the exact schema." }
+      ],
+      "resources": [
+        { "name": "HubSpot Content Marketing Certification", "type": "Free course", "what": "Covers pillar strategy, cadence planning, and repurposing content across formats.", "free": true, "url": "#" },
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual 30-day calendar tracker here — status column, dates, format, caption draft.", "free": true, "url": "#" },
+        { "name": "Buffer's free content calendar guide", "type": "Docs", "what": "Real-world cadence benchmarks by platform (how often to post on IG vs TikTok vs LinkedIn).", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Coastal Grind (a fictional independent coffee roastery, one location, growing wholesale side) wants a consistent social presence but has posted only 4 times in the last 2 months, with no plan.",
+        "deliverable": "A 30-day content calendar spreadsheet with 4 content pillars, a stated posting cadence per platform, and every single day's post pre-planned with format, hook idea, and caption draft — plus 3 of those days fully designed and written as finished posts.",
+        "constraints": [
+          "Exactly 4 content pillars, each tied to a specific business goal (e.g. wholesale leads, in-store foot traffic, brand story, product education).",
+          "Every calendar row needs a format (photo/video/carousel/reel), not just a topic.",
+          "The tracker must have a status column (Idea / Drafted / Scheduled / Posted) using data validation, per the tracker-lab pattern."
+        ],
+        "steps": [
+          "Define 4 content pillars mapped to Coastal Grind's actual business goals.",
+          "Build the 30-day calendar spreadsheet: date, pillar, format, hook, caption draft, status.",
+          "Fill in all 30 days with real, specific ideas — no placeholder 'post something' rows.",
+          "Apply data validation to the status column and conditional formatting for overdue/unposted days.",
+          "Fully design and write 3 representative days as finished, publish-ready posts.",
+          "Write a short 'how to keep this alive' note: who updates it, how often, what happens when an idea runs dry."
+        ]
+      },
+      "definitionOfDone": [
+        "All 30 days are filled with distinct, specific content ideas — no repeats, no filler.",
+        "Every pillar appears roughly evenly across the 30 days, not lopsided.",
+        "Status column uses a real dropdown (data validation), not free text.",
+        "3 finished posts exist as real deliverables, not just calendar rows."
+      ],
+      "selfCritique": [
+        "If I deleted the pillar labels, could someone still tell which pillar each post belongs to?",
+        "Is this calendar something a real business could actually execute, or is it aspirational fluff?",
+        "Did I vary the format enough, or is it 30 days of static photos?"
+      ],
+      "presentIt": "Show the full calendar as a scrollable screenshot alongside the 3 finished posts. Lead with the system, not the ideas: 'Built a 30-day content engine with 4 pillars and a self-sustaining production tracker.'",
+      "stretch": "Add a repurposing map showing how each pillar's content can be cut into 3 different formats (a Reel becomes a carousel becomes a caption-only post) to triple output without new ideas."
+    },
+    {
+      "id": "ugc-style-video-series",
+      "title": "Produce a 3-Part Short-Form Video Series for a Public Product",
+      "track": "social-media",
+      "accent": "amber",
+      "icon": "video",
+      "difficulty": "Advanced",
+      "time": "4–5 hours",
+      "proves": "You can plan, shoot, and edit short-form video that follows a proven hook-retention-CTA structure — the highest-leverage, highest-pay skill in social media right now.",
+      "prerequisites": [
+        { "skill": "Short-form video structure (hook in first 2 seconds, retention pacing, clear CTA)", "why": "Random footage with music isn't a strategy — the structure is what makes it convert.", "ifYouDont": "DevUp's CapCut Editing Masterclass under the Social Media track, or CapCut's own free tutorials." },
+        { "skill": "Basic phone-shot video (framing, lighting, stable shots) and CapCut editing", "why": "You're producing real finished video, not a storyboard — you need the actual production skill.", "ifYouDont": "CapCut's in-app tutorials (free) walk through cuts, captions, and pacing." }
+      ],
+      "resources": [
+        { "name": "CapCut", "type": "Free tool", "what": "Free mobile/desktop editor — shoot and edit all 3 videos here.", "free": true, "url": "#" },
+        { "name": "TikTok Creative Center (public, free)", "type": "Docs", "what": "Real published top-performing ad and organic examples by category — study structure, don't copy content.", "free": true, "url": "#" },
+        { "name": "CapCut Editing Masterclass", "type": "Video", "what": "DevUp's own walkthrough of short-form editing fundamentals.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "You're building a UGC-style (user-generated-content style) video series for a real product you personally own or can access for free (a phone app, a drugstore skincare item, a snack, a public library service) — treat it like a real brand deal even though nobody asked you to.",
+        "deliverable": "3 finished short-form videos (15–45 seconds each, vertical, captioned) following a hook → problem → demo → CTA structure, each targeting a different angle on the same product (e.g. a pain-point angle, a comparison angle, a 'day in the life' angle).",
+        "constraints": [
+          "Each video must hook within the first 2 seconds — no slow intros.",
+          "All 3 videos must have burned-in captions (accessibility + muted-autoplay reality).",
+          "Each video needs a distinct angle — 3 versions of the same script don't count."
+        ],
+        "steps": [
+          "Pick a real, accessible product and study 5 real public examples of similar UGC-style content for structure.",
+          "Write 3 short scripts, each with a different angle, using a hook/problem/demo/CTA outline.",
+          "Shoot raw footage for all 3 (phone camera is fine — natural light, stable frame).",
+          "Edit each in CapCut: cuts on beat, captions burned in, background audio at appropriate level.",
+          "Export all 3 in vertical 9:16 format, ready to publish.",
+          "Write a one-line strategic rationale for each video's angle."
+        ]
+      },
+      "definitionOfDone": [
+        "All 3 videos are fully edited, captioned, and exported — not scripts or storyboards.",
+        "Each hooks within 2 seconds (test by watching only the first 2 seconds — does it make sense to keep watching?).",
+        "Captions are accurate and burned in, not relying on platform auto-captions.",
+        "Each video has a clearly different angle from the other two."
+      ],
+      "selfCritique": [
+        "Would I stop scrolling in the first 2 seconds if this appeared in my own feed?",
+        "Is the CTA clear, or does the video just end?",
+        "Do the 3 videos actually feel different, or are they the same video with different words?"
+      ],
+      "presentIt": "Present as a mini case study: the product, the 3 angles chosen and why, the videos, and what you'd test next (a 4th angle, a different hook style). This is the single strongest portfolio piece for a video-focused social role.",
+      "stretch": "Post all 3 publicly on a real account and track actual view/engagement data for 7 days — real performance data beats any mockup."
+    },
+    {
+      "id": "agency-sprint-rescue",
+      "title": "Rescue a Chaotic Agency Sprint Board",
+      "track": "project-management",
+      "accent": "indigo",
+      "icon": "kanban",
+      "difficulty": "Intermediate",
+      "time": "2–3 hours",
+      "proves": "You can take an unmanaged task list and turn it into a board that actually tells the team what to do next — the core job of a PM.",
+      "prerequisites": [
+        { "skill": "Kanban/sprint basics (backlog, in-progress, review, done; WIP limits)", "why": "Without a structure, you're just moving cards around, not managing a sprint.", "ifYouDont": "Asana Academy's free 'Kanban fundamentals' course." },
+        { "skill": "Writing a task/user story that a stranger could execute without asking questions", "why": "A board full of vague tasks ('fix the thing') is unmanageable no matter how it's organized.", "ifYouDont": "DevUp's SOP-building lab at /build teaches the same one-action-per-step discipline." }
+      ],
+      "resources": [
+        { "name": "Asana Academy", "type": "Free course", "what": "Official Asana training on sprint boards, dependencies, and workload views.", "free": true, "url": "#" },
+        { "name": "Asana / ClickUp / Trello free tier", "type": "Free tool", "what": "Build the actual rescued board here (any of the three has a generous free plan).", "free": true, "url": "#" },
+        { "name": "Google Project Management Certificate (audit free)", "type": "Free course", "what": "Coursera lets you audit the full course free — covers sprint planning and risk tracking.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Halden Creative (a fictional 8-person design agency) runs client work through one giant unsorted task list — 60+ tasks, no owners on a third of them, no due dates, three tasks marked 'urgent' that have sat for a month.",
+        "deliverable": "A rebuilt sprint board (in Asana, ClickUp, or Trello free tier) with 60 realistic tasks organized into a proper Kanban structure — clear columns, WIP limits, every task with an owner, due date, and client tag — plus a one-page 'how we run sprints now' SOP.",
+        "constraints": [
+          "Every task must have an owner and a due date — no exceptions, even placeholder tasks.",
+          "WIP limit on the 'In Progress' column, enforced and explained.",
+          "At least 10 of the original 60 tasks must be identified as duplicates, stale, or no longer needed and explicitly archived (not silently deleted)."
+        ],
+        "steps": [
+          "Build the messy 'before' state: 60 realistic agency tasks across 4 client projects, deliberately disorganized (this is your practice raw material).",
+          "Audit the list: flag duplicates, stale tasks, and missing owners/dates.",
+          "Design the board structure: columns, WIP limits, tagging system by client.",
+          "Migrate and clean all 60 tasks into the new board with full metadata.",
+          "Archive (don't delete) the flagged duplicates/stale items with a note on why.",
+          "Write the one-page sprint SOP: how a task enters the board, how WIP limits are enforced, what 'done' means."
+        ]
+      },
+      "definitionOfDone": [
+        "100% of tasks on the new board have an owner and a due date.",
+        "WIP limit is set and would visibly block overloading a column.",
+        "At least 10 stale/duplicate tasks were found, archived, and logged with a reason.",
+        "The SOP defines a clear Definition of Done for at least one task type."
+      ],
+      "selfCritique": [
+        "Could a new hire look at this board and know exactly what to work on next?",
+        "Did I actually reduce chaos, or just make the same chaos look tidier?",
+        "Is my WIP limit realistic for an 8-person team, or arbitrary?"
+      ],
+      "presentIt": "Lead with the before/after count: '60 unsorted tasks, 1/3 with no owner → fully triaged sprint board with WIP limits and a working SOP.' Screenshot both board states side by side.",
+      "stretch": "Add a workload view showing each team member's current load, and flag anyone over-allocated relative to the others."
+    },
+    {
+      "id": "cross-team-status-dashboard",
+      "title": "Build a Cross-Team Status Reporting Dashboard",
+      "track": "project-management",
+      "accent": "indigo",
+      "icon": "layout-dashboard",
+      "difficulty": "Advanced",
+      "time": "3–4 hours",
+      "proves": "You can turn scattered project updates into a single dashboard leadership can read in 60 seconds — the artifact that gets PMs trusted with bigger scope.",
+      "prerequisites": [
+        { "skill": "RAG (Red/Amber/Green) status reporting and risk tracking", "why": "A dashboard without a clear status logic is just a pretty spreadsheet.", "ifYouDont": "Google's free Project Management Certificate module on stakeholder reporting." },
+        { "skill": "Spreadsheet formulas for status roll-ups (IF/nested IF, conditional formatting)", "why": "The dashboard should calculate status from real data, not rely on manual color-picking.", "ifYouDont": "DevUp's tracker-building lab covers the same formula-driven status logic." }
+      ],
+      "resources": [
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the dashboard here — formulas, conditional formatting, and a summary view.", "free": true, "url": "#" },
+        { "name": "Google Project Management Certificate", "type": "Free course", "what": "Audit free on Coursera — covers stakeholder reporting formats.", "free": true, "url": "#" },
+        { "name": "ClickUp's free dashboard templates gallery", "type": "Docs", "what": "Study (don't copy) real dashboard structures for the layout pattern.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Vantar Labs (a fictional 30-person startup, 5 concurrent product initiatives) has no single view of project health — the CEO currently has to ping 5 different PMs individually before every board meeting.",
+        "deliverable": "A single-sheet dashboard rolling up 5 invented project workstreams into a RAG status, calculated automatically from underlying task data (not manually typed), plus a one-page 'how to read this' key for executives.",
+        "constraints": [
+          "RAG status must be calculated by formula from underlying data (e.g. percent of tasks overdue, days to deadline), not manually assigned.",
+          "Dashboard must fit on one screen without scrolling — this is an executive view, not a task list.",
+          "Each project needs a one-line 'why this status' note, clearly linked to source data."
+        ],
+        "steps": [
+          "Build 5 invented project workstreams, each with 10–15 underlying tasks with due dates and completion status.",
+          "Define the RAG logic explicitly (e.g. Red = any milestone overdue by 5+ days, Amber = at risk, Green = on track).",
+          "Build formulas that calculate each project's status automatically from the task data.",
+          "Design the executive summary view: one row per project, status, key risk, next milestone.",
+          "Apply conditional formatting so the whole dashboard is scannable by color alone.",
+          "Write the 'how to read this' key defining exactly what each status means and what action it implies."
+        ]
+      },
+      "definitionOfDone": [
+        "Every RAG status is formula-driven and changes automatically if underlying task data changes.",
+        "The executive view fits on one screen with no horizontal or excess vertical scroll.",
+        "Each project row states a specific risk or reason for its status, not a generic label.",
+        "The status-definition key is written clearly enough for a non-PM exec to self-serve."
+      ],
+      "selfCritique": [
+        "If I changed one task's due date, does the dashboard status update correctly on its own?",
+        "Could a CEO glance at this for 30 seconds and know which project needs their attention?",
+        "Is my RAG logic defensible, or did I just eyeball the colors to look good?"
+      ],
+      "presentIt": "Lead with the time saved: 'Replaced 5 individual status pings before every board meeting with one auto-updating dashboard.' Screenshot the executive view as the hero image.",
+      "stretch": "Add a trend view showing each project's status over the last 4 simulated weeks, so leadership can see trajectory, not just a point-in-time snapshot."
+    },
+    {
+      "id": "support-macro-library",
+      "title": "Build a Support Macro & Response Library",
+      "track": "customer-success",
+      "accent": "emerald",
+      "icon": "messages-square",
+      "difficulty": "Starter",
+      "time": "2 hours",
+      "proves": "You can turn repetitive support questions into fast, on-brand, still-human responses — the skill that lets a support team handle 3x the volume without feeling robotic.",
+      "prerequisites": [
+        { "skill": "Customer support tone (empathetic but efficient, not scripted-sounding)", "why": "A macro that reads like a robot defeats the purpose — the client's brand voice has to survive templating.", "ifYouDont": "HubSpot's free Service Hub course covers tone and macro design." },
+        { "skill": "Common support ticket categorization (billing, technical, general/how-to, complaint)", "why": "You can't build useful macros without knowing what the recurring ticket types actually are.", "ifYouDont": "Zendesk's free help-center articles on ticket categorization." }
+      ],
+      "resources": [
+        { "name": "HubSpot Service Hub", "type": "Free course", "what": "Covers support workflows, macros, and tone-of-voice guidelines.", "free": true, "url": "#" },
+        { "name": "A real free SaaS tool's public help center (your choice)", "type": "Docs", "what": "Study their actual support-facing language and common questions — this is material to study, not copy.", "free": true, "url": "#" },
+        { "name": "Google Docs", "type": "Free tool", "what": "Build the actual macro library here, organized and ready to hand to a support team.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Pixelroom (a fictional design-tool SaaS, ~2,000 users) has one support person answering the same 15 questions over and over, writing every reply from scratch, with response times creeping past 24 hours.",
+        "deliverable": "A 15-macro support library covering the 4 most common ticket categories (billing, technical, how-to, complaint/refund), each macro with a merge-field placeholder for personalization, plus a one-page usage guide on when to use which macro and how to keep replies from sounding canned.",
+        "constraints": [
+          "Every macro must include at least one merge-field placeholder (e.g. {{customer_name}}, {{plan_type}}) — no fully generic replies.",
+          "At least 3 macros must handle a difficult scenario (refund denial, angry customer, bug with no fix ETA) — not just easy how-to questions.",
+          "Each macro capped at 120 words — support replies that ramble don't get read."
+        ],
+        "steps": [
+          "Research a real SaaS product's public help docs to identify realistic recurring question types.",
+          "List the 15 most common ticket types across the 4 categories.",
+          "Draft each macro with merge fields, staying under 120 words and matching a warm-but-efficient tone.",
+          "Write 3 'hard mode' macros for genuinely difficult scenarios (angry customer, denied refund, no ETA).",
+          "Write the usage guide: when to send as-is vs. when to personalize further, and a rule against pasting into an emotionally escalated conversation without editing."
+        ]
+      },
+      "definitionOfDone": [
+        "All 15 macros are written, categorized, and under the 120-word cap.",
+        "Every macro has at least one merge field.",
+        "3 macros specifically address a hard/emotional scenario, not just routine FAQs.",
+        "The usage guide states a clear rule for when NOT to use a macro unedited."
+      ],
+      "selfCritique": [
+        "If I received this reply as a frustrated customer, would it feel human or robotic?",
+        "Does the refund-denial macro actually de-escalate, or does it sound defensive?",
+        "Are the merge fields realistic — data a support agent would actually have on hand?"
+      ],
+      "presentIt": "Present the library as a formatted doc with categories clearly labeled. Lead with the practical value: '15 macros covering 80% of recurring tickets, cutting average reply-drafting time from 5 minutes to 30 seconds.'",
+      "stretch": "Add a tiered escalation macro set — first reply, follow-up after 48 hours of silence, and final notice — for tickets that go quiet mid-conversation."
+    },
+    {
+      "id": "onboarding-knowledge-base",
+      "title": "Write a Knowledge-Base Article Set for a Confusing Free Feature",
+      "track": "customer-success",
+      "accent": "emerald",
+      "icon": "book-open",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can turn a genuinely confusing product feature into documentation that actually reduces support tickets — proof you can think like both a user and a product person.",
+      "prerequisites": [
+        { "skill": "Technical/how-to writing (numbered steps, one action per step, screenshots where needed)", "why": "Knowledge-base articles live or die on clarity — vague steps generate more tickets, not fewer.", "ifYouDont": "DevUp's SOP-building lab teaches the identical one-action-per-step discipline." },
+        { "skill": "Basic screenshot annotation (arrows, boxes, numbered callouts)", "why": "Text-only instructions for UI-heavy features lose users fast.", "ifYouDont": "Any free tool works — Windows Snipping Tool, macOS Preview, or Canva's free annotation features." }
+      ],
+      "resources": [
+        { "name": "A real free-tier SaaS tool with a genuinely confusing feature (your choice)", "type": "Free tool", "what": "Your actual subject — use the free tier, find the confusing flow firsthand.", "free": true, "url": "#" },
+        { "name": "Zendesk Support", "type": "Free course", "what": "Covers knowledge-base structure and self-service support best practices.", "free": true, "url": "#" },
+        { "name": "Notion (free tier)", "type": "Free tool", "what": "Build and publish the article set here — real formatting, real inline images.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Pick one real, free-tier SaaS tool with a feature you (or people in its public community/support forums) find genuinely confusing — e.g. a permissions system, an export/import flow, a pricing-tier limit that's unclear. This is real friction, not invented.",
+        "deliverable": "A 3-article knowledge-base set (a getting-started article, a troubleshooting/FAQ article, and an advanced-use-case article) covering that one confusing feature end to end, with annotated screenshots, written in the tool's actual voice/terminology.",
+        "constraints": [
+          "All 3 articles must reference the actual current UI of the tool (test it live, don't guess from memory).",
+          "At least 6 annotated screenshots total across the set.",
+          "The troubleshooting article must address at least 3 real confusion points you can point to (from your own use or public forum threads)."
+        ],
+        "steps": [
+          "Use the tool's free tier yourself and find where you (or the public forums) get stuck on this feature.",
+          "Outline the 3-article structure: getting-started, troubleshooting/FAQ, advanced use case.",
+          "Walk through the feature step by step, screenshotting every meaningful UI state.",
+          "Write the getting-started article with numbered, one-action steps.",
+          "Write the troubleshooting article addressing the specific confusion points you found.",
+          "Write the advanced article for a power-user scenario, and annotate all screenshots."
+        ]
+      },
+      "definitionOfDone": [
+        "All 3 articles are complete, formatted, and published in a real doc tool (Notion or similar).",
+        "Every step-heavy section has a supporting annotated screenshot.",
+        "The troubleshooting article names real, specific confusion points — not a generic 'having trouble? contact support.'",
+        "Terminology matches the tool's actual UI exactly (no invented button names)."
+      ],
+      "selfCritique": [
+        "Could someone who's never opened this feature complete it using only my getting-started article?",
+        "Did my troubleshooting article solve real friction, or restate the obvious?",
+        "Would the tool's own support team find this useful enough to actually publish?"
+      ],
+      "presentIt": "Present as a labeled case study: the tool, the specific feature, the friction point, and the 3 articles (link to the published Notion pages). Note explicitly this was unsolicited practice work, not commissioned by the company.",
+      "stretch": "Send the article set as a genuinely helpful, no-strings message to the tool's support or community team — some companies do publish community-contributed docs."
+    },
+    {
+      "id": "listing-feedback-tracker",
+      "title": "Build a Showing Feedback & Listing Health Tracker",
+      "track": "real-estate",
+      "accent": "coral",
+      "icon": "clipboard-list",
+      "difficulty": "Starter",
+      "time": "2 hours",
+      "proves": "You can turn scattered showing feedback into a clear signal on whether a listing needs a price cut, a staging fix, or just more time — the exact judgment agents pay an online professional to have.",
+      "prerequisites": [
+        { "skill": "Real estate showing/feedback basics (what agents ask buyers' agents after a showing)", "why": "You need to know what data is worth tracking before you can build the tracker.", "ifYouDont": "Any free 'listing feedback questions' guide from a real estate CRM's blog (Follow Up Boss, KvCore)." },
+        { "skill": "Spreadsheet tracker schema design (unique ID, status dropdown, date trigger)", "why": "This task is a direct application of the tracker-building method to a real estate use case.", "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab." }
+      ],
+      "resources": [
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual tracker here.", "free": true, "url": "#" },
+        { "name": "Follow Up Boss free resources/blog", "type": "Docs", "what": "Real-world showing feedback questions and CRM workflows used by working agents.", "free": true, "url": "#" },
+        { "name": "Public listing data (Zillow/Redfin public listings)", "type": "Dataset", "what": "Use real public listing prices and details as reference so your practice data is realistic.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Agent Priya Nair has a listing that's been on the market 45 days with 12 showings and zero offers. Her feedback is scattered across texts, emails, and memory — she can't tell if it's a price problem or a staging problem.",
+        "deliverable": "A showing feedback tracker (12 realistic showing entries) with structured feedback categories (price, condition, layout, location, staging), a scored summary showing which factor is mentioned most, and a one-page recommendation memo (price cut vs. staging fix vs. hold) backed by the data.",
+        "constraints": [
+          "Every showing entry needs a structured feedback category via dropdown, not free-text only.",
+          "The tracker must calculate which factor was flagged most often, by formula.",
+          "The recommendation memo must cite the actual data (e.g. '7 of 12 showings flagged price'), not just an opinion."
+        ],
+        "steps": [
+          "Research a real comparable public listing for realistic price/detail reference.",
+          "Build 12 realistic showing feedback entries: date, agent, structured category, free-text detail, interest level.",
+          "Add data validation dropdowns for the feedback category and interest level.",
+          "Build a formula-driven summary counting mentions per category.",
+          "Analyze the summary to identify the dominant issue.",
+          "Write a one-page recommendation memo to Priya citing the specific data behind your recommendation."
+        ]
+      },
+      "definitionOfDone": [
+        "All 12 entries are logged with a structured (dropdown) category, not free text alone.",
+        "The summary count is formula-driven and updates if a new entry is added.",
+        "The memo's recommendation directly cites the tracker's data (a specific count or percentage).",
+        "The recommendation is a clear single action, not a hedge."
+      ],
+      "selfCritique": [
+        "Does my recommendation follow logically from the data, or did I decide first and cherry-pick support?",
+        "Would Priya be able to act on this memo immediately, or does it need more explanation?",
+        "Is the tracker something she could keep using for her next listing without me?"
+      ],
+      "presentIt": "Lead with the data-backed recommendation: '12 showings tracked → 7 of 12 flagged price as the primary objection → recommended a $15k price adjustment.' Show the summary table as the visual proof.",
+      "stretch": "Extend the tracker to auto-flag any listing with 10+ showings and zero offers as needing a review, so it becomes a system Priya reuses across her whole pipeline, not a one-off."
+    },
+    {
+      "id": "buyer-lead-followup-system",
+      "title": "Build a Buyer Lead Follow-Up Sequence",
+      "track": "real-estate",
+      "accent": "coral",
+      "icon": "send",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can turn cold or slow-moving leads into a structured nurture sequence — the system that separates agents who convert leads from agents who lose them to silence.",
+      "prerequisites": [
+        { "skill": "Real estate lead lifecycle basics (new lead → nurture → showing-ready → under contract)", "why": "The follow-up cadence has to match where a lead actually is in the funnel, not be one-size-fits-all.", "ifYouDont": "Follow Up Boss's free lead-nurture guide or KvCore's onboarding materials." },
+        { "skill": "Writing warm, non-pushy follow-up copy", "why": "A follow-up sequence that reads as desperate or spammy gets ignored or reported — real estate specifically fights a 'salesy' reputation.", "ifYouDont": "DevUp's application-message lab teaches the same specific-not-generic principle." }
+      ],
+      "resources": [
+        { "name": "Follow Up Boss (free resources)", "type": "Free tool", "what": "Study their public lead-nurture playbooks for realistic cadence timing.", "free": true, "url": "#" },
+        { "name": "Google Sheets + Google Docs", "type": "Free tool", "what": "Build the tracker and the actual message sequence here.", "free": true, "url": "#" },
+        { "name": "Real Estate Support Systems", "type": "Video", "what": "DevUp's own walkthrough of real estate ops systems under the Real Estate track.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Agent Marcus Webb has 40 buyer leads sitting untouched for 2+ weeks in his CRM — inquiries from a public open house sign-in sheet and online form fills that never got a real follow-up beyond an auto-reply.",
+        "deliverable": "A 12-touch, 45-day follow-up sequence (mix of text, email, and call-prompt touches) segmented by lead temperature (hot/warm/cold), with actual written message copy for every touch and a tracker showing where each of 15 sample leads currently sits in the sequence.",
+        "constraints": [
+          "Sequence must be segmented — hot leads get faster/more touches than cold leads, explicitly.",
+          "Every touch needs real, finished copy — no placeholder text.",
+          "The tracker must show current sequence position per lead, using the ID/status/date-trigger schema pattern."
+        ],
+        "steps": [
+          "Define 3 lead temperature tiers and the criteria for each (e.g. hot = requested a showing, warm = engaged with content, cold = no response yet).",
+          "Design the touch cadence per tier (e.g. hot: day 0, 1, 3, 7; cold: day 0, 5, 15, 30).",
+          "Write real copy for all touches — a mix of text, email, and a call-prompt/script.",
+          "Build 15 realistic sample leads with names, source, and current temperature.",
+          "Build the tracker showing each lead's current position in their sequence and next scheduled touch.",
+          "Write a short SOP: how a lead gets classified, and what happens when a lead goes silent past the last touch."
+        ]
+      },
+      "definitionOfDone": [
+        "All touches across all 3 tiers have complete, non-placeholder copy.",
+        "The cadence is visibly different by tier (hot leads touched more, faster).",
+        "Tracker shows a specific next-action date per lead, calculated from their entry date.",
+        "The SOP defines what happens after the final touch with no response."
+      ],
+      "selfCritique": [
+        "Would I personally feel nurtured or harassed if I received this exact sequence as a lead?",
+        "Is the hot-lead cadence actually faster, or did I just relabel the same timing?",
+        "Does the tracker tell Marcus exactly who to contact today without him doing any thinking?"
+      ],
+      "presentIt": "Lead with the scale and the system: '40 stalled leads → a 12-touch, temperature-segmented follow-up system with full message copy and a live tracker.' Show one hot and one cold sequence side by side to prove the differentiation.",
+      "stretch": "Add a re-engagement 'break-up' message for leads that go fully silent past day 45 — the last touch designed to get either a yes or a clean no."
+    },
+    {
+      "id": "form-to-crm-automation",
+      "title": "Build a Form-to-CRM Automation With Zapier or Make",
+      "track": "tech-automation",
+      "accent": "indigo",
+      "icon": "zap",
+      "difficulty": "Intermediate",
+      "time": "2–3 hours",
+      "proves": "You can wire two real tools together into a working automation that eliminates manual data entry — the single most in-demand freelance automation skill right now.",
+      "prerequisites": [
+        { "skill": "Trigger/action automation logic (if this happens in tool A, do this in tool B)", "why": "You need the mental model before you can build in the actual tool.", "ifYouDont": "Zapier's own free 'Automation 101' guide." },
+        { "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure", "why": "You're wiring real tools together — you need to be able to build both ends of the pipe.", "ifYouDont": "Google Forms Help Center (free) for the form side; DevUp's tracker lab for the CRM-sheet side." }
+      ],
+      "resources": [
+        { "name": "Zapier free tier", "type": "Free tool", "what": "Build the real, working automation here (the free tier supports single-step Zaps, enough for this task).", "free": true, "url": "#" },
+        { "name": "Zapier & Make Automation", "type": "Free course", "what": "Vendor-provided course covering trigger/action design and common patterns.", "free": true, "url": "#" },
+        { "name": "Google Forms + Google Sheets", "type": "Free tool", "what": "The two endpoints your automation connects — the form intake and the CRM-style tracker.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Northline Consulting (a fictional 4-person consultancy) collects new-client inquiries through a website contact form, then someone manually copy-pastes each one into a tracking spreadsheet — inconsistently, with a 2-day average lag and occasional lost leads.",
+        "deliverable": "A real, working Zapier (or Make) automation connecting a Google Form to a Google Sheets CRM-style tracker, auto-populating a new row with a unique ID, timestamp, and status on every form submission — plus a written SOP explaining the automation for a non-technical team to trust and maintain it.",
+        "constraints": [
+          "The automation must be live and tested with at least 3 real test submissions, not just configured and untested.",
+          "Every new row must auto-generate a unique lead ID and default status (per the tracker-lab schema pattern).",
+          "The SOP must explain what to do if the automation fails (a manual fallback process), not just assume it always works."
+        ],
+        "steps": [
+          "Build the intake form (Google Forms) with the fields a real consulting inquiry needs.",
+          "Build the destination tracker (Google Sheets) using the tracker-lab schema: unique ID, status dropdown, date trigger, notes.",
+          "Build the Zap/scenario: trigger on form submission, action creates a new sheet row.",
+          "Configure auto-generated fields (ID, timestamp, default status) inside the automation.",
+          "Test with 3 real submissions and verify data lands correctly every time.",
+          "Write the SOP: how it works, how to check if it's broken, and the manual fallback steps."
+        ]
+      },
+      "definitionOfDone": [
+        "The Zap/scenario is live (not just built in draft) and successfully tested with 3+ real submissions.",
+        "Every new row includes a correctly auto-generated unique ID and default status.",
+        "The SOP includes a specific manual fallback process for automation failure.",
+        "No manual copy-paste step remains in the described workflow."
+      ],
+      "selfCritique": [
+        "Did I actually test this with real submissions, or just trust the configuration screen?",
+        "If the Zap silently failed for a week, would anyone notice — and does my SOP address that?",
+        "Would a non-technical team member trust and be able to explain this system to a client?"
+      ],
+      "presentIt": "Show the automation diagram (trigger → action) plus a screenshot of a real test submission landing correctly in the sheet. Lead with the time saved: 'Eliminated a 2-day manual entry lag and its lost-lead risk with one automated Zap.'",
+      "stretch": "Add a second automated step: an auto-confirmation email to the lead and a Slack/email notification to the team the moment a new inquiry arrives."
+    },
+    {
+      "id": "no-code-crm-build",
+      "title": "Build a Lightweight No-Code CRM in Airtable",
+      "track": "tech-automation",
+      "accent": "indigo",
+      "icon": "database",
+      "difficulty": "Advanced",
+      "time": "4 hours",
+      "proves": "You can design and build a real relational database-backed CRM from scratch — proof you understand data structure, not just spreadsheet formulas.",
+      "prerequisites": [
+        { "skill": "Relational data basics (linking two tables instead of duplicating data across rows)", "why": "A real CRM needs contacts linked to deals/interactions, not one giant flat sheet — this is the core skill Airtable tests.", "ifYouDont": "Airtable's own free 'Getting Started' course covers linked records and views." },
+        { "skill": "Automation trigger/action logic", "why": "A CRM that doesn't move data or notify anyone automatically isn't really a CRM, just a database.", "ifYouDont": "Zapier's free Automation 101 — the logic transfers directly to Airtable's own built-in automations." }
+      ],
+      "resources": [
+        { "name": "Airtable free tier", "type": "Free tool", "what": "Build the actual CRM here — the free tier supports everything this task needs.", "free": true, "url": "#" },
+        { "name": "Airtable Universe (public template gallery)", "type": "Docs", "what": "Study real published CRM base structures for the relational pattern — material to study, not to clone wholesale.", "free": true, "url": "#" },
+        { "name": "GoHighLevel Fundamentals", "type": "Free course", "what": "Even though you're building in Airtable, this covers CRM concepts (pipelines, stages, automation) that transfer directly.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Solstice Design Co (a fictional 3-person freelance design collective) tracks clients, projects, and invoices across 3 disconnected spreadsheets that constantly go out of sync — a client's name gets updated in one and not the other two.",
+        "deliverable": "A working Airtable base with 3 linked tables (Contacts, Projects, Invoices), each project linked to a contact and each invoice linked to a project, with at least 2 views (a pipeline/kanban view by project status and a table view filtered to overdue invoices), plus 1 built-in automation (e.g. auto-notify when a project status changes to 'Delivered').",
+        "constraints": [
+          "Tables must be genuinely linked (Airtable link fields), not just similarly-named columns across separate flat tables.",
+          "At least one rollup or lookup field must pull data across the link (e.g. a project showing its contact's company name automatically).",
+          "The automation must be real and tested, not just described."
+        ],
+        "steps": [
+          "Design the schema: 3 tables, their fields, and how they link to each other.",
+          "Build the Contacts table with realistic sample data (10+ contacts).",
+          "Build the Projects table, linked to Contacts, with a status field and at least one rollup/lookup from Contacts.",
+          "Build the Invoices table, linked to Projects, with amount, due date, and paid-status fields.",
+          "Build a kanban view by project status and a filtered view for overdue invoices.",
+          "Build and test one real automation (e.g. status-change notification)."
+        ]
+      },
+      "definitionOfDone": [
+        "All 3 tables are populated with realistic linked sample data (10+ records each).",
+        "At least one lookup/rollup field correctly pulls linked data across tables.",
+        "Both required views (kanban by status, filtered overdue invoices) exist and work correctly.",
+        "The automation has been triggered and tested at least once, with proof (screenshot/log)."
+      ],
+      "selfCritique": [
+        "If I updated a contact's name once, does it correctly reflect everywhere it's referenced?",
+        "Would a real freelancer actually replace their 3 spreadsheets with this, or is something missing?",
+        "Is my schema over-built with fields nobody would actually use, or genuinely lean?"
+      ],
+      "presentIt": "Show the linked-table structure (a quick schema diagram) plus screenshots of both views and the working automation log. Lead with the consolidation story: '3 disconnected spreadsheets → 1 linked CRM with automated status notifications.'",
+      "stretch": "Add a client-facing shared view (Airtable's share-view feature) so Solstice's clients can see their own project status without back-and-forth email updates."
+    },
+    {
+      "id": "ai-support-triage-bot",
+      "title": "Design an AI-Assisted Ticket Triage Workflow",
+      "track": "tech-automation",
+      "accent": "indigo",
+      "icon": "bot",
+      "difficulty": "Advanced",
+      "time": "3–4 hours",
+      "proves": "You can design a working AI-in-the-loop automation — the emerging skill set that separates a tech-automation pro from someone who only knows point-and-click no-code tools.",
+      "prerequisites": [
+        { "skill": "Prompt writing for a classification task (not open-ended chat — a structured, repeatable prompt)", "why": "The AI step has to reliably return a consistent category/priority, not a creative free-text answer.", "ifYouDont": "DevUp's /prompts lab teaches how to write your own reliable, repeatable prompts." },
+        { "skill": "Automation trigger/action logic connecting a form or inbox to an AI step to a routing action", "why": "This is the same Zapier/Make trigger-action model as the CRM-automation task, with an AI action added in the middle.", "ifYouDont": "Zapier's free Automation 101 course, plus their specific 'AI actions in Zaps' help docs." }
+      ],
+      "resources": [
+        { "name": "Zapier free tier (with AI/OpenAI action step)", "type": "Free tool", "what": "Build the real workflow here — Zapier's free tier supports a limited number of AI-powered steps, enough to test this.", "free": true, "url": "#" },
+        { "name": "DevUp's AI Leverage / Prompts lab", "type": "Docs", "what": "Teaches how to write your own structured, repeatable prompts — required before this task's AI step will work reliably.", "free": true, "url": "#" },
+        { "name": "OpenAI's free prompt engineering guide", "type": "Docs", "what": "Official guidance on writing prompts that return consistent, structured output.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Fernbank Software (a fictional small SaaS company) gets 30–50 support tickets a day through one inbox, all triaged manually by a single overwhelmed support lead who has to read every single one before deciding urgency and routing.",
+        "deliverable": "A working automation: a form (standing in for the support inbox) triggers an AI classification step that categorizes each ticket (billing/technical/how-to/urgent-bug) and assigns a priority, which then routes the ticket into the correct column of a Sheets or Airtable tracker — tested against 15 realistic sample tickets.",
+        "constraints": [
+          "The classification prompt must be written and tested by you — not a default/example prompt copied unedited.",
+          "The AI step must return a structured, consistent output (a category from a fixed list, not free text) every time.",
+          "You must test against 15 sample tickets and report the actual accuracy — including any misclassifications."
+        ],
+        "steps": [
+          "Write 15 realistic support tickets covering all 4 categories, including a couple of genuinely ambiguous ones.",
+          "Write and iterate a classification prompt that returns a fixed-category output reliably.",
+          "Build the automation: form/trigger → AI classification step → routing action into a tracker.",
+          "Run all 15 test tickets through the live automation.",
+          "Record the results: correct classifications, any errors, and why the errors happened.",
+          "Write a short 'known limitations' note — where a human should still double-check the AI's call."
+        ]
+      },
+      "definitionOfDone": [
+        "The automation is live and was actually run against all 15 test tickets, not simulated by hand.",
+        "The AI step returns one of the fixed categories consistently, not inconsistent free text.",
+        "An honest accuracy report exists — including at least one real misclassification, analyzed.",
+        "A 'known limitations' note tells a human when to override the AI's routing."
+      ],
+      "selfCritique": [
+        "Did I report the real accuracy, including failures, or only show my best runs?",
+        "Is my prompt actually doing the classification, or did I just get lucky on easy examples?",
+        "Would Fernbank's support lead trust this enough to let it route real tickets unsupervised, or only as a first-pass suggestion?"
+      ],
+      "presentIt": "Lead with the honest number: 'Automated triage tested against 15 real-style tickets — 13/15 correctly classified and routed automatically.' Showing the 2 misses and your analysis of why is more convincing than a fake 100%.",
+      "stretch": "Add a confidence-based fallback: tickets the AI can't confidently classify get routed to a 'needs human review' column instead of a guess."
+    },
+    {
+      "id": "brand-identity-mini-system",
+      "title": "Design a Mini Brand Identity System for a Fictional Local Business",
+      "track": "creative-content",
+      "accent": "amber",
+      "icon": "palette",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can build a cohesive, usable brand system (not just one pretty logo) — the deliverable that gets creative freelancers hired for ongoing work, not one-off gigs.",
+      "prerequisites": [
+        { "skill": "Basic design principles (hierarchy, contrast, alignment, consistency)", "why": "A brand system without design fundamentals is just a color palette with no logic.", "ifYouDont": "Figma's free 'Design Basics' course." },
+        { "skill": "Canva or Figma fundamentals (layers, components, brand kit features)", "why": "You're producing real, usable assets — you need to actually operate the tool.", "ifYouDont": "Canva Design Essentials or Figma for Beginners (both free)." }
+      ],
+      "resources": [
+        { "name": "Figma for Beginners", "type": "Free course", "what": "Covers component/design-system thinking you'll apply to the brand kit.", "free": true, "url": "#" },
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "Alternative tool if you prefer Canva's Brand Kit feature over Figma.", "free": true, "url": "#" },
+        { "name": "Coolors and Google Fonts (free tiers)", "type": "Free tool", "what": "Build your palette and pick a real, free, license-clear typography pairing.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Marigold & Co (a fictional new independent flower shop, first-time business owner, zero existing brand assets) needs a cohesive look before their storefront opens in 6 weeks.",
+        "deliverable": "A mini brand system: primary and secondary logo lockups, a 4–5 color palette with hex codes and usage rules, a 2-font pairing with usage rules, and 3 applied mockups (an Instagram post, a business card, and a storefront sign) all using the system consistently.",
+        "constraints": [
+          "The logo must work in both a horizontal and a stacked/icon-only lockup.",
+          "Every color needs a stated usage rule (primary/accent/never-on-white, etc.) — not just a swatch.",
+          "All 3 mockups must use the exact same palette and type — no one-off exceptions."
+        ],
+        "steps": [
+          "Research 5 real independent flower-shop or similar small-business brands for pattern study, not to copy.",
+          "Design primary and secondary logo lockups.",
+          "Build a 4–5 color palette with hex codes and a usage rule per color.",
+          "Choose a 2-font pairing (a display font plus a body/support font) with a usage rule for each.",
+          "Apply the system to 3 real mockups: social post, business card, storefront sign.",
+          "Compile everything into a one-page brand sheet a business owner could actually reference."
+        ]
+      },
+      "definitionOfDone": [
+        "Both logo lockups exist and are legible at small sizes.",
+        "Every palette color has a hex code plus a specific usage rule, not just a name.",
+        "All 3 mockups are fully designed (not placeholder text) and visually consistent with each other.",
+        "The one-page brand sheet could be handed to a printer or another designer and understood without you present."
+      ],
+      "selfCritique": [
+        "Do all 3 mockups actually look like they belong to the same brand, or do they feel disconnected?",
+        "Is the stacked logo lockup still legible at business-card size?",
+        "Would a first-time business owner be able to follow my usage rules without a design background?"
+      ],
+      "presentIt": "Present as a brand sheet plus 3 mockups, framed as a case study: the business, the brief, the system, applied in context. Lead with the range: 'One system, three real applications' — range is what proves it's a system, not a one-off graphic.",
+      "stretch": "Extend the system to a 4th application in a completely different medium (packaging, a delivery van wrap, or a website hero section) to prove the system scales beyond print."
+    },
+    {
+      "id": "youtube-thumbnail-ab-test",
+      "title": "Design and A/B-Test 3 YouTube Thumbnail Concepts",
+      "track": "creative-content",
+      "accent": "amber",
+      "icon": "image",
+      "difficulty": "Starter",
+      "time": "2 hours",
+      "proves": "You can design thumbnails that are built to be tested, not just liked — the specific, high-value skill YouTube-focused creative freelancers get hired for.",
+      "prerequisites": [
+        { "skill": "Thumbnail design principles (contrast, facial expression, minimal text, readable at small size)", "why": "A beautiful thumbnail that's unreadable at 120px wide on mobile doesn't get clicks.", "ifYouDont": "Any free 'YouTube thumbnail best practices' video from a creator-economy channel, or Canva's thumbnail template gallery for pattern study." },
+        { "skill": "Canva (or Figma) layer/text/image compositing basics", "why": "You're producing 3 real, finished image files, not a mood board.", "ifYouDont": "Canva Design Essentials (free)." }
+      ],
+      "resources": [
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "Covers compositing, text hierarchy, and export settings for thumbnail-sized images.", "free": true, "url": "#" },
+        { "name": "A real public YouTube channel in a niche you like (your choice)", "type": "Docs", "what": "Study their actual published video titles/thumbnails for the real subject matter you'll design for.", "free": true, "url": "#" },
+        { "name": "TubeBuddy or vidIQ free tier", "type": "Free tool", "what": "Free thumbnail-preview simulators show how your design looks at actual small sizes across devices.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Pick one real, public video (yours if you have one, or a real public video you'd redesign as a practice exercise — never claim you made the actual video) and design 3 genuinely different thumbnail concepts testing 3 different psychological hooks (curiosity gap, big-number/stat callout, emotional face reaction).",
+        "deliverable": "3 finished, export-ready thumbnail designs (1280x720) for the same video, each built around a distinct hook strategy, plus a written A/B test hypothesis for each ('I expect Concept B to outperform because...') and a small-size readability check screenshot for all 3.",
+        "constraints": [
+          "All 3 thumbnails must be for the exact same video/topic — variation must come from strategy, not from designing 3 different videos.",
+          "Each thumbnail needs 5 words of text or fewer — YouTube's own design guidance, not a suggestion.",
+          "You must screenshot all 3 at simulated small size (like a mobile home feed) to prove readability."
+        ],
+        "steps": [
+          "Choose a real public video/topic to redesign as practice.",
+          "Define 3 distinct hook strategies (curiosity gap, stat/number callout, emotional reaction).",
+          "Design thumbnail concept 1 at full 1280x720 resolution.",
+          "Design thumbnail concept 2 and concept 3, each genuinely different in composition, not just recolored.",
+          "Shrink all 3 down to simulate a mobile feed and screenshot the readability test.",
+          "Write a one-line testable hypothesis for each concept explaining why it might win."
+        ]
+      },
+      "definitionOfDone": [
+        "All 3 thumbnails are exported at correct 1280x720 resolution.",
+        "Each uses a genuinely different composition/hook, not a palette-swap of the same layout.",
+        "Text is 5 words or fewer on every thumbnail.",
+        "All 3 pass the small-size readability check (legible and clear at simulated mobile size)."
+      ],
+      "selfCritique": [
+        "If I saw all 3 in a crowded YouTube feed at actual size, could I read the text and understand the hook in under 1 second?",
+        "Are the 3 concepts testing genuinely different hooks, or minor variations of the same idea?",
+        "Would my hypothesis for the 'winning' concept actually be falsifiable by real click-through data?"
+      ],
+      "presentIt": "Present all 3 side by side at both full size and simulated small size, with the hypothesis for each labeled clearly. Frame it as an A/B test plan, not just 'here are 3 thumbnails' — the testing methodology is the actual skill being proven.",
+      "stretch": "If you have access to a real channel (yours or with permission), actually run the test live and report real click-through-rate data after a few days."
+    },
+    {
+      "id": "product-demo-explainer-video",
+      "title": "Edit a 60-Second Product Explainer From Raw Screen Recordings",
+      "track": "creative-content",
+      "accent": "amber",
+      "icon": "clapperboard",
+      "difficulty": "Advanced",
+      "time": "4 hours",
+      "proves": "You can turn raw, unscripted screen-recording footage into a tight, professional explainer video — a deliverable SaaS and app companies pay well for on a recurring basis.",
+      "prerequisites": [
+        { "skill": "Screen recording basics (a free tool like OBS Studio or a built-in OS recorder)", "why": "You need real raw footage to edit — this task isn't about stock footage, it's about turning messy screen capture into something polished.", "ifYouDont": "OBS Studio's own free getting-started guide, or your OS's built-in screen recorder (no install needed)." },
+        { "skill": "Video editing fundamentals: cuts, pacing, text overlays, background music licensing", "why": "The explainer needs professional pacing and legally clean audio, not just raw footage with a voiceover.", "ifYouDont": "DevUp's CapCut Editing Masterclass, or CapCut/DaVinci Resolve's own free tutorials." }
+      ],
+      "resources": [
+        { "name": "OBS Studio (free, open source)", "type": "Free tool", "what": "Record raw screen footage of the free tool you'll be explaining.", "free": true, "url": "#" },
+        { "name": "CapCut or DaVinci Resolve (free tier)", "type": "Free tool", "what": "Edit the final explainer here — both have generous free tiers sufficient for a 60-second video.", "free": true, "url": "#" },
+        { "name": "YouTube Audio Library (free, royalty-free music)", "type": "Free tool", "what": "Legally clean background music — never use unlicensed commercial tracks in client-style work.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "Pick one real, free-tier SaaS or app tool you genuinely use or can access (a note app, a free design tool, a habit tracker) and treat it as a client who needs a 60-second 'what is this and why should I care' explainer for their landing page.",
+        "deliverable": "A finished 60-second explainer video: raw screen recording of the tool's core feature, edited with a clear 3-act structure (problem → solution demo → CTA), text overlays for key points, licensed background music, and a written voiceover script (recorded yourself, or as on-screen text if you're not comfortable on mic).",
+        "constraints": [
+          "Must be 60 seconds or under — explainer videos live or die on tightness, not completeness.",
+          "Must follow a problem → solution → CTA structure, explicitly identifiable in the edit.",
+          "Background music must be from a verifiably free/licensed source — no exceptions."
+        ],
+        "steps": [
+          "Choose a real free tool and identify its single clearest core value proposition.",
+          "Write a tight script: what problem it solves (10–15 sec), how it works (30–35 sec), CTA (10–15 sec).",
+          "Record raw screen footage demonstrating the actual product flow, cleanly and deliberately.",
+          "Edit: cut down to the essential moments, add text overlays for key points, sync pacing to the script.",
+          "Add licensed background music at an appropriately low volume under any voiceover.",
+          "Export at a standard resolution (1080p) and do a final full watch-through for pacing issues."
+        ]
+      },
+      "definitionOfDone": [
+        "Final video is 60 seconds or under, exported and playable.",
+        "The problem → solution → CTA structure is clearly identifiable when watching.",
+        "All footage is real screen recording of the actual tool, not stock footage or slides.",
+        "Music is confirmed royalty-free/licensed, and audio levels don't drown out any voiceover or overlay text."
+      ],
+      "selfCritique": [
+        "Would someone unfamiliar with this tool understand what it does and why they'd want it after watching once?",
+        "Did I cut every dead moment, or does the pacing drag anywhere?",
+        "Is the CTA clear and specific, or does the video just fade out?"
+      ],
+      "presentIt": "Present as a mini case study: the tool, the core value prop you chose to lead with, and the finished video embedded/linked. Lead with the constraint you nailed: 'Turned raw, unscripted screen capture into a 58-second, problem-solution-CTA explainer.'",
+      "stretch": "Cut a second, 15-second vertical version of the same explainer for social/story placements — proving you can adapt one asset across formats, a real recurring client need."
+    }
+  ]
+}
