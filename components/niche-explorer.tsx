@@ -231,6 +231,22 @@ function DetailCard({
         {track.blurb}
       </p>
 
+      {track.ai && (
+        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+          <div className="rounded-2xl border border-line bg-paper-3/60 p-5">
+            <h4 className="kicker flex items-center gap-2">
+              <Icon name="cpu" size={14} weight="bold" />
+              How AI is changing this niche
+            </h4>
+            <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{track.ai.change}</p>
+          </div>
+          <div className="rounded-2xl border border-emerald/30 bg-emerald-tint p-5">
+            <h4 className="kicker text-emerald">Why you are still needed</h4>
+            <p className="mt-2.5 text-sm leading-relaxed text-ink">{track.ai.human}</p>
+          </div>
+        </div>
+      )}
+
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <div>
           <h4 className="kicker">Skills you&rsquo;ll build</h4>
