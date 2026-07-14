@@ -23,6 +23,7 @@
   ],
   "nav": [
     { "label": "The Method", "href": "/method" },
+    { "label": "How to Learn", "href": "/learn" },
     { "label": "Start", "href": "/start" },
     { "label": "Get Hired", "href": "/get-hired" },
     { "label": "Deliver", "href": "/deliver" },
@@ -31,6 +32,7 @@
     { "label": "Niches", "href": "/niches" },
     { "label": "Micro-Tasks", "href": "/tasks" },
     { "label": "Build Labs", "href": "/build" },
+    { "label": "Tracker", "href": "/tracker" },
     { "label": "AI Leverage", "href": "/prompts" },
     { "label": "Learn Tools", "href": "/tools" },
     { "label": "Find Work", "href": "/apply" },

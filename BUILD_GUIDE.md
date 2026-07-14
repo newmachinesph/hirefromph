@@ -1,4 +1,4 @@
-# Katam-Bray — Build Guide (read before building any page)
+# DevUp — Build Guide (read before building any page)
 
 Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for animation, `lucide-react` icons. Light mode only. TypeScript strict.
 

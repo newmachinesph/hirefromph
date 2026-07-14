@@ -17,18 +17,18 @@ const groups = [
     title: "Learn to build",
     links: [
       { label: "The Method", href: "/method" },
+      { label: "How to Learn", href: "/learn" },
       { label: "Micro-Tasks", href: "/tasks" },
       { label: "Build Labs", href: "/build" },
-      { label: "AI Leverage", href: "/prompts" },
       { label: "Learn Any Tool", href: "/tools" },
     ],
   },
   {
     title: "Grow",
     links: [
-      { label: "30-Day Plan", href: "/plan" },
-      { label: "Niches", href: "/niches" },
       { label: "Find Work", href: "/apply" },
+      { label: "Application Tracker", href: "/tracker" },
+      { label: "30-Day Plan", href: "/plan" },
       { label: "Languages", href: "/languages" },
     ],
   },

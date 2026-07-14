@@ -9,6 +9,33 @@ import {
   useState,
 } from "react";
 
+export type AppStatus =
+  | "applied"
+  | "replied"
+  | "interview"
+  | "offer"
+  | "rejected";
+
+export const APP_STATUSES: AppStatus[] = [
+  "applied",
+  "replied",
+  "interview",
+  "offer",
+  "rejected",
+];
+
+export type Application = {
+  id: string;
+  company: string;
+  role: string;
+  source: string;
+  link: string;
+  status: AppStatus;
+  appliedAt: string;
+  followUpAt: string;
+  notes: string;
+};
+
 export type PathState = {
   /** chosen career track id (a niche) — the "path" the user commits to */
   track: string | null;
@@ -26,6 +53,8 @@ export type PathState = {
   planAnswers: Record<string, string>;
   /** micro-task ids the user has completed (each one is a portfolio piece) */
   tasks: Record<string, boolean>;
+  /** the user's live job-application pipeline */
+  applications: Application[];
 };
 
 const EMPTY: PathState = {
@@ -37,6 +66,7 @@ const EMPTY: PathState = {
   equipment: {},
   planAnswers: {},
   tasks: {},
+  applications: [],
 };
 
 const KEY = "devup.path.v1";
@@ -53,6 +83,9 @@ type Ctx = {
   toggleEquipment: (id: string) => void;
   setPlanAnswers: (a: Record<string, string>) => void;
   toggleTask: (id: string) => void;
+  addApplication: (a: Omit<Application, "id">) => void;
+  updateApplication: (id: string, patch: Partial<Application>) => void;
+  deleteApplication: (id: string) => void;
 };
 
 const PathContext = createContext<Ctx | null>(null);
@@ -130,6 +163,36 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
     [],
   );
 
+  const addApplication = useCallback(
+    (a: Omit<Application, "id">) =>
+      setState((s) => ({
+        ...s,
+        applications: [
+          { ...a, id: `${Date.now()}-${s.applications.length}` },
+          ...s.applications,
+        ],
+      })),
+    [],
+  );
+  const updateApplication = useCallback(
+    (id: string, patch: Partial<Application>) =>
+      setState((s) => ({
+        ...s,
+        applications: s.applications.map((a) =>
+          a.id === id ? { ...a, ...patch } : a,
+        ),
+      })),
+    [],
+  );
+  const deleteApplication = useCallback(
+    (id: string) =>
+      setState((s) => ({
+        ...s,
+        applications: s.applications.filter((a) => a.id !== id),
+      })),
+    [],
+  );
+
   const value = useMemo<Ctx>(
     () => ({
       state,
@@ -143,6 +206,9 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       toggleEquipment,
       setPlanAnswers,
       toggleTask,
+      addApplication,
+      updateApplication,
+      deleteApplication,
     }),
     [
       state,
@@ -155,6 +221,9 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       toggleEquipment,
       setPlanAnswers,
       toggleTask,
+      addApplication,
+      updateApplication,
+      deleteApplication,
     ],
   );
 

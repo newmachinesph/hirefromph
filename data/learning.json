@@ -1,0 +1,314 @@
+{
+  "kicker": "The deep LEARN method",
+  "headline": "You were taught what to memorise. Nobody taught you how to learn.",
+  "intro": "Every other page here teaches you a skill. This one teaches you how your brain actually keeps anything at all — the real difference between techniques that build durable knowledge and techniques that just make you feel productive. Most people never learn that difference. Confusing the two is the single biggest reason smart, hardworking people study for hours and still forget everything by the exam, the interview, or the client call.",
+  "creed": "You were never taught how to learn — only what to memorise. The techniques that feel most productive are usually the least effective. Here is what the evidence actually supports.",
+  "myth": {
+    "claim": "\"I'm a visual learner\" (or auditory, or kinesthetic) — and I learn best when material is taught to match my personal style.",
+    "whyPeopleBelieveIt": "It's intuitive — everyone genuinely prefers certain formats over others, and \"I prefer this\" quietly turns into \"this is what works for me.\" It's also everywhere: online quizzes, some teacher training, and an entire industry of learning-style assessments, tailored courses, and certifications built on top of it. Popular, confident, and personal — the exact combination that makes a claim feel true without ever being checked.",
+    "whatTheEvidenceSays": "Decades of controlled studies have tested the actual claim — not \"do people have preferences\" (yes, obviously), but \"does matching instruction to someone's claimed style improve what they learn.\" It doesn't. Study after study finds no benefit. What does matter is matching the format to the material, not to the person: a process gets a diagram because the process itself has structure — not because you're \"a visual learner.\" A list of dates gets retrieval practice no matter who's studying it. The material decides the format. The learner's \"style\" is not a variable that changes the outcome.",
+    "whatToDoInstead": "Stop asking \"what's my learning style?\" Start asking \"what does this material actually look like?\" Steps, hierarchies, and systems get a diagram (dual coding). Isolated facts get retrieval practice. Concepts get elaboration and a concrete example. Choose the technique for what you're learning — never for who you think you are.",
+    "vetLesson": "Run this through the VET method: who profits if you believe this? A quiz that sorts you into a \"type\" is easy to sell — it flatters you, it feels personal, and it justifies an entire catalogue of \"visual learner\" products behind it. A claim that feels validating and has a product sitting right behind it is exactly the combination VET tells you to slow down on. Evidence, not vibes — and on this one, the evidence says no."
+  },
+  "works": [
+    {
+      "id": "retrieval-practice",
+      "name": "Retrieval Practice",
+      "what": "Testing yourself on material — closed book, from memory — instead of looking it up or reading it again.",
+      "why": "Every time you force your brain to pull an answer out of memory, you strengthen the path to it. Rereading strengthens nothing new; it just makes the material feel familiar, and your brain mistakes familiar for known. This is the single most-replicated finding in learning science: self-testing beats rereading and highlighting, consistently, across subjects.",
+      "how": "Close the notes. Write or say everything you remember about the topic before checking anything. Answer practice questions cold, then check. Flashcards only work if you genuinely try to answer before flipping — flipping first is just rereading with extra steps.",
+      "effort": "Medium — it's uncomfortable, and that's the point",
+      "payoff": "Highest of any technique studied",
+      "icon": "brain",
+      "accent": "coral"
+    },
+    {
+      "id": "spaced-repetition",
+      "name": "Spaced Repetition",
+      "what": "Reviewing material at increasing intervals — a day later, then a few days, then a couple of weeks — instead of cramming it into one sitting.",
+      "why": "Memory decays on a curve. Reviewing right before you'd forget resets that curve and makes the next decay slower. Cramming feels efficient because everything is fresh at the test — but it's mostly gone within days. Spacing trades a little short-term comfort for knowledge that survives months.",
+      "how": "Review new material after 1 day, then 3 days, then a week, then a month. Apps like Anki automate the schedule for you, but a recurring calendar reminder does the same job for free. Space by calendar days, not by how many times you've looked at it in one sitting.",
+      "effort": "Low per session, needs a simple system",
+      "payoff": "Best long-term retention of any method here",
+      "icon": "calendar-clock",
+      "accent": "emerald"
+    },
+    {
+      "id": "interleaving",
+      "name": "Interleaving",
+      "what": "Mixing different problem types or topics within one study session, instead of drilling one type to mastery before moving to the next (\"blocking\").",
+      "why": "Blocking feels smoother because you repeat the same motion over and over — but that's pattern-matching to position in a list, not learning to tell problems apart. Mixing forces your brain to identify which method applies before it can even start, which is closer to the actual skill you need later.",
+      "how": "Instead of 20 of the same problem type in a row, do 5 of type A, 5 of B, 5 of C, shuffled randomly. It will feel harder and slower while you're doing it. That extra difficulty is where the learning is happening.",
+      "effort": "Medium — feels worse in the moment",
+      "payoff": "Better transfer to new, unseen problems",
+      "icon": "shuffle",
+      "accent": "indigo"
+    },
+    {
+      "id": "elaboration",
+      "name": "Elaboration",
+      "what": "Asking \"why is this true?\" and \"how does this connect to what I already know?\" instead of accepting a fact as a standalone item.",
+      "why": "An isolated fact has nowhere to attach in memory and falls out fast. The same fact wired to five things you already understand has five separate paths back to it — any one of them can pull it back up later.",
+      "how": "For every new concept, answer in your own words: why does it work this way, and what does it remind you of? Explain the mechanism out loud, not just the label — \"because\" is the word to reach for.",
+      "effort": "Low — mostly a habit shift",
+      "payoff": "Deeper, more connected understanding",
+      "icon": "link",
+      "accent": "amber"
+    },
+    {
+      "id": "concrete-examples",
+      "name": "Concrete Examples",
+      "what": "Anchoring an abstract rule or principle to one specific, real example before trying to generalise it.",
+      "why": "Abstract rules are hard to hold in memory and even harder to recognise later in a different context. A specific example gives your brain a concrete handle to grip — and one clear example beats three vague ones every time.",
+      "how": "For every abstract idea, find or build one real, specific case of it. Then ask directly: what made this example an instance of the rule? That question is what actually generalises it back out.",
+      "effort": "Low",
+      "payoff": "Faster, sturdier grasp of abstract ideas",
+      "icon": "image",
+      "accent": "coral"
+    },
+    {
+      "id": "dual-coding",
+      "name": "Dual Coding",
+      "what": "Pairing words with a visual — a diagram, a sketch, a flowchart — for material that has real spatial or structural shape. Not a claim about \"visual learners\" — a claim about visual material.",
+      "why": "This works because of the material, not the person. A process with steps, a system with parts, a hierarchy with levels — these have actual shape, and a diagram captures that shape in a way a paragraph can't. A phone number or a name has no shape; drawing it teaches you nothing extra.",
+      "how": "Before writing notes, ask: does this have structure — steps, parts, a hierarchy, a flow? If yes, sketch it first, then write the words around it. If it's just a fact or a name, skip the diagram entirely and use retrieval practice instead.",
+      "effort": "Low to medium",
+      "payoff": "Stronger recall, but only for material that is genuinely structured",
+      "icon": "layers",
+      "accent": "indigo"
+    },
+    {
+      "id": "deliberate-practice",
+      "name": "Deliberate Practice",
+      "what": "Practicing the specific thing you're worst at, right at the edge of your current ability, with fast feedback — not repeating what you're already good at.",
+      "why": "Comfortable practice feels productive and changes almost nothing, because you're already good at it. Growth happens at the edge of failure, where you're forced to correct instead of repeat.",
+      "how": "Name your weakest sub-skill specifically — not the whole topic. Drill only that, at a difficulty where you fail sometimes. Get feedback fast, so a wrong pattern doesn't get a chance to set in before you catch it.",
+      "effort": "High — this is the uncomfortable one",
+      "payoff": "Fastest way to close a known weak spot",
+      "icon": "target",
+      "accent": "emerald"
+    },
+    {
+      "id": "teach-back",
+      "name": "Teach It Back (Feynman)",
+      "what": "Explaining what you just learned in plain language, out loud or in writing, as if teaching a total beginner with no shortcuts allowed.",
+      "why": "Explaining forces retrieval, elaboration, and simplification all at once. The exact moment you stumble, or reach for jargon to paper over a gap, is the exact spot you don't actually understand yet.",
+      "how": "Explain the topic out loud to an empty room, a friend, or an AI — no notes, no jargon allowed. Every place you hesitate or use a term you can't define simply, go back and relearn that specific piece before moving on.",
+      "effort": "Low",
+      "payoff": "Instantly reveals hidden gaps",
+      "icon": "mic",
+      "accent": "amber"
+    }
+  ],
+  "feelsGood": [
+    {
+      "id": "reread",
+      "habit": "Rereading your notes or the textbook",
+      "whyItFeelsGood": "The material gets more familiar each pass, and familiarity feels exactly like knowing.",
+      "whyItFails": "Familiarity is not recall. You can recognise the right answer sitting on the page in front of you and still fail to produce it from a blank page — recognition and retrieval are different skills, and only retrieval gets tested on the job, the exam, or the client call.",
+      "doInstead": "Close the material and run retrieval practice instead — write or say what you remember, then check what you missed."
+    },
+    {
+      "id": "highlight",
+      "habit": "Highlighting or underlining while you read",
+      "whyItFeelsGood": "It feels active — your hand is moving, marking what matters, so it feels like work.",
+      "whyItFails": "Highlighting is a decision about what's important, not an act of learning it. Studies consistently find it adds nothing to retention beyond plain reading — sometimes it's worse, because the coloured page creates an illusion of engagement you didn't actually do.",
+      "doInstead": "Turn whatever you'd highlight into a question instead, then answer that question from memory later."
+    },
+    {
+      "id": "tutorial-hell",
+      "habit": "Watching tutorial after tutorial without building anything",
+      "whyItFeelsGood": "Understanding while someone else explains feels like competence, with zero risk of being wrong.",
+      "whyItFails": "Watching is passive. You're following someone else's hands, not exercising your own judgment — the gaps in what you actually know only show up the moment you try to act alone, and by then you've spent hours not finding them.",
+      "doInstead": "Cap input at 20 minutes, then build something real and probably broken. The broken parts are your actual syllabus."
+    },
+    {
+      "id": "cram",
+      "habit": "Cramming everything the night before",
+      "whyItFeelsGood": "It works — for about 24 hours. The relief of \"I studied\" registers as progress even when nothing durable happened.",
+      "whyItFails": "Cramming loads short-term memory, which decays fast no matter how it got in there. Ask yourself honestly what you remember from the last thing you crammed, one month later — usually close to nothing.",
+      "doInstead": "Spread the same total hours across days using spaced repetition. Less panic the night before, and it's still there next month."
+    },
+    {
+      "id": "copy-without-recall",
+      "habit": "Copying code, notes, or answers without trying to produce them yourself first",
+      "whyItFeelsGood": "The finished thing exists and it looks correct — that feels like proof you know how to make it.",
+      "whyItFails": "Your hand did the work, not your memory. You'll recognise the pattern next time you see it, but you won't be able to produce it from a blank page — which is the actual test, every time.",
+      "doInstead": "Attempt it from memory first, even badly. Only look at the source to check yourself or get unstuck, never to copy from the start."
+    },
+    {
+      "id": "collect-resources",
+      "habit": "Bookmarking, saving, and collecting resources",
+      "whyItFeelsGood": "A growing folder of saved links and PDFs feels like accumulating knowledge, one save at a time.",
+      "whyItFails": "A resource you haven't used has taught you nothing — it's potential, not progress. A folder of 400 saved links has taught you as much as an empty one.",
+      "doInstead": "Pick one resource, use it to build one real thing today, then close the rest of the tabs."
+    }
+  ],
+  "focus": [
+    {
+      "name": "Pomodoro",
+      "what": "Work in fixed sprints — classically 25 minutes — followed by a short break, repeated in a cycle.",
+      "howTo": "Set a timer for 25 minutes. Work on exactly one task until it rings. Take a 5-minute break. After 4 rounds, take a longer 15–30 minute break.",
+      "bestFor": "Starting when you're avoiding a task, and building a daily work habit from zero.",
+      "watchOut": "It's a focus tool, not a learning technique — it manages your attention, it doesn't encode anything into memory by itself. If 25 minutes keeps cutting you off right as you're getting into flow, extend the interval — 45 or 50 minutes is a legitimate Pomodoro if that's what your real attention span supports. The number isn't sacred; work-then-break is."
+    },
+    {
+      "name": "Timeboxing",
+      "what": "Assigning a hard time limit to a task in advance, on your calendar, regardless of whether it \"feels done\" when the time is up.",
+      "howTo": "Before you start, decide how long a task gets — 20 minutes, an hour — and put it on the calendar. When the time's up, stop or consciously choose to extend. Don't just drift past it.",
+      "bestFor": "Tasks with no natural end point — research, editing, general \"studying\" — that would otherwise expand to fill your whole day.",
+      "watchOut": "A box that's too short teaches you to rush and skip the retrieval step that actually builds memory. Size the box to the task, not the task to the box."
+    },
+    {
+      "name": "Deep Work Blocks",
+      "what": "Long, uninterrupted stretches — 50 to 90+ minutes — reserved for your hardest, most demanding task, with zero notifications.",
+      "howTo": "Block 60–90 minutes on your calendar. Phone in another room, notifications off, one task only. Protect the block like a meeting you're not allowed to skip.",
+      "bestFor": "Complex material that needs sustained thought to build a real mental model — not busywork, not review.",
+      "watchOut": "Useless without genuine focus discipline. If you're checking your phone every ten minutes inside the \"block,\" you don't have a deep work block — you have a long distracted session with a label on it."
+    },
+    {
+      "name": "Energy Mapping",
+      "what": "Scheduling your hardest cognitive work for the specific hours your own mind is sharpest — not a generic \"best time to study\" hour someone else recommends.",
+      "howTo": "For a week, rate your focus 1–5 every couple of hours. Find your real peak — it might be 6am, might be 9pm. Protect that window for your hardest material, and push admin or light review into your low-energy hours.",
+      "bestFor": "Anyone whose schedule has any flexibility at all — this multiplies the value of every other technique on this page.",
+      "watchOut": "Don't copy someone else's \"optimal\" schedule. A recommended 5am wake-up does nothing for you if your real peak is 9pm — track your own data, not someone else's routine."
+    },
+    {
+      "name": "The 2-Minute Start",
+      "what": "Beating procrastination by committing to only the first two minutes of a task — not the whole thing.",
+      "howTo": "When you're avoiding starting, tell yourself you only have to do 2 minutes, then you're allowed to stop. Open the document. Write one sentence. Do one problem. Usually that's enough momentum to keep going.",
+      "bestFor": "The moment right before you start anything you're dreading — the real barrier is almost always starting, not finishing.",
+      "watchOut": "It's a starting trick, not a study method — once you're in, switch to retrieval practice or whatever technique actually fits the material. Don't stop at 2 minutes and call it studying."
+    }
+  ],
+  "protocol": {
+    "intro": "Six questions about your real constraints — never about a \"style.\" Answer honestly and we'll assemble a study protocol built for the time, energy, and feedback you actually have, not the ideal student you wish you were.",
+    "questions": [
+      {
+        "id": "time",
+        "q": "How much focused time do you actually have per day?",
+        "help": "Be honest about a normal day, not your best day.",
+        "options": [
+          { "value": "under30", "label": "Under 30 minutes", "desc": "Squeezed between other things" },
+          { "value": "30-60", "label": "30–60 minutes", "desc": "One solid window" },
+          { "value": "1-2h", "label": "1–2 hours", "desc": "A real daily block" },
+          { "value": "2h+", "label": "2+ hours", "desc": "Multiple sessions or one long one" }
+        ]
+      },
+      {
+        "id": "energy",
+        "q": "When is your mind actually sharpest?",
+        "help": "Not when you think you should study — when you notice you focus best.",
+        "options": [
+          { "value": "earlyMorning", "label": "Early morning", "desc": "Before the day gets noisy" },
+          { "value": "midday", "label": "Midday", "desc": "Late morning to early afternoon" },
+          { "value": "evening", "label": "Evening", "desc": "After the day's obligations are done" },
+          { "value": "lateNight", "label": "Late night", "desc": "When everyone else is asleep" }
+        ]
+      },
+      {
+        "id": "environment",
+        "q": "Can you reliably get quiet, uninterrupted space?",
+        "help": "Think about a typical day, not an ideal one.",
+        "options": [
+          { "value": "reliable", "label": "Yes, reliably", "desc": "I have a space I can count on" },
+          { "value": "sometimes", "label": "Sometimes", "desc": "It depends on the day" },
+          { "value": "rarely", "label": "Rarely", "desc": "Noisy or shared space most of the time" }
+        ]
+      },
+      {
+        "id": "attention",
+        "q": "How long before your focus starts to drift?",
+        "help": "Not how long you wish you could focus — how long before your mind actually wanders.",
+        "options": [
+          { "value": "short", "label": "5–10 minutes", "desc": "I drift fast" },
+          { "value": "medium", "label": "~25 minutes", "desc": "A standard sprint feels right" },
+          { "value": "long", "label": "45+ minutes", "desc": "I can sustain long stretches" }
+        ]
+      },
+      {
+        "id": "feedback",
+        "q": "Do you have anyone or anything to check your work?",
+        "help": "This closes the loop — without it you can't tell what you actually don't know yet.",
+        "options": [
+          { "value": "person", "label": "A person", "desc": "A mentor, teacher, or peer who'll be honest" },
+          { "value": "aiTests", "label": "AI or tests", "desc": "AI critique, quizzes, or automated checks" },
+          { "value": "nothing", "label": "Nothing yet", "desc": "I have no feedback loop right now" }
+        ]
+      },
+      {
+        "id": "goal",
+        "q": "What are you learning this for?",
+        "help": "This decides which techniques we lead with.",
+        "options": [
+          { "value": "job", "label": "A specific job or task", "desc": "I need to perform, soon" },
+          { "value": "cert", "label": "A certification", "desc": "There's a test at the end" },
+          { "value": "general", "label": "General skill-building", "desc": "No deadline, building capability" }
+        ]
+      }
+    ]
+  },
+  "protocolRules": {
+    "sessionShapes": {
+      "short": {
+        "label": "Fast Pomodoro sprints",
+        "pattern": "15 min focus / 3 min break",
+        "perDay": "4–6 sprints, stop when you're done for the day",
+        "desc": "Your attention drifts fast, so fighting for one long block just trains you to fail at focusing. Short sprints with a real reward at the end keep you honest — and they stack up to real hours by the end of the day."
+      },
+      "medium": {
+        "label": "Classic Pomodoro",
+        "pattern": "25 min focus / 5 min break",
+        "perDay": "3–5 pomodoros",
+        "desc": "The standard interval exists because it matches a normal attention span — long enough to get into the material, short enough that the break still feels earned."
+      },
+      "long": {
+        "label": "Deep work blocks",
+        "pattern": "50 min focus / 10 min break",
+        "perDay": "1–2 blocks",
+        "desc": "You can sustain real focus, so use it. A 50-minute block gives you enough runway to actually build a mental model of hard material, not just skim the surface of it."
+      }
+    },
+    "time": {
+      "under30": "With under 30 minutes, run exactly one sprint from your session shape and nothing else — pick the single highest-payoff technique (usually retrieval practice) and skip the rest for today.",
+      "30-60": "One full session-shape cycle fits here. Spend it on retrieval practice or interleaving — the two techniques with the best payoff per minute.",
+      "1-2h": "You have room for two techniques in one sitting: build first (elaboration, dual coding, or concrete examples), then close with retrieval practice to lock it in before you stop.",
+      "2h+": "Split this into two separate sessions instead of one long one — a build session and a separate retrieval or review session, ideally hours apart, not back to back."
+    },
+    "energy": {
+      "earlyMorning": "Protect your first block of the day for your hardest technique — deliberate practice or genuinely new material. Save any leftover energy later for review only.",
+      "midday": "Your peak sits mid-day — schedule the hardest new material then, and push review or admin to the morning and evening edges.",
+      "evening": "Front-load your day with light review, and save your evening block for the actual hard building: new material, deliberate practice, teach-back.",
+      "lateNight": "Use the quiet for deep, undistracted work — but queue a spaced-repetition review for the next morning while it's still fresh. Don't let the late-night session be the only touchpoint it gets."
+    },
+    "environment": {
+      "reliable": "Use this reliably quiet space for your hardest technique — deliberate practice and elaboration need the least interruption, so spend the quiet on them.",
+      "sometimes": "Bank your unpredictable quiet time for retrieval practice and teach-back — both work fine in short, interruptible bursts, unlike a long deep-work block.",
+      "rarely": "Design around the noise: retrieval practice (flashcards, self-quizzing) and spaced repetition both survive interruption fine. Save anything that needs a deep, unbroken stretch for the rare moment you do get quiet."
+    },
+    "feedback": {
+      "person": "Use them. Show your work and ask directly: \"what's wrong with this, be specific.\" Comfortable feedback teaches nothing — ask for the unkind version on purpose.",
+      "aiTests": "Write down the rubric or the correct answer before you check it. That written standard is what turns AI or a test into a real feedback loop, instead of just a source of comfort.",
+      "nothing": "Build a feedback loop before you build anything else. Two free options: paste your work into AI and ask it to critique against the actual rules of the job, unkindly and specifically — or teach it back to a beginner and watch exactly where you stumble. Either one works. Neither costs anything."
+    },
+    "goal": {
+      "job": {
+        "techniques": ["deliberate-practice", "retrieval-practice", "teach-back"],
+        "note": "A job needs performance under real conditions. Drill your weakest sub-skill deliberately, retrieval-test yourself the way the job will actually test you, then teach it back to confirm you can perform it — not just recognise it."
+      },
+      "cert": {
+        "techniques": ["spaced-repetition", "retrieval-practice", "interleaving"],
+        "note": "A certification is a fixed exam on a fixed date. Space your review so it survives to test day, retrieval-test constantly, and interleave question types the way the actual exam will mix them."
+      },
+      "general": {
+        "techniques": ["elaboration", "concrete-examples", "dual-coding"],
+        "note": "With no deadline, optimise for depth and connection. Elaborate on why things are true, anchor every abstraction to a real example, and diagram anything that actually has structure."
+      }
+    },
+    "stopDoing": {
+      "job": ["tutorial-hell", "copy-without-recall", "collect-resources"],
+      "cert": ["cram", "reread", "highlight"],
+      "general": ["collect-resources", "reread", "highlight"]
+    }
+  }
+}
