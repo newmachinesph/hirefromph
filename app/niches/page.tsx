@@ -18,7 +18,7 @@ const CRITERION_ICON_TONE = [
 export const metadata: Metadata = {
   title: "Niche Learning Hub",
   description:
-    "Pick your lane and go deep. Explore 8 online-career niches — pay bands, demand, skills, free courses, and certifications — then choose your path.",
+    "Pick your lane and go deep. Explore 8 online-career niches, pay bands, demand, skills, free courses, and certifications, then choose your path.",
 };
 
 const steps = [
@@ -37,7 +37,7 @@ const steps = [
   {
     n: "03",
     title: "Get certified",
-    desc: "Earn the certs clients actually look for — most of them free.",
+    desc: "Earn the certs clients actually look for, most of them free.",
     icon: "award",
   },
   {
@@ -121,7 +121,7 @@ export default function NichesPage() {
             <SectionHeading
               kicker="Answer it yourself"
               title="How to research each question"
-              lead="Not vibes, not a course seller's confidence — five concrete moves that get you a real answer."
+              lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer."
             />
           </Reveal>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
@@ -160,7 +160,7 @@ export default function NichesPage() {
             <SectionHeading
               kicker="Try it now"
               title="Score a niche yourself"
-              lead="Any niche — including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
+              lead="Any niche, including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
             />
           </Reveal>
           <Reveal i={2} className="mt-8">

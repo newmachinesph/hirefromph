@@ -130,7 +130,7 @@ export function IntegrityOath() {
         <p className="mt-2 text-xs text-ink-faint" suppressHydrationWarning>
           {commitment.trim().length} characters.{" "}
           {!commitmentLongEnough &&
-            "A sentence you could never fail isn't a commitment — get specific about the moment it gets tested."}
+            "A sentence you could never fail isn't a commitment, get specific about the moment it gets tested."}
         </p>
       </div>
 
@@ -207,7 +207,7 @@ export function IntegrityOath() {
             {!canSign && (
               <p className="mt-3 text-xs text-ink-faint" aria-live="polite">
                 {!allAccepted
-                  ? "Accept every clause you can genuinely keep — all ten — before signing."
+                  ? "Accept every clause you can genuinely keep, all ten, before signing."
                   : !commitmentLongEnough
                     ? "Write your commitment in step 2 first. This is the part that actually holds."
                     : "Add your name to sign."}
@@ -217,8 +217,7 @@ export function IntegrityOath() {
         )}
         <p className="mt-5 text-xs leading-relaxed text-ink-faint">
           {oath.signedNote} There is no account, no server, and no copy of this
-          anywhere else. If that makes the oath feel less binding, sit with that
-          — it&rsquo;s the whole lesson.
+          anywhere else. If that makes the oath feel less binding, sit with that, it&rsquo;s the whole lesson.
         </p>
       </div>
     </div>

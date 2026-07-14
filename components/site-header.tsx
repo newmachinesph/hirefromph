@@ -8,6 +8,7 @@ import site from "@/data/site.json";
 import tracks from "@/data/tracks.json";
 import { usePath } from "@/lib/path-context";
 import { cn } from "@/lib/utils";
+import { Logo } from "@/components/logo";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -34,13 +35,8 @@ export function SiteHeader() {
       )}
     >
       <div className="container-x flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span className="grid h-8 w-8 place-items-center rounded-lg bg-ink text-paper-2 font-display text-lg leading-none">
-            D
-          </span>
-          <span className="font-display text-xl tracking-tight">
-            Dev<span className="text-coral">Up</span>
-          </span>
+        <Link href="/" className="shrink-0" aria-label="DevUp home">
+          <Logo markSize={32} />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

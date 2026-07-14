@@ -163,7 +163,11 @@ export default function ClientsPage() {
           <div className="mt-14 grid gap-4 md:grid-cols-2">
             {getDirect.steps.map(
               (
-                s: { title: string; how: string; crossref?: { href: string; label: string } },
+                s: {
+                  title: string;
+                  how: string;
+                  crossref?: { href: string; label: string } | null;
+                },
                 idx: number,
               ) => (
                 <Reveal key={s.title} i={idx % 2}>

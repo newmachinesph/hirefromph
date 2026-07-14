@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: tasksData.intro,
 };
 
-// One icon per step of the doctrine's four-step brief shape — data stays in tasks.json,
+// One icon per step of the doctrine's four-step brief shape, data stays in tasks.json,
 // this is just the visual language for it.
 const stepIcons = ["list-checks", "book-open", "hammer", "trophy"];
 
@@ -49,7 +49,7 @@ export default function TasksPage() {
           <SectionHeading
             kicker="The shape of every task"
             title="Prerequisite → Resources → The Task → Prove it"
-            lead="Every micro-task follows the same four-step brief — the same shape a real client hands a working professional."
+            lead="Every micro-task follows the same four-step brief, the same shape a real client hands a working professional."
           />
         </Reveal>
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

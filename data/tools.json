@@ -1,12 +1,12 @@
 {
-  "intro": "Learn the essential tools fast with step-by-step tutorials — everything you need to work smarter, not harder.",
+  "intro": "Learn the essential tools fast with step-by-step tutorials, everything you need to work smarter, not harder.",
   "categories": [
     {
       "id": "workspace",
       "name": "Google Workspace & Microsoft",
       "icon": "layout-grid",
       "accent": "coral",
-      "blurb": "Docs, Sheets, Slides, Gmail, Outlook, Excel — the daily bread of every online professional.",
+      "blurb": "Docs, Sheets, Slides, Gmail, Outlook, Excel, the daily bread of every online professional.",
       "tools": [
         { "name": "Google Sheets", "skill": "Formulas, pivot tables, dashboards", "level": "Core" },
         { "name": "Google Docs", "skill": "Formatting, comments, templates", "level": "Core" },
@@ -58,7 +58,7 @@
       "name": "Password Management",
       "icon": "key-round",
       "accent": "emerald",
-      "blurb": "Handle client logins the professional, secure way — never over chat.",
+      "blurb": "Handle client logins the professional, secure way, never over chat.",
       "tools": [
         { "name": "1Password", "skill": "Vaults, secure sharing", "level": "Core" },
         { "name": "Bitwarden", "skill": "Free, open-source vault", "level": "Core" },
@@ -95,7 +95,7 @@
       "name": "Finance & Expense",
       "icon": "wallet",
       "accent": "amber",
-      "blurb": "Get paid and keep clean records — for you and for your clients.",
+      "blurb": "Get paid and keep clean records, for you and for your clients.",
       "tools": [
         { "name": "Wise / Payoneer", "skill": "Receiving international pay", "level": "Core" },
         { "name": "PayPal", "skill": "Invoicing + payments", "level": "Core" },
@@ -104,11 +104,11 @@
     }
   ],
   "codes": {
-    "intro": "Codes for Efficiency — small snippets and shortcuts that save hours. Copy, paste, done.",
+    "intro": "Codes for Efficiency, small snippets and shortcuts that save hours. Copy, paste, done.",
     "items": [
       { "title": "Sheets: auto-timestamp on edit", "lang": "Apps Script", "code": "function onEdit(e){\n  const s = e.source.getActiveSheet();\n  const r = e.range;\n  s.getRange(r.getRow(), 10).setValue(new Date());\n}" },
       { "title": "Sheets: clean & trim text", "lang": "Formula", "code": "=TRIM(CLEAN(PROPER(A2)))" },
-      { "title": "Gmail: canned follow-up shortcut", "lang": "Text", "code": "Hi [Name], floating this back up — still keen to help with [task]. Any questions I can answer?" },
+      { "title": "Gmail: canned follow-up shortcut", "lang": "Text", "code": "Hi [Name], floating this back up, still keen to help with [task]. Any questions I can answer?" },
       { "title": "Sheets: days until due", "lang": "Formula", "code": "=IF(B2=\"\",\"\",B2-TODAY())" }
     ]
   }

@@ -7,7 +7,7 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 export const metadata = {
   title: "Reality Check",
   description:
-    "What the evidence actually says about remote and online work for Filipinos in 2026–2027. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing — every number with its source, and an honest list of what nobody knows.",
+    "What the evidence actually says about remote and online work for Filipinos in 2026–2027. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
 };
 
 const accentText: Record<string, string> = {
@@ -534,7 +534,7 @@ export default function RealityPage() {
             </p>
           </Reveal>
 
-          {/* proof — freelancers vs employees */}
+          {/* proof, freelancers vs employees */}
           <Reveal i={2}>
             <div className="mt-12 rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
               <h3 className="max-w-2xl font-display text-2xl leading-tight text-balance">

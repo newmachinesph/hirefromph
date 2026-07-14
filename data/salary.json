@@ -1,0 +1,186 @@
+{
+  "hero": {
+    "kicker": "Salary guide · 2027 · read the warning first",
+    "line1": "What online work",
+    "line2": "really pays in 2027.",
+    "intro": "Everyone wants a number. Here is the honest version. There is no official, trusted dataset of what Filipino online professionals earn. Every salary guide you find online is made by a staffing company or a course seller, and none of them show their math. So we will give you the ranges people quote, show you where they disagree, and then teach you the one thing that actually works: reading live job posts and pricing your own value. Use this to get your bearings, not to set your rate.",
+    "creed": "A salary guide with no method behind it is a guess with a chart on it. The real number is the one a real client agrees to pay you this month."
+  },
+
+  "warning": {
+    "title": "This is the softest data on the whole site. We are showing you the softness on purpose.",
+    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every 2027 salary guide out there is published by someone who makes money from the number: a staffing agency wants it to look low to clients and high to you, and a course wants it high enough to justify the fee. So treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
+  },
+
+  "inDemand": {
+    "kicker": "In demand right now · OnlineJobs.ph, July 2026",
+    "title": "What clients are actually hiring for.",
+    "lead": "We looked at live listings on OnlineJobs.ph, the biggest board for Filipino remote workers. These are the roles clients are posting for right now. Notice the pattern: the best-paid ones are not general, they are specific. Clients want someone who solves one problem very well, not someone who does a little of everything.",
+    "note": "Pick one of these and go deep. A specialist in any single row out-earns a generalist who dabbles in all of them.",
+    "roles": [
+      { "role": "Executive support", "icon": "calendar-check", "blurb": "Managing a busy founder's inbox, calendar, travel, and follow-ups. The most-hired remote role, and one of the stickiest once you are trusted." },
+      { "role": "Social media management", "icon": "megaphone", "blurb": "Not just posting. Clients want a strategist who grows the brand, plans content, and reports on what worked." },
+      { "role": "E-commerce support", "icon": "shopping-cart", "blurb": "Running Shopify and Amazon stores: listings, orders, inventory, customer messages. Steady demand as online selling grows." },
+      { "role": "Real estate support", "icon": "building-2", "blurb": "Lead generation, appointment setting, CRM cleanup, and listing admin for US real-estate teams. A large, reliable niche." },
+      { "role": "Content & SEO", "icon": "pen-line", "blurb": "Writing, editing, and optimizing content so it ranks and converts. Pays more when you can prove results, not just output." },
+      { "role": "Digital ads / media buying", "icon": "target", "blurb": "Running and optimizing Google and Meta ad campaigns. You touch the client's money, so trust and results pay well." },
+      { "role": "Bookkeeping & finance", "icon": "calculator", "blurb": "Reconciling books in QuickBooks or Xero and keeping the numbers clean. Boring to some, and that is exactly why it pays." },
+      { "role": "Web & app development", "icon": "code", "blurb": "Building and maintaining sites and small apps. One of the highest ceilings on the board, and AI tools now lower the entry bar." }
+    ],
+    "source": {
+      "label": "OnlineJobs.ph, live job listings",
+      "url": "https://www.onlinejobs.ph/jobseekers/jobsearch"
+    }
+  },
+
+  "emerging": {
+    "kicker": "The next tier · new roles for 2027",
+    "title": "The roles that barely existed three years ago, and pay the most.",
+    "lead": "The classic online-work titles are still hiring, but the fastest-rising money is in new, AI-native roles that blend a craft with automation. You do not start here. You grow into one from a lane above by adding the AI layer. This is where the ceiling is going.",
+    "note": "Notice the shape of every one of these. It is a specialist who uses many tools to own a business outcome. That is the 2027 professional: not a generalist, and not a narrow technician, but a domain expert who is broad with AI. Tools are now table stakes. Your niche and your judgment are the value.",
+    "roles": [
+      { "role": "GTM engineer", "icon": "rocket", "blurb": "A go-to-market engineer builds and automates the systems that bring in leads and revenue, using no-code and AI tools instead of a big sales team. One skilled operator now replaces work that took three or four people." },
+      { "role": "AI automation specialist", "icon": "workflow", "blurb": "Builds AI-powered workflows and agents that run a client's repetitive operations and marketing on autopilot, with tools like n8n, Make, and Zapier plus a model doing the thinking." },
+      { "role": "RevOps", "icon": "gauge", "blurb": "Revenue operations owns the data, tools, and workflow behind sales, marketing, and customer success: the CRM, the reporting, the forecasts. The person who makes the whole revenue engine run." },
+      { "role": "AI content lead", "icon": "pen-tool", "blurb": "Runs a whole content engine with AI in the loop, from strategy to publishing, while keeping the brand voice and quality a model cannot guard on its own." },
+      { "role": "Solutions / implementation", "icon": "puzzle", "blurb": "Sets up, customizes, and connects the SaaS tools a business runs on, then trains their team. Part consultant, part builder, always in demand as software multiplies." },
+      { "role": "Fractional operator", "icon": "briefcase", "blurb": "A senior operator (COO, CMO, or head of ops) who runs one function part-time for several small companies at once. The top of the independent path, and pure business-of-one." }
+    ],
+    "note2": "These grow out of the AI-First page. Master a craft, add the AI layer, and one of these becomes your ceiling.",
+    "source": {
+      "label": "Upwork, In-Demand Skills 2026 (AI integration up 178% YoY)",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
+    }
+  },
+
+  "rates": {
+    "kicker": "The ranges · vendor-grade, directional only",
+    "title": "The pay ladder, and why you should climb it fast.",
+    "monthlyNote": "The rough monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
+    "tiers": [
+      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–500 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here." },
+      { "level": "Mid", "accent": "amber", "monthly": "≈ $600–900 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
+      { "level": "Senior / specialist", "accent": "emerald", "monthly": "≈ $1,000–1,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
+    ],
+    "contradiction": {
+      "title": "Proof the numbers are soft: watch two 'guides' disagree by 4x.",
+      "body": "Take one role, entry-level VA. The platform's own data points to roughly ₱17,000 to ₱28,000 a month ($300 to $500). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
+      "a": { "label": "Platform data · entry VA", "value": "≈ ₱17k–28k / mo" },
+      "b": { "label": "Viral blog claim · entry VA", "value": "₱90k+ / mo" },
+      "lesson": "At least one of these is very wrong, and the one with no source is the suspect. Never take a rate from a single guide or a screenshot. Look at ten live job posts in your niche this week. Live posts are data. Guides and reels are opinion with confidence."
+    },
+    "sources": [
+      { "label": "OnlineJobs.ph, guide to Filipino VA salaries", "url": "https://blog.onlinejobs.ph/comprehensive-guide-to-virtual-assistant-salaries-in-the-philippines/" },
+      { "label": "Upwork, In-Demand Skills 2026 (AI premium context)", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
+    ]
+  },
+
+  "engagement": {
+    "kicker": "How you get paid · pick the shape",
+    "title": "Full-time, part-time, hourly, per-project, retainer.",
+    "lead": "Pay is not just a number. It is also a shape. The same skill earns very differently depending on how the deal is set up. Here is the honest trade-off for each, so you can choose on purpose instead of taking whatever is offered.",
+    "types": [
+      {
+        "name": "Full-time (one client)",
+        "icon": "briefcase",
+        "best": "Best when you want stability and are still learning the ropes.",
+        "pros": [
+          "Steady, predictable income you can budget around.",
+          "One workflow to master, so you go deep and get trusted.",
+          "Sometimes paid leave or a bonus, depending on the client."
+        ],
+        "cons": [
+          "One income source. If they let you go, it all stops at once.",
+          "Your pay is capped by their budget and your hours.",
+          "Less freedom. In practice it can feel like a remote job."
+        ]
+      },
+      {
+        "name": "Part-time",
+        "icon": "clock",
+        "best": "Best when you are building a second income or juggling a few clients.",
+        "pros": [
+          "Flexibility to study, freelance, or take a second client.",
+          "A way to test a niche without quitting anything.",
+          "Spreads your risk across more than one income."
+        ],
+        "cons": [
+          "Less income, and less stability than full-time.",
+          "You manage several clients and calendars at once.",
+          "Easy to get stuck part-time if you never push to specialize."
+        ]
+      },
+      {
+        "name": "Hourly",
+        "icon": "timer",
+        "best": "Best when the scope is unclear or the work is ongoing and varied.",
+        "pros": [
+          "You get paid for every hour you actually work.",
+          "Low risk if the client keeps changing what they want.",
+          "Simple to start and easy for a new client to say yes to."
+        ],
+        "cons": [
+          "Your income is capped by the hours in your day.",
+          "You are paid for time, not results, so speed is not rewarded.",
+          "Time-tracking can feel like someone watching your shoulder."
+        ]
+      },
+      {
+        "name": "Per-project (fixed)",
+        "icon": "package-check",
+        "best": "Best when the deliverable is clear and you are good at your craft.",
+        "pros": [
+          "You are paid for the result, not the clock. Speed pays off.",
+          "A clear start, end, and price for both sides.",
+          "Once you are fast, your effective hourly rate climbs."
+        ],
+        "cons": [
+          "Scope creep can eat your profit if you do not set limits.",
+          "You have to estimate well, or you lose money on a bad quote.",
+          "Income can be lumpy between projects."
+        ]
+      },
+      {
+        "name": "Retainer (monthly)",
+        "icon": "repeat",
+        "best": "Best when you want stability with the freedom of freelancing. This is the goal.",
+        "pros": [
+          "Predictable income every month, like a salary you own.",
+          "A deep, ongoing relationship that leads to referrals.",
+          "The most stable way to run a business of one."
+        ],
+        "cons": [
+          "You must keep proving your value, month after month.",
+          "It ties up your capacity, so guard your remaining hours.",
+          "Losing one big retainer hurts. Never rely on only one."
+        ]
+      }
+    ]
+  },
+
+  "price": {
+    "kicker": "How to price yourself",
+    "title": "Stop asking what the rate is. Learn to set it.",
+    "lead": "The rate is not a fact you look up. It is a number you build and defend. Here is the simple process that beats any salary guide.",
+    "steps": [
+      { "n": 1, "title": "Read ten live posts", "desc": "Open OnlineJobs.ph or a marketplace and read ten real listings in your exact niche this week. That is your real market rate, not a blog from 2020." },
+      { "n": 2, "title": "Subtract the hidden costs", "desc": "Before you compare a dollar rate to a local salary, subtract the unpaid time, the platform fee, your electricity, internet, and tax. A $5 gig is not $5 in your pocket." },
+      { "n": 3, "title": "Price the outcome, not the hour", "desc": "When you can, charge for the result you deliver, not the time you spend. 'I keep your books clean and ready' is worth more than 'I work 10 hours.'" },
+      { "n": 4, "title": "Anchor high, then prove it", "desc": "Start at the top of your honest range and back it up with proof: a portfolio piece, a past result, a clear plan. It is easier to hold a price than to raise a low one." },
+      { "n": 5, "title": "Raise it on a schedule", "desc": "Every few months, or every new proof, review your rate. The biggest reason people stay underpaid is that they never revisit the number they set when they were scared." }
+    ]
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "The number that matters is the one you can defend.",
+    "body": "No guide can tell you your rate, because your rate depends on your niche, your proof, and the client in front of you. What every guide can agree on is the direction: the generic floor is falling, and the specialist ceiling is rising. Your job is to climb, and to learn to name your price without flinching.",
+    "point": "Do these next. Each one makes your number bigger and easier to defend.",
+    "links": [
+      { "href": "/niches", "label": "Pick a lane", "desc": "The specialty that moves you off the falling floor and onto the rising ceiling." },
+      { "href": "/ai-first", "label": "Add the AI premium", "desc": "Fold AI into your craft to earn the premium that lands on top of a real skill." },
+      { "href": "/clients", "label": "Own the client", "desc": "Direct clients pay more than an agency, because no one takes a cut in the middle." },
+      { "href": "/reality", "label": "See the full market data", "desc": "Every claim about this career, sourced, with the parts nobody selling a course will show you." }
+    ]
+  }
+}

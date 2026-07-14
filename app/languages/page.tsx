@@ -6,7 +6,7 @@ import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Language Premium — A Second Language Can Double Your Pay",
+  title: "Language Premium, A Second Language Can Double Your Pay",
   description: languagesData.intro,
 };
 
@@ -107,7 +107,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* CALLOUT — stack it on a niche */}
+      {/* CALLOUT, stack it on a niche */}
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <div className="relative overflow-hidden rounded-[var(--radius-lg)] bg-ink px-8 py-14 text-paper-2 lg:px-16 lg:py-16">
@@ -121,7 +121,7 @@ export default function Page() {
                 <p className="mt-3 max-w-lg text-paper-2/75">
                   A premium language plus a specialized niche is where
                   Filipino online professionals see the largest rate
-                  increases — not either alone.
+                  increases, not either alone.
                 </p>
               </div>
               <div className="flex shrink-0 flex-wrap gap-3">
@@ -208,7 +208,7 @@ function LanguageCard({
       </p>
 
       <div className="mt-6 border-t border-line pt-5">
-        <p className="kicker mb-1">Where to learn — free &amp; paid</p>
+        <p className="kicker mb-1">Where to learn, free &amp; paid</p>
         <ul>
           {language.learn.map((school) => (
             <li

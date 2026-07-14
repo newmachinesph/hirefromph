@@ -7,7 +7,7 @@ import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 /* ---------------------------------------------------------------- LOGIC */
-/* These patterns are logic, not copy — the categories they map to live in
+/* These patterns are logic, not copy, the categories they map to live in
    data/english.json (banlist.categories). Word-boundaried and case-insensitive.
    `\bpo\b` deliberately will not match "possible" or "point". */
 const PATTERNS: Record<string, RegExp> = {
@@ -111,7 +111,7 @@ function readDirectness({ total, words }: ScanResult): Verdict {
     };
   return {
     label: "Buried",
-    note: "The message is in there. The reader has to dig for it — and most won't.",
+    note: "The message is in there. The reader has to dig for it, and most won't.",
     tone: "coral",
   };
 }
@@ -144,7 +144,7 @@ function Results({
 }: {
   result: ScanResult;
   labelledBy: string;
-  /** flags removed vs. the original message — only shown on the rewrite panel */
+  /** flags removed vs. the original message, only shown on the rewrite panel */
   cleared?: number;
 }) {
   const verdict = readDirectness(result);
@@ -299,7 +299,7 @@ export function CommsLab() {
               htmlFor={`${uid}-rewrite`}
               className="text-sm font-semibold text-ink"
             >
-              Your rewrite — in your own words
+              Your rewrite, in your own words
             </label>
             <textarea
               id={`${uid}-rewrite`}
@@ -323,7 +323,7 @@ export function CommsLab() {
       {/* ----------------------------------------------- SELF-CRITIQUE */}
       <fieldset className="mt-10 rounded-2xl border border-line bg-paper p-6">
         <legend className="kicker px-2">
-          Judge it yourself — five questions, no scores from us
+          Judge it yourself, five questions, no scores from us
         </legend>
         <ul className="mt-3 flex flex-col gap-3">
           {english.lab.selfCritique.map((q, idx) => {

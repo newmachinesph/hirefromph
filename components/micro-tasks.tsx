@@ -105,7 +105,7 @@ export function MicroTasks() {
   // Once path data has hydrated, default the track filter to the user's path.
   // The chosen track lives in localStorage, which is unreadable during the SSR
   // render, so seeding the filter from it in an effect is unavoidable. The ref
-  // guard makes it run exactly once — no cascading renders.
+  // guard makes it run exactly once, no cascading renders.
   useEffect(() => {
     if (!hydrated || autoSelected.current) return;
     autoSelected.current = true;
@@ -156,7 +156,7 @@ export function MicroTasks() {
             {recommended.length > 0 && (
               <div className="mb-10 rounded-2xl border border-coral/30 bg-coral-tint/40 p-6">
                 <p className="kicker text-coral-deep">
-                  Recommended for your path — {trackNameById[state.track ?? ""]}
+                  Recommended for your path, {trackNameById[state.track ?? ""]}
                 </p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {recommended.map((t) => (
@@ -259,7 +259,7 @@ function PortfolioCounter({ count, hydrated }: { count: number; hydrated: boolea
               → your portfolio has {count} piece{count === 1 ? "" : "s"}.
             </>
           ) : (
-            "0 completed. Pick one below — you'll have your first piece today."
+            "0 completed. Pick one below, you'll have your first piece today."
           )}
         </p>
       </div>
@@ -591,7 +591,7 @@ function TaskDetail({
           <p className="mt-1.5 text-sm text-ink-soft">
             {isDone
               ? "This is a real piece in your portfolio now."
-              : "Mark it done — it becomes a real piece in your portfolio counter."}
+              : "Mark it done, it becomes a real piece in your portfolio counter."}
           </p>
         </div>
         <button
@@ -606,7 +606,7 @@ function TaskDetail({
           )}
         >
           {isDone ? <Check size={16} /> : <Sparkles size={16} />}
-          {isDone ? "Built — undo" : "I built this"}
+          {isDone ? "Built, undo" : "I built this"}
         </button>
       </div>
     </motion.div>

@@ -28,7 +28,7 @@ type Config = {
   clients: Clients;
 };
 
-/** Base hourly USD — set by CRAFT and by nothing else. That is the thesis. */
+/** Base hourly USD, set by CRAFT and by nothing else. That is the thesis. */
 const BASE: Record<Craft, number> = { none: 4, building: 9, deep: 22 };
 const BASE_RANGE: Record<Craft, [number, number]> = {
   none: [3, 7],
@@ -53,7 +53,7 @@ const OWNERSHIP_OUTCOMES = 1.25;
 const LANGUAGE_SECOND = 1.2;
 const CLIENTS_LOCAL = 0.45;
 
-/** Premium phase-ins — skill and trust are not granted on day one. */
+/** Premium phase-ins, skill and trust are not granted on day one. */
 const AI_RAMP = 12;
 const OWNERSHIP_RAMP = 18;
 
@@ -66,7 +66,7 @@ const WEEKS_PER_MONTH = 4.33;
 const MONTHS = 36;
 const DEFAULT_FX = 58;
 
-/** Clamped smoothstep — legible easing, not a physics engine. */
+/** Clamped smoothstep, legible easing, not a physics engine. */
 function ease(t: number): number {
   const c = Math.min(1, Math.max(0, t));
   return c * c * (3 - 2 * c);
@@ -100,7 +100,7 @@ function hourlyAt(c: Config, month: number): number {
   const base =
     START_RATE +
     (BASE[c.craft] - START_RATE) * ease(month / CRAFT_RAMP[c.craft]);
-  // "user" is available from day one — everyone already has ChatGPT. "augmented" is built, so it ramps.
+  // "user" is available from day one, everyone already has ChatGPT. "augmented" is built, so it ramps.
   const ai =
     c.ai === "user" ? AI_USER : phaseIn(aiMultiplier(c), AI_RAMP, month);
   const own = phaseIn(ownershipMultiplier(c), OWNERSHIP_RAMP, month);
@@ -245,7 +245,7 @@ function ChoiceGroup({
 }
 
 /* ------------------------------------------------------------------ */
-/*  Chart — pure inline SVG. No library, no dependency.                */
+/*  Chart, pure inline SVG. No library, no dependency.                */
 /* ------------------------------------------------------------------ */
 
 const W = 780;
@@ -555,7 +555,7 @@ export function CareerSimulator() {
 
       {/* -------------------------------------------------------- RESULTS */}
       <div className="flex flex-col gap-6">
-        {/* Summary — announced on every change */}
+        {/* Summary, announced on every change */}
         <div
           aria-live="polite"
           className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-md)] lg:p-8"
@@ -619,7 +619,7 @@ export function CareerSimulator() {
           </div>
         </div>
 
-        {/* AI-with-no-craft callout — the heart of the model */}
+        {/* AI-with-no-craft callout, the heart of the model */}
         {model.noPremium && (
           <div className="rounded-[var(--radius-lg)] border-2 border-coral bg-coral-tint p-6 lg:p-8">
             <div className="flex items-start gap-3">
@@ -672,7 +672,7 @@ export function CareerSimulator() {
             </p>
           </figcaption>
 
-          {/* Legend — shape + text, never colour alone */}
+          {/* Legend, shape + text, never colour alone */}
           <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink-soft">
             <li className="flex items-center gap-2">
               <svg width="26" height="8" aria-hidden className="shrink-0">
@@ -727,7 +727,7 @@ export function CareerSimulator() {
             {sim.chart.riskBandNote}
           </p>
 
-          {/* Data table — the chart must never be the only way to read this */}
+          {/* Data table, the chart must never be the only way to read this */}
           <div className="mt-6 overflow-x-auto">
             <table className="w-full min-w-[360px] border-collapse text-left text-sm">
               <caption className="pb-3 text-left text-xs leading-relaxed text-ink-faint">
@@ -848,7 +848,7 @@ export function CareerSimulator() {
           </ul>
         </div>
 
-        {/* Reality tax — never hidden, never optional */}
+        {/* Reality tax, never hidden, never optional */}
         <div className="grid gap-4 md:grid-cols-2">
           <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-6">
             <h3 className="font-display text-lg leading-snug text-ink">
