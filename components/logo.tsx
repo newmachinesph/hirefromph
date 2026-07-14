@@ -26,7 +26,7 @@ export function LogoMark({
       aria-label={title}
     >
       {title ? <title>{title}</title> : null}
-      <rect width="32" height="32" rx="8" fill="#ef5b34" />
+      <rect width="32" height="32" rx="8" fill="#0d9488" />
       <path d="M16 7 L24 15.5 H19 V25 H13 V15.5 H8 Z" fill="#fff" />
     </svg>
   );

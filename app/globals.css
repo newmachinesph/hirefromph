@@ -6,40 +6,40 @@
 /* ------------------------------------------------------------------ */
 
 :root {
-  /* Surfaces — warm paper, never sterile white */
-  --paper: #f6f3ec;
-  --paper-2: #fffdf8;
-  --paper-3: #efe9dd;
+  /* Surfaces, cool fresh off-white */
+  --paper: #f1f6f4;
+  --paper-2: #ffffff;
+  --paper-3: #e3efeb;
   --card: #ffffff;
 
-  /* Ink */
-  --ink: #17130d;
-  --ink-soft: #4d463b;
-  --ink-faint: #8b8474;
-  --line: #e4ddce;
-  --line-strong: #d3c9b4;
+  /* Ink, deep slate-teal near black */
+  --ink: #0e1f1b;
+  --ink-soft: #435551;
+  --ink-faint: #798a84;
+  --line: #dbe8e3;
+  --line-strong: #c3d5ce;
 
-  /* Signature accent — sunrise coral */
-  --coral: #ef5b34;
-  --coral-deep: #d9451f;
-  --coral-tint: #fdeee7;
+  /* Signature accent, fresh teal */
+  --coral: #0d9488;
+  --coral-deep: #0a7a70;
+  --coral-tint: #d3efeb;
 
-  /* Growth / free / verified — emerald */
-  --emerald: #0f7a5e;
-  --emerald-tint: #e6f3ee;
+  /* Growth / free / verified, leaf green */
+  --emerald: #2f9e46;
+  --emerald-tint: #e6f6e6;
 
-  /* Cool support — used sparingly for info/links */
-  --indigo: #3a3af0;
-  --amber: #f2a900;
+  /* Cool support, info and warnings */
+  --indigo: #2f6df0;
+  --amber: #e39400;
 
   --radius: 18px;
   --radius-sm: 12px;
   --radius-lg: 28px;
 
-  --shadow-sm: 0 1px 2px rgba(23, 19, 13, 0.05), 0 2px 8px rgba(23, 19, 13, 0.04);
-  --shadow-md: 0 4px 12px rgba(23, 19, 13, 0.06), 0 16px 40px rgba(23, 19, 13, 0.07);
-  --shadow-lg: 0 8px 24px rgba(23, 19, 13, 0.08), 0 30px 70px rgba(23, 19, 13, 0.10);
-  --shadow-coral: 0 10px 30px rgba(239, 91, 52, 0.28);
+  --shadow-sm: 0 1px 2px rgba(14, 31, 27, 0.05), 0 2px 8px rgba(14, 31, 27, 0.04);
+  --shadow-md: 0 4px 12px rgba(14, 31, 27, 0.06), 0 16px 40px rgba(14, 31, 27, 0.07);
+  --shadow-lg: 0 8px 24px rgba(14, 31, 27, 0.08), 0 30px 70px rgba(14, 31, 27, 0.10);
+  --shadow-coral: 0 10px 30px rgba(13, 148, 136, 0.28);
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -67,9 +67,10 @@
 
   --radius-xl2: var(--radius-lg);
 
-  --font-display: var(--font-bricolage);
+  /* One simple, readable sans for everything */
+  --font-display: var(--font-geist-sans);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-geist-sans);
 
   /* Fluid type scale */
   --text-hero: clamp(2.9rem, 1.2rem + 7vw, 7rem);
