@@ -41,7 +41,7 @@ export default function OpengraphImage() {
             style={{
               width: 76,
               height: 76,
-              borderRadius: 20,
+              borderRadius: 0,
               background: "#0d9488",
               display: "flex",
               alignItems: "center",

@@ -483,11 +483,11 @@ function HeroPanel() {
               y={b.y}
               width={barW}
               height={baseline - b.y}
-              rx="10"
+              rx="0"
               fill={b.fill}
               opacity="0.16"
             />
-            <rect x={b.x} y={b.y} width={barW} height="6" rx="3" fill={b.fill} />
+            <rect x={b.x} y={b.y} width={barW} height="6" rx="0" fill={b.fill} />
             <text
               x={b.x + barW / 2}
               y={b.y + 34}
