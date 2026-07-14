@@ -17,7 +17,7 @@
   "regions": {
     "kicker": "The major markets",
     "title": "US, UK & EU, Australia, and the rest, side by side.",
-    "lead": "These are generalizations to orient you, not rules. Every client is different, and pay is qualitative here on purpose: there is no trustworthy public dataset, so we describe the shape, not a fake number. Verify each real offer against live job posts.",
+    "lead": "These are generalizations to orient you, not rules. Every client is different, and pay is qualitative here on purpose: there is no trustworthy public dataset, so we describe the shape instead of inventing a number. Verify each real offer against live job posts.",
     "items": [
       {
         "name": "United States",

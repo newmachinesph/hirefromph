@@ -93,10 +93,9 @@ export function FollowModal() {
                 Join the DevUp community.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                No catch, walang bayad. Everything here is free and always will be.
-                Join our Facebook group for the real-talk, the new resources, and
-                the surprises. We drop bombs there, free giveaways for members, and
-                you will want to be in the room when we do.
+                Walang bayad — everything here is free and always will be. Join
+                our Facebook group for real talk, new resources, and member
+                giveaways.
               </p>
 
               <ul className="mt-5 flex flex-col gap-2.5 text-sm text-ink">
