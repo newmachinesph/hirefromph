@@ -61,7 +61,7 @@ export function RateCalculator() {
   const [unpaid, setUnpaid] = useState(30); // unpaid time %
   const [costs, setCosts] = useState(4000); // ₱/mo internet, power, tools
   const [tax, setTax] = useState(8); // %
-  const [fx, setFx] = useState(58); // ₱ per $1
+  const [fx, setFx] = useState(60); // ₱ per $1
 
   const {
     afterFeeUsd,
