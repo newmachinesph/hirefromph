@@ -74,7 +74,8 @@
       { "title": "Learn any tool, fast", "desc": "The transferable method for mastering software in a weekend, not a tutorial to follow.", "href": "/tools", "cta": "Learn the method" },
       { "title": "Learn to write SOPs", "desc": "Document any process so well you never explain it twice. You write them; you own them.", "href": "/build", "cta": "Open the lab" },
       { "title": "Build the trackers your role needs", "desc": "Schema, formulas, and judgment, so you can build a tracker for anything.", "href": "/build", "cta": "Build trackers" },
-      { "title": "Communicate like a professional", "desc": "Status updates, async etiquette, and managing expectations.", "href": "/method", "cta": "The ASK method" }
+      { "title": "Communicate like a professional", "desc": "Status updates, async etiquette, and managing expectations.", "href": "/method", "cta": "The ASK method" },
+      { "title": "Become indispensable", "desc": "Stop waiting to be told. Anticipate what the client needs next and own the outcome, not the task, that's the person they can't replace.", "href": "/indispensable", "cta": "Own outcomes" }
     ],
     "tools": [
       { "label": "Build Labs", "href": "/build" },
