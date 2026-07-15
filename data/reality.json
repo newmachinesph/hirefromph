@@ -16,7 +16,7 @@
         "id": "who",
         "icon": "user-search",
         "q": "Who counted, and what do they sell?",
-        "why": "A staffing agency publishing a \"2026 salary guide\" is quoting the price it wants you to accept. A university, a labour body, or a government think-tank has no rate to protect. Same number, completely different weight."
+        "why": "A staffing agency publishing a \"2026 salary guide\" is quoting the price it wants you to accept. A university, a labour body, or a government think-tank has no rate to protect. Same number, different weight."
       },
       {
         "id": "n",
@@ -162,7 +162,7 @@
   "ai": {
     "kicker": "What AI is actually doing · 2023 → 2027",
     "title": "The floor got cut. The ceiling went up.",
-    "lead": "This is the part everyone gets wrong in both directions. \"AI will replace freelancers\" is false. \"AI changes nothing\" is also false. What the posting data shows is narrower and much more actionable: work that could be described as a generic task collapsed in price, while work where a human owns an outcome grew.",
+    "lead": "This is the part everyone gets wrong in both directions. \"AI will replace freelancers\" is false. \"AI changes nothing\" is also false. What the posting data shows is narrower and more actionable: work that could be described as a generic task collapsed in price, while work where a human owns an outcome grew.",
     "framing": "Read every chart below against its baseline, not against zero. This is that fourth question from the top of the page, in action.",
     "charts": [
       {
@@ -205,7 +205,7 @@
     ],
     "peerReviewed": {
       "title": "And it holds up under peer review.",
-      "body": "This isn't only a blog finding. A peer-reviewed study in Management Science (\"Who Is AI Replacing?\") measured a 21% drop in job posts for automation-prone writing and coding work within eight months of ChatGPT's release, and a 17% drop for image-creation work. But read the second half of that paper, because almost nobody quotes it: the jobs that SURVIVED are more complex and higher-paid. The distribution didn't shrink evenly. Its bottom got cut off.",
+      "body": "This isn't only a blog finding. A peer-reviewed study in Management Science (\"Who Is AI Replacing?\") measured a 21% drop in job posts for automation-prone writing and coding work within eight months of ChatGPT's release, and a 17% drop for image-creation work. But read the second half of the paper — the part that rarely gets quoted: the jobs that survived are more complex and higher-paid. The distribution didn't shrink evenly. Its bottom got cut off.",
       "source": {
         "label": "Management Science, Who Is AI Replacing?",
         "url": "https://doi.org/10.1287/mnsc.2024.05420"
@@ -317,7 +317,7 @@
       }
     },
     "nuance": {
-      "title": "But here is the sentence they cut out of the screenshot.",
+      "title": "But here is the sentence that usually gets left out.",
       "body": "Kelly Monahan, Managing Director of the Upwork Research Institute, explained where that premium actually lands, and it is not on people who just learned to prompt. It lands on people who already had deep domain expertise and then layered AI on top of it:",
       "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
       "attribution": "Kelly Monahan, MD, Upwork Research Institute",

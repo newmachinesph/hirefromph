@@ -65,7 +65,7 @@
       ],
       "mistakes": [
         "Listing duties instead of results ('Managed emails' instead of 'Cleared 400-email backlog in 10 days').",
-        "Using a generic objective statement that could apply to literally any job.",
+        "Using a generic objective statement that could apply to any job.",
         "Cramming two pages of history instead of cutting to the strongest one page.",
         "Copy-pasting a template's bracketed placeholder and forgetting to replace it, recruiters notice instantly.",
         "Inconsistent formatting, mixed fonts, uneven spacing, bullets that don't align."
@@ -200,7 +200,7 @@
       "whyBuild": "A downloaded tracker template looks done on day one and breaks by week two, because you don't know why each column exists, so you can't adapt it when your actual workflow doesn't match the template's assumptions. Every tracker, job applications, invoices, content calendars, client deliverables, is the same underlying pattern: a row per item, a status column, a date-driven trigger, and a place for notes. Learn that pattern once and you can build a working tracker for anything in fifteen minutes, in any spreadsheet tool.",
       "studyFirst": {
         "what": "Find how 3 different tracking problems are actually solved in spreadsheets, an application tracker, a content calendar, and a financial tracker (AR or AP), to see the shared pattern underneath different subjects.",
-        "how": "Search 'job application tracker spreadsheet reddit' for real shared examples. Search 'content calendar template' on YouTube and watch someone walk through their actual columns and formulas. Ask in an online-professional group what tracker a working bookkeeper or social media manager actually uses day to day."
+        "how": "Search 'job application tracker spreadsheet reddit' for real shared examples. Search 'content calendar template' on YouTube and watch someone walk through their actual columns and formulas. Ask in an online-professional group what tracker a working bookkeeper or social media manager uses day to day."
       },
       "anatomy": [
         { "part": "Unique identifier column", "purpose": "Gives every row a stable reference so nothing gets confused or duplicated.", "rule": "One column that's always unique, an ID number, an invoice number, a date+name combo. Never rely on row position alone." },
@@ -236,7 +236,7 @@
         "Does every status value come from a fixed dropdown, or did I leave it as free text?",
         "Is there at least one column that drives an action, not just records history?",
         "Could I explain what every single column means without re-reading a header?",
-        "Have I set a specific cadence for reviewing this, and will I actually keep it?",
+        "Have I set a specific cadence for reviewing this, and will I keep it?",
         "If I handed this blank schema to someone else, could they fill it in correctly without asking me questions?"
       ],
       "mistakes": [
@@ -298,7 +298,7 @@
         "Does every numbered step contain exactly one action?",
         "Is my Definition of Done a checkable fact, not a vague feeling of completeness?",
         "Did I include at least one real mistake, not a hypothetical one?",
-        "If the real process changed tomorrow, would I actually remember to update this document?"
+        "If the real process changed tomorrow, would I remember to update this document?"
       ],
       "mistakes": [
         "Steps that bundle two or three actions into one numbered line.",
@@ -367,7 +367,7 @@
         "No stated consequence for late payment, leaving you with no leverage when it happens.",
         "Reusing invoice numbers or skipping numbers, which creates bookkeeping and tax headaches later.",
         "Invoice line items that just say 'services rendered' with no period or specifics.",
-        "Copy-pasting a contract clause you don't actually understand, just because a template had it."
+        "Copy-pasting a contract clause you don't understand, just because a template had it."
       ],
       "buildIn": { "tool": "Google Docs (contract) + Google Sheets or invoicing tool (invoice)", "how": "Draft the contract as a plain Doc using the clauses above, get the client to countersign via email or a free e-signature tool. Build the invoice as a Sheet template with a formula-driven total, or use a free invoicing tool (Wise, PayPal invoicing) that auto-numbers for you." }
     },
@@ -378,7 +378,7 @@
       "icon": "clipboard-check",
       "difficulty": "Intermediate",
       "time": "45 min",
-      "outcome": "A repeatable onboarding process that makes you look elite in the first 48 hours of any new client relationship.",
+      "outcome": "A repeatable onboarding process that makes you look organized and capable in the first 48 hours of any new client relationship.",
       "whyBuild": "The first week with a new client is when they decide, mostly unconsciously, whether hiring you was a good call, and a scattered, ask-as-you-go onboarding makes even a skilled professional look disorganized. A generic onboarding checklist you didn't build yourself misses the specific access, questions, and priorities that actually matter for your niche. Build your own onboarding system once, understand why each piece exists, and every new client relationship starts from a position of obvious competence instead of scrambling.",
       "studyFirst": {
         "what": "Find 3 real client-onboarding processes or 'welcome packets' from working professionals in your niche.",

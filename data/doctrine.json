@@ -96,7 +96,7 @@
       "tagline": "How to judge information, tools, and opportunities",
       "icon": "shield-check",
       "accent": "amber",
-      "summary": "The internet is full of confident people who are wrong, and generous people who are selling. Learn to tell.",
+      "summary": "Confidence is not accuracy, and advice often arrives with an incentive attached. Learn to check both.",
       "steps": [
         { "title": "Who benefits if I believe this?", "desc": "Follow the incentive. A recommendation that profits the recommender needs outside evidence." },
         { "title": "Is this evidence, or is this vibes?", "desc": "Numbers, sources, and dates are evidence. Confidence, screenshots, and lifestyle are not." },
