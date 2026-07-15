@@ -115,50 +115,95 @@ export function SiteHeader() {
             </button>
 
             {explore && (
-              <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[46rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-6 shadow-[var(--shadow-lg)]">
-                <div className="grid grid-cols-2 gap-x-8 gap-y-6 xl:grid-cols-4">
-                  {site.navGroups.map((group) => (
+              <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[48rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-5 shadow-[var(--shadow-lg)]">
+                {/* Primary: the journey, as a numbered stepper */}
+                {site.navGroups
+                  .filter((g) => "primary" in g && g.primary)
+                  .map((group) => (
                     <div
                       key={group.title}
-                      className={cn(
-                        "primary" in group && group.primary &&
-                          "xl:col-span-4 rounded-xl border border-coral/25 bg-coral-tint/40 p-4",
-                      )}
+                      className="rounded-xl border border-coral/25 bg-coral-tint/40 p-4"
                     >
-                      <h2 className="kicker text-coral">{group.title}</h2>
-                      {"desc" in group && group.desc && (
-                        <p className="mt-1.5 text-xs leading-snug text-ink-faint">
-                          {group.desc}
-                        </p>
-                      )}
-                      <div
-                        className={cn(
-                          "mt-3 gap-0.5",
-                          "primary" in group && group.primary
-                            ? "grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5"
-                            : "flex flex-col",
+                      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                        <h2 className="kicker text-coral">{group.title}</h2>
+                        {"desc" in group && group.desc && (
+                          <p className="text-xs leading-snug text-ink-faint">
+                            {group.desc}
+                          </p>
                         )}
-                      >
-                        {group.links.map((item) => {
+                      </div>
+                      <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-5">
+                        {group.links.map((item, idx) => {
                           const active = pathname === item.href;
                           return (
                             <Link
                               key={item.href}
                               href={item.href}
                               className={cn(
-                                "rounded-lg px-2.5 py-1.5 text-sm transition-colors",
+                                "flex items-center gap-2.5 rounded-xl border px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-coral hover:shadow-[var(--shadow-sm)]",
                                 active
-                                  ? "bg-ink text-paper-2"
-                                  : "text-ink-soft hover:bg-paper-3 hover:text-ink",
+                                  ? "border-coral bg-paper-2"
+                                  : "border-coral/15 bg-paper-2/70",
                               )}
                             >
-                              {item.label}
+                              <span
+                                className={cn(
+                                  "font-display text-lg leading-none",
+                                  active ? "text-coral" : "text-coral/50",
+                                )}
+                              >
+                                0{idx + 1}
+                              </span>
+                              <span className="text-sm font-medium leading-tight text-ink">
+                                {item.label}
+                              </span>
                             </Link>
                           );
                         })}
                       </div>
                     </div>
                   ))}
+
+                {/* Secondary: dip-in groups, long lists split to two columns */}
+                <div className="mt-5 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-3">
+                  {site.navGroups
+                    .filter((g) => !("primary" in g && g.primary))
+                    .map((group) => (
+                      <div key={group.title}>
+                        <h2 className="kicker text-coral">{group.title}</h2>
+                        {"desc" in group && group.desc && (
+                          <p className="mt-1.5 text-xs leading-snug text-ink-faint">
+                            {group.desc}
+                          </p>
+                        )}
+                        <div
+                          className={cn(
+                            "mt-2.5 gap-x-3 gap-y-0.5",
+                            group.links.length > 6
+                              ? "grid grid-cols-2"
+                              : "flex flex-col",
+                          )}
+                        >
+                          {group.links.map((item) => {
+                            const active = pathname === item.href;
+                            return (
+                              <Link
+                                key={item.href}
+                                href={item.href}
+                                className={cn(
+                                  "rounded-lg px-2.5 py-1.5 text-sm transition-colors",
+                                  active
+                                    ? "bg-ink text-paper-2"
+                                    : "text-ink-soft hover:bg-paper-3 hover:text-ink",
+                                )}
+                              >
+                                {item.label}
+                              </Link>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ))}
                 </div>
               </div>
             )}
