@@ -5,6 +5,7 @@ import portfolio from "@/data/portfolio.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -61,6 +62,11 @@ export default function PortfolioPage() {
             <p className="font-display text-lg leading-snug text-balance">
               {portfolio.creed}
             </p>
+          </div>
+        </Reveal>
+        <Reveal i={4}>
+          <div className="mt-6">
+            <FreshnessNote date={portfolio.lastVerified} />
           </div>
         </Reveal>
       </section>

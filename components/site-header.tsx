@@ -11,6 +11,7 @@ import trackNames from "@/data/track-names.json";
 import { usePath } from "@/lib/path-context";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
+import { SearchPalette } from "@/components/search-palette";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -147,6 +148,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <SearchPalette />
           {hydrated && hasPath && activeTrackName ? (
             <Link
               href="/path"

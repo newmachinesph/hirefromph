@@ -5,13 +5,30 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { MicroTasks } from "@/components/micro-tasks";
 import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { JsonLd } from "@/components/json-ld";
 import { pageMeta } from "@/lib/meta";
+import { BASE_URL } from "@/app/sitemap";
 
 export const metadata: Metadata = pageMeta({
   path: "/tasks",
   title: "Micro-Tasks",
   description: tasksData.intro,
 });
+
+// ItemList of every micro-task, derived from the data so it can't drift.
+const itemListLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "DevUp micro-tasks",
+  description: tasksData.intro,
+  url: `${BASE_URL}/tasks`,
+  numberOfItems: tasksData.tasks.length,
+  itemListElement: tasksData.tasks.map((task, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: task.title,
+  })),
+};
 
 // One icon per step of the doctrine's four-step brief shape, data stays in tasks.json,
 // this is just the visual language for it.
@@ -20,6 +37,7 @@ const stepIcons = ["list-checks", "book-open", "hammer", "trophy"];
 export default function TasksPage() {
   return (
     <>
+      <JsonLd data={itemListLd} />
       {/* ---------------------------------------------------------------- HERO */}
       <section className="container-x pt-14 pb-10 lg:pt-20">
         <Reveal>

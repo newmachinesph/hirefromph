@@ -7,6 +7,7 @@ import {
   TiktokLogo,
 } from "@phosphor-icons/react";
 import site from "@/data/site.json";
+import { track } from "@/lib/analytics";
 
 const SOCIALS = [
   { label: "Facebook", href: site.social.facebook, Icon: FacebookLogo },
@@ -24,6 +25,7 @@ export function SocialLinks() {
           href={href}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => track("social_click", { platform: label })}
           aria-label={`DevUp on ${label}`}
           className="grid h-10 w-10 place-items-center border border-white/15 bg-white/5 text-paper-2 transition-colors hover:border-coral hover:text-coral"
         >

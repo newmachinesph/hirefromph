@@ -7,6 +7,7 @@ import { usePath } from "@/lib/path-context";
 import { Icon } from "@/components/icon";
 import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { track } from "@/lib/analytics";
 
 type Props = {
   compact?: boolean;
@@ -33,6 +34,7 @@ export function PathChooser({ compact = false, redirectTo, onChosen }: Props) {
   const router = useRouter();
 
   function pick(id: string) {
+    track("path_chosen", { track: id });
     choosePath(id);
     onChosen?.(id);
     if (redirectTo) router.push(redirectTo);

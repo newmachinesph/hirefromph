@@ -4,6 +4,7 @@ import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { RateCalculator } from "@/components/rate-calculator";
+import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -68,6 +69,11 @@ export default function SalaryPage() {
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
+        </Reveal>
+        <Reveal i={4}>
+          <div className="mt-6">
+            <FreshnessNote date={salary.lastVerified} />
+          </div>
         </Reveal>
       </section>
 
