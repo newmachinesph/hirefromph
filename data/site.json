@@ -2,8 +2,8 @@
   "brand": "DevUp",
   "wordmarkAccent": "Up",
   "meaning": "Developing upwards",
-  "tagline": "Developing upwards. A complete platform for building an online career. Free.",
-  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. A free, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional — trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given away.",
+  "tagline": "Developing upwards. The complete platform for building an online career — open to every Filipino.",
+  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional — trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
   "standard": {
     "kicker": "The DevUp standard",
     "title": "We don't hand you files. We make you resourceful.",
@@ -45,7 +45,7 @@
         { "label": "Build Labs", "href": "/build" },
         { "label": "Learn Any Tool", "href": "/tools" },
         { "label": "AI Leverage", "href": "/prompts" },
-        { "label": "Free Resources", "href": "/resources" }
+        { "label": "Resource Shelf", "href": "/resources" }
       ]
     },
     {
@@ -62,6 +62,7 @@
       "title": "Grow",
       "links": [
         { "label": "Find Work", "href": "/apply" },
+        { "label": "Interview Prep", "href": "/interview" },
         { "label": "Own Your Clients", "href": "/clients" },
         { "label": "Get Legit", "href": "/legit" },
         { "label": "Salary Guide", "href": "/salary" },

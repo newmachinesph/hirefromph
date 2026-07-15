@@ -1,5 +1,5 @@
 {
-  "intro": "The complete DevUp list of agencies, platforms, job boards, headhunters, and BPOs that hire Filipino online professionals. All free. Updated for 2026.",
+  "intro": "The complete DevUp list of agencies, platforms, job boards, headhunters, and BPOs that hire Filipino online professionals. All at no cost. Updated for 2026.",
   "disclaimer": "These are listed for your convenience, not necessarily endorsed by DevUp. Never pay upfront fees to get hired. If it sounds too good to be true, it probably is.",
   "categories": [
     { "id": "marketplace", "label": "Freelance Marketplaces" },
@@ -14,7 +14,7 @@
     { "name": "Upwork", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Global freelance marketplace. Competitive, but proposals + niche win consistent work.", "tags": ["Portfolio-based", "Global"], "url": "https://www.upwork.com" },
     { "name": "Fiverr", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Sell productized services as 'gigs'. Great for creative and content niches.", "tags": ["Productized", "Creative"], "url": "https://www.fiverr.com" },
     { "name": "Freelancer.com", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Bidding-style marketplace across many categories.", "tags": ["Bidding", "Broad"], "url": "https://www.freelancer.com" },
-    { "name": "Contra", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Commission-free freelancing platform popular with creatives and ops pros.", "tags": ["No commission", "Modern"], "url": "https://contra.com" },
+    { "name": "Contra", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Zero-commission freelancing platform popular with creatives and ops pros.", "tags": ["No commission", "Modern"], "url": "https://contra.com" },
     { "name": "VirtualStaff.ph", "category": "ph-boards", "type": "Job board", "region": "PH-focused", "blurb": "PH-focused platform connecting local talent to long-term remote roles.", "tags": ["Long-term", "PH-focused"], "url": "https://www.virtualstaff.ph" },
     { "name": "Remote Staff", "category": "agencies", "type": "Agency", "region": "PH-focused", "blurb": "Established PH remote-staffing agency placing full-time home-based roles.", "tags": ["Full-time", "Vetted"], "url": "https://www.remotestaff.ph" },
     { "name": "Kalibrr", "category": "ph-boards", "type": "Job board", "region": "PH / SEA", "blurb": "Popular PH job platform with a growing remote category.", "tags": ["PH", "Corporate"], "url": "https://www.kalibrr.com" },

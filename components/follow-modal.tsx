@@ -69,7 +69,7 @@ export function FollowModal() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.98 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="relative w-full max-w-md overflow-hidden rounded-[var(--radius-lg)] border border-line bg-paper-2 p-7 shadow-[var(--shadow-lg)]"
+            className="relative z-10 w-full max-w-md overflow-hidden rounded-[var(--radius-lg)] border border-line bg-paper-2 p-7 shadow-[var(--shadow-lg)]"
           >
             <div
               aria-hidden
@@ -93,7 +93,7 @@ export function FollowModal() {
                 Join the DevUp community.
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                Walang bayad — everything here is free and always will be. Join
+                Everything here is open, and always will be. Join
                 our Facebook group for the news that matters: real shifts in
                 this market, and what&apos;s new on the portal.
               </p>

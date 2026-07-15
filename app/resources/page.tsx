@@ -18,10 +18,10 @@ const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {
   paid: "neutral",
 };
 const costLabel: Record<string, string> = {
-  free: "Free",
+  free: "Open",
   "open-source": "Open source",
-  freemium: "Free tier",
-  "free-trial": "Free to audit",
+  freemium: "No-cost tier",
+  "free-trial": "Trial",
   paid: "Paid",
 };
 
@@ -111,7 +111,7 @@ export default function ResourcesPage() {
                       <div className="flex items-center justify-between gap-2">
                         <p className="kicker">{item.org}</p>
                         <Pill tone={costTone[item.cost] ?? "emerald"}>
-                          {costLabel[item.cost] ?? "Free"}
+                          {costLabel[item.cost] ?? "Open"}
                         </Pill>
                       </div>
                       <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-coral">

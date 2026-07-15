@@ -408,7 +408,7 @@ export default function PathPage() {
             </div>
           </div>
           <div>
-            <p className="kicker mb-3">Free certifications</p>
+            <p className="kicker mb-3">Certifications</p>
             <div className="flex flex-wrap gap-2">
               {track.certs.map((c) => (
                 <Pill key={c} tone="emerald">

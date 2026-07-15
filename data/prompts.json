@@ -101,7 +101,7 @@
       "category": "levelup",
       "title": "Build a 90-day niche learning plan",
       "desc": "Go from generalist to specialist on a schedule.",
-      "text": "I want to specialize in [NICHE]. Build me a 90-day learning plan with weekly goals, free resources to use, one small portfolio project per month, and the certification I should aim for. Assume I can study 1 hour a day. Output as a week-by-week checklist."
+      "text": "I want to specialize in [NICHE]. Build me a 90-day learning plan with weekly goals, no-cost resources to use, one small portfolio project per month, and the certification I should aim for. Assume I can study 1 hour a day. Output as a week-by-week checklist."
     }
   ]
 }

@@ -688,11 +688,11 @@ export default function RealityPage() {
         <Reveal i={1}>
           <div className="mt-10 flex flex-col gap-3 rounded-2xl border border-line bg-paper-2 p-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-sm leading-relaxed text-ink-soft">
-              Looking for free courses, government programs, and YouTube channels
-              to actually build the skills? We keep the whole free shelf, and how
+              Looking for open courses, government programs, and YouTube channels
+              to actually build the skills? We keep the whole shelf, and how
               to judge any course, on one page.
             </p>
-            <ArrowLink href="/resources">Open the Free Resources shelf</ArrowLink>
+            <ArrowLink href="/resources">Open the Resources shelf</ArrowLink>
           </div>
         </Reveal>
       </section>

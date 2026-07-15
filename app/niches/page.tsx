@@ -19,7 +19,7 @@ const CRITERION_ICON_TONE = [
 export const metadata: Metadata = {
   title: "Niche Learning Hub",
   description:
-    "Pick your lane and go deep. Explore 11 online-career niches, including new lanes like streaming, podcast production, and faith-based support, with pay bands, demand, skills, free courses, and how AI is changing each one.",
+    "Pick your lane and go deep. Explore 11 online-career niches, including new lanes like streaming, podcast production, and faith-based support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
 };
 
 const steps = [
@@ -31,14 +31,14 @@ const steps = [
   },
   {
     n: "02",
-    title: "Learn free",
+    title: "Where to learn",
     desc: "Follow the courses, YouTube guides, and templates built for that niche.",
     icon: "graduation-cap",
   },
   {
     n: "03",
     title: "Get certified",
-    desc: "Earn the certs clients actually look for, most of them free.",
+    desc: "Earn the certs clients actually look for, most at no cost.",
     icon: "award",
   },
   {

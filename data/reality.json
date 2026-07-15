@@ -48,7 +48,7 @@
       "tag": "The pay myth",
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a third of your working time will not be paid at all.",
-      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one third of working time, invisible and free. Once you count it, average hourly earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa).",
+      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one third of working time, invisible and unpaid. Once you count it, average hourly earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa).",
       "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the ninety minutes it actually took to earn.",
       "lesson": "Never compare a freelance rate to a local salary without the unpaid third, the platform fee, and your own electricity and internet already subtracted. Do that arithmetic before you resign from anything.",
       "source": {
@@ -112,7 +112,7 @@
       "tag": "The competition myth",
       "myth": "\"There's so much work out there, low competition.\"",
       "headline": "We are the 3rd largest online-work market on Earth.",
-      "body": "PIDS, the Philippine government's own policy think-tank, puts the Philippines third globally in online work, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, free labour, and \"race to the bottom\" wage rates.",
+      "body": "PIDS, the Philippine government's own policy think-tank, puts the Philippines third globally in online work, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, no-cost labour, and \"race to the bottom\" wage rates.",
       "sting": "When your own government's researchers use the phrase \"race to the bottom\" about your industry, the competitive pressure you feel isn't self-doubt. It's real, and it's measured.",
       "lesson": "You cannot win a race to the bottom, the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what /niches and /tasks are for.",
       "source": {
@@ -439,7 +439,7 @@
   "reading": {
     "kicker": "Read the primary source, not the summary",
     "title": "The reading list",
-    "lead": "Everything cited on this page, plus the free material that actually moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year, and those three things are where the truth lives.",
+    "lead": "Everything cited on this page, plus the no-cost material that actually moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year, and those three things are where the truth lives.",
     "groups": [
       {
         "id": "market",
@@ -456,13 +456,13 @@
             "title": "In-Demand Skills 2026",
             "org": "Upwork",
             "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
-            "why": "The single best free map of what clients are paying for right now. Treat the growth list as your shortlist of lanes."
+            "why": "The single best no-cost map of what clients are paying for right now. Treat the growth list as your shortlist of lanes."
           },
           {
             "title": "Business Trends Index, June 2026",
             "org": "Fiverr",
             "url": "https://www.fiverr.com/resources/guides/reports/business-trends-index-june-2026",
-            "why": "What buyers are searching for THIS quarter. The closest thing to a live demand feed you can read for free."
+            "why": "What buyers are searching for THIS quarter. The closest thing to a live demand feed you can read at no cost."
           },
           {
             "title": "Skills on the Rise 2026",

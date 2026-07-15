@@ -27,7 +27,7 @@
       "name": "Spaced Repetition",
       "what": "Reviewing material at increasing intervals, a day later, then a few days, then a couple of weeks, instead of cramming it into one sitting.",
       "why": "Memory decays on a curve. Reviewing right before you'd forget resets that curve and makes the next decay slower. Cramming feels efficient because everything is fresh at the test, but it's mostly gone within days. Spacing trades a little short-term comfort for knowledge that survives months.",
-      "how": "Review new material after 1 day, then 3 days, then a week, then a month. Apps like Anki automate the schedule for you, but a recurring calendar reminder does the same job for free. Space by calendar days, not by how many times you've looked at it in one sitting.",
+      "how": "Review new material after 1 day, then 3 days, then a week, then a month. Apps like Anki automate the schedule for you, but a recurring calendar reminder does the same job at no cost. Space by calendar days, not by how many times you've looked at it in one sitting.",
       "effort": "Low per session, needs a simple system",
       "payoff": "Best long-term retention of any method here",
       "icon": "calendar-clock",
@@ -289,7 +289,7 @@
     "feedback": {
       "person": "Use them. Show your work and ask directly: \"what's wrong with this, be specific.\" Comfortable feedback teaches nothing, ask for the unkind version on purpose.",
       "aiTests": "Write down the rubric or the correct answer before you check it. That written standard is what turns AI or a test into a real feedback loop, instead of just a source of comfort.",
-      "nothing": "Build a feedback loop before you build anything else. Two free options: paste your work into AI and ask it to critique against the actual rules of the job, unkindly and specifically, or teach it back to a beginner and watch exactly where you stumble. Either one works. Neither costs anything."
+      "nothing": "Build a feedback loop before you build anything else. Two no-cost options: paste your work into AI and ask it to critique against the actual rules of the job, unkindly and specifically, or teach it back to a beginner and watch exactly where you stumble. Either one works. Neither costs anything."
     },
     "goal": {
       "job": {

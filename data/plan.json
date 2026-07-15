@@ -1,5 +1,5 @@
 {
-  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan, specific tasks, the exact portal tools to use, and creators to follow. 100% free. 2–3 hours a day.",
+  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan, specific tasks, the exact portal tools to use, and creators to follow. 100% no-cost. 2–3 hours a day.",
   "commitment": "2–3 hours daily",
   "questions": [
     {
@@ -68,7 +68,7 @@
         { "day": 9, "task": "Write your resume from those rules, on a blank page. It's yours.", "tool": "/build" },
         { "day": 10, "task": "Write your own prompt to critique it, learn the anatomy of a prompt.", "tool": "/prompts" },
         { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools" },
-        { "day": 12, "task": "Start a free certification for your niche.", "tool": "/niches" },
+        { "day": 12, "task": "Start a no-cost certification for your niche.", "tool": "/niches" },
         { "day": 13, "task": "Build your own application tracker, schema and formulas, from scratch.", "tool": "/build" },
         { "day": 14, "task": "Review your first two weeks on your dashboard. Get feedback in the community group.", "tool": "/path" }
       ]

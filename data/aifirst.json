@@ -73,15 +73,15 @@
         "accent": "amber"
       }
     ],
-    "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (free)", "url": "https://www.anthropic.com/ai-fluency/overview" },
-    "note": "These four are the core of Anthropic's free AI Fluency course, a few hours and no cost. Do it first. It is the highest-leverage free thing you can study this month. It is on the Free Resources page too."
+    "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (open)", "url": "https://www.anthropic.com/ai-fluency/overview" },
+    "note": "These four are the core of Anthropic's no-cost AI Fluency course, a few hours and no cost. Do it first. It is the highest-leverage no-cost thing you can study this month. It is on the No-cost Resources page too."
   },
 
   "landscape": {
     "kicker": "The landscape · specimens, not a shopping list",
     "title": "Five layers of AI a modern professional actually uses.",
     "lead": "These are not tools to memorize. The specific names will change, and half of them will have new rivals by the time you read this. They are here as worked examples of five things you can now put under any craft. For each layer we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you will still have the layer.",
-    "note": "Prefer the free and open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons.",
+    "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons.",
     "categories": [
       {
         "id": "coding",
@@ -106,9 +106,9 @@
         "what": "Models and runtimes you can run on your own machine or cheaply in the cloud, with open weights. No per-message fee, and the data never leaves your control.",
         "unlocks": "Handle a client's private data without sending it to a third party, work offline, and stop paying per token once your volume grows. Being able to say your data stays on my machine is itself a selling point to a nervous client.",
         "tools": [
-          { "name": "Ollama", "url": "https://ollama.com/", "cost": "open-source", "oneLiner": "Free, open-source runtime that downloads and runs open models (Llama, Mistral, Qwen, DeepSeek, Gemma) locally with one command.", "useInWork": "Draft, summarize, translate, and code on your own laptop. Client data never leaves it, and there are no per-message fees." },
-          { "name": "LM Studio", "url": "https://lmstudio.ai/", "cost": "free", "oneLiner": "A free desktop app to find, download, and run open models locally through a friendly interface.", "useInWork": "A point-and-click way to run a private, offline AI assistant for confidential client work, no cloud account needed." },
-          { "name": "Hugging Face", "url": "https://huggingface.co/", "cost": "freemium", "oneLiner": "The main hub for open AI. Browse and download tens of thousands of free models and try them in the browser.", "useInWork": "Where you find the actual model files to run in Ollama or LM Studio, and test a model in a free Space first." },
+          { "name": "Ollama", "url": "https://ollama.com/", "cost": "open-source", "oneLiner": "No-cost, open-source runtime that downloads and runs open models (Llama, Mistral, Qwen, DeepSeek, Gemma) locally with one command.", "useInWork": "Draft, summarize, translate, and code on your own laptop. Client data never leaves it, and there are no per-message fees." },
+          { "name": "LM Studio", "url": "https://lmstudio.ai/", "cost": "free", "oneLiner": "A no-cost desktop app to find, download, and run open models locally through a friendly interface.", "useInWork": "A point-and-click way to run a private, offline AI assistant for confidential client work, no cloud account needed." },
+          { "name": "Hugging Face", "url": "https://huggingface.co/", "cost": "freemium", "oneLiner": "The main hub for open AI. Browse and download tens of thousands of no-cost models and try them in the browser.", "useInWork": "Where you find the actual model files to run in Ollama or LM Studio, and test a model in a no-cost Space first." },
           { "name": "Mistral AI", "url": "https://mistral.ai/", "cost": "open-source", "oneLiner": "A European lab whose efficient open-weight models, several Apache-2.0, punch above their size.", "useInWork": "Run capable models locally with permissive licensing, a selling point for privacy- or data-conscious clients." },
           { "name": "DeepSeek", "url": "https://www.deepseek.com/", "cost": "open-source", "oneLiner": "Openly released, high-capability models, including a strong reasoning model, several under permissive licenses.", "useInWork": "Frontier-level reasoning and coding quality you can self-host cheaply, with output that is usable in commercial work." }
         ]
@@ -125,8 +125,8 @@
           { "name": "Adobe Firefly", "url": "https://www.adobe.com/products/firefly.html", "cost": "freemium", "oneLiner": "Adobe's generative image tool, trained on licensed content and marketed as commercially safe.", "useInWork": "Commercially-safe images plus generative fill for client ad creative where usage rights actually matter." },
           { "name": "Midjourney", "url": "https://www.midjourney.com/", "cost": "paid", "oneLiner": "The image generator known for the highest-quality, most stylized and photorealistic output.", "useInWork": "Premium hero images, ad creative, and editorial illustration for social, print, and pitch decks. (Paid only.)" },
           { "name": "Ideogram", "url": "https://ideogram.ai/", "cost": "freemium", "oneLiner": "The image generator that is best at rendering accurate, readable text inside an image.", "useInWork": "The go-to when a deliverable needs real words: posters, ad graphics, logos, and typographic thumbnails." },
-          { "name": "ComfyUI", "url": "https://github.com/comfyanonymous/ComfyUI", "cost": "open-source", "oneLiner": "A free, open, node-based interface for running Stable Diffusion and other image models locally.", "useInWork": "Build repeatable pipelines, consistent characters, batch generation, upscaling, for high volume at zero per-image cost." },
-          { "name": "ElevenLabs", "url": "https://elevenlabs.io/", "cost": "freemium", "oneLiner": "Leading AI text-to-speech and voice cloning, producing natural, multilingual voiceovers.", "useInWork": "Voiceovers for explainers, ads, and narration. Note: the free tier is not for commercial use, so you need a paid plan to sell the work." },
+          { "name": "ComfyUI", "url": "https://github.com/comfyanonymous/ComfyUI", "cost": "open-source", "oneLiner": "A no-cost, open, node-based interface for running Stable Diffusion and other image models locally.", "useInWork": "Build repeatable pipelines, consistent characters, batch generation, upscaling, for high volume at zero per-image cost." },
+          { "name": "ElevenLabs", "url": "https://elevenlabs.io/", "cost": "freemium", "oneLiner": "Leading AI text-to-speech and voice cloning, producing natural, multilingual voiceovers.", "useInWork": "Voiceovers for explainers, ads, and narration. Note: the no-cost tier is not for commercial use, so you need a paid plan to sell the work." },
           { "name": "Suno", "url": "https://suno.com/", "cost": "freemium", "oneLiner": "An AI music generator that writes full songs, with vocals, from a text prompt.", "useInWork": "Custom background music and jingles for client videos and ads. Commercial rights require a paid plan." }
         ]
       },
@@ -185,7 +185,7 @@
     "lead": "You will meet a new model or app about every month for the rest of this decade. You cannot take a course each time. So do not learn tools, learn the way to pick one up in an afternoon. This is the same transferable method DevUp uses everywhere, pointed at AI.",
     "steps": [
       { "n": 1, "title": "Name the outcome, not the tool", "desc": "Not learn Runway. Instead: turn this one client testimonial into three captioned 20-second vertical clips. A real deliverable tells you exactly which features to ignore." },
-      { "n": 2, "title": "Find the free tier and ship one real thing", "desc": "Skip the tutorial marathon. Use the free tier to make one finished-if-rough thing in the first hour. A broken result teaches you what to learn next. A video never does." },
+      { "n": 2, "title": "Find the no-cost tier and ship one real thing", "desc": "Skip the tutorial marathon. Use the no-cost tier to make one finished-if-rough thing in the first hour. A broken result teaches you what to learn next. A video never does." },
       { "n": 3, "title": "Describe, then discern", "desc": "Give it a proper brief, get three options, and judge them hard against what the client actually needs. The skill is not generating. It is choosing and refining." },
       { "n": 4, "title": "Keep a human in the loop", "desc": "Check every fact, protect the client's data, and never ship a first draft unread. You are the quality bar and the person responsible, always." },
       { "n": 5, "title": "Turn it into an offer", "desc": "Once you can do it reliably, name it as a service with a price. I turn your long videos into a month of shorts is a business. I know Runway is a hobby." }
@@ -213,7 +213,7 @@
   "agentic": {
     "kicker": "The next layer · agents",
     "title": "Chat was the preview. Agents are the job.",
-    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools like Claude Code plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category — and the market is nowhere near full. Every piece of this stack is free to learn.",
+    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools like Claude Code plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category — and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
     "items": [
       { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer — it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
       { "icon": "file-text", "term": "Context files (AGENTS.md)", "desc": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset." },
@@ -227,18 +227,18 @@
       "title": "Why this matters to you specifically",
       "body": "Repeating a task for more clients grows your income one hour at a time. Operating agents breaks that ceiling: the bookkeeper who runs a reconciliation pipeline, the marketer who runs a content system, the GTM engineer whose entire role is built on this stack — they bill for outcomes, not hours. Filipinos won the last wave of remote work on skill and reliability. This wave goes to whoever learns to direct the machine first, and almost nobody has started."
     },
-    "note": "Start free: point an agent tool's free tier at one micro-task from /tasks and practice the loop — brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
+    "note": "Start now: point an agent tool's no-cost tier at one micro-task from /tasks and practice the loop — brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
     "source": { "label": "Anthropic — Claude Code documentation", "url": "https://code.claude.com/docs" }
   },
 
   "closing": {
     "kicker": "The honest bottom line",
     "title": "You are still early — but the premium has an expiry date.",
-    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed for free. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
+    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed at no cost. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
     "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
     "links": [
       { "href": "/prompts", "label": "Learn to direct AI", "desc": "Description is the entry skill. Learn to write the brief, from a blank box, for anything." },
-      { "href": "/resources", "label": "The free AI courses", "desc": "Start with the free AI-fluency course, the highest-leverage free thing on the shelf." },
+      { "href": "/resources", "label": "The AI courses", "desc": "Start with the no-cost AI-fluency course, the highest-leverage no-cost thing on the shelf." },
       { "href": "/niches", "label": "Pick the craft to multiply", "desc": "AI needs something to multiply. Choose the lane on purpose, using the rubric." },
       { "href": "/reality", "label": "See the evidence", "desc": "Every number on this page, in context, with the counter-evidence included. Check us." }
     ]
