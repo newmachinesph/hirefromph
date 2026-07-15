@@ -25,9 +25,9 @@
         { "skill": "A basic inbox triage decision framework (e.g. the 4 D's: Do, Delegate, Defer, Delete)", "why": "You need a decision rule for every email, not just folders to dump them in.", "ifYouDont": "DevUp's /method, the UNSTICK and FIND methods teach the same decision-first thinking." }
       ],
       "resources": [
-        { "name": "Enron Email Dataset (Kaggle)", "type": "Dataset", "what": "A free, public, real corporate inbox (500k+ emails), pull a 50-email sample to stand in for your 'client's' inbox.", "free": true, "url": "#" },
-        { "name": "Gmail Filters & Labels", "type": "Docs", "what": "Official how-to for building the label taxonomy and auto-filters you'll design.", "free": true, "url": "#" },
-        { "name": "Google Workspace Learning Center", "type": "Free course", "what": "Fast primer on Gmail power-user features (search operators, multiple inboxes).", "free": true, "url": "#" }
+        { "name": "Enron Email Dataset (Kaggle)", "type": "Dataset", "what": "A free, public, real corporate inbox (500k+ emails), pull a 50-email sample to stand in for your 'client's' inbox.", "free": true, "url": "https://www.kaggle.com/datasets/wcukierski/enron-email-dataset" },
+        { "name": "Gmail Filters & Labels", "type": "Docs", "what": "Official how-to for building the label taxonomy and auto-filters you'll design.", "free": true, "url": "https://support.google.com/mail/answer/6579" },
+        { "name": "Google Workspace Learning Center", "type": "Free course", "what": "Fast primer on Gmail power-user features (search operators, multiple inboxes).", "free": true, "url": "https://support.google.com/a/users" }
       ],
       "brief": {
         "scenario": "Mara Dizon runs a 3-person SaaS startup solo. She hasn't opened her inbox in nine days, 400+ unread, real client requests buried under cold pitches and newsletters. She's about to miss a contract renewal because of it.",
@@ -74,9 +74,9 @@
         { "skill": "Time-blocking and priority frameworks (Eisenhower matrix or similar)", "why": "You can't decide what to protect without a framework for what matters.", "ifYouDont": "DevUp's Executive Operations track under /niches, or any free Eisenhower Matrix explainer." }
       ],
       "resources": [
-        { "name": "Google Calendar", "type": "Free tool", "what": "Build the actual before/after calendar mockup here (a free personal Google account works).", "free": true, "url": "#" },
-        { "name": "Google Calendar Help Center", "type": "Docs", "what": "Recurring events, working hours, and focus-time features you'll use in the rebuild.", "free": true, "url": "#" },
-        { "name": "Eisenhower Matrix, free explainer", "type": "Docs", "what": "The urgent/important framework you'll use to decide what gets protected first.", "free": true, "url": "#" }
+        { "name": "Google Calendar", "type": "Free tool", "what": "Build the actual before/after calendar mockup here (a free personal Google account works).", "free": true, "url": "https://calendar.google.com" },
+        { "name": "Google Calendar Help Center", "type": "Docs", "what": "Recurring events, working hours, and focus-time features you'll use in the rebuild.", "free": true, "url": "https://support.google.com/calendar" },
+        { "name": "Eisenhower Matrix, free explainer", "type": "Docs", "what": "The urgent/important framework you'll use to decide what gets protected first.", "free": true, "url": "https://asana.com/resources/eisenhower-matrix" }
       ],
       "brief": {
         "scenario": "Dan Reyes is regional director at a mid-size logistics company. His calendar has 11–14 meetings a day, back-to-back, zero focus time, and three standing meetings nobody can explain the purpose of anymore.",
@@ -122,9 +122,9 @@
         { "skill": "Bank reconciliation workflow inside QuickBooks Online or Xero", "why": "You need to actually run the reconciliation tool, not just understand the theory.", "ifYouDont": "QuickBooks Online's own free trial plus its in-app guided tour." }
       ],
       "resources": [
-        { "name": "QuickBooks Online Certification", "type": "Free course", "what": "Official Intuit training, covers chart of accounts, reconciliation, and reporting.", "free": true, "url": "#" },
-        { "name": "QuickBooks Online free trial", "type": "Free tool", "what": "30-day free trial, do the actual reconciliation work inside the real tool, not a spreadsheet mockup.", "free": true, "url": "#" },
-        { "name": "Kaggle sample bank transaction datasets", "type": "Dataset", "what": "Public sample transaction CSVs you can import as your practice client's messy bank feed.", "free": true, "url": "#" }
+        { "name": "QuickBooks Online Certification", "type": "Free course", "what": "Official Intuit training, covers chart of accounts, reconciliation, and reporting.", "free": true, "url": "https://quickbooks.intuit.com/accountants/training-certification/" },
+        { "name": "QuickBooks Online free trial", "type": "Free tool", "what": "30-day free trial, do the actual reconciliation work inside the real tool, not a spreadsheet mockup.", "free": true, "url": "https://quickbooks.intuit.com/online/" },
+        { "name": "Kaggle sample bank transaction datasets", "type": "Dataset", "what": "Public sample transaction CSVs you can import as your practice client's messy bank feed.", "free": true, "url": "https://www.kaggle.com/datasets?search=bank+transactions" }
       ],
       "brief": {
         "scenario": "Riverside Coffee Roasters (a fictional 2-location café) hasn't reconciled its books since a bookkeeper quit three months ago. Owner transactions, duplicate vendor entries, and uncategorized deposits are piling up.",
@@ -171,9 +171,9 @@
         { "skill": "Spreadsheet formulas (SUMIF, conditional formatting)", "why": "The aging report and prioritization live in a spreadsheet you build yourself.", "ifYouDont": "DevUp's tracker-building lab at /build teaches the exact schema pattern you need." }
       ],
       "resources": [
-        { "name": "Xero Advisor Certification", "type": "Free course", "what": "Covers AR workflows and aging reports inside Xero.", "free": true, "url": "#" },
-        { "name": "Google Sheets", "type": "Free tool", "what": "Build the aging tracker and collection-priority sheet here.", "free": true, "url": "#" },
-        { "name": "SCORE free templates library", "type": "Docs", "what": "Reference real invoice/AR terminology used by small businesses (study only, don't copy).", "free": true, "url": "#" }
+        { "name": "Xero Advisor Certification", "type": "Free course", "what": "Covers AR workflows and aging reports inside Xero.", "free": true, "url": "https://central.xero.com" },
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the aging tracker and collection-priority sheet here.", "free": true, "url": "https://www.google.com/sheets/about/" },
+        { "name": "SCORE free templates library", "type": "Docs", "what": "Reference real invoice/AR terminology used by small businesses (study only, don't copy).", "free": true, "url": "https://www.score.org" }
       ],
       "brief": {
         "scenario": "Bright Path Tutoring (a fictional small tutoring agency, 30 active family clients) has $18,400 in unpaid invoices, some over 90 days old, and no idea which ones are actually at risk of never getting paid.",
@@ -220,9 +220,9 @@
         { "skill": "Basic spreadsheet pivot tables or SUMIF grouping", "why": "You need to group and total expenses by vendor/category to spot the waste.", "ifYouDont": "Google Sheets' own free pivot table tutorial in the Help Center." }
       ],
       "resources": [
-        { "name": "Google Sheets", "type": "Free tool", "what": "Build the expense audit and pivot summary here.", "free": true, "url": "#" },
-        { "name": "Public SaaS spend benchmark reports", "type": "Docs", "what": "Free published benchmarks on typical SaaS spend per employee, use to judge if a line item looks high.", "free": true, "url": "#" },
-        { "name": "Public startup expense/burn breakdowns (Indie Hackers, r/SaaS threads)", "type": "Docs", "what": "Real founders sharing real expense breakdowns, study the categories, not the numbers.", "free": true, "url": "#" }
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the expense audit and pivot summary here.", "free": true, "url": "https://www.google.com/sheets/about/" },
+        { "name": "Public SaaS spend benchmark reports", "type": "Docs", "what": "Free published benchmarks on typical SaaS spend per employee, use to judge if a line item looks high.", "free": true, "url": "https://zylo.com/saas-management-index/" },
+        { "name": "Public startup expense/burn breakdowns (Indie Hackers, r/SaaS threads)", "type": "Docs", "what": "Real founders sharing real expense breakdowns, study the categories, not the numbers.", "free": true, "url": "https://www.indiehackers.com" }
       ],
       "brief": {
         "scenario": "Loopline (a fictional 12-person B2B SaaS startup) is burning faster than expected. The founder exports a year of expense data and asks: 'Where is this actually going, and what can we cut without hurting the team?'",
@@ -269,9 +269,9 @@
         { "skill": "Content calendar structure (pillars, cadence, format mix)", "why": "The audit ends in a calendar recommendation, you need the shape of one first.", "ifYouDont": "DevUp's /build portfolio lab or Canva's free content calendar course." }
       ],
       "resources": [
-        { "name": "Meta Social Media Marketing", "type": "Free course", "what": "Official Meta training on content strategy and engagement metrics.", "free": true, "url": "#" },
+        { "name": "Meta Social Media Marketing", "type": "Free course", "what": "Official Meta training on content strategy and engagement metrics.", "free": true, "url": "https://www.facebook.com/business/learn" },
         { "name": "Any real public brand's Instagram/TikTok/LinkedIn (your choice)", "type": "Free tool", "what": "Your actual audit subject, no login needed, just their public posts from the last 30 days.", "free": true, "url": "#" },
-        { "name": "Canva Design Essentials", "type": "Free course", "what": "You'll need this to actually design the 3 finished posts for the deliverable.", "free": true, "url": "#" }
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "You'll need this to actually design the 3 finished posts for the deliverable.", "free": true, "url": "https://www.canva.com/designschool/" }
       ],
       "brief": {
         "scenario": "Pick one real, public local or regional brand (a café, gym, boutique, or small e-commerce shop) with an active but under-performing social account, you're auditing it cold, the way a prospective client would let you.",
@@ -318,9 +318,9 @@
         { "skill": "Spreadsheet-based tracker design", "why": "The calendar itself is a tracker, status, dates, and an owner column.", "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab teaches the exact schema." }
       ],
       "resources": [
-        { "name": "HubSpot Content Marketing Certification", "type": "Free course", "what": "Covers pillar strategy, cadence planning, and repurposing content across formats.", "free": true, "url": "#" },
-        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual 30-day calendar tracker here, status column, dates, format, caption draft.", "free": true, "url": "#" },
-        { "name": "Buffer's free content calendar guide", "type": "Docs", "what": "Real-world cadence benchmarks by platform (how often to post on IG vs TikTok vs LinkedIn).", "free": true, "url": "#" }
+        { "name": "HubSpot Content Marketing Certification", "type": "Free course", "what": "Covers pillar strategy, cadence planning, and repurposing content across formats.", "free": true, "url": "https://academy.hubspot.com/courses/content-marketing" },
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual 30-day calendar tracker here, status column, dates, format, caption draft.", "free": true, "url": "https://www.google.com/sheets/about/" },
+        { "name": "Buffer's free content calendar guide", "type": "Docs", "what": "Real-world cadence benchmarks by platform (how often to post on IG vs TikTok vs LinkedIn).", "free": true, "url": "https://buffer.com/library" }
       ],
       "brief": {
         "scenario": "Coastal Grind (a fictional independent coffee roastery, one location, growing wholesale side) wants a consistent social presence but has posted only 4 times in the last 2 months, with no plan.",
@@ -367,8 +367,8 @@
         { "skill": "Basic phone-shot video (framing, lighting, stable shots) and CapCut editing", "why": "You're producing real finished video, not a storyboard, you need the actual production skill.", "ifYouDont": "CapCut's in-app tutorials (free) walk through cuts, captions, and pacing." }
       ],
       "resources": [
-        { "name": "CapCut", "type": "Free tool", "what": "Free mobile/desktop editor, shoot and edit all 3 videos here.", "free": true, "url": "#" },
-        { "name": "TikTok Creative Center (public, free)", "type": "Docs", "what": "Real published top-performing ad and organic examples by category, study structure, don't copy content.", "free": true, "url": "#" },
+        { "name": "CapCut", "type": "Free tool", "what": "Free mobile/desktop editor, shoot and edit all 3 videos here.", "free": true, "url": "https://www.capcut.com" },
+        { "name": "TikTok Creative Center (public, free)", "type": "Docs", "what": "Real published top-performing ad and organic examples by category, study structure, don't copy content.", "free": true, "url": "https://ads.tiktok.com/business/creativecenter/pc/en" },
         { "name": "CapCut Editing Masterclass", "type": "Video", "what": "DevUp's own walkthrough of short-form editing fundamentals.", "free": true, "url": "#" }
       ],
       "brief": {
@@ -416,9 +416,9 @@
         { "skill": "Writing a task/user story that a stranger could execute without asking questions", "why": "A board full of vague tasks ('fix the thing') is unmanageable no matter how it's organized.", "ifYouDont": "DevUp's SOP-building lab at /build teaches the same one-action-per-step discipline." }
       ],
       "resources": [
-        { "name": "Asana Academy", "type": "Free course", "what": "Official Asana training on sprint boards, dependencies, and workload views.", "free": true, "url": "#" },
-        { "name": "Asana / ClickUp / Trello free tier", "type": "Free tool", "what": "Build the actual rescued board here (any of the three has a generous free plan).", "free": true, "url": "#" },
-        { "name": "Google Project Management Certificate (audit free)", "type": "Free course", "what": "Coursera lets you audit the full course free, covers sprint planning and risk tracking.", "free": true, "url": "#" }
+        { "name": "Asana Academy", "type": "Free course", "what": "Official Asana training on sprint boards, dependencies, and workload views.", "free": true, "url": "https://academy.asana.com" },
+        { "name": "Asana / ClickUp / Trello free tier", "type": "Free tool", "what": "Build the actual rescued board here (any of the three has a generous free plan).", "free": true, "url": "https://trello.com" },
+        { "name": "Google Project Management Certificate (audit free)", "type": "Free course", "what": "Coursera lets you audit the full course free, covers sprint planning and risk tracking.", "free": true, "url": "https://www.coursera.org/professional-certificates/google-project-management" }
       ],
       "brief": {
         "scenario": "Halden Creative (a fictional 8-person design agency) runs client work through one giant unsorted task list, 60+ tasks, no owners on a third of them, no due dates, three tasks marked 'urgent' that have sat for a month.",
@@ -465,9 +465,9 @@
         { "skill": "Spreadsheet formulas for status roll-ups (IF/nested IF, conditional formatting)", "why": "The dashboard should calculate status from real data, not rely on manual color-picking.", "ifYouDont": "DevUp's tracker-building lab covers the same formula-driven status logic." }
       ],
       "resources": [
-        { "name": "Google Sheets", "type": "Free tool", "what": "Build the dashboard here, formulas, conditional formatting, and a summary view.", "free": true, "url": "#" },
-        { "name": "Google Project Management Certificate", "type": "Free course", "what": "Audit free on Coursera, covers stakeholder reporting formats.", "free": true, "url": "#" },
-        { "name": "ClickUp's free dashboard templates gallery", "type": "Docs", "what": "Study (don't copy) real dashboard structures for the layout pattern.", "free": true, "url": "#" }
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the dashboard here, formulas, conditional formatting, and a summary view.", "free": true, "url": "https://www.google.com/sheets/about/" },
+        { "name": "Google Project Management Certificate", "type": "Free course", "what": "Audit free on Coursera, covers stakeholder reporting formats.", "free": true, "url": "https://www.coursera.org/professional-certificates/google-project-management" },
+        { "name": "ClickUp's free dashboard templates gallery", "type": "Docs", "what": "Study (don't copy) real dashboard structures for the layout pattern.", "free": true, "url": "https://clickup.com/templates" }
       ],
       "brief": {
         "scenario": "Vantar Labs (a fictional 30-person startup, 5 concurrent product initiatives) has no single view of project health, the CEO currently has to ping 5 different PMs individually before every board meeting.",
@@ -514,9 +514,9 @@
         { "skill": "Common support ticket categorization (billing, technical, general/how-to, complaint)", "why": "You can't build useful macros without knowing what the recurring ticket types actually are.", "ifYouDont": "Zendesk's free help-center articles on ticket categorization." }
       ],
       "resources": [
-        { "name": "HubSpot Service Hub", "type": "Free course", "what": "Covers support workflows, macros, and tone-of-voice guidelines.", "free": true, "url": "#" },
+        { "name": "HubSpot Service Hub", "type": "Free course", "what": "Covers support workflows, macros, and tone-of-voice guidelines.", "free": true, "url": "https://academy.hubspot.com" },
         { "name": "A real free SaaS tool's public help center (your choice)", "type": "Docs", "what": "Study their actual support-facing language and common questions, this is material to study, not copy.", "free": true, "url": "#" },
-        { "name": "Google Docs", "type": "Free tool", "what": "Build the actual macro library here, organized and ready to hand to a support team.", "free": true, "url": "#" }
+        { "name": "Google Docs", "type": "Free tool", "what": "Build the actual macro library here, organized and ready to hand to a support team.", "free": true, "url": "https://docs.google.com" }
       ],
       "brief": {
         "scenario": "Pixelroom (a fictional design-tool SaaS, ~2,000 users) has one support person answering the same 15 questions over and over, writing every reply from scratch, with response times creeping past 24 hours.",
@@ -563,8 +563,8 @@
       ],
       "resources": [
         { "name": "A real free-tier SaaS tool with a genuinely confusing feature (your choice)", "type": "Free tool", "what": "Your actual subject, use the free tier, find the confusing flow firsthand.", "free": true, "url": "#" },
-        { "name": "Zendesk Support", "type": "Free course", "what": "Covers knowledge-base structure and self-service support best practices.", "free": true, "url": "#" },
-        { "name": "Notion (free tier)", "type": "Free tool", "what": "Build and publish the article set here, real formatting, real inline images.", "free": true, "url": "#" }
+        { "name": "Zendesk Support", "type": "Free course", "what": "Covers knowledge-base structure and self-service support best practices.", "free": true, "url": "https://training.zendesk.com" },
+        { "name": "Notion (free tier)", "type": "Free tool", "what": "Build and publish the article set here, real formatting, real inline images.", "free": true, "url": "https://www.notion.com" }
       ],
       "brief": {
         "scenario": "Pick one real, free-tier SaaS tool with a feature you (or people in its public community/support forums) find genuinely confusing, e.g. a permissions system, an export/import flow, a pricing-tier limit that's unclear. This is real friction, not invented.",
@@ -611,9 +611,9 @@
         { "skill": "Spreadsheet tracker schema design (unique ID, status dropdown, date trigger)", "why": "This task is a direct application of the tracker-building method to a real estate use case.", "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab." }
       ],
       "resources": [
-        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual tracker here.", "free": true, "url": "#" },
-        { "name": "Follow Up Boss free resources/blog", "type": "Docs", "what": "Real-world showing feedback questions and CRM workflows used by working agents.", "free": true, "url": "#" },
-        { "name": "Public listing data (Zillow/Redfin public listings)", "type": "Dataset", "what": "Use real public listing prices and details as reference so your practice data is realistic.", "free": true, "url": "#" }
+        { "name": "Google Sheets", "type": "Free tool", "what": "Build the actual tracker here.", "free": true, "url": "https://www.google.com/sheets/about/" },
+        { "name": "Follow Up Boss free resources/blog", "type": "Docs", "what": "Real-world showing feedback questions and CRM workflows used by working agents.", "free": true, "url": "https://www.followupboss.com/blog" },
+        { "name": "Public listing data (Zillow/Redfin public listings)", "type": "Dataset", "what": "Use real public listing prices and details as reference so your practice data is realistic.", "free": true, "url": "https://www.zillow.com" }
       ],
       "brief": {
         "scenario": "Agent Priya Nair has a listing that's been on the market 45 days with 12 showings and zero offers. Her feedback is scattered across texts, emails, and memory, she can't tell if it's a price problem or a staging problem.",
@@ -660,8 +660,8 @@
         { "skill": "Writing warm, non-pushy follow-up copy", "why": "A follow-up sequence that reads as desperate or spammy gets ignored or reported, real estate specifically fights a 'salesy' reputation.", "ifYouDont": "DevUp's application-message lab teaches the same specific-not-generic principle." }
       ],
       "resources": [
-        { "name": "Follow Up Boss (free resources)", "type": "Free tool", "what": "Study their public lead-nurture playbooks for realistic cadence timing.", "free": true, "url": "#" },
-        { "name": "Google Sheets + Google Docs", "type": "Free tool", "what": "Build the tracker and the actual message sequence here.", "free": true, "url": "#" },
+        { "name": "Follow Up Boss (free resources)", "type": "Free tool", "what": "Study their public lead-nurture playbooks for realistic cadence timing.", "free": true, "url": "https://www.followupboss.com/blog" },
+        { "name": "Google Sheets + Google Docs", "type": "Free tool", "what": "Build the tracker and the actual message sequence here.", "free": true, "url": "https://docs.google.com" },
         { "name": "Real Estate Support Systems", "type": "Video", "what": "DevUp's own walkthrough of real estate ops systems under the Real Estate track.", "free": true, "url": "#" }
       ],
       "brief": {
@@ -709,9 +709,9 @@
         { "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure", "why": "You're wiring real tools together, you need to be able to build both ends of the pipe.", "ifYouDont": "Google Forms Help Center (free) for the form side; DevUp's tracker lab for the CRM-sheet side." }
       ],
       "resources": [
-        { "name": "Zapier free tier", "type": "Free tool", "what": "Build the real, working automation here (the free tier supports single-step Zaps, enough for this task).", "free": true, "url": "#" },
-        { "name": "Zapier & Make Automation", "type": "Free course", "what": "Vendor-provided course covering trigger/action design and common patterns.", "free": true, "url": "#" },
-        { "name": "Google Forms + Google Sheets", "type": "Free tool", "what": "The two endpoints your automation connects, the form intake and the CRM-style tracker.", "free": true, "url": "#" }
+        { "name": "Zapier free tier", "type": "Free tool", "what": "Build the real, working automation here (the free tier supports single-step Zaps, enough for this task).", "free": true, "url": "https://zapier.com" },
+        { "name": "Zapier & Make Automation", "type": "Free course", "what": "Vendor-provided course covering trigger/action design and common patterns.", "free": true, "url": "https://learn.zapier.com" },
+        { "name": "Google Forms + Google Sheets", "type": "Free tool", "what": "The two endpoints your automation connects, the form intake and the CRM-style tracker.", "free": true, "url": "https://www.google.com/forms/about/" }
       ],
       "brief": {
         "scenario": "Northline Consulting (a fictional 4-person consultancy) collects new-client inquiries through a website contact form, then someone manually copy-pastes each one into a tracking spreadsheet, inconsistently, with a 2-day average lag and occasional lost leads.",
@@ -758,9 +758,9 @@
         { "skill": "Automation trigger/action logic", "why": "A CRM that doesn't move data or notify anyone automatically isn't really a CRM, just a database.", "ifYouDont": "Zapier's free Automation 101, the logic transfers directly to Airtable's own built-in automations." }
       ],
       "resources": [
-        { "name": "Airtable free tier", "type": "Free tool", "what": "Build the actual CRM here, the free tier supports everything this task needs.", "free": true, "url": "#" },
-        { "name": "Airtable Universe (public template gallery)", "type": "Docs", "what": "Study real published CRM base structures for the relational pattern, material to study, not to clone wholesale.", "free": true, "url": "#" },
-        { "name": "GoHighLevel Fundamentals", "type": "Free course", "what": "Even though you're building in Airtable, this covers CRM concepts (pipelines, stages, automation) that transfer directly.", "free": true, "url": "#" }
+        { "name": "Airtable free tier", "type": "Free tool", "what": "Build the actual CRM here, the free tier supports everything this task needs.", "free": true, "url": "https://airtable.com" },
+        { "name": "Airtable Universe (public template gallery)", "type": "Docs", "what": "Study real published CRM base structures for the relational pattern, material to study, not to clone wholesale.", "free": true, "url": "https://www.airtable.com/universe" },
+        { "name": "GoHighLevel Fundamentals", "type": "Free course", "what": "Even though you're building in Airtable, this covers CRM concepts (pipelines, stages, automation) that transfer directly.", "free": true, "url": "https://help.gohighlevel.com" }
       ],
       "brief": {
         "scenario": "Solstice Design Co (a fictional 3-person freelance design collective) tracks clients, projects, and invoices across 3 disconnected spreadsheets that constantly go out of sync, a client's name gets updated in one and not the other two.",
@@ -807,9 +807,9 @@
         { "skill": "Automation trigger/action logic connecting a form or inbox to an AI step to a routing action", "why": "This is the same Zapier/Make trigger-action model as the CRM-automation task, with an AI action added in the middle.", "ifYouDont": "Zapier's free Automation 101 course, plus their specific 'AI actions in Zaps' help docs." }
       ],
       "resources": [
-        { "name": "Zapier free tier (with AI/OpenAI action step)", "type": "Free tool", "what": "Build the real workflow here, Zapier's free tier supports a limited number of AI-powered steps, enough to test this.", "free": true, "url": "#" },
-        { "name": "DevUp's AI Leverage / Prompts lab", "type": "Docs", "what": "Teaches how to write your own structured, repeatable prompts, required before this task's AI step will work reliably.", "free": true, "url": "#" },
-        { "name": "OpenAI's free prompt engineering guide", "type": "Docs", "what": "Official guidance on writing prompts that return consistent, structured output.", "free": true, "url": "#" }
+        { "name": "Zapier free tier (with AI/OpenAI action step)", "type": "Free tool", "what": "Build the real workflow here, Zapier's free tier supports a limited number of AI-powered steps, enough to test this.", "free": true, "url": "https://zapier.com/ai" },
+        { "name": "DevUp's AI Leverage / Prompts lab", "type": "Docs", "what": "Teaches how to write your own structured, repeatable prompts, required before this task's AI step will work reliably.", "free": true, "url": "/prompts" },
+        { "name": "OpenAI's free prompt engineering guide", "type": "Docs", "what": "Official guidance on writing prompts that return consistent, structured output.", "free": true, "url": "https://platform.openai.com/docs/guides/prompt-engineering" }
       ],
       "brief": {
         "scenario": "Fernbank Software (a fictional small SaaS company) gets 30–50 support tickets a day through one inbox, all triaged manually by a single overwhelmed support lead who has to read every single one before deciding urgency and routing.",
@@ -856,9 +856,9 @@
         { "skill": "Canva or Figma fundamentals (layers, components, brand kit features)", "why": "You're producing real, usable assets, you need to actually operate the tool.", "ifYouDont": "Canva Design Essentials or Figma for Beginners (both free)." }
       ],
       "resources": [
-        { "name": "Figma for Beginners", "type": "Free course", "what": "Covers component/design-system thinking you'll apply to the brand kit.", "free": true, "url": "#" },
-        { "name": "Canva Design Essentials", "type": "Free course", "what": "Alternative tool if you prefer Canva's Brand Kit feature over Figma.", "free": true, "url": "#" },
-        { "name": "Coolors and Google Fonts (free tiers)", "type": "Free tool", "what": "Build your palette and pick a real, free, license-clear typography pairing.", "free": true, "url": "#" }
+        { "name": "Figma for Beginners", "type": "Free course", "what": "Covers component/design-system thinking you'll apply to the brand kit.", "free": true, "url": "https://help.figma.com" },
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "Alternative tool if you prefer Canva's Brand Kit feature over Figma.", "free": true, "url": "https://www.canva.com/designschool/" },
+        { "name": "Coolors and Google Fonts (free tiers)", "type": "Free tool", "what": "Build your palette and pick a real, free, license-clear typography pairing.", "free": true, "url": "https://coolors.co" }
       ],
       "brief": {
         "scenario": "Marigold & Co (a fictional new independent flower shop, first-time business owner, zero existing brand assets) needs a cohesive look before their storefront opens in 6 weeks.",
@@ -905,9 +905,9 @@
         { "skill": "Canva (or Figma) layer/text/image compositing basics", "why": "You're producing 3 real, finished image files, not a mood board.", "ifYouDont": "Canva Design Essentials (free)." }
       ],
       "resources": [
-        { "name": "Canva Design Essentials", "type": "Free course", "what": "Covers compositing, text hierarchy, and export settings for thumbnail-sized images.", "free": true, "url": "#" },
+        { "name": "Canva Design Essentials", "type": "Free course", "what": "Covers compositing, text hierarchy, and export settings for thumbnail-sized images.", "free": true, "url": "https://www.canva.com/designschool/" },
         { "name": "A real public YouTube channel in a niche you like (your choice)", "type": "Docs", "what": "Study their actual published video titles/thumbnails for the real subject matter you'll design for.", "free": true, "url": "#" },
-        { "name": "TubeBuddy or vidIQ free tier", "type": "Free tool", "what": "Free thumbnail-preview simulators show how your design looks at actual small sizes across devices.", "free": true, "url": "#" }
+        { "name": "TubeBuddy or vidIQ free tier", "type": "Free tool", "what": "Free thumbnail-preview simulators show how your design looks at actual small sizes across devices.", "free": true, "url": "https://www.tubebuddy.com" }
       ],
       "brief": {
         "scenario": "Pick one real, public video (yours if you have one, or a real public video you'd redesign as a practice exercise, never claim you made the actual video) and design 3 genuinely different thumbnail concepts testing 3 different psychological hooks (curiosity gap, big-number/stat callout, emotional face reaction).",
@@ -954,9 +954,9 @@
         { "skill": "Video editing fundamentals: cuts, pacing, text overlays, background music licensing", "why": "The explainer needs professional pacing and legally clean audio, not just raw footage with a voiceover.", "ifYouDont": "DevUp's CapCut Editing Masterclass, or CapCut/DaVinci Resolve's own free tutorials." }
       ],
       "resources": [
-        { "name": "OBS Studio (free, open source)", "type": "Free tool", "what": "Record raw screen footage of the free tool you'll be explaining.", "free": true, "url": "#" },
-        { "name": "CapCut or DaVinci Resolve (free tier)", "type": "Free tool", "what": "Edit the final explainer here, both have generous free tiers sufficient for a 60-second video.", "free": true, "url": "#" },
-        { "name": "YouTube Audio Library (free, royalty-free music)", "type": "Free tool", "what": "Legally clean background music, never use unlicensed commercial tracks in client-style work.", "free": true, "url": "#" }
+        { "name": "OBS Studio (free, open source)", "type": "Free tool", "what": "Record raw screen footage of the free tool you'll be explaining.", "free": true, "url": "https://obsproject.com" },
+        { "name": "CapCut or DaVinci Resolve (free tier)", "type": "Free tool", "what": "Edit the final explainer here, both have generous free tiers sufficient for a 60-second video.", "free": true, "url": "https://www.capcut.com" },
+        { "name": "YouTube Audio Library (free, royalty-free music)", "type": "Free tool", "what": "Legally clean background music, never use unlicensed commercial tracks in client-style work.", "free": true, "url": "https://www.youtube.com/audiolibrary" }
       ],
       "brief": {
         "scenario": "Pick one real, free-tier SaaS or app tool you genuinely use or can access (a note app, a free design tool, a habit tracker) and treat it as a client who needs a 60-second 'what is this and why should I care' explainer for their landing page.",

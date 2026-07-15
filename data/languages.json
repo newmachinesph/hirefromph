@@ -16,7 +16,7 @@
         { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Basic Japanese Language & Culture, ~150 hrs. First-come, first-served slots via online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "Japan Foundation, Manila", "type": "Paid / free events", "detail": "The authority on Japanese-language education in the Philippines. Courses, JLPT prep, resources.", "url": "https://jfmo.org.ph/japanese-language-education/" },
         { "name": "QC Public Library × Jellyfish Education", "type": "Free (online)", "detail": "Free online Basic Japanese, nationwide, 18+. Needs a device, internet, and Zoom.", "url": "https://quezoncity.gov.ph/" },
-        { "name": "Nihongo Center Foundation", "type": "Paid", "detail": "One of the longest-established Japanese institutions in the country.", "url": "#" }
+        { "name": "Nihongo Center Foundation", "type": "Paid", "detail": "One of the longest-established Japanese institutions in the country.", "url": "https://nihongocenter.com.ph" }
       ]
     },
     {
@@ -31,8 +31,8 @@
       "effort": "10–18 months to conversational-plus",
       "learn": [
         { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Korean among the free foreign-language programs. Limited slots, online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
-        { "name": "Korean Cultural Center PH", "type": "Paid", "detail": "Basic, Elementary, and Intermediate Korean, speak, write, read, comprehend. Fees ~₱2,000–₱3,000.", "url": "#" },
-        { "name": "King Sejong Institute", "type": "Free / low-cost", "detail": "Official Korean-government language program with PH branches.", "url": "#" }
+        { "name": "Korean Cultural Center PH", "type": "Paid", "detail": "Basic, Elementary, and Intermediate Korean, speak, write, read, comprehend. Fees ~₱2,000–₱3,000.", "url": "https://phil.korean-culture.org" },
+        { "name": "King Sejong Institute", "type": "Free / low-cost", "detail": "Official Korean-government language program with PH branches.", "url": "https://www.ksif.or.kr" }
       ]
     },
     {
@@ -47,8 +47,8 @@
       "effort": "12–24 months (tones take practice)",
       "learn": [
         { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Mandarin included in TESDA's free foreign-language track.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
-        { "name": "CKS College Language Center", "type": "Paid", "detail": "Teaching Mandarin since 1990, short courses for practical business use.", "url": "#" },
-        { "name": "Confucius Institute (PH campuses)", "type": "Free / low-cost", "detail": "HSK exam prep and structured Mandarin at partner universities.", "url": "#" }
+        { "name": "CKS College Language Center", "type": "Paid", "detail": "Teaching Mandarin since 1990, short courses for practical business use.", "url": "https://www.cksc.edu.ph" },
+        { "name": "Confucius Institute (PH campuses)", "type": "Free / low-cost", "detail": "HSK exam prep and structured Mandarin at partner universities.", "url": "https://www.ci.cn" }
       ]
     },
     {
@@ -63,8 +63,8 @@
       "effort": "6–12 months to conversational",
       "learn": [
         { "name": "TESDA Language Skills Institute", "type": "Free (gov)", "detail": "Spanish among TESDA's free foreign-language offerings.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
-        { "name": "Instituto Cervantes de Manila", "type": "Paid", "detail": "The official Spanish-government cultural institute, structured levels and DELE prep.", "url": "#" },
-        { "name": "Duolingo + immersion", "type": "Free", "detail": "Free daily practice to build a base before formal classes.", "url": "#" }
+        { "name": "Instituto Cervantes de Manila", "type": "Paid", "detail": "The official Spanish-government cultural institute, structured levels and DELE prep.", "url": "https://manila.cervantes.es" },
+        { "name": "Duolingo + immersion", "type": "Free", "detail": "Free daily practice to build a base before formal classes.", "url": "https://www.duolingo.com" }
       ]
     }
   ],
