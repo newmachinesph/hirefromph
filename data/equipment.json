@@ -43,7 +43,7 @@
       "name": "Headset",
       "icon": "headphones",
       "essential": true,
-      "note": "Clear audio signals professionalism instantly. Get noise-cancelling mic.",
+      "note": "Clear audio signals professionalism. Get a noise-cancelling mic.",
       "tiers": [
         { "tier": "Budget", "item": "Wired USB headset with mic", "price": "₱600–₱1,200" },
         { "tier": "Standard", "item": "Noise-cancelling USB headset", "price": "₱1,800–₱3,500" },

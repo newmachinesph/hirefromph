@@ -81,7 +81,7 @@
       {
         "id": "youtube",
         "title": "YouTube, free teachers worth your time",
-        "note": "The best of YouTube rivals any paid course; the worst is a time sink dressed as learning. These channels are durable and genuinely teach a craft. Watch to build, not to binge.",
+        "note": "The best of YouTube rivals any paid course. These channels are durable and genuinely teach a craft. Watch to build, not to binge.",
         "items": [
           { "org": "YouTube · freeCodeCamp", "title": "freeCodeCamp.org", "url": "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ", "why": "700+ full-length free courses on coding, data, and AI: some of the best long-form technical teaching anywhere, and new ones weekly.", "cost": "free" },
           { "org": "YouTube · Kevin Stratvert", "title": "Kevin Stratvert", "url": "https://www.youtube.com/channel/UCfJT_eYDTmDE-ovKaxVE1ig", "why": "Fast, clear tutorials on AI tools (ChatGPT, Claude, Gemini, Copilot), Excel, and everyday software, perfect for learning a tool the week a client needs it.", "cost": "free" },

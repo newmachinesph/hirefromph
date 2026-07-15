@@ -9,13 +9,13 @@
     "accent": "coral",
     "kicker": "Stage 01",
     "subtitle": "Your foundation as an online professional",
-    "summary": "No degree, no experience, no capital needed. Set up your workspace, learn the core skills, and build the mindset that actually lasts.",
+    "summary": "No degree, no experience, no capital needed. Set up your workspace, learn the core skills, and build the mindset that lasts.",
     "quote": "Age doesn't matter. Experience doesn't matter. What matters is your dedication to learning.",
     "outcome": "You'll have a working setup and the foundational skills to apply with confidence.",
     "doFirst": [
       { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker, see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
       { "title": "Do your first micro-task", "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.", "href": "/tasks", "cta": "Pick a task" },
-      { "title": "Learn how to learn", "desc": "Most study habits quietly fail you. Build a study protocol from what the evidence actually supports.", "href": "/learn", "cta": "How to learn" },
+      { "title": "Learn how to learn", "desc": "Most study habits quietly fail you. Build a study protocol from what the evidence supports.", "href": "/learn", "cta": "How to learn" },
       { "title": "Learn the foundation skills", "desc": "The core toolkit every online professional needs before applying.", "href": "/tools", "cta": "Learn tools" },
       { "title": "Build your first documents", "desc": "Learn the anatomy of a resume and a tracker, then write your own. No file to download.", "href": "/build", "cta": "Open Build Labs" },
       { "title": "Pick a direction", "desc": "Explore the niches so you know which lane you're heading toward.", "href": "/niches", "cta": "Explore niches" }
@@ -38,7 +38,7 @@
     "accent": "amber",
     "kicker": "Stage 02",
     "subtitle": "Land your first client, systematically",
-    "summary": "Build assets that get replies, work the directory of 150+ places to apply, track everything, and close the offer. Be systematic, not random.",
+    "summary": "Build assets that get replies, work the directory of 150+ places to apply, track everything, and close the offer.",
     "quote": "Don't wait until you feel ready. You'll never feel 100% ready. Just apply, learn from every interview, and adjust.",
     "outcome": "You'll have a live pipeline of applications and the prep to convert interviews into offers.",
     "doFirst": [
@@ -94,7 +94,7 @@
     "accent": "indigo",
     "kicker": "Stage 04",
     "subtitle": "From good to indispensable",
-    "summary": "Specialize into a high-value niche, automate the repetitive, learn a premium language, and raise your rate. Systemize what repeats; automate what a machine can do.",
+    "summary": "Specialize into a high-value niche, automate the repetitive, learn a premium language, and raise your rate.",
     "quote": "Anything you do twice, systemize. Anything a machine can do, automate. That is how professionals scale their value.",
     "outcome": "You'll own a niche, command a premium rate, and build a career that compounds.",
     "doFirst": [

@@ -7,7 +7,7 @@
       "name": "Search operators, the Google x-ray",
       "icon": "search",
       "accent": "coral",
-      "how": "Most people type \"remote jobs Philippines\" into Google and scroll for an hour. Professionals write one precise query instead: quotes force an exact phrase, site: narrows to a single domain, a minus sign removes noise, filetype: finds literal documents. A sharp query beats an hour of scrolling.",
+      "how": "Most people type \"remote jobs Philippines\" into Google and scroll for an hour. Professionals write one precise query instead: quotes force an exact phrase, site: narrows to a single domain, a minus sign removes noise, filetype: finds literal documents.",
       "why": "Quotes stop Google from loosely matching your words across unrelated pages. site: turns the entire web into one filtered board, a job site, a company's own careers page, even a competitor's site. The minus sign cuts out sources you already know are noisy. Pair any of these with Google's Tools → Any time → Past week filter to kill stale listings, the operator finds the needle, the date filter keeps it fresh.",
       "example": [
         "site:linkedin.com/jobs \"bookkeeper\" \"remote\" \"Philippines\"",
