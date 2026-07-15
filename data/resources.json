@@ -58,7 +58,7 @@
       {
         "id": "gov",
         "title": "Philippine government & public, open by right",
-        "note": "Your taxes already paid for these. No-cost digital-skills training and certificates from Philippine public programs. No-cost is no-cost, so take the certificate, then go build the proof that actually gets you hired.",
+        "note": "Your taxes already paid for these. No-cost digital-skills training and certificates from Philippine public programs. It is yours by right, so take the certificate, then go build the proof that actually gets you hired.",
         "items": [
           { "org": "TESDA · PH government", "title": "TESDA Online Program", "url": "https://e-tesda.gov.ph/", "why": "The government's open course platform: 100+ programs with National Certificates, from web and mobile development to bookkeeping. Your taxes paid for it, and the NC is a real, recognised credential.", "cost": "free" },
           { "org": "DICT · PH government", "title": "DICT digital skills (SPARK)", "url": "https://dict.gov.ph/trainings", "why": "No-cost government training built for online freelancing: social media, graphic design, web dev, AI and data science, with a freelancing on-ramp. Formerly DigitalJobsPH, now delivered as SPARK.", "cost": "free" }
