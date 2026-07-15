@@ -4,6 +4,7 @@ import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { RateCalculator } from "@/components/rate-calculator";
+import { RateWorksheet } from "@/components/rate-worksheet";
 import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
@@ -219,6 +220,13 @@ export default function SalaryPage() {
               ))}
             </div>
           </div>
+        </Reveal>
+      </section>
+
+      {/* ---------------------------------------------------------- WORKSHEET */}
+      <section className="container-x py-20 lg:py-24">
+        <Reveal>
+          <RateWorksheet />
         </Reveal>
       </section>
 
