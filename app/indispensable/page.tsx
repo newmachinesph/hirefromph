@@ -3,12 +3,14 @@ import indispensable from "@/data/indispensable.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/indispensable",
   title: "Become Indispensable",
   description:
     "How to become layoff-proof and the professional clients fight to keep. The many kinds of intelligence school never measured (creative, emotional, judgment, taste, adaptability) and the habits that make you impossible to replace in an AI world. Sourced.",
-};
+});
 
 const accentBar: Record<string, string> = {
   coral: "bg-coral",

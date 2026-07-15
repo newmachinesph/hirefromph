@@ -4,11 +4,13 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { Kicker, Pill, SectionHeading } from "@/components/ui";
 import { PlanWizard } from "@/components/plan-wizard";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/plan",
   title: "Your 30-Day Plan",
   description: plan.intro,
-};
+});
 
 const quickFacts: { icon: string; label: string; tone: "coral" | "amber" | "emerald" }[] = [
   { icon: "sparkles", label: "Open to all", tone: "coral" },

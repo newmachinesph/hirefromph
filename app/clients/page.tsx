@@ -3,12 +3,14 @@ import clients from "@/data/clients.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/clients",
   title: "Own Your Clients",
   description:
     "Build a business of one. The independent-contractor mindset vs the employee mindset, a fair look at agency vs direct clients, the step-by-step way to land direct clients, and how to protect yourself like a real business.",
-};
+});
 
 function Source({ label, url }: { label: string; url: string }) {
   if (!label || !url) return null;

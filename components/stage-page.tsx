@@ -91,7 +91,8 @@ export function StagePage({ id }: { id: string }) {
               <blockquote className="font-display text-2xl leading-snug text-ink">
                 {stage.quote}
               </blockquote>
-              <figcaption className="mt-6 text-sm font-medium text-ink-soft">, DevUp · {stage.subtitle}
+              <figcaption className="mt-6 text-sm font-medium text-ink-soft">
+                DevUp · {stage.subtitle}
               </figcaption>
             </figure>
           </Reveal>
@@ -152,12 +153,13 @@ export function StagePage({ id }: { id: string }) {
               lead={roadmap.intro}
             />
           </Reveal>
-          <div className="mt-10 grid gap-3 sm:grid-cols-3 lg:grid-cols-9">
+          {/* ponytail: literal col count must match roadmap length (11) — bump both if steps change */}
+          <div className="mt-10 grid gap-3 sm:grid-cols-3 lg:grid-cols-11">
             {roadmap.steps.map((step, idx) => {
               const isHere = step.stage === stage.num;
               const done = step.stage < stage.num;
               return (
-                <Reveal key={step.n} i={idx % 9}>
+                <Reveal key={step.n} i={idx % roadmap.steps.length}>
                   <div
                     className={cn(
                       "flex h-full flex-col rounded-xl border p-4 transition-colors",

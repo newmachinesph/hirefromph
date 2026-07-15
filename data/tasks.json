@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 21 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 29 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it no-cost if you don't already have it." },
@@ -988,6 +988,398 @@
       ],
       "presentIt": "Present as a mini case study: the tool, the core value prop you chose to lead with, and the finished video embedded/linked. Lead with the constraint you nailed: 'Turned raw, unscripted screen capture into a 58-second, problem-solution-CTA explainer.'",
       "stretch": "Cut a second, 15-second vertical version of the same explainer for social/story placements, proving you can adapt one asset across formats, a real recurring client need."
+    },
+    {
+      "id": "obs-stream-setup-kit",
+      "title": "Build a Complete OBS Studio Stream Setup From Scratch",
+      "track": "streaming-live",
+      "accent": "coral",
+      "icon": "broadcast",
+      "difficulty": "Starter",
+      "time": "2–3 hours",
+      "proves": "You can hand a streamer a broadcast-ready OBS setup, scenes, overlays, and a go-live checklist, so they start streaming in one click instead of fighting software. It's the first thing a streamer offloads to a support pro.",
+      "prerequisites": [
+        { "skill": "OBS Studio basics (scenes, sources, scene collections)", "why": "The whole setup lives in OBS scenes and sources, you have to build fluently in it, not just watch a tutorial.", "ifYouDont": "OBS Project's own no-cost Quickstart guide walks through scenes and sources in about 30 minutes." },
+        { "skill": "Basic overlay design in a no-cost tool like Canva", "why": "A stream needs clean starting-soon, BRB, and ending frames, text-on-black looks amateur and loses viewers in the first minute.", "ifYouDont": "Canva Design School's no-cost basics, or DevUp's /build portfolio lab for the design discipline." }
+      ],
+      "resources": [
+        { "name": "OBS Studio (no-cost, open source)", "type": "Tool", "what": "Build the actual scene collection here, the whole deliverable is a working OBS setup, not a mockup.", "free": true, "url": "https://obsproject.com" },
+        { "name": "OBS Studio Quickstart", "type": "Docs", "what": "Official getting-started guide for scenes, sources, and scene collections.", "free": true, "url": "https://obsproject.com/kb/quick-start-guide" },
+        { "name": "Canva Design School", "type": "Course", "what": "Design the starting-soon, BRB, and ending overlays here to one consistent look.", "free": true, "url": "https://www.canva.com/designschool/" }
+      ],
+      "brief": {
+        "scenario": "Jio Ramos wants to stream his gameplay three nights a week, but every attempt dies in setup, no intro screen, audio that clips, and a desktop full of notifications on camera. He has the hardware; he just needs someone to make the software ready to go live.",
+        "deliverable": "A finished OBS scene collection (exported as a shareable file) with at least 5 scenes, Starting Soon, Live, Just Chatting, BRB, and Ending, each with the right sources wired up, plus 3 matching overlay graphics and a one-page 'how to go live' checklist Jio can follow without you.",
+        "constraints": [
+          "At least 5 named, purpose-built scenes, a single scene you rename doesn't count as a setup.",
+          "Audio must have a noise gate or filter on the mic so it doesn't clip or pick up room hiss.",
+          "The 3 overlay frames must share one consistent visual style, not three random templates."
+        ],
+        "steps": [
+          "Install OBS and create a new scene collection named for the streamer.",
+          "Build the 5 core scenes and wire each one's sources (display/game capture, camera, mic, overlays).",
+          "Design the 3 overlay frames in Canva to a single consistent style and import them.",
+          "Add an audio filter chain to the mic (noise suppression plus noise gate) and set levels so nothing clips.",
+          "Export the scene collection and record a short screen capture proving each scene switches cleanly.",
+          "Write the one-page 'go live in 5 minutes' checklist: what to open, what to check, in what order."
+        ]
+      },
+      "definitionOfDone": [
+        "The scene collection has 5+ working scenes and can be exported as a file.",
+        "The mic has a real audio filter chain, and a test recording shows no clipping.",
+        "All 3 overlay frames share one consistent style (same fonts, colors, layout logic).",
+        "The go-live checklist is followable by the streamer with you not in the room."
+      ],
+      "selfCritique": [
+        "Could Jio go live tonight using only my checklist, without messaging me once?",
+        "Does the audio actually sound clean on a test recording, or did I just assume the filter worked?",
+        "Do my three overlays look like one brand, or three free templates stuck together?"
+      ],
+      "presentIt": "Present as a short before/after screen recording: a blank OBS window becomes a full scene collection switching cleanly between Starting Soon, Live, and BRB. Lead with the outcome: 'A streamer who couldn't get online is now one click from live.'",
+      "stretch": "Add a 'Live Selling' or 'Guest' scene with a two-camera layout, and set up hotkeys so scene switching is one keypress instead of a mouse hunt."
+    },
+    {
+      "id": "stream-vod-to-clips",
+      "title": "Cut a Long Stream Into a Week of Short-Form Clips",
+      "track": "streaming-live",
+      "accent": "coral",
+      "icon": "scissors",
+      "difficulty": "Intermediate",
+      "time": "3–4 hours",
+      "proves": "You can mine a multi-hour stream for its best 30 seconds and turn one broadcast into a week of vertical clips, the repurposing engine every streamer needs but none has time to run themselves.",
+      "prerequisites": [
+        { "skill": "Short-form vertical editing in CapCut (cuts, captions, hooks)", "why": "The clips are real finished vertical videos, not timestamps, you need to actually cut and caption them.", "ifYouDont": "CapCut's own no-cost tutorials cover vertical cuts, captions, and pacing." },
+        { "skill": "Spotting a clippable moment (a hook, a payoff, a reaction)", "why": "Most of a stream is dead air; the skill is finding the 5 seconds worth reposting, not editing prettily.", "ifYouDont": "Study 10 top clips in TikTok's public Creative Center and note what happens in the first 2 seconds of each." }
+      ],
+      "resources": [
+        { "name": "A real public stream VOD (Twitch/YouTube, your choice)", "type": "Tool", "what": "Your source footage, pick a public VOD you have the right to clip for practice, or record your own. Never repost someone's content as your own; label it a practice edit.", "free": true, "url": "#" },
+        { "name": "CapCut", "type": "Tool", "what": "No-cost editor, cut, caption, and export all clips vertically here.", "free": true, "url": "https://www.capcut.com" },
+        { "name": "TikTok Creative Center (public, no-cost)", "type": "Docs", "what": "Study real top-performing clips by category for hook and pacing structure, study, don't copy.", "free": true, "url": "https://ads.tiktok.com/business/creativecenter/pc/en" }
+      ],
+      "brief": {
+        "scenario": "A streamer publishes 3–4 hour broadcasts and posts nothing else, so nobody who isn't already live ever finds them. One good stream is a week of content, it's just buried inside three hours of footage nobody will scrub through.",
+        "deliverable": "5 finished vertical clips (15–40 seconds each, 9:16, captioned) pulled from a single long stream/VOD, each with a scroll-stopping first 2 seconds, plus a one-page clip log noting the source timestamp, the hook, and a suggested caption for each.",
+        "constraints": [
+          "All 5 clips must come from ONE stream/VOD, the skill is mining one source, not editing five different videos.",
+          "Every clip needs burned-in captions, most short-form is watched on mute.",
+          "Each clip must stand alone, someone who never watched the stream should get it in the first 2 seconds."
+        ],
+        "steps": [
+          "Pick one long public VOD (or your own recording) and scrub it, logging every potentially clippable moment with its timestamp.",
+          "Choose the 5 strongest moments, with a variety of hooks (funny, informative, high-skill, reaction).",
+          "Cut each to 15–40 seconds in CapCut, starting on the hook, not the wind-up.",
+          "Add accurate burned-in captions and a punchy on-screen title to each.",
+          "Export all 5 vertical (9:16) and do a mute-watch to confirm each reads without sound.",
+          "Write the clip log: source timestamp, the hook in one line, and a suggested caption for each clip."
+        ]
+      },
+      "definitionOfDone": [
+        "All 5 clips are exported vertical, captioned, and 15–40 seconds long.",
+        "Every clip is pulled from the same single source stream.",
+        "Each clip makes sense in its first 2 seconds with the sound off.",
+        "The clip log ties each clip to its source timestamp and gives a ready-to-post caption."
+      ],
+      "selfCritique": [
+        "Would I stop scrolling for each of these in my own feed, or only the best one or two?",
+        "Do the captions match the audio exactly, or did I let auto-captions ship with errors?",
+        "Did I pick 5 genuinely different moments, or 5 versions of the same beat?"
+      ],
+      "presentIt": "Present the 5 clips as a grid alongside the clip log. Lead with the leverage: 'One 3-hour stream became 5 ready-to-post vertical clips in an afternoon.' The clip log proves you have a repeatable process, not a lucky edit.",
+      "stretch": "Post the clips on a real account across a week and track which hook type got the most watch-through, then write one line on what you'd cut more of next time."
+    },
+    {
+      "id": "live-sale-run-of-show",
+      "title": "Script and Staff a 60-Minute Live-Selling Show",
+      "track": "streaming-live",
+      "accent": "coral",
+      "icon": "shopping-bag",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can run the operations behind a live sale, a minute-by-minute run-of-show, a product rotation, and a chat-moderation plan, so the seller focuses on selling while you run the machine. This is the ops role live commerce is scrambling to hire.",
+      "prerequisites": [
+        { "skill": "Live-selling format basics (product rotation, CTA cadence, urgency plays)", "why": "A live sale that just shows products at random doesn't convert, the structure and timing are the job.", "ifYouDont": "Watch 3 real TikTok/Facebook live sales end to end and note when and how they push the buy CTA." },
+        { "skill": "Chat moderation fundamentals (pinned messages, banned words, FAQ replies)", "why": "During a live sale, buying questions get buried in noise, the mod plan is what keeps orders from getting lost.", "ifYouDont": "Discord's no-cost Moderator Academy covers the moderation mindset, and DevUp's /build lab teaches the SOP structure." }
+      ],
+      "resources": [
+        { "name": "Google Docs and Sheets", "type": "Tool", "what": "Build the run-of-show script and the moderation SOP here.", "free": true, "url": "https://docs.google.com" },
+        { "name": "Real public live-selling streams (TikTok/Facebook, your choice)", "type": "Docs", "what": "Study the pacing and CTA timing of real live sales, study the structure, not the products.", "free": true, "url": "#" },
+        { "name": "Discord Moderator Academy", "type": "Course", "what": "No-cost training on the moderation judgment you'll encode into the chat SOP.", "free": true, "url": "https://discord.com/moderation" }
+      ],
+      "brief": {
+        "scenario": "Lea sells thrifted clothing on TikTok Live. Her streams ramble, she forgets to restate the price, loses track of who commented 'mine,' and never quite closes. She sells more in a chaotic hour than a calm one should have to, and she knows it.",
+        "deliverable": "A minute-by-minute run-of-show for a 60-minute live sale (segments, product rotation, CTA cadence), a product line-up sheet (10–12 invented but realistic items with prices and hero picks), and a one-page chat-moderation SOP covering pinned messages, claim handling, banned words, and canned FAQ replies.",
+        "constraints": [
+          "The run-of-show must be timed to the minute, 'sell the jackets' isn't a plan; '0:12–0:18, jacket rotation, restate price every 90 seconds' is.",
+          "The CTA (how to buy / how to claim) must repeat on a stated cadence, not just once at the start.",
+          "The moderation SOP must define exactly how a buyer claims an item so no order is lost in the chat scroll."
+        ],
+        "steps": [
+          "Study 3 real live sales end to end and note their segment structure and CTA timing.",
+          "Build the product line-up sheet: 10–12 items, prices, and which 2–3 are the hero draws.",
+          "Write the 60-minute run-of-show in timed blocks: intro hook, product rotations, mid-show recap, urgency close.",
+          "Set the CTA cadence, exactly when and how the how-to-buy message repeats.",
+          "Write the moderation SOP: pinned message, the claim rule, banned-words list, and 5 canned FAQ replies.",
+          "Add an 'if it goes wrong' note: what the mod does if orders pile up faster than they can be logged."
+        ]
+      },
+      "definitionOfDone": [
+        "The run-of-show is timed to the minute for the full 60 minutes.",
+        "The CTA repeats on a clearly stated cadence, not once.",
+        "The moderation SOP defines an unambiguous claim rule a stranger could enforce.",
+        "The product sheet names the hero items and their prices, not just a list."
+      ],
+      "selfCritique": [
+        "If I handed this to a mod who'd never seen the show, could they run chat without asking a question?",
+        "Does the run-of-show build urgency toward a close, or just list products in order?",
+        "Is my claim rule airtight, or could two buyers claim the same item and both think they won?"
+      ],
+      "presentIt": "Present the run-of-show, product sheet, and moderation SOP as one show kit. Lead with the operator angle: 'A repeatable 60-minute live-sale system the seller can run every week, script, line-up, and chat plan in one kit.'",
+      "stretch": "Add a post-show pack: an order-reconciliation sheet that turns claims into a fulfillment list, plus a 3-clip repurposing plan for the best moments of the sale."
+    },
+    {
+      "id": "podcast-episode-edit",
+      "title": "Edit a Raw Podcast Episode to Broadcast-Clean",
+      "track": "podcast-audio",
+      "accent": "indigo",
+      "icon": "waveform",
+      "difficulty": "Intermediate",
+      "time": "3–4 hours",
+      "proves": "You can take a messy raw recording, filler words, dead air, uneven levels, and deliver a tight, clean episode a host would publish without a second listen. This is the core deliverable of every podcast retainer.",
+      "prerequisites": [
+        { "skill": "Audio editing in Descript or a no-cost DAW (cuts, filler removal, leveling)", "why": "The whole job is hands-on editing, you need to actually cut, not just know the theory.", "ifYouDont": "Descript's no-cost tutorials and help center walk through filler removal and leveling." },
+        { "skill": "Basic audio cleanup (noise reduction, consistent loudness)", "why": "A clean edit still sounds amateur if one voice is loud, the other quiet, and there's hiss underneath.", "ifYouDont": "Adobe Podcast's no-cost Enhance tool cleans noisy audio; learn what it does and doesn't fix." }
+      ],
+      "resources": [
+        { "name": "A public-domain or Creative Commons recorded conversation (or your own)", "type": "Tool", "what": "Your raw source, a CC-licensed interview, a public recording you may edit, or a 20-minute chat you record yourself. Keep it honest: don't pass off someone's show as your work.", "free": true, "url": "#" },
+        { "name": "Descript (no-cost tier)", "type": "Tool", "what": "Edit the episode here, text-based editing makes filler removal fast.", "free": true, "url": "https://www.descript.com" },
+        { "name": "Adobe Podcast Enhance", "type": "Tool", "what": "No-cost tool to clean up background noise and even out voice quality before the final export.", "free": true, "url": "https://podcast.adobe.com" }
+      ],
+      "brief": {
+        "scenario": "A first-time host records a 25-minute conversation on his phone and a guest's laptop mic. It's full of filler, two false starts, a 40-second tangent about parking, and the guest is half the volume of the host. He loves the content and dreads the edit.",
+        "deliverable": "A finished, exported episode (target 15–20 minutes from the raw 25) that's been de-filled, tightened, level-matched, and noise-cleaned, with a simple intro and outro added, plus a short edit-decision log listing what you cut and why.",
+        "constraints": [
+          "Filler words and dead air must be removed without making the conversation sound choppy or unnatural.",
+          "Both voices must sit at a consistent, matched loudness, no reaching for the volume knob between speakers.",
+          "The edit log must note at least one judgment call where you cut content, not just filler (a tangent, a repeat, a dead story)."
+        ],
+        "steps": [
+          "Import the raw recording and do one full listen, marking filler, dead air, and any tangent worth cutting.",
+          "Remove filler words and dead air, keeping the natural rhythm of speech.",
+          "Make the harder cuts, the tangent, the false start, and log each one.",
+          "Level-match the voices and run noise cleanup so both speakers sound consistent and clean.",
+          "Add a simple intro and outro (a title read and a sign-off; music optional and licensed).",
+          "Export the final episode and write the edit-decision log: total time cut, and the reasoning for each content cut."
+        ]
+      },
+      "definitionOfDone": [
+        "The exported episode is noticeably tighter than the raw file with no choppy, unnatural cuts.",
+        "Both voices are level-matched and free of obvious background noise.",
+        "An intro and outro are present.",
+        "The edit log documents at least one content cut (beyond filler) with a reason."
+      ],
+      "selfCritique": [
+        "Does the edit sound natural, or can you hear every cut?",
+        "Would the host notice the guest was originally half the volume, or is it seamless now?",
+        "Did I cut for the listener's time, or leave in a tangent because cutting felt risky?"
+      ],
+      "presentIt": "Present a 60-second before/after: 30 seconds of raw audio, 30 seconds of your edit, plus the edit log. Lead with the transformation: '25 minutes of raw phone audio became an 18-minute episode ready to publish.' The before/after clip is the whole proof.",
+      "stretch": "Deliver a clips bonus: pull the single best 45-second exchange as a standalone audiogram with captions, the kind of add-on that turns a one-off edit into a retainer."
+    },
+    {
+      "id": "podcast-show-notes-repurpose",
+      "title": "Turn One Episode Into a Full Show-Notes and Clip Pack",
+      "track": "podcast-audio",
+      "accent": "indigo",
+      "icon": "notepad",
+      "difficulty": "Starter",
+      "time": "2–3 hours",
+      "proves": "You can turn one finished episode into a week of surrounding content, show notes, titles, timestamps, and clips, so the host's one recording works five times as hard. This is the repurposing package that keeps a podcast retainer paying.",
+      "prerequisites": [
+        { "skill": "Clear, skimmable writing (summaries, timestamps, key takeaways)", "why": "Show notes are read in 10 seconds, they have to be scannable, not a wall of text.", "ifYouDont": "HubSpot's no-cost content writing lessons, or DevUp's /method for the summarize-first discipline." },
+        { "skill": "Basic graphic design in Canva (quote cards, audiograms)", "why": "The clip pack includes designed assets, not just text, you need to produce real graphics.", "ifYouDont": "Canva Design School's no-cost basics." }
+      ],
+      "resources": [
+        { "name": "One real public podcast episode (your choice)", "type": "Tool", "what": "Your source, any public episode you can listen to fully. You're writing supporting content around it as a practice piece; label it clearly as unsolicited practice.", "free": true, "url": "#" },
+        { "name": "Canva (no-cost tier)", "type": "Tool", "what": "Design the quote cards and audiogram frames here.", "free": true, "url": "https://www.canva.com" },
+        { "name": "Buzzsprout's podcast show-notes guides", "type": "Docs", "what": "Real-world examples of show-notes structure and what listeners actually click.", "free": true, "url": "https://www.buzzsprout.com/blog" }
+      ],
+      "brief": {
+        "scenario": "A host publishes a solid weekly episode and then nothing. No show notes, no clips, no social. The episode goes up, a few loyal listeners hear it, and it disappears. One recording that could have fed a week of posts feeds none.",
+        "deliverable": "A complete repurposing pack for one episode: full show notes (a 2–3 sentence summary, 5–7 timestamped chapters, 3 key takeaways, and any links mentioned), 3 title/subject-line options, 2 designed quote cards, and a 3-clip pick list (timestamps plus suggested captions) ready for an editor to cut.",
+        "constraints": [
+          "Timestamps must be real and accurate to the actual episode, not invented.",
+          "The 3 title options must be genuinely different angles, not one title reworded three ways.",
+          "The 2 quote cards must pull real, verbatim quotes from the episode and share one consistent visual style."
+        ],
+        "steps": [
+          "Listen to the full episode once, noting timestamps for each topic shift and any strong quote.",
+          "Write the show notes: a tight summary, 5–7 timestamped chapters, and 3 key takeaways.",
+          "Collect any links or references mentioned and list them cleanly.",
+          "Write 3 title/subject-line options, each from a different angle (curiosity, benefit, guest name).",
+          "Design 2 quote cards in Canva from real quotes, in one consistent style.",
+          "Write the 3-clip pick list: timestamp, why it's clippable, and a suggested caption for each."
+        ]
+      },
+      "definitionOfDone": [
+        "Show notes include a summary, 5–7 accurate timestamped chapters, and 3 takeaways.",
+        "All timestamps match the real episode.",
+        "3 distinct title options and 2 styled quote cards are complete.",
+        "The clip pick list gives an editor exact timestamps and captions to work from."
+      ],
+      "selfCritique": [
+        "Could a listener decide whether to hit play using only my summary and chapters?",
+        "Are my 3 titles really different bets, or the same title with synonyms?",
+        "Did I pull quote-card lines that stand alone, or ones that need the whole episode for context?"
+      ],
+      "presentIt": "Present the pack as one tidy document plus the two quote cards. Lead with the multiplier: 'One episode became show notes, 3 titles, 2 quote cards, and 3 clip picks, a week of content from a single recording.'",
+      "stretch": "Add a 5-email or 5-caption drip that releases the episode's takeaways across the week, so the one recording keeps resurfacing instead of dropping once."
+    },
+    {
+      "id": "ministry-event-coordination-kit",
+      "title": "Plan a Church Event End to End With a Coordination Kit",
+      "track": "faith-wellness",
+      "accent": "emerald",
+      "icon": "calendar-check",
+      "difficulty": "Starter",
+      "time": "2–3 hours",
+      "proves": "You can take a ministry event from a vague idea to a fully coordinated plan, run-of-show, volunteer roster, and comms, so leaders can lead instead of chasing logistics. This is the quiet operations work churches keep the same person for years to do.",
+      "prerequisites": [
+        { "skill": "Event run-of-show and volunteer scheduling basics", "why": "An event runs on who-does-what-when; without a timed plan and a roster, the day falls on one exhausted person.", "ifYouDont": "Planning Center's no-cost University covers services and volunteer scheduling, and DevUp's /build lab teaches the tracker structure." },
+        { "skill": "Clear written communication (invites, reminders, volunteer briefs)", "why": "Half of event coordination is getting the right message to the right people at the right time.", "ifYouDont": "DevUp's application-message lab teaches the specific, warm, clear tone this needs." }
+      ],
+      "resources": [
+        { "name": "Google Sheets and Docs", "type": "Tool", "what": "Build the run-of-show, volunteer roster, and comms plan here.", "free": true, "url": "https://docs.google.com" },
+        { "name": "Planning Center University", "type": "Course", "what": "No-cost training on how churches actually run services and volunteer teams.", "free": true, "url": "https://www.planningcenter.com/university" },
+        { "name": "Canva Design School", "type": "Course", "what": "Design the event invite and a simple volunteer brief here.", "free": true, "url": "https://www.canva.com/designschool/" }
+      ],
+      "brief": {
+        "scenario": "Grace Community Fellowship (a fictional 120-member church) is running a Saturday community outreach, food, worship, a kids' corner, and it's currently being planned in one volunteer's head and a messy group chat. Last time, two people brought the sound system and nobody brought cups.",
+        "deliverable": "A complete event coordination kit: a minute-by-minute run-of-show for the day, a volunteer roster (roles, names/slots, arrival times, and what each person owns), a supplies checklist with an owner per item, and a comms plan (invite message, a volunteer brief, and a day-before reminder).",
+        "constraints": [
+          "Every volunteer slot must have a specific role and an arrival time, 'help out' is not a role.",
+          "Every supply on the checklist must have exactly one named owner, so nothing is double-brought or forgotten.",
+          "The comms plan must include at least 3 messages timed to different moments (invite, volunteer brief, day-before reminder)."
+        ],
+        "steps": [
+          "Define the event: purpose, date, rough headcount, and the 4–5 segments of the day.",
+          "Write the run-of-show in timed blocks from setup to teardown.",
+          "Build the volunteer roster: every role, its owner/slot, arrival time, and responsibilities.",
+          "Build the supplies checklist with one named owner per item.",
+          "Write the 3 comms messages: the invite, the volunteer brief, and the day-before reminder.",
+          "Add a one-line point-person note so everyone knows who to ask on the day."
+        ]
+      },
+      "definitionOfDone": [
+        "The run-of-show covers setup through teardown in timed blocks.",
+        "Every volunteer role has an owner and an arrival time.",
+        "Every supply item has exactly one named owner.",
+        "The comms plan includes at least 3 messages timed to different moments."
+      ],
+      "selfCritique": [
+        "If the lead organizer got sick the day before, could someone else run this off the kit alone?",
+        "Is every gap covered, setup, teardown, the awkward transitions, or just the main event?",
+        "Would a volunteer know exactly where to be and what to do from their line of the roster?"
+      ],
+      "presentIt": "Present the kit as one shared folder or doc. Lead with the reliability: 'A community outreach for 120 people, coordinated so no job is unowned and no supply is forgotten.' The owner-per-item checklist is the detail that signals real operations experience.",
+      "stretch": "Turn the kit into a reusable template: blank out the specifics so the church can clone it for the next event, and add a simple post-event debrief sheet to capture what to fix next time."
+    },
+    {
+      "id": "ministry-newsletter-system",
+      "title": "Build a 4-Issue Newsletter and Devotional Template System",
+      "track": "faith-wellness",
+      "accent": "emerald",
+      "icon": "mail",
+      "difficulty": "Intermediate",
+      "time": "3 hours",
+      "proves": "You can build a reusable newsletter system, a branded template plus a month of real issues, so a ministry or wellness creator sends consistently instead of whenever someone remembers. Consistency is exactly what these communities pay to protect.",
+      "prerequisites": [
+        { "skill": "Email newsletter tools (Mailchimp free tier: templates, audiences, sending)", "why": "The deliverable is a real, reusable template in a real tool, not a Word document.", "ifYouDont": "Mailchimp Academy's no-cost lessons cover templates and audiences from zero." },
+        { "skill": "Warm, formatted devotional and community writing", "why": "This audience opens for care and reflection, not marketing, the tone and formatting carry it.", "ifYouDont": "DevUp's /method for the clarity discipline, plus studying 3 real ministry newsletters you admire." }
+      ],
+      "resources": [
+        { "name": "Mailchimp (no-cost tier)", "type": "Tool", "what": "Build the reusable template and draft the 4 issues here.", "free": true, "url": "https://mailchimp.com" },
+        { "name": "Mailchimp Academy", "type": "Course", "what": "No-cost training on templates, audiences, and sending.", "free": true, "url": "https://mailchimp.com/resources/" },
+        { "name": "Canva Design School", "type": "Course", "what": "Design the newsletter header and any inline graphics to a consistent look.", "free": true, "url": "https://www.canva.com/designschool/" }
+      ],
+      "brief": {
+        "scenario": "New Hope Wellness (a fictional faith-based wellness coach with a 300-person email list) sends a newsletter when there's time, which means every few months, in a different format each time. Opens are dropping because nobody knows when, or what, to expect.",
+        "deliverable": "A reusable Mailchimp newsletter template with a consistent structure (header, a devotional/reflection, community and announcements, an event or offer, and a closing), plus 4 fully written weekly issues that drop into it, and a one-page style guide defining the tone, sections, and send cadence.",
+        "constraints": [
+          "The template must have a fixed, repeatable section structure, the point is a system, not 4 one-off emails.",
+          "All 4 issues must be fully written, not outlines, real devotional text, real announcements.",
+          "The style guide must state a specific send cadence and a clear tone rule (what this newsletter would and wouldn't say)."
+        ],
+        "steps": [
+          "Study 3 real ministry or wellness newsletters and note their recurring section structure.",
+          "Build the reusable template in Mailchimp with a branded header and fixed sections.",
+          "Write issue 1 in full as the reference issue.",
+          "Write issues 2–4, each with a fresh devotional and real-feeling announcements, all in the same structure.",
+          "Design a consistent header graphic in Canva and apply it across all 4.",
+          "Write the one-page style guide: tone rules, section definitions, and the send cadence."
+        ]
+      },
+      "definitionOfDone": [
+        "The Mailchimp template has a fixed, reusable section structure.",
+        "All 4 issues are fully written and drop cleanly into the template.",
+        "A consistent branded header appears across every issue.",
+        "The style guide states a specific cadence and a clear tone rule."
+      ],
+      "selfCritique": [
+        "If I handed this to the coach, could they send issue 5 next week without me?",
+        "Do all 4 issues feel like one voice, or four different writers?",
+        "Is the devotional section genuinely reflective, or does it read like a marketing email in disguise?"
+      ],
+      "presentIt": "Present the template plus the 4 issues as a set, with the style guide up front. Lead with the consistency win: 'A newsletter system that turns an occasional, whenever-someone-remembers send into a dependable weekly rhythm.' Show the template structure as the hero, the system is the value, not any single issue.",
+      "stretch": "Add a 3-email welcome sequence for new subscribers so people who join mid-month get a warm on-ramp before the weekly rhythm picks them up."
+    },
+    {
+      "id": "sermon-to-social-repurpose",
+      "title": "Turn One Sermon Into a Week of Social Content",
+      "track": "faith-wellness",
+      "accent": "emerald",
+      "icon": "share-network",
+      "difficulty": "Intermediate",
+      "time": "3–4 hours",
+      "proves": "You can turn a single sermon or talk into a week of shareable clips and graphics, so a message reaches the people who weren't in the room. Repurposing is how small ministries grow without a media team, and the skill they hand to one trusted person.",
+      "prerequisites": [
+        { "skill": "Short-form vertical clip editing (CapCut: cuts, captions)", "why": "The clips are real finished videos, you need to cut and caption, not just pick timestamps.", "ifYouDont": "CapCut's no-cost tutorials cover vertical cuts and captions." },
+        { "skill": "Quote-graphic design in Canva", "why": "The pack includes designed quote cards, not just video, you produce real graphics.", "ifYouDont": "Canva Design School's no-cost basics." }
+      ],
+      "resources": [
+        { "name": "One public sermon or wellness talk (your choice)", "type": "Tool", "what": "Your source, a publicly posted sermon or talk you may clip for a practice piece. Label it unsolicited practice; never imply the ministry hired you.", "free": true, "url": "#" },
+        { "name": "CapCut", "type": "Tool", "what": "Cut and caption the vertical clips here.", "free": true, "url": "https://www.capcut.com" },
+        { "name": "Canva (no-cost tier)", "type": "Tool", "what": "Design the quote cards and captions here.", "free": true, "url": "https://www.canva.com" }
+      ],
+      "brief": {
+        "scenario": "A local pastor preaches a strong 35-minute message every Sunday to the same room, then posts the full video where almost no one watches past two minutes. Inside that one sermon are three moments that could reach thousands, if someone cut them out and gave them a life of their own.",
+        "deliverable": "A week's social pack from one sermon/talk: 3 finished vertical clips (20–45 seconds, captioned) built around one clear idea each, 3 quote graphics in Canva pulling verbatim lines, and a caption pack (a ready-to-post caption for each of the 6 pieces) with a simple posting schedule.",
+        "constraints": [
+          "All content must come from ONE sermon/talk, the skill is mining one message fully.",
+          "Every clip needs burned-in captions and must make sense to someone who wasn't there.",
+          "The 3 quote graphics must use real verbatim lines and share one consistent visual style."
+        ],
+        "steps": [
+          "Watch the full sermon/talk and log the 3 strongest self-contained moments with timestamps.",
+          "Cut each into a 20–45 second vertical clip in CapCut, starting on the idea, not the setup.",
+          "Add accurate burned-in captions to each clip.",
+          "Design 3 quote graphics in Canva from verbatim lines, in one consistent style.",
+          "Write a ready-to-post caption for each of the 6 pieces.",
+          "Lay it out on a simple 1-week posting schedule (which piece posts which day)."
+        ]
+      },
+      "definitionOfDone": [
+        "3 captioned vertical clips and 3 styled quote graphics are complete, all from one source.",
+        "Every clip stands alone for someone who didn't hear the full message.",
+        "The quote graphics use verbatim lines and share one visual style.",
+        "A caption pack and a 1-week posting schedule tie the 6 pieces together."
+      ],
+      "selfCritique": [
+        "Would each clip make a scroller stop, or do they only land if you already heard the sermon?",
+        "Are the captions accurate word-for-word, or did I ship auto-caption errors?",
+        "Did I honor the message's meaning, or clip it into something the pastor didn't say?"
+      ],
+      "presentIt": "Present the 6 pieces plus the schedule as a one-week content calendar. Lead with the reach angle: 'One 35-minute sermon became a week of clips and graphics that travel past the room it was preached in.' Always label it as a practice repurposing project, not commissioned work.",
+      "stretch": "Add a short audiogram version of one clip for audio-first platforms, and write a one-line note on which of the three ideas you'd expect to travel furthest and why."
     },
     {
       "id": "pro-bono-project",

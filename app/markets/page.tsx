@@ -3,12 +3,14 @@ import markets from "@/data/markets.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/markets",
   title: "Client Markets & Time Zones",
   description:
     "Where your online clients are (US, UK & EU, Australia, Middle East, Canada, regional Asia), how each market differs in pay, culture, and industries, and the timezone and overlap-hours math for a Filipino professional on UTC+8.",
-};
+});
 
 const accentBar: Record<string, string> = {
   coral: "bg-coral",

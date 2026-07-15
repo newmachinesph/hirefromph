@@ -8,6 +8,7 @@ import { NicheExplorer } from "@/components/niche-explorer";
 import { NicheScorer } from "@/components/niche-scorer";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
 const CRITERION_ICON_TONE = [
   "bg-coral-tint text-coral-deep",
@@ -16,11 +17,12 @@ const CRITERION_ICON_TONE = [
   "bg-[#e9e9fd] text-indigo",
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/niches",
   title: "Niche Learning Hub",
   description:
     "Pick your lane and go deep. Explore 11 online-career niches, including new lanes like streaming, podcast production, and faith-based support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
-};
+});
 
 const steps = [
   {

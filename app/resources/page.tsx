@@ -3,12 +3,14 @@ import resources from "@/data/resources.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/resources",
   title: "Free Resources",
   description:
     "The free shelf for Filipino online professionals: verified free courses, government programs, docs, and YouTube channels that actually move the needle, plus how to judge any free course before it takes your week, and how to turn study into proof.",
-};
+});
 
 const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {
   free: "emerald",

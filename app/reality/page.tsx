@@ -3,12 +3,14 @@ import reality from "@/data/reality.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/reality",
   title: "Reality Check",
   description:
     "What the evidence actually says about remote and online work for Filipinos right now. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
-};
+});
 
 const accentText: Record<string, string> = {
   coral: "text-coral",

@@ -5,12 +5,14 @@ import { Reveal } from "@/components/reveal";
 import { ApplicationTracker } from "@/components/application-tracker";
 import { CopyButton } from "@/components/copy-button";
 import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/tracker",
   title: "Application Tracker",
   description:
     "Log every application, get nudged the moment a follow-up is overdue, and see your real reply and interview rates.",
-};
+});
 
 const schema = [
   {

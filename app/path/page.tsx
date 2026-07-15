@@ -283,7 +283,7 @@ export default function PathPage() {
               const inCurrentStage = step.stage === state.stage;
               const checked = !!state.steps[step.n];
               return (
-                <Reveal key={step.n} i={idx % 9}>
+                <Reveal key={step.n} i={idx % roadmap.steps.length}>
                   <label
                     htmlFor={`step-${step.n}`}
                     className={cn(

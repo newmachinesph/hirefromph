@@ -31,8 +31,30 @@ function isMonthly(price: string): boolean {
 }
 
 export function EquipmentChecker({ categories }: { categories: Category[] }) {
-  const { state } = usePath();
+  const { state, hydrated } = usePath();
   const [tierIndex, setTierIndex] = useState<Record<string, number>>({});
+
+  // Gate on hydration: state.equipment is empty until localStorage loads, so a
+  // returning user would otherwise see every item unchecked and the full
+  // (inflated) cost estimate flash before their real progress paints in.
+  if (!hydrated) {
+    return (
+      <div
+        aria-hidden
+        className="grid gap-8 lg:grid-cols-[1fr_320px] lg:items-start"
+      >
+        <div className="grid gap-5 sm:grid-cols-2">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <div
+              key={i}
+              className="h-56 animate-pulse rounded-2xl border border-line bg-paper-2"
+            />
+          ))}
+        </div>
+        <div className="h-72 animate-pulse rounded-2xl border border-line bg-paper-2" />
+      </div>
+    );
+  }
 
   const getTierIndex = (cat: Category) =>
     tierIndex[cat.id] ?? Math.min(DEFAULT_TIER_INDEX, cat.tiers.length - 1);

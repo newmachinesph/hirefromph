@@ -14,11 +14,13 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { PromptWorkshop } from "@/components/prompt-workshop";
 import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/prompts",
   title: "AI Leverage",
   description: promptingData.intro,
-};
+});
 
 function partLabel(id: string): string {
   return promptingData.anatomy.find((a) => a.id === id)?.part ?? id;

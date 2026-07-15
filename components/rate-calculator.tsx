@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Icon } from "@/components/icon";
+import { computeRate } from "@/lib/rate-math";
 
 /** A field with a number input and an optional range slider. */
 function Field({
@@ -62,19 +63,15 @@ export function RateCalculator() {
   const [tax, setTax] = useState(8); // %
   const [fx, setFx] = useState(58); // ₱ per $1
 
-  const WEEKS = 4.33;
-  const grossMonthlyUsd = rate * hours * WEEKS;
-  const afterFeeUsd = grossMonthlyUsd * (1 - fee / 100);
-  const grossPhp = afterFeeUsd * fx;
-  const afterCostsPhp = grossPhp - costs;
-  const taxPhp = Math.max(0, afterCostsPhp) * (tax / 100);
-  const netPhp = afterCostsPhp - taxPhp;
-
-  const totalHoursMonthly = hours * (1 + unpaid / 100) * WEEKS;
-  const effHourlyPhp = totalHoursMonthly > 0 ? netPhp / totalHoursMonthly : 0;
-  const effHourlyUsd = effHourlyPhp / fx;
-  const shrink =
-    rate > 0 ? Math.max(0, Math.round((1 - effHourlyUsd / rate) * 100)) : 0;
+  const {
+    afterFeeUsd,
+    grossPhp,
+    netPhp,
+    totalHoursMonthly,
+    effHourlyPhp,
+    effHourlyUsd,
+    shrink,
+  } = computeRate({ rate, hours, fee, unpaid, costs, tax, fx });
 
   return (
     <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">

@@ -4,12 +4,14 @@ import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { RateCalculator } from "@/components/rate-calculator";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/salary",
   title: "Salary Guide",
   description:
     "What online work really pays for Filipino professionals right now. In-demand roles from live OnlineJobs.ph listings, honest vendor-grade pay ranges, full-time vs part-time vs hourly vs project vs retainer, and how to price yourself. Every number labeled for what it is.",
-};
+});
 
 const accentText: Record<string, string> = {
   coral: "text-coral",

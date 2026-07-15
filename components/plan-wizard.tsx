@@ -186,16 +186,19 @@ export function PlanWizard() {
   }
 
   function goBack() {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setDirection(-1);
     setStep((s) => Math.max(0, s - 1));
   }
 
   function changePath() {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setDirection(-1);
     setStep(TRACK_STEP_INDEX);
   }
 
   function startOver() {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
     setDirection(-1);
     setAnswers({});
     setPlanAnswers({});

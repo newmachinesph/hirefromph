@@ -5,12 +5,14 @@ import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/english",
   title: "English at Work",
   description:
     "Filipinos already write English better than most of the world. What costs you money is smaller: hedges, reflex apologies, and deference markers. Audit a real client message, learn four structures, and hear the honest priority order for speaking.",
-};
+});
 
 const MAX_SCORE = 800;
 const GLOBAL_AVG = 488;

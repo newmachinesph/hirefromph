@@ -4,12 +4,14 @@ import { Icon } from "@/components/icon";
 import { IntegrityOath } from "@/components/integrity-oath";
 import { Reveal } from "@/components/reveal";
 import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/conduct",
   title: "Conduct & Integrity",
   description:
     "The documented behaviour that gets remote professionals fired, sued, and delisted, and the oath that keeps you out of it. Do's, don'ts, real cases, and an oath you write yourself.",
-};
+});
 
 const accentText: Record<string, string> = {
   coral: "text-coral",

@@ -2,12 +2,14 @@ import legit from "@/data/legit.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/legit",
   title: "Get Legit",
   description:
     "BIR registration, the 8% option, SSS/PhilHealth/Pag-IBIG as a self-employed professional, and the payment rails that protect your rate — every step linked to the official page.",
-};
+});
 
 export default function LegitPage() {
   const { hero, why, bir, benefits, gettingPaid, closing } = legit;

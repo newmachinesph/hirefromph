@@ -6,11 +6,13 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/tools",
   title: "Learn Any Tool",
   description: learn.intro,
-};
+});
 
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",

@@ -4,11 +4,13 @@ import labsData from "@/data/labs.json";
 import { Reveal } from "@/components/reveal";
 import { BuildLabs } from "@/components/build-labs";
 import { Kicker, Pill } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/build",
   title: "Build Labs",
   description: labsData.intro,
-};
+});
 
 export default function BuildPage() {
   return (
