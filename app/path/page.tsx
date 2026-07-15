@@ -255,7 +255,7 @@ export default function PathPage() {
         <div className="container-x">
           <Reveal>
             <SectionHeading
-              kicker="Nine steps, four stages"
+              kicker="Eleven steps, five stages"
               title="Your roadmap progress"
               lead={roadmap.intro}
             />

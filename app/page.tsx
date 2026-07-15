@@ -208,7 +208,7 @@ export default function Home() {
         <div className="container-x">
           <Reveal>
             <SectionHeading
-              kicker="Four stages · nine steps"
+              kicker="Five stages · eleven steps"
               title="One clear line from zero to indispensable"
               lead="You never have to guess what's next. Each stage builds on the last."
               align="center"
@@ -216,7 +216,7 @@ export default function Home() {
             />
           </Reveal>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {stages.map((st, idx) => (
               <Reveal key={st.id} i={idx}>
                 <Link
@@ -488,7 +488,7 @@ function HeroPanel() {
         className="absolute inset-0 h-full w-full"
         preserveAspectRatio="xMidYMid meet"
         role="img"
-        aria-label="A rising staircase of four career stages, from Start to Level Up, with an upward trend arrow, representing developing upwards."
+        aria-label="A rising staircase of career stages, from Start to Own, with an upward trend arrow, representing developing upwards."
       >
         {/* baseline */}
         <line x1="28" y1={baseline} x2="372" y2={baseline} stroke="#c3d5ce" strokeWidth="2" />

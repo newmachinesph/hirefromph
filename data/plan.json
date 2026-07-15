@@ -51,7 +51,7 @@
       "focus": "Get your setup, mindset, and core skills right.",
       "days": [
         { "day": 1, "task": "Confirm equipment & workspace with the Equipment Checker.", "tool": "/equipment" },
-        { "day": 2, "task": "Read the 9-step roadmap end to end. Note which stage you are in today.", "tool": "/start" },
+        { "day": 2, "task": "Read the full roadmap end to end. Note which stage you are in today.", "tool": "/start" },
         { "day": 3, "task": "Learn your first core tool (Google Workspace basics).", "tool": "/tools" },
         { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches" },
         { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume, don't write it yet.", "tool": "/build" },

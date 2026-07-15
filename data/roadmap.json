@@ -1,5 +1,5 @@
 {
-  "intro": "One clear line from zero to a career you own. Nine steps, four stages. You never have to guess what's next.",
+  "intro": "One clear line from zero to a career you own. Eleven steps, five stages. You never have to guess what's next.",
   "steps": [
     { "n": 1, "stage": 1, "title": "Set up & mindset", "desc": "Confirm your equipment, internet, and workspace. Decide this is real." },
     { "n": 2, "stage": 1, "title": "Learn the foundation", "desc": "Core remote-work skills, tools, and professional etiquette." },
@@ -9,6 +9,8 @@
     { "n": 6, "stage": 3, "title": "Ace your first week", "desc": "Onboard like a pro. Your first week is your audition." },
     { "n": 7, "stage": 3, "title": "Systemize your work", "desc": "SOPs, trackers, and communication that make you reliable." },
     { "n": 8, "stage": 3, "title": "Become indispensable", "desc": "Anticipate needs. Own outcomes, not tasks." },
-    { "n": 9, "stage": 4, "title": "Specialize & automate", "desc": "Go deeper in your niche, automate the repetitive, raise your rate." }
+    { "n": 9, "stage": 4, "title": "Specialize & automate", "desc": "Go deeper in your niche, automate the repetitive, raise your rate." },
+    { "n": 10, "stage": 5, "title": "Go direct & get legit", "desc": "Own the client relationship, register the work, invoice like a supplier." },
+    { "n": 11, "stage": 5, "title": "Give back", "desc": "Pro bono, teach back, send the ladder down. The ecosystem you feed feeds you." }
   ]
 }
