@@ -20,14 +20,17 @@ const UNITS: { value: RateUnit; label: string }[] = [
   { value: "usd_hour", label: "$/hr" },
 ];
 
-// Four real listings from OnlineJobs.ph, July 2026. The fourth states no rate —
-// left in on purpose: a post that hides its number can't price you, and spotting
-// that is the skill. Users replace these with posts they find themselves.
+// Six real listings from OnlineJobs.ph, July 2026 (range posts shown at their
+// midpoint). The last states no rate — left in on purpose: a post that hides its
+// number can't price you, and spotting that is the skill. Users replace these
+// with posts they find themselves.
 const SEED: Post[] = [
   { id: "seed-1", role: "Bookkeeper (full-time)", amount: 60000, unit: "php_month", source: "OnlineJobs.ph" },
   { id: "seed-2", role: "Virtual Medical Assistant", amount: 7, unit: "usd_hour", source: "OnlineJobs.ph" },
   { id: "seed-3", role: "Executive Assistant", amount: 10000, unit: "php_fortnight", source: "OnlineJobs.ph" },
-  { id: "seed-4", role: "Social Media Manager (rate not stated)", amount: 0, unit: "php_month", source: "OnlineJobs.ph" },
+  { id: "seed-4", role: "Media Buyer, Google Ads (₱30–40k)", amount: 35000, unit: "php_month", source: "OnlineJobs.ph" },
+  { id: "seed-5", role: "Amazon Product Researcher (₱30–60k)", amount: 45000, unit: "php_month", source: "OnlineJobs.ph" },
+  { id: "seed-6", role: "Social Media Manager (rate not stated)", amount: 0, unit: "php_month", source: "OnlineJobs.ph" },
 ];
 
 const php = (n: number) =>
