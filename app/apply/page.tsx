@@ -202,11 +202,11 @@ export default function Page() {
             <div className="flex flex-col">
               <Kicker>The method</Kicker>
               <h2 className="mt-4 font-display text-2xl leading-tight text-balance">
-                Six habits that make you resourceful, forever
+                Seven habits that make you resourceful, forever
               </h2>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
                 FIND and VET, the two methods behind this page, are two of
-                six. See all of them.
+                seven. See all of them.
               </p>
               <div className="mt-5">
                 <ButtonLink href="/method" variant="outline">

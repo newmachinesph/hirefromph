@@ -13,7 +13,7 @@
   "dataHonesty": {
     "title": "Why nobody has an honest chart of Philippine freelance rates, including us",
     "body": "There is no authoritative public dataset of Philippine freelancer rates by seniority. None exists. Every \"2026 salary guide\" you will find is published by a staffing agency, an outsourcing firm, or a training company: pages with no disclosed methodology, no sample size, and a direct commercial reason to skew the number, up if they sell training, down if they sell cheap labour. The base rates in this simulator are the convergent directional picture across several of those sources. That makes them vendor-grade, not survey-grade, and we will not dress them up as anything better.",
-    "disagreement": "How soft is that ground? Take bookkeeping, one role, one year. One vendor guide puts entry-level at $5–6/hr. Another puts entry-level at $10–12/hr. That is a 2x disagreement about the same job. When the sources cannot agree with each other, no one is entitled to present either as fact. So we show you the disagreement instead of hiding it.",
+    "disagreement": "How soft is that ground? Two vendor guides put the same entry-level bookkeeping role at $5–6/hr and $10–12/hr, a 2x disagreement about one job in one year. The full demonstration is on the Salary Guide.",
     "sources": [
       {
         "label": "OnlineJobs.ph salary guide",
@@ -130,7 +130,7 @@
     "baselineLabel": "If you stay generic",
     "pathLabel": "Your path",
     "riskBandLabel": "Non-payment risk band",
-    "riskBandNote": "The shaded band under your line is not a forecast, it is a warning. Fairwork found 31% of cloudworkers had already experienced outright non-payment and 38% had experienced late payment. Roughly one in three people get stiffed at least once. Your line is not a floor.",
+    "riskBandNote": "The shaded band under your line is not a forecast, it is a warning: roughly one in three cloudworkers has experienced outright non-payment — the full numbers are in the reality tax below. Your line is not a floor.",
     "tableCaption": "The same two trajectories as a table, monthly take-home in USD, after the unpaid-time tax.",
     "colMonth": "Month",
     "colBaseline": "If you stay generic",
@@ -244,7 +244,7 @@
       "body": "Fairwork's Cloudwork Ratings 2025 (Oxford Internet Institute; 750+ workers across 100 countries) found 31% of cloudworkers had experienced non-payment and 38% had experienced late payment. That is not a deduction we can average into a line, it is a risk you either survive or don't. So it is drawn as a band under your line instead. Roughly one in three people get stiffed at least once. Contracts, escrow, and deposits are not paranoia; they are the job.",
       "source": {
         "label": "Fairwork, Cloudwork Ratings 2025",
-        "url": "https://fair.work/wp-content/uploads/sites/17/2025/05/Fairwork-Cloudwork-Report-2025-FINAL.pdf"
+        "url": "https://fair.work/en/fw/publications/cloudwork-report-2025/"
       }
     }
   },

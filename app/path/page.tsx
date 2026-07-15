@@ -171,7 +171,7 @@ export default function PathPage() {
               { value: portfolioCount, label: "portfolio pieces", sub: "micro-tasks completed", href: "/tasks" },
               { value: applied, label: "applications sent", sub: "live pipeline", href: "/tracker" },
               { value: interviews, label: "interviews & offers", sub: "converting", href: "/tracker" },
-              { value: `${doneCount}/9`, label: "roadmap steps", sub: "zero to indispensable", href: "#roadmap" },
+              { value: `${doneCount}/${roadmap.steps.length}`, label: "roadmap steps", sub: "zero to independent", href: "#roadmap" },
             ].map((s) => (
               <Link
                 key={s.label}

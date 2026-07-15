@@ -70,7 +70,7 @@
         { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools" },
         { "day": 12, "task": "Start a free certification for your niche.", "tool": "/niches" },
         { "day": 13, "task": "Build your own application tracker, schema and formulas, from scratch.", "tool": "/build" },
-        { "day": 14, "task": "Review. Get feedback in the community group.", "tool": "/wins" }
+        { "day": 14, "task": "Review your first two weeks on your dashboard. Get feedback in the community group.", "tool": "/path" }
       ]
     },
     {
@@ -93,14 +93,14 @@
       "focus": "Convert interviews, land the offer, and start strong.",
       "days": [
         { "day": 22, "task": "Send 10 applications. Quality over speed.", "tool": "/apply" },
-        { "day": 23, "task": "Do 2 real interviews. Debrief each with AI.", "tool": "/prompts" },
+        { "day": 23, "task": "Run 2 full mock interviews against your own interviewer prompt. Debrief each with AI.", "tool": "/prompts" },
         { "day": 24, "task": "Handle any rejection: extract the lesson, keep going.", "tool": "/prompts" },
-        { "day": 25, "task": "Negotiate an offer using your prepared script.", "tool": "/get-hired" },
+        { "day": 25, "task": "Rehearse your negotiation script out loud until it sounds like you.", "tool": "/get-hired" },
         { "day": 26, "task": "Prep your first-week onboarding kit.", "tool": "/deliver" },
         { "day": 27, "task": "Write the SOPs and build the trackers your new role needs.", "tool": "/build" },
         { "day": 28, "task": "Deliver a proactive first update. Impress early.", "tool": "/deliver" },
         { "day": 29, "task": "Plan your niche + language path for months 2–3.", "tool": "/level-up" },
-        { "day": 30, "task": "Share your win. Pull the next person up.", "tool": "/wins" }
+        { "day": 30, "task": "Review the full month on your dashboard. Share what worked, and pull the next person up.", "tool": "/path" }
       ]
     }
   ]

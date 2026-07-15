@@ -7,7 +7,7 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 export const metadata = {
   title: "Reality Check",
   description:
-    "What the evidence actually says about remote and online work for Filipinos in 2026–2027. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
+    "What the evidence actually says about remote and online work for Filipinos right now. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
 };
 
 const accentText: Record<string, string> = {
@@ -140,7 +140,7 @@ export default function RealityPage() {
       {/* ------------------------------------------------------------- HERO */}
       <section className="container-x pt-14 pb-10 lg:pt-20">
         <Reveal>
-          <Kicker>Reality check · 2026 → 2027 · every number sourced</Kicker>
+          <Kicker>Reality check · every number sourced</Kicker>
         </Reveal>
         <Reveal i={1}>
           <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
@@ -590,7 +590,7 @@ export default function RealityPage() {
               down.
             </p>
             <div className="mt-6">
-              <ButtonLink href="/salary">Open the 2027 Salary Guide</ButtonLink>
+              <ButtonLink href="/salary">Open the Salary Guide</ButtonLink>
             </div>
           </div>
         </Reveal>

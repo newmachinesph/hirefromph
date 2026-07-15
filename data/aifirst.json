@@ -1,9 +1,9 @@
 {
   "hero": {
-    "kicker": "AI-first · every role · 2027",
+    "kicker": "AI-first · every role",
     "line1": "Every role now",
     "line2": "runs on AI.",
-    "intro": "By 2027 there is no such thing as a non-AI role. The bookkeeper reconciles with AI. The social media manager plans with AI. The ops person builds their own tools with AI. The question stopped being should I use AI years ago. The only question left is whether you run the AI, on purpose and with judgment, or whether the work quietly gets done without you. This page is about becoming the person who runs it.",
+    "intro": "There is no longer such a thing as a non-AI role. The bookkeeper reconciles with AI. The social media manager plans with AI. The ops person builds their own tools with AI. The question stopped being should I use AI years ago. The only question left is whether you run the AI, on purpose and with judgment, or whether the work quietly gets done without you. This page is about becoming the person who runs it.",
     "creed": "AI does not replace an online professional. A professional who owns an AI-assisted outcome replaces one who still does it all by hand, and charges more for it."
   },
 
@@ -31,7 +31,7 @@
         "source": { "label": "Upwork, In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
       }
     ],
-    "note": "Learn AI is not a career. Learn a craft, then multiply it with AI is. Everything below assumes you are building a craft. See the Reality Check for why that one sentence is the whole game.",
+    "note": "Learning AI alone is not a career. A craft multiplied by AI is. Everything below assumes you are building a craft. See the Reality Check for why that one sentence is the whole game.",
     "crossref": { "href": "/reality", "label": "See the market data behind these numbers" }
   },
 
@@ -139,7 +139,7 @@
         "unlocks": "Short-form social clips, UGC-style ads, explainer and avatar videos, and turning a single podcast or webinar into a month of content. This is the +329% lane from the top of the page. The demand is real and the supply is still thin.",
         "tools": [
           { "name": "Runway", "url": "https://runwayml.com/", "cost": "freemium", "oneLiner": "A generative platform for creating and editing video from text and image prompts.", "useInWork": "Cinematic b-roll and product shots for social clips and ads without filming. Restyle or extend a client's footage." },
-          { "name": "Kling AI", "url": "https://kling.ai/", "cost": "freemium", "oneLiner": "A strong text- and image-to-video generator known for high-motion output.", "useInWork": "High-motion image-to-video for UGC ads, product demos, and faceless short-form, at a low cost per clip." },
+          { "name": "Kling AI", "url": "https://klingai.com/", "cost": "freemium", "oneLiner": "A strong text- and image-to-video generator known for high-motion output.", "useInWork": "High-motion image-to-video for UGC ads, product demos, and faceless short-form, at a low cost per clip." },
           { "name": "Google Flow (Veo)", "url": "https://labs.google/fx/tools/flow", "cost": "freemium", "oneLiner": "Google's AI filmmaking studio, built on the Veo model, generating clips with native audio.", "useInWork": "Short clips with built-in audio for ads and explainers, assembled into multi-shot scenes for client projects." },
           { "name": "HeyGen", "url": "https://www.heygen.com/", "cost": "freemium", "oneLiner": "An AI avatar platform that turns a script into a realistic talking-head video with multilingual lip-sync.", "useInWork": "Spokesperson, explainer, and training videos with no camera, and one ad localized into many languages." },
           { "name": "CapCut", "url": "https://www.capcut.com/", "cost": "freemium", "oneLiner": "A widely used all-in-one video editor with AI captions, effects, and templates.", "useInWork": "The everyday editor for short-form delivery: trim, auto-caption, and template Reels, TikToks, and Shorts fast." },
@@ -169,13 +169,13 @@
     "lead": "You do not quit your niche to go into AI. You stay in your niche and become the person in it who is three times as fast and one level more strategic, because AI is doing the mechanical middle. Here is what that looks like across common lanes. Read the one that is yours, then picture the version a client would pay a premium for.",
     "note": "Notice the pattern in every row: the human keeps the judgment, the relationship, and the sign-off. AI takes the repetitive middle. That split is the job now.",
     "rows": [
-      { "niche": "Bookkeeping & finance", "icon": "calculator", "workflow": "AI sorts transactions and drafts the monthly summary. You catch the odd ones out, own the accuracy, and tell the client what the numbers actually mean." },
-      { "niche": "Social media & content", "icon": "megaphone", "workflow": "AI makes a month of post options and turns one video into thirty clips. You set the strategy, protect the brand voice, and decide what is on-message." },
-      { "niche": "Operations & project mgmt", "icon": "kanban", "workflow": "AI drafts SOPs, meeting notes, and status updates and builds small automations. You design the system, unblock the people, and keep the whole thing moving." },
-      { "niche": "Customer support & success", "icon": "headset", "workflow": "AI drafts replies and sums up long threads. You handle the hard, emotional, judgment-heavy tickets that keep a customer from leaving, the ones a model cannot." },
-      { "niche": "Design & creative", "icon": "palette", "workflow": "AI produces first-draft concepts and assets at volume. You art-direct, curate, and deliver the taste and consistency a generator has no opinion about." },
-      { "niche": "Writing & marketing", "icon": "pen-tool", "workflow": "AI drafts and researches at speed. You bring the angle, the real details, the fact-checking, and the judgment that makes it worth reading and true." },
-      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI handles listings, follow-up sequences, and data entry. You manage the relationships, the exceptions, and the trust a client hired a human for." }
+      { "niche": "Bookkeeping & finance", "icon": "calculator", "workflow": "AI categorizes transactions and drafts the summary; you spot the odd entries, stand behind the accuracy, and translate the numbers for the client." },
+      { "niche": "Social media & content", "icon": "megaphone", "workflow": "AI makes a month of post options and cuts one video into many clips; you set the strategy, guard the brand voice, and choose what goes out." },
+      { "niche": "Operations & project mgmt", "icon": "kanban", "workflow": "AI drafts the SOPs, notes, and updates; you design the system, clear the blockers, and keep delivery on track." },
+      { "niche": "Customer support & success", "icon": "headset", "workflow": "AI drafts routine replies and thread summaries; you take the tense, judgment-heavy conversations a model cannot be trusted with." },
+      { "niche": "Design & creative", "icon": "palette", "workflow": "AI produces first-pass concepts and assets in bulk; you art-direct, curate, and supply the taste that keeps everything coherent." },
+      { "niche": "Writing & marketing", "icon": "pen-tool", "workflow": "AI accelerates drafting and research; you bring the angle, the real specifics, and the checking that makes it true and worth reading." },
+      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI runs the listings, sequences, and data entry; you handle the people, the exceptions, and the trust the client is actually paying for." }
     ]
   },
 
@@ -202,9 +202,9 @@
     "title": "AI makes you faster. It also makes it faster to get fired.",
     "lead": "Every skill on this page cuts both ways. The professionals who last are the ones who treat AI with the same care they would give a client's bank login. Four rules keep the leverage from turning into a liability.",
     "items": [
-      { "title": "Check before you ship", "desc": "AI states wrong facts as confidently as right ones. Every name, number, date, and quote gets checked against a real source before it goes out under your name. Confident and wrong is still wrong.", "icon": "search-check" },
+      { "title": "Check before you ship", "desc": "AI states wrong facts as confidently as right ones. Verify names, dates, figures, and quotes against the originals before anything ships with your signature on it. Confident and wrong is still wrong.", "icon": "search-check" },
       { "title": "Protect the client's data", "desc": "Never paste confidential client data, passwords, or personal information into a tool you have not cleared with them. When in doubt, use a local or private option. That is what the open-source layer is for.", "icon": "lock" },
-      { "title": "Be honest about how you work", "desc": "If a client asks, tell them you use AI and how. Most expect it in 2027. Hiding it, or passing raw AI output off as bespoke human work, is the kind of thing that ends a reputation.", "icon": "handshake" },
+      { "title": "Be honest about how you work", "desc": "If a client asks, tell them you use AI and how. Most clients now expect it. Hiding it, or passing raw AI output off as bespoke human work, is the kind of thing that ends a reputation.", "icon": "handshake" },
       { "title": "Don't ship slop", "desc": "Generic, unedited AI output is worth exactly what anyone with a prompt can make, which is nothing. Your edit, your taste, your specifics are the product. If you would be embarrassed to sign it, do not send it.", "icon": "sparkles" }
     ],
     "crossref": { "href": "/conduct", "label": "The full conduct & integrity standard" }
@@ -233,7 +233,7 @@
 
   "closing": {
     "kicker": "The honest bottom line",
-    "title": "You are early, but only if you move while the premium still exists.",
+    "title": "You are still early — but the premium has an expiry date.",
     "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed for free. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
     "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
     "links": [

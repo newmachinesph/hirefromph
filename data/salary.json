@@ -1,15 +1,15 @@
 {
   "hero": {
-    "kicker": "Salary guide · 2027 · read the warning first",
+    "kicker": "Salary guide · read the warning first",
     "line1": "What online work",
-    "line2": "really pays in 2027.",
-    "intro": "Everyone wants a number. Here is the honest version. There is no official, trusted dataset of what Filipino online professionals earn. Every public salary guide comes from a company with its own interests, and none of them show their math. So we will give you the ranges people quote, show you where they disagree, and then teach you the one thing that actually works: reading live job posts and pricing your own value. Use this to get your bearings, not to set your rate.",
+    "line2": "really pays right now.",
+    "intro": "Everyone wants a number, and there is no trusted dataset behind any of them — the warning below explains why. So here is what we can honestly give you: the ranges people quote, where they disagree, and how to price from live posts. Use it to get your bearings, not to set your rate.",
     "creed": "A salary guide with no method behind it is a guess with a chart on it. The real number is the one a real client agrees to pay you this month."
   },
 
   "warning": {
     "title": "This is the softest data on the whole site. We are showing you the softness on purpose.",
-    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every 2027 salary guide out there is published by someone with a stake in where the number lands, so the figures bend toward whoever publishes them. Treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
+    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every salary guide out there is published by someone with a stake in where the number lands, so the figures bend toward whoever publishes them. Treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
   },
 
   "inDemand": {
@@ -34,10 +34,10 @@
   },
 
   "emerging": {
-    "kicker": "The next tier · new roles for 2027",
+    "kicker": "The next tier · the new roles",
     "title": "The roles that barely existed three years ago, and pay the most.",
     "lead": "The classic online-work titles are still hiring, but the fastest-rising money is in new, AI-native roles that blend a craft with automation. You do not start here. You grow into one from a lane above by adding the AI layer. This is where the ceiling is going.",
-    "note": "Notice the shape of every one of these. It is a specialist who uses many tools to own a business outcome. That is the 2027 professional: not a generalist, and not a narrow technician, but a domain expert who is broad with AI. Tools are now table stakes. Your niche and your judgment are the value.",
+    "note": "Notice the shape of every one of these. It is a specialist who uses many tools to own a business outcome. That is the professional the market now pays for: not a generalist, and not a narrow technician, but a domain expert who is broad with AI. Tools are now table stakes. Your niche and your judgment are the value.",
     "roles": [
       { "role": "GTM engineer", "icon": "rocket", "blurb": "A go-to-market engineer builds and automates the systems that bring in leads and revenue, using no-code and AI tools instead of a big sales team. One skilled operator now replaces work that took three or four people." },
       { "role": "AI automation specialist", "icon": "workflow", "blurb": "Builds AI-powered workflows and agents that run a client's repetitive operations and marketing on autopilot, with tools like n8n, Make, and Zapier plus a model doing the thinking." },
@@ -46,7 +46,7 @@
       { "role": "Solutions / implementation", "icon": "puzzle", "blurb": "Sets up, customizes, and connects the SaaS tools a business runs on, then trains their team. Part consultant, part builder, always in demand as software multiplies." },
       { "role": "Fractional operator", "icon": "briefcase", "blurb": "A senior operator (COO, CMO, or head of ops) who runs one function part-time for several small companies at once. The top of the independent path, and pure business-of-one." }
     ],
-    "note2": "These grow out of the AI-First page. Master a craft, add the AI layer, and one of these becomes your ceiling.",
+    "note2": "These grow out of the AI-First page.",
     "source": {
       "label": "Upwork, In-Demand Skills 2026 (AI integration up 178% YoY)",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
@@ -58,15 +58,15 @@
     "title": "The pay ladder, and why you should climb it fast.",
     "monthlyNote": "The monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
     "tiers": [
-      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–500 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here." },
-      { "level": "Mid", "accent": "amber", "monthly": "≈ $600–900 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
-      { "level": "Senior / specialist", "accent": "emerald", "monthly": "≈ $1,000–1,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
+      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing — see the demonstration below." },
+      { "level": "Mid", "accent": "amber", "monthly": "≈ $600–2,400 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
+      { "level": "Senior / specialist", "accent": "emerald", "monthly": "≈ $1,000–4,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
     ],
     "contradiction": {
       "title": "Proof the numbers are soft: watch two 'guides' disagree by 4x.",
-      "body": "Take one role, entry-level VA. The platform's own data points to roughly ₱17,000 to ₱28,000 a month ($300 to $500). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
-      "a": { "label": "Platform data · entry VA", "value": "≈ ₱17k–28k / mo" },
-      "b": { "label": "Viral blog claim · entry VA", "value": "₱90k+ / mo" },
+      "body": "Take one entry-level support role. The platform's own data points to roughly ₱17,000 to ₱28,000 a month ($300 to $500). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
+      "a": { "label": "Platform data · entry level", "value": "≈ ₱17k–28k / mo" },
+      "b": { "label": "Viral blog claim · entry level", "value": "₱90k+ / mo" },
       "lesson": "At least one of these is very wrong, and the one with no source is the suspect. Never take a rate from a single guide or a screenshot. Look at ten live job posts in your niche this week. Live posts are data. Guides and reels are opinion with confidence."
     },
     "sources": [

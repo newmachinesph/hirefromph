@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "how to get direct clients",
     "free online courses Philippines",
     "work from home Philippines",
-    "salary guide Philippines 2027",
+    "salary guide Philippines",
   ],
   alternates: { canonical: "/" },
   openGraph: {
