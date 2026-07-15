@@ -147,7 +147,7 @@ export function StagePage({ id }: { id: string }) {
         <div className="container-x">
           <Reveal>
             <SectionHeading
-              kicker="The complete 9-step roadmap"
+              kicker="The complete roadmap"
               title="Where you are right now"
               lead={roadmap.intro}
             />
