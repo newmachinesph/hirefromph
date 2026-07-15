@@ -1,5 +1,5 @@
 {
-  "intro": "Every lab below teaches you to build one real deliverable from a blank page, not a file to download, a method you will use for the rest of your career. Study the anatomy, make the judgment calls, then write it yourself in the workshop. What comes out is yours.",
+  "intro": "Every lab below teaches you to build one real deliverable from a blank page. There is no file to download, only a method you will use for the rest of your career. Study the anatomy, make the judgment calls, then write it yourself in the workshop. What comes out is yours.",
   "creed": "We hand out zero templates. Every artifact on this page is built by you, in your own words, from your own situation, because a downloaded file expires the moment your situation doesn't match it, and a method you actually understand never does.",
   "categories": [
     { "id": "apply", "label": "Get Hired" },
@@ -16,7 +16,7 @@
       "difficulty": "Beginner",
       "time": "45–60 min",
       "outcome": "A one-page resume, in your own words, that you can defend line by line in an interview.",
-      "whyBuild": "A downloaded resume template makes you look like every other applicant who found the same Google Doc, recruiters who screen 200 resumes a week can spot the template shape instantly, and it never quite fits your actual experience, so you end up leaving weird gaps or bracket placeholders in. Worse: the moment you apply to a slightly different role, the template can't flex, because you never learned why each section exists in the first place. Build it once, understand every rule, and you can produce a tailored version for any role in fifteen minutes for the rest of your career.",
+      "whyBuild": "A downloaded resume template makes you look like every other applicant who found the same Google Doc, recruiters who screen 200 resumes a week can spot the template shape instantly, and it never quite fits your actual experience, so you end up with awkward gaps or leftover bracket placeholders. Worse: the moment you apply to a slightly different role, the template can't flex, because you never learned why each section exists in the first place. Build it once, understand every rule, and you can produce a tailored version for any role in fifteen minutes for the rest of your career.",
       "studyFirst": {
         "what": "Find 5 resumes from Filipinos who actually got hired for the kind of remote role you're aiming for, real documents, not templates, not resume-builder exports.",
         "how": "Search site:linkedin.com \"open to work\" plus your niche and open a few profiles' featured sections. Search your niche + 'resume reddit' on r/WorkOnline or r/overemployed. Ask in a Filipino online-professional Facebook group for a redacted example, most people share happily. Check if any target companies' 'hired' case studies link a resume PDF."
@@ -197,21 +197,21 @@
       "difficulty": "Beginner",
       "time": "30–45 min",
       "outcome": "A working spreadsheet tracker built from a schema you understand, reusable for any tracking need, not just this one.",
-      "whyBuild": "A downloaded tracker template looks done on day one and breaks by week two, because you don't know why each column exists, so you can't adapt it when your actual workflow doesn't match the template's assumptions. Every tracker, job applications, invoices, content calendars, client deliverables, is the same underlying pattern: a row per item, a status column, a date-driven trigger, and a place for notes. Learn that pattern once and you can build a working tracker for literally anything in fifteen minutes, in any spreadsheet tool.",
+      "whyBuild": "A downloaded tracker template looks done on day one and breaks by week two, because you don't know why each column exists, so you can't adapt it when your actual workflow doesn't match the template's assumptions. Every tracker, job applications, invoices, content calendars, client deliverables, is the same underlying pattern: a row per item, a status column, a date-driven trigger, and a place for notes. Learn that pattern once and you can build a working tracker for anything in fifteen minutes, in any spreadsheet tool.",
       "studyFirst": {
         "what": "Find how 3 different tracking problems are actually solved in spreadsheets, an application tracker, a content calendar, and a financial tracker (AR or AP), to see the shared pattern underneath different subjects.",
         "how": "Search 'job application tracker spreadsheet reddit' for real shared examples. Search 'content calendar template' on YouTube and watch someone walk through their actual columns and formulas. Ask in an online-professional group what tracker a working bookkeeper or social media manager actually uses day to day."
       },
       "anatomy": [
         { "part": "Unique identifier column", "purpose": "Gives every row a stable reference so nothing gets confused or duplicated.", "rule": "One column that's always unique, an ID number, an invoice number, a date+name combo. Never rely on row position alone." },
-        { "part": "Status column with a fixed list", "purpose": "Turns a wall of data into an instant 'what needs my attention' view.", "rule": "Use Data Validation to restrict status to a fixed dropdown list (e.g. Applied / Replied / Interview / Offer / Rejected), free-text status columns rot within a week because people type variations." },
+        { "part": "Status column with a fixed list", "purpose": "Turns a wall of data into an instant 'what needs my attention' view.", "rule": "Use Data Validation to restrict status to a fixed dropdown list (e.g. Applied / Replied / Interview / Offer / Rejected), free-text status columns drift within a week because people type variations." },
         { "part": "Date-driven trigger column", "purpose": "Tells you when to act, not just what happened.", "rule": "At least one date column drives a follow-up or deadline, 'Date Applied' alone is a log; 'Follow-up Date' is a tool." },
         { "part": "Owner/category column", "purpose": "Lets you filter and group when the list grows past what you can scan.", "rule": "One column to slice by, platform, client, category, matched to how you'll actually filter later." },
         { "part": "Notes column", "purpose": "Captures the context a rigid schema can't predict.", "rule": "Free text, but keep it short, a notes column that becomes a novel means you need another actual column instead." }
       ],
       "principles": [
         "Every real-world item gets exactly one row, no skipped entries, no 'I'll add it later'.",
-        "Status values must come from a fixed dropdown list, never free text, inconsistent status text is the #1 reason trackers die.",
+        "Status values must come from a fixed dropdown list, never free text, inconsistent status text is the #1 reason trackers get abandoned.",
         "One column should drive an action (a follow-up date, a due date), a tracker that only records history isn't a tool, it's a diary.",
         "Conditional formatting on the status column (color the row) turns a spreadsheet into a dashboard you can read in 2 seconds.",
         "Review and clear the tracker on a fixed cadence (daily or weekly), an unreviewed tracker is worse than no tracker, because it creates false confidence that things are handled."
@@ -229,7 +229,7 @@
           { "id": "statusvalues", "label": "Status column, fixed dropdown values", "hint": "List every status value, in the order things actually move through them.", "placeholder": "Applied, Replied, Interview, Offer, Rejected", "rule": "Fixed list only, no free text status." },
           { "id": "datecolumn", "label": "Date-driven trigger column", "hint": "What date should prompt you to act?", "placeholder": "Follow-up Date, 3 to 4 business days after Date Applied", "rule": "Must drive an action, not just record history." },
           { "id": "filtercolumn", "label": "Owner/category column", "hint": "What will you filter or group by once this list gets long?", "placeholder": "Platform (LinkedIn, Indeed, referral, direct)", "rule": "Match to how you'll actually filter later." },
-          { "id": "rule", "label": "The one rule that keeps this tracker alive", "hint": "When will you review it, and what happens if a row goes stale?", "placeholder": "Every 'Applied' status gets a Follow-up Date logged immediately. I check the sheet every morning for anything overdue.", "rule": "A tracker without a review cadence dies within two weeks." }
+          { "id": "rule", "label": "The one rule that keeps this tracker alive", "hint": "When will you review it, and what happens if a row goes stale?", "placeholder": "Every 'Applied' status gets a Follow-up Date logged immediately. I check the sheet every morning for anything overdue.", "rule": "A tracker without a review cadence goes stale within two weeks." }
         ]
       },
       "critique": [
@@ -256,7 +256,7 @@
       "difficulty": "Beginner",
       "time": "30 min",
       "outcome": "A written SOP for one real process you do, so you never have to re-explain it, and a client can hand it to anyone.",
-      "whyBuild": "The whole point of hiring an online professional is that a process stops living only in your head. A downloaded SOP template full of generic placeholder steps ('Step 1: Do the thing') proves nothing and helps no one, the actual skill clients pay for is the ability to observe your own repeatable work clearly enough to document it so someone else could follow it. Learn to write one real SOP well, and you can document any process a client hands you for the rest of your career, exactly the trait that gets you promoted from task-doer to trusted operator.",
+      "whyBuild": "The whole point of hiring an online professional is that a process stops living only in your head. A downloaded SOP template full of generic placeholder steps ('Step 1: Do the thing') proves nothing, the actual skill clients pay for is the ability to observe your own repeatable work clearly enough to document it so someone else could follow it. Learn to write one real SOP well, and you can document any process a client hands you for the rest of your career, exactly the trait that gets you promoted from task-doer to trusted operator.",
       "studyFirst": {
         "what": "Find 3 real SOPs used inside actual companies, not blank templates, documents someone actually follows to do a real job.",
         "how": "Search 'SOP example [your niche] site:notion.site' or check public Notion template galleries built by real operators. Search a specific tool's help center for their own 'how we do X internally' style docs (many SaaS companies publish these as marketing). Ask someone in your niche's community to share a redacted SOP they actually use."
@@ -279,7 +279,7 @@
       "decisions": [
         { "q": "How granular should the steps be?", "guide": "Granular enough that someone with baseline tool familiarity but zero context on this specific process could follow it without asking you a clarifying question. Too granular ('click the blue button') wastes time; too vague ('update the records') fails the test." },
         { "q": "What if the process has branches, different paths depending on a condition?", "guide": "Use a clear 'If X, do Y / If Z, do W' structure inside the numbered steps rather than forcing one linear list, don't hide a decision point inside a single ambiguous step." },
-        { "q": "Who is the audience, a specific person or 'anyone'?", "guide": "Write for the least-experienced realistic reader (a new hire, a VA taking over from you), not for yourself. If you're the only one who'll ever read it, you probably don't need a formal SOP yet, a checklist will do." }
+        { "q": "Who is the audience, a specific person or 'anyone'?", "guide": "Write for the least-experienced realistic reader (a new hire, an online professional taking over from you), not for yourself. If you're the only one who'll ever read it, you probably don't need a formal SOP yet, a checklist will do." }
       ],
       "builder": {
         "intro": "Pick one real process you actually do, something repeatable, even small. Document it honestly, step by step.",
@@ -442,7 +442,7 @@
       "whyBuild": "New clients judge you disproportionately on the first week, not because it's fair, but because it's the only data they have. Winging it or copying a generic 'first 90 days' template built for corporate employees misses what actually matters for a remote freelance relationship: fast small wins and clear, proactive communication. Build your own first-week plan around your actual working style and niche, and you turn the anxious first week, for both of you, into the moment that earns trust for the whole engagement.",
       "studyFirst": {
         "what": "Find 3 examples of how working freelancers or new hires structure and communicate their first week on a new engagement.",
-        "how": "Search '30-60-90 day plan template' and adapt the corporate pattern down to freelance scale and speed. Look at 'first week as a new VA or freelancer' YouTube videos or blog posts from people describing what they actually did. Ask in an online-professional community what a first-week update from a great new hire actually looked like to them as a client."
+        "how": "Search '30-60-90 day plan template' and adapt the corporate pattern down to freelance scale and speed. Look at 'first week as a new freelancer' YouTube videos or blog posts from people describing what they actually did. Ask in an online-professional community what a first-week update from a great new hire actually looked like to them as a client."
       },
       "anatomy": [
         { "part": "Understanding recap", "purpose": "Proves you listened and confirms alignment before you've spent a week doing possibly-wrong work.", "rule": "Restate the client's goals and priorities in your own words, if you got something wrong, this is where it surfaces, on day one instead of day thirty." },

@@ -44,7 +44,7 @@
     "doFirst": [
       { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer, build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
       { "title": "Show proof, not promises", "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.", "href": "/tasks", "cta": "Build proof" },
-      { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practise against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
+      { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practice against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
       { "title": "Track every application", "desc": "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", "href": "/tracker", "cta": "Open tracker" },
       { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof, the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
     ],
