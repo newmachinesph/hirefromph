@@ -249,7 +249,7 @@ export function FindWorkDirectory() {
 
       {rest.length > 0 && (
         <div className="mt-5">
-          <PathGate unlocks="the full study set of 150+ places matched to your niche">
+          <PathGate unlocks="the full study set of vetted places matched to your niche">
             <motion.div
               layout
               className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"

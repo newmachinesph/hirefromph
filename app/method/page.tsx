@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "The Method, we teach you to build it",
   description:
-    "We don't give you the file. We teach you to build it. Six principles, six methods, and a self-audit, the resourcefulness curriculum behind everything on this platform.",
+    "We don't give you the file. We teach you to build it. Six principles, seven methods, and a self-audit, the resourcefulness curriculum behind everything on this platform.",
 };
 
 const accentText: Record<string, string> = {
