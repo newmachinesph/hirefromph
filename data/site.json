@@ -30,6 +30,8 @@
   "navGroups": [
     {
       "title": "The journey",
+      "primary": true,
+      "desc": "The one path — five stages, zero to independent. If you read nothing else, read this in order.",
       "links": [
         { "label": "Start", "href": "/start" },
         { "label": "Get Hired", "href": "/get-hired" },
@@ -40,6 +42,7 @@
     },
     {
       "title": "Learn to build",
+      "desc": "The skills and labs behind the path. Dip in when a stage calls for one — not all at once.",
       "links": [
         { "label": "The Method", "href": "/method" },
         { "label": "AI-First", "href": "/ai-first" },
@@ -54,6 +57,7 @@
     },
     {
       "title": "Work like a professional",
+      "desc": "How to behave once you're in the work — the gap between kept and quietly dropped.",
       "links": [
         { "label": "Reality Check", "href": "/reality" },
         { "label": "Become Indispensable", "href": "/indispensable" },
@@ -64,6 +68,7 @@
     },
     {
       "title": "Grow",
+      "desc": "Deep-dives and tools for when the basics hold and you want more — reach for these later.",
       "links": [
         { "label": "Find Work", "href": "/apply" },
         { "label": "Interview Prep", "href": "/interview" },
@@ -81,9 +86,9 @@
     }
   ],
   "primaryNav": [
+    { "label": "Start", "href": "/start" },
     { "label": "The Method", "href": "/method" },
     { "label": "AI-First", "href": "/ai-first" },
-    { "label": "Start", "href": "/start" },
     { "label": "Reality Check", "href": "/reality" },
     { "label": "Find Work", "href": "/apply" }
   ]

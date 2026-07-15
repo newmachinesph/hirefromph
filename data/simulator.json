@@ -167,7 +167,7 @@
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",
-        "note": "This is the one number on the page with real research behind it, and even here the nuance matters more than the headline. Upwork reports freelancers doing AI work earn over 40% more per hour. Upwork Research Institute MD Kelly Monahan's framing is that the premium accrues to people who already had domain expertise and then layered AI on top."
+        "note": "This is the one number on the page with real research behind it, and even here the nuance matters more than the headline. Upwork reports freelancers doing AI work earn 34% more per hour. Upwork Research Institute MD Kelly Monahan's framing is that the premium accrues to people who already had domain expertise and then layered AI on top."
       },
       "ai-augmented-building": {
         "label": "AI, built into a craft you're still learning",
@@ -223,7 +223,7 @@
   },
   "aiCallout": {
     "title": "You layered AI on top of nothing. The model gives you nothing.",
-    "body": "You selected \"I build AI into the delivery\" with no craft underneath it, and your AI multiplier came out at ×1.0, no premium at all. That is deliberate, and it is the most important line of code on this page. The 40%+ AI premium is real and it is sourced. It just does not belong to you yet.",
+    "body": "You selected \"I build AI into the delivery\" with no craft underneath it, and your AI multiplier came out at ×1.0, no premium at all. That is deliberate, and it is the most important line of code on this page. The AI premium is real and it is sourced. It just does not belong to you yet.",
     "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
     "attribution": "Kelly Monahan, Managing Director, Upwork Research Institute",
     "closer": "Read that again slowly. The premium accrues to the person who already had the expertise. AI is a multiplier, and a multiplier needs something to multiply. Go pick a craft, get genuinely good at it, and then come back and set this to \"deep\", the same AI skill you already have will be worth a great deal more.",

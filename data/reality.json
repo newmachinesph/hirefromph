@@ -309,12 +309,12 @@
     "title": "\"Learn AI\" is not a career. \"Learn a craft, then multiply it with AI\" is.",
     "lead": "If you take one sentence away from this entire site, make it this one. It is the difference between the two futures in front of you, and almost everyone gets it backwards.",
     "premium": {
-      "stat": "40%+",
+      "stat": "34%",
       "label": "more per hour",
-      "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those doing non-AI work. This is the most-quoted number in the entire AI-skills conversation. It is real.",
+      "body": "Upwork's own data: freelancers doing AI work earn 34% more per hour than those doing non-AI work. This is the most-quoted number in the entire AI-skills conversation. It is real, and it moved — the 2025 report said over 40%, the 2026 one says 34%. That drift is exactly why every number here carries a date.",
       "source": {
-        "label": "Upwork, 2025's most in-demand skills",
-        "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills"
+        "label": "Upwork, In-Demand Skills 2026",
+        "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
       }
     },
     "nuance": {
@@ -376,7 +376,7 @@
         "accent": "emerald",
         "hourly": "$18–35+ / hr",
         "monthly": "≈ $1,000–4,800+ / mo",
-        "what": "A named, provable specialisation, and this is where the 40% AI premium lands on top of the craft, not instead of it."
+        "what": "A named, provable specialisation, and this is where the AI premium lands on top of the craft, not instead of it."
       }
     ],
     "disagreement": {
