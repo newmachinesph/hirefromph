@@ -363,13 +363,13 @@
       "time": "4–5 hours",
       "proves": "You can plan, shoot, and edit short-form video that follows a proven hook-retention-CTA structure, the highest-leverage, highest-pay skill in social media right now.",
       "prerequisites": [
-        { "skill": "Short-form video structure (hook in first 2 seconds, retention pacing, clear CTA)", "why": "Random footage with music isn't a strategy, the structure is what makes it convert.", "ifYouDont": "DevUp's CapCut Editing Masterclass under the Social Media track, or CapCut's own free tutorials." },
+        { "skill": "Short-form video structure (hook in first 2 seconds, retention pacing, clear CTA)", "why": "Random footage with music isn't a strategy, the structure is what makes it convert.", "ifYouDont": "CapCut's own free tutorials cover hook, pacing, and CTA structure." },
         { "skill": "Basic phone-shot video (framing, lighting, stable shots) and CapCut editing", "why": "You're producing real finished video, not a storyboard, you need the actual production skill.", "ifYouDont": "CapCut's in-app tutorials (free) walk through cuts, captions, and pacing." }
       ],
       "resources": [
         { "name": "CapCut", "type": "Free tool", "what": "Free mobile/desktop editor, shoot and edit all 3 videos here.", "free": true, "url": "https://www.capcut.com" },
         { "name": "TikTok Creative Center (public, free)", "type": "Docs", "what": "Real published top-performing ad and organic examples by category, study structure, don't copy content.", "free": true, "url": "https://ads.tiktok.com/business/creativecenter/pc/en" },
-        { "name": "CapCut Editing Masterclass", "type": "Video", "what": "DevUp's own walkthrough of short-form editing fundamentals.", "free": true, "url": "#" }
+        { "name": "CapCut official tutorials", "type": "Video", "what": "CapCut's own free walkthroughs of short-form editing fundamentals, from the maker of the tool.", "free": true, "url": "https://www.capcut.com" }
       ],
       "brief": {
         "scenario": "You're building a UGC-style (user-generated-content style) video series for a real product you personally own or can access for free (a phone app, a drugstore skincare item, a snack, a public library service), treat it like a real brand deal even though nobody asked you to.",
@@ -662,7 +662,7 @@
       "resources": [
         { "name": "Follow Up Boss (free resources)", "type": "Free tool", "what": "Study their public lead-nurture playbooks for realistic cadence timing.", "free": true, "url": "https://www.followupboss.com/blog" },
         { "name": "Google Sheets + Google Docs", "type": "Free tool", "what": "Build the tracker and the actual message sequence here.", "free": true, "url": "https://docs.google.com" },
-        { "name": "Real Estate Support Systems", "type": "Video", "what": "DevUp's own walkthrough of real estate ops systems under the Real Estate track.", "free": true, "url": "#" }
+        { "name": "Follow Up Boss playbooks", "type": "Docs", "what": "Free published playbooks on real estate ops systems: lead routing, follow-up cadences, CRM hygiene.", "free": true, "url": "https://www.followupboss.com/blog" }
       ],
       "brief": {
         "scenario": "Agent Marcus Webb has 40 buyer leads sitting untouched for 2+ weeks in his CRM, inquiries from a public open house sign-in sheet and online form fills that never got a real follow-up beyond an auto-reply.",

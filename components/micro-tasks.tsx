@@ -440,18 +440,24 @@ function TaskDetail({
               </div>
               <p className="mt-3 font-display text-base leading-snug">{r.name}</p>
               <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-soft">{r.what}</p>
-              <a
-                href={r.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-coral"
-              >
-                Open
-                <ExternalLink
-                  size={14}
-                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                />
-              </a>
+              {r.url === "#" ? (
+                <span className="mt-4 inline-flex w-fit text-sm font-semibold text-ink-soft">
+                  You pick the subject
+                </span>
+              ) : (
+                <a
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-coral"
+                >
+                  Open
+                  <ExternalLink
+                    size={14}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </a>
+              )}
             </div>
           ))}
         </div>
