@@ -96,12 +96,13 @@ export default function Home() {
             </Reveal>
             <Reveal i={2}>
               <p className="mt-8 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-                We hand out zero templates. We teach you the anatomy, the rules,
-                and the judgment, then{" "}
+                We teach you the anatomy, the rules, and the judgment behind
+                every professional deliverable — then{" "}
                 <strong className="font-semibold text-ink">you build your own</strong>,
-                from a blank page. Become a resourceful{" "}
-                <strong className="font-semibold text-ink">online professional</strong>.
-                Not an assistant, a professional. Free, forever.
+                from a blank page. What you build here, you can rebuild for any
+                client, anywhere, forever. That skill is the career. Become an{" "}
+                <strong className="font-semibold text-ink">online professional</strong>{" "}
+                clients trust with outcomes, not just tasks. Free, forever.
               </p>
             </Reveal>
             <Reveal i={3}>
