@@ -148,7 +148,7 @@
       "tools": ["KvCore", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
       "skills": ["Listing management", "CRM & lead follow-up", "Transaction coordination", "Showing feedback", "Marketing collateral"],
       "learn": [
-        { "type": "YouTube", "title": "Real Estate Support Systems", "provider": "DevUp" },
+        { "type": "Docs", "title": "Follow Up Boss Playbooks", "provider": "Follow Up Boss (free)" },
         { "type": "Template", "title": "Buyer/Seller Follow-up Scripts", "provider": "In-app" },
         { "type": "Template", "title": "Listing & Feedback Trackers", "provider": "In-app" }
       ],
@@ -175,7 +175,7 @@
       "skills": ["Workflow automation", "CRM setup & management", "API basics & webhooks", "No-code app building", "AI integration"],
       "learn": [
         { "type": "Course", "title": "Zapier & Make Automation", "provider": "Vendor (free)" },
-        { "type": "YouTube", "title": "Build Your First Automation", "provider": "DevUp" },
+        { "type": "Course", "title": "Zapier Learn — Automation Basics", "provider": "Zapier (free)" },
         { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (free)" }
       ],
       "certs": ["Zapier Expert", "HubSpot Ops"],

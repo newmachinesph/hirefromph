@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
 import site from "@/data/site.json";
 import stages from "@/data/stages.json";
+import roadmap from "@/data/roadmap.json";
 import tracks from "@/data/tracks.json";
 import doctrine from "@/data/doctrine.json";
 import { Reveal } from "@/components/reveal";
@@ -236,9 +237,26 @@ export default function Home() {
                   <h3 className="mt-2 font-display text-2xl leading-tight">
                     {st.title}
                   </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
+                  <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                     {st.summary}
                   </p>
+                  <ul className="mt-4 flex flex-1 flex-col gap-2">
+                    {roadmap.steps
+                      .filter((s) => s.stage === st.num)
+                      .map((s) => (
+                        <li
+                          key={s.n}
+                          className="flex items-start gap-2.5 text-sm leading-snug text-ink"
+                        >
+                          <span
+                            className={`mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-full text-[10px] font-bold text-white ${accentBar[st.accent]}`}
+                          >
+                            {s.n}
+                          </span>
+                          {s.title}
+                        </li>
+                      ))}
+                  </ul>
                   <div className="mt-5 flex items-center justify-between border-t border-line pt-4">
                     <span className="text-xs font-medium text-ink-faint">
                       {st.steps}

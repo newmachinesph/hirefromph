@@ -8,6 +8,7 @@ import {
   useMemo,
   useState,
 } from "react";
+import tracksData from "@/data/tracks.json";
 
 export type AppStatus =
   | "applied"
@@ -119,8 +120,19 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const raw = localStorage.getItem(KEY);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      if (raw) setState({ ...EMPTY, ...(JSON.parse(raw) as PathState) });
+      if (raw) {
+        const parsed = { ...EMPTY, ...(JSON.parse(raw) as PathState) };
+        // A saved track id may no longer exist (tracks get renamed/retired) —
+        // drop it so lookups don't silently fail, but keep all other progress.
+        if (
+          parsed.track &&
+          !tracksData.tracks.some((t) => t.id === parsed.track)
+        ) {
+          parsed.track = null;
+        }
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setState(parsed);
+      }
     } catch {
       /* ignore corrupt storage */
     }

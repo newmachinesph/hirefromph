@@ -22,7 +22,7 @@
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
     { "value": "7", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick, give" },
     { "value": "4", "label": "career stages", "sub": "zero to indispensable" },
-    { "value": "20", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
+    { "value": "21", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
   ],
   "navGroups": [
     {
@@ -62,6 +62,7 @@
       "links": [
         { "label": "Find Work", "href": "/apply" },
         { "label": "Own Your Clients", "href": "/clients" },
+        { "label": "Get Legit", "href": "/legit" },
         { "label": "Salary Guide", "href": "/salary" },
         { "label": "Client Markets", "href": "/markets" },
         { "label": "Tracker", "href": "/tracker" },
