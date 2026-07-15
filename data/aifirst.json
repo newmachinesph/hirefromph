@@ -89,7 +89,7 @@
         "icon": "terminal",
         "accent": "coral",
         "what": "AI that reads a plain-English request and writes, edits, and runs real code for you, in your terminal or editor. You describe the outcome, it builds the thing.",
-        "unlocks": "You no longer need to be a developer to ship a small internal tool, a landing page, a script that cleans a client's messy spreadsheet, or an automation that saves them hours a week. That is a deliverable a generalist could never offer two years ago.",
+        "unlocks": "You no longer need to be a developer to ship a small internal tool, a landing page, a script that cleans a client's messy spreadsheet, or an automation that saves them hours a week. That is a deliverable a generalist could not have offered two years ago.",
         "tools": [
           { "name": "Claude Code", "url": "https://code.claude.com/docs/en/overview", "cost": "paid", "oneLiner": "Anthropic's agentic coding tool. Describe a task in plain English and it writes, edits, and runs the code from your terminal or editor.", "useInWork": "Build and fix small client deliverables, scripts, data-cleaning tools, site tweaks, without hand-writing the code." },
           { "name": "Cursor", "url": "https://cursor.com/", "cost": "freemium", "oneLiner": "An AI-first code editor whose agent can read a whole project and make changes from plain-English instructions.", "useInWork": "Ship small client sites, landing pages, and internal tools by describing the changes instead of coding them by hand." },
@@ -234,7 +234,7 @@
   "closing": {
     "kicker": "The honest bottom line",
     "title": "You are early, but only if you move while the premium still exists.",
-    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed for free. The generic floor is falling whether you like it or not. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
+    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed for free. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
     "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
     "links": [
       { "href": "/prompts", "label": "Learn to direct AI", "desc": "Description is the entry skill. Learn to write the brief, from a blank box, for anything." },

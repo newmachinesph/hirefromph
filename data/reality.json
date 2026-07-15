@@ -65,8 +65,8 @@
       "myth": "\"Get your first client in 10–14 days.\"",
       "headline": "There is no credible data on time-to-first-client. None. Anywhere.",
       "body": "We went looking for it properly, labour statistics, platform research, academic work, and it does not exist. Nobody has measured how long it takes a new Filipino online professional to land their first paying contract. Every \"10 days\", \"2 weeks\", \"30 days guaranteed\" you have seen is a marketing figure with nothing underneath it. It was chosen because it converts, not because it was counted.",
-      "sting": "The reason we're telling you a number DOESN'T exist is that this is the most valuable habit on the page: when a claim has no source, the correct response is not \"maybe\", it's \"then why is it stated so confidently?\"",
-      "lesson": "Plan for a runway, not a date. Anyone who gives you a timeline for your first client is guessing, and if they're charging you, they're guessing on purpose.",
+      "sting": "We're telling you a number DOESN'T exist because spotting that absence is the habit worth building: when a claim has no source, the correct response is not \"maybe\", it's \"then why is it stated so confidently?\"",
+      "lesson": "Plan for a runway, not a date. Anyone who gives you a timeline for your first client is guessing — nobody has the data to do better.",
       "source": {
         "label": "No primary source exists, this is the point",
         "url": "https://www.ilo.org/media/387316/download"
@@ -186,7 +186,7 @@
       {
         "id": "bloomberry-180m",
         "title": "180 million job postings, 2023 → October 2025",
-        "note": "Now the baseline matters. ALL job postings fell 8% in 2025, the whole market cooled. So the dashed line is the real zero. Writers at −28% are genuinely down against it. But customer service reps at −4% are actually doing BETTER than the market average, a fact that gets left out of every doom post you have ever scrolled past.",
+        "note": "Now the baseline matters. ALL job postings fell 8% in 2025, the whole market cooled. So the dashed line is the real zero. Writers at −28% are genuinely down against it. But customer service reps at −4% are actually doing BETTER than the market average, a fact the panic usually leaves out.",
         "baseline": { "value": -8, "label": "All postings, 2025: −8%" },
         "source": {
           "label": "Bloomberry, I analyzed 180M jobs",
@@ -223,7 +223,7 @@
       "kicker": "The counter-evidence · we're including it because it's true",
       "title": "Demand for \"basic\" support work did not vanish.",
       "body": "If we stopped here you'd conclude that entry-level support work is dead. It isn't, and we won't pretend it is. Upwork's In-Demand Skills 2026 shows that general remote support, data entry and manual transcription are STILL among the top-10 most in-demand skills in its Customer Service & Admin Support category. (Upwork still uses the old title for that first one. We don't, but the demand it names is real.) Their own conclusion: demand \"remained consistently strong year over year, even in categories often assumed to be most vulnerable to automation.\"",
-      "conclusion": "So the work is still there. What collapsed was not the demand, it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. That is the difference between being replaced and being commoditized. You are not being replaced. You are being commoditized. The escape from commoditization is not to work faster. It's to own something a client cannot get from a prompt.",
+      "conclusion": "So the work is still there. What collapsed was not the demand, it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. You are not being replaced; you are being commoditized. And the escape is not to work faster — it's to own something a client cannot get from a prompt.",
       "source": {
         "label": "Upwork, In-Demand Skills 2026",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
@@ -259,7 +259,7 @@
         "id": "upwork-nonai",
         "title": "Upwork, and it is NOT only AI",
         "accent": "indigo",
-        "note": "This is the part the AI-panic posts never mention. Plenty of the fastest-growing demand has nothing to do with models at all, it's business capability a client can't prompt into existence.",
+        "note": "Not all of the growth is AI. Plenty of the fastest-growing demand has nothing to do with models at all, it's business capability a client can't prompt into existence.",
         "source": {
           "label": "Upwork, In-Demand Skills 2026",
           "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
@@ -310,7 +310,7 @@
     "premium": {
       "stat": "40%+",
       "label": "more per hour",
-      "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those doing non-AI work. This is the number every AI course in your feed is quoting at you. It is real.",
+      "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those doing non-AI work. This is the most-quoted number in the entire AI-skills conversation. It is real.",
       "source": {
         "label": "Upwork, 2025's most in-demand skills",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills"
@@ -349,7 +349,7 @@
     "title": "What this actually pays, and why you should distrust this section",
     "warning": {
       "title": "This is the weakest data on the page. We're showing you the weakness on purpose.",
-      "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology. All of them are commercially motivated to move the number, an agency that places workers wants the rate to look low to clients and high to you, and a course wants it high enough to justify the enrolment fee. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
+      "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology, and each has a commercial stake in where the number lands: a firm that places workers benefits when the rate looks low to clients, a firm that sells training benefits when it looks high. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
     },
     "tiersNote": "The convergent range across several vendor pages, useful for orienting yourself, useless for negotiating from:",
     "tiers": [
@@ -383,7 +383,7 @@
       "body": "Take one single role: bookkeeping. One vendor page says an entry-level Filipino bookkeeper earns $5–6/hr. Another says entry-level bookkeeping is $10–12/hr. Same role. Same country. Same year. A 2× disagreement, and neither page shows its working.",
       "a": { "label": "Vendor A · entry bookkeeping", "value": "$5–6 / hr" },
       "b": { "label": "Vendor B · entry bookkeeping", "value": "$10–12 / hr" },
-      "lesson": "At least one of them is wrong, and you cannot tell which. That is what an unmethodologied number looks like from the outside. Never take a rate from a single salary guide, triangulate across at least three, then go look at what actual live job posts in your niche are offering this week. Live posts are data. Guides are opinion with a chart on it."
+      "lesson": "At least one of them is wrong, and you cannot tell which. That is what a number with no methodology looks like from the outside. Never take a rate from a single salary guide, triangulate across at least three, then go look at what actual live job posts in your niche are offering this week. Live posts are data. Guides are opinion with a chart on it."
     },
     "sources": [
       {
@@ -406,13 +406,13 @@
         "id": "first-client",
         "claim": "\"You'll land your first client in 10–14 days.\"",
         "verdict": "No data exists",
-        "why": "Nobody measures this. Not the platforms, not the labour bodies, not the academics. The number is invented, every time, by whoever needs you to enrol this week."
+        "why": "Nobody measures this. Not the platforms, not the labour bodies, not the academics. Every version of that number was invented."
       },
       {
         "id": "quit-rate",
         "claim": "\"X% of freelancers quit in the first year.\"",
         "verdict": "No data exists",
-        "why": "There is no churn statistic for Filipino online professionals. Platforms know their own churn and do not publish it. Any percentage you see was made up to justify whatever came after it."
+        "why": "There is no churn statistic for Filipino online professionals. Platforms know their own churn and do not publish it. Any percentage you see has no source behind it."
       },
       {
         "id": "success-rate",
@@ -424,7 +424,7 @@
         "id": "85k",
         "claim": "\"The median Upwork freelancer earns $85,000 a year.\"",
         "verdict": "SEO-blog origin",
-        "why": "This one gets copied between blog posts endlessly. Chase the citation and it dead-ends, the trail goes blog → blog → blog, and never arrives at a primary source. A number with no origin is not a small problem with a number. It IS the problem."
+        "why": "This one gets copied between blog posts endlessly. Chase the citation and it dead-ends: blog → blog → blog, never arriving at a primary source. A number with no origin is not evidence with a flaw. It is not evidence at all."
       },
       {
         "id": "payoneer",
@@ -474,7 +474,7 @@
             "title": "Working Without Borders",
             "org": "World Bank",
             "url": "https://www.worldbank.org/en/news/press-release/2023/09/07/demand-for-online-gig-work-rapidly-rising-in-developing-countries",
-            "why": "The macro view of online gig work in developing countries, the wave you are standing in, described by people with no course to sell you."
+            "why": "The macro view of online gig work in developing countries, the wave you are standing in, described by researchers with no stake in what you decide."
           }
         ]
       },

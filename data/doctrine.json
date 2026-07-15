@@ -8,7 +8,7 @@
     {
       "n": 1,
       "title": "Never ask for the file. Ask for the method.",
-      "desc": "A file is a fish. A method is a net. Anyone who only hands you files keeps you dependent on them, usually so they can sell you the next one.",
+      "desc": "A file is a fish. A method is a net. A file keeps you dependent on whoever hands it out. A method ends the dependence.",
       "icon": "key-round"
     },
     {
@@ -116,7 +116,7 @@
         { "title": "Show what you're trying to do", "desc": "State the actual goal, not the symptom. 'I'm trying to reconcile March' beats 'it's not working'." },
         { "title": "Show what you already tried", "desc": "This proves you respect the other person's time, and it eliminates the first five things they'd suggest." },
         { "title": "Show what happened, exactly", "desc": "The literal error, the literal reply, the literal number. Not your paraphrase of it." },
-        { "title": "Ask for the method, not the file", "desc": "'Can you send me the file' makes you a beggar. 'How would you approach this' makes you a colleague, and teaches you something you keep." }
+        { "title": "Ask for the method, not the file", "desc": "'Can you send me the file' gets you a file at best. 'How would you approach this' makes you a colleague, and teaches you something you keep." }
       ],
       "drill": "Rewrite the last question you asked anyone into this four-part form. Notice how often you can now answer it yourself."
     },

@@ -9,7 +9,7 @@
 
   "warning": {
     "title": "This is the softest data on the whole site. We are showing you the softness on purpose.",
-    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every 2027 salary guide out there is published by someone who makes money from the number: a staffing agency wants it to look low to clients and high to you, and a course wants it high enough to justify the fee. So treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
+    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every 2027 salary guide out there is published by someone with a stake in where the number lands, so the figures bend toward whoever publishes them. Treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
   },
 
   "inDemand": {
@@ -56,7 +56,7 @@
   "rates": {
     "kicker": "The ranges · vendor-grade, directional only",
     "title": "The pay ladder, and why you should climb it fast.",
-    "monthlyNote": "The rough monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
+    "monthlyNote": "The monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
     "tiers": [
       { "level": "Entry", "accent": "coral", "monthly": "≈ $300–500 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here." },
       { "level": "Mid", "accent": "amber", "monthly": "≈ $600–900 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
@@ -122,7 +122,7 @@
         "cons": [
           "Your income is capped by the hours in your day.",
           "You are paid for time, not results, so speed is not rewarded.",
-          "Time-tracking can feel like someone watching your shoulder."
+          "Time-tracking can feel like someone watching over your shoulder."
         ]
       },
       {

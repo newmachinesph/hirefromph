@@ -1,8 +1,8 @@
 {
   "kicker": "The deep LEARN method",
   "headline": "You were taught what to memorise. Nobody taught you how to learn.",
-  "intro": "Every other page here teaches you a skill. This one teaches you how your brain actually keeps anything at all, the real difference between techniques that build durable knowledge and techniques that just make you feel productive. Most people never learn that difference. Confusing the two is the single biggest reason smart, hardworking people study for hours and still forget everything by the exam, the interview, or the client call.",
-  "creed": "You were never taught how to learn, only what to memorise. The techniques that feel most productive are usually the least effective. Here is what the evidence actually supports.",
+  "intro": "Every other page here teaches you a skill. This one teaches you how your brain actually keeps anything at all, the real difference between techniques that build durable knowledge and techniques that just make you feel productive. Confusing the two is the single biggest reason smart, hardworking people study for hours and still forget everything by the exam, the interview, or the client call.",
+  "creed": "The techniques that feel most productive are usually the least effective. Here is what the evidence actually supports.",
   "myth": {
     "claim": "\"I'm a visual learner\" (or auditory, or kinesthetic), and I learn best when material is taught to match my personal style.",
     "whyPeopleBelieveIt": "It's intuitive, everyone genuinely prefers certain formats over others, and \"I prefer this\" quietly turns into \"this is what works for me.\" It's also everywhere: online quizzes, some teacher training, and an entire industry of learning-style assessments, tailored courses, and certifications built on top of it. Popular, confident, and personal, the exact combination that makes a claim feel true without ever being checked.",
@@ -112,7 +112,7 @@
       "id": "highlight",
       "habit": "Highlighting or underlining while you read",
       "whyItFeelsGood": "It feels active, your hand is moving, marking what matters, so it feels like work.",
-      "whyItFails": "Highlighting is a decision about what's important, not an act of learning it. Studies consistently find it adds nothing to retention beyond plain reading, sometimes it's worse, because the coloured page creates an illusion of engagement you didn't actually do.",
+      "whyItFails": "Highlighting is a decision about what's important, not an act of learning it. Studies consistently find it adds nothing to retention beyond plain reading, sometimes it's worse, because the coloured page creates an illusion of engagement that never happened.",
       "doInstead": "Turn whatever you'd highlight into a question instead, then answer that question from memory later."
     },
     {

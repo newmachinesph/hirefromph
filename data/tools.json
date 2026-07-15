@@ -1,5 +1,5 @@
 {
-  "intro": "Learn the essential tools fast with step-by-step tutorials, everything you need to work smarter, not harder.",
+  "intro": "Learn the essential tools fast with step-by-step tutorials, the daily toolkit clients expect you to know.",
   "categories": [
     {
       "id": "workspace",
@@ -104,7 +104,7 @@
     }
   ],
   "codes": {
-    "intro": "Codes for Efficiency, small snippets and shortcuts that save hours. Copy, paste, done.",
+    "intro": "Codes for Efficiency, small snippets and shortcuts that save hours. Read how each one works before you run it.",
     "items": [
       { "title": "Sheets: auto-timestamp on edit", "lang": "Apps Script", "code": "function onEdit(e){\n  const s = e.source.getActiveSheet();\n  const r = e.range;\n  s.getRange(r.getRow(), 10).setValue(new Date());\n}" },
       { "title": "Sheets: clean & trim text", "lang": "Formula", "code": "=TRIM(CLEAN(PROPER(A2)))" },

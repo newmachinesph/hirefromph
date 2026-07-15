@@ -1,12 +1,12 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 20 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Nobody asks whether you were paid for it. They ask whether you can do it. Now you can prove it.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 21 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Nobody asks whether you were paid for it. They ask whether you can do it. Now you can prove it.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it free if you don't already have it." },
-    { "title": "Resources", "desc": "Real, specific, free resources, official docs, free courses, free tool tiers. No paid tools required for any task on this page." },
-    { "title": "The Task", "desc": "A realistic scenario, a concrete deliverable, real constraints, and numbered steps, the same shape of brief a real client would hand you." },
+    { "title": "Resources", "desc": "Real, specific, free resources: official docs, free courses, free tool tiers. No paid tools required for any task on this page." },
+    { "title": "The Task", "desc": "A realistic scenario, a concrete deliverable, real constraints, and numbered steps, the same shape of brief a client would hand you." },
     { "title": "Prove It", "desc": "What the finished artifact proves you can do, and exactly how to present it so it reads as evidence, not a school assignment." }
   ],
   "difficulties": ["Starter", "Intermediate", "Advanced"],
@@ -21,7 +21,7 @@
       "time": "2–3 hours",
       "proves": "You can build an inbox system that turns email chaos into a same-day response standard, the #1 thing founders hire executive ops for.",
       "prerequisites": [
-        { "skill": "Gmail labels, filters, and search operators", "why": "The whole triage system runs on labels + filters, if you can't nest labels or write a filter rule, you can't build the system.", "ifYouDont": "Google's own Gmail Filters & Labels help center (free), 20 minutes, hands-on." },
+        { "skill": "Gmail labels, filters, and search operators", "why": "The whole triage system runs on labels + filters, if you can't nest labels or write a filter rule, you can't build it.", "ifYouDont": "Google's own Gmail Filters & Labels help center (free), 20 minutes, hands-on." },
         { "skill": "A basic inbox triage decision framework (e.g. the 4 D's: Do, Delegate, Defer, Delete)", "why": "You need a decision rule for every email, not just folders to dump them in.", "ifYouDont": "DevUp's /method, the UNSTICK and FIND methods teach the same decision-first thinking." }
       ],
       "resources": [
@@ -274,7 +274,7 @@
         { "name": "Canva Design Essentials", "type": "Free course", "what": "You'll need this to actually design the 3 finished posts for the deliverable.", "free": true, "url": "https://www.canva.com/designschool/" }
       ],
       "brief": {
-        "scenario": "Pick one real, public local or regional brand (a café, gym, boutique, or small e-commerce shop) with an active but under-performing social account, you're auditing it cold, the way a prospective client would let you.",
+        "scenario": "Pick one real, public local or regional brand (a café, gym, boutique, or small e-commerce shop) with an active but under-performing social account, you're auditing it cold, from public posts alone, the same way you would for a prospective client.",
         "deliverable": "A written audit (posting cadence, format mix, engagement-rate calculation, tone consistency, bio/link-in-bio effectiveness) plus a 30-day content calendar and 3 fully finished posts (real graphics in Canva, real captions) that fix the biggest gap you found.",
         "constraints": [
           "Audit must cover their last 15+ posts minimum, not a cherry-picked sample.",
@@ -899,7 +899,7 @@
       "icon": "image",
       "difficulty": "Starter",
       "time": "2 hours",
-      "proves": "You can design thumbnails that are built to be tested, not just liked, the specific, high-value skill YouTube-focused creative freelancers get hired for.",
+      "proves": "You can design thumbnails that are built to be tested, not just liked, the high-value skill YouTube-focused creative freelancers get hired for.",
       "prerequisites": [
         { "skill": "Thumbnail design principles (contrast, facial expression, minimal text, readable at small size)", "why": "A beautiful thumbnail that's unreadable at 120px wide on mobile doesn't get clicks.", "ifYouDont": "Any free 'YouTube thumbnail best practices' video from a creator-economy channel, or Canva's thumbnail template gallery for pattern study." },
         { "skill": "Canva (or Figma) layer/text/image compositing basics", "why": "You're producing 3 real, finished image files, not a mood board.", "ifYouDont": "Canva Design Essentials (free)." }
@@ -1015,7 +1015,7 @@
         }
       ],
       "brief": {
-        "scenario": "Choose one real organization near you and offer one clearly-scoped piece of work, free. Choose where your hours do the most good — a small org with no budget gains more from ten of your hours than a large one ever would, and effective help is targeted: one real problem, solved completely, handed over so they can keep it running without you.",
+        "scenario": "Choose one real organization near you and offer one clearly-scoped piece of work, free. Put your hours where they do the most good — a small org with no budget gains more from ten of your hours than a large one ever would, and effective help is targeted: one real problem, solved completely, handed over so they can keep it running without you.",
         "deliverable": "The finished work itself, plus a one-page handover the org can use after you leave: what you built, how to maintain it, and where everything lives.",
         "constraints": [
           "Scope it in writing before you start — one deliverable, one deadline, agreed with a named person. Pro-bono without scope becomes an unpaid job.",

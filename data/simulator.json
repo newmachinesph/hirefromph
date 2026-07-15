@@ -1,5 +1,5 @@
 {
-  "intro": "Almost everyone believes the same thing about a remote career: grind three years, and three years of experience will quietly turn into a higher rate. It will not. Time is not the variable. This page lets you watch that be true, and lets you watch what happens to the person who chose differently.",
+  "intro": "Almost everyone believes the same thing about a remote career: grind three years, and three years of experience will quietly turn into a higher rate. It will not. Time is not the variable. This page lets you watch that play out, side by side with the person who chose differently.",
   "hero": {
     "kicker": "Career simulator · 36 months · a model, not a promise",
     "titleLine1": "Three years of experience",
@@ -163,7 +163,7 @@
       },
       "ai-user": {
         "label": "AI, you use ChatGPT",
-        "note": "Being faster at typing is not a differentiator. Everyone has the same free account. We give it a rounding error and nothing more, because that is what it is worth."
+        "note": "Being faster at typing is not a differentiator. Everyone has the same free account. We give it a rounding error, because that is what it is worth."
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",
@@ -276,7 +276,7 @@
   },
   "outro": {
     "title": "The numbers were never the hard part.",
-    "body": "The hard part is that the highest line on this chart belongs to someone who spent 30 months being worse than they wanted to be, at one specific thing, on purpose. There is no version of this where the line bends and the craft doesn't. Go and get the real market data, then go and pick the thing.",
+    "body": "The hard part is that the highest line on this chart belongs to someone who spent 30 months being worse than they wanted to be, at one specific thing, on purpose. There is no version of this where the line bends and the craft doesn't. Get the real market data, then pick the thing.",
     "realityLabel": "See the sourced market data",
     "nichesLabel": "Pick the craft"
   }

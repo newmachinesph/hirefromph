@@ -18,7 +18,7 @@
   "threeCauses": {
     "kicker": "Be precise about what's actually happening",
     "title": "Three different things make you read as junior. Only two are yours to fix.",
-    "lead": "Most advice lumps these together and quietly blames you for all three. That's dishonest, and it makes you work on the wrong thing.",
+    "lead": "Most advice lumps these together and quietly blames you for all three, which points you at the wrong work.",
     "causes": [
       {
         "id": "intelligibility",
@@ -82,7 +82,7 @@
       {
         "id": "deference",
         "label": "Deference markers",
-        "why": "'Po', 'sir', 'ma'am', 'kindly' are courteous and correct in Philippine register. To a US or AU client they don't read as respectful, they read as servile, and servile people don't get asked for their opinion.",
+        "why": "'Po', 'sir', 'ma'am', 'kindly' are courteous and correct in Philippine register. To a US or AU client they read less as respect and more as subordination, and a subordinate is not who gets asked for an opinion.",
         "accent": "amber"
       },
       {
@@ -220,7 +220,7 @@
         "impact": "Lowest, do this last",
         "accent": "indigo",
         "title": "The 'th' sound",
-        "what": "Genuinely the lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, they are selling you something.",
+        "what": "Genuinely the lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, the evidence is not on their side.",
         "drill": "Optional. Tongue lightly between the teeth: think, three, this, that. Two minutes, then go back to rhythm work."
       }
     ],
@@ -284,7 +284,7 @@
         "name": "Toastmasters (District 75, Philippines)",
         "url": "https://d75.toastmastersdistricts.org/",
         "what": "Genuinely excellent for speaking under pressure. Several PH clubs meet online.",
-        "use": "Worth it, but budget for it. It is routinely listed as 'free' by blogs that never checked.",
+        "use": "Worth it, but budget for it. It is routinely listed as 'free'; it is not.",
         "cost": "NOT FREE, about $60 USD per 6 months, plus a $25 joining fee, plus club dues",
         "tone": "coral"
       }
