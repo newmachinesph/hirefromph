@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
@@ -9,6 +9,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { FollowModal } from "@/components/follow-modal";
 import { MotionProvider } from "@/components/motion-provider";
+import { SWRegister } from "@/components/sw-register";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -49,6 +50,10 @@ export const metadata: Metadata = {
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
   robots: { index: true, follow: true },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0d9488",
 };
 
 const jsonLd = {
@@ -98,6 +103,7 @@ export default function RootLayout({
             <FollowModal />
           </MotionProvider>
         </PathProvider>
+        <SWRegister />
       </body>
       <GoogleAnalytics gaId="G-TYFCQVVHK6" />
     </html>

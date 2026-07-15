@@ -6,6 +6,7 @@ import roadmap from "@/data/roadmap.json";
 import tracks from "@/data/tracks.json";
 import doctrine from "@/data/doctrine.json";
 import { Reveal } from "@/components/reveal";
+import { JourneyProgress } from "@/components/journey-progress";
 import { PathChooser } from "@/components/path-chooser";
 import { Icon } from "@/components/icon";
 import {
@@ -215,6 +216,12 @@ export default function Home() {
               align="center"
               className="mx-auto"
             />
+          </Reveal>
+
+          <Reveal i={1}>
+            <div className="mx-auto mt-12 max-w-3xl">
+              <JourneyProgress />
+            </div>
           </Reveal>
 
           <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import {
   ArrowLeft,
@@ -11,8 +11,11 @@ import {
 import labsData from "@/data/labs.json";
 import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
+import { DownloadButton } from "@/components/download-button";
 import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
+
+const LABS_KEY = "devup.labs.v1";
 
 type Lab = (typeof labsData)["labs"][number];
 
@@ -57,6 +60,37 @@ export function BuildLabs() {
   const [activeTab, setActiveTab] = useState<TabId>("why");
   const [answers, setAnswers] = useState<Record<string, Record<string, string>>>({});
   const [checked, setChecked] = useState<Record<string, Record<number, boolean>>>({});
+  const [hydrated, setHydrated] = useState(false);
+
+  // Your words are the artifact — keep the draft across reloads, same as the
+  // rest of the app persists progress. Load once, then save on change.
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(LABS_KEY);
+      if (raw) {
+        const parsed = JSON.parse(raw) as {
+          answers?: typeof answers;
+          checked?: typeof checked;
+        };
+        /* eslint-disable react-hooks/set-state-in-effect */
+        if (parsed.answers) setAnswers(parsed.answers);
+        if (parsed.checked) setChecked(parsed.checked);
+        /* eslint-enable react-hooks/set-state-in-effect */
+      }
+    } catch {
+      /* ignore corrupt storage */
+    }
+    setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    try {
+      localStorage.setItem(LABS_KEY, JSON.stringify({ answers, checked }));
+    } catch {
+      /* storage full / disabled */
+    }
+  }, [answers, checked, hydrated]);
 
   const filtered =
     activeCategory === "all"
@@ -469,7 +503,10 @@ function WorkshopTab({
                 </span>
                 <p className="text-xs font-medium text-ink-faint">Live preview, your words</p>
               </div>
-              <CopyButton value={document} label="Copy what I wrote" />
+              <div className="flex items-center gap-2">
+                <CopyButton value={document} label="Copy what I wrote" />
+                <DownloadButton value={document} filename={`${lab.id}.md`} />
+              </div>
             </div>
             <div className="max-h-[520px] space-y-4 overflow-y-auto px-5 py-5">
               {lab.builder.steps.map((step) => {
@@ -582,7 +619,10 @@ function BuildRealTab({
 
       <div className="mt-5 flex flex-wrap items-center gap-3">
         {hasDraft ? (
-          <CopyButton value={document} label="Copy my draft" />
+          <>
+            <CopyButton value={document} label="Copy my draft" />
+            <DownloadButton value={document} filename={`${lab.id}.md`} />
+          </>
         ) : (
           <button
             type="button"
