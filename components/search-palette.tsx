@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import site from "@/data/site.json";
@@ -74,8 +75,9 @@ export function SearchPalette() {
         <Search size={17} />
       </button>
 
-      {open && (
-        <div className="fixed inset-0 z-[110] flex items-start justify-center p-4 pt-[12vh]">
+      {open &&
+        createPortal(
+          <div className="fixed inset-0 z-[110] flex items-start justify-center p-4 pt-[12vh]">
           <button
             type="button"
             aria-label="Close search"
@@ -162,8 +164,9 @@ export function SearchPalette() {
               )}
             </ul>
           </div>
-        </div>
-      )}
+        </div>,
+          document.body,
+        )}
     </>
   );
 }
