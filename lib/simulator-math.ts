@@ -57,7 +57,7 @@ export const NON_PAYMENT_RISK = 0.31;
 
 export const WEEKS_PER_MONTH = 4.33;
 export const MONTHS = 36;
-export const DEFAULT_FX = 58;
+export const DEFAULT_FX = 60;
 
 /** Clamped smoothstep, legible easing, not a physics engine. */
 export function ease(t: number): number {
