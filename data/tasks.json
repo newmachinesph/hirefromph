@@ -607,7 +607,7 @@
       "time": "2 hours",
       "proves": "You can turn scattered showing feedback into a clear signal on whether a listing needs a price cut, a staging fix, or just more time, the exact judgment agents pay an online professional to have.",
       "prerequisites": [
-        { "skill": "Real estate showing/feedback basics (what agents ask buyers' agents after a showing)", "why": "You need to know what data is worth tracking before you can build the tracker.", "ifYouDont": "Any no-cost 'listing feedback questions' guide from a real estate CRM's blog (Follow Up Boss, KvCore)." },
+        { "skill": "Real estate showing/feedback basics (what agents ask buyers' agents after a showing)", "why": "You need to know what data is worth tracking before you can build the tracker.", "ifYouDont": "Any no-cost 'listing feedback questions' guide from a real estate CRM's blog (Follow Up Boss, BoldTrail)." },
         { "skill": "Spreadsheet tracker schema design (unique ID, status dropdown, date trigger)", "why": "This task is a direct application of the tracker-building method to a real estate use case.", "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab." }
       ],
       "resources": [
@@ -656,7 +656,7 @@
       "time": "3 hours",
       "proves": "You can turn cold or slow-moving leads into a structured nurture sequence, the system that separates agents who convert leads from agents who lose them to silence.",
       "prerequisites": [
-        { "skill": "Real estate lead lifecycle basics (new lead → nurture → showing-ready → under contract)", "why": "The follow-up cadence has to match where a lead is in the funnel, not be one-size-fits-all.", "ifYouDont": "Follow Up Boss's no-cost lead-nurture guide or KvCore's onboarding materials." },
+        { "skill": "Real estate lead lifecycle basics (new lead → nurture → showing-ready → under contract)", "why": "The follow-up cadence has to match where a lead is in the funnel, not be one-size-fits-all.", "ifYouDont": "Follow Up Boss's no-cost lead-nurture guide or BoldTrail's onboarding materials." },
         { "skill": "Writing warm, non-pushy follow-up copy", "why": "A follow-up sequence that reads as desperate or spammy gets ignored or reported, real estate specifically fights a 'salesy' reputation.", "ifYouDont": "DevUp's application-message lab teaches the same specific-not-generic principle." }
       ],
       "resources": [

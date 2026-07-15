@@ -199,7 +199,7 @@
           "tier": "Level up",
           "goal": "You can market a listing and run agent follow-up like a trained assistant.",
           "tools": [
-            { "name": "Canva", "free": "1.6M+ templates, 5GB storage", "what": "Design listing flyers and open-house graphics", "url": "https://www.canva.com" },
+            { "name": "Canva", "free": "Free templates, 5GB storage", "what": "Design listing flyers and open-house graphics", "url": "https://www.canva.com" },
             { "name": "HubSpot CRM", "free": "1,000 contacts, 2 users", "what": "Track leads and schedule follow-up tasks", "url": "https://www.hubspot.com/products/crm" },
             { "name": "DocuSign", "free": "Free unlimited signing; about 3 documents to send", "what": "Send disclosures and agreements for signature", "url": "https://www.docusign.com" }
           ],
@@ -256,7 +256,7 @@
           "tier": "Start",
           "goal": "You can produce clean, on-brand graphics and thumbnails a client would post.",
           "tools": [
-            { "name": "Canva", "free": "1.6M+ templates, 5GB, one brand kit", "what": "Design posts, carousels, and thumbnails fast", "url": "https://www.canva.com" },
+            { "name": "Canva", "free": "Free templates, 5GB, one brand kit", "what": "Design posts, carousels, and thumbnails fast", "url": "https://www.canva.com" },
             { "name": "Adobe Express", "free": "100k+ templates, 25 AI credits/mo", "what": "Quick edits and background removal", "url": "https://www.adobe.com/express/" }
           ],
           "piece": "A six-post social set plus two YouTube thumbnails for a mock coach brand."
@@ -298,7 +298,7 @@
           "goal": "You can run a branded live broadcast end to end so the host only has to talk.",
           "tools": [
             { "name": "OBS Studio", "free": "Free, open-source", "what": "Live production: scenes, overlays, and sources", "url": "https://obsproject.com" },
-            { "name": "StreamYard", "free": "Free; SD only, StreamYard watermark", "what": "Browser live studio with guests and branding", "url": "https://streamyard.com" }
+            { "name": "StreamYard", "free": "Free; 720p only, StreamYard watermark", "what": "Browser live studio with guests and branding", "url": "https://streamyard.com" }
           ],
           "piece": "A 15-minute mock live broadcast recorded in OBS with a custom overlay pack: a 'starting soon' screen, lower-thirds, and scene transitions."
         },
