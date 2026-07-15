@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Users } from "lucide-react";
 import site from "@/data/site.json";
 import { Logo, FacebookGlyph } from "@/components/logo";
+import { SocialLinks } from "@/components/social-links";
 
 export function SiteFooter() {
   return (
@@ -74,22 +75,13 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
           <p className="max-w-xl text-xs leading-relaxed text-paper-2/50">
             DevUp is an independent, anonymous, non-commercial project. No names,
-            no sales team, no agenda beyond leveling you up. Our only channel is
-            our Facebook page, linked here, and everything on this site is free,
-            permanently.
+            no sales team, no agenda beyond leveling you up. Everything on this
+            site is free, permanently.
           </p>
-          <a
-            href={site.social.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-paper-2/70 transition-colors hover:text-coral"
-          >
-            <FacebookGlyph size={15} />
-            facebook.com/devupph
-          </a>
+          <SocialLinks />
         </div>
 
         <p className="mt-8 text-xs text-paper-2/60">
