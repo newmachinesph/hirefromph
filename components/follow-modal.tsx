@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { X, Users, Sparkles, Megaphone } from "lucide-react";
 import site from "@/data/site.json";
@@ -10,6 +10,7 @@ const STORAGE_KEY = "devup:fb-prompt";
 
 export function FollowModal() {
   const [open, setOpen] = useState(false);
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let seen: string | null = null;
@@ -44,6 +45,40 @@ export function FollowModal() {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
+  // Move focus into the dialog, trap Tab inside it, restore focus on close.
+  useEffect(() => {
+    if (!open) return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const getFocusable = () =>
+      Array.from(
+        dialog.querySelectorAll<HTMLElement>(
+          'a[href],button:not([disabled]),textarea,input,select,[tabindex]:not([tabindex="-1"])',
+        ),
+      ).filter((el) => el.offsetParent !== null);
+    (getFocusable()[0] ?? dialog).focus();
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const items = getFocusable();
+      if (items.length === 0) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    dialog.addEventListener("keydown", onKey);
+    return () => {
+      dialog.removeEventListener("keydown", onKey);
+      previouslyFocused?.focus?.();
+    };
+  }, [open]);
+
   return (
     <AnimatePresence>
       {open && (
@@ -62,6 +97,8 @@ export function FollowModal() {
           />
 
           <motion.div
+            ref={dialogRef}
+            tabIndex={-1}
             role="dialog"
             aria-modal="true"
             aria-labelledby="fb-modal-title"

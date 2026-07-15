@@ -15,7 +15,7 @@ export const metadata = pageMeta({
 
 const accentText: Record<string, string> = {
   coral: "text-coral",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };

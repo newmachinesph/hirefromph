@@ -18,7 +18,7 @@ export const metadata: Metadata = pageMeta({
 
 const accentText: Record<string, string> = {
   coral: "text-coral",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -30,9 +30,9 @@ const accentBar: Record<string, string> = {
 };
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep border-coral/20",
-  amber: "bg-[#fdf3d9] text-[#9a6b00] border-amber/25",
+  amber: "bg-amber-tint text-amber-text border-amber/25",
   emerald: "bg-emerald-tint text-emerald border-emerald/20",
-  indigo: "bg-[#e9e9fd] text-indigo border-indigo/20",
+  indigo: "bg-indigo-tint text-indigo border-indigo/20",
 };
 
 /** Turn *word* markers from JSON copy into an emphasized inline span. */

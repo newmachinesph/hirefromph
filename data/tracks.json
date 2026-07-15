@@ -145,7 +145,7 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 2,
-      "tools": ["KvCore", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
+      "tools": ["BoldTrail (formerly kvCORE)", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
       "skills": ["Listing management", "CRM & lead follow-up", "Transaction coordination", "Showing feedback", "Marketing collateral"],
       "learn": [
         { "type": "Docs", "title": "Follow Up Boss Playbooks", "provider": "Follow Up Boss (open)" },

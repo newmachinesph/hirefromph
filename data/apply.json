@@ -31,9 +31,8 @@
     { "name": "Concentrix", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "Global BPO hiring home-based support and success roles.", "tags": ["Support", "WFH"], "url": "https://www.concentrix.com" },
     { "name": "Sutherland", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "BPO with remote roles across support, tech, and back-office.", "tags": ["Back-office", "WFH"], "url": "https://www.sutherlandglobal.com" },
     { "name": "Toptal", "category": "niche", "type": "Elite network", "region": "Global", "blurb": "Top-3% network for developers, designers, and finance experts. High bar, high pay.", "tags": ["Elite", "High-pay"], "url": "https://www.toptal.com" },
-    { "name": "Belay Bookkeeping", "category": "niche", "type": "Specialist", "region": "US clients", "blurb": "Bookkeeping-specific placements for QuickBooks/Xero pros.", "tags": ["Bookkeeping", "US"], "url": "https://belaysolutions.com" },
     { "name": "Paired", "category": "niche", "type": "Matching", "region": "Global", "blurb": "Matches remote talent (marketing, ops, creative) with global startups.", "tags": ["Startups", "Matching"], "url": "https://paired.so" },
-    { "name": "Support Shepherd / SafariDesk", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "Recruiters sourcing offshore talent for US SMBs.", "tags": ["US SMB", "Recruiter"], "url": "https://www.somewhere.com" },
+    { "name": "Support Shepherd / Somewhere", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "Recruiters sourcing offshore talent for US SMBs.", "tags": ["US SMB", "Recruiter"], "url": "https://www.somewhere.com" },
     { "name": "LinkedIn", "category": "global-boards", "type": "Network", "region": "Global", "blurb": "Not just a resume, a lead engine. Optimize your profile and reach out directly.", "tags": ["Networking", "Direct"], "url": "https://www.linkedin.com" }
   ]
 }

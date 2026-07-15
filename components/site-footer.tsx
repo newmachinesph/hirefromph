@@ -53,23 +53,25 @@ export function SiteFooter() {
             </p>
           </div>
 
-          {site.navGroups.map((g) => (
-            <div key={g.title}>
-              <h3 className="kicker text-paper-2/50">{g.title}</h3>
-              <ul className="mt-4 space-y-2.5">
-                {g.links.map((l) => (
-                  <li key={l.href}>
-                    <Link
-                      href={l.href}
-                      className="text-sm text-paper-2/80 transition-colors hover:text-coral"
-                    >
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          <nav aria-label="Footer" className="contents">
+            {site.navGroups.map((g) => (
+              <div key={g.title}>
+                <h3 className="kicker text-paper-2/50">{g.title}</h3>
+                <ul className="mt-4 space-y-2.5">
+                  {g.links.map((l) => (
+                    <li key={l.href}>
+                      <Link
+                        href={l.href}
+                        className="text-sm text-paper-2/80 transition-colors hover:text-coral"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </nav>
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
@@ -90,7 +92,7 @@ export function SiteFooter() {
           </a>
         </div>
 
-        <p className="mt-8 text-xs text-paper-2/40">
+        <p className="mt-8 text-xs text-paper-2/60">
           © 2026 {site.brand}. Built for Filipino online professionals. Pay
           figures and market data are cited to their sources. They are estimates,
           not promises.

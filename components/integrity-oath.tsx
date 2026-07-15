@@ -156,14 +156,14 @@ export function IntegrityOath() {
       </div>
 
       {/* ---------------------------------------------------- SELF-CRITIQUE */}
-      <div className="mt-8 rounded-2xl border border-amber/30 bg-[#fdf3d9]/50 p-5">
-        <p className="kicker flex items-center gap-1.5 text-[#9a6b00]">
+      <div className="mt-8 rounded-2xl border border-amber/30 bg-amber-tint/50 p-5">
+        <p className="kicker flex items-center gap-1.5 text-amber-text">
           <AlertTriangle size={13} /> Step 3 · Judge your own draft
         </p>
         <ul className="mt-3 flex flex-col gap-2">
           {oath.selfCritique.map((q) => (
             <li key={q} className="flex gap-2 text-sm leading-relaxed text-ink-soft">
-              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-[#9a6b00]" />
+              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-amber-text" />
               {q}
             </li>
           ))}

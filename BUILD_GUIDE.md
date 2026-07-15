@@ -72,7 +72,7 @@ Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotg
   ```
 - Cards: `rounded-2xl border border-line bg-paper-2 p-6`, hover `hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300`.
 - accent maps (reuse):
-  - text: coral→`text-coral`, emerald→`text-emerald`, amber→`text-[#9a6b00]`, indigo→`text-indigo`
+  - text: coral→`text-coral`, emerald→`text-emerald`, amber→`text-amber-text`, indigo→`text-indigo`
   - bar/bg: coral→`bg-coral`, emerald→`bg-emerald`, amber→`bg-amber`, indigo→`bg-indigo`
 - Accessibility: semantic landmarks, `alt`/`aria-label`, keyboard-usable controls, focus-visible is styled globally.
 - Reference implementation for tone & polish: `app/page.tsx`.

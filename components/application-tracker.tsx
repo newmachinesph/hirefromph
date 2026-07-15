@@ -299,10 +299,10 @@ export function ApplicationTracker() {
         </dl>
 
         {showDiagnostic && (
-          <div className="mt-4 flex items-start gap-3 rounded-2xl border border-amber/30 bg-[#fdf3d9] px-5 py-4">
+          <div className="mt-4 flex items-start gap-3 rounded-2xl border border-amber/30 bg-amber-tint px-5 py-4">
             <TrendingDown
               size={18}
-              className="mt-0.5 shrink-0 text-[#9a6b00]"
+              className="mt-0.5 shrink-0 text-amber-text"
               aria-hidden
             />
             <p className="text-sm leading-relaxed text-[#6b4d00]">

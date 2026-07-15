@@ -189,7 +189,7 @@
   ],
 
   "builder": {
-    "intro": "Fill in what you actually know. Skip what you don't have yet, the meter below will tell you exactly what that gap costs you.",
+    "intro": "This quick builder covers the 6 core parts; Examples and Success criteria from the full anatomy above aren't included here. Fill in what you actually know. Skip what you don't have yet, the meter below will tell you exactly what that gap costs you.",
     "fields": [
       { "id": "role", "label": "Role", "hint": "Who should the AI be, and what's the stake if it gets this wrong?", "placeholder": "e.g. A meticulous editor who rejects any sentence that could be shorter." },
       { "id": "context", "label": "Context", "hint": "Paste your real material here, not a summary of it.", "placeholder": "e.g. Paste the actual job post, email, or draft you're working from." },

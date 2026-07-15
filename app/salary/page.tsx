@@ -15,7 +15,7 @@ export const metadata = pageMeta({
 
 const accentText: Record<string, string> = {
   coral: "text-coral",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -74,7 +74,7 @@ export default function SalaryPage() {
       {/* ------------------------------------------------------------ WARNING */}
       <section className="container-x pb-8">
         <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-amber/40 bg-[#fdf3d9] p-8 lg:p-10">
+          <div className="rounded-[var(--radius-lg)] border border-amber/40 bg-amber-tint p-8 lg:p-10">
             <Pill tone="amber">Warning label</Pill>
             <h2 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
               {warning.title}

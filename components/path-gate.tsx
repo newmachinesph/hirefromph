@@ -31,8 +31,10 @@ export function PathGate({ children, teaser, unlocks }: Props) {
 
   return (
     <div className="relative">
-      {/* Blurred preview of what's underneath */}
+      {/* Blurred preview of what's underneath — inert so its real links/buttons
+          stay out of the keyboard tab order while the content is gated. */}
       <div
+        inert
         aria-hidden
         className="pointer-events-none max-h-[320px] overflow-hidden opacity-40 blur-[3px] select-none [mask-image:linear-gradient(to_bottom,black,transparent)]"
       >

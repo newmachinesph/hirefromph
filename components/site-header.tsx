@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { Menu, X, Check, ChevronDown } from "lucide-react";
 import site from "@/data/site.json";
 // Slim id→name map so the always-loaded header doesn't bundle the full
@@ -16,22 +16,27 @@ export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [explore, setExplore] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
   const { hasPath, state, hydrated } = usePath();
   const exploreRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // Track scroll position without a setState-in-effect (React 19 idiom).
+  const scrolled = useSyncExternalStore(
+    (cb) => {
+      window.addEventListener("scroll", cb, { passive: true });
+      return () => window.removeEventListener("scroll", cb);
+    },
+    () => window.scrollY > 12,
+    () => false,
+  );
 
-  // Close both menus whenever the route changes.
+  // Reset the transient menu UI on navigation — covers link clicks and browser
+  // back/forward. A deliberate UI-reset-on-route-change effect, not derivable state.
+  /* eslint-disable react-hooks/set-state-in-effect */
   useEffect(() => {
     setExplore(false);
     setOpen(false);
   }, [pathname]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   // Close the Explore mega-menu on outside click / Escape.
   useEffect(() => {
@@ -68,7 +73,7 @@ export function SiteHeader() {
           <Logo markSize={32} />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
           {site.primaryNav.map((item) => {
             const active = pathname === item.href;
             return (
@@ -172,7 +177,7 @@ export function SiteHeader() {
 
       {open && (
         <div className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper-2 lg:hidden">
-          <nav className="container-x flex flex-col gap-6 py-6">
+          <nav aria-label="Mobile" className="container-x flex flex-col gap-6 py-6">
             {site.navGroups.map((group) => (
               <div key={group.title}>
                 <h2 className="kicker">{group.title}</h2>

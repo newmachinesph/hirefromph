@@ -15,7 +15,7 @@
   /* Ink, deep slate-teal near black */
   --ink: #0e1f1b;
   --ink-soft: #435551;
-  --ink-faint: #798a84;
+  --ink-faint: #5c6d67;
   --line: #dbe8e3;
   --line-strong: #c3d5ce;
 
@@ -30,7 +30,11 @@
 
   /* Cool support, info and warnings */
   --indigo: #2f6df0;
+  --indigo-tint: #e9e9fd;
   --amber: #e39400;
+  --amber-tint: #fdf3d9;
+  /* Darker amber for text on the tint — passes 4.5:1 where #9a6b00 did not */
+  --amber-text: #7a5400;
 
   /* Squared design: no rounded corners anywhere */
   --radius: 0px;
@@ -64,7 +68,10 @@
   --color-emerald: var(--emerald);
   --color-emerald-tint: var(--emerald-tint);
   --color-indigo: var(--indigo);
+  --color-indigo-tint: var(--indigo-tint);
   --color-amber: var(--amber);
+  --color-amber-tint: var(--amber-tint);
+  --color-amber-text: var(--amber-text);
 
   --radius-xl2: var(--radius-lg);
 
@@ -93,6 +100,14 @@
 *::before,
 *::after {
   border-radius: 0 !important;
+}
+
+/* Escape hatch: genuinely circular elements (score gauge, status dots, radio
+   marks) opt back into a full radius so they don't render as squares. */
+.is-circle,
+.is-circle::before,
+.is-circle::after {
+  border-radius: 9999px !important;
 }
 
 html {
@@ -127,6 +142,12 @@ body::before {
 ::selection {
   background: var(--coral);
   color: #fff;
+}
+
+/* Numeric labels/tables use tabular figures so columns line up (the mono
+   family currently resolves to the sans, so this is what actually aligns them). */
+.font-mono {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Display font helper — grotesk sans, tight tracking */
@@ -166,18 +187,6 @@ body::before {
   background-size: 100% 2px;
 }
 
-/* Reveal-on-scroll base (JS toggles data-shown) */
-[data-reveal] {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
-  will-change: opacity, transform;
-}
-[data-reveal][data-shown="true"] {
-  opacity: 1;
-  transform: none;
-}
-
 /* Marquee */
 @keyframes marquee {
   from { transform: translateX(0); }
@@ -215,6 +224,5 @@ body::before {
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
   html { scroll-behavior: auto; }
-  [data-reveal] { opacity: 1; transform: none; transition: none; }
   .marquee-track { animation: none; }
 }

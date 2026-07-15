@@ -67,15 +67,15 @@ const NAV_LABEL: Record<string, string> = Object.fromEntries(
 const accentSelected: Record<string, string> = {
   coral: "aria-pressed:border-coral aria-pressed:bg-coral-tint",
   emerald: "aria-pressed:border-emerald aria-pressed:bg-emerald-tint",
-  amber: "aria-pressed:border-amber aria-pressed:bg-[#fdf3d9]",
-  indigo: "aria-pressed:border-indigo aria-pressed:bg-[#e9e9fd]",
+  amber: "aria-pressed:border-amber aria-pressed:bg-amber-tint",
+  indigo: "aria-pressed:border-indigo aria-pressed:bg-indigo-tint",
   neutral: "aria-pressed:border-ink aria-pressed:bg-paper-3",
 };
 const iconTone: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 
 const stepVariants: Variants = {

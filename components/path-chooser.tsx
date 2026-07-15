@@ -17,15 +17,15 @@ type Props = {
 const accentRing: Record<string, string> = {
   coral: "hover:border-coral/60 data-[active=true]:border-coral data-[active=true]:bg-coral-tint",
   emerald: "hover:border-emerald/60 data-[active=true]:border-emerald data-[active=true]:bg-emerald-tint",
-  amber: "hover:border-amber/60 data-[active=true]:border-amber data-[active=true]:bg-[#fdf3d9]",
-  indigo: "hover:border-indigo/60 data-[active=true]:border-indigo data-[active=true]:bg-[#e9e9fd]",
+  amber: "hover:border-amber/60 data-[active=true]:border-amber data-[active=true]:bg-amber-tint",
+  indigo: "hover:border-indigo/60 data-[active=true]:border-indigo data-[active=true]:bg-indigo-tint",
 };
 
 const iconTone: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 
 export function PathChooser({ compact = false, redirectTo, onChosen }: Props) {

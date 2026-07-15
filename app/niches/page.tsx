@@ -13,8 +13,8 @@ import { pageMeta } from "@/lib/meta";
 const CRITERION_ICON_TONE = [
   "bg-coral-tint text-coral-deep",
   "bg-emerald-tint text-emerald",
-  "bg-[#fdf3d9] text-[#9a6b00]",
-  "bg-[#e9e9fd] text-indigo",
+  "bg-amber-tint text-amber-text",
+  "bg-indigo-tint text-indigo",
 ];
 
 export const metadata: Metadata = pageMeta({

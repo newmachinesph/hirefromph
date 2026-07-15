@@ -14,8 +14,8 @@ const DEFAULT_SCORE = 3;
 const ICON_TONE: Record<number, string> = {
   0: "bg-coral-tint text-coral-deep",
   1: "bg-emerald-tint text-emerald",
-  2: "bg-[#fdf3d9] text-[#9a6b00]",
-  3: "bg-[#e9e9fd] text-indigo",
+  2: "bg-amber-tint text-amber-text",
+  3: "bg-indigo-tint text-indigo",
 };
 
 const VERDICT_TIERS = [
@@ -179,12 +179,12 @@ export function NicheScorer() {
             <div
               role="img"
               aria-label={`${pct} percent score`}
-              className="grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
+              className="is-circle grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
               style={{
                 background: `conic-gradient(${tierRing[tier.tone]} ${pct}%, var(--line) ${pct}% 100%)`,
               }}
             >
-              <div className="grid h-[72px] w-[72px] place-items-center rounded-full bg-paper">
+              <div className="is-circle grid h-[72px] w-[72px] place-items-center rounded-full bg-paper">
                 <span className="font-display text-xl text-ink">{pct}%</span>
               </div>
             </div>
@@ -195,7 +195,7 @@ export function NicheScorer() {
               className={cn(
                 "mt-1 text-sm font-semibold",
                 tier.tone === "emerald" && "text-emerald",
-                tier.tone === "amber" && "text-[#9a6b00]",
+                tier.tone === "amber" && "text-amber-text",
                 tier.tone === "coral" && "text-coral-deep",
               )}
             >
