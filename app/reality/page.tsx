@@ -3,6 +3,7 @@ import reality from "@/data/reality.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -165,6 +166,11 @@ export default function RealityPage() {
           <p className="mt-8 max-w-2xl rounded-2xl border border-line bg-paper-2 p-5 text-sm leading-relaxed text-ink-soft">
             {reality.whyItMatters}
           </p>
+        </Reveal>
+        <Reveal i={5}>
+          <div className="mt-6">
+            <FreshnessNote date={reality.lastVerified} />
+          </div>
         </Reveal>
       </section>
 

@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { X, Users, Sparkles, Megaphone } from "lucide-react";
 import site from "@/data/site.json";
 import { LogoMark, FacebookGlyph } from "@/components/logo";
+import { track } from "@/lib/analytics";
 
 const STORAGE_KEY = "devup:fb-prompt";
 
@@ -23,7 +24,10 @@ export function FollowModal() {
 
     // Appear at a random moment so it never feels scripted.
     const delay = 9000 + Math.floor(Math.random() * 12000); // 9–21s
-    const timer = window.setTimeout(() => setOpen(true), delay);
+    const timer = window.setTimeout(() => {
+      setOpen(true);
+      track("follow_modal_shown");
+    }, delay);
     return () => window.clearTimeout(timer);
   }, []);
 
@@ -36,13 +40,20 @@ export function FollowModal() {
     setOpen(false);
   }
 
+  function dismiss(reason: string) {
+    track("follow_modal_dismiss", { reason });
+    remember();
+  }
+
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") remember();
+      if (e.key === "Escape") dismiss("esc");
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
+    // Only re-bind when open toggles; dismiss is recreated each render but stable in behavior.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   // Move focus into the dialog, trap Tab inside it, restore focus on close.
@@ -92,7 +103,7 @@ export function FollowModal() {
           <button
             type="button"
             aria-label="Close"
-            onClick={remember}
+            onClick={() => dismiss("backdrop")}
             className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
           />
 
@@ -114,7 +125,7 @@ export function FollowModal() {
             />
             <button
               type="button"
-              onClick={remember}
+              onClick={() => dismiss("close")}
               aria-label="No thanks"
               className="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-full border border-line text-ink-faint transition-colors hover:border-ink hover:text-ink"
             >
@@ -151,7 +162,10 @@ export function FollowModal() {
                   href={site.social.facebookGroup}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={remember}
+                  onClick={() => {
+                    track("follow_modal_join", { target: "group" });
+                    remember();
+                  }}
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5"
                 >
                   <Users size={16} />
@@ -162,7 +176,10 @@ export function FollowModal() {
                     href={site.social.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={remember}
+                    onClick={() => {
+                      track("follow_modal_follow", { target: "page" });
+                      remember();
+                    }}
                     className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-soft transition-colors hover:text-coral"
                   >
                     <FacebookGlyph size={15} />
@@ -170,7 +187,7 @@ export function FollowModal() {
                   </a>
                   <button
                     type="button"
-                    onClick={remember}
+                    onClick={() => dismiss("later")}
                     className="text-sm font-medium text-ink-faint transition-colors hover:text-ink"
                   >
                     Maybe later

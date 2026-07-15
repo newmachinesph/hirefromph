@@ -75,7 +75,8 @@
         { "label": "30-Day Plan", "href": "/plan" },
         { "label": "Niches", "href": "/niches" },
         { "label": "Languages", "href": "/languages" },
-        { "label": "Equipment", "href": "/equipment" }
+        { "label": "Equipment", "href": "/equipment" },
+        { "label": "Privacy", "href": "/privacy" }
       ]
     }
   ],

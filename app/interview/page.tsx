@@ -3,7 +3,20 @@ import interview from "@/data/interview.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, Kicker, SectionHeading } from "@/components/ui";
+import { JsonLd } from "@/components/json-ld";
 import { pageMeta } from "@/lib/meta";
+
+// FAQPage from the genuine question -> approach pairs in `questions.items`.
+// These are real Q&A: the interview question and how to answer it.
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: interview.questions.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.approach },
+  })),
+};
 
 export const metadata: Metadata = pageMeta({
   path: "/interview",
@@ -18,6 +31,7 @@ export default function InterviewPage() {
 
   return (
     <>
+      <JsonLd data={faqLd} />
       {/* --------------------------------------------------------------- HERO */}
       <section className="container-x pt-14 pb-10 lg:pt-20">
         <Reveal>

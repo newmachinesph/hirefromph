@@ -6,6 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -61,6 +62,11 @@ export default function ToolsPage() {
             <p className="font-display text-lg leading-snug text-balance">
               {learn.creed}
             </p>
+          </div>
+        </Reveal>
+        <Reveal i={4}>
+          <div className="mt-6">
+            <FreshnessNote date={tools.lastVerified} />
           </div>
         </Reveal>
       </section>
