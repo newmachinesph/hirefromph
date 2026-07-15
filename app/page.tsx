@@ -18,19 +18,19 @@ import {
 
 const toolkit = [
   { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers nobody selling a course will show you. Every claim sourced.", href: "/reality", icon: "scan-eye" },
-  { title: "AI-First", desc: "Every role runs on AI in 2027. Coding agents, open-source models, AI image and video, folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
+  { title: "AI-First", desc: "Every role runs on AI now. Coding agents, open-source models, AI image and video, folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
   { title: "Become Indispensable", desc: "How to be layoff-proof and the one clients fight to keep. The kinds of intelligence AI can't copy: creative, emotional, judgment, taste.", href: "/indispensable", icon: "gem" },
   { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic, and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
   { title: "English at Work", desc: "Your English is fine. The habits that make it read as junior are the fixable part, audit a real message you sent.", href: "/english", icon: "message-square" },
   { title: "Conduct & Integrity", desc: "What actually gets remote professionals fired, sued, and delisted, and an oath you write yourself.", href: "/conduct", icon: "shield-check" },
-  { title: "The Method", desc: "Six habits that make you self-sufficient: find, deconstruct, learn, vet, ask, unstick.", href: "/method", icon: "compass" },
+  { title: "The Method", desc: "Seven habits that make you self-sufficient: find, deconstruct, learn, vet, ask, unstick, give.", href: "/method", icon: "compass" },
   { title: "Micro-Tasks", desc: "Real jobs you can do today with no client. Each one finishes as a portfolio piece, proof, not promises.", href: "/tasks", icon: "target" },
   { title: "Build Labs", desc: "Learn the anatomy and the rules, then write your own resume, portfolio, and SOPs from a blank page.", href: "/build", icon: "pencil-ruler" },
   { title: "AI Leverage", desc: "Learn to write your own prompts, so you never need someone else's prompt library.", href: "/prompts", icon: "sparkles" },
   { title: "Learn Any Tool", desc: "The transferable method for mastering any software in a weekend, not a course.", href: "/tools", icon: "layout-grid" },
   { title: "Find Work", desc: "Source and vet opportunities yourself, search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
   { title: "Own Your Clients", desc: "Agency or direct? A fair look at both, and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
-  { title: "Salary Guide 2027", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
+  { title: "Salary Guide", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
   { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
   { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
@@ -462,15 +462,16 @@ export default function Home() {
 }
 
 function HeroPanel() {
-  // 4 ascending stages: [x, barTopY, fill, number, label]
+  // 5 ascending stages: [x, barTopY, fill, number, label]
   const bars = [
-    { x: 40, y: 300, fill: "#0d9488", n: "01", label: "Start" },
-    { x: 126, y: 246, fill: "#e39400", n: "02", label: "Get Hired" },
-    { x: 212, y: 182, fill: "#2f9e46", n: "03", label: "Deliver" },
-    { x: 298, y: 104, fill: "#2f6df0", n: "04", label: "Level Up" },
+    { x: 30, y: 308, fill: "#0d9488", n: "01", label: "Start" },
+    { x: 100, y: 262, fill: "#e39400", n: "02", label: "Get Hired" },
+    { x: 170, y: 212, fill: "#2f9e46", n: "03", label: "Deliver" },
+    { x: 240, y: 156, fill: "#2f6df0", n: "04", label: "Level Up" },
+    { x: 310, y: 96, fill: "#0e1f1b", n: "05", label: "Own" },
   ];
   const baseline = 392;
-  const barW = 62;
+  const barW = 54;
   // centres of each bar top, for the rising trend line
   const nodes = bars.map((b) => [b.x + barW / 2, b.y] as const);
   const trend = nodes.map(([x, y]) => `${x},${y}`).join(" ") + " 352,74";
@@ -554,7 +555,7 @@ function HeroPanel() {
 
       {/* overlay chips */}
       <div className="absolute left-6 top-6 rounded-2xl border border-line bg-ink px-4 py-3 text-paper-2">
-        <p className="font-display text-3xl leading-none">9</p>
+        <p className="font-display text-3xl leading-none">11</p>
         <p className="text-[11px] text-paper-2/60">steps to the peak</p>
       </div>
       <div className="absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border border-emerald/25 bg-emerald-tint px-3 py-1 text-xs font-semibold text-emerald">

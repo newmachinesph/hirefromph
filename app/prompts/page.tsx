@@ -333,7 +333,7 @@ export default function PromptsPage() {
                 </span>
                 <h3 className="mt-5 font-display text-xl">This is the same method, everywhere</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  Anatomy, judgment, a workshop, self-critique, the six-method framework this
+                  Anatomy, judgment, a workshop, self-critique, the seven-method framework this
                   page is built from.
                 </p>
               </div>

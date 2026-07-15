@@ -139,7 +139,7 @@ export default function MethodPage() {
           <Reveal>
             <SectionHeading
               kicker="The curriculum"
-              title="Six methods. Master these and you're never stuck."
+              title="Seven methods. Master these and you're never stuck."
               lead="This is the actual skill this platform teaches, not a niche, not a tool, but how to figure anything out. Read each one, then run the drill."
             />
           </Reveal>

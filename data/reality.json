@@ -3,14 +3,14 @@
     "line1": "The numbers nobody",
     "line2": "shows you first."
   },
-  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with a link you can open and check yourself.",
-  "creed": "Encouragement built on a number you can't verify isn't encouragement. The truth is more useful — and, as it turns out, more hopeful.",
+  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with its source one click away.",
+  "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful — and, as it turns out, more hopeful.",
   "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
   "readANumber": {
     "kicker": "Before the numbers · the method",
     "title": "How to read any claim about this career",
-    "lead": "You will meet a hundred numbers about freelancing this year, on Facebook, on TikTok, in a coaching ad. Almost none will survive these four questions. Run them on this page too, we'd rather you check us than believe us.",
+    "lead": "You will meet a hundred numbers about freelancing this year, on Facebook, on TikTok, in a coaching ad. Almost none will survive these four questions. They apply to this page as much as anywhere else.",
     "tests": [
       {
         "id": "who",
@@ -85,7 +85,7 @@
       "lesson": "Milestones, escrow, and written scope are not paranoia, they're the only protection that actually held up in the data. Use the platform's tracker, never work off-platform \"to save the fee\", and treat every unfunded milestone as unpaid work.",
       "source": {
         "label": "Fairwork Cloudwork Ratings 2025 (Oxford Internet Institute)",
-        "url": "https://fair.work/wp-content/uploads/sites/17/2025/05/Fairwork-Cloudwork-Report-2025-FINAL.pdf"
+        "url": "https://fair.work/en/fw/publications/cloudwork-report-2025/"
       },
       "sourceNote": "",
       "source2": null
@@ -160,7 +160,7 @@
   ],
 
   "ai": {
-    "kicker": "What AI is actually doing · 2023 → 2027",
+    "kicker": "What AI is actually doing · 2023 → today",
     "title": "The floor got cut. The ceiling went up.",
     "lead": "This is the part everyone gets wrong in both directions. \"AI will replace freelancers\" is false. \"AI changes nothing\" is also false. What the posting data shows is narrower and more actionable: work that could be described as a generic task collapsed in price, while work where a human owns an outcome grew.",
     "framing": "Read every chart below against its baseline, not against zero. This is that fourth question from the top of the page, in action.",
@@ -357,16 +357,16 @@
         "id": "entry",
         "level": "Entry",
         "accent": "coral",
-        "hourly": "$3–7 / hr",
-        "monthly": "≈ $600–1,100 / mo",
+        "hourly": "$3–6 / hr",
+        "monthly": "≈ $300–1,100 / mo",
         "what": "Generic, undifferentiated task work. This is the floor described at the top of this page, the one that is actively collapsing. Do not plan to stay here."
       },
       {
         "id": "mid",
         "level": "Mid",
         "accent": "amber",
-        "hourly": "$8–15 / hr",
-        "monthly": "≈ $1,300–2,400 / mo",
+        "hourly": "$7–15 / hr",
+        "monthly": "≈ $600–2,400 / mo",
         "what": "You own a process, not a task. The client stops telling you the steps and starts telling you the outcome."
       },
       {
@@ -374,7 +374,7 @@
         "level": "Senior / specialist",
         "accent": "emerald",
         "hourly": "$18–35+ / hr",
-        "monthly": "≈ $2,500–4,800+ / mo",
+        "monthly": "≈ $1,000–4,800+ / mo",
         "what": "A named, provable specialisation, and this is where the 40% AI premium lands on top of the craft, not instead of it."
       }
     ],
@@ -400,7 +400,7 @@
   "unknown": {
     "kicker": "The honest gaps",
     "title": "What nobody actually knows",
-    "lead": "These claims circulate constantly. Every one of them is stated with total confidence, and not one of them has a primary source behind it. We are listing them not to be clever, but because recognising an unsourced number in the wild is the most valuable thing you can take from this page.",
+    "lead": "These claims circulate constantly. Every one of them is stated with total confidence, and not one of them has a primary source behind it. We are listing them so the pattern becomes familiar before it meets you in a coaching ad.",
     "items": [
       {
         "id": "first-client",
@@ -526,7 +526,7 @@
 
   "closing": {
     "kicker": "The honest bottom line",
-    "title": "The floor is collapsing. The ceiling is rising. Your job for 2027 is to get off the floor.",
+    "title": "The floor is collapsing. The ceiling is rising. Your job is to get off the floor.",
     "body": "That is the whole page in one line, and it is not despair, it's a direction. Generic, undifferentiated task work is being commoditized toward zero, and no amount of hustle, positivity, or working faster reverses that; the price is falling for structural reasons that have nothing to do with how hard you try. But work where a human OWNS an AI-assisted outcome end to end is growing fast and paying more, and that door is wide open right now, in a way it will not stay open forever.",
     "point": "You are not late. You are early, but only if you move while the premium still exists. Nobody is coming to move you. Start here:",
     "links": [

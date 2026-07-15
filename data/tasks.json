@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 21 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Nobody asks whether you were paid for it. They ask whether you can do it. Now you can prove it.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 21 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it free if you don't already have it." },
@@ -709,7 +709,7 @@
         { "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure", "why": "You're wiring real tools together, you need to be able to build both ends of the pipe.", "ifYouDont": "Google Forms Help Center (free) for the form side; DevUp's tracker lab for the CRM-sheet side." }
       ],
       "resources": [
-        { "name": "Zapier free tier", "type": "Free tool", "what": "Build the real, working automation here (the free tier supports single-step Zaps, enough for this task).", "free": true, "url": "https://zapier.com" },
+        { "name": "Zapier free tier", "type": "Free tool", "what": "Build the real, working automation here (check the current free-tier limits — at writing they covered this task).", "free": true, "url": "https://zapier.com" },
         { "name": "Zapier & Make Automation", "type": "Free course", "what": "Vendor-provided course covering trigger/action design and common patterns.", "free": true, "url": "https://learn.zapier.com" },
         { "name": "Google Forms + Google Sheets", "type": "Free tool", "what": "The two endpoints your automation connects, the form intake and the CRM-style tracker.", "free": true, "url": "https://www.google.com/forms/about/" }
       ],
@@ -807,7 +807,7 @@
         { "skill": "Automation trigger/action logic connecting a form or inbox to an AI step to a routing action", "why": "This is the same Zapier/Make trigger-action model as the CRM-automation task, with an AI action added in the middle.", "ifYouDont": "Zapier's free Automation 101 course, plus their specific 'AI actions in Zaps' help docs." }
       ],
       "resources": [
-        { "name": "Zapier free tier (with AI/OpenAI action step)", "type": "Free tool", "what": "Build the real workflow here, Zapier's free tier supports a limited number of AI-powered steps, enough to test this.", "free": true, "url": "https://zapier.com/ai" },
+        { "name": "Zapier free tier (with AI/OpenAI action step)", "type": "Free tool", "what": "Build the real workflow here (check the current free-tier limits — at writing they covered this task).", "free": true, "url": "https://zapier.com/ai" },
         { "name": "DevUp's AI Leverage / Prompts lab", "type": "Docs", "what": "Teaches how to write your own structured, repeatable prompts, required before this task's AI step will work reliably.", "free": true, "url": "/prompts" },
         { "name": "OpenAI's free prompt engineering guide", "type": "Docs", "what": "Official guidance on writing prompts that return consistent, structured output.", "free": true, "url": "https://platform.openai.com/docs/guides/prompt-engineering" }
       ],
