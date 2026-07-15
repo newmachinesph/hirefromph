@@ -115,7 +115,7 @@ export function SiteHeader() {
             </button>
 
             {explore && (
-              <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[48rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-5 shadow-[var(--shadow-lg)]">
+              <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[50rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-5 shadow-[var(--shadow-lg)]">
                 {/* Primary: the journey, as a numbered stepper */}
                 {site.navGroups
                   .filter((g) => "primary" in g && g.primary)
@@ -176,14 +176,7 @@ export function SiteHeader() {
                             {group.desc}
                           </p>
                         )}
-                        <div
-                          className={cn(
-                            "mt-2.5 gap-x-3 gap-y-0.5",
-                            group.links.length > 6
-                              ? "grid grid-cols-2"
-                              : "flex flex-col",
-                          )}
-                        >
+                        <div className="mt-2.5 flex flex-col gap-0.5">
                           {group.links.map((item) => {
                             const active = pathname === item.href;
                             return (
@@ -191,7 +184,7 @@ export function SiteHeader() {
                                 key={item.href}
                                 href={item.href}
                                 className={cn(
-                                  "rounded-lg px-2.5 py-1.5 text-sm transition-colors",
+                                  "truncate rounded-lg px-2.5 py-1.5 text-sm transition-colors",
                                   active
                                     ? "bg-ink text-paper-2"
                                     : "text-ink-soft hover:bg-paper-3 hover:text-ink",
