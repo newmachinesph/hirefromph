@@ -30,12 +30,12 @@ const DIFFICULTY_TONE: Record<string, "emerald" | "amber" | "coral"> = {
 const iconTone: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 const accentText: Record<string, string> = {
   coral: "text-coral",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -588,7 +588,7 @@ function TaskDetail({
 
       {/* Stretch */}
       <section className="mt-6 max-w-2xl">
-        <div className="flex items-start gap-3 rounded-2xl border border-indigo/25 bg-[#e9e9fd]/50 p-5">
+        <div className="flex items-start gap-3 rounded-2xl border border-indigo/25 bg-indigo-tint/50 p-5">
           <Sparkles size={18} className="mt-0.5 shrink-0 text-indigo" />
           <div>
             <p className="kicker text-indigo">Stretch it further</p>

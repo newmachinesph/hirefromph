@@ -8,6 +8,7 @@ import { PathProvider } from "@/lib/path-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { FollowModal } from "@/components/follow-modal";
+import { MotionProvider } from "@/components/motion-provider";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -90,10 +91,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <PathProvider>
-          <SiteHeader />
-          <main className="relative z-[2] flex-1">{children}</main>
-          <SiteFooter />
-          <FollowModal />
+          <MotionProvider>
+            <SiteHeader />
+            <main className="relative z-[2] flex-1">{children}</main>
+            <SiteFooter />
+            <FollowModal />
+          </MotionProvider>
         </PathProvider>
       </body>
       <GoogleAnalytics gaId="G-TYFCQVVHK6" />

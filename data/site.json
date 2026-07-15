@@ -22,7 +22,7 @@
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
     { "value": "7", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick, give" },
     { "value": "5", "label": "career stages", "sub": "zero to independent" },
-    { "value": "21", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
+    { "value": "29", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
   ],
   "navGroups": [
     {

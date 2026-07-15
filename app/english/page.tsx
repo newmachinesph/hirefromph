@@ -19,7 +19,7 @@ const GLOBAL_AVG = 488;
 
 const accentText: Record<string, string> = {
   coral: "text-coral-deep",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -181,7 +181,7 @@ export default function EnglishPage() {
                   "flex h-full flex-col rounded-[var(--radius-lg)] p-6 transition-all duration-300 lg:p-8",
                   c.yours
                     ? "border border-line bg-paper-2 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
-                    : "border-2 border-dashed border-indigo/40 bg-[#e9e9fd]/50",
+                    : "border-2 border-dashed border-indigo/40 bg-indigo-tint/50",
                 )}
               >
                 <div className="flex items-center justify-between gap-3">

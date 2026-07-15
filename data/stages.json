@@ -99,7 +99,7 @@
     "outcome": "You'll own a niche, command a premium rate, and build a career that compounds.",
     "doFirst": [
       { "title": "Pick and master a niche", "desc": "Curated learning per specialization in the Niche Learning Hub.", "href": "/niches", "cta": "Choose niche" },
-      { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin can double your rate. Here's where to learn.", "href": "/languages", "cta": "Language premium" },
+      { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin draws from a far thinner pool of candidates, and a thinner pool is what moves a rate. Here's where to learn.", "href": "/languages", "cta": "Language premium" },
       { "title": "Automate the repetitive", "desc": "Codes for efficiency, Zapier/Make flows, and reusable systems.", "href": "/tools", "cta": "Automation" },
       { "title": "Build the advanced artifacts", "desc": "Dashboards, decision frameworks, and pro SOPs, built by you, from the rules up.", "href": "/build", "cta": "Open Build Labs" },
       { "title": "Teach it back", "desc": "Teaching is how you find the gaps you can't see. It's the last step of mastery.", "href": "/method", "cta": "The method" }

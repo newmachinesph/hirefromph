@@ -16,15 +16,15 @@ export const metadata: Metadata = pageMeta({
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep border-coral/20",
   emerald: "bg-emerald-tint text-emerald border-emerald/20",
-  amber: "bg-[#fdf3d9] text-[#9a6b00] border-amber/25",
-  indigo: "bg-[#e9e9fd] text-indigo border-indigo/20",
+  amber: "bg-amber-tint text-amber-text border-amber/25",
+  indigo: "bg-indigo-tint text-indigo border-indigo/20",
 };
 // Literal classes so Tailwind's JIT can see them — a `hover:${var}` concat is
 // invisible to the scanner and the class never gets generated.
 const accentHover: Record<string, string> = {
   coral: "hover:text-coral",
   emerald: "hover:text-emerald",
-  amber: "hover:text-[#9a6b00]",
+  amber: "hover:text-amber-text",
   indigo: "hover:text-indigo",
 };
 

@@ -56,12 +56,12 @@ export default function SimulatorPage() {
       {/* ----------------------------------------------------- MODEL BANNER */}
       <section className="container-x pb-10">
         <Reveal>
-          <div className="rounded-[var(--radius-lg)] border-2 border-amber bg-[#fdf3d9] p-6 lg:p-8">
+          <div className="rounded-[var(--radius-lg)] border-2 border-amber bg-amber-tint p-6 lg:p-8">
             <div className="flex items-start gap-3">
               <TriangleAlert
                 size={20}
                 aria-hidden
-                className="mt-0.5 shrink-0 text-[#9a6b00]"
+                className="mt-0.5 shrink-0 text-amber-text"
               />
               <div className="min-w-0">
                 <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">

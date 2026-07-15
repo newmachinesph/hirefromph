@@ -165,9 +165,9 @@ export default function PromptsPage() {
                       {step.signals.map((s) => (
                         <div
                           key={s.symptom}
-                          className="rounded-xl border border-amber/25 bg-[#fdf3d9] p-3 text-xs leading-relaxed"
+                          className="rounded-xl border border-amber/25 bg-amber-tint p-3 text-xs leading-relaxed"
                         >
-                          <p className="font-semibold text-[#9a6b00]">{s.symptom}</p>
+                          <p className="font-semibold text-amber-text">{s.symptom}</p>
                           <p className="mt-1 text-ink-soft">→ {s.cause}</p>
                         </div>
                       ))}
@@ -194,7 +194,7 @@ export default function PromptsPage() {
             {promptingData.useCases.map((u, idx) => (
               <Reveal key={u.id} i={idx % 3}>
                 <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-[#e9e9fd] text-indigo">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-indigo-tint text-indigo">
                     <Icon name={u.icon} size={20} />
                   </span>
                   <h3 className="mt-5 font-display text-lg leading-tight">{u.title}</h3>

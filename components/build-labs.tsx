@@ -247,6 +247,19 @@ function LabDetail({
       <div
         role="tablist"
         aria-label={`${lab.name}, lab sections`}
+        onKeyDown={(e) => {
+          const idx = TABS.findIndex((t) => t.id === activeTab);
+          let next = idx;
+          if (e.key === "ArrowRight") next = (idx + 1) % TABS.length;
+          else if (e.key === "ArrowLeft") next = (idx - 1 + TABS.length) % TABS.length;
+          else if (e.key === "Home") next = 0;
+          else if (e.key === "End") next = TABS.length - 1;
+          else return;
+          e.preventDefault();
+          const nextId = TABS[next].id;
+          onTabChange(nextId);
+          document.getElementById(`tab-${nextId}`)?.focus();
+        }}
         className="mt-6 flex gap-2 overflow-x-auto pb-2"
       >
         {TABS.map((tab) => {
@@ -259,6 +272,7 @@ function LabDetail({
               id={`tab-${tab.id}`}
               aria-selected={active}
               aria-controls={`panel-${tab.id}`}
+              tabIndex={active ? 0 : -1}
               onClick={() => onTabChange(tab.id)}
               className={cn(
                 "inline-flex shrink-0 items-center gap-2 rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300",
@@ -449,9 +463,9 @@ function WorkshopTab({
             <div className="flex items-center justify-between gap-3 border-b border-line bg-paper-3/60 px-5 py-3">
               <div className="flex items-center gap-2">
                 <span className="flex gap-1.5" aria-hidden>
-                  <span className="h-2.5 w-2.5 rounded-full bg-coral/70" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-amber/70" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-emerald/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-coral/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-amber/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-emerald/70" />
                 </span>
                 <p className="text-xs font-medium text-ink-faint">Live preview, your words</p>
               </div>

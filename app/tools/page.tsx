@@ -17,13 +17,13 @@ export const metadata: Metadata = pageMeta({
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 const accentText: Record<string, string> = {
   coral: "text-coral",
   emerald: "text-emerald",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   indigo: "text-indigo",
 };
 const accentBar: Record<string, string> = {

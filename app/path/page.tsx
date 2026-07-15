@@ -16,7 +16,7 @@ type Track = (typeof tracks.tracks)[number];
 
 const accentText: Record<string, string> = {
   coral: "text-coral",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -28,15 +28,15 @@ const accentBar: Record<string, string> = {
 };
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep border-coral/25",
-  amber: "bg-[#fdf3d9] text-[#9a6b00] border-amber/30",
+  amber: "bg-amber-tint text-amber-text border-amber/30",
   emerald: "bg-emerald-tint text-emerald border-emerald/25",
-  indigo: "bg-[#e9e9fd] text-indigo border-indigo/25",
+  indigo: "bg-indigo-tint text-indigo border-indigo/25",
 };
 const iconTone: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 
 const learnIcon: Record<string, string> = {

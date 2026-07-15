@@ -200,7 +200,7 @@
           "tools": [
             { "name": "Canva", "free": "1.6M+ templates, 5GB storage", "what": "Design listing flyers and open-house graphics", "url": "https://www.canva.com" },
             { "name": "HubSpot CRM", "free": "1,000 contacts, 2 users", "what": "Track leads and schedule follow-up tasks", "url": "https://www.hubspot.com/products/crm" },
-            { "name": "DocuSign", "free": "About 3 documents/month for e-sign", "what": "Send disclosures and agreements for signature", "url": "https://www.docusign.com" }
+            { "name": "DocuSign", "free": "Free unlimited signing; about 3 documents to send", "what": "Send disclosures and agreements for signature", "url": "https://www.docusign.com" }
           ],
           "piece": "A listing marketing kit: flyer, three social posts, and a five-touch buyer follow-up sequence."
         },

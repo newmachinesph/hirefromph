@@ -59,7 +59,7 @@ const verdictCopy: Record<
 
 const toneClasses: Record<"emerald" | "amber" | "coral", string> = {
   emerald: "border-emerald/40 bg-emerald-tint text-emerald",
-  amber: "border-amber/30 bg-[#fdf3d9] text-[#9a6b00]",
+  amber: "border-amber/30 bg-amber-tint text-amber-text",
   coral: "border-coral/40 bg-coral-tint text-coral-deep",
 };
 

@@ -17,8 +17,8 @@ export const metadata: Metadata = pageMeta({
 
 const accentBg: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
-  indigo: "bg-[#e9e9fd] text-indigo",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
+  indigo: "bg-indigo-tint text-indigo",
+  amber: "bg-amber-tint text-amber-text",
   emerald: "bg-emerald-tint text-emerald",
 };
 
@@ -48,8 +48,8 @@ export default function Page() {
         </Reveal>
 
         <Reveal i={4}>
-          <div className="mt-6 flex items-start gap-4 rounded-2xl border border-amber/30 bg-[#fdf3d9] px-6 py-5">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-amber/25 text-[#9a6b00]">
+          <div className="mt-6 flex items-start gap-4 rounded-2xl border border-amber/30 bg-amber-tint px-6 py-5">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-amber/25 text-amber-text">
               <AlertTriangle size={20} aria-hidden />
             </span>
             <p className="text-sm font-medium leading-relaxed text-[#6b4d00]">

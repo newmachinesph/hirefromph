@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useMemo, useState } from "react";
+import { useEffect, useId, useMemo, useState } from "react";
 import { ArrowDown, Check, ShieldCheck } from "lucide-react";
 import english from "@/data/english.json";
 import { Pill } from "@/components/ui";
@@ -25,6 +25,17 @@ const PATTERNS: Record<string, RegExp> = {
 
 const CATEGORIES = english.banlist.categories;
 const MAX_PHRASES_SHOWN = 6;
+
+/** Debounce a value so screen-reader announcements fire after typing pauses,
+    not on every keystroke. */
+function useDebounced<T>(value: T, delay = 700): T {
+  const [debounced, setDebounced] = useState(value);
+  useEffect(() => {
+    const id = setTimeout(() => setDebounced(value), delay);
+    return () => clearTimeout(id);
+  }, [value, delay]);
+  return debounced;
+}
 
 type Tone = "neutral" | "coral" | "emerald" | "amber" | "indigo";
 
@@ -119,7 +130,7 @@ function readDirectness({ total, words }: ScanResult): Verdict {
 /* ------------------------------------------------------------------ VIEW */
 const accentText: Record<string, string> = {
   coral: "text-coral-deep",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -132,7 +143,7 @@ const accentBar: Record<string, string> = {
 const verdictText: Record<Tone, string> = {
   neutral: "text-ink-faint",
   coral: "text-coral-deep",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   emerald: "text-emerald",
   indigo: "text-indigo",
 };
@@ -151,7 +162,6 @@ function Results({
 
   return (
     <aside
-      aria-live="polite"
       aria-labelledby={labelledBy}
       className="flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6"
     >
@@ -249,12 +259,32 @@ export function CommsLab() {
 
   const cleared = Math.max(0, originalResult.total - rewriteResult.total);
 
+  // Announce a short debounced summary to screen readers instead of
+  // re-reading the whole flag list on every keystroke.
+  const liveOriginal = useDebounced(
+    original.trim()
+      ? `${originalResult.total} ${originalResult.total === 1 ? "flag" : "flags"} found. ${readDirectness(originalResult).label}.`
+      : "",
+  );
+  const liveRewrite = useDebounced(
+    rewrite.trim()
+      ? `Rewrite: ${rewriteResult.total} ${rewriteResult.total === 1 ? "flag" : "flags"} found. ${readDirectness(rewriteResult).label}.`
+      : "",
+  );
+
   return (
     <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-8">
       <Pill tone="emerald">
         <ShieldCheck size={13} aria-hidden />
         Runs in your browser. Nothing is uploaded, stored, or sent anywhere.
       </Pill>
+
+      <p aria-live="polite" className="sr-only">
+        {liveOriginal}
+      </p>
+      <p aria-live="polite" className="sr-only">
+        {liveRewrite}
+      </p>
 
       {/* ------------------------------------------------------ PASS 1 */}
       <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">

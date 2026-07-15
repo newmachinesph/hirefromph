@@ -31,8 +31,8 @@ export function Pill({
     neutral: "bg-paper-3 text-ink-soft border-line-strong",
     coral: "bg-coral-tint text-coral-deep border-coral/25",
     emerald: "bg-emerald-tint text-emerald border-emerald/25",
-    amber: "bg-[#fdf3d9] text-[#9a6b00] border-amber/30",
-    indigo: "bg-[#e9e9fd] text-indigo border-indigo/25",
+    amber: "bg-amber-tint text-amber-text border-amber/30",
+    indigo: "bg-indigo-tint text-indigo border-indigo/25",
   };
   return (
     <span

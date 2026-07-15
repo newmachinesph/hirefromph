@@ -128,11 +128,11 @@ function ChoiceGroup({
                 <span
                   aria-hidden
                   className={cn(
-                    "mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full border transition-colors",
+                    "is-circle mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full border transition-colors",
                     active ? "border-ink" : "border-line-strong",
                   )}
                 >
-                  {active && <span className="h-2 w-2 rounded-full bg-coral" />}
+                  {active && <span className="is-circle h-2 w-2 rounded-full bg-coral" />}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-sm font-semibold leading-snug text-ink">
@@ -469,7 +469,6 @@ export function CareerSimulator() {
       <div className="flex flex-col gap-6">
         {/* Summary, announced on every change */}
         <div
-          aria-live="polite"
           className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-md)] lg:p-8"
         >
           <div className="flex flex-wrap items-center justify-between gap-3">
@@ -482,7 +481,10 @@ export function CareerSimulator() {
             </Pill>
           </div>
 
-          <p className="mt-5 font-display text-xl leading-snug text-balance text-ink">
+          <p
+            aria-live="polite"
+            className="mt-5 font-display text-xl leading-snug text-balance text-ink"
+          >
             {model.verdict.label}
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">

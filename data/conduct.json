@@ -49,7 +49,7 @@
       "name": "Disclose conflicts, don't hide them",
       "icon": "git-branch",
       "tagline": "Avoid conflicts of interest where you can, disclose them where you can't.",
-      "body": "IEEE clause I.2. Working for a client's direct competitor isn't automatically wrong. Doing it without telling either of them is. Disclosure converts a fireable secret into a manageable fact.",
+      "body": "IEEE clause I.3. Working for a client's direct competitor isn't automatically wrong. Doing it without telling either of them is. Disclosure converts a fireable secret into a manageable fact.",
       "source": { "label": "IEEE Code of Ethics", "url": "https://www.ieee.org/about/corporate/governance/p7-8" }
     }
   ],

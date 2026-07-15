@@ -176,7 +176,7 @@ function CategoryCard({
                 "grid h-11 w-11 shrink-0 place-items-center rounded-xl",
                 category.essential
                   ? "bg-coral-tint text-coral-deep"
-                  : "bg-[#e9e9fd] text-indigo",
+                  : "bg-indigo-tint text-indigo",
               )}
             >
               <Icon name={category.icon} size={20} />

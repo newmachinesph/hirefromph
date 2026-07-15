@@ -43,14 +43,14 @@ type FocusItem = {
 const accentText: Record<string, string> = {
   coral: "text-coral",
   emerald: "text-emerald",
-  amber: "text-[#9a6b00]",
+  amber: "text-amber-text",
   indigo: "text-indigo",
 };
 const accentSoft: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",
   emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-[#fdf3d9] text-[#9a6b00]",
-  indigo: "bg-[#e9e9fd] text-indigo",
+  amber: "bg-amber-tint text-amber-text",
+  indigo: "bg-indigo-tint text-indigo",
 };
 
 const FEATURED_IDS = ["retrieval-practice", "spaced-repetition"];
@@ -266,7 +266,7 @@ export default function LearnPage() {
                   <Icon
                     name="alert-triangle"
                     size={14}
-                    className="mt-0.5 shrink-0 text-[#9a6b00]"
+                    className="mt-0.5 shrink-0 text-amber-text"
                   />
                   <p className="text-xs leading-relaxed text-ink-soft">
                     {f.watchOut}
