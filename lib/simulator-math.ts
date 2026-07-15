@@ -50,8 +50,8 @@ export const CLIENTS_LOCAL = 0.45;
 export const AI_RAMP = 12;
 export const OWNERSHIP_RAMP = 18;
 
-/** The reality tax. ILO: ~20 unpaid minutes per paid hour → you keep about two thirds. */
-export const UNPAID_KEEP = 0.67;
+/** The reality tax. ILO (2015–2017 surveys): ~20 unpaid minutes per paid hour → you keep about three quarters. */
+export const UNPAID_KEEP = 0.75;
 /** Fairwork: 31% of cloudworkers have experienced non-payment. Drawn as a band, never deducted. */
 export const NON_PAYMENT_RISK = 0.31;
 

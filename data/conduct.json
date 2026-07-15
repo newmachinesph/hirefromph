@@ -123,7 +123,7 @@
       "accent": "emerald",
       "title": "Your laptop in Cebu is a 'Personal Information Processor'",
       "when": "RA 10173 · Data Privacy Act of 2012",
-      "what": "The Data Privacy Act applies to any person processing personal information, including foreign controllers using equipment located in the Philippines. Your laptop, processing a US client's customer list, is in scope. Breach notification is required within 72 hours of discovery. Penalties run from six months to seven years imprisonment and ₱500,000 to ₱4,000,000 in fines.",
+      "what": "The Data Privacy Act applies to any person processing personal information, including foreign controllers using equipment located in the Philippines. Your laptop, processing a US client's customer list, is in scope. Breach notification is required within 72 hours of discovery. Penalties run from six months to seven years imprisonment and ₱500,000 up to ₱5,000,000 in fines.",
       "sting": "Most Filipino freelancers handling client customer data have never been given a written processing agreement, and don't know they're entitled to ask for one.",
       "lesson": "If you handle a client's customer data and they haven't given you a data processing agreement, raise it. It protects YOU. Not asking is the risk.",
       "source": { "label": "National Privacy Commission", "url": "https://privacy.gov.ph/data-privacy-act/" }

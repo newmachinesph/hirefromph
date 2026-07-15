@@ -232,11 +232,11 @@
   "realityTax": {
     "title": "The reality tax, applied to every number on this page, always",
     "unpaid": {
-      "title": "×0.67 · the unpaid third",
-      "body": "The ILO found online workers spend roughly 30 unpaid minutes for every paid hour, hunting for work, doing unpaid tests, vetting clients who ghost. About a third of your working time earns nothing. Every figure in this simulator is already multiplied by 0.67 for it. And a number worth sitting with: average hourly earnings in Asia-Pacific, once you count the unpaid time, come to $2.22/hr.",
+      "title": "×0.75 · the unpaid quarter",
+      "body": "The ILO found online workers spend roughly 20 unpaid minutes for every paid hour, hunting for work, doing unpaid tests, vetting clients who ghost. About a quarter of your working time earns nothing. Every figure in this simulator is already multiplied by 0.75 for it. And a number worth sitting with: average hourly earnings in Asia-Pacific, once you count the unpaid time, come to $2.22/hr.",
       "source": {
-        "label": "ILO, World Employment and Social Outlook: digital labour platforms",
-        "url": "https://www.ilo.org/media/387316/download"
+        "label": "ILO, Digital labour platforms and the future of work (2018), surveys 2015–2017",
+        "url": "https://www.ilo.org/media/414716/download"
       }
     },
     "nonPayment": {
