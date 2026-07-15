@@ -17,7 +17,7 @@ import {
 } from "@/components/ui";
 
 const toolkit = [
-  { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers nobody selling a course will show you. Every claim sourced.", href: "/reality", icon: "scan-eye" },
+  { title: "Reality Check", desc: "What this career actually pays, what AI is really doing to it, and the numbers most sources leave out. Every claim sourced.", href: "/reality", icon: "scan-eye" },
   { title: "AI-First", desc: "Every role runs on AI now. Coding agents, open-source models, AI image and video, folded into your craft, not pasted from a prompt library.", href: "/ai-first", icon: "cpu" },
   { title: "Become Indispensable", desc: "How to be layoff-proof and the one clients fight to keep. The kinds of intelligence AI can't copy: creative, emotional, judgment, taste.", href: "/indispensable", icon: "gem" },
   { title: "Career Simulator", desc: "Model the next three years. Watch what happens to the person who stays generic, and to the one who doesn't.", href: "/simulator", icon: "trending-up" },
@@ -29,10 +29,11 @@ const toolkit = [
   { title: "AI Leverage", desc: "Learn to write your own prompts, so you never need someone else's prompt library.", href: "/prompts", icon: "sparkles" },
   { title: "Learn Any Tool", desc: "The transferable method for mastering any software in a weekend, not a course.", href: "/tools", icon: "layout-grid" },
   { title: "Find Work", desc: "Source and vet opportunities yourself, search operators, red flags, your own pipeline.", href: "/apply", icon: "search" },
+  { title: "Interview Prep", desc: "The STAR method, the questions you'll face, questions to ask them, and the red flags of a scam interview. Build your own answers.", href: "/interview", icon: "message-square" },
   { title: "Own Your Clients", desc: "Agency or direct? A fair look at both, and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
   { title: "Salary Guide", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
   { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
-  { title: "Free Resources", desc: "The free shelf: real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
+  { title: "The Resource Shelf", desc: "A curated shelf of real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
   { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 11 we list, including new lanes like streaming and podcasting, are worked examples.", href: "/niches", icon: "layers" },
   { title: "How to Learn", desc: "What the evidence actually supports, and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
@@ -69,7 +70,7 @@ export default function Home() {
         <div className="container-x relative grid gap-12 pt-16 pb-8 lg:grid-cols-[1.15fr_0.85fr] lg:pt-24 lg:pb-16">
           <div className="flex flex-col justify-center">
             <Reveal>
-              <Kicker>Developing upwards · Free · Philippines</Kicker>
+              <Kicker>Developing upwards · Philippines</Kicker>
             </Reveal>
             <Reveal i={1}>
               <h1 className="mt-6 font-display text-[length:var(--text-hero)] leading-[var(--text-hero--line-height)] tracking-[-0.03em] text-balance">
@@ -103,7 +104,7 @@ export default function Home() {
                 from a blank page. What you build here, you can rebuild for any
                 client, anywhere, forever. That skill is the career. Become an{" "}
                 <strong className="font-semibold text-ink">online professional</strong>{" "}
-                clients trust with outcomes, not just tasks. Free, forever.
+                clients trust with outcomes, not just tasks. Yours, forever.
               </p>
             </Reveal>
             <Reveal i={3}>
@@ -443,7 +444,7 @@ export default function Home() {
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
             <Pill tone="coral">
-              <Sparkles size={13} /> 100% free, forever
+              <Sparkles size={13} /> Open to everyone, forever
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
               You don&rsquo;t need to be perfect. You just need to start.

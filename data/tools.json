@@ -61,7 +61,7 @@
       "blurb": "Handle client logins the professional, secure way, never over chat.",
       "tools": [
         { "name": "1Password", "skill": "Vaults, secure sharing", "level": "Core" },
-        { "name": "Bitwarden", "skill": "Free, open-source vault", "level": "Core" },
+        { "name": "Bitwarden", "skill": "No-cost, open-source vault", "level": "Core" },
         { "name": "LastPass", "skill": "Shared folders", "level": "Intermediate" }
       ]
     },

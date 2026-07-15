@@ -61,7 +61,7 @@
         {
           "id": "user",
           "label": "I use ChatGPT to work faster",
-          "desc": "You draft faster and reply faster. So does every other person with a browser and a free account."
+          "desc": "You draft faster and reply faster. So does every other person with a browser and a no-cost account."
         },
         {
           "id": "augmented",
@@ -163,7 +163,7 @@
       },
       "ai-user": {
         "label": "AI, you use ChatGPT",
-        "note": "Being faster at typing is not a differentiator. Everyone has the same free account. We give it a rounding error, because that is what it is worth."
+        "note": "Being faster at typing is not a differentiator. Everyone has the same no-cost account. We give it a rounding error, because that is what it is worth."
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",

@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "DevUp, Developing upwards. Build the online career you actually own. Free.";
+  "DevUp, Developing upwards. Build the online career you actually own.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -75,7 +75,7 @@ export default function OpengraphImage() {
             <span style={{ color: "#0d9488" }}>actually own.</span>
           </div>
           <div style={{ display: "flex", fontSize: 30, color: "#435551" }}>
-            Free learning for Filipino online professionals. Real talk, real sources.
+            Open learning for Filipino online professionals. Real talk, real sources.
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export default function OpengraphImage() {
         >
           <span style={{ color: "#2f9e46", fontWeight: 700 }}>Developing upwards</span>
           <span>·</span>
-          <span>Free, permanently</span>
+          <span>Open, permanently</span>
           <span>·</span>
           <span>you build it, you own it</span>
         </div>

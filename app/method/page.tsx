@@ -363,7 +363,7 @@ function MethodBlock({
           <span className={cn("kicker", accentText[method.accent])}>
             Method 0{index + 1}
           </span>
-          <h3 className="mt-3 font-display text-4xl leading-[0.95] tracking-tight text-balance lg:text-5xl">
+          <h3 className="mt-3 font-display text-2xl leading-[1.05] tracking-tight text-balance sm:text-3xl">
             {method.name}
           </h3>
           <p className="mt-3 text-sm font-medium text-ink-soft">

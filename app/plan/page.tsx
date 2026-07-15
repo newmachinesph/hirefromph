@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const quickFacts: { icon: string; label: string; tone: "coral" | "amber" | "emerald" }[] = [
-  { icon: "sparkles", label: "100% free", tone: "coral" },
+  { icon: "sparkles", label: "Open to all", tone: "coral" },
   { icon: "clock", label: plan.commitment, tone: "amber" },
   { icon: "save", label: "Progress saved automatically", tone: "emerald" },
 ];

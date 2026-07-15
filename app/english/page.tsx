@@ -517,10 +517,10 @@ export default function EnglishPage() {
                   <h3 className="font-display text-xl leading-tight">{r.name}</h3>
                   <Pill tone={r.tone as Tone}>
                     {r.tone === "emerald"
-                      ? "Free"
+                      ? "Open"
                       : r.tone === "amber"
                         ? "Caveat"
-                        : "Not free"}
+                        : "Paid"}
                   </Pill>
                 </div>
 

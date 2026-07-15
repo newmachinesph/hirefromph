@@ -298,7 +298,7 @@ export default function ToolsPage() {
         <Reveal>
           <SectionHeading
             kicker="Found by you, not handed to you"
-            title="Free certifications"
+            title="Certifications worth earning"
             lead={learn.freeCerts.intro}
           />
         </Reveal>

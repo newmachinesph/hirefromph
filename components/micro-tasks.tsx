@@ -436,7 +436,7 @@ function TaskDetail({
             <div key={r.name} className="flex flex-col rounded-2xl border border-line bg-paper-2 p-5">
               <div className="flex items-center justify-between gap-2">
                 <Pill tone="neutral">{r.type}</Pill>
-                {r.free && <span className="text-xs font-semibold text-emerald">Free</span>}
+                {r.free && <span className="text-xs font-semibold text-emerald">Open</span>}
               </div>
               <p className="mt-3 font-display text-base leading-snug">{r.name}</p>
               <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-soft">{r.what}</p>

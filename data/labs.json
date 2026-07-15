@@ -169,8 +169,8 @@
           { "id": "services", "label": "Services (max 3)", "hint": "List your clearest offers.", "placeholder": "1. Monthly bookkeeping & reconciliation\n2. Books cleanup projects\n3. Cash flow reporting", "rule": "Three max." },
           { "id": "sample1", "label": "Work sample #1, context, action, result", "hint": "Problem → what you did → measurable result.", "placeholder": "Problem: A founder's books hadn't been reconciled in 4 months.\nWhat I did: Rebuilt the chart of accounts and reconciled 4 months of transactions in Xero.\nResult: Books were audit-ready and P&L accuracy went from unreliable to current within 2 weeks.", "rule": "Must include a before/after or a number." },
           { "id": "sample2", "label": "Work sample #2, context, action, result", "hint": "Same structure, second piece, pick something that shows range.", "placeholder": "Problem: ...\nWhat I did: ...\nResult: ...", "rule": "Must be a different type of work than sample #1 to show range." },
-          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you actually looks like.", "placeholder": "1. Free 20-min discovery call\n2. I audit your current setup\n3. Weekly async updates via Slack\n4. Monthly report walkthrough call", "rule": "Plain language, focused on communication and turnaround." },
-          { "id": "contact", "label": "Contact / call to action", "hint": "One channel, one clear ask.", "placeholder": "Book a free 20-minute discovery call: [your Calendly link]", "rule": "One channel only." }
+          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you actually looks like.", "placeholder": "1. No-cost 20-min discovery call\n2. I audit your current setup\n3. Weekly async updates via Slack\n4. Monthly report walkthrough call", "rule": "Plain language, focused on communication and turnaround." },
+          { "id": "contact", "label": "Contact / call to action", "hint": "One channel, one clear ask.", "placeholder": "Book a no-cost 20-minute discovery call: [your Calendly link]", "rule": "One channel only." }
         ]
       },
       "critique": [
@@ -327,7 +327,7 @@
         { "part": "Rate and payment terms", "purpose": "Removes ambiguity about how much, how often, and what happens if payment is late.", "rule": "State the exact amount, the billing frequency, the due date relative to invoice date, and a concrete consequence for late payment (e.g. work pauses after N days unpaid)." },
         { "part": "Communication expectations", "purpose": "Prevents the common friction of mismatched response-time assumptions.", "rule": "Name the primary channel and a realistic response-time window, this single clause prevents most 'why haven't you replied' conflicts." },
         { "part": "Confidentiality", "purpose": "Protects both sides' sensitive information without needing a full NDA for small engagements.", "rule": "Simple mutual language is enough for most freelance work, reserve a full NDA for genuinely sensitive IP or financial access." },
-        { "part": "Termination", "purpose": "Defines how either side exits cleanly, which protects you as much as the client.", "rule": "State a notice period and confirm that delivered work is always paid, this protects you from doing free work if a client vanishes." },
+        { "part": "Termination", "purpose": "Defines how either side exits cleanly, which protects you as much as the client.", "rule": "State a notice period and confirm that delivered work is always paid, this protects you from doing unpaid work if a client vanishes." },
         { "part": "Invoice: identifying details", "purpose": "Makes the invoice traceable and professional.", "rule": "Sequential invoice number, your name/business, the client's name, issue date, due date, every field, every time, no exceptions." },
         { "part": "Invoice: line items", "purpose": "Shows exactly what's being charged for, avoiding 'what is this for' questions that delay payment.", "rule": "Each line names the specific service and period covered, not just 'services rendered'." }
       ],
@@ -369,7 +369,7 @@
         "Invoice line items that just say 'services rendered' with no period or specifics.",
         "Copy-pasting a contract clause you don't understand, just because a template had it."
       ],
-      "buildIn": { "tool": "Google Docs (contract) + Google Sheets or invoicing tool (invoice)", "how": "Draft the contract as a plain Doc using the clauses above, get the client to countersign via email or a free e-signature tool. Build the invoice as a Sheet template with a formula-driven total, or use a free invoicing tool (Wise, PayPal invoicing) that auto-numbers for you." }
+      "buildIn": { "tool": "Google Docs (contract) + Google Sheets or invoicing tool (invoice)", "how": "Draft the contract as a plain Doc using the clauses above, get the client to countersign via email or a no-cost e-signature tool. Build the invoice as a Sheet template with a formula-driven total, or use a no-cost invoicing tool (Wise, PayPal invoicing) that auto-numbers for you." }
     },
     {
       "id": "client-onboarding",

@@ -24,7 +24,7 @@ export function SiteFooter() {
             </p>
             <p className="mt-6 kicker text-coral">{site.meaning}</p>
             <p className="mt-2 kicker text-paper-2/50">
-              Free access · Always will be
+              Open access · Always will be
             </p>
 
             <div className="mt-6 flex flex-wrap gap-3">

@@ -277,7 +277,7 @@ function DetailCard({
       </div>
 
       <div className="mt-8">
-        <h4 className="kicker">Where to learn it, free</h4>
+        <h4 className="kicker">Where to learn it</h4>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {track.learn.map((item) => (
             <li

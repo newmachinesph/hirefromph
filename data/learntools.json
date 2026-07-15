@@ -82,8 +82,8 @@
       "icon": "briefcase"
     },
     {
-      "title": "Free tier or free certification?",
-      "desc": "If you can't touch it without a company card, it's a bad first tool. Vendors that want adoption make the entry point free, see below.",
+      "title": "No-cost tier or recognized certification?",
+      "desc": "If you can't touch it without a company card, it's a bad first tool. Vendors that want adoption make the entry point no-cost, see below.",
       "icon": "gift"
     },
     {
@@ -98,21 +98,21 @@
     }
   ],
   "freeCerts": {
-    "intro": "Vendors give away certifications on purpose, a certified user is a lifelong user. HubSpot, Google, Meta, Canva, and Notion all fund free certification programs to drive adoption. We won't hand you a list that goes stale in a year. Find your own, live, in under five minutes.",
+    "intro": "Vendors give away certifications on purpose, a certified user is a lifelong user. HubSpot, Google, Meta, Canva, and Notion all fund recognized certification programs to drive adoption. We won't hand you a list that goes stale in a year. Find your own, live, in under five minutes.",
     "steps": [
       {
         "n": 1,
         "title": "Search the pattern, not a list",
-        "desc": "\"<tool name> certification free\" or \"<tool name> academy.\" Every major vendor runs one, and a live search puts today's real link in front of you, not a dead one from an old blog post."
+        "desc": "\"<tool name> certification\" or \"<tool name> academy.\" Every major vendor runs one, and a live search puts today's real link in front of you, not a dead one from an old blog post."
       },
       {
         "n": 2,
         "title": "Go to the vendor's own domain",
-        "desc": "hubspot.com/academy, skillshop.withgoogle.com, and so on, never a reseller course pretending to be official. If it isn't on the vendor's own domain, it isn't the free one."
+        "desc": "hubspot.com/academy, skillshop.withgoogle.com, and so on, never a reseller course pretending to be official. If it isn't on the vendor's own domain, it isn't the no-cost one."
       },
       {
         "n": 3,
-        "title": "Confirm it's actually free before you start",
+        "title": "Confirm it's actually no-cost before you start",
         "desc": "Some gate the exam behind a trial that wants a card. Read the fine print for ninety seconds before you commit an afternoon to it."
       }
     ]

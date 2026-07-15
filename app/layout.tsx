@@ -14,11 +14,11 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "DevUp, Developing Upwards. Build Your Online Career, Free.",
+    default: "DevUp, Developing Upwards. Build Your Online Career.",
     template: "%s · DevUp",
   },
   description:
-    "Free, no-catch learning for Filipino online professionals. Real talk on remote work, AI, direct clients, pay, and the skills that make you layoff-proof. We teach you to build it yourself, so you own it.",
+    "Open learning for Filipino online professionals. Real talk on remote work, AI, direct clients, pay, and the skills that make you layoff-proof. We teach you to build it yourself, so you own it.",
   applicationName: "DevUp",
   keywords: [
     "online jobs Philippines",
@@ -27,15 +27,15 @@ export const metadata: Metadata = {
     "freelancing Philippines",
     "AI skills Philippines",
     "how to get direct clients",
-    "free online courses Philippines",
+    "online career courses Philippines",
     "work from home Philippines",
     "salary guide Philippines",
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "DevUp, Build the online career you actually own. Free.",
+    title: "DevUp, Build the online career you actually own.",
     description:
-      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
+      "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
     url: BASE_URL,
     siteName: "DevUp",
     locale: "en_PH",
@@ -43,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevUp, Build the online career you actually own. Free.",
+    title: "DevUp, Build the online career you actually own.",
     description:
-      "Free learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
+      "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
   robots: { index: true, follow: true },
 };
@@ -59,7 +59,7 @@ const jsonLd = {
       name: "DevUp",
       url: BASE_URL,
       description:
-        "A free, anonymous, non-commercial learning platform that helps Filipinos build an independent online career.",
+        "An open, anonymous, non-commercial learning platform that helps Filipinos build an independent online career.",
       logo: `${BASE_URL}/icon.svg`,
       sameAs: [site.social.facebook],
     },
@@ -70,7 +70,7 @@ const jsonLd = {
       name: "DevUp",
       inLanguage: "en-PH",
       description:
-        "Free learning for Filipino online professionals: AI, remote work, direct clients, pay, and the skills that make you layoff-proof.",
+        "Open learning for Filipino online professionals: AI, remote work, direct clients, pay, and the skills that make you layoff-proof.",
       publisher: { "@id": `${BASE_URL}/#org` },
     },
   ],

@@ -196,7 +196,7 @@
         "impact": "Highest",
         "accent": "coral",
         "title": "Rate and pausing",
-        "what": "Slow down and put real pauses at clause boundaries. Studies on Philippine English intelligibility specifically found speakers become more intelligible by adjusting rhythm and slowing down, not by changing their accent. This is free, it works today, and it is the single highest-leverage change on this list.",
+        "what": "Slow down and put real pauses at clause boundaries. Studies on Philippine English intelligibility specifically found speakers become more intelligible by adjusting rhythm and slowing down, not by changing their accent. This is no-cost, it works today, and it is the single highest-leverage change on this list.",
         "drill": "Record a 60-second answer to 'walk me through what you did last week.' Play it back. Count your pauses. If there are fewer than five, you're rushing, and rushing is what makes an accent hard to parse."
       },
       {
@@ -228,32 +228,32 @@
   },
 
   "resources": {
-    "kicker": "Free, live, and honestly priced",
+    "kicker": "Open, live, and honestly priced",
     "title": "Where to actually practise",
-    "lead": "We checked every one of these, including the price. Two things commonly recommended as 'free' are not free, and we've said so rather than let you find out later.",
+    "lead": "We checked every one of these, including the price. Two things commonly recommended as 'no-cost' are not no-cost, and we've said so rather than let you find out later.",
     "items": [
       {
         "name": "LanguageTool",
         "url": "https://languagetool.org",
-        "what": "The best free grammar checker. Runs in your browser, no account needed, a generous free check length.",
+        "what": "The best no-cost grammar checker. Runs in your browser, no account needed, a generous no-cost check length.",
         "use": "Paste every client email into it for one month. You'll stop needing it.",
-        "cost": "Free",
+        "cost": "Open",
         "tone": "emerald"
       },
       {
         "name": "Hemingway Editor",
         "url": "https://hemingwayapp.com/",
-        "what": "Kills passive voice and verbosity. Free, no account, no limit. It is not a grammar checker, pair it with LanguageTool.",
+        "what": "Kills passive voice and verbosity. No cost, no account, no limit. It is not a grammar checker, pair it with LanguageTool.",
         "use": "Your goal is a lower grade level, not a higher one. Aim for grade 8. Senior people write simply.",
-        "cost": "Free",
+        "cost": "Open",
         "tone": "emerald"
       },
       {
         "name": "Rachel's English (YouTube)",
         "url": "https://www.youtube.com/@rachelsenglish",
-        "what": "The best free resource for exactly what the research says matters: connected speech, rhythm, and stress.",
+        "what": "The best no-cost resource for exactly what the research says matters: connected speech, rhythm, and stress.",
         "use": "Skip the individual-sound videos at first. Go straight to the rhythm and stress playlists.",
-        "cost": "Free",
+        "cost": "Open",
         "tone": "emerald"
       },
       {
@@ -261,31 +261,31 @@
         "url": "https://www.bbc.co.uk/learningenglish/",
         "what": "Daily uploads; '6 Minute English' is the workhorse listening series.",
         "use": "Listening practice at native speed. Play it at 1.25x once it feels easy.",
-        "cost": "Free",
+        "cost": "Open",
         "tone": "emerald"
       },
       {
         "name": "Otter.ai",
         "url": "https://otter.ai/pricing",
-        "what": "Transcribe your own client calls and read yourself back. It has a workable free tier (limits change — check their pricing page).",
+        "what": "Transcribe your own client calls and read yourself back. It has a workable no-cost tier (limits change — check their pricing page).",
         "use": "The most uncomfortable and most useful drill on this page. Count your hedges. Count your apologies. You will be shocked.",
-        "cost": "Free tier, enough for ~2 calls a week",
+        "cost": "No-cost tier, enough for ~2 calls a week",
         "tone": "emerald"
       },
       {
         "name": "Grammarly",
         "url": "https://www.grammarly.com/plans",
-        "what": "Free tier covers grammar and spelling; it detects tone but won't rewrite it for you.",
-        "use": "Fine, but LanguageTool does the free job better and asks for less.",
-        "cost": "Free tier exists, sources disagree on its exact limits, so check before relying on it",
+        "what": "No-cost tier covers grammar and spelling; it detects tone but won't rewrite it for you.",
+        "use": "Fine, but LanguageTool does the no-cost job better and asks for less.",
+        "cost": "No-cost tier exists, sources disagree on its exact limits, so check before relying on it",
         "tone": "amber"
       },
       {
         "name": "Toastmasters (District 75, Philippines)",
         "url": "https://d75.toastmastersdistricts.org/",
         "what": "Genuinely excellent for speaking under pressure. Several PH clubs meet online.",
-        "use": "Worth it, but budget for it. It is routinely listed as 'free'; it is not.",
-        "cost": "NOT FREE, modest dues, paid per half-year (check the current rates), plus club dues",
+        "use": "Worth it, but budget for it. It is routinely described as no-cost; it is not.",
+        "cost": "PAID, modest dues, paid per half-year (check the current rates), plus club dues",
         "tone": "coral"
       }
     ]

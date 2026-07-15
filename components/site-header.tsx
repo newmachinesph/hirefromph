@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Menu, X, Check } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Menu, X, Check, ChevronDown } from "lucide-react";
 import site from "@/data/site.json";
 import tracks from "@/data/tracks.json";
 import { usePath } from "@/lib/path-context";
@@ -13,8 +13,10 @@ import { Logo } from "@/components/logo";
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [explore, setExplore] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { hasPath, state, hydrated } = usePath();
+  const exploreRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -23,13 +25,36 @@ export function SiteHeader() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close both menus whenever the route changes.
+  useEffect(() => {
+    setExplore(false);
+    setOpen(false);
+  }, [pathname]);
+
+  // Close the Explore mega-menu on outside click / Escape.
+  useEffect(() => {
+    if (!explore) return;
+    const onClick = (e: MouseEvent) => {
+      if (exploreRef.current && !exploreRef.current.contains(e.target as Node)) {
+        setExplore(false);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setExplore(false);
+    document.addEventListener("mousedown", onClick);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onClick);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [explore]);
+
   const activeTrack = tracks.tracks.find((t) => t.id === state.track);
 
   return (
     <header
       className={cn(
         "sticky top-0 z-50 transition-all duration-300",
-        scrolled
+        scrolled || explore
           ? "border-b border-line bg-paper/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent",
       )}
@@ -57,6 +82,59 @@ export function SiteHeader() {
               </Link>
             );
           })}
+
+          {/* Explore mega-menu — surfaces every page on desktop */}
+          <div className="relative" ref={exploreRef}>
+            <button
+              type="button"
+              onClick={() => setExplore((v) => !v)}
+              aria-expanded={explore}
+              aria-haspopup="true"
+              className={cn(
+                "flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
+                explore
+                  ? "bg-ink text-paper-2"
+                  : "text-ink-soft hover:bg-paper-3 hover:text-ink",
+              )}
+            >
+              Explore
+              <ChevronDown
+                size={15}
+                className={cn("transition-transform", explore && "rotate-180")}
+              />
+            </button>
+
+            {explore && (
+              <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[46rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-6 shadow-[var(--shadow-lg)]">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-6 xl:grid-cols-4">
+                  {site.navGroups.map((group) => (
+                    <div key={group.title}>
+                      <h2 className="kicker text-coral">{group.title}</h2>
+                      <div className="mt-3 flex flex-col gap-0.5">
+                        {group.links.map((item) => {
+                          const active = pathname === item.href;
+                          return (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              className={cn(
+                                "rounded-lg px-2.5 py-1.5 text-sm transition-colors",
+                                active
+                                  ? "bg-ink text-paper-2"
+                                  : "text-ink-soft hover:bg-paper-3 hover:text-ink",
+                              )}
+                            >
+                              {item.label}
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -73,7 +151,7 @@ export function SiteHeader() {
               href="/start"
               className="hidden rounded-full bg-coral px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5 sm:inline-block"
             >
-              Start free
+              Start here
             </Link>
           )}
           <button

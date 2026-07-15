@@ -18,8 +18,8 @@
       "tools": ["Google Workspace", "Notion", "Calendly", "Slack", "1Password"],
       "skills": ["Calendar & inbox management", "Travel & logistics", "Meeting prep & notes", "Stakeholder comms", "Project coordination"],
       "learn": [
-        { "type": "Course", "title": "Google Workspace Learning Center", "provider": "Google (free)" },
-        { "type": "Course", "title": "Google Workspace Certification", "provider": "Google (free)" },
+        { "type": "Course", "title": "Google Workspace Learning Center", "provider": "Google (open)" },
+        { "type": "Course", "title": "Google Workspace Certification", "provider": "Google (open)" },
         { "type": "Lab", "title": "SOP Lab — write your own library", "provider": "In-app (/build)" }
       ],
       "certs": ["Google Workspace", "Notion Essentials"],
@@ -44,9 +44,9 @@
       "tools": ["QuickBooks Online", "Xero", "Google Sheets", "Dext", "Bill.com"],
       "skills": ["Bank reconciliation", "Accounts payable/receivable", "Monthly reporting", "Payroll basics", "Cleanup projects"],
       "learn": [
-        { "type": "Course", "title": "QuickBooks Online Certification", "provider": "Intuit (free)" },
-        { "type": "Course", "title": "Xero Advisor Certification", "provider": "Xero (free)" },
-        { "type": "Course", "title": "QuickBooks Online Training", "provider": "Intuit (free)" }
+        { "type": "Course", "title": "QuickBooks Online Certification", "provider": "Intuit (open)" },
+        { "type": "Course", "title": "Xero Advisor Certification", "provider": "Xero (open)" },
+        { "type": "Course", "title": "QuickBooks Online Training", "provider": "Intuit (open)" }
       ],
       "certs": ["QuickBooks ProAdvisor", "Xero Advisor"],
       "clients": "E-commerce, agencies, real estate, and medical practices that need clean books monthly.",
@@ -70,9 +70,9 @@
       "tools": ["Canva", "Meta Business Suite", "Buffer", "CapCut", "Metricool"],
       "skills": ["Content calendars", "Short-form video", "Copywriting", "Community management", "Analytics reporting"],
       "learn": [
-        { "type": "Course", "title": "Meta Social Media Marketing", "provider": "Meta (free)" },
-        { "type": "Course", "title": "Canva Design Essentials", "provider": "Canva (free)" },
-        { "type": "Course", "title": "Content Marketing Certification", "provider": "HubSpot Academy (free)" }
+        { "type": "Course", "title": "Meta Social Media Marketing", "provider": "Meta (open)" },
+        { "type": "Course", "title": "Canva Design Essentials", "provider": "Canva (open)" },
+        { "type": "Course", "title": "Content Marketing Certification", "provider": "HubSpot Academy (open)" }
       ],
       "certs": ["Meta Certified", "HubSpot Social Media"],
       "clients": "Coaches, local businesses, and DTC brands that need consistent, on-brand content.",
@@ -96,8 +96,8 @@
       "tools": ["Asana", "Monday.com", "ClickUp", "Slack", "Notion"],
       "skills": ["Sprint & task planning", "Team coordination", "Process documentation", "Reporting dashboards", "Risk tracking"],
       "learn": [
-        { "type": "Course", "title": "Google Project Management Certificate", "provider": "Google (audit free)" },
-        { "type": "Course", "title": "Asana Academy", "provider": "Asana (free)" },
+        { "type": "Course", "title": "Google Project Management Certificate", "provider": "Google (open to audit)" },
+        { "type": "Course", "title": "Asana Academy", "provider": "Asana (open)" },
         { "type": "Lab", "title": "Dashboard & SOP Labs — build your own", "provider": "In-app (/build)" }
       ],
       "certs": ["Google PM", "CAPM (optional)"],
@@ -122,8 +122,8 @@
       "tools": ["Zendesk", "Intercom", "HubSpot", "Gorgias", "Slack"],
       "skills": ["Ticket handling", "Customer onboarding", "Knowledge-base writing", "Retention & upsell", "Empathy at scale"],
       "learn": [
-        { "type": "Course", "title": "HubSpot Service Hub", "provider": "HubSpot (free)" },
-        { "type": "Course", "title": "Service Hub & Support Training", "provider": "HubSpot Academy (free)" },
+        { "type": "Course", "title": "HubSpot Service Hub", "provider": "HubSpot (open)" },
+        { "type": "Course", "title": "Service Hub & Support Training", "provider": "HubSpot Academy (open)" },
         { "type": "Lab", "title": "Macro Library Lab — build your own", "provider": "In-app (/build)" }
       ],
       "certs": ["HubSpot Service", "Zendesk Support"],
@@ -148,7 +148,7 @@
       "tools": ["KvCore", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
       "skills": ["Listing management", "CRM & lead follow-up", "Transaction coordination", "Showing feedback", "Marketing collateral"],
       "learn": [
-        { "type": "Docs", "title": "Follow Up Boss Playbooks", "provider": "Follow Up Boss (free)" },
+        { "type": "Docs", "title": "Follow Up Boss Playbooks", "provider": "Follow Up Boss (open)" },
         { "type": "Lab", "title": "Message & Follow-up Lab — write your own", "provider": "In-app (/build)" },
         { "type": "Lab", "title": "Tracker Lab — build your own", "provider": "In-app (/build)" }
       ],
@@ -174,9 +174,9 @@
       "tools": ["Zapier", "Make", "n8n", "GoHighLevel", "Airtable"],
       "skills": ["Workflow automation", "CRM setup & management", "API basics & webhooks", "No-code app building", "AI integration"],
       "learn": [
-        { "type": "Course", "title": "Zapier & Make Automation", "provider": "Vendor (free)" },
-        { "type": "Course", "title": "Zapier Learn — Automation Basics", "provider": "Zapier (free)" },
-        { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (free)" }
+        { "type": "Course", "title": "Zapier & Make Automation", "provider": "Vendor (open)" },
+        { "type": "Course", "title": "Zapier Learn — Automation Basics", "provider": "Zapier (open)" },
+        { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (open)" }
       ],
       "certs": ["Zapier Expert", "HubSpot Ops"],
       "clients": "Agencies and startups that need their stack connected and their busywork gone.",
@@ -200,8 +200,8 @@
       "tools": ["Canva", "Figma", "CapCut", "Adobe Express", "Descript"],
       "skills": ["Graphic design", "Short-form video editing", "Copywriting", "Brand systems", "Thumbnail & ad creative"],
       "learn": [
-        { "type": "Course", "title": "Figma for Beginners", "provider": "Figma (free)" },
-        { "type": "Video", "title": "CapCut Official Tutorials", "provider": "CapCut (free)" },
+        { "type": "Course", "title": "Figma for Beginners", "provider": "Figma (open)" },
+        { "type": "Video", "title": "CapCut Official Tutorials", "provider": "CapCut (open)" },
         { "type": "Lab", "title": "Portfolio Lab — build your own", "provider": "In-app (/build)" }
       ],
       "certs": ["Canva", "Google UX (optional)"],
@@ -226,9 +226,9 @@
       "tools": ["OBS Studio", "StreamYard", "TikTok Live", "CapCut", "Discord"],
       "skills": ["Live production & OBS setup", "Chat moderation & community", "Clip & highlight editing", "Live-selling coordination", "Streamer ops & scheduling"],
       "learn": [
-        { "type": "Course", "title": "OBS Studio Quickstart", "provider": "OBS Project (free)" },
-        { "type": "Course", "title": "Discord Moderator Academy", "provider": "Discord (free)" },
-        { "type": "YouTube", "title": "CapCut short-form editing tutorials", "provider": "CapCut & creators (free)" }
+        { "type": "Course", "title": "OBS Studio Quickstart", "provider": "OBS Project (open)" },
+        { "type": "Course", "title": "Discord Moderator Academy", "provider": "Discord (open)" },
+        { "type": "YouTube", "title": "CapCut short-form editing tutorials", "provider": "CapCut & creators (open)" }
       ],
       "certs": ["Discord Moderator Academy", "Canva"],
       "clients": "Streamers, TikTok live sellers, gaming channels, and e-commerce brands that go live every week.",
@@ -252,9 +252,9 @@
       "tools": ["Descript", "Riverside", "Adobe Podcast", "Buzzsprout", "Canva"],
       "skills": ["Audio editing & cleanup", "Show notes & titles", "Publishing & distribution", "Clip repurposing", "Guest coordination"],
       "learn": [
-        { "type": "Course", "title": "Descript tutorials & help center", "provider": "Descript (free)" },
-        { "type": "Course", "title": "How to Start a Podcast guides", "provider": "Buzzsprout (free)" },
-        { "type": "Course", "title": "Adobe Podcast Enhance", "provider": "Adobe (free tool)" }
+        { "type": "Course", "title": "Descript tutorials & help center", "provider": "Descript (open)" },
+        { "type": "Course", "title": "How to Start a Podcast guides", "provider": "Buzzsprout (open)" },
+        { "type": "Course", "title": "Adobe Podcast Enhance", "provider": "Adobe (open tool)" }
       ],
       "certs": ["HubSpot Content Marketing", "Canva"],
       "clients": "Coaches, B2B founders, and agencies that run podcast retainers and need every episode to just ship.",
@@ -278,9 +278,9 @@
       "tools": ["Planning Center", "Canva", "Mailchimp", "YouTube Studio", "Zoom"],
       "skills": ["Community & member care", "Event & service coordination", "Newsletter & devotional formatting", "Donation & CRM admin", "Sermon clips & social media"],
       "learn": [
-        { "type": "Course", "title": "Planning Center University", "provider": "Planning Center (free)" },
-        { "type": "Course", "title": "Mailchimp Academy", "provider": "Mailchimp (free)" },
-        { "type": "Course", "title": "Canva Design School", "provider": "Canva (free)" }
+        { "type": "Course", "title": "Planning Center University", "provider": "Planning Center (open)" },
+        { "type": "Course", "title": "Mailchimp Academy", "provider": "Mailchimp (open)" },
+        { "type": "Course", "title": "Canva Design School", "provider": "Canva (open)" }
       ],
       "certs": ["Mailchimp", "Canva"],
       "clients": "Churches and ministries, faith-based coaches and authors, and wellness or meditation creators worldwide. A natural fit for many Filipinos, and clients here stay for years.",

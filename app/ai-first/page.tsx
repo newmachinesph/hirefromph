@@ -37,10 +37,10 @@ const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {
   paid: "neutral",
 };
 const costLabel: Record<string, string> = {
-  free: "Free",
+  free: "Open",
   "open-source": "Open source",
-  freemium: "Free tier",
-  "free-trial": "Free trial",
+  freemium: "No-cost tier",
+  "free-trial": "Trial",
   paid: "Paid",
 };
 

@@ -26,7 +26,7 @@
     {
       "n": 4,
       "title": "The answer is findable. The skill is knowing where to look and what to trust.",
-      "desc": "Almost everything you need is public and free. Resourcefulness is not knowing the answer, it's reliably finding it, and being able to tell a good source from a confident one.",
+      "desc": "Almost everything you need is public and no-cost. Resourcefulness is not knowing the answer, it's reliably finding it, and being able to tell a good source from a confident one.",
       "icon": "search"
     },
     {
@@ -144,12 +144,12 @@
       "accent": "coral",
       "summary": "The fastest way into any ecosystem is to put value into it before you ask anything from it.",
       "steps": [
-        { "title": "Do real work for a real need, free", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good — a small organization gains more from ten of your hours than a big one ever would." },
+        { "title": "Do real work for a real need, at no cost", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good — a small organization gains more from ten of your hours than a big one ever would." },
         { "title": "Teach what you just learned", "desc": "Write the guide you wish existed when you were stuck, and post it where the next beginner will find it. Teaching is also the strongest test of understanding — see LEARN." },
         { "title": "Share the method, not just the win", "desc": "When something works — a message that got a reply, a workflow that saved hours — share how it worked. Wins impress people. Methods help them." },
         { "title": "Show up in your niche's rooms", "desc": "Answer real questions in the communities where your niche gathers. In six months you are the person people tag, and referrals start arriving before job posts do." }
       ],
-      "drill": "This week: one hour of scoped, free help for one real person or organization, and one written answer to a beginner's question in a community you belong to. Notice what both cost you — almost nothing. Notice what they start."
+      "drill": "This week: one hour of scoped, no-cost help for one real person or organization, and one written answer to a beginner's question in a community you belong to. Notice what both cost you — almost nothing. Notice what they start."
     }
   ],
   "antiPatterns": {

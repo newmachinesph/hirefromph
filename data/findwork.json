@@ -110,7 +110,7 @@
       {
         "id": "unpaid-test",
         "flag": "A \"test task\" that's actually the real deliverable, unpaid",
-        "why": "A short skills check is normal. A full deliverable, a finished design, a working script, a week of \"trial\" work, done for free is not a test. It's free labor.",
+        "why": "A short skills check is normal. A full deliverable, a finished design, a working script, a week of \"trial\" work, done at no cost is not a test. It's unpaid labor.",
         "weight": 2
       },
       {

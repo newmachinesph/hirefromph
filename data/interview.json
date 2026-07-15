@@ -1,0 +1,134 @@
+{
+  "hero": {
+    "kicker": "Interviews · STAR method · your own answers",
+    "line1": "The interview is not a test.",
+    "line2": "It's a rehearsal you can win.",
+    "intro": "Most people walk into an interview hoping to sound good. Professionals walk in with a structure, a few real stories, and questions of their own. This page teaches the framework the best answers are built on — then you write your own stories from your own life, because a memorized script falls apart the moment the question is phrased differently. Learn the shape once and you can answer anything, in any interview, for the rest of your career.",
+    "creed": "You cannot memorize your way through an interview. You can prepare a structure and a handful of true stories, and that is enough to answer a question you have never heard before."
+  },
+
+  "star": {
+    "kicker": "The framework · STAR",
+    "title": "Every strong behavioral answer has the same four parts.",
+    "lead": "\"Tell me about a time you…\" questions are the heart of most interviews. STAR is the structure that keeps your answer clear, specific, and short. Learn the four parts, then build your own stories around them — the structure is reusable forever, the stories are yours.",
+    "parts": [
+      {
+        "letter": "S",
+        "name": "Situation",
+        "icon": "map-pin",
+        "desc": "Set the scene in one or two sentences. Where were you, what was the context, what was at stake. Enough for the interviewer to picture it, no more.",
+        "example": "\"In a micro-task I built for my portfolio, I was handed a client's inbox with 400 unsorted emails and no system.\"",
+        "watch": "Do not spend half your answer here. The situation is the setup, not the story."
+      },
+      {
+        "letter": "T",
+        "name": "Task",
+        "icon": "target",
+        "desc": "What was your specific responsibility or goal? Name the problem you personally had to solve, not what the whole team did.",
+        "example": "\"My job was to design a triage system so the founder only saw the 10% of emails that actually needed them.\"",
+        "watch": "Use \"I\", not \"we\". The interviewer is hiring you, not your old team."
+      },
+      {
+        "letter": "A",
+        "name": "Action",
+        "icon": "workflow",
+        "desc": "The heart of the answer. What did you actually do, step by step? This is where your thinking and skill show. Spend most of your time here.",
+        "example": "\"I built a six-label taxonomy, wrote a one-line rule for each, and set Gmail filters to auto-route everything on arrival.\"",
+        "watch": "Show the judgment, not just the buttons. Why you chose that approach matters more than the tool."
+      },
+      {
+        "letter": "R",
+        "name": "Result",
+        "icon": "trending-up",
+        "desc": "How did it end? Use a number if you honestly have one. If you don't, describe the concrete change. Then, if you can, one line on what you learned.",
+        "example": "\"The founder's daily email time dropped from an hour to about ten minutes. I documented the system so anyone could run it.\"",
+        "watch": "Never invent a metric. \"I don't have the exact number, but…\" is more convincing than a suspiciously round one."
+      }
+    ],
+    "note": "STAR is a container, not a cage. In a real conversation you will move between the parts naturally. The point is to make sure every strong answer has all four, so you never trail off without a result."
+  },
+
+  "workshop": {
+    "kicker": "Build your own · the resourceful way",
+    "title": "Now write three STAR stories of your own.",
+    "lead": "You do not walk into an interview with fifty answers. You walk in with three or four true stories, each mapped to STAR, that you can bend to fit whatever they ask. Most behavioral questions are the same handful of themes wearing different clothes. Prepare a story for each theme and you are ready for the real thing.",
+    "themes": [
+      { "theme": "A problem you solved", "prompt": "A time you were handed a mess and made it work. Great for \"tell me about a challenge\" and \"walk me through a hard project\".", "icon": "puzzle" },
+      { "theme": "A mistake you owned", "prompt": "A time something went wrong and you took responsibility and fixed it. Answers \"tell me about a failure\" without sounding rehearsed.", "icon": "shield-alert" },
+      { "theme": "You learned something fast", "prompt": "A time you taught yourself a tool or skill under pressure. Perfect for remote roles where nobody trains you.", "icon": "graduation-cap" },
+      { "theme": "You worked with a difficult person or constraint", "prompt": "A time you handled a hard client, a tight deadline, or a vague brief. Shows composure and communication.", "icon": "users" }
+    ],
+    "steps": [
+      { "n": 1, "title": "Pick a real moment", "desc": "From a job, a micro-task, school, a pro-bono project, or a volunteer role. It does not need to be glamorous. It needs to be true and to have a clear result." },
+      { "n": 2, "title": "Write it in four lines", "desc": "One line each: Situation, Task, Action, Result. If a line runs to three sentences, you are over-explaining. Cut it." },
+      { "n": 3, "title": "Say it out loud, twice", "desc": "Reading it is not the same as saying it. The first time is clumsy. The second time it starts to sound like you. Aim for 60–90 seconds spoken." },
+      { "n": 4, "title": "Map each story to two or three themes", "desc": "One good story usually answers several questions. Know which of yours to reach for when a question lands." }
+    ],
+    "crossref": { "href": "/prompts", "label": "Write an interviewer prompt and rehearse against it" }
+  },
+
+  "questions": {
+    "kicker": "The usual suspects · how to approach them",
+    "title": "The questions you can expect, and the thinking behind a good answer.",
+    "lead": "These come up in almost every online-work interview. We are not giving you scripts — a scripted answer sounds scripted. We are giving you the angle a strong answer takes, so you can build your own from your own truth.",
+    "items": [
+      { "q": "Tell me about yourself.", "approach": "Not your life story. A 60-second arc: who you are professionally, one proof of it, and why this role. Present, past, future. End by handing the conversation back.", "icon": "user-round" },
+      { "q": "Why do you want to work remotely / with us?", "approach": "Show you researched them specifically — one real detail about the company or role. Generic enthusiasm reads as \"I applied to fifty of these.\"", "icon": "search" },
+      { "q": "What's your biggest weakness?", "approach": "Name a real one you are actively working on, and the concrete step you take to manage it. The trap is a fake weakness (\"I work too hard\") — it signals you can't self-assess.", "icon": "scan-eye" },
+      { "q": "Walk me through your experience.", "approach": "Lead with proof, not titles. \"Here's a system I built\" beats \"I was responsible for.\" If you have no paid experience yet, a portfolio micro-task is real experience — present it as one.", "icon": "briefcase" },
+      { "q": "How do you handle deadlines / multiple clients?", "approach": "Describe your actual system — the tracker, the calendar, the communication cadence. Vague answers here scare remote clients most, because they can't see you work.", "icon": "calendar-check" },
+      { "q": "What are your rate expectations?", "approach": "Anchor on value and give a range, then invite their budget. Do your homework on live posts first so the number isn't a guess. See the Salary Guide for how to price.", "icon": "wallet" }
+    ]
+  },
+
+  "askThem": {
+    "kicker": "Turn the table · questions to ask",
+    "title": "The interview goes both ways. Ask, and you stand out.",
+    "lead": "\"Do you have any questions for us?\" is not the end of the interview — it is part of it. Candidates who ask nothing look uninterested. Candidates who ask sharp questions look like professionals evaluating a fit. Prepare three, and ask the ones that still make sense after the conversation.",
+    "items": [
+      "What does a great first 90 days in this role look like to you?",
+      "How does the team communicate across time zones — async, live calls, or both?",
+      "What's the biggest challenge the person in this role will face?",
+      "How do you measure success for this position?",
+      "What tools does the team run on day to day?"
+    ],
+    "note": "Never let your first question be about pay or time off. Those matter, but lead with the work — it signals you care about doing the job well, and the money conversation lands better after."
+  },
+
+  "formats": {
+    "kicker": "Remote reality · the formats you'll meet",
+    "title": "Online interviews come in shapes an office job never had.",
+    "lead": "Know the format before you're in it. Each one rewards different preparation, and a few are unique to remote and freelance hiring.",
+    "items": [
+      { "name": "One-way video", "icon": "message-square", "desc": "You record answers to preset questions on your own; no live person. Common for first-round screening. Treat it as a live interview: good light, quiet room, look at the lens, and do a test take first." },
+      { "name": "Live video call", "icon": "wifi", "desc": "The classic. Test your internet, audio, and background beforehand. Have your STAR stories and your questions on a note off-camera, near the lens." },
+      { "name": "Paid or unpaid test task", "icon": "clipboard-check", "desc": "A small sample of the real work. Reasonable when it's short and scoped. A red flag when it's large, suspiciously specific, or looks like free labor — see Conduct & Reality." },
+      { "name": "Async written interview", "icon": "pen-line", "desc": "Questions over email or a form. Your written English carries everything here. Structure your answers, proofread, and keep them tight." }
+    ]
+  },
+
+  "redFlags": {
+    "kicker": "Protect yourself · interview red flags",
+    "title": "A real interview never asks for these.",
+    "lead": "Job scams often hide inside a fake interview, because it feels legitimate. If any of these appear, stop — no matter how good the role sounds. This is the same vetting instinct the Reality and Find Work pages teach, applied to the interview itself.",
+    "items": [
+      { "flag": "They ask for money, a fee, or a deposit", "why": "No legitimate employer or client ever charges you to be hired, trained, or equipped. This is the single most common job scam." },
+      { "flag": "They want ID, bank details, or an OTP before any contract", "why": "Identity and payment details come after a signed agreement, never during a first chat. An OTP request is almost always account theft." },
+      { "flag": "The whole 'interview' happens over text on WhatsApp or Telegram", "why": "Real hiring uses email, a real call, or the platform. A rushed chat-only process that skips a proper conversation is a classic pattern." },
+      { "flag": "The offer is instant, huge, and vague about the actual work", "why": "\"$40/hr, start today, easy tasks\" with no clear role is bait. Real roles describe real responsibilities and take more than one message to fill." }
+    ],
+    "source": { "label": "PH 2nd most attacked by job scams — Manila Bulletin / SEEK", "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport" }
+  },
+
+  "closing": {
+    "kicker": "The honest bottom line",
+    "title": "Confidence is preparation, not personality.",
+    "body": "You do not have to be naturally charming to interview well. You have to know your stories, know your structure, and know a few real things about the people across the screen. That is all learnable, and you just learned it. Prepare three STAR stories, rehearse them out loud, write your questions, and treat the whole thing as a conversation between two professionals deciding if they fit.",
+    "point": "Prepare the structure once. Bring true stories. Ask good questions. Then relax — you're ready.",
+    "links": [
+      { "href": "/prompts", "label": "Rehearse with AI", "desc": "Write your own interviewer prompt and practice against it until your answers are sharp." },
+      { "href": "/tasks", "label": "Build the stories", "desc": "Micro-tasks give you real projects to turn into STAR answers — proof, not promises." },
+      { "href": "/salary", "label": "Know your number", "desc": "Walk in ready for the rate question, anchored on value and live-post data." }
+    ]
+  }
+}
