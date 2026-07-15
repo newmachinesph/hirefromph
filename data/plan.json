@@ -51,7 +51,7 @@
       "focus": "Get your setup, mindset, and core skills right.",
       "days": [
         { "day": 1, "task": "Confirm equipment & workspace with the Equipment Checker.", "tool": "/equipment" },
-        { "day": 2, "task": "Watch the full walkthrough. Take notes on the 9-step roadmap.", "tool": "/start" },
+        { "day": 2, "task": "Read the 9-step roadmap end to end. Note which stage you are in today.", "tool": "/start" },
         { "day": 3, "task": "Learn your first core tool (Google Workspace basics).", "tool": "/tools" },
         { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches" },
         { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume, don't write it yet.", "tool": "/build" },
@@ -79,9 +79,9 @@
       "focus": "Work the directory. Track everything. Prep to interview.",
       "days": [
         { "day": 15, "task": "Open the Apply directory. Shortlist 20 places to apply.", "tool": "/apply" },
-        { "day": 16, "task": "Send 5 tailored applications using the AI message prompt.", "tool": "/prompts" },
+        { "day": 16, "task": "Send 5 tailored applications using a message prompt you wrote in the workshop.", "tool": "/prompts" },
         { "day": 17, "task": "Send 5 more. Log each in your tracker.", "tool": "/build" },
-        { "day": 18, "task": "Run a mock interview with the Interview Coach Bot.", "tool": "/prompts" },
+        { "day": 18, "task": "Run a mock interview against an interviewer prompt you build yourself.", "tool": "/prompts" },
         { "day": 19, "task": "Send 5 more applications. Follow up on day-1 sends.", "tool": "/apply" },
         { "day": 20, "task": "Learn the negotiation basics. Set your target rate.", "tool": "/get-hired" },
         { "day": 21, "task": "Review pipeline. Adjust your message based on replies.", "tool": "/build" }

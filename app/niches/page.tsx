@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import tracks from "@/data/tracks.json";
 import frameworks from "@/data/frameworks.json";
+import salary from "@/data/salary.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { NicheExplorer } from "@/components/niche-explorer";
@@ -225,6 +226,39 @@ export default function NichesPage() {
         <Reveal i={2} className="mt-10">
           <NicheExplorer />
         </Reveal>
+      </section>
+
+      {/* ------------------------------------------------------------ END GOALS */}
+      <section className="border-y border-line bg-paper-3/60 py-14 lg:py-20">
+        <div className="container-x">
+          <Reveal>
+            <SectionHeading
+              kicker="Where these lanes lead · not where you start"
+              title={salary.emerging.title}
+              lead={salary.emerging.lead}
+            />
+          </Reveal>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {salary.emerging.roles.map((r, idx) => (
+              <Reveal key={r.role} i={idx % 3}>
+                <div className="flex h-full items-start gap-4 rounded-2xl border border-line bg-paper-2 p-5">
+                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ink text-paper-2">
+                    <Icon name={r.icon} size={18} />
+                  </span>
+                  <div>
+                    <h3 className="font-display text-base leading-snug">{r.role}</h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{r.blurb}</p>
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <Reveal i={1}>
+            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-soft">
+              {salary.emerging.note2}
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ------------------------------------------------------------ NEXT STEPS */}

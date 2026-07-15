@@ -20,7 +20,7 @@
   },
   "stats": [
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
-    { "value": "6", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick" },
+    { "value": "7", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick, give" },
     { "value": "4", "label": "career stages", "sub": "zero to indispensable" },
     { "value": "20", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
   ],

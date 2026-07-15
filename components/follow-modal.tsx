@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { X, Users, Sparkles, Gift } from "lucide-react";
+import { X, Users, Sparkles, Megaphone } from "lucide-react";
 import site from "@/data/site.json";
 import { LogoMark, FacebookGlyph } from "@/components/logo";
 
@@ -94,14 +94,14 @@ export function FollowModal() {
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                 Walang bayad — everything here is free and always will be. Join
-                our Facebook group for real talk, new resources, and member
-                giveaways.
+                our Facebook group for the news that matters: real shifts in
+                this market, and what&apos;s new on the portal.
               </p>
 
               <ul className="mt-5 flex flex-col gap-2.5 text-sm text-ink">
                 <li className="flex items-center gap-2.5">
-                  <Gift size={16} className="shrink-0 text-coral" />
-                  Free drops and giveaways, first to the group
+                  <Megaphone size={16} className="shrink-0 text-coral" />
+                  Important news that affects this career, explained early
                 </li>
                 <li className="flex items-center gap-2.5">
                   <Sparkles size={16} className="shrink-0 text-emerald" />

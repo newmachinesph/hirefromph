@@ -135,6 +135,21 @@
         { "title": "Time-box, then ask well", "desc": "Give yourself a hard limit, say 45 minutes. If you're still stuck, stop grinding and ask, using the ASK method. Grinding past the limit is ego, not work." }
       ],
       "drill": "Next time you're stuck, run the five steps in order and write down which one freed you. Within a month you'll know your own failure pattern."
+    },
+    {
+      "id": "give",
+      "name": "GIVE",
+      "tagline": "How to grow by giving first",
+      "icon": "heart-handshake",
+      "accent": "coral",
+      "summary": "The fastest way into any ecosystem is to put value into it before you ask anything from it.",
+      "steps": [
+        { "title": "Do real work for a real need, free", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good — a small organization gains more from ten of your hours than a big one ever would." },
+        { "title": "Teach what you just learned", "desc": "Write the guide you wish existed when you were stuck, and post it where the next beginner will find it. Teaching is also the strongest test of understanding — see LEARN." },
+        { "title": "Share the method, not just the win", "desc": "When something works — a message that got a reply, a workflow that saved hours — share how it worked. Wins impress people. Methods help them." },
+        { "title": "Show up in your niche's rooms", "desc": "Answer real questions in the communities where your niche gathers. In six months you are the person people tag, and referrals start arriving before job posts do." }
+      ],
+      "drill": "This week: one hour of scoped, free help for one real person or organization, and one written answer to a beginner's question in a community you belong to. Notice what both cost you — almost nothing. Notice what they start."
     }
   ],
   "antiPatterns": {
