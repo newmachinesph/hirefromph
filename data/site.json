@@ -44,6 +44,7 @@
         { "label": "Micro-Tasks", "href": "/tasks" },
         { "label": "Build Labs", "href": "/build" },
         { "label": "Learn Any Tool", "href": "/tools" },
+        { "label": "Portfolio Ladder", "href": "/portfolio" },
         { "label": "AI Leverage", "href": "/prompts" },
         { "label": "Resource Shelf", "href": "/resources" }
       ]
