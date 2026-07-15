@@ -111,7 +111,7 @@
       "tagline": "How to ask a question that actually gets answered",
       "icon": "message-square-quote",
       "accent": "indigo",
-      "summary": "A well-formed question gets a professional's help. A lazy one gets ignored, everywhere, forever.",
+      "summary": "A well-formed question gets a professional's help. A vague one gets ignored — everywhere.",
       "steps": [
         { "title": "Show what you're trying to do", "desc": "State the actual goal, not the symptom. 'I'm trying to reconcile March' beats 'it's not working'." },
         { "title": "Show what you already tried", "desc": "This proves you respect the other person's time, and it eliminates the first five things they'd suggest." },
