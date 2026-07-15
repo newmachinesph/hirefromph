@@ -7,12 +7,14 @@ import { Icon } from "@/components/icon";
 import { SelfAudit } from "@/components/self-audit";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/method",
   title: "The Method, we teach you to build it",
   description:
     "We don't give you the file. We teach you to build it. Six principles, seven methods, and a self-audit, the resourcefulness curriculum behind everything on this platform.",
-};
+});
 
 const accentText: Record<string, string> = {
   coral: "text-coral",

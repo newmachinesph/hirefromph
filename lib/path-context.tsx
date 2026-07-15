@@ -44,7 +44,7 @@ export type PathState = {
   stage: number;
   /** ISO string when the path was started */
   startedAt: string | null;
-  /** 9-step roadmap completion */
+  /** 11-step roadmap completion */
   steps: Record<number, boolean>;
   /** 30-day plan day completion */
   planDays: Record<number, boolean>;

@@ -6,127 +6,34 @@ import { AlertTriangle, ExternalLink, TriangleAlert } from "lucide-react";
 import sim from "@/data/simulator.json";
 import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import {
+  BASE,
+  BASE_RANGE,
+  DEFAULT_FX,
+  MONTHS,
+  NON_PAYMENT_RISK,
+  aiMultiplier,
+  baselineOf,
+  clientsMultiplier,
+  hourlyAt,
+  languageMultiplier,
+  monthlyBilled,
+  monthlyEffective,
+  ownershipMultiplier,
+  type Ai,
+  type Clients,
+  type Config,
+  type Craft,
+  type Hours,
+  type Language,
+  type Ownership,
+} from "@/lib/simulator-math";
 
 /* ------------------------------------------------------------------ */
 /*  THE MODEL                                                          */
-/*  Numbers live here (logic). All prose lives in data/simulator.json. */
+/*  Projection math (types, constants, formulas) lives in             */
+/*  lib/simulator-math.ts. All prose lives in data/simulator.json.    */
 /* ------------------------------------------------------------------ */
-
-type Craft = "none" | "building" | "deep";
-type Ai = "none" | "user" | "augmented";
-type Ownership = "tasks" | "outcomes";
-type Hours = 10 | 20 | 40;
-type Language = "english" | "second";
-type Clients = "local" | "foreign";
-
-type Config = {
-  craft: Craft;
-  ai: Ai;
-  ownership: Ownership;
-  hours: Hours;
-  language: Language;
-  clients: Clients;
-};
-
-/** Base hourly USD, set by CRAFT and by nothing else. That is the thesis. */
-const BASE: Record<Craft, number> = { none: 4, building: 9, deep: 22 };
-const BASE_RANGE: Record<Craft, [number, number]> = {
-  none: [3, 7],
-  building: [8, 15],
-  deep: [18, 35],
-};
-
-/** Everyone starts at the bottom of the generalist band. */
-const START_RATE = 3;
-
-/** Months to reach the full base rate. Deep skill is slow. We do not pretend otherwise. */
-const CRAFT_RAMP: Record<Craft, number> = { none: 3, building: 18, deep: 30 };
-
-/**
- * THE MOST IMPORTANT LINE IN THIS FILE.
- * The AI premium is conditional on craft. AI multiplies a craft; it cannot multiply zero.
- */
-const AI_AUGMENTED: Record<Craft, number> = { none: 1.0, building: 1.15, deep: 1.4 };
-const AI_USER = 1.05;
-
-const OWNERSHIP_OUTCOMES = 1.25;
-const LANGUAGE_SECOND = 1.2;
-const CLIENTS_LOCAL = 0.45;
-
-/** Premium phase-ins, skill and trust are not granted on day one. */
-const AI_RAMP = 12;
-const OWNERSHIP_RAMP = 18;
-
-/** The reality tax. ILO: ~20 unpaid minutes per paid hour → you keep about two thirds. */
-const UNPAID_KEEP = 0.67;
-/** Fairwork: 31% of cloudworkers have experienced non-payment. Drawn as a band, never deducted. */
-const NON_PAYMENT_RISK = 0.31;
-
-const WEEKS_PER_MONTH = 4.33;
-const MONTHS = 36;
-const DEFAULT_FX = 58;
-
-/** Clamped smoothstep, legible easing, not a physics engine. */
-function ease(t: number): number {
-  const c = Math.min(1, Math.max(0, t));
-  return c * c * (3 - 2 * c);
-}
-
-/** Phase a multiplier in from 1.0 to `target` over `months`. */
-function phaseIn(target: number, months: number, at: number): number {
-  return 1 + (target - 1) * ease(at / months);
-}
-
-function aiMultiplier(c: Config): number {
-  if (c.ai === "none") return 1;
-  if (c.ai === "user") return AI_USER;
-  return AI_AUGMENTED[c.craft];
-}
-
-function ownershipMultiplier(c: Config): number {
-  return c.ownership === "outcomes" ? OWNERSHIP_OUTCOMES : 1;
-}
-
-function languageMultiplier(c: Config): number {
-  return c.language === "second" ? LANGUAGE_SECOND : 1;
-}
-
-function clientsMultiplier(c: Config): number {
-  return c.clients === "local" ? CLIENTS_LOCAL : 1;
-}
-
-/** Effective hourly at a given month, with every multiplier applied in order. */
-function hourlyAt(c: Config, month: number): number {
-  const base =
-    START_RATE +
-    (BASE[c.craft] - START_RATE) * ease(month / CRAFT_RAMP[c.craft]);
-  // "user" is available from day one, everyone already has ChatGPT. "augmented" is built, so it ramps.
-  const ai =
-    c.ai === "user" ? AI_USER : phaseIn(aiMultiplier(c), AI_RAMP, month);
-  const own = phaseIn(ownershipMultiplier(c), OWNERSHIP_RAMP, month);
-  return base * ai * own * languageMultiplier(c) * clientsMultiplier(c);
-}
-
-/** Monthly USD actually kept, after the unpaid-time tax. */
-function monthlyEffective(c: Config, month: number): number {
-  return hourlyAt(c, month) * c.hours * WEEKS_PER_MONTH * UNPAID_KEEP;
-}
-
-function monthlyBilled(c: Config, month: number): number {
-  return hourlyAt(c, month) * c.hours * WEEKS_PER_MONTH;
-}
-
-/** The comparison line: generic task-taker, same hours, same client market. */
-function baselineOf(c: Config): Config {
-  return {
-    craft: "none",
-    ai: "none",
-    ownership: "tasks",
-    hours: c.hours,
-    language: "english",
-    clients: c.clients,
-  };
-}
 
 /* ------------------------------------------------------------------ */
 /*  Formatting                                                         */
@@ -363,7 +270,11 @@ export function CareerSimulator() {
   const [hours, setHours] = useState<Hours>(20);
   const [language, setLanguage] = useState<Language>("english");
   const [clients, setClients] = useState<Clients>("foreign");
-  const [fx, setFx] = useState(DEFAULT_FX);
+  // Track the raw field text so the user can freely clear/type a partial value.
+  const [fxText, setFxText] = useState(String(DEFAULT_FX));
+  // Numeric FX for the projection: fall back to the default only while the text is invalid.
+  const fxNum = Number(fxText);
+  const fx = Number.isFinite(fxNum) && fxNum > 0 ? fxNum : DEFAULT_FX;
 
   const config = useMemo<Config>(
     () => ({ craft, ai, ownership, hours, language, clients }),
@@ -538,10 +449,11 @@ export function CareerSimulator() {
               min={30}
               max={120}
               step={0.5}
-              value={fx}
-              onChange={(e) => {
-                const n = Number(e.target.value);
-                setFx(Number.isFinite(n) && n > 0 ? n : DEFAULT_FX);
+              value={fxText}
+              onChange={(e) => setFxText(e.target.value)}
+              onBlur={() => {
+                if (!(Number.isFinite(fxNum) && fxNum > 0))
+                  setFxText(String(DEFAULT_FX));
               }}
               className="w-28 rounded-xl border border-line-strong bg-paper-2 px-4 py-2.5 text-sm font-semibold text-ink outline-none focus-visible:border-ink"
             />

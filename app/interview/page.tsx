@@ -3,12 +3,14 @@ import interview from "@/data/interview.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/interview",
   title: "Interview Prep",
   description:
     "The STAR method, a bank of the questions you'll actually face, questions to ask them, remote interview formats, and the red flags of a scam interview. Learn the structure, then build your own answers from your own stories.",
-};
+});
 
 export default function InterviewPage() {
   const { hero, star, workshop, questions, askThem, formats, redFlags, closing } =

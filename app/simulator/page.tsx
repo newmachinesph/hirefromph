@@ -3,12 +3,14 @@ import sim from "@/data/simulator.json";
 import { CareerSimulator } from "@/components/career-simulator";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/simulator",
   title: "Career Simulator",
   description:
     "Time does not raise your rate. Set your craft, your AI, and what you sell, then watch 36 months of a generic task-taker and 36 months of a specialist diverge. A model, not a prediction, with every assumption tagged.",
-};
+});
 
 function Source({ label, url }: { label: string; url: string }) {
   return (

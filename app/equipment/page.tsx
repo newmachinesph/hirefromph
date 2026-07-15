@@ -7,6 +7,7 @@ import { Icon } from "@/components/icon";
 import { EquipmentChecker } from "@/components/equipment-checker";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
 const SPEC_ICON_TONE = [
   "bg-coral-tint text-coral-deep",
@@ -15,10 +16,11 @@ const SPEC_ICON_TONE = [
   "bg-[#e9e9fd] text-indigo",
 ];
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/equipment",
   title: "Equipment Guide 2026",
   description: equipment.intro,
-};
+});
 
 export default function EquipmentPage() {
   return (

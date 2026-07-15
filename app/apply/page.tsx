@@ -7,11 +7,13 @@ import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
 import { FindWorkDirectory, VettingTool } from "@/components/find-work";
 import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/apply",
   title: "Find Work",
   description: findwork.intro,
-};
+});
 
 const accentBg: Record<string, string> = {
   coral: "bg-coral-tint text-coral-deep",

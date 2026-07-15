@@ -12,6 +12,27 @@ const MIN_COMMITMENT = 80;
 export function IntegrityOath() {
   const uid = useId();
   const { state, hydrated, updateOath, toggleOathClause } = usePath();
+
+  // Gate on hydration: state.oath is empty until localStorage loads. Without
+  // this, a returning signer sees the blank, unsigned form flash before their
+  // ticked clauses, commitment, name, and "Signed by" panel paint in.
+  if (!hydrated) {
+    return (
+      <div
+        aria-hidden
+        className="animate-pulse rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 lg:p-10"
+      >
+        <div className="h-4 w-2/3 rounded bg-line" />
+        <div className="mt-6 flex flex-col gap-2">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <div key={i} className="h-16 rounded-2xl bg-line/50" />
+          ))}
+        </div>
+        <div className="mt-8 h-40 rounded-2xl bg-line/50" />
+      </div>
+    );
+  }
+
   const { clauses, commitment, name, signedAt } = state.oath;
 
   const accepted = oath.clauses.filter((c) => clauses[c.id]).length;

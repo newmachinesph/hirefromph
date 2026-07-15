@@ -5,7 +5,9 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Menu, X, Check, ChevronDown } from "lucide-react";
 import site from "@/data/site.json";
-import tracks from "@/data/tracks.json";
+// Slim id→name map so the always-loaded header doesn't bundle the full
+// tracks.json into every route. Keep in sync with data/tracks.json ids/names.
+import trackNames from "@/data/track-names.json";
 import { usePath } from "@/lib/path-context";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
@@ -48,7 +50,9 @@ export function SiteHeader() {
     };
   }, [explore]);
 
-  const activeTrack = tracks.tracks.find((t) => t.id === state.track);
+  const activeTrackName = state.track
+    ? (trackNames as Record<string, string>)[state.track]
+    : undefined;
 
   return (
     <header
@@ -138,13 +142,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          {hydrated && hasPath && activeTrack ? (
+          {hydrated && hasPath && activeTrackName ? (
             <Link
               href="/path"
               className="hidden items-center gap-2 rounded-full border border-emerald/30 bg-emerald-tint px-3.5 py-2 text-sm font-medium text-emerald sm:inline-flex"
             >
               <Check size={15} />
-              {activeTrack.name}
+              {activeTrackName}
             </Link>
           ) : (
             <Link

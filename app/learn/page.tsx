@@ -6,11 +6,13 @@ import { Icon } from "@/components/icon";
 import { StudyProtocol } from "@/components/study-protocol";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/learn",
   title: "How to Learn",
   description: learning.intro,
-};
+});
 
 type Work = {
   id: string;

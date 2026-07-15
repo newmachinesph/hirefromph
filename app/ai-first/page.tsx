@@ -3,12 +3,14 @@ import aifirst from "@/data/aifirst.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata = {
+export const metadata = pageMeta({
+  path: "/ai-first",
   title: "AI-First",
   description:
     "Every role runs on AI now. Coding agents, open-source and local models, AI image, AI video, and automation, taught as how to fold AI into your craft, with the four habits that turn it into leverage instead of slop. Every claim sourced.",
-};
+});
 
 const accentText: Record<string, string> = {
   coral: "text-coral",

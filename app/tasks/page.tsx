@@ -5,11 +5,13 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { MicroTasks } from "@/components/micro-tasks";
 import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/tasks",
   title: "Micro-Tasks",
   description: tasksData.intro,
-};
+});
 
 // One icon per step of the doctrine's four-step brief shape, data stays in tasks.json,
 // this is just the visual language for it.

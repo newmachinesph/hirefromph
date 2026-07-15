@@ -47,6 +47,11 @@ const trackNameById: Record<string, string> = {
   ),
 };
 
+// A task tagged "any" is universal — it belongs to every track, so it surfaces
+// under every chosen path and counts toward every track's chip.
+const matchesTrack = (task: Task, trackId: string) =>
+  task.track === trackId || task.track === "any";
+
 // Internal routes worth auto-linking when they show up inside "ifYouDont" copy.
 const KNOWN_ROUTES = [
   "/build",
@@ -117,13 +122,14 @@ export function MicroTasks() {
   }, [hydrated, hasPath, state.track]);
 
   const filtered = tasks.filter((t) => {
-    if (trackFilter !== "all" && t.track !== trackFilter) return false;
+    if (trackFilter !== "all" && !matchesTrack(t, trackFilter)) return false;
     if (difficultyFilter !== "all" && t.difficulty !== difficultyFilter) return false;
     return true;
   });
 
-  const recommended = hydrated && hasPath && state.track
-    ? tasks.filter((t) => t.track === state.track).slice(0, 3)
+  const track = state.track;
+  const recommended = hydrated && hasPath && track
+    ? tasks.filter((t) => matchesTrack(t, track)).slice(0, 3)
     : [];
 
   const doneMap: Record<string, boolean> = hydrated ? state.tasks : {};
@@ -180,7 +186,7 @@ export function MicroTasks() {
                 <FilterChip
                   key={t.id}
                   label={t.name}
-                  count={tasks.filter((task) => task.track === t.id).length}
+                  count={tasks.filter((task) => matchesTrack(task, t.id)).length}
                   active={trackFilter === t.id}
                   onClick={() => setTrackFilter(t.id)}
                 />

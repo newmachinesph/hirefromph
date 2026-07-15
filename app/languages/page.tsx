@@ -4,11 +4,13 @@ import languagesData from "@/data/languages.json";
 import { Reveal } from "@/components/reveal";
 import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { pageMeta } from "@/lib/meta";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMeta({
+  path: "/languages",
   title: "Language Premium, A Second Language Can Double Your Pay",
   description: languagesData.intro,
-};
+});
 
 type Language = (typeof languagesData.languages)[number];
 type Tone = "coral" | "amber" | "indigo";
