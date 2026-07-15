@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-07",
   "hero": {
     "kicker": "AI-first · every role",
     "line1": "Every role now",
@@ -13,10 +14,10 @@
     "lead": "Anyone with a chatbot can now make a passable version of a generic deliverable, which is exactly why the generic version stopped being worth much. The pay did not disappear. It moved. It went to the people who fold AI into a real craft and ship an outcome a client cannot get from a blank prompt box. These three numbers, all from the same marketplace, tell the whole story.",
     "stats": [
       {
-        "value": "40%+",
+        "value": "34%",
         "label": "more per hour with AI",
-        "body": "Upwork's own data: freelancers doing AI-related work earn over 40% more per hour than those who don't. Real, but read it with the next section, because that premium lands on a craft, not on prompting alone.",
-        "source": { "label": "Upwork, 2025's most in-demand skills", "url": "https://investors.upwork.com/news-releases/news-release-details/upwork-unveils-2025s-most-demand-skills" }
+        "body": "Upwork's own data: freelancers doing AI work earn 34% more per hour than those who don't. Real, but read it with the next section, because that premium lands on a craft, not on prompting alone.",
+        "source": { "label": "Upwork, In-Demand Skills 2026", "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai" }
       },
       {
         "value": "+109%",
@@ -59,7 +60,7 @@
       {
         "letter": "3",
         "name": "Discernment",
-        "purpose": "Judging whether the output is actually good. The skill the 40% premium is really paying for.",
+        "purpose": "Judging whether the output is actually good. The skill the AI premium is really paying for.",
         "doThis": "Read the draft as the client's harshest critic. Where is it generic? What did it make up? A person who can tell good output from confident nonsense is worth more than the model.",
         "icon": "scan-eye",
         "accent": "emerald"

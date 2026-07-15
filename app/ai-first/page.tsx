@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import aifirst from "@/data/aifirst.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
 import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
@@ -70,7 +71,10 @@ export default function AiFirstPage() {
       {/* --------------------------------------------------------------- HERO */}
       <section className="container-x pt-14 pb-10 lg:pt-20">
         <Reveal>
-          <Kicker>{hero.kicker}</Kicker>
+          <div className="flex items-center justify-between gap-4">
+            <Kicker>{hero.kicker}</Kicker>
+            <FreshnessNote date={aifirst.lastVerified} />
+          </div>
         </Reveal>
         <Reveal i={1}>
           <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

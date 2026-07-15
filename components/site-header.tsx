@@ -118,9 +118,27 @@ export function SiteHeader() {
               <div className="absolute right-0 top-[calc(100%+0.6rem)] w-[46rem] max-w-[calc(100vw-2rem)] rounded-2xl border border-line bg-paper-2 p-6 shadow-[var(--shadow-lg)]">
                 <div className="grid grid-cols-2 gap-x-8 gap-y-6 xl:grid-cols-4">
                   {site.navGroups.map((group) => (
-                    <div key={group.title}>
+                    <div
+                      key={group.title}
+                      className={cn(
+                        "primary" in group && group.primary &&
+                          "xl:col-span-4 rounded-xl border border-coral/25 bg-coral-tint/40 p-4",
+                      )}
+                    >
                       <h2 className="kicker text-coral">{group.title}</h2>
-                      <div className="mt-3 flex flex-col gap-0.5">
+                      {"desc" in group && group.desc && (
+                        <p className="mt-1.5 text-xs leading-snug text-ink-faint">
+                          {group.desc}
+                        </p>
+                      )}
+                      <div
+                        className={cn(
+                          "mt-3 gap-0.5",
+                          "primary" in group && group.primary
+                            ? "grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5"
+                            : "flex flex-col",
+                        )}
+                      >
                         {group.links.map((item) => {
                           const active = pathname === item.href;
                           return (
