@@ -16,7 +16,10 @@
   },
   "social": {
     "facebook": "https://www.facebook.com/devupph/",
-    "facebookGroup": "https://www.facebook.com/groups/devupph"
+    "facebookGroup": "https://www.facebook.com/groups/devupph",
+    "instagram": "https://www.instagram.com/devupph/",
+    "youtube": "https://www.youtube.com/@devupph",
+    "tiktok": "https://www.tiktok.com/@devupph"
   },
   "stats": [
     { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
