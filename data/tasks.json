@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 31 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 32 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it no-cost if you don't already have it." },
@@ -1529,6 +1529,54 @@
       ],
       "presentIt": "Present it as the agent's problem solved: 'From a flat 2D plan to a listing-ready render.' Put the source floor plan and your final render side by side — the jump from line drawing to photorealistic space is the whole pitch.",
       "stretch": "Add a 15-second walkthrough video from the same model and one AI-generated render variation (SketchUp Diffusion or ZSky AI), then note what the AI got wrong that your to-scale model got right. Directing AI and correcting it is the premium skill."
+    },
+    {
+      "id": "listing-optimization-teardown",
+      "title": "Turn a Weak Product Listing Into a Buyable One",
+      "track": "ecommerce",
+      "accent": "coral",
+      "icon": "shopping-cart",
+      "difficulty": "Starter",
+      "time": "2–3 hours",
+      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts — the single most-requested e-commerce VA skill.",
+      "prerequisites": [
+        { "skill": "Listing anatomy (title, bullets, description, images, A+ content)", "why": "You can't fix a listing if you don't know which part does which job. The title ranks; the bullets sell; the images close.", "ifYouDont": "Amazon Seller University (open) has a free walkthrough of every listing element in under an hour." },
+        { "skill": "Basic keyword research", "why": "A listing rewrite that isn't driven by what buyers actually search is just prettier guessing.", "ifYouDont": "Helium 10's free tier lets you pull real search terms for any product; their free tutorials show how." }
+      ],
+      "resources": [
+        { "name": "A real public product listing", "type": "Dataset", "what": "Pick any live Amazon or Shopify product with an obviously weak listing to stand in for your 'client's' store — real data, no invented product.", "free": true, "url": "#" },
+        { "name": "Helium 10", "type": "Tool", "what": "Free tier for keyword research and a listing-quality audit.", "free": true, "url": "https://www.helium10.com" },
+        { "name": "ChatGPT", "type": "Tool", "what": "Free tier to draft and tighten copy fast — you direct it, you don't trust it blind.", "free": true, "url": "https://chatgpt.com" }
+      ],
+      "brief": {
+        "scenario": "A seller's product is buried on page five. The listing has a vague title, three lazy bullets, one dark photo, and no A+ content. Sales are flat and they blame the market. It's not the market — it's the listing. Rebuild it.",
+        "deliverable": "A rewritten listing: a keyword-driven title, five benefit-led bullets, a scannable description, an image/A+ shot list, and the keyword list you built it on — presented next to the original.",
+        "constraints": [
+          "Keyword-driven, not keyword-stuffed — every term must read like a human wrote it.",
+          "No invented claims, fake reviews, or made-up specs. Honest copy is the only kind that survives a return rate.",
+          "Every bullet must lead with a buyer benefit, not a feature spec."
+        ],
+        "steps": [
+          "Pick one real, weak public listing and screenshot the original as your 'before'.",
+          "Pull the top search terms buyers actually use for that product (Helium 10 free tier).",
+          "Rewrite the title and five bullets around those terms — benefit first, keyword woven in.",
+          "Draft a scannable description and a shot list for the images and A+ content.",
+          "Lay your version beside the original and write two lines on why each change lifts rank or conversion."
+        ]
+      },
+      "definitionOfDone": [
+        "The new title leads with the product's top real search term and reads naturally.",
+        "All five bullets lead with a benefit, not a spec.",
+        "The keyword list you used is attached, not just implied.",
+        "Before and after sit side by side so the improvement is obvious at a glance."
+      ],
+      "selfCritique": [
+        "Would a buyer scanning for three seconds understand what this is and why it's better?",
+        "Did I write for the search algorithm and the human, or stuff keywords and hope?",
+        "Is there a single claim here I couldn't back up if the product arrived tomorrow?"
+      ],
+      "presentIt": "Present it as a rank-and-conversion play: 'Original listing → page five, flat sales; rebuilt listing → keyword-led, benefit-first, A+ mapped.' Put both versions side by side — the contrast is the proof you can do this for a real store.",
+      "stretch": "Do the same teardown for two competitor listings in the same category and write a one-page 'why theirs wins or loses' note. A VA who can read a whole category, not just one listing, is a strategist a seller keeps."
     }
   ]
 }

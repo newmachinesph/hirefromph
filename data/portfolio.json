@@ -440,6 +440,38 @@
           "piece": "A before/after: an AI-generated render next to your corrected, post-processed final, with a short note on what you fixed (scale, materials, lighting) that the AI got wrong."
         }
       ]
+    },
+    {
+      "id": "ecommerce",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can list a product properly and keep a store's day-to-day tidy.",
+          "tools": [
+            { "name": "Shopify (free trial)", "free": "Free trial + low intro rate; full store backend", "what": "Build listings, collections, and process test orders", "url": "https://www.shopify.com" },
+            { "name": "Canva", "free": "Free plan; product & promo graphics", "what": "Product images, banners, and promo creatives", "url": "https://www.canva.com" }
+          ],
+          "piece": "A demo Shopify store with five fully-optimized product listings (titles, descriptions, images, variants) and a homepage collection, built in a free trial."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can optimize listings and plan PPC on a real marketplace.",
+          "tools": [
+            { "name": "Amazon Seller University", "free": "Free training; Seller Central walkthroughs", "what": "Learn listing optimization, A+ content, and PPC", "url": "https://sell.amazon.com/learn" },
+            { "name": "Helium 10", "free": "Free tier; keyword & listing tools", "what": "Research keywords and audit a listing's quality", "url": "https://www.helium10.com" }
+          ],
+          "piece": "A full listing-optimization teardown of a real public Amazon product: keyword-researched title and bullets, an A+ content outline, and a starter PPC plan."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can run the store on AI and prove the output jump.",
+          "tools": [
+            { "name": "ChatGPT", "free": "Free tier; drafting & bulk copy", "what": "Draft descriptions, replies, and report summaries at volume", "url": "https://chatgpt.com" },
+            { "name": "Google Sheets", "free": "Free with any Google account", "what": "Inventory, order, and weekly-performance dashboards", "url": "https://sheets.google.com" }
+          ],
+          "piece": "A weekly store-ops SOP plus a Google Sheets dashboard (inventory, orders, top sellers), and a before/after showing how AI turned a three-hour listing batch into forty-five minutes."
+        }
+      ]
     }
   ]
 }
