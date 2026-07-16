@@ -21,14 +21,14 @@ export const metadata: Metadata = pageMeta({
   path: "/niches",
   title: "Niche Learning Hub",
   description:
-    "Pick your lane and go deep. Explore 11 online-career niches, including new lanes like streaming, podcast production, and faith-based support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
+    "Pick your lane and go deep. Explore 12 online-career niches, including newer lanes like medical virtual assistance, streaming, and podcast production, with pay bands, demand, skills, open courses, and how AI is changing each one.",
 });
 
 const steps = [
   {
     n: "01",
     title: "Pick a niche",
-    desc: "Browse the 11 lanes below and see the pay, demand, and skills for each.",
+    desc: "Browse the 12 lanes below and see the pay, demand, and skills for each.",
     icon: "compass",
   },
   {
@@ -206,7 +206,7 @@ export default function NichesPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <SectionHeading
-            kicker="11 worked examples"
+            kicker="12 worked examples"
             title="Tap a niche to see the full breakdown"
             lead={
               <>

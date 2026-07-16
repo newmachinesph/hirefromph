@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 29 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 30 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it no-cost if you don't already have it." },
@@ -1433,6 +1433,54 @@
       ],
       "presentIt": "Present it as your first case study: the organization, the problem, the deliverable, and one real outcome. 'Rebuilt the enrollment sheet for a 40-student tutorial center; staff now update it themselves' beats any certificate on the page.",
       "stretch": "After handover, offer a second org the same deliverable. Two named organizations plus two handover docs is a portfolio — and a referral network you earned by giving first."
+    },
+    {
+      "id": "soap-note-scribe",
+      "title": "Turn a Doctor Visit Into a Clean SOAP Note",
+      "track": "medical-va",
+      "accent": "emerald",
+      "icon": "stethoscope",
+      "difficulty": "Intermediate",
+      "time": "2–3 hours",
+      "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes — the exact skill US practices now pay a medical VA a premium for.",
+      "prerequisites": [
+        { "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)", "why": "You cannot chart what you can't read. A wrong term or misread abbreviation in a note is a clinical error, not a typo.", "ifYouDont": "Audit Rice University's Medical Terminology I on Coursera free — the first module covers enough to start." },
+        { "skill": "HIPAA basics (what PHI is, minimum-necessary, safe handling)", "why": "Every chart is protected health information. Handling it wrong is the fastest way to lose a medical client and expose them to a fine.", "ifYouDont": "Take a free HIPAA awareness course (HIPAA Journal lists several with certificates) before you touch any record." }
+      ],
+      "resources": [
+        { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI — pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com" },
+        { "name": "Coursera — Medical Terminology I", "type": "Course", "what": "Audit free; the vocabulary you need to read and write the note.", "free": true, "url": "https://www.coursera.org/learn/medical-terminology-1" },
+        { "name": "Freed AI scribe", "type": "Tool", "what": "Free trial notes; generate an AI draft of the same visit to compare against your own.", "free": true, "url": "https://www.getfreed.ai" }
+      ],
+      "brief": {
+        "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable — and providers are the bottleneck. They want a VA who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
+        "deliverable": "One clean, structured SOAP note (Subjective, Objective, Assessment, Plan) written by you from an MTSamples visit transcript, plus a short 'what the AI got wrong' list comparing your note to an AI-drafted version.",
+        "constraints": [
+          "Use only MTSamples or synthetic data — never a real person's health information, even a friend's.",
+          "Every section (S/O/A/P) must be present and in clinician shorthand, not narrative paragraphs.",
+          "Flag anything the source is missing (no BP, no allergy check) rather than inventing it — a good scribe never fabricates a value."
+        ],
+        "steps": [
+          "Pick one visit report from MTSamples (a general or family-practice note is easiest to start).",
+          "Write your own SOAP note from it: what the patient reports (S), measurable findings (O), the diagnosis/impression (A), and next steps (P).",
+          "Run the same transcript through Freed's free trial to get an AI-drafted note.",
+          "Compare the two line by line: list every place the AI added, dropped, or misstated something.",
+          "Write a two-line note on how you'd store and share this chart to stay HIPAA-compliant."
+        ]
+      },
+      "definitionOfDone": [
+        "The SOAP note has all four sections, each in correct clinical shorthand and terminology.",
+        "No value is invented — anything missing from the source is flagged as missing.",
+        "The 'what the AI got wrong' list names at least two concrete differences with the correct fix.",
+        "A one-line HIPAA handling note explains how the chart is stored and who may see it."
+      ],
+      "selfCritique": [
+        "Would a provider be able to sign this note as-is, or would they still have to rewrite it?",
+        "Did I catch the AI's errors, or did I trust its draft and miss a wrong term or dose?",
+        "Is there a single spot where I guessed a value instead of flagging it as absent?"
+      ],
+      "presentIt": "Present it as a before/after the way a clinic thinks: 'AI draft → provider still had to fix 4 things; my corrected note → sign-ready.' Redact nothing (there's no real PHI) and lead with the errors you caught — that list is the proof you're safe to hand a chart.",
+      "stretch": "Chart three more MTSamples visits across different specialties (a mental-health intake, a dental note, a follow-up) and time yourself. A medical VA who charts a clean note in under 15 minutes is worth a retainer."
     }
   ]
 }

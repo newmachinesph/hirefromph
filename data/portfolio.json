@@ -376,6 +376,38 @@
           "piece": "Three captioned sermon clips cut in CapCut and an organized YouTube channel: custom thumbnails, chapters, and a sermons playlist."
         }
       ]
+    },
+    {
+      "id": "medical-va",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You know the language and the rules, the two things a clinic cannot let you learn on their patients.",
+          "tools": [
+            { "name": "Coursera — Medical Terminology I", "free": "Free to audit (Rice University)", "what": "Learn the terms behind every chart note and referral", "url": "https://www.coursera.org/learn/medical-terminology-1" },
+            { "name": "Free HIPAA Awareness Training", "free": "Free course + certificate options", "what": "Understand PHI, minimum-necessary, and breach rules", "url": "https://www.hipaajournal.com/free-hipaa-training/" }
+          ],
+          "piece": "A one-page medical-terminology cheat sheet in your own words plus a HIPAA awareness certificate, and a short note on how you would handle PHI in a shared drive."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can run a practice's front desk from anywhere: intake, scheduling, and clean records.",
+          "tools": [
+            { "name": "SimplePractice", "free": "Free 30-day trial (full EHR + scheduling)", "what": "Practice-management EHR used by therapists and small clinics", "url": "https://www.simplepractice.com" },
+            { "name": "Doxy.me", "free": "Free tier; HIPAA-compliant telehealth", "what": "Run a simple, no-download telehealth waiting room", "url": "https://doxy.me" }
+          ],
+          "piece": "A mock practice set up in a SimplePractice trial: intake form, three fictional patient charts, a booked telehealth appointment on Doxy.me, and a written new-patient intake SOP."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can chart a visit fast and check the AI scribe's work — the skill clinics pay a premium for.",
+          "tools": [
+            { "name": "Freed AI scribe", "free": "Free trial notes before paywall", "what": "Ambient scribe that drafts a SOAP note from a visit", "url": "https://www.getfreed.ai" },
+            { "name": "MTSamples", "free": "Free; public sample transcriptions (no real PHI)", "what": "Thousands of real-shape sample reports to practice on", "url": "https://mtsamples.com" }
+          ],
+          "piece": "A clean SOAP note you wrote from an MTSamples visit transcript, side-by-side with an AI-drafted version and a short list of the errors you caught and corrected."
+        }
+      ]
     }
   ]
 }
