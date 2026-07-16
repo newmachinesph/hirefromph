@@ -408,6 +408,38 @@
           "piece": "A clean SOAP note you wrote from an MTSamples visit transcript, side-by-side with an AI-drafted version and a short list of the errors you caught and corrected."
         }
       ]
+    },
+    {
+      "id": "design-viz",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can model a real space to scale and produce a clean set of views.",
+          "tools": [
+            { "name": "SketchUp Free", "free": "Free web version; core modeling", "what": "Model rooms and buildings to scale in the browser", "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free" },
+            { "name": "Blender", "free": "Free & open-source; full 3D suite", "what": "Model, texture, and render with no license cost", "url": "https://www.blender.org" }
+          ],
+          "piece": "A real room or small building modeled to scale from a public floor plan in SketchUp Free, exported as four clean views: plan, two elevations, and one perspective."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can turn a model into a photorealistic render a client could put on a brochure.",
+          "tools": [
+            { "name": "D5 Render", "free": "Free Community tier; real-time ray tracing", "what": "Light, texture, and render your model photorealistically", "url": "https://www.d5render.com" },
+            { "name": "Twinmotion", "free": "Free tier for individuals and small use", "what": "Real-time renders and smooth walkthrough videos", "url": "https://www.twinmotion.com" }
+          ],
+          "piece": "One interior and one exterior photorealistic render of your model in D5 Render, plus a 15-second walkthrough video."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can direct AI renders and fix what they get wrong — the paid edge.",
+          "tools": [
+            { "name": "SketchUp Diffusion / ZSky AI", "free": "Free AI render tiers", "what": "Generate AI render variations from your model or a sketch", "url": "https://zsky.ai/ai-architecture-rendering" },
+            { "name": "Photopea", "free": "Free browser Photoshop alternative", "what": "Post-process renders: sky, people, colour, cleanup", "url": "https://www.photopea.com" }
+          ],
+          "piece": "A before/after: an AI-generated render next to your corrected, post-processed final, with a short note on what you fixed (scale, materials, lighting) that the AI got wrong."
+        }
+      ]
     }
   ]
 }
