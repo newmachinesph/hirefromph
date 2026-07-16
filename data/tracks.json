@@ -288,6 +288,32 @@
         "change": "AI now drafts the newsletters, formats the devotionals, and clips sermons into shareable posts. The production side of ministry and wellness work is getting lighter.",
         "human": "But nobody wants a chatbot at their most human moments. Care, presence, and shared values cannot be generated. AI handles the formatting. You hold the community."
       }
+    },
+    {
+      "id": "medical-va",
+      "name": "Medical Virtual Assistant",
+      "icon": "stethoscope",
+      "accent": "emerald",
+      "tagline": "The remote backbone of a US practice",
+      "blurb": "Run scheduling, intake, charting, and insurance for US clinics and telehealth practices. HIPAA-trained support that clinics keep for years.",
+      "pay": "$1,000–$2,400/mo",
+      "demandLabel": "Very high",
+      "demand": 5,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": ["athenahealth", "Tebra (Kareo)", "SimplePractice", "Doxy.me", "Freed AI scribe"],
+      "skills": ["EHR charting & medical scribing", "Scheduling & patient intake", "Insurance verification & prior authorization", "Medical terminology & HIPAA compliance", "Records & patient follow-up"],
+      "learn": [
+        { "type": "Course", "title": "Medical Terminology I (audit free)", "provider": "Rice University · Coursera (open to audit)" },
+        { "type": "Course", "title": "Free HIPAA Awareness Training + certificate", "provider": "HIPAA Journal listing (open)" },
+        { "type": "Course", "title": "SimplePractice Academy", "provider": "SimplePractice (open)" }
+      ],
+      "certs": ["HIPAA Awareness", "Medical Terminology (Coursera)"],
+      "clients": "US private practices, telehealth startups, dental and mental-health clinics, and medical billing companies that need HIPAA-trained remote support.",
+      "ai": {
+        "change": "Ambient AI scribes now draft the visit notes on their own — athenahealth began shipping one free to every customer in early 2026 — and bots handle the first scheduling messages. The rote typing side of medical support is automating fast.",
+        "human": "But protected health information is a legal liability, not a text field. Catching the AI's wrong dosage, winning back a denied insurance claim, and calming an anxious patient are calls no clinic hands to a model. HIPAA judgment is the job now, and it pays a premium."
+      }
     }
   ]
 }
