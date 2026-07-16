@@ -36,7 +36,7 @@ const toolkit = [
   { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
   { title: "The Resource Shelf", desc: "A curated shelf of real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
-  { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 13 we list, including new lanes like architectural 3D visualization and medical VA, are worked examples.", href: "/niches", icon: "layers" },
+  { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 14 we list, including new lanes like e-commerce store management and architectural 3D visualization, are worked examples.", href: "/niches", icon: "layers" },
   { title: "How to Learn", desc: "What the evidence actually supports, and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
   { title: "Application Tracker", desc: "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", href: "/tracker", icon: "table" },
   { title: "Language Premium", desc: "A second language can double your rate. Which ones pay, and where to learn them free in PH.", href: "/languages", icon: "languages" },

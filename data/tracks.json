@@ -340,6 +340,32 @@
         "change": "AI now turns a sketch or a CAD screenshot into a photorealistic render in seconds. SketchUp Diffusion ships inside SketchUp 2026, and tools like D5's AI and Veras light and stage a scene for you. The slow, manual rendering pass is collapsing.",
         "human": "But AI cannot model a building to real dimensions, produce a permit-ready drawing, or nail the client's fifth revision to match the actual materials and site. It makes a pretty picture; you make a correct, buildable one. Accuracy and revisions are the paid work now."
       }
+    },
+    {
+      "id": "ecommerce",
+      "name": "E-commerce Store Management",
+      "icon": "shopping-cart",
+      "accent": "coral",
+      "tagline": "Run the store so the seller can grow it",
+      "blurb": "Manage a Shopify, Amazon, or TikTok Shop store end to end: listings, orders, inventory, customer messages, and the weekly numbers. The operator sellers cannot scale without.",
+      "pay": "$800–$2,500/mo",
+      "demandLabel": "Very high",
+      "demand": 5,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": ["Shopify", "Amazon Seller Central", "TikTok Shop", "Helium 10", "ChatGPT"],
+      "skills": ["Product listing & optimization", "Order & inventory management", "Marketplace PPC & promotions", "Customer service & reviews", "Supplier coordination & reporting"],
+      "learn": [
+        { "type": "Course", "title": "Shopify Learn — store fundamentals", "provider": "Shopify (open)" },
+        { "type": "Course", "title": "Amazon Seller University", "provider": "Amazon (open)" },
+        { "type": "Course", "title": "TikTok Shop Academy", "provider": "TikTok (open)" }
+      ],
+      "certs": ["Shopify", "Amazon Ads (optional)"],
+      "clients": "Shopify, Amazon FBA, and TikTok Shop sellers, plus DTC brands drowning in day-to-day store admin who need one operator to keep it running and reporting.",
+      "ai": {
+        "change": "AI now writes the product descriptions, drafts the customer replies, and summarizes the week's numbers in seconds. The busywork half of store management is automating, and in 2026 the VAs who wield AI ship two to three times the output of the ones who don't.",
+        "human": "But AI does not own account health, win a Seller-Support case, spot the supplier about to run you out of stock, or know which of forty products is actually worth pushing. Judgment, relationships, and account trust are the job. AI is the leverage; you are still the operator."
+      }
     }
   ]
 }
