@@ -314,6 +314,32 @@
         "change": "Ambient AI scribes now draft the visit notes on their own — athenahealth began shipping one free to every customer in early 2026 — and bots handle the first scheduling messages. The rote typing side of medical support is automating fast.",
         "human": "But protected health information is a legal liability, not a text field. Catching the AI's wrong dosage, winning back a denied insurance claim, and calming an anxious patient are calls no clinic hands to a model. HIPAA judgment is the job now, and it pays a premium."
       }
+    },
+    {
+      "id": "design-viz",
+      "name": "Architectural & 3D Visualization",
+      "icon": "pencil-ruler",
+      "accent": "amber",
+      "tagline": "Turn plans into pictures clients can sell",
+      "blurb": "Model, render, and draft for architects, interior designers, and real-estate developers worldwide. Your AutoCAD and SketchUp skills, sold by the project instead of tied to a desk.",
+      "pay": "$900–$3,000+/mo",
+      "demandLabel": "Rising fast",
+      "demand": 5,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": ["SketchUp", "AutoCAD", "Blender", "D5 Render", "Enscape"],
+      "skills": ["3D modeling (SketchUp/Blender)", "CAD drafting & technical drawings", "Photorealistic rendering", "Real-time walkthroughs & virtual staging", "Photoshop post-production"],
+      "learn": [
+        { "type": "Course", "title": "SketchUp Campus — fundamentals", "provider": "Trimble/SketchUp (open)" },
+        { "type": "YouTube", "title": "Blender beginner series", "provider": "Blender Guru (open)" },
+        { "type": "Course", "title": "AutoCAD essentials tutorials", "provider": "Autodesk (open)" }
+      ],
+      "certs": ["SketchUp", "Autodesk AutoCAD (optional)"],
+      "clients": "Architects, interior designers, real-estate developers and agents, and furniture or construction firms worldwide that need renders, walkthroughs, and drawings faster than an in-house team can produce them.",
+      "ai": {
+        "change": "AI now turns a sketch or a CAD screenshot into a photorealistic render in seconds. SketchUp Diffusion ships inside SketchUp 2026, and tools like D5's AI and Veras light and stage a scene for you. The slow, manual rendering pass is collapsing.",
+        "human": "But AI cannot model a building to real dimensions, produce a permit-ready drawing, or nail the client's fifth revision to match the actual materials and site. It makes a pretty picture; you make a correct, buildable one. Accuracy and revisions are the paid work now."
+      }
     }
   ]
 }

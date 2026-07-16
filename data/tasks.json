@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 30 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 31 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it no-cost if you don't already have it." },
@@ -1481,6 +1481,54 @@
       ],
       "presentIt": "Present it as a before/after the way a clinic thinks: 'AI draft → provider still had to fix 4 things; my corrected note → sign-ready.' Redact nothing (there's no real PHI) and lead with the errors you caught — that list is the proof you're safe to hand a chart.",
       "stretch": "Chart three more MTSamples visits across different specialties (a mental-health intake, a dental note, a follow-up) and time yourself. A medical VA who charts a clean note in under 15 minutes is worth a retainer."
+    },
+    {
+      "id": "scale-model-render",
+      "title": "Model a Real Room and Render It Photorealistically",
+      "track": "design-viz",
+      "accent": "amber",
+      "icon": "pencil-ruler",
+      "difficulty": "Intermediate",
+      "time": "3–4 hours",
+      "proves": "You can take a flat floor plan, build an accurate 3D model, and produce a render a client could put in a listing — the core deliverable of every arch-viz and real-estate visualization gig.",
+      "prerequisites": [
+        { "skill": "Basic 3D modeling in SketchUp or Blender (push/pull, components, materials)", "why": "The whole task is modeling to scale, then lighting it. If you can't extrude a wall or apply a material, you can't build the room.", "ifYouDont": "SketchUp Campus (open) or the Blender Guru beginner series on YouTube takes you from zero to a walled room in an afternoon." },
+        { "skill": "Reading a floor plan and its dimensions", "why": "A render is only worth anything if it's to scale. Misread the plan and every proportion is wrong.", "ifYouDont": "Any real-estate listing floor plan shows a scale and room dimensions — practice reading three before you model one." }
+      ],
+      "resources": [
+        { "name": "SketchUp Free", "type": "Tool", "what": "Free browser modeler — build the room to scale with no license.", "free": true, "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free" },
+        { "name": "D5 Render", "type": "Tool", "what": "Free Community tier with real-time ray tracing — light and render the model.", "free": true, "url": "https://www.d5render.com" },
+        { "name": "A public floor plan", "type": "Dataset", "what": "Pull a real 2D floor plan from any real-estate listing to stand in for your 'client's' brief — no invented layouts.", "free": true, "url": "#" }
+      ],
+      "brief": {
+        "scenario": "A real-estate agent is selling a unit that's still under construction. There are no photos — only a 2D floor plan. She needs one interior render and one key view to put on the listing so buyers can picture the space. All you get is the plan.",
+        "deliverable": "An accurate, to-scale 3D model of the unit, plus one photorealistic interior render and one key exterior or perspective view, sized for a listing.",
+        "constraints": [
+          "Model to scale from the plan's real dimensions — never eyeball or invent a measurement.",
+          "Use believable real-world materials and lighting, not default grey boxes.",
+          "If the plan doesn't specify something (ceiling height, a finish), note your assumption rather than guessing silently — a good visualizer flags, doesn't fabricate."
+        ],
+        "steps": [
+          "Pick one real-estate floor plan with visible dimensions to use as your brief.",
+          "Model the unit to scale in SketchUp Free: walls, openings, and the main fixtures.",
+          "Apply real materials (floor, walls, key furniture) and set up a natural light source.",
+          "Bring the model into D5 Render, stage one interior view, and render it photorealistically.",
+          "Render one key exterior or wide perspective, then write a two-line note listing every assumption you made where the plan was silent."
+        ]
+      },
+      "definitionOfDone": [
+        "The model's room dimensions match the source floor plan (spot-check three walls).",
+        "Both renders use real materials and lighting, not default placeholders.",
+        "Every assumption made beyond the plan is written down, not hidden.",
+        "The two final images are exported at listing-ready resolution."
+      ],
+      "selfCritique": [
+        "If the agent measured a wall against my model, would it match the plan?",
+        "Does this look like a real space a buyer could stand in, or like an untextured 3D exercise?",
+        "Did I invent any dimension or finish instead of flagging it as an assumption?"
+      ],
+      "presentIt": "Present it as the agent's problem solved: 'From a flat 2D plan to a listing-ready render.' Put the source floor plan and your final render side by side — the jump from line drawing to photorealistic space is the whole pitch.",
+      "stretch": "Add a 15-second walkthrough video from the same model and one AI-generated render variation (SketchUp Diffusion or ZSky AI), then note what the AI got wrong that your to-scale model got right. Directing AI and correcting it is the premium skill."
     }
   ]
 }
