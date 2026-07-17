@@ -3,7 +3,7 @@ import english from "@/data/english.json";
 import { CommsLab } from "@/components/comms-lab";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
-import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -58,28 +58,24 @@ export default function EnglishPage() {
   return (
     <>
       {/* ------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>English · Pragmatics · Speaking</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="English · Pragmatics · Speaking"
+        title={
+          <>
             Your English is not the problem.
             <br />
             The habits around it are.
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {english.intro}
-          </p>
-        </Reveal>
+          </>
+        }
+        titleWidth="max-w-4xl"
+        lead={english.intro}
+      >
         <Reveal i={3}>
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             {english.creed}
           </blockquote>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* --------------------------------------------------------- BASELINE */}
       <section className="bg-paper-3/60 py-20 lg:py-24">

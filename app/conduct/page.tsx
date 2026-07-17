@@ -3,7 +3,7 @@ import conduct from "@/data/conduct.json";
 import { Icon } from "@/components/icon";
 import { IntegrityOath } from "@/components/integrity-oath";
 import { Reveal } from "@/components/reveal";
-import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -44,22 +44,18 @@ export default function ConductPage() {
   return (
     <>
       {/* ------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Conduct · Integrity · The oath</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="Conduct · Integrity · The oath"
+        title={
+          <>
             Nobody is watching you work.
             <br />
             That is the entire test.
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {conduct.intro}
-          </p>
-        </Reveal>
+          </>
+        }
+        titleWidth="max-w-4xl"
+        lead={conduct.intro}
+      >
         <Reveal i={3}>
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             {conduct.creed}
@@ -70,7 +66,7 @@ export default function ConductPage() {
             {conduct.whyItMatters}
           </p>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ------------------------------------------------------- PRINCIPLES */}
       <section className="bg-paper-3/60 py-20 lg:py-24">

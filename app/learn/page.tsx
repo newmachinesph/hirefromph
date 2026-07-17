@@ -4,7 +4,7 @@ import learning from "@/data/learning.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { StudyProtocol } from "@/components/study-protocol";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -62,34 +62,22 @@ export default function LearnPage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl"
-        />
-        <div className="container-x relative pt-14 pb-10 lg:pt-20">
-          <Reveal>
-            <Kicker>{learning.kicker}</Kicker>
-          </Reveal>
-          <Reveal i={1}>
-            <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-              {learning.headline}
-            </h1>
-          </Reveal>
-          <Reveal i={2}>
-            <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {learning.intro}
+      <PageHero
+        kicker={learning.kicker}
+        title={learning.headline}
+        lead={learning.intro}
+        backdrop={
+          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+        }
+      >
+        <Reveal i={3}>
+          <div className="mt-8 max-w-2xl rounded-2xl border border-line-strong bg-ink px-6 py-5 text-paper-2">
+            <p className="font-display text-lg leading-snug text-balance">
+              {learning.creed}
             </p>
-          </Reveal>
-          <Reveal i={3}>
-            <div className="mt-8 max-w-2xl rounded-2xl border border-line-strong bg-ink px-6 py-5 text-paper-2">
-              <p className="font-display text-lg leading-snug text-balance">
-                {learning.creed}
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+          </div>
+        </Reveal>
+      </PageHero>
 
       {/* ----------------------------------------------------- MYTH, KILLED FIRST */}
       <section className="container-x pb-20 lg:pb-28">

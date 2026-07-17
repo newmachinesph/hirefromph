@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 import indispensable from "@/data/indispensable.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { ArrowLink, ButtonLink, Kicker, PageHero, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -46,28 +46,24 @@ export default function IndispensablePage() {
   return (
     <>
       {/* --------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>{hero.kicker}</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker={hero.kicker}
+        title={
+          <>
             {hero.line1}
             <br />
             <span className="text-coral">{hero.line2}</span>
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {hero.intro}
-          </p>
-        </Reveal>
+          </>
+        }
+        titleWidth="max-w-4xl"
+        lead={hero.intro}
+      >
         <Reveal i={3}>
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ---------------------------------------------------------------- WHY */}
       <section className="bg-paper-3/60 py-20 lg:py-24">

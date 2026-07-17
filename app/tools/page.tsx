@@ -5,7 +5,7 @@ import learn from "@/data/learntools.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
@@ -43,20 +43,7 @@ export default function ToolsPage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>{learn.kicker}</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-            {learn.headline}
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {learn.intro}
-          </p>
-        </Reveal>
+      <PageHero kicker={learn.kicker} title={learn.headline} lead={learn.intro}>
         <Reveal i={3}>
           <div className="mt-8 max-w-2xl rounded-2xl border border-line-strong bg-ink px-6 py-5 text-paper-2">
             <p className="font-display text-lg leading-snug text-balance">
@@ -69,7 +56,7 @@ export default function ToolsPage() {
             <FreshnessNote date={tools.lastVerified} />
           </div>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ------------------------------------------------------------ METHOD */}
       <section className="container-x pb-20 lg:pb-28">

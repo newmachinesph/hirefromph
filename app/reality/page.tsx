@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 import reality from "@/data/reality.json";
 import { Icon } from "@/components/icon";
 import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ArrowLink, ButtonLink, Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { FreshnessNote } from "@/components/freshness-note";
 import { pageMeta } from "@/lib/meta";
 
@@ -141,22 +141,18 @@ export default function RealityPage() {
   return (
     <>
       {/* ------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Reality check · every number sourced</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="Reality check · every number sourced"
+        titleWidth="max-w-4xl"
+        title={
+          <>
             {reality.heroTitle.line1}
             <br />
             {reality.heroTitle.line2}
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {reality.intro}
-          </p>
-        </Reveal>
+          </>
+        }
+        lead={reality.intro}
+      >
         <Reveal i={3}>
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             {reality.creed}
@@ -172,7 +168,7 @@ export default function RealityPage() {
             <FreshnessNote date={reality.lastVerified} />
           </div>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ---------------------------------------------------- READ A NUMBER */}
       <section className="bg-paper-3/60 py-20 lg:py-24">

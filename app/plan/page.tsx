@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import plan from "@/data/plan.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
-import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { PageHero, Pill, SectionHeading } from "@/components/ui";
 import { PlanWizard } from "@/components/plan-wizard";
 import { pageMeta } from "@/lib/meta";
 
@@ -42,38 +42,30 @@ const howItWorks = [
 export default function PlanPage() {
   return (
     <>
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl"
-        />
-        <div className="container-x relative pt-14 pb-10 lg:pt-20">
-          <Reveal>
-            <Kicker>Your 30-day plan</Kicker>
-          </Reveal>
-          <Reveal i={1}>
-            <h1 className="mt-6 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] tracking-[-0.02em] text-balance">
-              Thirty days. One clear plan.{" "}
-              <span className="text-coral">Built around you.</span>
-            </h1>
-          </Reveal>
-          <Reveal i={2}>
-            <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {plan.intro}
-            </p>
-          </Reveal>
-          <Reveal i={3}>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {quickFacts.map((f) => (
-                <Pill key={f.label} tone={f.tone}>
-                  <Icon name={f.icon} size={13} />
-                  {f.label}
-                </Pill>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        kicker="Your 30-day plan"
+        title={
+          <span className="tracking-[-0.02em]">
+            Thirty days. One clear plan.{" "}
+            <span className="text-coral">Built around you.</span>
+          </span>
+        }
+        lead={plan.intro}
+        backdrop={
+          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+        }
+      >
+        <Reveal i={3}>
+          <div className="mt-8 flex flex-wrap gap-3">
+            {quickFacts.map((f) => (
+              <Pill key={f.label} tone={f.tone}>
+                <Icon name={f.icon} size={13} />
+                {f.label}
+              </Pill>
+            ))}
+          </div>
+        </Reveal>
+      </PageHero>
 
       <section className="container-x py-14 lg:py-20">
         <Reveal>
