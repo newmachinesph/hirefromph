@@ -3,8 +3,8 @@
     "kicker": "Get legit · BIR · benefits · getting paid",
     "line1": "Make it official.",
     "line2": "The professional upgrade nobody teaches.",
-    "intro": "You can start earning without any of this. But the professionals who last register the work, protect their health and retirement, and get paid through rails that don't eat their rate. None of it is as scary as the horror stories say — and every step below links to the official page, not a rumor. Rules and rates change; the links are the source of truth.",
-    "creed": "A registered professional can issue a real invoice. That single capability moves you from 'favor' to 'supplier' — and suppliers negotiate."
+    "intro": "You can start earning without any of this. But the professionals who last register the work, protect their health and retirement, and get paid through rails that don't eat their rate. None of it is as scary as the horror stories say, and every step below links to the official page, not a rumor. Rules and rates change; the links are the source of truth.",
+    "creed": "A registered professional can issue a real invoice. That single capability moves you from 'favor' to 'supplier', and suppliers negotiate."
   },
 
   "why": {
@@ -14,7 +14,7 @@
       {
         "icon": "receipt-text",
         "title": "You become invoice-capable",
-        "desc": "Serious clients — especially companies — need a real invoice or official receipt to book you as a supplier. Freelancers who can issue one get considered for bigger contracts and better rates. The ones who can't stay in the informal pile."
+        "desc": "Serious clients, especially companies, need a real invoice or official receipt to book you as a supplier. Freelancers who can issue one get considered for bigger contracts and better rates. The ones who can't stay in the informal pile."
       },
       {
         "icon": "shield-check",
@@ -24,7 +24,7 @@
       {
         "icon": "heart-handshake",
         "title": "You cover your own back",
-        "desc": "No employer means no HR enrolling you in benefits. SSS, PhilHealth, and Pag-IBIG all accept self-employed and voluntary members — sickness, maternity, disability, retirement, and housing loans stay available. Skipping them saves a little now and costs a lot later."
+        "desc": "No employer means no HR enrolling you in benefits. SSS, PhilHealth, and Pag-IBIG all accept self-employed and voluntary members: sickness, maternity, disability, retirement, and housing loans stay available. Skipping them saves a little now and costs a lot later."
       }
     ]
   },
@@ -32,22 +32,22 @@
   "bir": {
     "kicker": "Taxes · the calm version",
     "title": "BIR registration, step by step.",
-    "lead": "This is the part with the scariest reputation and the most mundane reality. You register once, then file on a schedule. Most new freelancers with foreign clients choose the 8% option for its simplicity. This page is orientation, not tax advice — confirm your own situation on the official pages or with an accountant.",
+    "lead": "This is the part with the scariest reputation and the most mundane reality. You register once, then file on a schedule. Most new freelancers with foreign clients choose the 8% option for its simplicity. This page is orientation, not tax advice; confirm your own situation on the official pages or with an accountant.",
     "steps": [
       {
         "n": 1,
         "title": "Register as self-employed",
-        "desc": "You register with the BIR as a self-employed professional (Form 1901) using your existing TIN — or get one if you've never had one. Registration can be started online through the BIR's ORUS portal, and you'll receive your Certificate of Registration (Form 2303)."
+        "desc": "You register with the BIR as a self-employed professional (Form 1901) using your existing TIN, or get one if you've never had one. Registration can be started online through the BIR's ORUS portal, and you'll receive your Certificate of Registration (Form 2303)."
       },
       {
         "n": 2,
         "title": "Choose how you're taxed",
-        "desc": "If your gross receipts stay within the ₱3M VAT threshold, you can elect the 8% flat option: 8% on gross receipts above ₱250,000 per year, in lieu of graduated income tax and percentage tax. One rate, simple math. The graduated option can beat it if your deductible expenses are high — that's the comparison worth doing once, on paper."
+        "desc": "If your gross receipts stay within the ₱3M VAT threshold, you can elect the 8% flat option: 8% on gross receipts above ₱250,000 per year, in lieu of graduated income tax and percentage tax. One rate, simple math. The graduated option can beat it if your deductible expenses are high: that's the comparison worth doing once, on paper."
       },
       {
         "n": 3,
         "title": "Issue invoices and keep books",
-        "desc": "Registered professionals issue invoices for what they earn and keep simple books of accounts. Sequential invoice numbers, never reused — the same habit the Build Labs teach. This is the paperwork that makes you a supplier instead of a favor."
+        "desc": "Registered professionals issue invoices for what they earn and keep simple books of accounts. Sequential invoice numbers, never reused: the same habit the Build Labs teach. This is the paperwork that makes you a supplier instead of a favor."
       },
       {
         "n": 4,
@@ -56,35 +56,35 @@
       }
     ],
     "sources": [
-      { "label": "BIR — official site and forms", "url": "https://www.bir.gov.ph" },
-      { "label": "BIR ORUS — online registration portal", "url": "https://orus.bir.gov.ph" },
-      { "label": "Taxumo — freelancer tax guide (8% option explained)", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/" }
+      { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" },
+      { "label": "BIR ORUS: online registration portal", "url": "https://orus.bir.gov.ph" },
+      { "label": "Taxumo: freelancer tax guide (8% option explained)", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/" }
     ],
-    "note": "Numbers that matter here — the ₱250,000 exemption, the ₱3M threshold, the 8% rate — are set by law and can change. The official pages above outrank anything you read elsewhere, including this page."
+    "note": "Numbers that matter here (the ₱250,000 exemption, the ₱3M threshold, the 8% rate) are set by law and can change. The official pages above outrank anything you read elsewhere, including this page."
   },
 
   "benefits": {
     "kicker": "Your own safety net",
-    "title": "SSS, PhilHealth, Pag-IBIG — yes, without an employer.",
+    "title": "SSS, PhilHealth, Pag-IBIG: yes, without an employer.",
     "lead": "All three accept self-employed and voluntary members. Contribution tables change yearly, so we link the official rates instead of quoting them. What matters: enroll once, pay on schedule, and the benefits an employee gets from HR stay yours.",
     "items": [
       {
         "icon": "bank",
         "name": "SSS",
         "what": "Sickness, maternity, disability, unemployment, retirement, and salary loans. Register or switch to self-employed/voluntary through the My.SSS portal and pay monthly or quarterly.",
-        "source": { "label": "SSS — official site", "url": "https://www.sss.gov.ph" }
+        "source": { "label": "SSS: official site", "url": "https://www.sss.gov.ph" }
       },
       {
         "icon": "stethoscope",
         "name": "PhilHealth",
         "what": "Hospitalization and outpatient coverage under the direct-contributor scheme for the self-employed. One hospital stay without it can cost more than years of contributions.",
-        "source": { "label": "PhilHealth — official site", "url": "https://www.philhealth.gov.ph" }
+        "source": { "label": "PhilHealth: official site", "url": "https://www.philhealth.gov.ph" }
       },
       {
         "icon": "house",
         "name": "Pag-IBIG",
-        "what": "Savings program plus the housing loans most Filipinos eventually want. Voluntary members can also use MP2 — a five-year savings program with historically higher dividends than banks.",
-        "source": { "label": "Pag-IBIG Fund — official site", "url": "https://www.pagibigfund.gov.ph" }
+        "what": "Savings program plus the housing loans most Filipinos eventually want. Voluntary members can also use MP2: a five-year savings program with historically higher dividends than banks.",
+        "source": { "label": "Pag-IBIG Fund: official site", "url": "https://www.pagibigfund.gov.ph" }
       }
     ]
   },
@@ -92,7 +92,7 @@
   "gettingPaid": {
     "kicker": "Getting paid · protect the rate you earned",
     "title": "The transfer rail you pick is a pay cut or a raise.",
-    "lead": "Two freelancers bill the same $500. One receives thousands of pesos more — the only difference is the rail and its exchange rate. Fees change too often to print, so learn the one comparison that never expires: send a real amount through two rails, compare what lands in pesos, and keep the winner.",
+    "lead": "Two freelancers bill the same $500. One receives thousands of pesos more; the only difference is the rail and its exchange rate. Fees change too often to print, so learn the one comparison that never expires: send a real amount through two rails, compare what lands in pesos, and keep the winner.",
     "rails": [
       {
         "icon": "send",
@@ -103,7 +103,7 @@
       {
         "icon": "globe",
         "name": "Payoneer",
-        "shape": "Built for marketplaces and recurring client billing; widely used by Filipino freelancers. Watch the withdrawal and conversion fees — they decide your real rate.",
+        "shape": "Built for marketplaces and recurring client billing; widely used by Filipino freelancers. Watch the withdrawal and conversion fees. They decide your real rate.",
         "url": "https://www.payoneer.com"
       },
       {
@@ -115,21 +115,21 @@
       {
         "icon": "device-mobile",
         "name": "Local rails (GCash / Maya / bank)",
-        "shape": "Where the money usually lands in the end. Several transfer services pay out to GCash or PH banks directly — the test is always the same: how many pesos arrived from the same $500?",
+        "shape": "Where the money usually lands in the end. Several transfer services pay out to GCash or PH banks directly; the test is always the same: how many pesos arrived from the same $500?",
         "url": "https://www.gcash.com"
       }
     ],
-    "note": "The honest method: invoice a real amount, receive it through two different rails once, and write down what landed. Ten minutes of arithmetic, done once a year, protects every future invoice. No fee table on the internet — including ours — beats your own receipt."
+    "note": "The honest method: invoice a real amount, receive it through two different rails once, and write down what landed. Ten minutes of arithmetic, done once a year, protects every future invoice. No fee table on the internet, including ours, beats your own receipt."
   },
 
   "closing": {
     "kicker": "The honest bottom line",
     "title": "Legit is a system you set up once, not a tax you pay forever.",
-    "body": "One registration, three memberships, one payment rail chosen on evidence. After setup it is a few hours per quarter — and in exchange you can invoice like a supplier, prove your income, borrow, travel, and get sick without a catastrophe. This is the infrastructure under a career that lasts.",
+    "body": "One registration, three memberships, one payment rail chosen on evidence. After setup it is a few hours per quarter, and in exchange you can invoice like a supplier, prove your income, borrow, travel, and get sick without a catastrophe. This is the infrastructure under a career that lasts.",
     "point": "Set it up in your first three paid months, not your first week. Earn first, then make it official.",
     "links": [
       { "href": "/clients", "label": "Why invoice-capable wins", "desc": "Direct clients, retainers, and the supplier positioning that raises rates." },
-      { "href": "/build", "label": "Build your invoice & contract", "desc": "The lab that teaches the anatomy — scope, terms, sequential numbering." },
+      { "href": "/build", "label": "Build your invoice & contract", "desc": "The lab that teaches the anatomy: scope, terms, sequential numbering." },
       { "href": "/markets", "label": "Working abroad?", "desc": "Long stays can change where you owe tax. Check before you fly." }
     ]
   }

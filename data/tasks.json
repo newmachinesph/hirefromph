@@ -2,7 +2,7 @@
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
   "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 32 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
-  "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing — start with one.",
+  "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing. Start with one.",
   "howItWorks": [
     { "title": "Prerequisite", "desc": "Know what you need before you start, and exactly where to get it no-cost if you don't already have it." },
     { "title": "Resources", "desc": "Real, specific, no-cost resources: official docs, open courses, no-cost tool tiers. No paid tools required for any task on this page." },
@@ -709,7 +709,7 @@
         { "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure", "why": "You're wiring real tools together, you need to be able to build both ends of the pipe.", "ifYouDont": "Google Forms Help Center (open) for the form side; DevUp's tracker lab for the CRM-sheet side." }
       ],
       "resources": [
-        { "name": "Zapier no-cost tier", "type": "Tool", "what": "Build the real, working automation here (check the current no-cost-tier limits — at writing they covered this task).", "free": true, "url": "https://zapier.com" },
+        { "name": "Zapier no-cost tier", "type": "Tool", "what": "Build the real, working automation here (check the current no-cost-tier limits; at writing they covered this task).", "free": true, "url": "https://zapier.com" },
         { "name": "Zapier & Make Automation", "type": "Course", "what": "Vendor-provided course covering trigger/action design and common patterns.", "free": true, "url": "https://learn.zapier.com" },
         { "name": "Google Forms + Google Sheets", "type": "Tool", "what": "The two endpoints your automation connects, the form intake and the CRM-style tracker.", "free": true, "url": "https://www.google.com/forms/about/" }
       ],
@@ -807,7 +807,7 @@
         { "skill": "Automation trigger/action logic connecting a form or inbox to an AI step to a routing action", "why": "This is the same Zapier/Make trigger-action model as the CRM-automation task, with an AI action added in the middle.", "ifYouDont": "Zapier's no-cost Automation 101 course, plus their specific 'AI actions in Zaps' help docs." }
       ],
       "resources": [
-        { "name": "Zapier no-cost tier (with AI/OpenAI action step)", "type": "Tool", "what": "Build the real workflow here (check the current no-cost-tier limits — at writing they covered this task).", "free": true, "url": "https://zapier.com/ai" },
+        { "name": "Zapier no-cost tier (with AI/OpenAI action step)", "type": "Tool", "what": "Build the real workflow here (check the current no-cost-tier limits; at writing they covered this task).", "free": true, "url": "https://zapier.com/ai" },
         { "name": "DevUp's AI Leverage / Prompts lab", "type": "Docs", "what": "Teaches how to write your own structured, repeatable prompts, required before this task's AI step will work reliably.", "free": true, "url": "/prompts" },
         { "name": "OpenAI's no-cost prompt engineering guide", "type": "Docs", "what": "Official guidance on writing prompts that return consistent, structured output.", "free": true, "url": "https://platform.openai.com/docs/guides/prompt-engineering" }
       ],
@@ -1389,28 +1389,28 @@
       "icon": "heart-handshake",
       "difficulty": "Starter",
       "time": "1–2 weeks, a few hours per week",
-      "proves": "You can scope, deliver, and hand over real work for a real stakeholder — with a named organization willing to vouch for it. This is the closest thing to client experience that requires no client.",
+      "proves": "You can scope, deliver, and hand over real work for a real stakeholder, with a named organization willing to vouch for it. This is the closest thing to client experience that requires no client.",
       "prerequisites": [
         {
           "skill": "One deliverable you can already produce (from any other task on this page)",
           "why": "Pro-bono work is where you apply a skill for a real stakeholder, not where you learn it from zero. Bring one thing you can do.",
-          "ifYouDont": "Finish one Starter micro-task above first — it gives you the exact deliverable to offer."
+          "ifYouDont": "Finish one Starter micro-task above first: it gives you the exact deliverable to offer."
         }
       ],
       "resources": [
         {
           "name": "Your own community",
           "type": "Real clients",
-          "what": "A school, parish, barangay health center, co-op, or small local business — every one of them has a broken spreadsheet, an unmanaged page, or books nobody reconciles.",
+          "what": "A school, parish, barangay health center, co-op, or small local business: every one of them has a broken spreadsheet, an unmanaged page, or books nobody reconciles.",
           "free": true,
           "url": "#"
         }
       ],
       "brief": {
-        "scenario": "Choose one real organization near you and offer one clearly-scoped piece of work, no-cost. Put your hours where they do the most good — a small org with no budget gains more from ten of your hours than a large one ever would, and effective help is targeted: one real problem, solved completely, handed over so they can keep it running without you.",
+        "scenario": "Choose one real organization near you and offer one clearly-scoped piece of work, no-cost. Put your hours where they do the most good; a small org with no budget gains more from ten of your hours than a large one ever would, and effective help is targeted: one real problem, solved completely, handed over so they can keep it running without you.",
         "deliverable": "The finished work itself, plus a one-page handover the org can use after you leave: what you built, how to maintain it, and where everything lives.",
         "constraints": [
-          "Scope it in writing before you start — one deliverable, one deadline, agreed with a named person. Pro-bono without scope becomes an unpaid job.",
+          "Scope it in writing before you start: one deliverable, one deadline, agreed with a named person. Pro-bono without scope becomes an unpaid job.",
           "Treat it exactly like paid work: professional communication, deadlines kept, confidentiality respected. This is conduct practice as much as craft practice.",
           "Deliver a handover document. Work that collapses when you leave helped nobody."
         ],
@@ -1418,7 +1418,7 @@
           "List 3 organizations you already have a connection to, and for each, one visible problem you could fix.",
           "Contact the most promising one with a specific offer: the problem, the deliverable, the deadline. Specific offers get yes; vague offers get silence.",
           "Agree the scope in writing (a message thread counts). Then deliver it like a paid engagement.",
-          "Hand over: walk them through the work, leave the one-page guide, and ask one question — 'may I show this work, with your name, when I apply for jobs?'"
+          "Hand over: walk them through the work, leave the one-page guide, and ask one question: 'may I show this work, with your name, when I apply for jobs?'"
         ]
       },
       "definitionOfDone": [
@@ -1432,7 +1432,7 @@
         "Did I pick the org where my hours did the most good, or just the easiest ask?"
       ],
       "presentIt": "Present it as your first case study: the organization, the problem, the deliverable, and one real outcome. 'Rebuilt the enrollment sheet for a 40-student tutorial center; staff now update it themselves' beats any certificate on the page.",
-      "stretch": "After handover, offer a second org the same deliverable. Two named organizations plus two handover docs is a portfolio — and a referral network you earned by giving first."
+      "stretch": "After handover, offer a second org the same deliverable. Two named organizations plus two handover docs is a portfolio, and a referral network you earned by giving first."
     },
     {
       "id": "soap-note-scribe",
@@ -1442,23 +1442,23 @@
       "icon": "stethoscope",
       "difficulty": "Intermediate",
       "time": "2–3 hours",
-      "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes — the exact skill US practices now pay a medical VA a premium for.",
+      "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes: the exact skill US practices now pay a medical VA a premium for.",
       "prerequisites": [
-        { "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)", "why": "You cannot chart what you can't read. A wrong term or misread abbreviation in a note is a clinical error, not a typo.", "ifYouDont": "Audit Rice University's Medical Terminology I on Coursera free — the first module covers enough to start." },
+        { "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)", "why": "You cannot chart what you can't read. A wrong term or misread abbreviation in a note is a clinical error, not a typo.", "ifYouDont": "Audit Rice University's Medical Terminology I on Coursera free: the first module covers enough to start." },
         { "skill": "HIPAA basics (what PHI is, minimum-necessary, safe handling)", "why": "Every chart is protected health information. Handling it wrong is the fastest way to lose a medical client and expose them to a fine.", "ifYouDont": "Take a free HIPAA awareness course (HIPAA Journal lists several with certificates) before you touch any record." }
       ],
       "resources": [
-        { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI — pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com" },
-        { "name": "Coursera — Medical Terminology I", "type": "Course", "what": "Audit free; the vocabulary you need to read and write the note.", "free": true, "url": "https://www.coursera.org/learn/medical-terminology-1" },
+        { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI. Pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com" },
+        { "name": "Coursera: Medical Terminology I", "type": "Course", "what": "Audit free; the vocabulary you need to read and write the note.", "free": true, "url": "https://www.coursera.org/learn/medical-terminology-1" },
         { "name": "Freed AI scribe", "type": "Tool", "what": "Free trial notes; generate an AI draft of the same visit to compare against your own.", "free": true, "url": "https://www.getfreed.ai" }
       ],
       "brief": {
-        "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable — and providers are the bottleneck. They want a VA who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
+        "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable, and providers are the bottleneck. They want a VA who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
         "deliverable": "One clean, structured SOAP note (Subjective, Objective, Assessment, Plan) written by you from an MTSamples visit transcript, plus a short 'what the AI got wrong' list comparing your note to an AI-drafted version.",
         "constraints": [
-          "Use only MTSamples or synthetic data — never a real person's health information, even a friend's.",
+          "Use only MTSamples or synthetic data: never a real person's health information, even a friend's.",
           "Every section (S/O/A/P) must be present and in clinician shorthand, not narrative paragraphs.",
-          "Flag anything the source is missing (no BP, no allergy check) rather than inventing it — a good scribe never fabricates a value."
+          "Flag anything the source is missing (no BP, no allergy check) rather than inventing it: a good scribe never fabricates a value."
         ],
         "steps": [
           "Pick one visit report from MTSamples (a general or family-practice note is easiest to start).",
@@ -1470,7 +1470,7 @@
       },
       "definitionOfDone": [
         "The SOAP note has all four sections, each in correct clinical shorthand and terminology.",
-        "No value is invented — anything missing from the source is flagged as missing.",
+        "No value is invented; anything missing from the source is flagged as missing.",
         "The 'what the AI got wrong' list names at least two concrete differences with the correct fix.",
         "A one-line HIPAA handling note explains how the chart is stored and who may see it."
       ],
@@ -1479,7 +1479,7 @@
         "Did I catch the AI's errors, or did I trust its draft and miss a wrong term or dose?",
         "Is there a single spot where I guessed a value instead of flagging it as absent?"
       ],
-      "presentIt": "Present it as a before/after the way a clinic thinks: 'AI draft → provider still had to fix 4 things; my corrected note → sign-ready.' Redact nothing (there's no real PHI) and lead with the errors you caught — that list is the proof you're safe to hand a chart.",
+      "presentIt": "Present it as a before/after the way a clinic thinks: 'AI draft → provider still had to fix 4 things; my corrected note → sign-ready.' Redact nothing (there's no real PHI) and lead with the errors you caught: that list is the proof you're safe to hand a chart.",
       "stretch": "Chart three more MTSamples visits across different specialties (a mental-health intake, a dental note, a follow-up) and time yourself. A medical VA who charts a clean note in under 15 minutes is worth a retainer."
     },
     {
@@ -1490,23 +1490,23 @@
       "icon": "pencil-ruler",
       "difficulty": "Intermediate",
       "time": "3–4 hours",
-      "proves": "You can take a flat floor plan, build an accurate 3D model, and produce a render a client could put in a listing — the core deliverable of every arch-viz and real-estate visualization gig.",
+      "proves": "You can take a flat floor plan, build an accurate 3D model, and produce a render a client could put in a listing: the core deliverable of every arch-viz and real-estate visualization gig.",
       "prerequisites": [
         { "skill": "Basic 3D modeling in SketchUp or Blender (push/pull, components, materials)", "why": "The whole task is modeling to scale, then lighting it. If you can't extrude a wall or apply a material, you can't build the room.", "ifYouDont": "SketchUp Campus (open) or the Blender Guru beginner series on YouTube takes you from zero to a walled room in an afternoon." },
-        { "skill": "Reading a floor plan and its dimensions", "why": "A render is only worth anything if it's to scale. Misread the plan and every proportion is wrong.", "ifYouDont": "Any real-estate listing floor plan shows a scale and room dimensions — practice reading three before you model one." }
+        { "skill": "Reading a floor plan and its dimensions", "why": "A render is only worth anything if it's to scale. Misread the plan and every proportion is wrong.", "ifYouDont": "Any real-estate listing floor plan shows a scale and room dimensions. Practice reading three before you model one." }
       ],
       "resources": [
-        { "name": "SketchUp Free", "type": "Tool", "what": "Free browser modeler — build the room to scale with no license.", "free": true, "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free" },
-        { "name": "D5 Render", "type": "Tool", "what": "Free Community tier with real-time ray tracing — light and render the model.", "free": true, "url": "https://www.d5render.com" },
-        { "name": "A public floor plan", "type": "Dataset", "what": "Pull a real 2D floor plan from any real-estate listing to stand in for your 'client's' brief — no invented layouts.", "free": true, "url": "#" }
+        { "name": "SketchUp Free", "type": "Tool", "what": "Free browser modeler: build the room to scale with no license.", "free": true, "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free" },
+        { "name": "D5 Render", "type": "Tool", "what": "Free Community tier with real-time ray tracing: light and render the model.", "free": true, "url": "https://www.d5render.com" },
+        { "name": "A public floor plan", "type": "Dataset", "what": "Pull a real 2D floor plan from any real-estate listing to stand in for your 'client's' brief: no invented layouts.", "free": true, "url": "#" }
       ],
       "brief": {
-        "scenario": "A real-estate agent is selling a unit that's still under construction. There are no photos — only a 2D floor plan. She needs one interior render and one key view to put on the listing so buyers can picture the space. All you get is the plan.",
+        "scenario": "A real-estate agent is selling a unit that's still under construction. There are no photos, only a 2D floor plan. She needs one interior render and one key view to put on the listing so buyers can picture the space. All you get is the plan.",
         "deliverable": "An accurate, to-scale 3D model of the unit, plus one photorealistic interior render and one key exterior or perspective view, sized for a listing.",
         "constraints": [
-          "Model to scale from the plan's real dimensions — never eyeball or invent a measurement.",
+          "Model to scale from the plan's real dimensions; never eyeball or invent a measurement.",
           "Use believable real-world materials and lighting, not default grey boxes.",
-          "If the plan doesn't specify something (ceiling height, a finish), note your assumption rather than guessing silently — a good visualizer flags, doesn't fabricate."
+          "If the plan doesn't specify something (ceiling height, a finish), note your assumption rather than guessing silently: a good visualizer flags, doesn't fabricate."
         ],
         "steps": [
           "Pick one real-estate floor plan with visible dimensions to use as your brief.",
@@ -1527,7 +1527,7 @@
         "Does this look like a real space a buyer could stand in, or like an untextured 3D exercise?",
         "Did I invent any dimension or finish instead of flagging it as an assumption?"
       ],
-      "presentIt": "Present it as the agent's problem solved: 'From a flat 2D plan to a listing-ready render.' Put the source floor plan and your final render side by side — the jump from line drawing to photorealistic space is the whole pitch.",
+      "presentIt": "Present it as the agent's problem solved: 'From a flat 2D plan to a listing-ready render.' Put the source floor plan and your final render side by side: the jump from line drawing to photorealistic space is the whole pitch.",
       "stretch": "Add a 15-second walkthrough video from the same model and one AI-generated render variation (SketchUp Diffusion or ZSky AI), then note what the AI got wrong that your to-scale model got right. Directing AI and correcting it is the premium skill."
     },
     {
@@ -1538,28 +1538,28 @@
       "icon": "shopping-cart",
       "difficulty": "Starter",
       "time": "2–3 hours",
-      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts — the single most-requested e-commerce VA skill.",
+      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts: the single most-requested e-commerce VA skill.",
       "prerequisites": [
         { "skill": "Listing anatomy (title, bullets, description, images, A+ content)", "why": "You can't fix a listing if you don't know which part does which job. The title ranks; the bullets sell; the images close.", "ifYouDont": "Amazon Seller University (open) has a free walkthrough of every listing element in under an hour." },
         { "skill": "Basic keyword research", "why": "A listing rewrite that isn't driven by what buyers actually search is just prettier guessing.", "ifYouDont": "Helium 10's free tier lets you pull real search terms for any product; their free tutorials show how." }
       ],
       "resources": [
-        { "name": "A real public product listing", "type": "Dataset", "what": "Pick any live Amazon or Shopify product with an obviously weak listing to stand in for your 'client's' store — real data, no invented product.", "free": true, "url": "#" },
+        { "name": "A real public product listing", "type": "Dataset", "what": "Pick any live Amazon or Shopify product with an obviously weak listing to stand in for your 'client's' store: real data, no invented product.", "free": true, "url": "#" },
         { "name": "Helium 10", "type": "Tool", "what": "Free tier for keyword research and a listing-quality audit.", "free": true, "url": "https://www.helium10.com" },
-        { "name": "ChatGPT", "type": "Tool", "what": "Free tier to draft and tighten copy fast — you direct it, you don't trust it blind.", "free": true, "url": "https://chatgpt.com" }
+        { "name": "ChatGPT", "type": "Tool", "what": "Free tier to draft and tighten copy fast: you direct it, you don't trust it blind.", "free": true, "url": "https://chatgpt.com" }
       ],
       "brief": {
-        "scenario": "A seller's product is buried on page five. The listing has a vague title, three lazy bullets, one dark photo, and no A+ content. Sales are flat and they blame the market. It's not the market — it's the listing. Rebuild it.",
-        "deliverable": "A rewritten listing: a keyword-driven title, five benefit-led bullets, a scannable description, an image/A+ shot list, and the keyword list you built it on — presented next to the original.",
+        "scenario": "A seller's product is buried on page five. The listing has a vague title, three lazy bullets, one dark photo, and no A+ content. Sales are flat and they blame the market. It's not the market; it's the listing. Rebuild it.",
+        "deliverable": "A rewritten listing: a keyword-driven title, five benefit-led bullets, a scannable description, an image/A+ shot list, and the keyword list you built it on, presented next to the original.",
         "constraints": [
-          "Keyword-driven, not keyword-stuffed — every term must read like a human wrote it.",
+          "Keyword-driven, not keyword-stuffed. Every term must read like a human wrote it.",
           "No invented claims, fake reviews, or made-up specs. Honest copy is the only kind that survives a return rate.",
           "Every bullet must lead with a buyer benefit, not a feature spec."
         ],
         "steps": [
           "Pick one real, weak public listing and screenshot the original as your 'before'.",
           "Pull the top search terms buyers actually use for that product (Helium 10 free tier).",
-          "Rewrite the title and five bullets around those terms — benefit first, keyword woven in.",
+          "Rewrite the title and five bullets around those terms: benefit first, keyword woven in.",
           "Draft a scannable description and a shot list for the images and A+ content.",
           "Lay your version beside the original and write two lines on why each change lifts rank or conversion."
         ]
@@ -1575,7 +1575,7 @@
         "Did I write for the search algorithm and the human, or stuff keywords and hope?",
         "Is there a single claim here I couldn't back up if the product arrived tomorrow?"
       ],
-      "presentIt": "Present it as a rank-and-conversion play: 'Original listing → page five, flat sales; rebuilt listing → keyword-led, benefit-first, A+ mapped.' Put both versions side by side — the contrast is the proof you can do this for a real store.",
+      "presentIt": "Present it as a rank-and-conversion play: 'Original listing → page five, flat sales; rebuilt listing → keyword-led, benefit-first, A+ mapped.' Put both versions side by side: the contrast is the proof you can do this for a real store.",
       "stretch": "Do the same teardown for two competitor listings in the same category and write a one-page 'why theirs wins or loses' note. A VA who can read a whole category, not just one listing, is a strategist a seller keeps."
     }
   ]

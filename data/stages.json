@@ -122,16 +122,16 @@
     "steps": "Steps 10–11",
     "accent": "coral",
     "kicker": "Stage 05",
-    "subtitle": "The career becomes yours — then it helps someone else's",
+    "subtitle": "The career becomes yours; then it helps someone else's",
     "summary": "Go direct, get legit, and grow into an end-goal role. Then send the ladder back down. This is where employment ends and ownership begins.",
     "quote": "The platform succeeds when you no longer need it. So does every stage before this one.",
-    "outcome": "You'll own client relationships, invoice as a registered professional, and carry a name people vouch for — the three assets no platform can revoke.",
+    "outcome": "You'll own client relationships, invoice as a registered professional, and carry a name people vouch for: the three assets no platform can revoke.",
     "doFirst": [
-      { "title": "Own your clients", "desc": "Move from platform gigs to direct relationships — referrals, retainers, and rates you set.", "href": "/clients", "cta": "Own your clients" },
+      { "title": "Own your clients", "desc": "Move from platform gigs to direct relationships, referrals, retainers, and rates you set.", "href": "/clients", "cta": "Own your clients" },
       { "title": "Get legit", "desc": "BIR registration, the 8% option, your own benefits, and the payment rail that protects your rate.", "href": "/legit", "cta": "Make it official" },
-      { "title": "Aim at an end-goal role", "desc": "GTM engineer, RevOps, fractional operator — the roles you grow into from any lane.", "href": "/niches", "cta": "See end goals" },
+      { "title": "Aim at an end-goal role", "desc": "GTM engineer, RevOps, fractional operator. The roles you grow into from any lane.", "href": "/niches", "cta": "See end goals" },
       { "title": "Take it anywhere", "desc": "Your clients travel with you. Some countries now issue visas for exactly what you've become.", "href": "/markets", "cta": "Work abroad" },
-      { "title": "Give back", "desc": "One pro-bono project, one beginner you unstick. The GIVE method — the ecosystem you feed feeds you.", "href": "/method", "cta": "The GIVE method" }
+      { "title": "Give back", "desc": "One pro-bono project, one beginner you unstick. The GIVE method: the ecosystem you feed feeds you.", "href": "/method", "cta": "The GIVE method" }
     ],
     "tools": [
       { "label": "Own Your Clients", "href": "/clients" },
@@ -139,6 +139,6 @@
       { "label": "Client Markets", "href": "/markets" },
       { "label": "The Method", "href": "/method" }
     ],
-    "closing": "Build the things nobody can take — the skill, the relationships, the name. Then hold the door open for the next one coming up."
+    "closing": "Build the things nobody can take: the skill, the relationships, the name. Then hold the door open for the next one coming up."
   }
 ]

@@ -2,8 +2,8 @@
   "brand": "DevUp",
   "wordmarkAccent": "Up",
   "meaning": "Developing upwards",
-  "tagline": "Developing upwards. The complete platform for building an online career — open to every Filipino.",
-  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional — trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
+  "tagline": "Developing upwards. The complete platform for building an online career, open to every Filipino.",
+  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
   "standard": {
     "kicker": "The DevUp standard",
     "title": "We don't hand you files. We make you resourceful.",
@@ -11,7 +11,7 @@
     "principles": [
       { "title": "Method over material", "desc": "Every lab teaches how the thing is built and why, never a file to download and rename.", "icon": "key-round" },
       { "title": "You build it, you own it", "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.", "icon": "pencil-ruler" },
-      { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it — every page builds toward that.", "icon": "unlock" }
+      { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it; every page builds toward that.", "icon": "unlock" }
     ]
   },
   "social": {
@@ -31,7 +31,7 @@
     {
       "title": "The journey",
       "primary": true,
-      "desc": "The one path — five stages, zero to independent. If you read nothing else, read this in order.",
+      "desc": "The one path: five stages, zero to independent. If you read nothing else, read this in order.",
       "links": [
         { "label": "Start", "href": "/start" },
         { "label": "Get Hired", "href": "/get-hired" },
@@ -42,7 +42,7 @@
     },
     {
       "title": "Learn to build",
-      "desc": "The skills and labs behind the path. Dip in when a stage calls for one — not all at once.",
+      "desc": "The skills and labs behind the path. Dip in when a stage calls for one, not all at once.",
       "links": [
         { "label": "The Method", "href": "/method" },
         { "label": "AI-First", "href": "/ai-first" },
@@ -57,7 +57,7 @@
     },
     {
       "title": "Work like a professional",
-      "desc": "How to behave once you're in the work — the gap between kept and quietly dropped.",
+      "desc": "How to behave once you're in the work: the gap between kept and quietly dropped.",
       "links": [
         { "label": "Reality Check", "href": "/reality" },
         { "label": "Become Indispensable", "href": "/indispensable" },
@@ -68,7 +68,7 @@
     },
     {
       "title": "Grow",
-      "desc": "Deep-dives and tools for when the basics hold and you want more — reach for these later.",
+      "desc": "Deep-dives and tools for when the basics hold and you want more. Reach for these later.",
       "links": [
         { "label": "Find Work", "href": "/apply" },
         { "label": "Interview Prep", "href": "/interview" },

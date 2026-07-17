@@ -214,27 +214,27 @@
   "agentic": {
     "kicker": "The next layer · agents",
     "title": "Chat was the preview. Agents are the job.",
-    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools like Claude Code plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category — and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
+    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools like Claude Code plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category, and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
     "items": [
-      { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer — it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
+      { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer: it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
       { "icon": "file-text", "term": "Context files (AGENTS.md)", "desc": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset." },
       { "icon": "list-checks", "term": "Skills & commands", "desc": "Reusable procedures an agent loads on demand: 'how we do the monthly report', written once, run forever. The SOPs you learn to write in the Build Labs become executable." },
-      { "icon": "git-fork", "term": "Subagents", "desc": "One agent delegating pieces of a job to others working in parallel. The underlying skill is decomposition — cutting a job into clean, checkable pieces. That is a manager's skill, and it is learnable." },
-      { "icon": "plugs-connected", "term": "MCP", "desc": "Model Context Protocol — the open standard that plugs an agent into real tools: the client's sheets, inbox, CRM, database. It is why an agent can act on the actual business instead of just talking about it." },
-      { "icon": "shield-check", "term": "Hooks & guardrails", "desc": "Rules that fire automatically around an agent's actions — block the dangerous ones, double-check the important ones. Trust in automation is built with brakes, not hope." },
+      { "icon": "git-fork", "term": "Subagents", "desc": "One agent delegating pieces of a job to others working in parallel. The underlying skill is decomposition: cutting a job into clean, checkable pieces. That is a manager's skill, and it is learnable." },
+      { "icon": "plugs-connected", "term": "MCP", "desc": "Model Context Protocol, the open standard that plugs an agent into real tools: the client's sheets, inbox, CRM, database. It is why an agent can act on the actual business instead of just talking about it." },
+      { "icon": "shield-check", "term": "Hooks & guardrails", "desc": "Rules that fire automatically around an agent's actions: block the dangerous ones, double-check the important ones. Trust in automation is built with brakes, not hope." },
       { "icon": "arrows-clockwise", "term": "Loop engineering", "desc": "Designing the cycle: the agent works, the output gets verified, errors go back in, repeat until the check passes. Whoever writes the checks controls the quality. That is the part AI cannot do for itself." }
     ],
     "why": {
       "title": "Why this matters to you specifically",
-      "body": "Repeating a task for more clients grows your income one hour at a time. Operating agents breaks that ceiling: the bookkeeper who runs a reconciliation pipeline, the marketer who runs a content system, the GTM engineer whose entire role is built on this stack — they bill for outcomes, not hours. Filipinos won the last wave of remote work on skill and reliability. This wave goes to whoever learns to direct the machine first, and almost nobody has started."
+      "body": "Repeating a task for more clients grows your income one hour at a time. Operating agents breaks that ceiling: the bookkeeper who runs a reconciliation pipeline, the marketer who runs a content system, the GTM engineer whose entire role is built on this stack; they bill for outcomes, not hours. Filipinos won the last wave of remote work on skill and reliability. This wave goes to whoever learns to direct the machine first, and almost nobody has started."
     },
-    "note": "Start now: point an agent tool's no-cost tier at one micro-task from /tasks and practice the loop — brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
-    "source": { "label": "Anthropic — Claude Code documentation", "url": "https://code.claude.com/docs" }
+    "note": "Start now: point an agent tool's no-cost tier at one micro-task from /tasks and practice the loop: brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
+    "source": { "label": "Anthropic, Claude Code documentation", "url": "https://code.claude.com/docs" }
   },
 
   "closing": {
     "kicker": "The honest bottom line",
-    "title": "You are still early — but the premium has an expiry date.",
+    "title": "You are still early, but the premium has an expiry date.",
     "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed at no cost. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
     "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
     "links": [

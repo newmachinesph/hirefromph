@@ -3,7 +3,7 @@
   "title": "We don't give you the file. We teach you to build it.",
   "creed": "A file solves today. A method solves every tomorrow. Everything on this platform is designed to make you resourceful, so that one day you don't need this platform at all.",
   "promise": "You will not find a downloadable resume here. You will find how a resume actually works, why each line exists, how to judge a good one, and a workshop that walks you through writing your own. What you build, you own, and you can rebuild it for any role, any client, forever.",
-  "whyItMatters": "A downloaded template makes you identical to 10,000 other applicants, and it stops helping the moment the job is slightly different. Someone who understands why the document is shaped the way it is can rebuild one for any situation, in any tool, from a blank page — which is the whole reason this platform teaches the method instead of handing out the file.",
+  "whyItMatters": "A downloaded template makes you identical to 10,000 other applicants, and it stops helping the moment the job is slightly different. Someone who understands why the document is shaped the way it is can rebuild one for any situation, in any tool, from a blank page, which is the whole reason this platform teaches the method instead of handing out the file.",
   "principles": [
     {
       "n": 1,
@@ -111,7 +111,7 @@
       "tagline": "How to ask a question that actually gets answered",
       "icon": "message-square-quote",
       "accent": "indigo",
-      "summary": "A well-formed question gets a professional's help. A vague one gets ignored — everywhere.",
+      "summary": "A well-formed question gets a professional's help. A vague one gets ignored, everywhere.",
       "steps": [
         { "title": "Show what you're trying to do", "desc": "State the actual goal, not the symptom. 'I'm trying to reconcile March' beats 'it's not working'." },
         { "title": "Show what you already tried", "desc": "This proves you respect the other person's time, and it eliminates the first five things they'd suggest." },
@@ -144,12 +144,12 @@
       "accent": "coral",
       "summary": "The fastest way into any ecosystem is to put value into it before you ask anything from it.",
       "steps": [
-        { "title": "Do real work for a real need, at no cost", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good — a small organization gains more from ten of your hours than a big one ever would." },
-        { "title": "Teach what you just learned", "desc": "Write the guide you wish existed when you were stuck, and post it where the next beginner will find it. Teaching is also the strongest test of understanding — see LEARN." },
-        { "title": "Share the method, not just the win", "desc": "When something works — a message that got a reply, a workflow that saved hours — share how it worked. Wins impress people. Methods help them." },
+        { "title": "Do real work for a real need, at no cost", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good: a small organization gains more from ten of your hours than a big one ever would." },
+        { "title": "Teach what you just learned", "desc": "Write the guide you wish existed when you were stuck, and post it where the next beginner will find it. Teaching is also the strongest test of understanding: see LEARN." },
+        { "title": "Share the method, not just the win", "desc": "When something works (a message that got a reply, a workflow that saved hours), share how it worked. Wins impress people. Methods help them." },
         { "title": "Show up in your niche's rooms", "desc": "Answer real questions in the communities where your niche gathers. In six months you are the person people tag, and referrals start arriving before job posts do." }
       ],
-      "drill": "This week: one hour of scoped, no-cost help for one real person or organization, and one written answer to a beginner's question in a community you belong to. Notice what both cost you — almost nothing. Notice what they start."
+      "drill": "This week: one hour of scoped, no-cost help for one real person or organization, and one written answer to a beginner's question in a community you belong to. Notice what both cost you, almost nothing. Notice what they start."
     }
   ],
   "antiPatterns": {

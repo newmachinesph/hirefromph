@@ -137,31 +137,31 @@
   "abroad": {
     "kicker": "Work from anywhere · visas",
     "title": "Your career is portable. Some countries now invite it.",
-    "lead": "A remote career with foreign clients travels with you. A growing list of countries issues long-stay visas for exactly the professional you are becoming — you keep your clients and change your view. Rules and thresholds move every year and embassies decide case by case, so treat everything below as a starting point and verify on the official page before you plan anything.",
+    "lead": "A remote career with foreign clients travels with you. A growing list of countries issues long-stay visas for exactly the professional you are becoming; you keep your clients and change your view. Rules and thresholds move every year and embassies decide case by case, so treat everything below as a starting point and verify on the official page before you plan anything.",
     "items": [
       {
         "flag": "🇹🇭",
         "country": "Thailand",
         "visa": "Destination Thailand Visa (DTV)",
         "detail": "A 5-year multiple-entry visa for remote workers and freelancers whose clients are outside Thailand. 180 days per entry, extendable once per entry. You show savings of about ฿500,000 held for 3 months and pay a ฿10,000 fee. Working for Thai companies is not allowed, and staying 180+ days in a year can make you a Thai tax resident.",
-        "source": { "label": "Royal Thai Embassy — DTV requirements", "url": "https://washingtondc.thaiembassy.org/en/page/dtv-visa" }
+        "source": { "label": "Royal Thai Embassy: DTV requirements", "url": "https://washingtondc.thaiembassy.org/en/page/dtv-visa" }
       },
       {
         "flag": "🇪🇸",
         "country": "Spain",
         "visa": "Digital nomad visa (telework visa)",
         "detail": "A residence visa for remote employees and freelancers working for companies outside Spain. The income bar is tied to Spain's minimum wage (roughly 200% of it, so the euro figure moves each year), and you'll need clean records and proof of remote work. It can lead to longer residence. Apply through the Spanish consulate in Manila.",
-        "source": { "label": "Ministry of Foreign Affairs of Spain — visa information", "url": "https://www.exteriores.gob.es/en/ServiciosAlCiudadano/Paginas/Servicios-consulares.aspx" }
+        "source": { "label": "Ministry of Foreign Affairs of Spain: visa information", "url": "https://www.exteriores.gob.es/en/ServiciosAlCiudadano/Paginas/Servicios-consulares.aspx" }
       },
       {
         "flag": "🇦🇪",
         "country": "UAE (Dubai)",
         "visa": "Remote work visa",
         "detail": "A one-year residence visa for remote workers employed outside the UAE. The published bar is proof of employment or business ownership plus income of about US$3,500 per month, health insurance, and a valid passport. Renewable if you still qualify.",
-        "source": { "label": "UAE Government — residence visa for remote work", "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/getting-a-residence-visa-for-remote-work" }
+        "source": { "label": "UAE Government: residence visa for remote work", "url": "https://u.ae/en/information-and-services/visa-and-emirates-id/residence-visas/getting-a-residence-visa-for-remote-work" }
       }
     ],
-    "note": "Eligibility differs by passport — some programs (Japan's digital nomad visa, for one) are limited to visa-exempt nationalities and currently exclude Philippine passport holders. Always read the official eligibility list first, and remember: long stays abroad can change where you owe tax. None of this is a reason to wait — it is a reason to build the kind of career worth carrying.",
+    "note": "Eligibility differs by passport: some programs (Japan's digital nomad visa, for one) are limited to visa-exempt nationalities and currently exclude Philippine passport holders. Always read the official eligibility list first, and remember: long stays abroad can change where you owe tax. None of this is a reason to wait; it is a reason to build the kind of career worth carrying.",
     "point": "Build the career first. The passport stamps follow."
   },
 

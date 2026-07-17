@@ -5,7 +5,7 @@
     "line2": "shows you first."
   },
   "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with its source one click away.",
-  "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful — and, as it turns out, more hopeful.",
+  "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful, and, as it turns out, more hopeful.",
   "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
   "readANumber": {
@@ -49,7 +49,7 @@
       "tag": "The pay myth",
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a quarter of your working time will not be paid at all.",
-      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one quarter of working time, invisible and unpaid. Once you count it, average earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa) — ILO figures surveyed in 2015–2017, in nominal dollars.",
+      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one quarter of working time, invisible and unpaid. Once you count it, average earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa), ILO figures surveyed in 2015–2017, in nominal dollars.",
       "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the eighty minutes it actually took to earn.",
       "lesson": "Never compare a freelance rate to a local salary without the unpaid quarter, the platform fee, and your own electricity and internet already subtracted. Do that arithmetic before you resign from anything.",
       "source": {
@@ -67,7 +67,7 @@
       "headline": "There is no credible data on time-to-first-client. None. Anywhere.",
       "body": "We went looking for it properly, labour statistics, platform research, academic work, and it does not exist. Nobody has measured how long it takes a new Filipino online professional to land their first paying contract. Every \"10 days\", \"2 weeks\", \"30 days guaranteed\" you have seen is a marketing figure with nothing underneath it. It was chosen because it converts, not because it was counted.",
       "sting": "We're telling you a number DOESN'T exist because spotting that absence is the habit worth building: when a claim has no source, the correct response is not \"maybe\", it's \"then why is it stated so confidently?\"",
-      "lesson": "Plan for a runway, not a date. Anyone who gives you a timeline for your first client is guessing — nobody has the data to do better.",
+      "lesson": "Plan for a runway, not a date. Anyone who gives you a timeline for your first client is guessing; nobody has the data to do better.",
       "source": {
         "label": "No primary source exists, this is the point",
         "url": "https://www.ilo.org/media/387316/download"
@@ -206,7 +206,7 @@
     ],
     "peerReviewed": {
       "title": "And it holds up under peer review.",
-      "body": "This isn't only a blog finding. A peer-reviewed study in Management Science (\"Who Is AI Replacing?\") measured a 21% drop in job posts for automation-prone writing and coding work within eight months of ChatGPT's release, and a 17% drop for image-creation work. But read the second half of the paper — the part that rarely gets quoted: the jobs that survived are more complex and higher-paid. The distribution didn't shrink evenly. Its bottom got cut off.",
+      "body": "This isn't only a blog finding. A peer-reviewed study in Management Science (\"Who Is AI Replacing?\") measured a 21% drop in job posts for automation-prone writing and coding work within eight months of ChatGPT's release, and a 17% drop for image-creation work. But read the second half of the paper, the part that rarely gets quoted: the jobs that survived are more complex and higher-paid. The distribution didn't shrink evenly. Its bottom got cut off.",
       "source": {
         "label": "Management Science, Who Is AI Replacing?",
         "url": "https://doi.org/10.1287/mnsc.2024.05420"
@@ -224,7 +224,7 @@
       "kicker": "The counter-evidence · we're including it because it's true",
       "title": "Demand for \"basic\" support work did not vanish.",
       "body": "If we stopped here you'd conclude that entry-level support work is dead. It isn't, and we won't pretend it is. Upwork's In-Demand Skills 2026 shows that general remote support, data entry and manual transcription are STILL among the top-10 most in-demand skills in its Customer Service & Admin Support category. (Upwork still uses the old title for that first one. We don't, but the demand it names is real.) Their own conclusion: demand \"remained consistently strong year over year, even in categories often assumed to be most vulnerable to automation.\"",
-      "conclusion": "So the work is still there. What collapsed was not the demand, it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. You are not being replaced; you are being commoditized. And the escape is not to work faster — it's to own something a client cannot get from a prompt.",
+      "conclusion": "So the work is still there. What collapsed was not the demand, it was the price. When anyone with a chatbot can produce a passable version of your deliverable, the deliverable stops being scarce, and scarcity is the only thing that has ever set a rate. You are not being replaced; you are being commoditized. And the escape is not to work faster: it's to own something a client cannot get from a prompt.",
       "source": {
         "label": "Upwork, In-Demand Skills 2026",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
@@ -311,7 +311,7 @@
     "premium": {
       "stat": "34%",
       "label": "more per hour",
-      "body": "Upwork's own data: freelancers doing AI work earn 34% more per hour than those doing non-AI work. This is the most-quoted number in the entire AI-skills conversation. It is real, and it moved — the 2025 report said over 40%, the 2026 one says 34%. That drift is exactly why every number here carries a date.",
+      "body": "Upwork's own data: freelancers doing AI work earn 34% more per hour than those doing non-AI work. This is the most-quoted number in the entire AI-skills conversation. It is real, and it moved: the 2025 report said over 40%, the 2026 one says 34%. That drift is exactly why every number here carries a date.",
       "source": {
         "label": "Upwork, In-Demand Skills 2026",
         "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
@@ -419,7 +419,7 @@
         "id": "success-rate",
         "claim": "\"Only X% ever reach a meaningful income.\"",
         "verdict": "No data exists",
-        "why": "Nobody has defined \"meaningful income\", let alone counted who reaches it. Treat any confident version of this number — optimistic or pessimistic — as unverified."
+        "why": "Nobody has defined \"meaningful income\", let alone counted who reaches it. Treat any confident version of this number, optimistic or pessimistic, as unverified."
       },
       {
         "id": "85k",
@@ -445,7 +445,7 @@
       {
         "id": "market",
         "title": "Market reports, read the primary source",
-        "note": "These are the primary documents behind most claims you'll hear about this market. Read them yourself — an afternoon at the source is worth a year of secondhand summaries.",
+        "note": "These are the primary documents behind most claims you'll hear about this market. Read them yourself; an afternoon at the source is worth a year of secondhand summaries.",
         "items": [
           {
             "title": "The Future of Jobs Report 2025",
