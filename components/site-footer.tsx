@@ -13,6 +13,7 @@ export function SiteFooter() {
             <Link href="/" aria-label="DevUp home">
               <Logo
                 markSize={34}
+                onDark
                 wordmark={
                   <span className="text-3xl">
                     Dev<span className="text-coral">Up</span>
