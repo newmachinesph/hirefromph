@@ -40,20 +40,35 @@ export function Logo({
   markSize = 32,
   wordmark,
   onDark,
+  showTagline,
 }: {
   className?: string;
   markSize?: number;
   wordmark?: ReactNode;
   onDark?: boolean;
+  /** Show the "developing upwards" sub-line under the wordmark. */
+  showTagline?: boolean;
 }) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
       <LogoMark size={markSize} onDark={onDark} />
-      <span className="font-display text-xl leading-none tracking-tight">
-        {wordmark ?? (
-          <>
-            Dev<span className="text-coral">Up</span>
-          </>
+      <span className="inline-flex flex-col">
+        <span className="font-display text-xl leading-none tracking-tight">
+          {wordmark ?? (
+            <>
+              Dev<span className="text-coral">Up</span>
+            </>
+          )}
+        </span>
+        {showTagline && (
+          <span
+            className={cn(
+              "mt-1 text-[0.5625rem] font-medium uppercase leading-none tracking-[0.2em]",
+              onDark ? "text-paper-2/60" : "text-ink-soft",
+            )}
+          >
+            developing upwards
+          </span>
         )}
       </span>
     </span>

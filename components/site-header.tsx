@@ -71,7 +71,7 @@ export function SiteHeader() {
     >
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link href="/" className="shrink-0" aria-label="DevUp home">
-          <Logo markSize={32} />
+          <Logo markSize={32} showTagline />
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
