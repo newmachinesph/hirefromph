@@ -147,7 +147,7 @@
   "fx": {
     "label": "Assumed exchange rate",
     "suffix": "₱ per $1",
-    "note": "This is an assumption, and FX moves. Change it to whatever today's rate actually is, the peso figures update live. We default to ₱58 because it is a round, recent, entirely arguable number."
+    "note": "This is an assumption, and FX moves. Change it to whatever today's rate actually is, the peso figures update live. We default to ₱61.5, the BSP rate sampled in mid-July 2026, so check it against today's number before you trust it."
   },
   "multipliers": {
     "title": "Every multiplier, and where it came from",
@@ -167,7 +167,7 @@
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",
-        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, but the nuance matters more than the headline: the callout below shows where that premium actually lands."
+        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, a vendor-reported figure, not an independently audited one, but the nuance matters more than the headline: the callout below shows where that premium actually lands."
       },
       "ai-augmented-building": {
         "label": "AI, built into a craft you're still learning",
@@ -230,10 +230,10 @@
     "cta": "Go pick a craft"
   },
   "realityTax": {
-    "title": "The reality tax, applied to every number on this page, always",
+    "title": "The reality tax, applied to every number on this page",
     "unpaid": {
       "title": "×0.75 · the unpaid quarter",
-      "body": "The ILO found online workers spend roughly 20 unpaid minutes for every paid hour, hunting for work, doing unpaid tests, vetting clients who ghost. About a quarter of your working time earns nothing. Every figure in this simulator is already multiplied by 0.75 for it. And a number worth sitting with: average hourly earnings in Asia-Pacific, once you count the unpaid time, come to $2.22/hr.",
+      "body": "The ILO found online workers spend roughly 20 unpaid minutes for every paid hour, hunting for work, doing unpaid tests, vetting clients who ghost. About a quarter of your working time earns nothing. Every figure in this simulator is multiplied by 0.75 for it. That figure comes from a 2015–2017 ILO survey, the most recent of its kind, so today's platforms may look better or worse than this snapshot. And a number worth sitting with: average hourly earnings in Asia-Pacific, once you count the unpaid time, came to $2.22/hr.",
       "source": {
         "label": "ILO, Digital labour platforms and the future of work (2018), surveys 2015–2017",
         "url": "https://www.ilo.org/media/414716/download"

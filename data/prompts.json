@@ -45,7 +45,7 @@
       "category": "interview",
       "title": "Run a mock interview",
       "desc": "Practice with realistic questions for your exact role.",
-      "text": "You are a hiring manager for a [ROLE] working remotely with a US client. Interview me one question at a time. After each of my answers, give a quick score (1–5) and one concrete improvement, then ask the next question. Cover experience, tools, a scenario/problem-solving question, and 'why should we hire you'. Start now."
+      "text": "You are a hiring manager for a [ROLE] working remotely with a [US / AU / UK] client. Interview me one question at a time. After each of my answers, give a quick score (1–5) and one concrete improvement, then ask the next question. Cover experience, tools, a scenario/problem-solving question, and 'why should we hire you'. Start now."
     },
     {
       "id": "p5",

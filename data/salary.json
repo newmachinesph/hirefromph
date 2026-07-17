@@ -49,7 +49,7 @@
     ],
     "note2": "These grow out of the AI-First page.",
     "source": {
-      "label": "Upwork, In-Demand Skills 2026 (AI integration up 178% YoY)",
+      "label": "Upwork, In-Demand Skills 2026, as of July 2026 (AI integration up 178% YoY); refresh this when Upwork's 2027 edition ships",
       "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
     }
   },
@@ -65,8 +65,8 @@
     ],
     "contradiction": {
       "title": "Proof the numbers are soft: watch two 'guides' disagree by 4x.",
-      "body": "Take one entry-level support role. The platform's own data points to roughly ₱17,000 to ₱28,000 a month ($300 to $500). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
-      "a": { "label": "Platform data · entry level", "value": "≈ ₱17k–28k / mo" },
+      "body": "Take one entry-level support role. The platform's own data points to roughly ₱18,000 to ₱31,000 a month ($300 to $500, at ≈₱61.5/$1, the July 2026 rate). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
+      "a": { "label": "Platform data · entry level", "value": "≈ ₱18k–31k / mo" },
       "b": { "label": "Viral blog claim · entry level", "value": "₱90k+ / mo" },
       "lesson": "At least one of these is very wrong, and the one with no source is the suspect. Never take a rate from a single guide or a screenshot. Look at ten live job posts in your niche this week. Live posts are data. Guides and reels are opinion with confidence."
     },

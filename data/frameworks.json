@@ -120,7 +120,7 @@
       },
       {
         "spec": "A power backup, before a better webcam",
-        "whatMattersAndWhy": "A brownout mid-call costs more than any camera upgrade ever will: a missed deadline, a client wondering if you're reliable. Filipino remote professionals lose clients to power outages far more often than to video quality.",
+        "whatMattersAndWhy": "A brownout mid-call costs more than any camera upgrade ever will: a missed deadline, a client wondering if you're reliable. In our experience, Filipino remote professionals are far more likely to lose a client to a power outage than to a mediocre webcam.",
         "howToJudge": "A basic UPS (650VA) buys 15–30 minutes to save your work and switch to mobile data, enough to finish a call gracefully. Check the runtime rating on the box, not just the price tag.",
         "dontOverpayFor": "A ring light or 4K webcam before you have any backup power at all. Nobody has ever lost a client over camera resolution.",
         "icon": "battery-charging"

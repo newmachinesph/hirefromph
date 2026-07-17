@@ -39,7 +39,7 @@
   "fluency": {
     "kicker": "The operating model · before any tool",
     "title": "Four habits turn AI from a toy into leverage.",
-    "lead": "Tools change every few months. The way a professional works with any of them does not. These four skills are the difference between someone who pastes AI output and hopes, and someone a client trusts to own the result. Learn these before you learn a single tool below.",
+    "lead": "Tools change every few months. The way a professional works with any of them does not. The four skills below are Anthropic's AI Fluency framework, one vendor's model for this, not a neutral industry standard, but a clear and useful one. They are the difference between someone who pastes AI output and hopes, and someone a client trusts to own the result. Learn these before you learn a single tool below.",
     "skills": [
       {
         "letter": "1",
@@ -75,14 +75,14 @@
       }
     ],
     "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (open)", "url": "https://www.anthropic.com/ai-fluency/overview" },
-    "note": "These four are the core of Anthropic's no-cost AI Fluency course, a few hours and no cost. Do it first. It is the highest-leverage no-cost thing you can study this month. It is on the No-cost Resources page too."
+    "note": "These four come from Anthropic's no-cost AI Fluency course, a few hours and no cost. It's one company's framework, not the only way to think about this, but a clear one worth learning first. It is on the No-cost Resources page too."
   },
 
   "landscape": {
     "kicker": "The landscape · specimens, not a shopping list",
     "title": "Five layers of AI a modern professional actually uses.",
     "lead": "These are not tools to memorize. The specific names will change, and half of them will have new rivals by the time you read this. They are here as worked examples of five things you can now put under any craft. For each layer we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you will still have the layer.",
-    "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons.",
+    "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons. Once you're ready to sell the work, many freemium tools gate commercial use behind a paid tier, and paying it needs an internationally-billable card (Wise or Payoneer).",
     "categories": [
       {
         "id": "coding",
@@ -214,7 +214,7 @@
   "agentic": {
     "kicker": "The next layer · agents",
     "title": "Chat was the preview. Agents are the job.",
-    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools like Claude Code plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category, and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
+    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools such as Claude Code, Cursor, and GitHub Copilot's agent mode plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category, and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
     "items": [
       { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer: it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
       { "icon": "file-text", "term": "Context files (AGENTS.md)", "desc": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset." },
@@ -229,7 +229,7 @@
       "body": "Repeating a task for more clients grows your income one hour at a time. Operating agents breaks that ceiling: the bookkeeper who runs a reconciliation pipeline, the marketer who runs a content system, the GTM engineer whose entire role is built on this stack; they bill for outcomes, not hours. Filipinos won the last wave of remote work on skill and reliability. This wave goes to whoever learns to direct the machine first, and almost nobody has started."
     },
     "note": "Start now: point an agent tool's no-cost tier at one micro-task from /tasks and practice the loop: brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
-    "source": { "label": "Anthropic, Claude Code documentation", "url": "https://code.claude.com/docs" }
+    "source": { "label": "Anthropic, Claude Code documentation (one example of an agentic coding tool)", "url": "https://code.claude.com/docs" }
   },
 
   "closing": {

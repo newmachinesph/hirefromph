@@ -57,7 +57,8 @@ export const NON_PAYMENT_RISK = 0.31;
 
 export const WEEKS_PER_MONTH = 4.33;
 export const MONTHS = 36;
-export const DEFAULT_FX = 60;
+// USD to PHP, sampled 2026-07. Keep in sync with simulator.json fx.note.
+export const DEFAULT_FX = 61.5;
 
 /** Clamped smoothstep, legible easing, not a physics engine. */
 export function ease(t: number): number {

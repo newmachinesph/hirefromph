@@ -311,7 +311,7 @@
       "certs": ["HIPAA Awareness", "Medical Terminology (Coursera)"],
       "clients": "US private practices, telehealth startups, dental and mental-health clinics, and medical billing companies that need HIPAA-trained remote support.",
       "ai": {
-        "change": "Ambient AI scribes now draft the visit notes on their own (athenahealth began shipping one free to every customer in early 2026), and bots handle the first scheduling messages. The rote typing side of medical support is automating fast.",
+        "change": "Ambient AI scribes now draft the visit notes on their own (athenahealth reportedly began shipping one free to every customer in early 2026), and bots handle the first scheduling messages. The rote typing side of medical support is automating fast.",
         "human": "But protected health information is a legal liability, not a text field. Catching the AI's wrong dosage, winning back a denied insurance claim, and calming an anxious patient are calls no clinic hands to a model. HIPAA judgment is the job now, and it pays a premium."
       }
     },
@@ -337,7 +337,7 @@
       "certs": ["SketchUp", "Autodesk AutoCAD (optional)"],
       "clients": "Architects, interior designers, real-estate developers and agents, and furniture or construction firms worldwide that need renders, walkthroughs, and drawings faster than an in-house team can produce them.",
       "ai": {
-        "change": "AI now turns a sketch or a CAD screenshot into a photorealistic render in seconds. SketchUp Diffusion ships inside SketchUp 2026, and tools like D5's AI and Veras light and stage a scene for you. The slow, manual rendering pass is collapsing.",
+        "change": "AI now turns a sketch or a CAD screenshot into a photorealistic render in seconds. AI Render (formerly SketchUp Diffusion) is built into SketchUp 2026.1, and tools like D5's AI and Veras light and stage a scene for you. The slow, manual rendering pass is collapsing.",
         "human": "But AI cannot model a building to real dimensions, produce a permit-ready drawing, or nail the client's fifth revision to match the actual materials and site. It makes a pretty picture; you make a correct, buildable one. Accuracy and revisions are the paid work now."
       }
     },
@@ -363,7 +363,7 @@
       "certs": ["Shopify", "Amazon Ads (optional)"],
       "clients": "Shopify, Amazon FBA, and TikTok Shop sellers, plus DTC brands drowning in day-to-day store admin who need one operator to keep it running and reporting.",
       "ai": {
-        "change": "AI now writes the product descriptions, drafts the customer replies, and summarizes the week's numbers in seconds. The busywork half of store management is automating, and in 2026 the VAs who wield AI ship two to three times the output of the ones who don't.",
+        "change": "AI now writes the product descriptions, drafts the customer replies, and summarizes the week's numbers in seconds. The busywork half of store management is automating, and by some estimates the VAs who wield AI ship two to three times the output of the ones who don't.",
         "human": "But AI does not own account health, win a Seller-Support case, spot the supplier about to run you out of stock, or know which of forty products is actually worth pushing. Judgment, relationships, and account trust are the job. AI is the leverage; you are still the operator."
       }
     }

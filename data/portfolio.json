@@ -4,7 +4,7 @@
   "headline": "Start on the free tool. Climb to the one that pays.",
   "intro": "Every niche has a ladder: the free tool you can open today, the workhorse clients expect, and the paid tool that sets your rate apart. You don't buy your way up, you build your way up. Each rung leaves you a real portfolio piece.",
   "creed": "Nobody gets hired for owning a tool. They get hired for what they built with it. So climb one real piece at a time.",
-  "tiersNote": "Three rungs per niche. Most rungs have a genuine free tier or a trial long enough to build one real piece, so the only thing between you and the next rung is the work.",
+  "tiersNote": "Three rungs per niche. Most rungs have a genuine free tier or a trial long enough to build one real piece, so the only thing between you and the next rung is the work. Free-tier limits and pricing change often: check each tool's current pricing page before you build on it.",
   "howItWorks": [
     {
       "tier": "Start",
@@ -243,7 +243,7 @@
           "tools": [
             { "name": "n8n", "free": "Self-hosted community edition, unlimited runs", "what": "Self-host advanced, AI-powered automations", "url": "https://n8n.io" },
             { "name": "GoHighLevel", "free": "14-day trial; paid from $97/mo", "what": "Set up agency CRM, funnels, pipelines", "url": "https://www.gohighlevel.com" },
-            { "name": "OpenAI API", "free": "Pay-as-you-go, no free tier", "what": "Add AI steps to any workflow", "url": "https://platform.openai.com" }
+            { "name": "OpenAI API", "free": "Pay-as-you-go, no free tier; PH users need an internationally-billable card (Wise or Payoneer) to pay for it", "what": "Add AI steps to any workflow", "url": "https://platform.openai.com" }
           ],
           "piece": "A self-hosted n8n workflow that reads a Gmail inbox, classifies with AI, and logs to Airtable."
         }
@@ -307,7 +307,7 @@
           "goal": "You can coordinate a live-selling show across platforms and keep it moving.",
           "tools": [
             { "name": "Restream", "free": "Free; 2 channels, watermark, 6-hour cap", "what": "Multistream one live to several platforms", "url": "https://restream.io" },
-            { "name": "TikTok LIVE", "free": "Free app; LIVE needs ~1,000 followers", "what": "Host and coordinate live-selling sessions", "url": "https://www.tiktok.com" }
+            { "name": "TikTok LIVE", "free": "Free app; LIVE needs ~1,000 followers, or ~100 with a high Authority Score under TikTok's 2026 update", "what": "Host and coordinate live-selling sessions", "url": "https://www.tiktok.com" }
           ],
           "piece": "A live-selling run-of-show doc plus a practice multi-platform stream (to your own YouTube and Facebook) with product segments, CTA cues, and pinned-comment timing."
         }
@@ -434,7 +434,7 @@
           "tier": "Pro",
           "goal": "You can direct AI renders and fix what they get wrong, the paid edge.",
           "tools": [
-            { "name": "SketchUp Diffusion / ZSky AI", "free": "Free AI render tiers", "what": "Generate AI render variations from your model or a sketch", "url": "https://zsky.ai/ai-architecture-rendering" },
+            { "name": "AI Render (SketchUp) / ZSky AI", "free": "AI Render ships with paid SketchUp 2026.1+ subscriptions; ZSky AI has a free tier", "what": "Generate AI render variations from your model or a sketch", "url": "https://zsky.ai/ai-architecture-rendering" },
             { "name": "Photopea", "free": "Free browser Photoshop alternative", "what": "Post-process renders: sky, people, colour, cleanup", "url": "https://www.photopea.com" }
           ],
           "piece": "A before/after: an AI-generated render next to your corrected, post-processed final, with a short note on what you fixed (scale, materials, lighting) that the AI got wrong."
