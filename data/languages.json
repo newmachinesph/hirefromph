@@ -1,6 +1,6 @@
 {
   "intro": "English gets you hired. A second language gets you paid more: bilingual roles draw from a far thinner pool of candidates, and thinner competition is the only thing that reliably moves a rate. Nobody publishes trustworthy bilingual pay data, so we won't quote a number; read live bilingual job posts and see the premium yourself. Here's what to learn and where, at no cost.",
-  "premiumNote": "Ranked by demand for bilingual Filipino online professionals, as of 2026.",
+  "premiumNote": "Ranked by our read of live job postings for bilingual Filipino online professionals, as of 2026. Sample current listings yourself before you commit to one language.",
   "languages": [
     {
       "id": "japanese",
@@ -15,7 +15,7 @@
       "learn": [
         { "name": "TESDA Language Skills Institute", "type": "Government", "detail": "Basic Japanese Language & Culture, ~150 hrs. First-come, first-served slots via online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "Japan Foundation, Manila", "type": "Courses + events", "detail": "The authority on Japanese-language education in the Philippines. Courses, JLPT prep, resources.", "url": "https://jfmo.org.ph/japanese-language-education/" },
-        { "name": "QC Public Library × Jellyfish Education", "type": "Online", "detail": "No-cost online Basic Japanese, nationwide, 18+. Needs a device, internet, and Zoom.", "url": "https://quezoncity.gov.ph/" },
+        { "name": "QC Public Library × Jellyfish Education", "type": "Online", "detail": "No-cost online Basic Japanese, nationwide, 18+. Needs a device, internet, and Zoom. The link below goes to the QC government homepage; search there for the current program page.", "url": "https://quezoncity.gov.ph/" },
         { "name": "Nihongo Center Foundation", "type": "Paid", "detail": "One of the longest-established Japanese institutions in the country.", "url": "https://nihongocenter.com.ph" }
       ]
     },

@@ -58,7 +58,7 @@
     "sources": [
       { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" },
       { "label": "BIR ORUS: online registration portal", "url": "https://orus.bir.gov.ph" },
-      { "label": "Taxumo: freelancer tax guide (8% option explained)", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/" }
+      { "label": "Taxumo: freelancer tax guide, 2025 edition (8% option explained; check for a newer version)", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/" }
     ],
     "note": "Numbers that matter here (the ₱250,000 exemption, the ₱3M threshold, the 8% rate) are set by law and can change. The official pages above outrank anything you read elsewhere, including this page."
   },

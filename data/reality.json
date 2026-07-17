@@ -4,7 +4,7 @@
     "line1": "The numbers nobody",
     "line2": "shows you first."
   },
-  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays ₱120 an hour and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with its source one click away.",
+  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays far less than promised and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with its source one click away.",
   "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful, and, as it turns out, more hopeful.",
   "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
@@ -49,7 +49,7 @@
       "tag": "The pay myth",
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a quarter of your working time will not be paid at all.",
-      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one quarter of working time, invisible and unpaid. Once you count it, average earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa), ILO figures surveyed in 2015–2017, in nominal dollars.",
+      "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one quarter of working time, invisible and unpaid. Once you count it, average earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa). Those numbers come from a 2015-17 ILO survey, the most recent survey of its kind, so treat them as dated, not current, evidence of a real pattern.",
       "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the eighty minutes it actually took to earn.",
       "lesson": "Never compare a freelance rate to a local salary without the unpaid quarter, the platform fee, and your own electricity and internet already subtracted. Do that arithmetic before you resign from anything.",
       "source": {
@@ -113,7 +113,7 @@
       "tag": "The competition myth",
       "myth": "\"There's so much work out there, low competition.\"",
       "headline": "We are the 3rd largest online-work market on Earth.",
-      "body": "PIDS, the Philippine government's own policy think-tank, puts the Philippines third globally in online work, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, unpaid labour, and \"race to the bottom\" wage rates.",
+      "body": "PIDS, the Philippine government's own policy think-tank, put the Philippines third globally in online work in its 2022 discussion paper, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market, and the underlying data is now several years old. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, unpaid labour, and \"race to the bottom\" wage rates.",
       "sting": "When your own government's researchers use the phrase \"race to the bottom\" about your industry, the competitive pressure you feel isn't self-doubt. It's real, and it's measured.",
       "lesson": "You cannot win a race to the bottom, the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what /niches and /tasks are for.",
       "source": {
@@ -352,7 +352,7 @@
       "title": "This is the weakest data on the page. We're showing you the weakness on purpose.",
       "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology, and each has a commercial stake in where the number lands: a firm that places workers benefits when the rate looks low to clients, a firm that sells training benefits when it looks high. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
     },
-    "tiersNote": "The convergent range across several vendor pages, useful for orienting yourself, useless for negotiating from:",
+    "tiersNote": "The convergent range across several vendor pages, useful for orienting yourself, useless for negotiating from. Figures are in USD because that's how the source pages quote them; convert at roughly ₱61.5 to $1 (July 2026) to see them in pesos.",
     "tiers": [
       {
         "id": "entry",

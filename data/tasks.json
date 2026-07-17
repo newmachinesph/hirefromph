@@ -123,7 +123,7 @@
       ],
       "resources": [
         { "name": "QuickBooks Online Certification", "type": "Course", "what": "Official Intuit training, covers chart of accounts, reconciliation, and reporting.", "free": true, "url": "https://quickbooks.intuit.com/accountants/training-certification/" },
-        { "name": "QuickBooks Online trial", "type": "Tool", "what": "30-day trial, do the actual reconciliation work inside the real tool, not a spreadsheet mockup.", "free": true, "url": "https://quickbooks.intuit.com/online/" },
+        { "name": "QuickBooks Online trial", "type": "Tool", "what": "30-day trial (check the current trial length and limits before you start), do the actual reconciliation work inside the real tool, not a spreadsheet mockup.", "free": true, "url": "https://quickbooks.intuit.com/online/" },
         { "name": "Kaggle sample bank transaction datasets", "type": "Dataset", "what": "Public sample transaction CSVs you can import as your practice client's messy bank feed.", "free": true, "url": "https://www.kaggle.com/datasets?search=bank+transactions" }
       ],
       "brief": {
@@ -361,7 +361,7 @@
       "icon": "video",
       "difficulty": "Advanced",
       "time": "4–5 hours",
-      "proves": "You can plan, shoot, and edit short-form video that follows a proven hook-retention-CTA structure, the highest-leverage, highest-pay skill in social media right now.",
+      "proves": "You can plan, shoot, and edit short-form video that follows a proven hook-retention-CTA structure, one of the highest-leverage, highest-paying skills in social media right now.",
       "prerequisites": [
         { "skill": "Short-form video structure (hook in first 2 seconds, retention pacing, clear CTA)", "why": "Random footage with music isn't a strategy, the structure is what makes it convert.", "ifYouDont": "CapCut's own no-cost tutorials cover hook, pacing, and CTA structure." },
         { "skill": "Basic phone-shot video (framing, lighting, stable shots) and CapCut editing", "why": "You're producing real finished video, not a storyboard, you need the actual production skill.", "ifYouDont": "CapCut's in-app tutorials (open) walk through cuts, captions, and pacing." }
@@ -703,7 +703,7 @@
       "icon": "zap",
       "difficulty": "Intermediate",
       "time": "2–3 hours",
-      "proves": "You can wire two real tools together into a working automation that eliminates manual data entry, the single most in-demand freelance automation skill right now.",
+      "proves": "You can wire two real tools together into a working automation that eliminates manual data entry, one of the most in-demand freelance automation skills right now.",
       "prerequisites": [
         { "skill": "Trigger/action automation logic (if this happens in tool A, do this in tool B)", "why": "You need the mental model before you can build in the actual tool.", "ifYouDont": "Zapier's own no-cost 'Automation 101' guide." },
         { "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure", "why": "You're wiring real tools together, you need to be able to build both ends of the pipe.", "ifYouDont": "Google Forms Help Center (open) for the form side; DevUp's tracker lab for the CRM-sheet side." }
@@ -758,7 +758,7 @@
         { "skill": "Automation trigger/action logic", "why": "A CRM that doesn't move data or notify anyone automatically isn't really a CRM, just a database.", "ifYouDont": "Zapier's no-cost Automation 101, the logic transfers directly to Airtable's own built-in automations." }
       ],
       "resources": [
-        { "name": "Airtable no-cost tier", "type": "Tool", "what": "Build the actual CRM here, the no-cost tier supports everything this task needs.", "free": true, "url": "https://airtable.com" },
+        { "name": "Airtable no-cost tier", "type": "Tool", "what": "Build the actual CRM here (check the current free-tier record limits before you start; at writing it covered this task).", "free": true, "url": "https://airtable.com" },
         { "name": "Airtable Universe (public template gallery)", "type": "Docs", "what": "Study real published CRM base structures for the relational pattern, material to study, not to clone wholesale.", "free": true, "url": "https://www.airtable.com/universe" },
         { "name": "GoHighLevel Fundamentals", "type": "Course", "what": "Even though you're building in Airtable, this covers CRM concepts (pipelines, stages, automation) that transfer directly.", "free": true, "url": "https://help.gohighlevel.com" }
       ],
@@ -1046,7 +1046,7 @@
       "icon": "scissors",
       "difficulty": "Intermediate",
       "time": "3–4 hours",
-      "proves": "You can mine a multi-hour stream for its best 30 seconds and turn one broadcast into a week of vertical clips, the repurposing engine every streamer needs but none has time to run themselves.",
+      "proves": "You can mine a multi-hour stream for its best 30 seconds and turn one broadcast into a week of vertical clips, the repurposing engine most streamers need but few have time to run themselves.",
       "prerequisites": [
         { "skill": "Short-form vertical editing in CapCut (cuts, captions, hooks)", "why": "The clips are real finished vertical videos, not timestamps, you need to actually cut and caption them.", "ifYouDont": "CapCut's own no-cost tutorials cover vertical cuts, captions, and pacing." },
         { "skill": "Spotting a clippable moment (a hook, a payoff, a reaction)", "why": "Most of a stream is dead air; the skill is finding the 5 seconds worth reposting, not editing prettily.", "ifYouDont": "Study 10 top clips in TikTok's public Creative Center and note what happens in the first 2 seconds of each." }
@@ -1144,14 +1144,14 @@
       "icon": "waveform",
       "difficulty": "Intermediate",
       "time": "3–4 hours",
-      "proves": "You can take a messy raw recording, filler words, dead air, uneven levels, and deliver a tight, clean episode a host would publish without a second listen. This is the core deliverable of every podcast retainer.",
+      "proves": "You can take a messy raw recording, filler words, dead air, uneven levels, and deliver a tight, clean episode a host would publish without a second listen. This is a core deliverable of most podcast retainers.",
       "prerequisites": [
         { "skill": "Audio editing in Descript or a no-cost DAW (cuts, filler removal, leveling)", "why": "The whole job is hands-on editing, you need to actually cut, not just know the theory.", "ifYouDont": "Descript's no-cost tutorials and help center walk through filler removal and leveling." },
         { "skill": "Basic audio cleanup (noise reduction, consistent loudness)", "why": "A clean edit still sounds amateur if one voice is loud, the other quiet, and there's hiss underneath.", "ifYouDont": "Adobe Podcast's no-cost Enhance tool cleans noisy audio; learn what it does and doesn't fix." }
       ],
       "resources": [
         { "name": "A public-domain or Creative Commons recorded conversation (or your own)", "type": "Tool", "what": "Your raw source, a CC-licensed interview, a public recording you may edit, or a 20-minute chat you record yourself. Keep it honest: don't pass off someone's show as your work.", "free": true, "url": "#" },
-        { "name": "Descript (no-cost tier)", "type": "Tool", "what": "Edit the episode here, text-based editing makes filler removal fast.", "free": true, "url": "https://www.descript.com" },
+        { "name": "Descript (no-cost tier)", "type": "Tool", "what": "Edit the episode here (check the current free-tier limits before you start); text-based editing makes filler removal fast.", "free": true, "url": "https://www.descript.com" },
         { "name": "Adobe Podcast Enhance", "type": "Tool", "what": "No-cost tool to clean up background noise and even out voice quality before the final export.", "free": true, "url": "https://podcast.adobe.com" }
       ],
       "brief": {
@@ -1302,7 +1302,7 @@
         { "name": "Canva Design School", "type": "Course", "what": "Design the newsletter header and any inline graphics to a consistent look.", "free": true, "url": "https://www.canva.com/designschool/" }
       ],
       "brief": {
-        "scenario": "New Hope Wellness (a fictional faith-based wellness coach with a 300-person email list) sends a newsletter when there's time, which means every few months, in a different format each time. Opens are dropping because nobody knows when, or what, to expect.",
+        "scenario": "New Hope Wellness (a fictional faith-based wellness coach with a 200-person email list) sends a newsletter when there's time, which means every few months, in a different format each time. Opens are dropping because nobody knows when, or what, to expect.",
         "deliverable": "A reusable Mailchimp newsletter template with a consistent structure (header, a devotional/reflection, community and announcements, an event or offer, and a closing), plus 4 fully written weekly issues that drop into it, and a one-page style guide defining the tone, sections, and send cadence.",
         "constraints": [
           "The template must have a fixed, repeatable section structure, the point is a system, not 4 one-off emails.",
@@ -1444,13 +1444,13 @@
       "time": "2–3 hours",
       "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes: the exact skill US practices now pay a medical VA a premium for.",
       "prerequisites": [
-        { "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)", "why": "You cannot chart what you can't read. A wrong term or misread abbreviation in a note is a clinical error, not a typo.", "ifYouDont": "Audit Rice University's Medical Terminology I on Coursera free: the first module covers enough to start." },
+        { "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)", "why": "You cannot chart what you can't read. A wrong term or misread abbreviation in a note is a clinical error, not a typo.", "ifYouDont": "Audit the University of Pittsburgh's Medical Terminology I on Coursera free: the first module covers enough to start." },
         { "skill": "HIPAA basics (what PHI is, minimum-necessary, safe handling)", "why": "Every chart is protected health information. Handling it wrong is the fastest way to lose a medical client and expose them to a fine.", "ifYouDont": "Take a free HIPAA awareness course (HIPAA Journal lists several with certificates) before you touch any record." }
       ],
       "resources": [
         { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI. Pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com" },
         { "name": "Coursera: Medical Terminology I", "type": "Course", "what": "Audit free; the vocabulary you need to read and write the note.", "free": true, "url": "https://www.coursera.org/learn/medical-terminology-1" },
-        { "name": "Freed AI scribe", "type": "Tool", "what": "Free trial notes; generate an AI draft of the same visit to compare against your own.", "free": true, "url": "https://www.getfreed.ai" }
+        { "name": "Freed AI scribe", "type": "Tool", "what": "Free trial notes (one option among several AI scribes, Nabla is another; not an endorsement); generate an AI draft of the same visit to compare against your own.", "free": true, "url": "https://www.getfreed.ai" }
       ],
       "brief": {
         "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable, and providers are the bottleneck. They want a VA who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
@@ -1528,7 +1528,7 @@
         "Did I invent any dimension or finish instead of flagging it as an assumption?"
       ],
       "presentIt": "Present it as the agent's problem solved: 'From a flat 2D plan to a listing-ready render.' Put the source floor plan and your final render side by side: the jump from line drawing to photorealistic space is the whole pitch.",
-      "stretch": "Add a 15-second walkthrough video from the same model and one AI-generated render variation (SketchUp Diffusion or ZSky AI), then note what the AI got wrong that your to-scale model got right. Directing AI and correcting it is the premium skill."
+      "stretch": "Add a 15-second walkthrough video from the same model and one AI-generated render variation (AI Render or ZSky AI), then note what the AI got wrong that your to-scale model got right. Directing AI and correcting it is the premium skill."
     },
     {
       "id": "listing-optimization-teardown",
@@ -1538,7 +1538,7 @@
       "icon": "shopping-cart",
       "difficulty": "Starter",
       "time": "2–3 hours",
-      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts: the single most-requested e-commerce VA skill.",
+      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts: one of the most-requested e-commerce VA skills.",
       "prerequisites": [
         { "skill": "Listing anatomy (title, bullets, description, images, A+ content)", "why": "You can't fix a listing if you don't know which part does which job. The title ranks; the bullets sell; the images close.", "ifYouDont": "Amazon Seller University (open) has a free walkthrough of every listing element in under an hour." },
         { "skill": "Basic keyword research", "why": "A listing rewrite that isn't driven by what buyers actually search is just prettier guessing.", "ifYouDont": "Helium 10's free tier lets you pull real search terms for any product; their free tutorials show how." }
