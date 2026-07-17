@@ -7,7 +7,6 @@
     "intro": "You do not need to pay for the knowledge to start an online career. Almost everything worth learning is already no-cost: from the world's best universities, from the companies whose tools you will use, from your own government, and from a few genuinely great teachers on YouTube. The hard part was never access. It is knowing which no-cost thing is worth your week, and how to turn it into proof instead of a pile of half-finished tabs. That is what this page is for.",
     "creed": "It is only worth the tab if it does not cost you a month you cannot get back. The skill is not finding a course. It is judging one before it takes your time, and finishing it with something to show."
   },
-
   "judge": {
     "kicker": "Before you enrol · the filter",
     "title": "How to judge any open course before it takes your week.",
@@ -41,7 +40,6 @@
     ],
     "note": "If a course fails these, it is not bad. It is just not worth your scarce hours right now. Close the tab without guilt."
   },
-
   "shelf": {
     "kicker": "The shelf · go to the source",
     "title": "The resources we actually point people to.",
@@ -52,8 +50,20 @@
         "title": "AI fluency, start here",
         "note": "The single highest-leverage no-cost study you can do this month. Learn to work with AI as a professional, not a tourist. Do the first one before anything else on this shelf.",
         "items": [
-          { "org": "Anthropic · open", "title": "AI Fluency: Framework & Foundations", "url": "https://www.anthropic.com/ai-fluency/overview", "why": "A no-cost, few-hour course on the four habits of working with AI well: Delegation, Description, Discernment, Diligence. The single highest-leverage no-cost thing on this shelf. Do it first.", "cost": "free" },
-          { "org": "Grow with Google", "title": "Google AI Essentials", "url": "https://grow.google/ai-essentials/", "why": "A hands-on intro to using generative AI at work in under five hours, no coding needed. On Coursera with a trial and financial aid. The fundamentals are worth the time.", "cost": "no-cost-trial" }
+          {
+            "org": "Anthropic · open",
+            "title": "AI Fluency: Framework & Foundations",
+            "url": "https://www.anthropic.com/ai-fluency/overview",
+            "why": "A no-cost, few-hour course on the four habits of working with AI well: Delegation, Description, Discernment, Diligence. The single highest-leverage no-cost thing on this shelf. Do it first.",
+            "cost": "free"
+          },
+          {
+            "org": "Grow with Google",
+            "title": "Google AI Essentials",
+            "url": "https://grow.google/ai-essentials/",
+            "why": "A hands-on intro to using generative AI at work in under five hours, no coding needed. On Coursera with a trial and financial aid. The fundamentals are worth the time.",
+            "cost": "no-cost-trial"
+          }
         ]
       },
       {
@@ -61,8 +71,20 @@
         "title": "Philippine government & public, open by right",
         "note": "Your taxes already paid for these. No-cost digital-skills training and certificates from Philippine public programs. It is yours by right, so take the certificate, then go build the proof that actually gets you hired.",
         "items": [
-          { "org": "TESDA · PH government", "title": "TESDA Online Program", "url": "https://e-tesda.gov.ph/", "why": "The government's open course platform: dozens of programs with National Certificates, from web and mobile development to bookkeeping. Your taxes paid for it, and the NC is a real, recognised credential.", "cost": "free" },
-          { "org": "DICT · PH government", "title": "DICT digital skills (SPARK)", "url": "https://dict.gov.ph/trainings", "why": "No-cost government training built for online freelancing: social media, graphic design, web dev, AI and data science, with a freelancing on-ramp. Formerly DigitalJobsPH, now delivered as SPARK.", "cost": "free" }
+          {
+            "org": "TESDA · PH government",
+            "title": "TESDA Online Program",
+            "url": "https://e-tesda.gov.ph/",
+            "why": "The government's open course platform: dozens of programs with National Certificates, from web and mobile development to bookkeeping. Your taxes paid for it, and the NC is a real, recognised credential.",
+            "cost": "free"
+          },
+          {
+            "org": "DICT · PH government",
+            "title": "DICT digital skills (SPARK)",
+            "url": "https://dict.gov.ph/trainings",
+            "why": "No-cost government training built for online freelancing: social media, graphic design, web dev, AI and data science, with a freelancing on-ramp. Formerly DigitalJobsPH, now delivered as SPARK.",
+            "cost": "free"
+          }
         ]
       },
       {
@@ -70,13 +92,188 @@
         "title": "Craft skills, from the people who made the tools",
         "note": "The companies whose software you will use, and the universities, give their courses away on purpose: a skilled user is a lifelong one. Pick the ones in your niche and finish with a project, not just a badge.",
         "items": [
-          { "org": "freeCodeCamp · nonprofit", "title": "freeCodeCamp", "url": "https://www.freecodecamp.org/", "why": "A charity's complete, no-cost curriculum in web development, data, and Python: thousands of hours, real certifications, and projects you build to earn them.", "cost": "free" },
-          { "org": "Harvard · edX", "title": "CS50: Intro to Computer Science", "url": "https://cs50.harvard.edu/x/", "why": "Harvard's famous intro to computer science, open to audit. The best single foundation if you want to truly understand how software works. Optional paid certificate.", "cost": "free" },
-          { "org": "HubSpot Academy", "title": "HubSpot Academy", "url": "https://academy.hubspot.com/", "why": "No-cost, well-respected certifications in marketing, sales, CRM, and customer service, directly useful for ops, social media, and support roles.", "cost": "free" },
-          { "org": "Google Skillshop", "title": "Google Skillshop", "url": "https://skillshop.withgoogle.com/", "why": "Google's no-cost certifications in Google Ads and Analytics, the credentials clients actually recognise for marketing and data work.", "cost": "free" },
-          { "org": "Meta Blueprint", "title": "Meta Blueprint", "url": "https://www.facebook.com/business/learn", "why": "Meta's 100+ open courses and no-cost certification exams for Facebook and Instagram advertising, the standard training for social-media and paid-ads gigs.", "cost": "free" },
-          { "org": "Canva Design School", "title": "Canva Design School", "url": "https://www.canva.com/design-school/", "why": "No-cost design courses and certifications from Canva: color, type, and layout basics, taught inside the exact tool most social and design gigs use daily.", "cost": "free" },
-          { "org": "GitLab · handbook", "title": "The All-Remote Handbook", "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/", "why": "The best no-cost resource anywhere on how async remote work really works, from a company that has done it at scale for a decade. Read it and out-communicate people with five years on you.", "cost": "free" }
+          {
+            "org": "freeCodeCamp · nonprofit",
+            "title": "freeCodeCamp",
+            "url": "https://www.freecodecamp.org/",
+            "why": "A charity's complete, no-cost curriculum in web development, data, and Python: thousands of hours, real certifications, and projects you build to earn them.",
+            "cost": "free"
+          },
+          {
+            "org": "Harvard · edX",
+            "title": "CS50: Intro to Computer Science",
+            "url": "https://cs50.harvard.edu/x/",
+            "why": "Harvard's famous intro to computer science, open to audit. The best single foundation if you want to truly understand how software works. Optional paid certificate.",
+            "cost": "free"
+          },
+          {
+            "org": "HubSpot Academy",
+            "title": "HubSpot Academy",
+            "url": "https://academy.hubspot.com/",
+            "why": "No-cost, well-respected certifications in marketing, sales, CRM, and customer service, directly useful for ops, social media, and support roles.",
+            "cost": "free"
+          },
+          {
+            "org": "Google Skillshop",
+            "title": "Google Skillshop",
+            "url": "https://skillshop.withgoogle.com/",
+            "why": "Google's no-cost certifications in Google Ads and Analytics, the credentials clients actually recognise for marketing and data work.",
+            "cost": "free"
+          },
+          {
+            "org": "Meta Blueprint",
+            "title": "Meta Blueprint",
+            "url": "https://www.facebook.com/business/learn",
+            "why": "Meta's 100+ open courses and no-cost certification exams for Facebook and Instagram advertising, the standard training for social-media and paid-ads gigs.",
+            "cost": "free"
+          },
+          {
+            "org": "Canva Design School",
+            "title": "Canva Design School",
+            "url": "https://www.canva.com/design-school/",
+            "why": "No-cost design courses and certifications from Canva: color, type, and layout basics, taught inside the exact tool most social and design gigs use daily.",
+            "cost": "free"
+          },
+          {
+            "org": "GitLab · handbook",
+            "title": "The All-Remote Handbook",
+            "url": "https://handbook.gitlab.com/handbook/company/culture/all-remote/",
+            "why": "The best no-cost resource anywhere on how async remote work really works, from a company that has done it at scale for a decade. Read it and out-communicate people with five years on you.",
+            "cost": "free"
+          }
+        ]
+      },
+      {
+        "id": "opensource",
+        "title": "Free & open-source, skip the subscription",
+        "note": "Paid subscriptions add up fast on a new freelancer's rate. These tools cover the same jobs, design, video, docs, PDF, screen recording, notes, so you can deliver client work without a stack of monthly bills. The open-source ones you can self-host and keep forever; the freemium ones have a real no-cost tier, not just a trial.",
+        "items": [
+          {
+            "org": "Penpot · open",
+            "title": "Penpot, collaborative design and prototyping",
+            "url": "https://penpot.app",
+            "why": "Replaces Figma's paid seats for interface design and prototyping, self-hostable and free with no per-editor fee.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Inkscape · open",
+            "title": "Inkscape, vector illustration and logo design",
+            "url": "https://inkscape.org",
+            "why": "Replaces Adobe Illustrator (about $23/month) for logos, icons, and vector artwork, with full SVG support.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Excalidraw · open",
+            "title": "Excalidraw, hand-drawn diagrams and whiteboarding",
+            "url": "https://excalidraw.com",
+            "why": "Replaces paid whiteboards like Miro for client mockups, flowcharts, and quick wireframes.",
+            "cost": "open-source"
+          },
+          {
+            "org": "GIMP · open",
+            "title": "GIMP, raster photo and image editor",
+            "url": "https://www.gimp.org",
+            "why": "Replaces Adobe Photoshop (about $23/month) for photo retouching, compositing, and raster editing.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Krita · open",
+            "title": "Krita, digital painting and illustration",
+            "url": "https://krita.org",
+            "why": "Replaces Procreate or Photoshop for digital painting, comic art, and illustration gigs, brushes included.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Photopea",
+            "title": "Photopea, browser-based PSD editor",
+            "url": "https://www.photopea.com",
+            "why": "Opens and edits PSD, AI, and XD files right in the browser for one-off jobs, no Creative Cloud subscription.",
+            "cost": "freemium"
+          },
+          {
+            "org": "OpenCut · open",
+            "title": "OpenCut, browser and desktop video editor",
+            "url": "https://opencut.app",
+            "why": "Replaces CapCut Pro or Premiere Pro for timeline video editing, processes files locally with no watermark or upload.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Kdenlive · open",
+            "title": "Kdenlive, multi-track desktop video editor",
+            "url": "https://kdenlive.org",
+            "why": "Replaces Premiere Pro for multi-track video editing on Windows, Mac, and Linux at zero cost.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Blackmagic Design",
+            "title": "DaVinci Resolve, editing and color grading",
+            "url": "https://www.blackmagicdesign.com/products/davinciresolve",
+            "why": "Replaces Premiere Pro and Audition for most freelance edit and color jobs; the free tier has no watermark or time limit, only the one-time Studio upgrade is paid.",
+            "cost": "freemium"
+          },
+          {
+            "org": "Audacity · open",
+            "title": "Audacity, multi-track audio editor",
+            "url": "https://www.audacityteam.org",
+            "why": "Replaces Adobe Audition for podcast editing, noise cleanup, and multi-track audio recording.",
+            "cost": "open-source"
+          },
+          {
+            "org": "LibreOffice · open",
+            "title": "LibreOffice, docs, spreadsheets, and slides",
+            "url": "https://www.libreoffice.org",
+            "why": "Replaces Microsoft 365 Personal (about $70/year) for documents, spreadsheets, and slides, saved in .docx/.xlsx/.pptx when a client needs it.",
+            "cost": "open-source"
+          },
+          {
+            "org": "ONLYOFFICE · open",
+            "title": "ONLYOFFICE, MS Office-format editors",
+            "url": "https://www.onlyoffice.com",
+            "why": "Replaces Microsoft 365 for clients who need pixel-accurate .docx/.xlsx/.pptx formatting that LibreOffice sometimes shifts.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Stirling PDF · open",
+            "title": "Stirling PDF, merge, split, sign, and OCR PDFs",
+            "url": "https://www.stirlingpdf.com",
+            "why": "Replaces Adobe Acrobat Pro (about $20/month) for the PDF work freelancers bill for daily: merging, compressing, redacting, and OCR; the self-hosted core is free, only team and SSO features are paid.",
+            "cost": "open-source"
+          },
+          {
+            "org": "OBS Studio · open",
+            "title": "OBS Studio, screen recording and streaming",
+            "url": "https://obsproject.com",
+            "why": "Replaces Loom or Camtasia for screen recordings, client walkthroughs, and video proposals.",
+            "cost": "open-source"
+          },
+          {
+            "org": "AppFlowy · open",
+            "title": "AppFlowy, Notion-style docs and databases",
+            "url": "https://appflowy.io",
+            "why": "Replaces Notion's paid plan for notes, wikis, and databases, self-hostable so client data stays on your own server.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Wekan · open",
+            "title": "Wekan, kanban task and project boards",
+            "url": "https://wekan.github.io",
+            "why": "Replaces Trello's paid power-ups for kanban boards, checklists, and swimlanes, self-hosted or on a free community instance.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Instatic · open",
+            "title": "Instatic, self-hosted website builder and CMS",
+            "url": "https://github.com/CoreBunch/Instatic",
+            "why": "Replaces Webflow or Framer subscriptions for client sites, MIT licensed and free on your own server, though still an early release.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Agnes AI",
+            "title": "Agnes AI, multimodal AI workspace",
+            "url": "https://agnes-ai.com",
+            "why": "Replaces a ChatGPT Plus or Notion AI subscription for everyday AI chat, docs, and drafting; the free tier is rate-limited, paid plans start around $4/month.",
+            "cost": "freemium"
+          }
         ]
       },
       {
@@ -84,10 +281,34 @@
         "title": "YouTube, teachers worth your time",
         "note": "The best of YouTube rivals any paid course. These channels are durable and genuinely teach a craft. Watch to build, not to binge.",
         "items": [
-          { "org": "YouTube · freeCodeCamp", "title": "freeCodeCamp.org", "url": "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ", "why": "700+ full-length open courses on coding, data, and AI: some of the best long-form technical teaching anywhere, and new ones weekly.", "cost": "free" },
-          { "org": "YouTube · Kevin Stratvert", "title": "Kevin Stratvert", "url": "https://www.youtube.com/channel/UCfJT_eYDTmDE-ovKaxVE1ig", "why": "Fast, clear tutorials on AI tools (ChatGPT, Claude, Gemini, Copilot), Excel, and everyday software, perfect for learning a tool the week a client needs it.", "cost": "free" },
-          { "org": "YouTube · Grow with Google", "title": "Grow with Google", "url": "https://www.youtube.com/@GrowWithGoogle", "why": "Google's own channel for career and digital-skills training, job-ready skills straight from the source.", "cost": "free" },
-          { "org": "YouTube · Google", "title": "Google Career Certificates", "url": "https://www.youtube.com/@GoogleCareerCertificates", "why": "Guidance and real graduate stories for career-changers moving into UX, data, IT, and support roles.", "cost": "free" }
+          {
+            "org": "YouTube · freeCodeCamp",
+            "title": "freeCodeCamp.org",
+            "url": "https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ",
+            "why": "700+ full-length open courses on coding, data, and AI: some of the best long-form technical teaching anywhere, and new ones weekly.",
+            "cost": "free"
+          },
+          {
+            "org": "YouTube · Kevin Stratvert",
+            "title": "Kevin Stratvert",
+            "url": "https://www.youtube.com/channel/UCfJT_eYDTmDE-ovKaxVE1ig",
+            "why": "Fast, clear tutorials on AI tools (ChatGPT, Claude, Gemini, Copilot), Excel, and everyday software, perfect for learning a tool the week a client needs it.",
+            "cost": "free"
+          },
+          {
+            "org": "YouTube · Grow with Google",
+            "title": "Grow with Google",
+            "url": "https://www.youtube.com/@GrowWithGoogle",
+            "why": "Google's own channel for career and digital-skills training, job-ready skills straight from the source.",
+            "cost": "free"
+          },
+          {
+            "org": "YouTube · Google",
+            "title": "Google Career Certificates",
+            "url": "https://www.youtube.com/@GoogleCareerCertificates",
+            "why": "Guidance and real graduate stories for career-changers moving into UX, data, IT, and support roles.",
+            "cost": "free"
+          }
         ]
       },
       {
@@ -95,43 +316,112 @@
         "title": "Be a real business, taxes & benefits",
         "note": "The unglamorous half that separates a hobby from a career: how to register, file your taxes, and get your own benefits as a self-employed Filipino. Being BIR-registered and invoice-ready is itself a rate differentiator, because serious clients can book you as a real supplier.",
         "items": [
-          { "org": "BIR · PH government", "title": "Bureau of Internal Revenue", "url": "https://www.bir.gov.ph/", "why": "Register as self-employed with BIR Form 1901 and choose the 8% flat tax on gross income over ₱250,000. The annual registration fee was scrapped in 2024. This is the official source, straight from the agency.", "cost": "free" },
-          { "org": "Taxumo", "title": "Freelancer tax guide + online filing", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/", "why": "A plain-English walk-through of BIR registration, the 8% rate, and the filing deadlines, plus a tool that files for you. Published 2025; check for a newer edition before trusting a specific deadline. Start here if the BIR site feels like a maze.", "cost": "freemium" },
-          { "org": "SSS · PH government", "title": "SSS for the self-employed", "url": "https://www.sss.gov.ph/self-employed/", "why": "Register as a self-employed member for sickness, maternity, disability, and retirement benefits. No employer means you fund this yourself, so start early and stay consistent.", "cost": "free" },
-          { "org": "PhilHealth · PH government", "title": "PhilHealth", "url": "https://www.philhealth.gov.ph/", "why": "Register as a self-earning individual for health coverage. It is required for the self-employed, and it is cheap protection against a hospital bill wiping out your savings.", "cost": "free" },
-          { "org": "Pag-IBIG · PH government", "title": "Pag-IBIG Fund", "url": "https://www.pagibigfund.gov.ph/", "why": "Technically voluntary for freelancers, but worth it for the housing loans, savings dividends, and calamity loans. Small monthly contributions that quietly add up.", "cost": "free" }
+          {
+            "org": "BIR · PH government",
+            "title": "Bureau of Internal Revenue",
+            "url": "https://www.bir.gov.ph/",
+            "why": "Register as self-employed with BIR Form 1901 and choose the 8% flat tax on gross income over ₱250,000. The annual registration fee was scrapped in 2024. This is the official source, straight from the agency.",
+            "cost": "free"
+          },
+          {
+            "org": "Taxumo",
+            "title": "Freelancer tax guide + online filing",
+            "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/",
+            "why": "A plain-English walk-through of BIR registration, the 8% rate, and the filing deadlines, plus a tool that files for you. Published 2025; check for a newer edition before trusting a specific deadline. Start here if the BIR site feels like a maze.",
+            "cost": "freemium"
+          },
+          {
+            "org": "SSS · PH government",
+            "title": "SSS for the self-employed",
+            "url": "https://www.sss.gov.ph/self-employed/",
+            "why": "Register as a self-employed member for sickness, maternity, disability, and retirement benefits. No employer means you fund this yourself, so start early and stay consistent.",
+            "cost": "free"
+          },
+          {
+            "org": "PhilHealth · PH government",
+            "title": "PhilHealth",
+            "url": "https://www.philhealth.gov.ph/",
+            "why": "Register as a self-earning individual for health coverage. It is required for the self-employed, and it is cheap protection against a hospital bill wiping out your savings.",
+            "cost": "free"
+          },
+          {
+            "org": "Pag-IBIG · PH government",
+            "title": "Pag-IBIG Fund",
+            "url": "https://www.pagibigfund.gov.ph/",
+            "why": "Technically voluntary for freelancers, but worth it for the housing loans, savings dividends, and calamity loans. Small monthly contributions that quietly add up.",
+            "cost": "free"
+          }
         ]
       }
     ]
   },
-
   "protocol": {
     "kicker": "How to use the shelf",
     "title": "Learning without proof is just entertainment.",
     "lead": "The mistake is not picking the wrong course. It is finishing five of them and having nothing to show a client. A resource only counts once it turns into evidence. Run every item on this shelf through the same five moves.",
     "steps": [
-      { "n": 1, "title": "Pick one, tied to your niche", "desc": "Not five. One resource, aimed at the exact outcome your chosen lane needs. Breadth feels productive and builds nothing. Depth in one lane is what gets hired." },
-      { "n": 2, "title": "Set the outcome before you start", "desc": "Decide what you will have built when you finish, a landing page, a reconciled sample ledger, a month of content, not complete the course. A topic never ends. A deliverable does." },
-      { "n": 3, "title": "Build as you go, not after", "desc": "Pause the video and do the thing on your own file. Passive watching is the illusion of learning. The part where you are stuck is the part where it is actually happening." },
-      { "n": 4, "title": "Collect proof, not certificates", "desc": "A certificate is a receipt that says you attended. A portfolio piece is evidence that you can do the work. Clients hire the second one. Turn every course into a thing you can show." },
-      { "n": 5, "title": "Use it on a real task fast", "desc": "Put the new skill to work within a week: a micro-task, a no-cost project for a cause you like, a rebuild from scratch. A skill you do not use within days is a skill you are about to forget." }
+      {
+        "n": 1,
+        "title": "Pick one, tied to your niche",
+        "desc": "Not five. One resource, aimed at the exact outcome your chosen lane needs. Breadth feels productive and builds nothing. Depth in one lane is what gets hired."
+      },
+      {
+        "n": 2,
+        "title": "Set the outcome before you start",
+        "desc": "Decide what you will have built when you finish, a landing page, a reconciled sample ledger, a month of content, not complete the course. A topic never ends. A deliverable does."
+      },
+      {
+        "n": 3,
+        "title": "Build as you go, not after",
+        "desc": "Pause the video and do the thing on your own file. Passive watching is the illusion of learning. The part where you are stuck is the part where it is actually happening."
+      },
+      {
+        "n": 4,
+        "title": "Collect proof, not certificates",
+        "desc": "A certificate is a receipt that says you attended. A portfolio piece is evidence that you can do the work. Clients hire the second one. Turn every course into a thing you can show."
+      },
+      {
+        "n": 5,
+        "title": "Use it on a real task fast",
+        "desc": "Put the new skill to work within a week: a micro-task, a no-cost project for a cause you like, a rebuild from scratch. A skill you do not use within days is a skill you are about to forget."
+      }
     ],
     "crossrefs": [
-      { "href": "/learn", "label": "How to actually learn (the evidence)" },
-      { "href": "/tasks", "label": "Turn learning into proof" },
-      { "href": "/tools", "label": "The learn-any-tool method" }
+      {
+        "href": "/learn",
+        "label": "How to actually learn (the evidence)"
+      },
+      {
+        "href": "/tasks",
+        "label": "Turn learning into proof"
+      },
+      {
+        "href": "/tools",
+        "label": "The learn-any-tool method"
+      }
     ]
   },
-
   "closing": {
     "kicker": "The honest bottom line",
     "title": "Access was never the thing standing between you and this career.",
     "body": "Everything you need to start is on this shelf, at no cost, right now. What is scarce is not the courses. It is the judgment to pick the right one, the discipline to finish it, and the habit of turning every hour of study into something a client can see. Those are no-cost too. They just are not easy, and that is exactly why the people who build them win.",
     "point": "Start with one. Finish it with something built. Then come back for the next.",
     "links": [
-      { "href": "/ai-first", "label": "The AI layer", "desc": "Every role runs on AI now. Pair the no-cost AI-fluency course with the craft you are building." },
-      { "href": "/learn", "label": "How to learn", "desc": "What the evidence on studying actually supports, and why the popular habits quietly fail you." },
-      { "href": "/tasks", "label": "Build proof", "desc": "Real micro-tasks that finish as portfolio pieces. The only thing that turns study into a job." }
+      {
+        "href": "/ai-first",
+        "label": "The AI layer",
+        "desc": "Every role runs on AI now. Pair the no-cost AI-fluency course with the craft you are building."
+      },
+      {
+        "href": "/learn",
+        "label": "How to learn",
+        "desc": "What the evidence on studying actually supports, and why the popular habits quietly fail you."
+      },
+      {
+        "href": "/tasks",
+        "label": "Build proof",
+        "desc": "Real micro-tasks that finish as portfolio pieces. The only thing that turns study into a job."
+      }
     ]
   }
 }
