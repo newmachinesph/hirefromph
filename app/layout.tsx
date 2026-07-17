@@ -10,6 +10,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { FollowModal } from "@/components/follow-modal";
 import { MotionProvider } from "@/components/motion-provider";
 import { SWRegister } from "@/components/sw-register";
+import { BackToTop } from "@/components/back-to-top";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
@@ -101,6 +102,7 @@ export default function RootLayout({
             <main className="relative z-[2] flex-1">{children}</main>
             <SiteFooter />
             <FollowModal />
+            <BackToTop />
           </MotionProvider>
         </PathProvider>
         <SWRegister />
