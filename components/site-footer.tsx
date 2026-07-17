@@ -24,7 +24,7 @@ export function SiteFooter() {
             <p className="mt-4 text-sm leading-relaxed text-paper-2/70">
               {site.mission}
             </p>
-            <p className="mt-6 kicker text-coral">{site.meaning}</p>
+            <p className="mt-6 kicker text-paper-2">{site.meaning}</p>
             <p className="mt-2 kicker text-paper-2/50">
               Open access · Always will be
             </p>
