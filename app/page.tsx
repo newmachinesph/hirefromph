@@ -71,10 +71,7 @@ export default function Home() {
         <div className="container-x relative grid gap-12 pt-16 pb-8 lg:grid-cols-[1.15fr_0.85fr] lg:pt-24 lg:pb-16">
           <div className="flex flex-col justify-center">
             <Reveal>
-              <Kicker>Developing upwards · Philippines</Kicker>
-            </Reveal>
-            <Reveal i={1}>
-              <h1 className="mt-6 font-display text-[length:var(--text-hero)] leading-[var(--text-hero--line-height)] tracking-[-0.03em] text-balance">
+              <h1 className="font-display text-[length:var(--text-hero)] leading-[var(--text-hero--line-height)] tracking-[-0.03em] text-balance">
                 Build the online
                 <br />
                 career you{" "}
