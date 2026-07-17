@@ -1,34 +1,36 @@
+import Image from "next/image";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
+/** Intrinsic pixels of public/devup-logo.png. */
+const MARK_W = 271;
+const MARK_H = 280;
+
 /**
- * DevUp vector mark, a coral badge with an upward arrow ("developing upwards").
- * Self-contained SVG, no external assets. Works on light and dark surfaces.
+ * DevUp brand mark (the "DU" monogram with an upward arrow) from
+ * public/devup-logo.png. `onDark` renders a white silhouette for dark surfaces,
+ * where the mark's dark strokes would otherwise disappear.
  */
 export function LogoMark({
   size = 32,
   className,
   title,
+  onDark,
 }: {
   size?: number;
   className?: string;
   title?: string;
+  onDark?: boolean;
 }) {
   return (
-    <svg
-      width={size}
+    <Image
+      src="/devup-logo.png"
+      width={Math.round((size * MARK_W) / MARK_H)}
       height={size}
-      viewBox="0 0 32 32"
-      fill="none"
-      className={className}
-      role={title ? "img" : "presentation"}
+      alt={title ?? ""}
       aria-hidden={title ? undefined : true}
-      aria-label={title}
-    >
-      {title ? <title>{title}</title> : null}
-      <rect width="32" height="32" rx="0" fill="#0d9488" />
-      <path d="M16 7 L24 15.5 H19 V25 H13 V15.5 H8 Z" fill="#fff" />
-    </svg>
+      className={cn(onDark && "brightness-0 invert", className)}
+    />
   );
 }
 
@@ -37,14 +39,16 @@ export function Logo({
   className,
   markSize = 32,
   wordmark,
+  onDark,
 }: {
   className?: string;
   markSize?: number;
   wordmark?: ReactNode;
+  onDark?: boolean;
 }) {
   return (
     <span className={cn("inline-flex items-center gap-2", className)}>
-      <LogoMark size={markSize} />
+      <LogoMark size={markSize} onDark={onDark} />
       <span className="font-display text-xl leading-none tracking-tight">
         {wordmark ?? (
           <>
