@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { NicheExplorer } from "@/components/niche-explorer";
 import { NicheScorer } from "@/components/niche-scorer";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -55,21 +55,11 @@ export default function NichesPage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Niche Learning Hub</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-            Pick your lane. Go deep.
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {tracks.intro}
-          </p>
-        </Reveal>
-      </section>
+      <PageHero
+        kicker="Niche Learning Hub"
+        title="Pick your lane. Go deep."
+        lead={tracks.intro}
+      />
 
       {/* ------------------------------------------------------ EVALUATE ANY NICHE */}
       <section className="pb-14 lg:pb-20">

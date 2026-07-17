@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { Reveal } from "@/components/reveal";
 
 export function Kicker({
   children,
@@ -157,6 +158,65 @@ export function SectionHeading({
         </p>
       )}
     </div>
+  );
+}
+
+/**
+ * Standard interior-page hero: kicker, headline, optional lead paragraph.
+ * One place for headline size, top margin, and hero padding so pages stop
+ * drifting. `titleWidth` stays per-page because it tracks headline length.
+ */
+export function PageHero({
+  kicker,
+  title,
+  lead,
+  titleWidth = "max-w-3xl",
+  backdrop,
+  className,
+  children,
+}: {
+  kicker: string;
+  title: ReactNode;
+  lead?: ReactNode;
+  /** Tailwind max-width class for the headline; varies with title length. */
+  titleWidth?: string;
+  /** Absolute-positioned decorative element(s) behind the hero. */
+  backdrop?: ReactNode;
+  className?: string;
+  /** Extra hero content after the lead (buttons, quote, etc.). */
+  children?: ReactNode;
+}) {
+  return (
+    <section
+      className={cn(
+        "container-x pt-14 pb-10 lg:pt-20",
+        backdrop && "relative",
+        className,
+      )}
+    >
+      {backdrop}
+      <Reveal>
+        <Kicker>{kicker}</Kicker>
+      </Reveal>
+      <Reveal i={1}>
+        <h1
+          className={cn(
+            "mt-5 font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance",
+            titleWidth,
+          )}
+        >
+          {title}
+        </h1>
+      </Reveal>
+      {lead && (
+        <Reveal i={2}>
+          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
+            {lead}
+          </p>
+        </Reveal>
+      )}
+      {children}
+    </section>
   );
 }
 

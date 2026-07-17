@@ -6,7 +6,7 @@ import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { CopyButton } from "@/components/copy-button";
 import { FindWorkDirectory, VettingTool } from "@/components/find-work";
-import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { ButtonLink, Kicker, PageHero, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -26,21 +26,16 @@ export default function Page() {
   return (
     <>
       {/* HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Find work</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="Find work"
+        title={
+          <>
             Don&rsquo;t wait for a list.{" "}
             <span className="text-coral">Learn to find the work.</span>
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] text-ink-soft">
-            {findwork.intro}
-          </p>
-        </Reveal>
+          </>
+        }
+        lead={findwork.intro}
+      >
         <Reveal i={3}>
           <p className="mt-6 max-w-2xl rounded-2xl border border-line-strong bg-paper-3 px-6 py-5 font-display text-lg leading-snug text-ink text-balance">
             {findwork.creed}
@@ -57,7 +52,7 @@ export default function Page() {
             </p>
           </div>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* HOW TO SOURCE OPPORTUNITIES */}
       <section className="container-x pb-20 lg:pb-28">

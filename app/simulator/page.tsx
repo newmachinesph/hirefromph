@@ -2,7 +2,7 @@ import { ExternalLink, TriangleAlert } from "lucide-react";
 import sim from "@/data/simulator.json";
 import { CareerSimulator } from "@/components/career-simulator";
 import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ArrowLink, ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -30,28 +30,24 @@ export default function SimulatorPage() {
   return (
     <>
       {/* ------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>{sim.hero.kicker}</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker={sim.hero.kicker}
+        titleWidth="max-w-4xl"
+        title={
+          <>
             {sim.hero.titleLine1}
             <br />
             {sim.hero.titleLine2}
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {sim.hero.lead}
-          </p>
-        </Reveal>
+          </>
+        }
+        lead={sim.hero.lead}
+      >
         <Reveal i={3}>
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
             {sim.intro}
           </p>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ----------------------------------------------------- MODEL BANNER */}
       <section className="container-x pb-10">

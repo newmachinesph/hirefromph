@@ -5,7 +5,7 @@ import doctrine from "@/data/doctrine.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { SelfAudit } from "@/components/self-audit";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -64,51 +64,41 @@ export default function MethodPage() {
   return (
     <>
       {/* ------------------------------------------------------ MANIFESTO HERO */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-32 right-[-8%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl"
-        />
-        <div className="container-x relative pt-16 pb-4 lg:pt-24">
-          <Reveal>
-            <Kicker>{doctrine.kicker}</Kicker>
-          </Reveal>
-          <Reveal i={1}>
-            <h1 className="mt-6 max-w-4xl text-balance">
-              <span className="block font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-ink-faint">
-                {titleLead}.
-              </span>
-              <span className="block font-display text-[length:var(--text-hero)] leading-[var(--text-hero--line-height)] tracking-[-0.03em] text-ink">
-                {titleMain.replace(" build it.", " ")}
-                <span className="text-coral">build it.</span>
-              </span>
-            </h1>
-          </Reveal>
-          <Reveal i={2}>
-            <p className="mt-8 max-w-2xl font-display text-2xl leading-snug text-ink-soft text-balance lg:text-[1.7rem]">
-              {doctrine.creed}
-            </p>
-          </Reveal>
-        </div>
+      <PageHero
+        kicker={doctrine.kicker}
+        title={<>
+          <span className="block text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-ink-faint">{titleLead}.</span>
+          <span className="block tracking-[-0.03em] text-ink">{titleMain.replace(" build it.", " ")}<span className="text-coral">build it.</span></span>
+        </>}
+        titleWidth="max-w-4xl"
+        backdrop={
+          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-8%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+        }
+      >
+        <Reveal i={2}>
+          <p className="mt-8 max-w-2xl font-display text-2xl leading-snug text-ink-soft text-balance lg:text-[1.7rem]">
+            {doctrine.creed}
+          </p>
+        </Reveal>
+      </PageHero>
 
-        <div className="container-x pt-14 pb-20 lg:pb-28">
-          <Reveal i={1}>
-            <div className="grid overflow-hidden rounded-[var(--radius-lg)] border border-line lg:grid-cols-2">
-              <div className="bg-paper-2 p-8 lg:p-12">
-                <p className="kicker">The promise</p>
-                <p className="mt-4 font-display text-xl leading-snug text-ink text-balance lg:text-2xl">
-                  {doctrine.promise}
-                </p>
-              </div>
-              <div className="bg-ink p-8 text-paper-2 lg:p-12">
-                <p className="kicker text-paper-2/50">Why it matters</p>
-                <p className="mt-4 font-display text-xl leading-snug text-balance lg:text-2xl">
-                  {withEmphasis(doctrine.whyItMatters)}
-                </p>
-              </div>
+      <section className="container-x pt-14 pb-20 lg:pb-28">
+        <Reveal i={1}>
+          <div className="grid overflow-hidden rounded-[var(--radius-lg)] border border-line lg:grid-cols-2">
+            <div className="bg-paper-2 p-8 lg:p-12">
+              <p className="kicker">The promise</p>
+              <p className="mt-4 font-display text-xl leading-snug text-ink text-balance lg:text-2xl">
+                {doctrine.promise}
+              </p>
             </div>
-          </Reveal>
-        </div>
+            <div className="bg-ink p-8 text-paper-2 lg:p-12">
+              <p className="kicker text-paper-2/50">Why it matters</p>
+              <p className="mt-4 font-display text-xl leading-snug text-balance lg:text-2xl">
+                {withEmphasis(doctrine.whyItMatters)}
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* -------------------------------------------------------------- LAWS */}

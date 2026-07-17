@@ -1,6 +1,6 @@
 import site from "@/data/site.json";
 import { Reveal } from "@/components/reveal";
-import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { PageHero, Pill, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata = pageMeta({
@@ -27,31 +27,31 @@ export default function PrivacyPage() {
   return (
     <>
       {/* --------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Privacy · Plain English</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-4xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="Privacy · Plain English"
+        title={
+          <>
             We can&rsquo;t leak what
             <br />
             <span className="text-coral">we never collect.</span>
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
+          </>
+        }
+        titleWidth="max-w-4xl"
+        lead={
+          <>
             DevUp has no accounts, no login, no shopping cart, and no sales team.
             There is no database of you here to protect, because we never build
             one. This page says exactly what happens when you visit, in words you
             can actually check.
-          </p>
-        </Reveal>
+          </>
+        }
+      >
         <Reveal i={3}>
           <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
             The only data we&rsquo;re comfortable holding is none of yours.
           </blockquote>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ---------------------------------------------------------------- WHO */}
       <section className="bg-paper-3/60 py-20 lg:py-24">

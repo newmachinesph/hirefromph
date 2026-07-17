@@ -5,7 +5,7 @@ import frameworks from "@/data/frameworks.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { EquipmentChecker } from "@/components/equipment-checker";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -26,20 +26,11 @@ export default function EquipmentPage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Equipment Guide 2026</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-            Get prepared, not perfect.
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {equipment.intro}
-          </p>
-        </Reveal>
+      <PageHero
+        kicker="Equipment Guide 2026"
+        title={<>Get prepared, not perfect.</>}
+        lead={equipment.intro}
+      >
         <Reveal i={3}>
           <blockquote className="mt-9 max-w-2xl rounded-2xl border border-line bg-paper-2 p-6">
             <p className="font-display text-xl leading-snug text-ink text-balance">
@@ -47,7 +38,7 @@ export default function EquipmentPage() {
             </p>
           </blockquote>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ------------------------------------------------------- CHECKER */}
       <section className="container-x pb-20 lg:pb-28">

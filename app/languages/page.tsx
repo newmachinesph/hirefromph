@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Clock, ExternalLink } from "lucide-react";
 import languagesData from "@/data/languages.json";
 import { Reveal } from "@/components/reveal";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { ButtonLink, Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
@@ -36,22 +36,16 @@ export default function Page() {
   return (
     <>
       {/* HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>The rate multiplier</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="The rate multiplier"
+        title={
+          <>
             A second language can{" "}
             <span className="text-coral">double your pay.</span>
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] text-ink-soft">
-            {languagesData.intro}
-          </p>
-        </Reveal>
-      </section>
+          </>
+        }
+        lead={languagesData.intro}
+      />
 
       {/* LANGUAGES */}
       <section className="container-x pb-16 lg:pb-24">

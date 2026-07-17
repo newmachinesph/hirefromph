@@ -13,7 +13,7 @@ import promptsData from "@/data/prompts.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { PromptWorkshop } from "@/components/prompt-workshop";
-import { Kicker, Pill, SectionHeading } from "@/components/ui";
+import { PageHero, Pill, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -34,39 +34,17 @@ export default function PromptsPage() {
   return (
     <>
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="relative overflow-hidden">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -top-32 right-[-10%] h-[440px] w-[440px] rounded-full bg-coral/10 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="pointer-events-none absolute top-56 left-[-8%] h-[360px] w-[360px] rounded-full bg-indigo/10 blur-3xl"
-        />
-        <div className="container-x relative pt-14 pb-10 lg:pt-20">
-          <Reveal>
-            <Kicker>{promptingData.kicker}</Kicker>
-          </Reveal>
-          <Reveal i={1}>
-            <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-              {promptingData.headline}
-            </h1>
-          </Reveal>
-          <Reveal i={2}>
-            <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {promptingData.intro}
-            </p>
-          </Reveal>
-          <Reveal i={3}>
-            <blockquote className="relative mt-10 max-w-2xl rounded-[var(--radius-lg)] border border-coral/20 bg-coral-tint px-8 py-8">
-              <Quote size={26} className="text-coral/50" aria-hidden />
-              <p className="mt-3 font-display text-[length:var(--text-h3)] leading-snug text-ink text-balance">
-                &ldquo;{promptingData.creed}&rdquo;
-              </p>
-            </blockquote>
-          </Reveal>
-        </div>
-      </section>
+      <PageHero
+        kicker={promptingData.kicker}
+        title={promptingData.headline}
+        lead={promptingData.intro}
+        backdrop={<>
+          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-10%] h-[440px] w-[440px] rounded-full bg-coral/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute top-56 left-[-8%] h-[360px] w-[360px] rounded-full bg-indigo/10 blur-3xl" />
+        </>}
+      >
+        <Reveal i={3}><blockquote className="relative mt-10 max-w-2xl rounded-[var(--radius-lg)] border border-coral/20 bg-coral-tint px-8 py-8"><Quote size={26} className="text-coral/50" aria-hidden /><p className="mt-3 font-display text-[length:var(--text-h3)] leading-snug text-ink text-balance">&ldquo;{promptingData.creed}&rdquo;</p></blockquote></Reveal>
+      </PageHero>
 
       {/* ------------------------------------------------------------ ANATOMY */}
       <section className="container-x py-14 lg:py-20">

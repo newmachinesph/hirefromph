@@ -4,7 +4,7 @@ import { KeyRound } from "lucide-react";
 import { Reveal } from "@/components/reveal";
 import { ApplicationTracker } from "@/components/application-tracker";
 import { CopyButton } from "@/components/copy-button";
-import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { ButtonLink, PageHero, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
@@ -64,25 +64,23 @@ export default function TrackerPage() {
   return (
     <>
       {/* HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>Get Hired · Your pipeline</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
+      <PageHero
+        kicker="Get Hired · Your pipeline"
+        title={
+          <>
             Every application gets a row.{" "}
             <span className="text-coral">Every follow-up gets a date.</span>
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
+          </>
+        }
+        lead={
+          <>
             The #1 reason people lose an offer isn&rsquo;t a bad resume, it&rsquo;s silence after &ldquo;applied&rdquo;. This tracker runs
             your job hunt like an operation: log everything, get nudged the
             moment a follow-up is due, and see honestly whether the problem is
             your volume or your application.
-          </p>
-        </Reveal>
-
+          </>
+        }
+      >
         <Reveal i={3}>
           <div className="mt-7 flex items-start gap-4 rounded-2xl border border-line bg-paper-2 px-6 py-5">
             <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-ink text-paper-2">
@@ -117,7 +115,7 @@ export default function TrackerPage() {
             </div>
           </div>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* THE TOOL */}
       <section className="container-x pb-20 lg:pb-28">

@@ -4,7 +4,7 @@ import tasksData from "@/data/tasks.json";
 import { Reveal } from "@/components/reveal";
 import { Icon } from "@/components/icon";
 import { MicroTasks } from "@/components/micro-tasks";
-import { ButtonLink, Kicker, SectionHeading } from "@/components/ui";
+import { ButtonLink, Kicker, PageHero, SectionHeading } from "@/components/ui";
 import { JsonLd } from "@/components/json-ld";
 import { pageMeta } from "@/lib/meta";
 import { BASE_URL } from "@/app/sitemap";
@@ -39,20 +39,7 @@ export default function TasksPage() {
     <>
       <JsonLd data={itemListLd} />
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="container-x pt-14 pb-10 lg:pt-20">
-        <Reveal>
-          <Kicker>{tasksData.kicker}</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <h1 className="mt-5 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-            {tasksData.headline}
-          </h1>
-        </Reveal>
-        <Reveal i={2}>
-          <p className="mt-5 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {tasksData.intro}
-          </p>
-        </Reveal>
+      <PageHero kicker={tasksData.kicker} title={tasksData.headline} lead={tasksData.intro}>
         <Reveal i={3}>
           <div className="mt-7 max-w-2xl rounded-2xl border border-line-strong bg-paper-3 px-6 py-5">
             <p className="kicker mb-2">The creed</p>
@@ -61,7 +48,7 @@ export default function TasksPage() {
             </p>
           </div>
         </Reveal>
-      </section>
+      </PageHero>
 
       {/* ------------------------------------------------------- HOW IT WORKS */}
       <section className="container-x pb-20 lg:pb-28">
