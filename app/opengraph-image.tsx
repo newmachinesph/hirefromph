@@ -1,11 +1,15 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const alt =
   "DevUp, Developing upwards. Build the online career you actually own.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const logo = await readFile(join(process.cwd(), "public", "devup-logo.png"));
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
   return new ImageResponse(
     (
       <div
@@ -36,25 +40,33 @@ export default function OpengraphImage() {
         />
 
         {/* brand row */}
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div
-            style={{
-              width: 76,
-              height: 76,
-              borderRadius: 0,
-              background: "#0d9488",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <svg width="46" height="46" viewBox="0 0 32 32" fill="none">
-              <path d="M16 7 L24 15.5 H19 V25 H13 V15.5 H8 Z" fill="#fff" />
-            </svg>
-          </div>
-          <div style={{ display: "flex", fontSize: 44, fontWeight: 700 }}>
-            <span>Dev</span>
-            <span style={{ color: "#0d9488" }}>Up</span>
+        <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoSrc} width={82} height={85} alt="" />
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <div
+              style={{
+                display: "flex",
+                fontSize: 44,
+                fontWeight: 700,
+                lineHeight: 1,
+              }}
+            >
+              <span>Dev</span>
+              <span style={{ color: "#0d9488" }}>Up</span>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                marginTop: 6,
+                fontSize: 19,
+                fontWeight: 600,
+                letterSpacing: 5,
+                color: "#3a4a46",
+              }}
+            >
+              DEVELOPING UPWARDS
+            </div>
           </div>
         </div>
 
@@ -89,9 +101,7 @@ export default function OpengraphImage() {
             color: "#798a84",
           }}
         >
-          <span style={{ color: "#2f9e46", fontWeight: 700 }}>Developing upwards</span>
-          <span>·</span>
-          <span>Open, permanently</span>
+          <span style={{ color: "#0d9488", fontWeight: 700 }}>Open, permanently</span>
           <span>·</span>
           <span>you build it, you own it</span>
         </div>
