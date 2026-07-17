@@ -4,7 +4,7 @@
     "kicker": "Salary guide · read the warning first",
     "line1": "What online work",
     "line2": "really pays right now.",
-    "intro": "Everyone wants a number, and there is no trusted dataset behind any of them — the warning below explains why. So here is what we can honestly give you: the ranges people quote, where they disagree, and how to price from live posts. Use it to get your bearings, not to set your rate.",
+    "intro": "Everyone wants a number, and there is no trusted dataset behind any of them: the warning below explains why. So here is what we can honestly give you: the ranges people quote, where they disagree, and how to price from live posts. Use it to get your bearings, not to set your rate.",
     "creed": "A salary guide with no method behind it is a guess with a chart on it. The real number is the one a real client agrees to pay you this month."
   },
 
@@ -59,7 +59,7 @@
     "title": "The pay ladder, and why you should climb it fast.",
     "monthlyNote": "The monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
     "tiers": [
-      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing — see the demonstration below." },
+      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing; see the demonstration below." },
       { "level": "Mid", "accent": "amber", "monthly": "≈ $600–2,400 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
       { "level": "Senior / specialist", "accent": "emerald", "monthly": "≈ $1,000–4,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
     ],
@@ -181,7 +181,7 @@
       { "href": "/niches", "label": "Pick a lane", "desc": "The specialty that moves you off the falling floor and onto the rising ceiling." },
       { "href": "/ai-first", "label": "Add the AI premium", "desc": "Fold AI into your craft to earn the premium that lands on top of a real skill." },
       { "href": "/clients", "label": "Own the client", "desc": "Direct clients pay more than an agency, because no one takes a cut in the middle." },
-      { "href": "/reality", "label": "See the full market data", "desc": "Every claim about this career, sourced — including the parts that rarely get quoted." }
+      { "href": "/reality", "label": "See the full market data", "desc": "Every claim about this career, sourced, including the parts that rarely get quoted." }
     ]
   }
 }

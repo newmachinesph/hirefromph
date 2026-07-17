@@ -10,7 +10,7 @@ export const metadata = pageMeta({
   path: "/resources",
   title: "Free Resources",
   description:
-    "The free shelf for Filipino online professionals: verified free courses, government programs, docs, and YouTube channels that actually move the needle, plus how to judge any free course before it takes your week, and how to turn study into proof.",
+    "The free shelf for Filipino online professionals: verified free courses, government programs, docs, and YouTube channels that actually get you hired, plus how to judge any free course before it takes your week, and how to turn study into proof.",
 });
 
 const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {

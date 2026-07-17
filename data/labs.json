@@ -47,10 +47,10 @@
         "intro": "Fill each field in your own words. Nothing here is pre-written, the preview assembles your actual resume as you type.",
         "steps": [
           { "id": "name", "label": "Full name & target role", "hint": "How you want to appear at the top, plus the exact role title you're applying for.", "placeholder": "[Full name], [exact target role title from the job post]", "rule": "Match the job post's exact title where honest, it's the first ATS keyword match." },
-          { "id": "contact", "label": "Contact line", "hint": "City, email, phone, one link.", "placeholder": "[City, Country] · [email] · [phone] · [one link — portfolio or LinkedIn]", "rule": "One link only. Pick the one that best proves your work." },
-          { "id": "summary", "label": "Professional summary", "hint": "2–3 lines: target role + tools you're trained in + one proof point.", "placeholder": "[Target role] trained in [your 2–3 core tools]. [One proof point: action + what you did + measurable result — e.g. cut a recurring task from X hours to Y].", "rule": "No adjective without evidence behind it." },
+          { "id": "contact", "label": "Contact line", "hint": "City, email, phone, one link.", "placeholder": "[City, Country] · [email] · [phone] · [one link: portfolio or LinkedIn]", "rule": "One link only. Pick the one that best proves your work." },
+          { "id": "summary", "label": "Professional summary", "hint": "2–3 lines: target role + tools you're trained in + one proof point.", "placeholder": "[Target role] trained in [your 2–3 core tools]. [One proof point: action + what you did + measurable result, e.g. cut a recurring task from X hours to Y].", "rule": "No adjective without evidence behind it." },
           { "id": "skills", "label": "Core skills", "hint": "5–8 skills. Only what you can defend in an interview.", "placeholder": "[6–8 skills you could each defend under a follow-up question, comma-separated]", "rule": "Every skill must survive a follow-up question." },
-          { "id": "experience", "label": "Experience or projects", "hint": "For each role or project: one line of context, then 2–4 result bullets.", "placeholder": "[Role or project title] ([year])\n- [Action verb] + [what you did] + [measurable result — a number, %, or time saved]\n- [Second bullet, same shape, also with a number]", "rule": "Every bullet needs a number." },
+          { "id": "experience", "label": "Experience or projects", "hint": "For each role or project: one line of context, then 2–4 result bullets.", "placeholder": "[Role or project title] ([year])\n- [Action verb] + [what you did] + [measurable result: a number, %, or time saved]\n- [Second bullet, same shape, also with a number]", "rule": "Every bullet needs a number." },
           { "id": "certs", "label": "Certifications & training", "hint": "What you can explain in one sentence if asked.", "placeholder": "[Certification or training] ([year]) · [another, if any]", "rule": "Cut anything you can't explain." },
           { "id": "languages", "label": "Languages", "hint": "Honest fluency level for each.", "placeholder": "[Language] ([professional / conversational / native]) · [Language] ([level])", "rule": "No inflated claims." }
         ]
@@ -106,10 +106,10 @@
       "builder": {
         "intro": "Paste in the real job post details you're responding to, then fill each part below in your own words. The preview assembles your actual message.",
         "steps": [
-          { "id": "opener", "label": "Specific opener", "hint": "Reference one exact detail from their post.", "placeholder": "[Quote one exact detail from their post] — [one line saying that's exactly the problem you handle].", "rule": "Must reference something only findable in their actual listing." },
+          { "id": "opener", "label": "Specific opener", "hint": "Reference one exact detail from their post.", "placeholder": "[Quote one exact detail from their post]; [one line saying that's exactly the problem you handle].", "rule": "Must reference something only findable in their actual listing." },
           { "id": "bridge", "label": "The bridge", "hint": "One sentence connecting their need to what you do.", "placeholder": "I help [who you serve] [the outcome you deliver] so [the pain they named] stops.", "rule": "Plain language, one outcome, no skill list." },
           { "id": "proof", "label": "Proof point", "hint": "One concrete result or practice project.", "placeholder": "[One concrete result: what you did + the tool + a number or timeframe].", "rule": "Must be specific, a number, a tool, a timeframe." },
-          { "id": "close", "label": "Low-friction close", "hint": "One concrete next step you're proposing.", "placeholder": "[One easy next step — e.g. a short call this week, or a small paid trial task], whichever's easier for you.", "rule": "Give them one easy yes, not an open question." }
+          { "id": "close", "label": "Low-friction close", "hint": "One concrete next step you're proposing.", "placeholder": "[One easy next step, e.g. a short call this week, or a small paid trial task], whichever's easier for you.", "rule": "Give them one easy yes, not an open question." }
         ]
       },
       "critique": [
@@ -169,8 +169,8 @@
           { "id": "services", "label": "Services (max 3)", "hint": "List your clearest offers.", "placeholder": "1. [Clear offer]\n2. [Clear offer]\n3. [Clear offer]", "rule": "Three max." },
           { "id": "sample1", "label": "Work sample #1, context, action, result", "hint": "Problem → what you did → measurable result.", "placeholder": "Problem: [the client's situation before you]\nWhat I did: [the action you took + tools used]\nResult: [before/after or a number]", "rule": "Must include a before/after or a number." },
           { "id": "sample2", "label": "Work sample #2, context, action, result", "hint": "Same structure, second piece, pick something that shows range.", "placeholder": "Problem: ...\nWhat I did: ...\nResult: ...", "rule": "Must be a different type of work than sample #1 to show range." },
-          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you actually looks like.", "placeholder": "1. [First step — e.g. a discovery call]\n2. [What you do next]\n3. [How and how often you communicate]\n4. [Reporting / review cadence]", "rule": "Plain language, focused on communication and turnaround." },
-          { "id": "contact", "label": "Contact / call to action", "hint": "One channel, one clear ask.", "placeholder": "[Your one call to action — e.g. book a discovery call]: [your link]", "rule": "One channel only." }
+          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you actually looks like.", "placeholder": "1. [First step, e.g. a discovery call]\n2. [What you do next]\n3. [How and how often you communicate]\n4. [Reporting / review cadence]", "rule": "Plain language, focused on communication and turnaround." },
+          { "id": "contact", "label": "Contact / call to action", "hint": "One channel, one clear ask.", "placeholder": "[Your one call to action, e.g. book a discovery call]: [your link]", "rule": "One channel only." }
         ]
       },
       "critique": [
@@ -224,12 +224,12 @@
       "builder": {
         "intro": "Design your own tracker's schema by answering what you're actually tracking. The preview assembles a column-by-column spec plus the setup rule for each, rebuild it as real columns in Sheets.",
         "steps": [
-          { "id": "purpose", "label": "What are you tracking, and why?", "hint": "Name the real thing and the decision this tracker helps you make.", "placeholder": "[What you're tracking] — so I can [the decision or action this tracker drives].", "rule": "Name the decision it drives, not just the data it holds." },
-          { "id": "idcolumn", "label": "Unique identifier column", "hint": "What makes each row unmistakably distinct?", "placeholder": "[What makes each row unique — e.g. an ID number, or Company + Role]", "rule": "Must be unique per row." },
-          { "id": "statusvalues", "label": "Status column, fixed dropdown values", "hint": "List every status value, in the order things actually move through them.", "placeholder": "[First status], [next], [next], … [final] — in the order items move through", "rule": "Fixed list only, no free text status." },
-          { "id": "datecolumn", "label": "Date-driven trigger column", "hint": "What date should prompt you to act?", "placeholder": "[Date that should prompt action — e.g. Follow-up Date, N days after another date]", "rule": "Must drive an action, not just record history." },
-          { "id": "filtercolumn", "label": "Owner/category column", "hint": "What will you filter or group by once this list gets long?", "placeholder": "[What you'll filter or group by — e.g. Platform, Client, Category]", "rule": "Match to how you'll actually filter later." },
-          { "id": "rule", "label": "The one rule that keeps this tracker alive", "hint": "When will you review it, and what happens if a row goes stale?", "placeholder": "[Your review cadence — when you check it, and what triggers action on a stale row].", "rule": "A tracker without a review cadence goes stale within two weeks." }
+          { "id": "purpose", "label": "What are you tracking, and why?", "hint": "Name the real thing and the decision this tracker helps you make.", "placeholder": "[What you're tracking], so I can [the decision or action this tracker drives].", "rule": "Name the decision it drives, not just the data it holds." },
+          { "id": "idcolumn", "label": "Unique identifier column", "hint": "What makes each row unmistakably distinct?", "placeholder": "[What makes each row unique, e.g. an ID number, or Company + Role]", "rule": "Must be unique per row." },
+          { "id": "statusvalues", "label": "Status column, fixed dropdown values", "hint": "List every status value, in the order things actually move through them.", "placeholder": "[First status], [next], [next], … [final], in the order items move through", "rule": "Fixed list only, no free text status." },
+          { "id": "datecolumn", "label": "Date-driven trigger column", "hint": "What date should prompt you to act?", "placeholder": "[Date that should prompt action, e.g. Follow-up Date, N days after another date]", "rule": "Must drive an action, not just record history." },
+          { "id": "filtercolumn", "label": "Owner/category column", "hint": "What will you filter or group by once this list gets long?", "placeholder": "[What you'll filter or group by, e.g. Platform, Client, Category]", "rule": "Match to how you'll actually filter later." },
+          { "id": "rule", "label": "The one rule that keeps this tracker alive", "hint": "When will you review it, and what happens if a row goes stale?", "placeholder": "[Your review cadence: when you check it, and what triggers action on a stale row].", "rule": "A tracker without a review cadence goes stale within two weeks." }
         ]
       },
       "critique": [
@@ -284,12 +284,12 @@
       "builder": {
         "intro": "Pick one real process you actually do, something repeatable, even small. Document it honestly, step by step.",
         "steps": [
-          { "id": "name", "label": "Process name", "hint": "Name it the way you'd search for it later.", "placeholder": "[Process name — specific enough to find in a list of 20 SOPs]", "rule": "Specific enough to find in a list of 20 SOPs." },
+          { "id": "name", "label": "Process name", "hint": "Name it the way you'd search for it later.", "placeholder": "[Process name: specific enough to find in a list of 20 SOPs]", "rule": "Specific enough to find in a list of 20 SOPs." },
           { "id": "purpose", "label": "Purpose", "hint": "Why does this process exist, one sentence.", "placeholder": "[One sentence: why this process exists / what it produces].", "rule": "One sentence." },
           { "id": "tools", "label": "Tools needed", "hint": "Exact tool names and access level.", "placeholder": "[Tool] ([access level]), [Tool] ([access level]), …", "rule": "Exact names, not categories." },
-          { "id": "frequency", "label": "Frequency / trigger", "hint": "When does this run?", "placeholder": "[The trigger — a schedule like 'every Friday 3pm', or an event like 'when X happens'].", "rule": "Name the actual trigger." },
+          { "id": "frequency", "label": "Frequency / trigger", "hint": "When does this run?", "placeholder": "[The trigger, a schedule like 'every Friday 3pm', or an event like 'when X happens'].", "rule": "Name the actual trigger." },
           { "id": "steps", "label": "Numbered steps", "hint": "One action per line. Write it for someone who's never done this before.", "placeholder": "1. [One action, imperative verb]\n2. [Next single action]\n3. [Next single action]\n… [end with the final action]", "rule": "One action per step, split any step containing 'and'." },
-          { "id": "mistakes", "label": "Common mistakes", "hint": "Real mistakes you or someone actually made doing this.", "placeholder": "[A real mistake you or someone made here] — [what it causes].", "rule": "Must be a real mistake, not hypothetical." },
+          { "id": "mistakes", "label": "Common mistakes", "hint": "Real mistakes you or someone actually made doing this.", "placeholder": "[A real mistake you or someone made here]: [what it causes].", "rule": "Must be a real mistake, not hypothetical." },
           { "id": "done", "label": "Definition of done", "hint": "A concrete, checkable condition.", "placeholder": "[A concrete, checkable condition that means it's complete].", "rule": "Checkable, not a feeling." }
         ]
       },
@@ -347,8 +347,8 @@
         "intro": "Fill in your actual working terms, this becomes both your contract text and your invoice format for this client relationship.",
         "steps": [
           { "id": "parties", "label": "Parties", "hint": "You and the client, by name.", "placeholder": "Between [your full legal name] ('Contractor') and [client's legal name] ('Client')", "rule": "Full legal names on both sides." },
-          { "id": "scope", "label": "Scope of work", "hint": "Specific enough that both sides could judge what's in vs. out of scope.", "placeholder": "[What's included — specific deliverables and cadence]. Does not include [what's explicitly out of scope].", "rule": "Specific, not vague." },
-          { "id": "rate", "label": "Rate & payment terms", "hint": "Amount, frequency, due date, late-payment consequence.", "placeholder": "[Amount] per [period], invoiced [when], due [Net X]. [Late-payment consequence — e.g. work pauses after N days unpaid].", "rule": "Must state a concrete late-payment consequence." },
+          { "id": "scope", "label": "Scope of work", "hint": "Specific enough that both sides could judge what's in vs. out of scope.", "placeholder": "[What's included: specific deliverables and cadence]. Does not include [what's explicitly out of scope].", "rule": "Specific, not vague." },
+          { "id": "rate", "label": "Rate & payment terms", "hint": "Amount, frequency, due date, late-payment consequence.", "placeholder": "[Amount] per [period], invoiced [when], due [Net X]. [Late-payment consequence, e.g. work pauses after N days unpaid].", "rule": "Must state a concrete late-payment consequence." },
           { "id": "communication", "label": "Communication expectations", "hint": "Primary channel and realistic response window.", "placeholder": "Primary channel: [tool]. Response within [window], [days].", "rule": "Name a specific window, not 'promptly'." },
           { "id": "termination", "label": "Termination terms", "hint": "Notice period, and confirm delivered work is always paid.", "placeholder": "Either party may end the agreement with [notice period] written notice. Work delivered up to that point is paid in full.", "rule": "Must confirm delivered work is always paid." },
           { "id": "invoiceheader", "label": "Invoice header details", "hint": "Invoice #, your name, client name, issue date, due date.", "placeholder": "Invoice #[sequential no.] · From: [your name] · To: [client name] · Issued: [date] · Due: [date]", "rule": "Every field filled, sequential invoice number." },
@@ -407,12 +407,12 @@
       "builder": {
         "intro": "Design the onboarding document you'll actually send a new client. Fill in your own questions and structure based on your niche.",
         "steps": [
-          { "id": "access", "label": "Access checklist", "hint": "Every specific tool and access level you need.", "placeholder": "[Tool] ([access level]), [Tool] ([access level]), … — via a shared password-manager vault", "rule": "Specific tools and access levels, routed through a password manager." },
+          { "id": "access", "label": "Access checklist", "hint": "Every specific tool and access level you need.", "placeholder": "[Tool] ([access level]), [Tool] ([access level]), …, via a shared password-manager vault", "rule": "Specific tools and access levels, routed through a password manager." },
           { "id": "goals", "label": "Goals question", "hint": "How you'll ask for a time-bound definition of success.", "placeholder": "What does 'this is working' look like in 30 / 60 / 90 days? Be as specific as you can, a number, a milestone, a feeling of relief about a specific thing.", "rule": "Must prompt a time-bound, specific answer." },
           { "id": "communication", "label": "Communication preferences", "hint": "Channel, response time, tone.", "placeholder": "Preferred channel: [tool]. Expected response time: [window]. Tone: [how they want it].", "rule": "Capture all three: channel, response time, tone." },
           { "id": "priorities", "label": "Priority triage", "hint": "Force a ranked top 3.", "placeholder": "1. [Top priority]\n2. [Second]\n3. [Third]", "rule": "Ranked, not an open list." },
           { "id": "recurring", "label": "Recurring task inventory", "hint": "Task, frequency, where it currently lives.", "placeholder": "[Recurring task], [frequency], [where it currently lives]", "rule": "Include frequency and current location for each." },
-          { "id": "emergency", "label": "Emergency / escalation plan", "hint": "Channel and response time for genuine emergencies.", "placeholder": "[Emergency channel — e.g. text/call] for [what counts as urgent]; I respond within [window].", "rule": "Must be separate from routine communication channel." }
+          { "id": "emergency", "label": "Emergency / escalation plan", "hint": "Channel and response time for genuine emergencies.", "placeholder": "[Emergency channel, e.g. text/call] for [what counts as urgent]; I respond within [window].", "rule": "Must be separate from routine communication channel." }
         ]
       },
       "critique": [
@@ -467,7 +467,7 @@
         "intro": "Write the actual update you'll send a real or upcoming client at the end of your first week.",
         "steps": [
           { "id": "recap", "label": "Understanding recap", "hint": "Restate their goals and priorities in your own words.", "placeholder": "My understanding: your top priority is [restate their #1 goal in your own words], with [the supporting foundation] underneath it.", "rule": "Must be your own words, not a copy of their brief." },
-          { "id": "setup", "label": "Quick setup summary", "hint": "What infrastructure is already in place.", "placeholder": "Set up: [infrastructure you've stood up — e.g. tracker built, SOP drafted, access confirmed].", "rule": "List concrete things, not vague 'getting settled in'." },
+          { "id": "setup", "label": "Quick setup summary", "hint": "What infrastructure is already in place.", "placeholder": "Set up: [infrastructure you've stood up, e.g. tracker built, SOP drafted, access confirmed].", "rule": "List concrete things, not vague 'getting settled in'." },
           { "id": "wins", "label": "Early wins (1–3)", "hint": "Small, genuinely completed things.", "placeholder": "[A genuinely finished small task]; [a second finished win, with a number if there is one].", "rule": "Must be genuinely finished, not in-progress." },
           { "id": "needs", "label": "What you need from them", "hint": "Specific access, decisions, or answers you're waiting on.", "placeholder": "Need: [specific access, decision, or answer you're waiting on].", "rule": "Specific, not a vague 'let me know if you have questions'." },
           { "id": "nextplan", "label": "Plan for weeks 2–4", "hint": "High-level themes, not rigid dates.", "placeholder": "Week 2: [theme]. Week 3: [theme]. Week 4: [theme].", "rule": "2–3 themes per week, not over-committed exact dates." }

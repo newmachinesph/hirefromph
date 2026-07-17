@@ -8,7 +8,7 @@ export const metadata = pageMeta({
   path: "/legit",
   title: "Get Legit",
   description:
-    "BIR registration, the 8% option, SSS/PhilHealth/Pag-IBIG as a self-employed professional, and the payment rails that protect your rate — every step linked to the official page.",
+    "BIR registration, the 8% option, SSS/PhilHealth/Pag-IBIG as a self-employed professional, and the payment rails that protect your rate: every step linked to the official page.",
 });
 
 export default function LegitPage() {

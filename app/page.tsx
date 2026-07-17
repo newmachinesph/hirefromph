@@ -34,7 +34,7 @@ const toolkit = [
   { title: "Own Your Clients", desc: "Agency or direct? A fair look at both, and the step-by-step way to land direct clients you actually keep.", href: "/clients", icon: "handshake" },
   { title: "Salary Guide", desc: "What online work really pays, the roles clients are hiring for now, full-time vs hourly vs retainer, and how to price yourself. No hype.", href: "/salary", icon: "wallet" },
   { title: "Client Markets", desc: "US vs UK/EU vs Australia and beyond: pay, culture, industries, and the timezone and overlap-hours math for your UTC+8 life.", href: "/markets", icon: "globe" },
-  { title: "The Resource Shelf", desc: "A curated shelf of real courses, docs, and channels that move the needle, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
+  { title: "The Resource Shelf", desc: "A curated shelf of real courses, docs, and channels that actually get you work, plus how to judge any course before it takes your week.", href: "/resources", icon: "library" },
   { title: "30-Day Plan", desc: "A personalized, day-by-day path that turns all of it into daily reps.", href: "/plan", icon: "calendar-check" },
   { title: "Niche Rubric", desc: "A weighted rubric to evaluate any niche yourself. The 14 we list, including new lanes like e-commerce store management and architectural 3D visualization, are worked examples.", href: "/niches", icon: "layers" },
   { title: "How to Learn", desc: "What the evidence actually supports, and why the most popular study habits quietly fail you.", href: "/learn", icon: "brain" },
@@ -100,7 +100,7 @@ export default function Home() {
             <Reveal i={2}>
               <p className="mt-8 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
                 We teach you the anatomy, the rules, and the judgment behind
-                every professional deliverable — then{" "}
+                every professional deliverable, then{" "}
                 <strong className="font-semibold text-ink">you build your own</strong>,
                 from a blank page. What you build here, you can rebuild for any
                 client, anywhere, forever. That skill is the career. Become an{" "}
@@ -127,7 +127,7 @@ export default function Home() {
                   <Link href="/reality" className="font-semibold text-ink link-sweep">
                     real numbers on this career
                   </Link>
-                  , with a link to the primary source every time — including the
+                  , with a link to the primary source every time, including the
                   numbers that might talk you out of it.
                 </span>
               </div>
