@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.firecrawl
+.impeccable
+.claude-flow
+.claude
