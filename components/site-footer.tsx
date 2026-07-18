@@ -10,13 +10,13 @@ export function SiteFooter() {
       <div className="container-x py-16">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
           <div className="max-w-sm">
-            <Link href="/" aria-label="DevUp home">
+            <Link href="/">
               <Logo
                 markSize={34}
                 onDark
                 wordmark={
                   <span className="text-3xl">
-                    Dev<span className="text-coral">Up</span>
+                    Dev<span className="text-coral-light">Up</span>
                   </span>
                 }
               />
@@ -34,7 +34,7 @@ export function SiteFooter() {
                 href={site.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-paper-2 transition-colors hover:border-coral hover:text-coral"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-paper-2 transition-colors hover:border-coral-light hover:text-coral-light"
               >
                 <FacebookGlyph size={16} />
                 Follow our Page
@@ -64,7 +64,7 @@ export function SiteFooter() {
                     <li key={l.href}>
                       <Link
                         href={l.href}
-                        className="text-sm text-paper-2/80 transition-colors hover:text-coral"
+                        className="text-sm text-paper-2/80 transition-colors hover:text-coral-light"
                       >
                         {l.label}
                       </Link>

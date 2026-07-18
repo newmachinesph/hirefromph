@@ -27,7 +27,7 @@ export function SocialLinks() {
           rel="noopener noreferrer"
           onClick={() => track("social_click", { platform: label })}
           aria-label={`DevUp on ${label}`}
-          className="grid h-10 w-10 place-items-center border border-white/15 bg-white/5 text-paper-2 transition-colors hover:border-coral hover:text-coral"
+          className="grid h-10 w-10 place-items-center border border-white/15 bg-white/5 text-paper-2 transition-colors hover:border-coral-light hover:text-coral-light"
         >
           <Icon size={18} weight="fill" aria-hidden />
         </a>
