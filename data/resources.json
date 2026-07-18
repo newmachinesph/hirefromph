@@ -274,7 +274,37 @@
             "why": "Replaces a ChatGPT Plus or Notion AI subscription for everyday AI chat, docs, and drafting; the free tier is rate-limited, paid plans start around $4/month.",
             "cost": "freemium"
           }
-        ]
+        ],
+        "savings": {
+          "note": "A working freelancer's paid stack runs about this much every month. This shelf covers all of it for free.",
+          "asOf": "Approximate list prices, mid-2026.",
+          "basis": [
+            {
+              "tool": "Adobe Photoshop",
+              "monthly": 23
+            },
+            {
+              "tool": "Adobe Premiere Pro",
+              "monthly": 23
+            },
+            {
+              "tool": "Adobe Acrobat Pro",
+              "monthly": 20
+            },
+            {
+              "tool": "Microsoft 365",
+              "monthly": 6
+            },
+            {
+              "tool": "Notion (paid plan)",
+              "monthly": 10
+            },
+            {
+              "tool": "ChatGPT Plus",
+              "monthly": 20
+            }
+          ]
+        }
       },
       {
         "id": "youtube",
