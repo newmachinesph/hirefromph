@@ -12,5 +12,11 @@
   "faith-wellness": "Faith & Wellness Support",
   "medical-va": "Medical Virtual Assistant",
   "design-viz": "Architectural & 3D Visualization",
-  "ecommerce": "E-commerce Store Management"
+  "ecommerce": "E-commerce Store Management",
+  "ai-agent-ops": "AI Agent Operations",
+  "ai-content-qa": "AI Content QA & Prompt Ops",
+  "no-code-apps": "No-Code App Building",
+  "revops": "RevOps & GTM Operations",
+  "data-analytics": "AI-Assisted Data & Analytics",
+  "localization": "Localization & Subtitling Ops"
 }

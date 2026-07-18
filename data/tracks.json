@@ -15,14 +15,41 @@
       "demand": 5,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["Google Workspace", "Notion", "Calendly", "Slack", "1Password"],
-      "skills": ["Calendar & inbox management", "Travel & logistics", "Meeting prep & notes", "Stakeholder comms", "Project coordination"],
-      "learn": [
-        { "type": "Course", "title": "Google Workspace Learning Center", "provider": "Google (open)" },
-        { "type": "Course", "title": "Google Workspace Certification", "provider": "Google (open)" },
-        { "type": "Lab", "title": "SOP Lab: write your own library", "provider": "In-app (/build)" }
+      "tools": [
+        "Google Workspace",
+        "Notion",
+        "Calendly",
+        "Slack",
+        "1Password"
       ],
-      "certs": ["Google Workspace", "Notion Essentials"],
+      "skills": [
+        "Calendar & inbox management",
+        "Travel & logistics",
+        "Meeting prep & notes",
+        "Stakeholder comms",
+        "Project coordination"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Google Workspace Learning Center",
+          "provider": "Google (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Google Workspace Certification",
+          "provider": "Google (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "SOP Lab: write your own library",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Google Workspace",
+        "Notion Essentials"
+      ],
       "clients": "Founders, C-suite, and busy solo operators who need one reliable person to run their day.",
       "ai": {
         "change": "AI now drafts the emails, summarizes the meetings, and suggests the schedule. The typing part of executive support is disappearing fast.",
@@ -41,14 +68,41 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 1,
-      "tools": ["QuickBooks Online", "Xero", "Google Sheets", "Dext", "Bill.com"],
-      "skills": ["Bank reconciliation", "Accounts payable/receivable", "Monthly reporting", "Payroll basics", "Cleanup projects"],
-      "learn": [
-        { "type": "Course", "title": "QuickBooks Online Certification", "provider": "Intuit (open)" },
-        { "type": "Course", "title": "Xero Advisor Certification", "provider": "Xero (open)" },
-        { "type": "Course", "title": "QuickBooks Online Training", "provider": "Intuit (open)" }
+      "tools": [
+        "QuickBooks Online",
+        "Xero",
+        "Google Sheets",
+        "Dext",
+        "Bill.com"
       ],
-      "certs": ["QuickBooks ProAdvisor", "Xero Advisor"],
+      "skills": [
+        "Bank reconciliation",
+        "Accounts payable/receivable",
+        "Monthly reporting",
+        "Payroll basics",
+        "Cleanup projects"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "QuickBooks Online Certification",
+          "provider": "Intuit (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Xero Advisor Certification",
+          "provider": "Xero (open)"
+        },
+        {
+          "type": "Course",
+          "title": "QuickBooks Online Training",
+          "provider": "Intuit (open)"
+        }
+      ],
+      "certs": [
+        "QuickBooks ProAdvisor",
+        "Xero Advisor"
+      ],
       "clients": "E-commerce, agencies, real estate, and medical practices that need clean books monthly.",
       "ai": {
         "change": "AI now sorts transactions and drafts monthly reports in seconds. The data-entry half of bookkeeping is basically over.",
@@ -67,14 +121,41 @@
       "demand": 5,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["Canva", "Meta Business Suite", "Buffer", "CapCut", "Metricool"],
-      "skills": ["Content calendars", "Short-form video", "Copywriting", "Community management", "Analytics reporting"],
-      "learn": [
-        { "type": "Course", "title": "Meta Social Media Marketing", "provider": "Meta (open)" },
-        { "type": "Course", "title": "Canva Design Essentials", "provider": "Canva (open)" },
-        { "type": "Course", "title": "Content Marketing Certification", "provider": "HubSpot Academy (open)" }
+      "tools": [
+        "Canva",
+        "Meta Business Suite",
+        "Buffer",
+        "CapCut",
+        "Metricool"
       ],
-      "certs": ["Meta Certified", "HubSpot Social Media"],
+      "skills": [
+        "Content calendars",
+        "Short-form video",
+        "Copywriting",
+        "Community management",
+        "Analytics reporting"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Meta Social Media Marketing",
+          "provider": "Meta (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Canva Design Essentials",
+          "provider": "Canva (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Content Marketing Certification",
+          "provider": "HubSpot Academy (open)"
+        }
+      ],
+      "certs": [
+        "Meta Certified",
+        "HubSpot Social Media"
+      ],
       "clients": "Coaches, local businesses, and DTC brands that need consistent, on-brand content.",
       "ai": {
         "change": "AI can write thirty captions and generate a month of graphics before lunch. Content volume is now cheap for everyone, including your client's competitors.",
@@ -93,14 +174,41 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 2,
-      "tools": ["Asana", "Monday.com", "ClickUp", "Slack", "Notion"],
-      "skills": ["Sprint & task planning", "Team coordination", "Process documentation", "Reporting dashboards", "Risk tracking"],
-      "learn": [
-        { "type": "Course", "title": "Google Project Management Certificate", "provider": "Google (open to audit)" },
-        { "type": "Course", "title": "Asana Academy", "provider": "Asana (open)" },
-        { "type": "Lab", "title": "Dashboard & SOP Labs: build your own", "provider": "In-app (/build)" }
+      "tools": [
+        "Asana",
+        "Monday.com",
+        "ClickUp",
+        "Slack",
+        "Notion"
       ],
-      "certs": ["Google PM", "CAPM (optional)"],
+      "skills": [
+        "Sprint & task planning",
+        "Team coordination",
+        "Process documentation",
+        "Reporting dashboards",
+        "Risk tracking"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Google Project Management Certificate",
+          "provider": "Google (open to audit)"
+        },
+        {
+          "type": "Course",
+          "title": "Asana Academy",
+          "provider": "Asana (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Dashboard & SOP Labs: build your own",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Google PM",
+        "CAPM (optional)"
+      ],
       "clients": "Agencies and scaling startups that need someone to own delivery, not just tasks.",
       "ai": {
         "change": "AI writes the status updates, the meeting notes, and the task breakdowns now. The admin layer of project management is melting away.",
@@ -119,14 +227,41 @@
       "demand": 4,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["Zendesk", "Intercom", "HubSpot", "Gorgias", "Slack"],
-      "skills": ["Ticket handling", "Customer onboarding", "Knowledge-base writing", "Retention & upsell", "Empathy at scale"],
-      "learn": [
-        { "type": "Course", "title": "HubSpot Service Hub", "provider": "HubSpot (open)" },
-        { "type": "Course", "title": "Service Hub & Support Training", "provider": "HubSpot Academy (open)" },
-        { "type": "Lab", "title": "Macro Library Lab: build your own", "provider": "In-app (/build)" }
+      "tools": [
+        "Zendesk",
+        "Intercom",
+        "HubSpot",
+        "Gorgias",
+        "Slack"
       ],
-      "certs": ["HubSpot Service", "Zendesk Support"],
+      "skills": [
+        "Ticket handling",
+        "Customer onboarding",
+        "Knowledge-base writing",
+        "Retention & upsell",
+        "Empathy at scale"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "HubSpot Service Hub",
+          "provider": "HubSpot (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Service Hub & Support Training",
+          "provider": "HubSpot Academy (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Macro Library Lab: build your own",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "HubSpot Service",
+        "Zendesk Support"
+      ],
       "clients": "SaaS and e-commerce brands that live or die by customer retention.",
       "ai": {
         "change": "AI now answers the easy tickets instantly. The repetitive half of support is automating fast, and that is fine.",
@@ -145,14 +280,41 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 2,
-      "tools": ["BoldTrail (formerly kvCORE)", "Follow Up Boss", "Canva", "MLS tools", "DocuSign"],
-      "skills": ["Listing management", "CRM & lead follow-up", "Transaction coordination", "Showing feedback", "Marketing collateral"],
-      "learn": [
-        { "type": "Docs", "title": "Follow Up Boss Playbooks", "provider": "Follow Up Boss (open)" },
-        { "type": "Lab", "title": "Message & Follow-up Lab: write your own", "provider": "In-app (/build)" },
-        { "type": "Lab", "title": "Tracker Lab: build your own", "provider": "In-app (/build)" }
+      "tools": [
+        "BoldTrail (formerly kvCORE)",
+        "Follow Up Boss",
+        "Canva",
+        "MLS tools",
+        "DocuSign"
       ],
-      "certs": ["Follow Up Boss", "Canva"],
+      "skills": [
+        "Listing management",
+        "CRM & lead follow-up",
+        "Transaction coordination",
+        "Showing feedback",
+        "Marketing collateral"
+      ],
+      "learn": [
+        {
+          "type": "Docs",
+          "title": "Follow Up Boss Playbooks",
+          "provider": "Follow Up Boss (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Message & Follow-up Lab: write your own",
+          "provider": "In-app (/build)"
+        },
+        {
+          "type": "Lab",
+          "title": "Tracker Lab: build your own",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Follow Up Boss",
+        "Canva"
+      ],
       "clients": "US-based real estate agents and teams drowning in admin and follow-up.",
       "ai": {
         "change": "AI writes the listings, sends the follow-up sequences, and keeps the CRM filled on its own now.",
@@ -171,14 +333,41 @@
       "demand": 5,
       "difficulty": "Advanced",
       "startStage": 3,
-      "tools": ["Zapier", "Make", "n8n", "GoHighLevel", "Airtable"],
-      "skills": ["Workflow automation", "CRM setup & management", "API basics & webhooks", "No-code app building", "AI integration"],
-      "learn": [
-        { "type": "Course", "title": "Zapier & Make Automation", "provider": "Vendor (open)" },
-        { "type": "Course", "title": "Zapier Learn: Automation Basics", "provider": "Zapier (open)" },
-        { "type": "Course", "title": "GoHighLevel Fundamentals", "provider": "GHL (open)" }
+      "tools": [
+        "Zapier",
+        "Make",
+        "n8n",
+        "GoHighLevel",
+        "Airtable"
       ],
-      "certs": ["Zapier Expert", "HubSpot Ops"],
+      "skills": [
+        "Workflow automation",
+        "CRM setup & management",
+        "API basics & webhooks",
+        "No-code app building",
+        "AI integration"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Zapier & Make Automation",
+          "provider": "Vendor (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Zapier Learn: Automation Basics",
+          "provider": "Zapier (open)"
+        },
+        {
+          "type": "Course",
+          "title": "GoHighLevel Fundamentals",
+          "provider": "GHL (open)"
+        }
+      ],
+      "certs": [
+        "Zapier Expert",
+        "HubSpot Ops"
+      ],
       "clients": "Agencies and startups that need their stack connected and their busywork gone.",
       "ai": {
         "change": "AI is the engine of this niche, and it made building radically easier: describe the workflow and it writes half of it for you.",
@@ -197,14 +386,41 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 1,
-      "tools": ["Canva", "Figma", "CapCut", "Adobe Express", "Descript"],
-      "skills": ["Graphic design", "Short-form video editing", "Copywriting", "Brand systems", "Thumbnail & ad creative"],
-      "learn": [
-        { "type": "Course", "title": "Figma for Beginners", "provider": "Figma (open)" },
-        { "type": "Video", "title": "CapCut Official Tutorials", "provider": "CapCut (open)" },
-        { "type": "Lab", "title": "Portfolio Lab: build your own", "provider": "In-app (/build)" }
+      "tools": [
+        "Canva",
+        "Figma",
+        "CapCut",
+        "Adobe Express",
+        "Descript"
       ],
-      "certs": ["Canva", "Google UX (optional)"],
+      "skills": [
+        "Graphic design",
+        "Short-form video editing",
+        "Copywriting",
+        "Brand systems",
+        "Thumbnail & ad creative"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Figma for Beginners",
+          "provider": "Figma (open)"
+        },
+        {
+          "type": "Video",
+          "title": "CapCut Official Tutorials",
+          "provider": "CapCut (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Portfolio Lab: build your own",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Canva",
+        "Google UX (optional)"
+      ],
       "clients": "Creators, coaches, and brands that need a steady stream of scroll-stopping content.",
       "ai": {
         "change": "AI generates drafts, images, and edits at volume. The blank page is gone, and so is the price of a generic asset.",
@@ -223,14 +439,41 @@
       "demand": 4,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["OBS Studio", "StreamYard", "TikTok Live", "CapCut", "Discord"],
-      "skills": ["Live production & OBS setup", "Chat moderation & community", "Clip & highlight editing", "Live-selling coordination", "Streamer ops & scheduling"],
-      "learn": [
-        { "type": "Course", "title": "OBS Studio Quickstart", "provider": "OBS Project (open)" },
-        { "type": "Course", "title": "Discord Moderator Academy", "provider": "Discord (open)" },
-        { "type": "YouTube", "title": "CapCut short-form editing tutorials", "provider": "CapCut & creators (open)" }
+      "tools": [
+        "OBS Studio",
+        "StreamYard",
+        "TikTok Live",
+        "CapCut",
+        "Discord"
       ],
-      "certs": ["Discord Moderator Academy", "Canva"],
+      "skills": [
+        "Live production & OBS setup",
+        "Chat moderation & community",
+        "Clip & highlight editing",
+        "Live-selling coordination",
+        "Streamer ops & scheduling"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "OBS Studio Quickstart",
+          "provider": "OBS Project (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Discord Moderator Academy",
+          "provider": "Discord (open)"
+        },
+        {
+          "type": "YouTube",
+          "title": "CapCut short-form editing tutorials",
+          "provider": "CapCut & creators (open)"
+        }
+      ],
+      "certs": [
+        "Discord Moderator Academy",
+        "Canva"
+      ],
       "clients": "Streamers, TikTok live sellers, gaming channels, and e-commerce brands that go live every week.",
       "ai": {
         "change": "AI now auto-clips highlights, writes the titles, and helps moderate basic chat. The editing grind behind live content is shrinking fast.",
@@ -249,14 +492,41 @@
       "demand": 4,
       "difficulty": "Intermediate",
       "startStage": 1,
-      "tools": ["Descript", "Riverside", "Adobe Podcast", "Buzzsprout", "Canva"],
-      "skills": ["Audio editing & cleanup", "Show notes & titles", "Publishing & distribution", "Clip repurposing", "Guest coordination"],
-      "learn": [
-        { "type": "Course", "title": "Descript tutorials & help center", "provider": "Descript (open)" },
-        { "type": "Course", "title": "How to Start a Podcast guides", "provider": "Buzzsprout (open)" },
-        { "type": "Course", "title": "Adobe Podcast Enhance", "provider": "Adobe (open tool)" }
+      "tools": [
+        "Descript",
+        "Riverside",
+        "Adobe Podcast",
+        "Buzzsprout",
+        "Canva"
       ],
-      "certs": ["HubSpot Content Marketing", "Canva"],
+      "skills": [
+        "Audio editing & cleanup",
+        "Show notes & titles",
+        "Publishing & distribution",
+        "Clip repurposing",
+        "Guest coordination"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Descript tutorials & help center",
+          "provider": "Descript (open)"
+        },
+        {
+          "type": "Course",
+          "title": "How to Start a Podcast guides",
+          "provider": "Buzzsprout (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Adobe Podcast Enhance",
+          "provider": "Adobe (open tool)"
+        }
+      ],
+      "certs": [
+        "HubSpot Content Marketing",
+        "Canva"
+      ],
       "clients": "Coaches, B2B founders, and agencies that run podcast retainers and need every episode to just ship.",
       "ai": {
         "change": "AI now removes filler words, cleans noisy audio, and drafts the show notes in minutes. The tedious half of production is automating.",
@@ -275,14 +545,41 @@
       "demand": 3,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["Planning Center", "Canva", "Mailchimp", "YouTube Studio", "Zoom"],
-      "skills": ["Community & member care", "Event & service coordination", "Newsletter & devotional formatting", "Donation & CRM admin", "Sermon clips & social media"],
-      "learn": [
-        { "type": "Course", "title": "Planning Center University", "provider": "Planning Center (open)" },
-        { "type": "Course", "title": "Mailchimp Academy", "provider": "Mailchimp (open)" },
-        { "type": "Course", "title": "Canva Design School", "provider": "Canva (open)" }
+      "tools": [
+        "Planning Center",
+        "Canva",
+        "Mailchimp",
+        "YouTube Studio",
+        "Zoom"
       ],
-      "certs": ["Mailchimp", "Canva"],
+      "skills": [
+        "Community & member care",
+        "Event & service coordination",
+        "Newsletter & devotional formatting",
+        "Donation & CRM admin",
+        "Sermon clips & social media"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Planning Center University",
+          "provider": "Planning Center (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Mailchimp Academy",
+          "provider": "Mailchimp (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Canva Design School",
+          "provider": "Canva (open)"
+        }
+      ],
+      "certs": [
+        "Mailchimp",
+        "Canva"
+      ],
       "clients": "Churches and ministries, faith-based coaches and authors, and wellness or meditation creators worldwide. A natural fit for many Filipinos, and clients here stay for years.",
       "ai": {
         "change": "AI now drafts the newsletters, formats the devotionals, and clips sermons into shareable posts. The production side of ministry and wellness work is getting lighter.",
@@ -301,14 +598,41 @@
       "demand": 5,
       "difficulty": "Intermediate",
       "startStage": 2,
-      "tools": ["athenahealth", "Tebra (Kareo)", "SimplePractice", "Doxy.me", "Freed AI scribe"],
-      "skills": ["EHR charting & medical scribing", "Scheduling & patient intake", "Insurance verification & prior authorization", "Medical terminology & HIPAA compliance", "Records & patient follow-up"],
-      "learn": [
-        { "type": "Course", "title": "Medical Terminology I (audit free)", "provider": "Rice University · Coursera (open to audit)" },
-        { "type": "Course", "title": "Free HIPAA Awareness Training + certificate", "provider": "HIPAA Journal listing (open)" },
-        { "type": "Course", "title": "SimplePractice Academy", "provider": "SimplePractice (open)" }
+      "tools": [
+        "athenahealth",
+        "Tebra (Kareo)",
+        "SimplePractice",
+        "Doxy.me",
+        "Freed AI scribe"
       ],
-      "certs": ["HIPAA Awareness", "Medical Terminology (Coursera)"],
+      "skills": [
+        "EHR charting & medical scribing",
+        "Scheduling & patient intake",
+        "Insurance verification & prior authorization",
+        "Medical terminology & HIPAA compliance",
+        "Records & patient follow-up"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Medical Terminology I (audit free)",
+          "provider": "Rice University · Coursera (open to audit)"
+        },
+        {
+          "type": "Course",
+          "title": "Free HIPAA Awareness Training + certificate",
+          "provider": "HIPAA Journal listing (open)"
+        },
+        {
+          "type": "Course",
+          "title": "SimplePractice Academy",
+          "provider": "SimplePractice (open)"
+        }
+      ],
+      "certs": [
+        "HIPAA Awareness",
+        "Medical Terminology (Coursera)"
+      ],
       "clients": "US private practices, telehealth startups, dental and mental-health clinics, and medical billing companies that need HIPAA-trained remote support.",
       "ai": {
         "change": "Ambient AI scribes now draft the visit notes on their own (athenahealth reportedly began shipping one free to every customer in early 2026), and bots handle the first scheduling messages. The rote typing side of medical support is automating fast.",
@@ -327,14 +651,41 @@
       "demand": 5,
       "difficulty": "Intermediate",
       "startStage": 2,
-      "tools": ["SketchUp", "AutoCAD", "Blender", "D5 Render", "Enscape"],
-      "skills": ["3D modeling (SketchUp/Blender)", "CAD drafting & technical drawings", "Photorealistic rendering", "Real-time walkthroughs & virtual staging", "Photoshop post-production"],
-      "learn": [
-        { "type": "Course", "title": "SketchUp Campus: fundamentals", "provider": "Trimble/SketchUp (open)" },
-        { "type": "YouTube", "title": "Blender beginner series", "provider": "Blender Guru (open)" },
-        { "type": "Course", "title": "AutoCAD essentials tutorials", "provider": "Autodesk (open)" }
+      "tools": [
+        "SketchUp",
+        "AutoCAD",
+        "Blender",
+        "D5 Render",
+        "Enscape"
       ],
-      "certs": ["SketchUp", "Autodesk AutoCAD (optional)"],
+      "skills": [
+        "3D modeling (SketchUp/Blender)",
+        "CAD drafting & technical drawings",
+        "Photorealistic rendering",
+        "Real-time walkthroughs & virtual staging",
+        "Photoshop post-production"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "SketchUp Campus: fundamentals",
+          "provider": "Trimble/SketchUp (open)"
+        },
+        {
+          "type": "YouTube",
+          "title": "Blender beginner series",
+          "provider": "Blender Guru (open)"
+        },
+        {
+          "type": "Course",
+          "title": "AutoCAD essentials tutorials",
+          "provider": "Autodesk (open)"
+        }
+      ],
+      "certs": [
+        "SketchUp",
+        "Autodesk AutoCAD (optional)"
+      ],
       "clients": "Architects, interior designers, real-estate developers and agents, and furniture or construction firms worldwide that need renders, walkthroughs, and drawings faster than an in-house team can produce them.",
       "ai": {
         "change": "AI now turns a sketch or a CAD screenshot into a photorealistic render in seconds. AI Render (formerly SketchUp Diffusion) is built into SketchUp 2026.1, and tools like D5's AI and Veras light and stage a scene for you. The slow, manual rendering pass is collapsing.",
@@ -353,18 +704,363 @@
       "demand": 5,
       "difficulty": "Beginner-friendly",
       "startStage": 1,
-      "tools": ["Shopify", "Amazon Seller Central", "TikTok Shop", "Helium 10", "ChatGPT"],
-      "skills": ["Product listing & optimization", "Order & inventory management", "Marketplace PPC & promotions", "Customer service & reviews", "Supplier coordination & reporting"],
-      "learn": [
-        { "type": "Course", "title": "Shopify Learn: store fundamentals", "provider": "Shopify (open)" },
-        { "type": "Course", "title": "Amazon Seller University", "provider": "Amazon (open)" },
-        { "type": "Course", "title": "TikTok Shop Academy", "provider": "TikTok (open)" }
+      "tools": [
+        "Shopify",
+        "Amazon Seller Central",
+        "TikTok Shop",
+        "Helium 10",
+        "ChatGPT"
       ],
-      "certs": ["Shopify", "Amazon Ads (optional)"],
+      "skills": [
+        "Product listing & optimization",
+        "Order & inventory management",
+        "Marketplace PPC & promotions",
+        "Customer service & reviews",
+        "Supplier coordination & reporting"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Shopify Learn: store fundamentals",
+          "provider": "Shopify (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Amazon Seller University",
+          "provider": "Amazon (open)"
+        },
+        {
+          "type": "Course",
+          "title": "TikTok Shop Academy",
+          "provider": "TikTok (open)"
+        }
+      ],
+      "certs": [
+        "Shopify",
+        "Amazon Ads (optional)"
+      ],
       "clients": "Shopify, Amazon FBA, and TikTok Shop sellers, plus DTC brands drowning in day-to-day store admin who need one operator to keep it running and reporting.",
       "ai": {
         "change": "AI now writes the product descriptions, drafts the customer replies, and summarizes the week's numbers in seconds. The busywork half of store management is automating, and by some estimates the VAs who wield AI ship two to three times the output of the ones who don't.",
         "human": "But AI does not own account health, win a Seller-Support case, spot the supplier about to run you out of stock, or know which of forty products is actually worth pushing. Judgment, relationships, and account trust are the job. AI is the leverage; you are still the operator."
+      }
+    },
+    {
+      "id": "ai-agent-ops",
+      "name": "AI Agent Operations",
+      "icon": "bot",
+      "accent": "indigo",
+      "tagline": "Build the AI workers, then keep them honest",
+      "blurb": "Design and run AI agents that call tools, pull live data, and take real actions, not just answer questions. Multi-agent orchestration, retrieval pipelines, and the eval loops that catch a bad output before the client does.",
+      "pay": "$1,800–$4,500+/mo",
+      "demandLabel": "Rising fast",
+      "demand": 5,
+      "difficulty": "Advanced",
+      "startStage": 4,
+      "tools": [
+        "LangGraph",
+        "CrewAI",
+        "LlamaIndex",
+        "Pinecone",
+        "OpenAI Agents SDK"
+      ],
+      "skills": [
+        "Multi-agent orchestration design",
+        "RAG pipeline & vector database setup",
+        "Tool and function-calling integration",
+        "Agent evals, tracing & observability",
+        "Prompt debugging & failure-mode testing"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Introduction to LangGraph",
+          "provider": "LangChain Academy (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Multi AI Agent Systems with crewAI",
+          "provider": "DeepLearning.AI (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "SOP Lab: document your agent's guardrails and escalation rules",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "IBM RAG and Agentic AI Professional Certificate",
+        "DeepLearning.AI course certificates"
+      ],
+      "clients": "AI-native startups, agencies bolting agentic features onto client chatbots, and SaaS companies that need production agents, not demos.",
+      "ai": {
+        "change": "This niche exists because AI got good enough to act, not just answer. Frameworks like LangGraph and CrewAI now scaffold half the agent for you, and a working prototype takes an afternoon instead of a month.",
+        "human": "A prototype that occasionally hallucinates a refund is not a product. Someone has to design the guardrails, catch the failure modes, and own the system when it breaks in front of a client at 2am. Frameworks write the scaffolding. You are the engineer who makes it trustworthy."
+      }
+    },
+    {
+      "id": "ai-content-qa",
+      "name": "AI Content QA & Prompt Ops",
+      "icon": "scan-search",
+      "accent": "coral",
+      "tagline": "The editor every AI draft still needs",
+      "blurb": "Fact-check and edit what the AI drafted before a client's name goes on it, then build the prompt libraries and style guides that keep a brand's voice consistent at scale.",
+      "pay": "$900–$2,500/mo",
+      "demandLabel": "Rising fast",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": [
+        "Claude",
+        "ChatGPT",
+        "Originality.ai",
+        "PromptLayer",
+        "Notion"
+      ],
+      "skills": [
+        "AI output fact-checking & source verification",
+        "Prompt library design & versioning",
+        "Brand voice & style guide enforcement",
+        "Line editing & copyediting",
+        "AI-detection & plagiarism QA"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Anthropic Prompt Engineering Interactive Tutorial",
+          "provider": "Anthropic (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Learn Prompting, open prompt-engineering guide",
+          "provider": "Learn Prompting (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "SOP Lab: write your own prompt-review checklist",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Google Prompting Essentials (Coursera)",
+        "HubSpot Content Marketing Certification"
+      ],
+      "clients": "Content agencies, marketing teams, and SaaS companies publishing AI-drafted blogs, emails, and support docs at a volume no single writer can review alone.",
+      "ai": {
+        "change": "AI now drafts the first version of almost everything: blog posts, emails, product copy, support replies. The blank page is gone, and so is the cost of a first draft.",
+        "human": "A draft that reads well but gets a fact wrong, or sounds nothing like the brand, still costs the client trust. Someone has to catch the hallucinated statistic, tighten the voice, and decide what actually ships. That someone is you."
+      }
+    },
+    {
+      "id": "no-code-apps",
+      "name": "No-Code App Building",
+      "icon": "puzzle",
+      "accent": "emerald",
+      "tagline": "Ship real apps without a dev team",
+      "blurb": "Build working web and mobile apps in Bubble, Softr, Glide, or FlutterFlow: databases, workflows, logins, payments, all without a traditional dev team.",
+      "pay": "$1,200–$3,200+/mo",
+      "demandLabel": "Very high",
+      "demand": 4,
+      "difficulty": "Advanced",
+      "startStage": 3,
+      "tools": [
+        "Bubble",
+        "FlutterFlow",
+        "Softr",
+        "Glide",
+        "Xano"
+      ],
+      "skills": [
+        "Visual app architecture & data modeling",
+        "Workflow & logic building",
+        "API & third-party integrations",
+        "Responsive UI design",
+        "App deployment & client handoff"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Bubble Academy",
+          "provider": "Bubble (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Softr Academy",
+          "provider": "Softr (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Portfolio Lab: package your first no-code build as a case study",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Bubble Developer Certification",
+        "Softr Certified Professional"
+      ],
+      "clients": "Startup founders who need an MVP without a dev team, and agencies building internal tools or client portals on a deadline and a budget.",
+      "ai": {
+        "change": "AI now writes half the workflow logic inside these builders and can turn a rough description into a working data structure in minutes. The blank-canvas problem is basically solved.",
+        "human": "AI still cannot sit with a founder, translate a vague idea into a real data model, or know which of six database structures will survive a thousand real users. That architecture call, and the debugging when a workflow breaks in production, is the paid work. You are the one who ships it and keeps it running."
+      }
+    },
+    {
+      "id": "revops",
+      "name": "RevOps & GTM Operations",
+      "icon": "trending-up",
+      "accent": "amber",
+      "tagline": "The person who keeps the revenue engine running",
+      "blurb": "Architect the CRM, design the pipeline stages, and keep marketing, sales, and customer success working off the same numbers. The operations layer behind every B2B team that outgrew spreadsheets.",
+      "pay": "$1,600–$4,000+/mo",
+      "demandLabel": "Rising fast",
+      "demand": 4,
+      "difficulty": "Advanced",
+      "startStage": 4,
+      "tools": [
+        "HubSpot Operations Hub",
+        "Salesforce",
+        "Clay",
+        "Apollo.io",
+        "Hightouch"
+      ],
+      "skills": [
+        "CRM architecture & data hygiene",
+        "Lifecycle & pipeline stage design",
+        "Lead routing & scoring",
+        "Revenue reporting & dashboards",
+        "Cross-tool integration (CRM, marketing, support)"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "RevOps Bootcamp",
+          "provider": "HubSpot Academy (open)"
+        },
+        {
+          "type": "Course",
+          "title": "Introduction to Revenue Operations (RevOps)",
+          "provider": "HubSpot Academy (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Tracker Lab: build your own pipeline dashboard",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "HubSpot Revenue Operations Certification",
+        "Salesforce Certified Administrator"
+      ],
+      "clients": "B2B SaaS companies and agencies scaling past their first sales hires, who need one person to stop marketing, sales, and CS from tracking three different versions of the truth.",
+      "ai": {
+        "change": "AI now enriches leads, drafts the outreach sequences, and flags which deals are going cold before a human notices. The manual data entry that used to define this job is mostly gone.",
+        "human": "AI cannot decide what counts as a qualified lead for this specific business, fix a broken lifecycle stage that is quietly costing deals, or get sales and marketing to agree on one definition of the pipeline. Someone has to own the system of record and defend it in the revenue meeting. That is you."
+      }
+    },
+    {
+      "id": "data-analytics",
+      "name": "AI-Assisted Data & Analytics",
+      "icon": "pie-chart",
+      "accent": "indigo",
+      "tagline": "Turn raw numbers into answers someone can act on",
+      "blurb": "Build dashboards and reports in Power BI or Looker Studio, using AI to clean, query, and explain the data faster. Turn a messy export into an answer a founder can act on this week.",
+      "pay": "$1,100–$2,800/mo",
+      "demandLabel": "Rising fast",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 2,
+      "tools": [
+        "Power BI",
+        "Looker Studio",
+        "Julius AI",
+        "dbt",
+        "Google Sheets"
+      ],
+      "skills": [
+        "Dashboard design & data storytelling",
+        "SQL queries & data cleaning",
+        "AI-assisted exploratory analysis",
+        "KPI definition & reporting cadence",
+        "Spreadsheet & light data-pipeline automation"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Get started with Microsoft data analytics",
+          "provider": "Microsoft Learn (open)"
+        },
+        {
+          "type": "Course",
+          "title": "dbt Fundamentals",
+          "provider": "dbt (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "Tracker Lab: build your own reporting dashboard",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "Microsoft Power BI Data Analyst Associate (PL-300)",
+        "Google Data Analytics Certificate"
+      ],
+      "clients": "Founders and marketing or ops leads drowning in spreadsheets who need one weekly dashboard that actually answers whether the business is winning.",
+      "ai": {
+        "change": "AI now writes the query, cleans the messy export, and drafts a summary of what changed this week. The grunt work between raw data and a finished chart is collapsing fast.",
+        "human": "AI does not know which number the founder actually cares about, or that the spike in week 12 was a tracking bug, not real growth. Reading the data in context and saying what to do next is the analyst's job now. You are the one who tells the story straight."
+      }
+    },
+    {
+      "id": "localization",
+      "name": "Localization & Subtitling Ops",
+      "icon": "languages",
+      "accent": "coral",
+      "tagline": "More than translation: make content actually land",
+      "blurb": "Run the AI-generated first pass on subtitles, dubbing, or translated content, then QA it for timing, accuracy, and tone before it ships. Philippine multilingual fluency is the edge here.",
+      "pay": "$700–$1,900/mo",
+      "demandLabel": "Steady",
+      "demand": 3,
+      "difficulty": "Intermediate",
+      "startStage": 1,
+      "tools": [
+        "Smartcat",
+        "DeepL",
+        "Subtitle Edit",
+        "Descript",
+        "Rev"
+      ],
+      "skills": [
+        "Subtitle timing & QA",
+        "AI transcription & translation QA",
+        "Style guide & glossary management",
+        "Multilingual proofreading",
+        "Localization project coordination"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Subtitle Edit user guide & tutorials",
+          "provider": "Nikse (open tool)"
+        },
+        {
+          "type": "Course",
+          "title": "Exploring languages and cultures: Subtitling",
+          "provider": "Open University OpenLearn (open)"
+        },
+        {
+          "type": "Lab",
+          "title": "SOP Lab: write your own subtitle QA checklist",
+          "provider": "In-app (/build)"
+        }
+      ],
+      "certs": [
+        "University of Washington Certificate in Localization",
+        "NAATI Certified Translator (audio-visual pathway)"
+      ],
+      "clients": "Streaming platforms, e-learning companies, and global YouTube creators localizing content into Tagalog, Bisaya, and other languages, plus agencies needing QA on AI-dubbed video.",
+      "ai": {
+        "change": "AI now transcribes, translates, and even dubs a video into a dozen languages in minutes. A first-draft subtitle file is nearly free to produce.",
+        "human": "AI still mistimes a joke, mistranslates an idiom, and cannot tell when a dubbed voice carries none of the original scene's mood. Someone fluent in both the language and the culture has to catch that before it ships. That quality check is the job, and it is yours."
       }
     }
   ]
