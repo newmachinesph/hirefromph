@@ -2,7 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { Award, Check, Sparkles, X } from "lucide-react";
+import { ArrowUpRight, Award, Check, Sparkles, X } from "lucide-react";
 import tracksData from "@/data/tracks.json";
 import { usePath } from "@/lib/path-context";
 import { Icon } from "@/components/icon";
@@ -298,6 +298,8 @@ function DetailCard({
         </ul>
       </div>
 
+      {"regions" in track && track.regions ? <RegionGuide regions={track.regions} /> : null}
+
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
           <h4 className="kicker">Certifications that help</h4>
@@ -338,5 +340,97 @@ function DetailCard({
         )}
       </div>
     </div>
+  );
+}
+
+type Regions = NonNullable<Extract<Track, { regions: unknown }>["regions"]>;
+
+const accentBar: Record<string, string> = {
+  coral: "bg-coral",
+  emerald: "bg-emerald",
+  amber: "bg-amber",
+  indigo: "bg-indigo",
+};
+
+/** Per-market compliance guide. Only tracks whose rules change by country carry
+ *  a `regions` block, so this renders for those and stays out of the way otherwise. */
+function RegionGuide({ regions }: { regions: Regions }) {
+  return (
+    <section className="mt-10 border-t border-line pt-8">
+      <h4 className="kicker">{regions.kicker}</h4>
+      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{regions.lead}</p>
+
+      <p className="mt-4 max-w-3xl border-l-2 border-line-strong bg-paper-3/60 px-4 py-3 text-sm leading-relaxed text-ink">
+        {regions.boundary}
+      </p>
+
+      <div className="mt-6 grid gap-4">
+        {regions.items.map((r) => (
+          <article key={r.market} className="relative border border-line bg-paper-2 p-5 pl-6">
+            <span
+              aria-hidden
+              className={cn("absolute top-0 bottom-0 left-0 w-1", accentBar[r.accent] ?? "bg-ink")}
+            />
+            <h5 className="font-display text-lg text-ink">
+              <span aria-hidden className="mr-2">
+                {r.flag}
+              </span>
+              {r.market}
+            </h5>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.different}</p>
+
+            <h6 className="kicker mt-5">What to learn, in order</h6>
+            <ol className="mt-2 grid gap-1.5">
+              {r.learn.map((step, i) => (
+                <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
+                  <span className={cn("font-mono text-xs font-semibold", accentText[r.accent])}>
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {step}
+                </li>
+              ))}
+            </ol>
+
+            <h6 className="kicker mt-5">Read it from the source</h6>
+            <ul className="mt-2 flex flex-wrap gap-2">
+              {r.sources.map((s) => (
+                <li key={s.url}>
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 border border-line-strong bg-paper px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-ink"
+                  >
+                    {s.label}
+                    <ArrowUpRight size={12} aria-hidden />
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <p className="mt-4 text-sm leading-relaxed text-ink-soft">
+              <span className="font-semibold text-ink">Stack: </span>
+              {r.stack}
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-ink-soft">
+              <span className="font-semibold text-ink">Watch out: </span>
+              {r.watchOut}
+            </p>
+          </article>
+        ))}
+      </div>
+
+      <h4 className="kicker mt-8">How to actually start</h4>
+      <ol className="mt-3 grid gap-2">
+        {regions.howToStart.map((step, i) => (
+          <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
+            <span className="font-mono text-xs font-semibold text-ink">
+              {String(i + 1).padStart(2, "0")}
+            </span>
+            {step}
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

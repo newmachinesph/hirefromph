@@ -107,6 +107,144 @@
       "ai": {
         "change": "AI now sorts transactions and drafts monthly reports in seconds. The data-entry half of bookkeeping is basically over.",
         "human": "Someone still has to catch the strange charge, own the accuracy, and explain what the numbers mean. Clients stopped paying for typing. They pay for a human they trust with their money, and that trust cannot be generated."
+      },
+      "regions": {
+        "kicker": "Books are local. Learn one market properly.",
+        "lead": "The software is the same everywhere. The rules around it are not. A US client needs sales tax and 1099s. An Australian one needs BAS and super. A UK one needs Making Tax Digital. Pick one market first and learn its rules cold, because that specificity is what gets you hired over someone who only knows QuickBooks. Rates and thresholds change every year, so treat the official source below as the truth, not a course recorded in 2022.",
+        "boundary": "Know the line you cannot cross. In every market below, recording and reconciling the books is unlicensed work you can do from the Philippines. Filing or lodging tax on a client's behalf, for a fee, is licensed work in most of them. You prepare, their licensed accountant or registered agent files. Say that out loud in the interview. It reads as professional, not as a limitation.",
+        "items": [
+          {
+            "market": "United States",
+            "flag": "🇺🇸",
+            "accent": "coral",
+            "different": "No national sales tax. Every state sets its own, and a client can owe tax in a state they have never visited once their sales there cross an economic nexus threshold. Contractors get a 1099-NEC, employees get a W-2, and misclassifying one as the other is the mistake that costs clients real money.",
+            "learn": [
+              "US GAAP basics: accrual vs cash, the chart of accounts, and a real month-end close.",
+              "Sales tax and economic nexus: which states your client is registered in, and why.",
+              "Contractor paperwork: collect a W-9 before the first payment, issue the 1099-NEC in January.",
+              "Payroll literacy: how Gusto, ADP, or Rippling data lands in the books. You do not run payroll, you reconcile it.",
+              "The January to April rhythm: what a CPA needs from you before tax season, delivered before they ask."
+            ],
+            "sources": [
+              {
+                "label": "IRS Small Business and Self-Employed Tax Center",
+                "url": "https://www.irs.gov/businesses/small-businesses-self-employed"
+              },
+              {
+                "label": "IRS: About Form 1099-NEC",
+                "url": "https://www.irs.gov/forms-pubs/about-form-1099-nec"
+              }
+            ],
+            "stack": "QuickBooks Online (dominant), Bill.com, Gusto, Dext.",
+            "watchOut": "Preparing a federal return for a fee requires an IRS PTIN. Bookkeeping does not. Stay on the bookkeeping side and hand a clean file to their CPA."
+          },
+          {
+            "market": "United Kingdom",
+            "flag": "🇬🇧",
+            "accent": "indigo",
+            "different": "VAT is national and digital by law. Making Tax Digital requires VAT records to be kept in software and filed through it, so a sloppy spreadsheet is not just untidy, it is non-compliant. Limited companies also file accounts and a confirmation statement at Companies House on a fixed annual clock.",
+            "learn": [
+              "VAT: the registration threshold, standard vs reduced vs zero-rated, and what the Flat Rate Scheme changes.",
+              "Making Tax Digital for VAT: digital record-keeping and the quarterly filing cycle.",
+              "PAYE and Real Time Information: UK payroll reports to HMRC on every single pay run.",
+              "Companies House deadlines: annual accounts and the confirmation statement. Late filing is an automatic penalty.",
+              "The 6 April to 5 April tax year. It is not the calendar year, and assuming it is will burn you once."
+            ],
+            "sources": [
+              {
+                "label": "HMRC: VAT registration",
+                "url": "https://www.gov.uk/vat-registration"
+              },
+              {
+                "label": "HMRC: Making Tax Digital",
+                "url": "https://www.gov.uk/government/collections/making-tax-digital"
+              }
+            ],
+            "stack": "Xero (very strong here), FreeAgent, Sage, QuickBooks, Dext.",
+            "watchOut": "Thresholds move at each Budget. Check the gov.uk page before you quote a number to a client. Every time."
+          },
+          {
+            "market": "Australia & New Zealand",
+            "flag": "🇦🇺",
+            "accent": "emerald",
+            "different": "The friendliest time zone for a Filipino professional, and the most rule-bound books on this list. Australian GST feeds a Business Activity Statement on a fixed cycle, payroll reports to the ATO on every run through Single Touch Payroll, and employers owe superannuation on top of wages. New Zealand runs a similar GST and PAYE system through Inland Revenue.",
+            "learn": [
+              "GST and the BAS cycle: what belongs in each field, and when it is due.",
+              "Single Touch Payroll: payroll reports to the ATO the moment you pay, not at year end.",
+              "The superannuation guarantee: the rate, the quarterly due dates, and why late super is not deductible.",
+              "Xero to a professional standard. In this market Xero is close to the default.",
+              "The 1 July to 30 June financial year and the end-of-year finalisation that closes it."
+            ],
+            "sources": [
+              {
+                "label": "Australian Taxation Office",
+                "url": "https://www.ato.gov.au/"
+              },
+              {
+                "label": "Tax Practitioners Board (BAS agent rules)",
+                "url": "https://www.tpb.gov.au/"
+              },
+              {
+                "label": "Inland Revenue, New Zealand",
+                "url": "https://www.ird.govt.nz/"
+              }
+            ],
+            "stack": "Xero (dominant), MYOB, Hubdoc, Employment Hero.",
+            "watchOut": "Providing BAS services for a fee generally requires registration as a BAS agent with the Tax Practitioners Board. You can prepare the numbers; a registered agent lodges them. Agree who does what, in writing, before you start."
+          },
+          {
+            "market": "European Union",
+            "flag": "🇪🇺",
+            "accent": "amber",
+            "different": "There is no single EU bookkeeping. VAT is harmonised in structure, but every member state sets its own rates, filing frequency, and language of record. Cross-border B2B usually shifts VAT to the buyer under the reverse charge, and cross-border B2C e-commerce is reported through the One Stop Shop instead of registering in every country. E-invoicing mandates are spreading state by state.",
+            "learn": [
+              "The EU VAT model: taxable supplies, and why place of supply decides almost everything.",
+              "Reverse charge on intra-EU B2B, and the EC Sales List that reports it.",
+              "One Stop Shop and Import One Stop Shop, for clients selling across borders.",
+              "One country, deeply, first. Ireland and the Netherlands are the usual entry points for English-speaking clients.",
+              "IFRS vocabulary for the larger clients, local GAAP for the small ones."
+            ],
+            "sources": [
+              {
+                "label": "European Commission: VAT",
+                "url": "https://taxation-customs.ec.europa.eu/taxation/vat_en"
+              },
+              {
+                "label": "EU VAT One Stop Shop",
+                "url": "https://vat-one-stop-shop.ec.europa.eu/"
+              }
+            ],
+            "stack": "Xero, QuickBooks, and country-native tools (Exact, DATEV, Fortnox) depending on the market.",
+            "watchOut": "Do not sell yourself as an EU bookkeeper. Sell yourself as an Irish, Dutch, or German-market bookkeeper. The generalist claim reads as inexperience to anyone who actually files there."
+          },
+          {
+            "market": "Canada",
+            "flag": "🇨🇦",
+            "accent": "coral",
+            "different": "A federal GST layered with provincial sales tax, combined into HST in some provinces and kept separate in others. Which one applies depends on where the customer is, not where the business is. Payroll runs on CRA remittances, with T4 slips for employees and T4A for many contractors.",
+            "learn": [
+              "GST, HST, PST, and QST: which provinces use which, and how to code a sale to each.",
+              "Input tax credits: what a business can actually claim back.",
+              "CRA payroll remittance schedules, and the year-end T4 and T4A run.",
+              "Quebec specifics if the client is there. Revenu Quebec is a separate filing relationship."
+            ],
+            "sources": [
+              {
+                "label": "Canada Revenue Agency",
+                "url": "https://www.canada.ca/en/revenue-agency.html"
+              }
+            ],
+            "stack": "QuickBooks Online, Xero, Wagepoint, Dext.",
+            "watchOut": "A client selling across provinces may owe several sales taxes at once. Confirm every province they are registered in before you touch the tax codes."
+          }
+        ],
+        "howToStart": [
+          "Pick the market whose hours you can actually live with. Time zone first, rules second.",
+          "Certify in the tool that market really uses: QuickBooks Online for the US and Canada, Xero for Australia, New Zealand, and the UK. Both certifications are free.",
+          "Read the official regulator page for that market end to end. It is dry, free, and more current than any course you can buy.",
+          "Rebuild one full month-end close on invented data for that market: bank reconciliation, the sales tax or GST or VAT summary, and a two-paragraph plain-English report for the owner. That file is your portfolio piece.",
+          "Put the market in your headline. “Xero bookkeeper for Australian small business, BAS-ready files” beats “bookkeeper” every time."
+        ]
       }
     },
     {
@@ -1063,5 +1201,6 @@
         "human": "AI still mistimes a joke, mistranslates an idiom, and cannot tell when a dubbed voice carries none of the original scene's mood. Someone fluent in both the language and the culture has to catch that before it ships. That quality check is the job, and it is yours."
       }
     }
-  ]
+  ],
+  "lastVerified": "2026-07"
 }
