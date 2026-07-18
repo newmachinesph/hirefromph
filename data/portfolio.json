@@ -27,8 +27,18 @@
           "tier": "Start",
           "goal": "You can run a founder's calendar and inbox so they never have to think about the logistics.",
           "tools": [
-            { "name": "Google Workspace", "free": "Free on a personal Google account; paid per user for orgs", "what": "Run calendar, inbox, docs, and files", "url": "https://workspace.google.com" },
-            { "name": "Calendly", "free": "Free plan, one active event type", "what": "Share a booking link, end scheduling ping-pong", "url": "https://calendly.com" }
+            {
+              "name": "Google Workspace",
+              "free": "Free on a personal Google account; paid per user for orgs",
+              "what": "Run calendar, inbox, docs, and files",
+              "url": "https://workspace.google.com"
+            },
+            {
+              "name": "Calendly",
+              "free": "Free plan, one active event type",
+              "what": "Share a booking link, end scheduling ping-pong",
+              "url": "https://calendly.com"
+            }
           ],
           "piece": "A color-coded weekly calendar and a Calendly booking link for a mock founder, plus a one-page daily brief."
         },
@@ -36,8 +46,18 @@
           "tier": "Level up",
           "goal": "You can turn how a founder works into written systems the whole team can follow.",
           "tools": [
-            { "name": "Notion", "free": "Free plan, unlimited pages for solo use", "what": "Build SOPs, wikis, and meeting-prep docs", "url": "https://www.notion.com" },
-            { "name": "Slack", "free": "Free plan, last 90 days of history", "what": "Coordinate the team and route updates", "url": "https://slack.com" }
+            {
+              "name": "Notion",
+              "free": "Free plan, unlimited pages for solo use",
+              "what": "Build SOPs, wikis, and meeting-prep docs",
+              "url": "https://www.notion.com"
+            },
+            {
+              "name": "Slack",
+              "free": "Free plan, last 90 days of history",
+              "what": "Coordinate the team and route updates",
+              "url": "https://slack.com"
+            }
           ],
           "piece": "An SOP library in Notion: 3-5 written processes (inbox triage, meeting prep, travel booking) with a reusable meeting-prep template."
         },
@@ -45,8 +65,18 @@
           "tier": "Pro",
           "goal": "A founder trusts you with access, travel, and the moving parts they cannot afford to drop.",
           "tools": [
-            { "name": "1Password", "free": "Paid only, 14-day trial (Bitwarden is the free alternative)", "what": "Hold and share the founder's logins safely", "url": "https://1password.com" },
-            { "name": "Loom", "free": "Free plan, 25 videos at 5 minutes each", "what": "Record async handoffs and status updates", "url": "https://www.loom.com" }
+            {
+              "name": "1Password",
+              "free": "Paid only, 14-day trial (Bitwarden is the free alternative)",
+              "what": "Hold and share the founder's logins safely",
+              "url": "https://1password.com"
+            },
+            {
+              "name": "Loom",
+              "free": "Free plan, 25 videos at 5 minutes each",
+              "what": "Record async handoffs and status updates",
+              "url": "https://www.loom.com"
+            }
           ],
           "piece": "A founder operations hub: a full travel itinerary and briefing packet, a documented access plan, and a Loom walkthrough of the week ahead."
         }
@@ -59,8 +89,18 @@
           "tier": "Start",
           "goal": "You can keep a small business's money organized and correctly categorized from day one.",
           "tools": [
-            { "name": "Google Sheets", "free": "Free with any Google account", "what": "Track income, expenses, and a basic P&L", "url": "https://sheets.google.com" },
-            { "name": "Wave", "free": "Free Starter plan; Pro for reconciliation", "what": "Send invoices and record transactions", "url": "https://www.waveapps.com" }
+            {
+              "name": "Google Sheets",
+              "free": "Free with any Google account",
+              "what": "Track income, expenses, and a basic P&L",
+              "url": "https://sheets.google.com"
+            },
+            {
+              "name": "Wave",
+              "free": "Free Starter plan; Pro for reconciliation",
+              "what": "Send invoices and record transactions",
+              "url": "https://www.waveapps.com"
+            }
           ],
           "piece": "One month of categorized transactions for a mock small business in Sheets, plus a simple profit-and-loss summary."
         },
@@ -68,8 +108,18 @@
           "tier": "Level up",
           "goal": "You can run real books in the software clients actually pay to use.",
           "tools": [
-            { "name": "QuickBooks Online", "free": "No free plan; 30-day trial (industry standard)", "what": "Reconcile accounts and run monthly books", "url": "https://quickbooks.intuit.com" },
-            { "name": "Xero", "free": "No free plan; 30-day trial, unlimited users", "what": "Alternative ledger, strong for agencies", "url": "https://www.xero.com" }
+            {
+              "name": "QuickBooks Online",
+              "free": "No free plan; 30-day trial (industry standard)",
+              "what": "Reconcile accounts and run monthly books",
+              "url": "https://quickbooks.intuit.com"
+            },
+            {
+              "name": "Xero",
+              "free": "No free plan; 30-day trial, unlimited users",
+              "what": "Alternative ledger, strong for agencies",
+              "url": "https://www.xero.com"
+            }
           ],
           "piece": "A reconciled set of sample-company books for one month in a QuickBooks or Xero trial, ending with a clean bank reconciliation report."
         },
@@ -77,8 +127,18 @@
           "tier": "Pro",
           "goal": "You automate the busywork so a client's month-end close is fast, clean, and audit-ready.",
           "tools": [
-            { "name": "Dext", "free": "Paid only, 14-day trial", "what": "Auto-capture receipts and bills into the ledger", "url": "https://dext.com" },
-            { "name": "BILL", "free": "Paid, per user; trial available", "what": "Run accounts payable and receivable", "url": "https://www.bill.com" }
+            {
+              "name": "Dext",
+              "free": "Paid only, 14-day trial",
+              "what": "Auto-capture receipts and bills into the ledger",
+              "url": "https://dext.com"
+            },
+            {
+              "name": "BILL",
+              "free": "Paid, per user; trial available",
+              "what": "Run accounts payable and receivable",
+              "url": "https://www.bill.com"
+            }
           ],
           "piece": "A month-end close pack: receipts captured through Dext, an AP workflow mapped in BILL, and a monthly report set (P&L, balance sheet, cash summary)."
         }
@@ -91,8 +151,18 @@
           "tier": "Start",
           "goal": "You can design on-brand posts and publish them on schedule without paying for a single tool.",
           "tools": [
-            { "name": "Canva", "free": "Free plan, large template and asset library", "what": "Design posts, carousels, and stories", "url": "https://www.canva.com" },
-            { "name": "Meta Business Suite", "free": "Completely free (Facebook + Instagram)", "what": "Schedule and manage FB and IG posts", "url": "https://business.facebook.com" }
+            {
+              "name": "Canva",
+              "free": "Free plan, large template and asset library",
+              "what": "Design posts, carousels, and stories",
+              "url": "https://www.canva.com"
+            },
+            {
+              "name": "Meta Business Suite",
+              "free": "Completely free (Facebook + Instagram)",
+              "what": "Schedule and manage FB and IG posts",
+              "url": "https://business.facebook.com"
+            }
           ],
           "piece": "A one-week content set for a mock brand: 5-7 designed posts scheduled through Meta Business Suite."
         },
@@ -100,8 +170,18 @@
           "tier": "Level up",
           "goal": "You can plan a month of content and cut short-form video that actually holds attention.",
           "tools": [
-            { "name": "Buffer", "free": "Free plan, up to 3 channels", "what": "Plan and queue posts across platforms", "url": "https://buffer.com" },
-            { "name": "CapCut", "free": "Free plan; Pro for 4K and AI tools", "what": "Edit short-form video and add captions", "url": "https://www.capcut.com" }
+            {
+              "name": "Buffer",
+              "free": "Free plan, up to 3 channels",
+              "what": "Plan and queue posts across platforms",
+              "url": "https://buffer.com"
+            },
+            {
+              "name": "CapCut",
+              "free": "Free plan; Pro for 4K and AI tools",
+              "what": "Edit short-form video and add captions",
+              "url": "https://www.capcut.com"
+            }
           ],
           "piece": "A 30-day content calendar with 3-4 edited Reels or TikToks (hook, captions, music) queued in Buffer."
         },
@@ -109,8 +189,18 @@
           "tier": "Pro",
           "goal": "You can show a brand what's working and turn the numbers into next month's plan.",
           "tools": [
-            { "name": "Metricool", "free": "Free plan, 1 brand, basic analytics", "what": "Track performance and schedule in one place", "url": "https://metricool.com" },
-            { "name": "ManyChat", "free": "Free sandbox (25 contacts); paid to run for real", "what": "Automate comment-to-DM lead capture", "url": "https://manychat.com" }
+            {
+              "name": "Metricool",
+              "free": "Free plan, 1 brand, basic analytics",
+              "what": "Track performance and schedule in one place",
+              "url": "https://metricool.com"
+            },
+            {
+              "name": "ManyChat",
+              "free": "Free sandbox (25 contacts); paid to run for real",
+              "what": "Automate comment-to-DM lead capture",
+              "url": "https://manychat.com"
+            }
           ],
           "piece": "A monthly analytics report for a mock account: reach and engagement trends, top posts, and a comment-to-DM funnel with 3 recommendations for next month."
         }
@@ -123,8 +213,18 @@
           "tier": "Start",
           "goal": "You can turn a messy to-do list into a clear, shared board a team can follow.",
           "tools": [
-            { "name": "Trello", "free": "Free plan, up to 10 boards", "what": "Organize work on simple Kanban boards", "url": "https://trello.com" },
-            { "name": "ClickUp", "free": "Free Forever, unlimited tasks and members", "what": "Manage tasks, docs, and basic dashboards", "url": "https://clickup.com" }
+            {
+              "name": "Trello",
+              "free": "Free plan, up to 10 boards",
+              "what": "Organize work on simple Kanban boards",
+              "url": "https://trello.com"
+            },
+            {
+              "name": "ClickUp",
+              "free": "Free Forever, unlimited tasks and members",
+              "what": "Manage tasks, docs, and basic dashboards",
+              "url": "https://clickup.com"
+            }
           ],
           "piece": "A Kanban board for a mock project (say, a product launch) with lists, due dates, checklists, and assignees."
         },
@@ -132,8 +232,18 @@
           "tier": "Level up",
           "goal": "You can plan sprints and run a real team workflow, not just a task list.",
           "tools": [
-            { "name": "Asana", "free": "Free Personal plan, up to 2 seats", "what": "Plan sprints, timelines, and workflows", "url": "https://asana.com" },
-            { "name": "Notion", "free": "Free plan, unlimited pages solo", "what": "Write process docs and project wikis", "url": "https://www.notion.com" }
+            {
+              "name": "Asana",
+              "free": "Free Personal plan, up to 2 seats",
+              "what": "Plan sprints, timelines, and workflows",
+              "url": "https://asana.com"
+            },
+            {
+              "name": "Notion",
+              "free": "Free plan, unlimited pages solo",
+              "what": "Write process docs and project wikis",
+              "url": "https://www.notion.com"
+            }
           ],
           "piece": "A two-week sprint board in Asana paired with a written 'how this team ships' SOP in Notion."
         },
@@ -141,8 +251,18 @@
           "tier": "Pro",
           "goal": "You give leadership a live dashboard of where every project actually stands.",
           "tools": [
-            { "name": "Monday.com", "free": "Free plan, 2 seats (paid to scale)", "what": "Build client-facing boards and automations", "url": "https://monday.com" },
-            { "name": "Slack", "free": "Free plan, last 90 days of history", "what": "Wire status updates to the team", "url": "https://slack.com" }
+            {
+              "name": "Monday.com",
+              "free": "Free plan, 2 seats (paid to scale)",
+              "what": "Build client-facing boards and automations",
+              "url": "https://monday.com"
+            },
+            {
+              "name": "Slack",
+              "free": "Free plan, last 90 days of history",
+              "what": "Wire status updates to the team",
+              "url": "https://slack.com"
+            }
           ],
           "piece": "An operations dashboard: a Monday.com board with status automations and a live dashboard view, wired to a Slack channel for updates."
         }
@@ -155,9 +275,24 @@
           "tier": "Start",
           "goal": "You can answer customers clearly and write the docs that prevent the next ticket.",
           "tools": [
-            { "name": "Tidio", "free": "50 chats/mo, up to 10 agents", "what": "Practice live chat and quick replies", "url": "https://www.tidio.com" },
-            { "name": "Notion", "free": "Unlimited pages on the free personal plan", "what": "Write help-center articles and support SOPs", "url": "https://www.notion.com" },
-            { "name": "Google Docs", "free": "Free with any Google account", "what": "Draft canned responses and macro templates", "url": "https://www.google.com/docs/about/" }
+            {
+              "name": "Tidio",
+              "free": "50 chats/mo, up to 10 agents",
+              "what": "Practice live chat and quick replies",
+              "url": "https://www.tidio.com"
+            },
+            {
+              "name": "Notion",
+              "free": "Unlimited pages on the free personal plan",
+              "what": "Write help-center articles and support SOPs",
+              "url": "https://www.notion.com"
+            },
+            {
+              "name": "Google Docs",
+              "free": "Free with any Google account",
+              "what": "Draft canned responses and macro templates",
+              "url": "https://www.google.com/docs/about/"
+            }
           ],
           "piece": "A 10-article help center for a fictional app: setup, billing, and FAQ."
         },
@@ -165,9 +300,24 @@
           "tier": "Level up",
           "goal": "You can run a real ticket queue from inbox to resolution, on tools teams actually use.",
           "tools": [
-            { "name": "Freshdesk", "free": "2 agents, email + social, first 6 months", "what": "Run a shared ticket inbox", "url": "https://www.freshworks.com/freshdesk/" },
-            { "name": "HubSpot Service Hub", "free": "Tickets, live chat, shared inbox, basic CRM", "what": "Track tickets and simple customer records", "url": "https://www.hubspot.com/products/service" },
-            { "name": "Slack", "free": "90-day history, 10 app integrations", "what": "Coordinate escalations with the team", "url": "https://slack.com" }
+            {
+              "name": "Freshdesk",
+              "free": "2 agents, email + social, first 6 months",
+              "what": "Run a shared ticket inbox",
+              "url": "https://www.freshworks.com/freshdesk/"
+            },
+            {
+              "name": "HubSpot Service Hub",
+              "free": "Tickets, live chat, shared inbox, basic CRM",
+              "what": "Track tickets and simple customer records",
+              "url": "https://www.hubspot.com/products/service"
+            },
+            {
+              "name": "Slack",
+              "free": "90-day history, 10 app integrations",
+              "what": "Coordinate escalations with the team",
+              "url": "https://slack.com"
+            }
           ],
           "piece": "A ticket case study: 20 mock tickets triaged, tagged, and resolved with SLA notes."
         },
@@ -175,9 +325,24 @@
           "tier": "Pro",
           "goal": "You can own onboarding and retention on the platforms SaaS and e-commerce teams pay for.",
           "tools": [
-            { "name": "Zendesk", "free": "14-day trial only; paid from $19/agent", "what": "Learn the industry-standard helpdesk and macros", "url": "https://www.zendesk.com" },
-            { "name": "Intercom", "free": "14-day trial with Fin AI; paid after", "what": "Run AI-assisted chat and onboarding", "url": "https://www.intercom.com" },
-            { "name": "Gorgias", "free": "7-day trial; paid from $10/mo", "what": "Handle Shopify e-commerce support tickets", "url": "https://www.gorgias.com" }
+            {
+              "name": "Zendesk",
+              "free": "14-day trial only; paid from $19/agent",
+              "what": "Learn the industry-standard helpdesk and macros",
+              "url": "https://www.zendesk.com"
+            },
+            {
+              "name": "Intercom",
+              "free": "14-day trial with Fin AI; paid after",
+              "what": "Run AI-assisted chat and onboarding",
+              "url": "https://www.intercom.com"
+            },
+            {
+              "name": "Gorgias",
+              "free": "7-day trial; paid from $10/mo",
+              "what": "Handle Shopify e-commerce support tickets",
+              "url": "https://www.gorgias.com"
+            }
           ],
           "piece": "An onboarding and support kit built in a Zendesk trial: help center, 15 macros, 3 ticket triggers."
         }
@@ -190,8 +355,18 @@
           "tier": "Start",
           "goal": "You can keep an agent's contacts, tasks, and deals organized without dropping anything.",
           "tools": [
-            { "name": "Google Sheets", "free": "Free with any Google account", "what": "Build CRM trackers and transaction checklists", "url": "https://www.google.com/sheets/about/" },
-            { "name": "Trello", "free": "10 boards, unlimited cards", "what": "Manage deal pipelines and listing tasks", "url": "https://trello.com" }
+            {
+              "name": "Google Sheets",
+              "free": "Free with any Google account",
+              "what": "Build CRM trackers and transaction checklists",
+              "url": "https://www.google.com/sheets/about/"
+            },
+            {
+              "name": "Trello",
+              "free": "10 boards, unlimited cards",
+              "what": "Manage deal pipelines and listing tasks",
+              "url": "https://trello.com"
+            }
           ],
           "piece": "A contract-to-close transaction checklist plus a deal-tracker board."
         },
@@ -199,9 +374,24 @@
           "tier": "Level up",
           "goal": "You can market a listing and run agent follow-up like a trained assistant.",
           "tools": [
-            { "name": "Canva", "free": "Free templates, 5GB storage", "what": "Design listing flyers and open-house graphics", "url": "https://www.canva.com" },
-            { "name": "HubSpot CRM", "free": "1,000 contacts, 2 users", "what": "Track leads and schedule follow-up tasks", "url": "https://www.hubspot.com/products/crm" },
-            { "name": "DocuSign", "free": "Free unlimited signing; about 3 documents to send", "what": "Send disclosures and agreements for signature", "url": "https://www.docusign.com" }
+            {
+              "name": "Canva",
+              "free": "Free templates, 5GB storage",
+              "what": "Design listing flyers and open-house graphics",
+              "url": "https://www.canva.com"
+            },
+            {
+              "name": "HubSpot CRM",
+              "free": "1,000 contacts, 2 users",
+              "what": "Track leads and schedule follow-up tasks",
+              "url": "https://www.hubspot.com/products/crm"
+            },
+            {
+              "name": "DocuSign",
+              "free": "Free unlimited signing; about 3 documents to send",
+              "what": "Send disclosures and agreements for signature",
+              "url": "https://www.docusign.com"
+            }
           ],
           "piece": "A listing marketing kit: flyer, three social posts, and a five-touch buyer follow-up sequence."
         },
@@ -209,8 +399,18 @@
           "tier": "Pro",
           "goal": "You can run the agent's real stack: CRM follow-up and transaction coordination.",
           "tools": [
-            { "name": "Follow Up Boss", "free": "14-day trial; paid from $69/user", "what": "Run the CRM top US agents use", "url": "https://www.followupboss.com" },
-            { "name": "BoldTrail (kvCORE)", "free": "Often included free by your brokerage; else quote-based", "what": "Manage IDX sites, leads, smart campaigns", "url": "https://boldtrail.com" }
+            {
+              "name": "Follow Up Boss",
+              "free": "14-day trial; paid from $69/user",
+              "what": "Run the CRM top US agents use",
+              "url": "https://www.followupboss.com"
+            },
+            {
+              "name": "BoldTrail (kvCORE)",
+              "free": "Often included free by your brokerage; else quote-based",
+              "what": "Manage IDX sites, leads, smart campaigns",
+              "url": "https://boldtrail.com"
+            }
           ],
           "piece": "A CRM setup demo in a Follow Up Boss trial: lead stages, three action plans, and an onboarding SOP."
         }
@@ -223,8 +423,18 @@
           "tier": "Start",
           "goal": "You can connect two apps and automate a simple, repeating task end to end.",
           "tools": [
-            { "name": "Zapier", "free": "100 tasks/mo, two-step Zaps", "what": "Automate simple app-to-app workflows", "url": "https://zapier.com" },
-            { "name": "Airtable", "free": "1,000 records/base, 5 editors", "what": "Build a no-code database and views", "url": "https://airtable.com" }
+            {
+              "name": "Zapier",
+              "free": "100 tasks/mo, two-step Zaps",
+              "what": "Automate simple app-to-app workflows",
+              "url": "https://zapier.com"
+            },
+            {
+              "name": "Airtable",
+              "free": "1,000 records/base, 5 editors",
+              "what": "Build a no-code database and views",
+              "url": "https://airtable.com"
+            }
           ],
           "piece": "A lead-intake automation: web form to Airtable to auto-confirmation email."
         },
@@ -232,8 +442,18 @@
           "tier": "Level up",
           "goal": "You can build multi-step workflows with real logic and test the moving parts.",
           "tools": [
-            { "name": "Make", "free": "1,000 credits/mo, 2 active scenarios", "what": "Build multi-step, branching visual automations", "url": "https://www.make.com" },
-            { "name": "Postman", "free": "Free personal API workspace", "what": "Test webhooks and REST APIs manually", "url": "https://www.postman.com" }
+            {
+              "name": "Make",
+              "free": "1,000 credits/mo, 2 active scenarios",
+              "what": "Build multi-step, branching visual automations",
+              "url": "https://www.make.com"
+            },
+            {
+              "name": "Postman",
+              "free": "Free personal API workspace",
+              "what": "Test webhooks and REST APIs manually",
+              "url": "https://www.postman.com"
+            }
           ],
           "piece": "A five-step Make scenario with a webhook trigger, a filter, and error handling."
         },
@@ -241,9 +461,24 @@
           "tier": "Pro",
           "goal": "You can own an agency's whole automation, CRM, and AI stack.",
           "tools": [
-            { "name": "n8n", "free": "Self-hosted community edition, unlimited runs", "what": "Self-host advanced, AI-powered automations", "url": "https://n8n.io" },
-            { "name": "GoHighLevel", "free": "14-day trial; paid from $97/mo", "what": "Set up agency CRM, funnels, pipelines", "url": "https://www.gohighlevel.com" },
-            { "name": "OpenAI API", "free": "Pay-as-you-go, no free tier; PH users need an internationally-billable card (Wise or Payoneer) to pay for it", "what": "Add AI steps to any workflow", "url": "https://platform.openai.com" }
+            {
+              "name": "n8n",
+              "free": "Self-hosted community edition, unlimited runs",
+              "what": "Self-host advanced, AI-powered automations",
+              "url": "https://n8n.io"
+            },
+            {
+              "name": "GoHighLevel",
+              "free": "14-day trial; paid from $97/mo",
+              "what": "Set up agency CRM, funnels, pipelines",
+              "url": "https://www.gohighlevel.com"
+            },
+            {
+              "name": "OpenAI API",
+              "free": "Pay-as-you-go, no free tier; PH users need an internationally-billable card (Wise or Payoneer) to pay for it",
+              "what": "Add AI steps to any workflow",
+              "url": "https://platform.openai.com"
+            }
           ],
           "piece": "A self-hosted n8n workflow that reads a Gmail inbox, classifies with AI, and logs to Airtable."
         }
@@ -256,8 +491,18 @@
           "tier": "Start",
           "goal": "You can produce clean, on-brand graphics and thumbnails a client would post.",
           "tools": [
-            { "name": "Canva", "free": "Free templates, 5GB, one brand kit", "what": "Design posts, carousels, and thumbnails fast", "url": "https://www.canva.com" },
-            { "name": "Adobe Express", "free": "100k+ templates, 25 AI credits/mo", "what": "Quick edits and background removal", "url": "https://www.adobe.com/express/" }
+            {
+              "name": "Canva",
+              "free": "Free templates, 5GB, one brand kit",
+              "what": "Design posts, carousels, and thumbnails fast",
+              "url": "https://www.canva.com"
+            },
+            {
+              "name": "Adobe Express",
+              "free": "100k+ templates, 25 AI credits/mo",
+              "what": "Quick edits and background removal",
+              "url": "https://www.adobe.com/express/"
+            }
           ],
           "piece": "A six-post social set plus two YouTube thumbnails for a mock coach brand."
         },
@@ -265,8 +510,18 @@
           "tier": "Level up",
           "goal": "You can shoot, cut, and repurpose short-form video without fancy gear.",
           "tools": [
-            { "name": "CapCut", "free": "1080p export, auto-captions, no watermark on basic edits", "what": "Edit Reels and TikToks with captions", "url": "https://www.capcut.com" },
-            { "name": "Descript", "free": "60 min/mo, 720p, watermarked exports", "what": "Edit talking-head video by editing text", "url": "https://www.descript.com" }
+            {
+              "name": "CapCut",
+              "free": "1080p export, auto-captions, no watermark on basic edits",
+              "what": "Edit Reels and TikToks with captions",
+              "url": "https://www.capcut.com"
+            },
+            {
+              "name": "Descript",
+              "free": "60 min/mo, 720p, watermarked exports",
+              "what": "Edit talking-head video by editing text",
+              "url": "https://www.descript.com"
+            }
           ],
           "piece": "Three 30-second vertical videos with captions, plus a podcast clip reel."
         },
@@ -274,8 +529,18 @@
           "tier": "Pro",
           "goal": "You can build a real brand system, not just one-off posts.",
           "tools": [
-            { "name": "Figma", "free": "3 design files, unlimited personal drafts", "what": "Design brand style guides and systems", "url": "https://www.figma.com" },
-            { "name": "ChatGPT", "free": "Free plan; limited messages per day", "what": "Draft hooks, captions, and brand voice", "url": "https://chatgpt.com" }
+            {
+              "name": "Figma",
+              "free": "3 design files, unlimited personal drafts",
+              "what": "Design brand style guides and systems",
+              "url": "https://www.figma.com"
+            },
+            {
+              "name": "ChatGPT",
+              "free": "Free plan; limited messages per day",
+              "what": "Draft hooks, captions, and brand voice",
+              "url": "https://chatgpt.com"
+            }
           ],
           "piece": "A one-page brand system: logo use, color, type, and ten on-brand caption templates."
         }
@@ -288,8 +553,18 @@
           "tier": "Start",
           "goal": "You can keep a live chat orderly and turn streams into shareable clips.",
           "tools": [
-            { "name": "CapCut", "free": "Free; 1080p export, no watermark on manual exports", "what": "Cut stream highlights into short clips", "url": "https://www.capcut.com" },
-            { "name": "Discord", "free": "Free", "what": "Moderate community chat, roles, and mod tools", "url": "https://discord.com" }
+            {
+              "name": "CapCut",
+              "free": "Free; 1080p export, no watermark on manual exports",
+              "what": "Cut stream highlights into short clips",
+              "url": "https://www.capcut.com"
+            },
+            {
+              "name": "Discord",
+              "free": "Free",
+              "what": "Moderate community chat, roles, and mod tools",
+              "url": "https://discord.com"
+            }
           ],
           "piece": "A tidy 60-second highlight reel cut from a public Twitch or YouTube VOD, plus a starter Discord server with roles and clear mod rules."
         },
@@ -297,8 +572,18 @@
           "tier": "Level up",
           "goal": "You can run a branded live broadcast end to end so the host only has to talk.",
           "tools": [
-            { "name": "OBS Studio", "free": "Free, open-source", "what": "Live production: scenes, overlays, and sources", "url": "https://obsproject.com" },
-            { "name": "StreamYard", "free": "Free; 720p only, StreamYard watermark", "what": "Browser live studio with guests and branding", "url": "https://streamyard.com" }
+            {
+              "name": "OBS Studio",
+              "free": "Free, open-source",
+              "what": "Live production: scenes, overlays, and sources",
+              "url": "https://obsproject.com"
+            },
+            {
+              "name": "StreamYard",
+              "free": "Free; 720p only, StreamYard watermark",
+              "what": "Browser live studio with guests and branding",
+              "url": "https://streamyard.com"
+            }
           ],
           "piece": "A 15-minute mock live broadcast recorded in OBS with a custom overlay pack: a 'starting soon' screen, lower-thirds, and scene transitions."
         },
@@ -306,8 +591,18 @@
           "tier": "Pro",
           "goal": "You can coordinate a live-selling show across platforms and keep it moving.",
           "tools": [
-            { "name": "Restream", "free": "Free; 2 channels, watermark, 6-hour cap", "what": "Multistream one live to several platforms", "url": "https://restream.io" },
-            { "name": "TikTok LIVE", "free": "Free app; LIVE needs ~1,000 followers, or ~100 with a high Authority Score under TikTok's 2026 update", "what": "Host and coordinate live-selling sessions", "url": "https://www.tiktok.com" }
+            {
+              "name": "Restream",
+              "free": "Free; 2 channels, watermark, 6-hour cap",
+              "what": "Multistream one live to several platforms",
+              "url": "https://restream.io"
+            },
+            {
+              "name": "TikTok LIVE",
+              "free": "Free app; LIVE needs ~1,000 followers, or ~100 with a high Authority Score under TikTok's 2026 update",
+              "what": "Host and coordinate live-selling sessions",
+              "url": "https://www.tiktok.com"
+            }
           ],
           "piece": "A live-selling run-of-show doc plus a practice multi-platform stream (to your own YouTube and Facebook) with product segments, CTA cues, and pinned-comment timing."
         }
@@ -320,8 +615,18 @@
           "tier": "Start",
           "goal": "You can make rough audio sound clean and give an episode real artwork.",
           "tools": [
-            { "name": "Adobe Podcast (Enhance Speech)", "free": "Free; about 1 hr/day, files under 30 min", "what": "One-click cleanup of noisy spoken audio", "url": "https://podcast.adobe.com" },
-            { "name": "Canva", "free": "Free plan; large template library", "what": "Cover art, audiograms, and episode graphics", "url": "https://www.canva.com" }
+            {
+              "name": "Adobe Podcast (Enhance Speech)",
+              "free": "Free; about 1 hr/day, files under 30 min",
+              "what": "One-click cleanup of noisy spoken audio",
+              "url": "https://podcast.adobe.com"
+            },
+            {
+              "name": "Canva",
+              "free": "Free plan; large template library",
+              "what": "Cover art, audiograms, and episode graphics",
+              "url": "https://www.canva.com"
+            }
           ],
           "piece": "A before/after audio sample (a phone voice memo cleaned with Enhance) with matching cover art and a captioned audiogram made in Canva."
         },
@@ -329,8 +634,18 @@
           "tier": "Level up",
           "goal": "You can edit a full episode, publish it, and hand over show notes.",
           "tools": [
-            { "name": "Descript", "free": "Free; 1 hr/mo transcription, 720p watermarked", "what": "Text-based editing, filler removal, and transcripts", "url": "https://www.descript.com" },
-            { "name": "Buzzsprout", "free": "Free; 2 hrs/mo upload, 90-day hosting", "what": "Host and distribute episodes to directories", "url": "https://www.buzzsprout.com" }
+            {
+              "name": "Descript",
+              "free": "Free; 1 hr/mo transcription, 720p watermarked",
+              "what": "Text-based editing, filler removal, and transcripts",
+              "url": "https://www.descript.com"
+            },
+            {
+              "name": "Buzzsprout",
+              "free": "Free; 2 hrs/mo upload, 90-day hosting",
+              "what": "Host and distribute episodes to directories",
+              "url": "https://www.buzzsprout.com"
+            }
           ],
           "piece": "A 15-20 minute mock episode edited in Descript, published as a free Buzzsprout listing, with timestamped show notes and a full transcript."
         },
@@ -338,8 +653,18 @@
           "tier": "Pro",
           "goal": "You can run a remote studio-quality recording and turn one episode into a week of shorts.",
           "tools": [
-            { "name": "Riverside", "free": "Free; 2 hrs recording, 720p watermarked", "what": "Remote studio-quality recording, separate tracks", "url": "https://riverside.fm" },
-            { "name": "Opus Clip", "free": "Free; 60 min/mo, watermarked clips", "what": "Auto-cut episodes into captioned vertical shorts", "url": "https://www.opus.pro" }
+            {
+              "name": "Riverside",
+              "free": "Free; 2 hrs recording, 720p watermarked",
+              "what": "Remote studio-quality recording, separate tracks",
+              "url": "https://riverside.fm"
+            },
+            {
+              "name": "Opus Clip",
+              "free": "Free; 60 min/mo, watermarked clips",
+              "what": "Auto-cut episodes into captioned vertical shorts",
+              "url": "https://www.opus.pro"
+            }
           ],
           "piece": "A mock remote interview recorded with a friend in Riverside (separate tracks), repurposed into three captioned vertical shorts with Opus Clip."
         }
@@ -352,8 +677,18 @@
           "tier": "Start",
           "goal": "You can produce a week of devotional graphics and send a tidy newsletter.",
           "tools": [
-            { "name": "Canva", "free": "Free plan; large template library", "what": "Devotional graphics, flyers, and sermon quote cards", "url": "https://www.canva.com" },
-            { "name": "Mailchimp", "free": "Free; 250 contacts, 500 sends/mo (reduced in 2026)", "what": "Send devotional newsletters to a list", "url": "https://mailchimp.com" }
+            {
+              "name": "Canva",
+              "free": "Free plan; large template library",
+              "what": "Devotional graphics, flyers, and sermon quote cards",
+              "url": "https://www.canva.com"
+            },
+            {
+              "name": "Mailchimp",
+              "free": "Free; 250 contacts, 500 sends/mo (reduced in 2026)",
+              "what": "Send devotional newsletters to a list",
+              "url": "https://mailchimp.com"
+            }
           ],
           "piece": "A five-piece devotional graphic set in Canva plus a sample weekly devotional newsletter built and test-sent in Mailchimp."
         },
@@ -361,8 +696,18 @@
           "tier": "Level up",
           "goal": "You can run the people, giving, and gatherings side of a ministry.",
           "tools": [
-            { "name": "Planning Center", "free": "Free tiers (People free; Services 5 members; Giving 10 gifts/mo)", "what": "People database, service plans, giving admin", "url": "https://www.planningcenter.com" },
-            { "name": "Zoom", "free": "Free; 40-min group cap, up to 100 people", "what": "Run online prayer meetings and coaching calls", "url": "https://www.zoom.com" }
+            {
+              "name": "Planning Center",
+              "free": "Free tiers (People free; Services 5 members; Giving 10 gifts/mo)",
+              "what": "People database, service plans, giving admin",
+              "url": "https://www.planningcenter.com"
+            },
+            {
+              "name": "Zoom",
+              "free": "Free; 40-min group cap, up to 100 people",
+              "what": "Run online prayer meetings and coaching calls",
+              "url": "https://www.zoom.com"
+            }
           ],
           "piece": "A People database plus a Sunday service plan (song order and volunteer roster) in Planning Center, and a recurring Zoom prayer meeting with a sign-up flow."
         },
@@ -370,8 +715,18 @@
           "tier": "Pro",
           "goal": "You can turn one sermon into clips and keep the channel organized.",
           "tools": [
-            { "name": "YouTube Studio", "free": "Free with any YouTube channel", "what": "Upload, organize, and manage sermon videos", "url": "https://studio.youtube.com" },
-            { "name": "CapCut", "free": "Free; 1080p export, no watermark on manual exports", "what": "Cut captioned sermon and wellness clips", "url": "https://www.capcut.com" }
+            {
+              "name": "YouTube Studio",
+              "free": "Free with any YouTube channel",
+              "what": "Upload, organize, and manage sermon videos",
+              "url": "https://studio.youtube.com"
+            },
+            {
+              "name": "CapCut",
+              "free": "Free; 1080p export, no watermark on manual exports",
+              "what": "Cut captioned sermon and wellness clips",
+              "url": "https://www.capcut.com"
+            }
           ],
           "piece": "Three captioned sermon clips cut in CapCut and an organized YouTube channel: custom thumbnails, chapters, and a sermons playlist."
         }
@@ -384,8 +739,18 @@
           "tier": "Start",
           "goal": "You know the language and the rules, the two things a clinic cannot let you learn on their patients.",
           "tools": [
-            { "name": "Coursera: Medical Terminology I", "free": "Free to audit (Rice University)", "what": "Learn the terms behind every chart note and referral", "url": "https://www.coursera.org/learn/medical-terminology-1" },
-            { "name": "Free HIPAA Awareness Training", "free": "Free course + certificate options", "what": "Understand PHI, minimum-necessary, and breach rules", "url": "https://www.hipaajournal.com/free-hipaa-training/" }
+            {
+              "name": "Coursera: Medical Terminology I",
+              "free": "Free to audit (Rice University)",
+              "what": "Learn the terms behind every chart note and referral",
+              "url": "https://www.coursera.org/learn/medical-terminology-1"
+            },
+            {
+              "name": "Free HIPAA Awareness Training",
+              "free": "Free course + certificate options",
+              "what": "Understand PHI, minimum-necessary, and breach rules",
+              "url": "https://www.hipaajournal.com/free-hipaa-training/"
+            }
           ],
           "piece": "A one-page medical-terminology cheat sheet in your own words plus a HIPAA awareness certificate, and a short note on how you would handle PHI in a shared drive."
         },
@@ -393,8 +758,18 @@
           "tier": "Level up",
           "goal": "You can run a practice's front desk from anywhere: intake, scheduling, and clean records.",
           "tools": [
-            { "name": "SimplePractice", "free": "Free 30-day trial (full EHR + scheduling)", "what": "Practice-management EHR used by therapists and small clinics", "url": "https://www.simplepractice.com" },
-            { "name": "Doxy.me", "free": "Free tier; HIPAA-compliant telehealth", "what": "Run a simple, no-download telehealth waiting room", "url": "https://doxy.me" }
+            {
+              "name": "SimplePractice",
+              "free": "Free 30-day trial (full EHR + scheduling)",
+              "what": "Practice-management EHR used by therapists and small clinics",
+              "url": "https://www.simplepractice.com"
+            },
+            {
+              "name": "Doxy.me",
+              "free": "Free tier; HIPAA-compliant telehealth",
+              "what": "Run a simple, no-download telehealth waiting room",
+              "url": "https://doxy.me"
+            }
           ],
           "piece": "A mock practice set up in a SimplePractice trial: intake form, three fictional patient charts, a booked telehealth appointment on Doxy.me, and a written new-patient intake SOP."
         },
@@ -402,8 +777,18 @@
           "tier": "Pro",
           "goal": "You can chart a visit fast and check the AI scribe's work: the skill clinics pay a premium for.",
           "tools": [
-            { "name": "Freed AI scribe", "free": "Free trial notes before paywall", "what": "Ambient scribe that drafts a SOAP note from a visit", "url": "https://www.getfreed.ai" },
-            { "name": "MTSamples", "free": "Free; public sample transcriptions (no real PHI)", "what": "Thousands of real-shape sample reports to practice on", "url": "https://mtsamples.com" }
+            {
+              "name": "Freed AI scribe",
+              "free": "Free trial notes before paywall",
+              "what": "Ambient scribe that drafts a SOAP note from a visit",
+              "url": "https://www.getfreed.ai"
+            },
+            {
+              "name": "MTSamples",
+              "free": "Free; public sample transcriptions (no real PHI)",
+              "what": "Thousands of real-shape sample reports to practice on",
+              "url": "https://mtsamples.com"
+            }
           ],
           "piece": "A clean SOAP note you wrote from an MTSamples visit transcript, side-by-side with an AI-drafted version and a short list of the errors you caught and corrected."
         }
@@ -416,8 +801,18 @@
           "tier": "Start",
           "goal": "You can model a real space to scale and produce a clean set of views.",
           "tools": [
-            { "name": "SketchUp Free", "free": "Free web version; core modeling", "what": "Model rooms and buildings to scale in the browser", "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free" },
-            { "name": "Blender", "free": "Free & open-source; full 3D suite", "what": "Model, texture, and render with no license cost", "url": "https://www.blender.org" }
+            {
+              "name": "SketchUp Free",
+              "free": "Free web version; core modeling",
+              "what": "Model rooms and buildings to scale in the browser",
+              "url": "https://www.sketchup.com/plans-and-pricing/sketchup-free"
+            },
+            {
+              "name": "Blender",
+              "free": "Free & open-source; full 3D suite",
+              "what": "Model, texture, and render with no license cost",
+              "url": "https://www.blender.org"
+            }
           ],
           "piece": "A real room or small building modeled to scale from a public floor plan in SketchUp Free, exported as four clean views: plan, two elevations, and one perspective."
         },
@@ -425,8 +820,18 @@
           "tier": "Level up",
           "goal": "You can turn a model into a photorealistic render a client could put on a brochure.",
           "tools": [
-            { "name": "D5 Render", "free": "Free Community tier; real-time ray tracing", "what": "Light, texture, and render your model photorealistically", "url": "https://www.d5render.com" },
-            { "name": "Twinmotion", "free": "Free tier for individuals and small use", "what": "Real-time renders and smooth walkthrough videos", "url": "https://www.twinmotion.com" }
+            {
+              "name": "D5 Render",
+              "free": "Free Community tier; real-time ray tracing",
+              "what": "Light, texture, and render your model photorealistically",
+              "url": "https://www.d5render.com"
+            },
+            {
+              "name": "Twinmotion",
+              "free": "Free tier for individuals and small use",
+              "what": "Real-time renders and smooth walkthrough videos",
+              "url": "https://www.twinmotion.com"
+            }
           ],
           "piece": "One interior and one exterior photorealistic render of your model in D5 Render, plus a 15-second walkthrough video."
         },
@@ -434,8 +839,18 @@
           "tier": "Pro",
           "goal": "You can direct AI renders and fix what they get wrong, the paid edge.",
           "tools": [
-            { "name": "AI Render (SketchUp) / ZSky AI", "free": "AI Render ships with paid SketchUp 2026.1+ subscriptions; ZSky AI has a free tier", "what": "Generate AI render variations from your model or a sketch", "url": "https://zsky.ai/ai-architecture-rendering" },
-            { "name": "Photopea", "free": "Free browser Photoshop alternative", "what": "Post-process renders: sky, people, colour, cleanup", "url": "https://www.photopea.com" }
+            {
+              "name": "AI Render (SketchUp) / ZSky AI",
+              "free": "AI Render ships with paid SketchUp 2026.1+ subscriptions; ZSky AI has a free tier",
+              "what": "Generate AI render variations from your model or a sketch",
+              "url": "https://zsky.ai/ai-architecture-rendering"
+            },
+            {
+              "name": "Photopea",
+              "free": "Free browser Photoshop alternative",
+              "what": "Post-process renders: sky, people, colour, cleanup",
+              "url": "https://www.photopea.com"
+            }
           ],
           "piece": "A before/after: an AI-generated render next to your corrected, post-processed final, with a short note on what you fixed (scale, materials, lighting) that the AI got wrong."
         }
@@ -448,8 +863,18 @@
           "tier": "Start",
           "goal": "You can list a product properly and keep a store's day-to-day tidy.",
           "tools": [
-            { "name": "Shopify (free trial)", "free": "Free trial + low intro rate; full store backend", "what": "Build listings, collections, and process test orders", "url": "https://www.shopify.com" },
-            { "name": "Canva", "free": "Free plan; product & promo graphics", "what": "Product images, banners, and promo creatives", "url": "https://www.canva.com" }
+            {
+              "name": "Shopify (free trial)",
+              "free": "Free trial + low intro rate; full store backend",
+              "what": "Build listings, collections, and process test orders",
+              "url": "https://www.shopify.com"
+            },
+            {
+              "name": "Canva",
+              "free": "Free plan; product & promo graphics",
+              "what": "Product images, banners, and promo creatives",
+              "url": "https://www.canva.com"
+            }
           ],
           "piece": "A demo Shopify store with five fully-optimized product listings (titles, descriptions, images, variants) and a homepage collection, built in a free trial."
         },
@@ -457,8 +882,18 @@
           "tier": "Level up",
           "goal": "You can optimize listings and plan PPC on a real marketplace.",
           "tools": [
-            { "name": "Amazon Seller University", "free": "Free training; Seller Central walkthroughs", "what": "Learn listing optimization, A+ content, and PPC", "url": "https://sell.amazon.com/learn" },
-            { "name": "Helium 10", "free": "Free tier; keyword & listing tools", "what": "Research keywords and audit a listing's quality", "url": "https://www.helium10.com" }
+            {
+              "name": "Amazon Seller University",
+              "free": "Free training; Seller Central walkthroughs",
+              "what": "Learn listing optimization, A+ content, and PPC",
+              "url": "https://sell.amazon.com/learn"
+            },
+            {
+              "name": "Helium 10",
+              "free": "Free tier; keyword & listing tools",
+              "what": "Research keywords and audit a listing's quality",
+              "url": "https://www.helium10.com"
+            }
           ],
           "piece": "A full listing-optimization teardown of a real public Amazon product: keyword-researched title and bullets, an A+ content outline, and a starter PPC plan."
         },
@@ -466,10 +901,392 @@
           "tier": "Pro",
           "goal": "You can run the store on AI and prove the output jump.",
           "tools": [
-            { "name": "ChatGPT", "free": "Free tier; drafting & bulk copy", "what": "Draft descriptions, replies, and report summaries at volume", "url": "https://chatgpt.com" },
-            { "name": "Google Sheets", "free": "Free with any Google account", "what": "Inventory, order, and weekly-performance dashboards", "url": "https://sheets.google.com" }
+            {
+              "name": "ChatGPT",
+              "free": "Free tier; drafting & bulk copy",
+              "what": "Draft descriptions, replies, and report summaries at volume",
+              "url": "https://chatgpt.com"
+            },
+            {
+              "name": "Google Sheets",
+              "free": "Free with any Google account",
+              "what": "Inventory, order, and weekly-performance dashboards",
+              "url": "https://sheets.google.com"
+            }
           ],
           "piece": "A weekly store-ops SOP plus a Google Sheets dashboard (inventory, orders, top sellers), and a before/after showing how AI turned a three-hour listing batch into forty-five minutes."
+        }
+      ]
+    },
+    {
+      "id": "ai-agent-ops",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can build a single AI agent that answers questions from your own documents.",
+          "tools": [
+            {
+              "name": "Claude / ChatGPT",
+              "free": "Free tier",
+              "what": "Prototype the agent's prompts and behavior",
+              "url": "https://claude.ai"
+            },
+            {
+              "name": "LangGraph",
+              "free": "Open source, free",
+              "what": "Wire the agent's logic and tool calls",
+              "url": "https://langchain-ai.github.io/langgraph/"
+            }
+          ],
+          "piece": "A document Q&A agent that answers from a small knowledge base you loaded, with the wrong-answer cases noted."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can add retrieval over real data and connect an agent to live tools.",
+          "tools": [
+            {
+              "name": "LlamaIndex",
+              "free": "Open source, free",
+              "what": "Add retrieval over your own documents",
+              "url": "https://www.llamaindex.ai"
+            },
+            {
+              "name": "Pinecone",
+              "free": "Free Starter tier",
+              "what": "Store and search vector embeddings",
+              "url": "https://www.pinecone.io"
+            }
+          ],
+          "piece": "A RAG agent that cites the source document behind every answer."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can ship a multi-agent system with evals and tracing a client can trust.",
+          "tools": [
+            {
+              "name": "Promptfoo",
+              "free": "Open source, free",
+              "what": "Score outputs and red-team the agent",
+              "url": "https://promptfoo.dev"
+            },
+            {
+              "name": "CrewAI",
+              "free": "Open source, free",
+              "what": "Orchestrate multiple agents together",
+              "url": "https://www.crewai.com"
+            }
+          ],
+          "piece": "A multi-agent workflow with an eval suite that catches bad outputs before they reach the client."
+        }
+      ]
+    },
+    {
+      "id": "ai-content-qa",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can fact-check and edit an AI draft to a publishable standard.",
+          "tools": [
+            {
+              "name": "Claude / ChatGPT",
+              "free": "Free tier",
+              "what": "Draft and interrogate copy",
+              "url": "https://claude.ai"
+            },
+            {
+              "name": "Grammarly",
+              "free": "Free plan",
+              "what": "Catch grammar and clarity issues",
+              "url": "https://www.grammarly.com"
+            }
+          ],
+          "piece": "A before and after edit of an AI draft, with tracked changes and fact-check notes."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can verify every claim to a source and tighten to a brief.",
+          "tools": [
+            {
+              "name": "Perplexity",
+              "free": "Free tier",
+              "what": "Trace and verify claims to sources",
+              "url": "https://www.perplexity.ai"
+            },
+            {
+              "name": "Hemingway Editor",
+              "free": "Free web app",
+              "what": "Cut clutter and fix readability",
+              "url": "https://hemingwayapp.com"
+            }
+          ],
+          "piece": "A source-verification pass on a 1,000-word AI article, every claim linked."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can own a client's prompt library and brand-voice system.",
+          "tools": [
+            {
+              "name": "PromptLayer",
+              "free": "Free developer tier",
+              "what": "Version and manage prompts",
+              "url": "https://www.promptlayer.com"
+            },
+            {
+              "name": "Notion",
+              "free": "Free personal plan",
+              "what": "House the style guide and prompt library",
+              "url": "https://www.notion.so"
+            }
+          ],
+          "piece": "A prompt library plus brand-voice guide that keeps a team's AI output consistent."
+        }
+      ]
+    },
+    {
+      "id": "no-code-apps",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can build a working app with data, forms, and logins.",
+          "tools": [
+            {
+              "name": "Softr",
+              "free": "Free plan",
+              "what": "Build client portals on a spreadsheet backend",
+              "url": "https://www.softr.io"
+            },
+            {
+              "name": "Glide",
+              "free": "Free plan",
+              "what": "Turn a spreadsheet into an app",
+              "url": "https://www.glideapps.com"
+            }
+          ],
+          "piece": "A working member portal with login, built on a spreadsheet."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can build custom workflows and connect external services.",
+          "tools": [
+            {
+              "name": "Bubble",
+              "free": "Free to build, paid to launch",
+              "what": "Build full web apps with custom logic",
+              "url": "https://bubble.io"
+            },
+            {
+              "name": "Xano",
+              "free": "Free tier",
+              "what": "Add a real backend and API",
+              "url": "https://www.xano.com"
+            }
+          ],
+          "piece": "A two-sided app with user roles, a database, and one external API call."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can ship a native mobile app and hand it off to a client.",
+          "tools": [
+            {
+              "name": "FlutterFlow",
+              "free": "Free plan, paid to export",
+              "what": "Build native mobile apps visually",
+              "url": "https://flutterflow.io"
+            },
+            {
+              "name": "Supabase",
+              "free": "Free tier",
+              "what": "Postgres database, auth, and storage",
+              "url": "https://supabase.com"
+            }
+          ],
+          "piece": "A published mobile app with auth and a Postgres backend, plus a handoff doc."
+        }
+      ]
+    },
+    {
+      "id": "revops",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can set up a clean CRM and keep its data trustworthy.",
+          "tools": [
+            {
+              "name": "HubSpot",
+              "free": "Free CRM",
+              "what": "Manage contacts, deals, and pipeline",
+              "url": "https://www.hubspot.com"
+            },
+            {
+              "name": "Google Sheets",
+              "free": "Free",
+              "what": "Audit and de-duplicate CRM data",
+              "url": "https://sheets.google.com"
+            }
+          ],
+          "piece": "A cleaned-up HubSpot pipeline with defined deal stages and no duplicate contacts."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can design lifecycle stages and route leads automatically.",
+          "tools": [
+            {
+              "name": "HubSpot Operations Hub",
+              "free": "Free tier",
+              "what": "Sync and automate data across tools",
+              "url": "https://www.hubspot.com/products/operations"
+            },
+            {
+              "name": "Zapier",
+              "free": "Free tier, check current limits",
+              "what": "Route leads between tools",
+              "url": "https://zapier.com"
+            }
+          ],
+          "piece": "A lead-routing workflow with scoring and a lifecycle-stage automation."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can own the revenue reporting a leadership team runs on.",
+          "tools": [
+            {
+              "name": "Salesforce",
+              "free": "Free Developer Edition",
+              "what": "Architect enterprise CRM objects",
+              "url": "https://developer.salesforce.com"
+            },
+            {
+              "name": "Looker Studio",
+              "free": "Free",
+              "what": "Build the revenue dashboard",
+              "url": "https://lookerstudio.google.com"
+            }
+          ],
+          "piece": "A revenue dashboard tying pipeline, marketing, and CS to one set of numbers."
+        }
+      ]
+    },
+    {
+      "id": "data-analytics",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can turn a messy spreadsheet into a clean, clear chart.",
+          "tools": [
+            {
+              "name": "Google Sheets",
+              "free": "Free",
+              "what": "Clean, pivot, and summarize data",
+              "url": "https://sheets.google.com"
+            },
+            {
+              "name": "Looker Studio",
+              "free": "Free",
+              "what": "Build shareable dashboards",
+              "url": "https://lookerstudio.google.com"
+            }
+          ],
+          "piece": "A one-page Looker Studio dashboard built from a raw CSV export."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can build interactive dashboards and query with SQL.",
+          "tools": [
+            {
+              "name": "Power BI",
+              "free": "Free Desktop",
+              "what": "Build interactive reports",
+              "url": "https://powerbi.microsoft.com"
+            },
+            {
+              "name": "Julius AI",
+              "free": "Free tier",
+              "what": "Query and explore data in plain English",
+              "url": "https://julius.ai"
+            }
+          ],
+          "piece": "An interactive Power BI report with drill-downs on a real dataset."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can model data and run a weekly reporting cadence for a client.",
+          "tools": [
+            {
+              "name": "dbt",
+              "free": "Free Developer tier",
+              "what": "Model and transform data",
+              "url": "https://www.getdbt.com"
+            },
+            {
+              "name": "BigQuery",
+              "free": "Free tier",
+              "what": "Warehouse the data",
+              "url": "https://cloud.google.com/bigquery"
+            }
+          ],
+          "piece": "A modeled dataset feeding an automated weekly dashboard a founder acts on."
+        }
+      ]
+    },
+    {
+      "id": "localization",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can produce clean, well-timed subtitles for a video.",
+          "tools": [
+            {
+              "name": "Subtitle Edit",
+              "free": "Free, open source",
+              "what": "Time and QA subtitles",
+              "url": "https://www.nikse.dk/subtitleedit"
+            },
+            {
+              "name": "Descript",
+              "free": "Free tier, check current limits",
+              "what": "Auto-transcribe and edit",
+              "url": "https://www.descript.com"
+            }
+          ],
+          "piece": "A fully timed, QA'd subtitle file for a 10-minute video."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can QA AI translation and dubbing against the original.",
+          "tools": [
+            {
+              "name": "DeepL",
+              "free": "Free tier",
+              "what": "Draft translations to review",
+              "url": "https://www.deepl.com"
+            },
+            {
+              "name": "Smartcat",
+              "free": "Free for freelancers",
+              "what": "Manage translation and glossaries",
+              "url": "https://www.smartcat.com"
+            }
+          ],
+          "piece": "A reviewed, on-brand translation of a subtitle set, with a glossary."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can run a localization project across languages for a client.",
+          "tools": [
+            {
+              "name": "Smartcat",
+              "free": "Free for freelancers",
+              "what": "Coordinate multilingual projects",
+              "url": "https://www.smartcat.com"
+            },
+            {
+              "name": "Trint",
+              "free": "Paid, trial available",
+              "what": "Team captioning and transcription workflow",
+              "url": "https://trint.com"
+            }
+          ],
+          "piece": "A multi-language subtitle delivery with a QA checklist and consistent terminology."
         }
       ]
     }
