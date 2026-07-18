@@ -29,6 +29,34 @@ const costLabel: Record<string, string> = {
 };
 
 type ShelfItem = { org: string; title: string; url: string; why: string; cost: string };
+type Savings = { note: string; asOf: string; basis: { tool: string; monthly: number }[] };
+type ShelfGroup = { id: string; title: string; note: string; items: ShelfItem[]; savings?: Savings };
+
+function SavingsCallout({ savings }: { savings: Savings }) {
+  const monthly = savings.basis.reduce((sum, b) => sum + b.monthly, 0);
+  return (
+    <div className="mt-5 rounded-2xl border border-emerald/25 bg-emerald-tint p-6">
+      <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+        <span className="font-display text-[length:var(--text-h2)] leading-none text-emerald">
+          ${monthly}
+          <span className="text-lg font-semibold text-emerald/70">/mo</span>
+        </span>
+        <span className="text-sm font-semibold text-emerald/80">
+          about ${monthly * 12} a year, saved on tools alone
+        </span>
+      </div>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">{savings.note}</p>
+      <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-faint">
+        {savings.basis.map((b) => (
+          <span key={b.tool}>
+            {b.tool} <span className="text-ink-soft">${b.monthly}</span>
+          </span>
+        ))}
+      </div>
+      <p className="mt-2 text-xs text-ink-faint">{savings.asOf}</p>
+    </div>
+  );
+}
 
 export default function ResourcesPage() {
   const { hero, judge, shelf, protocol, closing } = resources;
@@ -94,7 +122,7 @@ export default function ResourcesPage() {
         </Reveal>
 
         <div className="mt-12 flex flex-col gap-14">
-          {shelf.groups.map((g) => (
+          {(shelf.groups as ShelfGroup[]).map((g) => (
             <div key={g.id}>
               <Reveal>
                 <div className="flex flex-col gap-3 border-t border-line-strong pt-6">
@@ -102,6 +130,12 @@ export default function ResourcesPage() {
                   <p className="max-w-2xl text-sm leading-relaxed text-ink-soft">{g.note}</p>
                 </div>
               </Reveal>
+
+              {g.savings && (
+                <Reveal i={1}>
+                  <SavingsCallout savings={g.savings} />
+                </Reveal>
+              )}
 
               <div className="mt-7 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
                 {(g.items as ShelfItem[]).map((item, idx) => (
