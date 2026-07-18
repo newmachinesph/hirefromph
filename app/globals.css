@@ -19,17 +19,20 @@
   --line: #dbe8e3;
   --line-strong: #c3d5ce;
 
-  /* Signature accent, fresh teal */
-  --coral: #0d9488;
-  --coral-deep: #0a7a70;
+  /* Signature accent, fresh teal.
+     Darkened to clear 4.5:1 as text on paper and as a fill under white text. */
+  --coral: #0a736a;
+  --coral-deep: #075b54;
   --coral-tint: #d3efeb;
+  /* Accent for use on the dark (--ink) surfaces, where --coral goes muddy */
+  --coral-light: #2bbaa9;
 
   /* Growth / free / verified, leaf green */
-  --emerald: #2f9e46;
+  --emerald: #237a35;
   --emerald-tint: #e6f6e6;
 
   /* Cool support, info and warnings */
-  --indigo: #2f6df0;
+  --indigo: #2558c8;
   --indigo-tint: #e9e9fd;
   --amber: #e39400;
   --amber-tint: #fdf3d9;
@@ -65,6 +68,7 @@
   --color-coral: var(--coral);
   --color-coral-deep: var(--coral-deep);
   --color-coral-tint: var(--coral-tint);
+  --color-coral-light: var(--coral-light);
   --color-emerald: var(--emerald);
   --color-emerald-tint: var(--emerald-tint);
   --color-indigo: var(--indigo);
@@ -158,13 +162,16 @@ body::before {
   letter-spacing: -0.03em;
 }
 
-/* Eyebrow / kicker label */
-.kicker {
-  font-family: var(--font-mono), monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--ink-faint);
+/* Eyebrow / kicker label. In @layer base so a `text-*` utility on the same
+   element wins — otherwise the ink-faint default leaks onto dark surfaces. */
+@layer base {
+  .kicker {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
 }
 
 /* Container */

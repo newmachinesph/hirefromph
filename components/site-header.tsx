@@ -70,7 +70,7 @@ export function SiteHeader() {
       )}
     >
       <div className="container-x flex h-16 items-center justify-between gap-4">
-        <Link href="/" className="shrink-0" aria-label="DevUp home">
+        <Link href="/" className="shrink-0">
           <Logo markSize={32} showTagline />
         </Link>
 
