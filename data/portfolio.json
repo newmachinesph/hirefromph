@@ -1289,6 +1289,68 @@
           "piece": "A multi-language subtitle delivery with a QA checklist and consistent terminology."
         }
       ]
+    },
+    {
+      "id": "logistics",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can keep a set of shipments visible and never let one go quiet.",
+          "tools": [
+            {
+              "name": "CargoWise certification",
+              "free": "Free to the public; vendor-issued CCO level",
+              "what": "Learn the system Australian and global forwarders actually run",
+              "url": "https://www.cargowise.com/learning/certifications/"
+            },
+            {
+              "name": "Google Sheets",
+              "free": "Free with any Google account",
+              "what": "Build the shipment tracker and exception log",
+              "url": "https://sheets.google.com"
+            }
+          ],
+          "piece": "A shipment tracker for ten invented loads: status, pickup and delivery windows, and a dated check-call log showing you chased each one before anyone asked."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can speak freight: lanes, rates, and who carries the risk.",
+          "tools": [
+            {
+              "name": "DAT load board guide",
+              "free": "Free whitepaper PDF",
+              "what": "Learn lanes, rates, deadhead, and load-board vocabulary",
+              "url": "https://www.dat.com/resources/wp-content/uploads/resource-assets/whitepaper/complete-guide-to-using-the-dat-load-board.pdf"
+            },
+            {
+              "name": "ICC Incoterms 2020 toolkit",
+              "free": "Free webinar replay, Q&A, and wallchart",
+              "what": "Know who pays, who insures, and where risk transfers",
+              "url": "https://academy.iccwbo.org/free-incoterms-2020-training-toolkit/"
+            }
+          ],
+          "piece": "A one-page carrier vetting checklist (authority, insurance, W-9, packet) plus an Incoterms cheat sheet you wrote yourself, applied to three worked shipment scenarios."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can handle the exception and audit the charge, which is the part AI does not do.",
+          "tools": [
+            {
+              "name": "FMC detention & demurrage rule",
+              "free": "Free; official regulator guidance",
+              "what": "Audit an invoice instead of just chasing the charge",
+              "url": "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/"
+            },
+            {
+              "name": "ChatGPT",
+              "free": "Free tier; drafting & summarising",
+              "what": "Draft carrier updates and shift summaries at volume",
+              "url": "https://chatgpt.com"
+            }
+          ],
+          "piece": "An exception playbook: five ways a load goes wrong (no-show, breakdown, missed appointment, detention, damaged POD), what you check, who you call, and what you decide. Plus one worked detention invoice audit against the FMC rule."
+        }
+      ]
     }
   ]
 }
