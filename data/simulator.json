@@ -13,7 +13,7 @@
   "dataHonesty": {
     "title": "Why nobody has an honest chart of Philippine freelance rates, including us",
     "body": "There is no authoritative public dataset of Philippine freelancer rates by seniority. None exists. Every \"2026 salary guide\" you will find is published by a staffing agency, an outsourcing firm, or a training company: pages with no disclosed methodology, no sample size, and a direct commercial reason to skew the number, up if they sell training, down if they sell cheap labour. The base rates in this simulator are the convergent directional picture across several of those sources. That makes them vendor-grade, not survey-grade, and we will not dress them up as anything better.",
-    "disagreement": "How soft is that ground? Two vendor guides put the same entry-level bookkeeping role at $5–6/hr and $10–12/hr, a 2x disagreement about one job in one year. The full demonstration is on the Salary Guide.",
+    "disagreement": "How soft is that ground? Two vendor guides put the same entry-level bookkeeping role at $5–6/hr and $10–12/hr, a 2x disagreement about one job in one year. The Salary Guide shows the same problem with an even wider spread on support roles.",
     "sources": [
       {
         "label": "OnlineJobs.ph salary guide",
@@ -90,16 +90,32 @@
       "legend": "4 · Billable hours per week",
       "help": "Hours actually billed, not hours sat at the desk. The two are famously not the same number.",
       "options": [
-        { "id": "10", "label": "10 hrs", "desc": "Side hustle, on top of a day job." },
-        { "id": "20", "label": "20 hrs", "desc": "Half load." },
-        { "id": "40", "label": "40 hrs", "desc": "Full time." }
+        {
+          "id": "10",
+          "label": "10 hrs",
+          "desc": "Side hustle, on top of a day job."
+        },
+        {
+          "id": "20",
+          "label": "20 hrs",
+          "desc": "Half load."
+        },
+        {
+          "id": "40",
+          "label": "40 hrs",
+          "desc": "Full time."
+        }
       ]
     },
     "language": {
       "legend": "5 · Language",
       "help": "English is a national baseline here, not an edge. Treating it as a superpower is how a lot of people end up competing on price.",
       "options": [
-        { "id": "english", "label": "English", "desc": "The floor everyone in this market already stands on." },
+        {
+          "id": "english",
+          "label": "English",
+          "desc": "The floor everyone in this market already stands on."
+        },
         {
           "id": "second",
           "label": "English + Japanese / Korean / Mandarin",
