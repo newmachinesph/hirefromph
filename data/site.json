@@ -9,9 +9,21 @@
     "title": "We don't hand you files. We make you resourceful.",
     "body": "Anyone can give you a resume template. It makes you look like every other applicant, and it stops helping the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and it only ever develops upwards.",
     "principles": [
-      { "title": "Method over material", "desc": "Every lab teaches how the thing is built and why, never a file to download and rename.", "icon": "key-round" },
-      { "title": "You build it, you own it", "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.", "icon": "pencil-ruler" },
-      { "title": "Independence is the goal", "desc": "The platform succeeds when you no longer need it; every page builds toward that.", "icon": "unlock" }
+      {
+        "title": "Method over material",
+        "desc": "Every lab teaches how the thing is built and why, never a file to download and rename.",
+        "icon": "key-round"
+      },
+      {
+        "title": "You build it, you own it",
+        "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.",
+        "icon": "pencil-ruler"
+      },
+      {
+        "title": "Independence is the goal",
+        "desc": "The platform succeeds when you no longer need it; every page builds toward that.",
+        "icon": "unlock"
+      }
     ]
   },
   "social": {
@@ -22,10 +34,26 @@
     "tiktok": "https://www.tiktok.com/@devupph"
   },
   "stats": [
-    { "value": "0", "label": "templates handed out", "sub": "you build, you own" },
-    { "value": "7", "label": "core methods", "sub": "find, deconstruct, learn, vet, ask, unstick, give" },
-    { "value": "5", "label": "career stages", "sub": "zero to independent" },
-    { "value": "32", "label": "micro-tasks with real deliverables", "sub": "each one a portfolio piece" }
+    {
+      "value": "0",
+      "label": "templates handed out",
+      "sub": "you build, you own"
+    },
+    {
+      "value": "7",
+      "label": "core methods",
+      "sub": "find, deconstruct, learn, vet, ask, unstick, give"
+    },
+    {
+      "value": "5",
+      "label": "career stages",
+      "sub": "zero to independent"
+    },
+    {
+      "value": "39",
+      "label": "micro-tasks with real deliverables",
+      "sub": "each one a portfolio piece"
+    }
   ],
   "navGroups": [
     {
@@ -33,63 +61,171 @@
       "primary": true,
       "desc": "The one path: five stages, zero to independent. If you read nothing else, read this in order.",
       "links": [
-        { "label": "Start here", "href": "/start" },
-        { "label": "Get Hired", "href": "/get-hired" },
-        { "label": "Deliver", "href": "/deliver" },
-        { "label": "Level Up", "href": "/level-up" },
-        { "label": "Own", "href": "/own" }
+        {
+          "label": "Start here",
+          "href": "/start"
+        },
+        {
+          "label": "Get Hired",
+          "href": "/get-hired"
+        },
+        {
+          "label": "Deliver",
+          "href": "/deliver"
+        },
+        {
+          "label": "Level Up",
+          "href": "/level-up"
+        },
+        {
+          "label": "Own",
+          "href": "/own"
+        }
       ]
     },
     {
       "title": "Learn to build",
       "desc": "The skills and labs behind the path. Dip in when a stage calls for one, not all at once.",
       "links": [
-        { "label": "The Method", "href": "/method" },
-        { "label": "AI-First", "href": "/ai-first" },
-        { "label": "How to Learn", "href": "/learn" },
-        { "label": "Micro-Tasks", "href": "/tasks" },
-        { "label": "Build Labs", "href": "/build" },
-        { "label": "Learn Any Tool", "href": "/tools" },
-        { "label": "Portfolio Ladder", "href": "/portfolio" },
-        { "label": "AI Leverage", "href": "/prompts" },
-        { "label": "Resource Shelf", "href": "/resources" }
+        {
+          "label": "The Method",
+          "href": "/method"
+        },
+        {
+          "label": "AI-First",
+          "href": "/ai-first"
+        },
+        {
+          "label": "How to Learn",
+          "href": "/learn"
+        },
+        {
+          "label": "Micro-Tasks",
+          "href": "/tasks"
+        },
+        {
+          "label": "Build Labs",
+          "href": "/build"
+        },
+        {
+          "label": "Learn Any Tool",
+          "href": "/tools"
+        },
+        {
+          "label": "Portfolio Ladder",
+          "href": "/portfolio"
+        },
+        {
+          "label": "AI Leverage",
+          "href": "/prompts"
+        },
+        {
+          "label": "Resource Shelf",
+          "href": "/resources"
+        }
       ]
     },
     {
       "title": "Work like a professional",
       "desc": "How to behave once you're in the work: the gap between kept and quietly dropped.",
       "links": [
-        { "label": "Reality Check", "href": "/reality" },
-        { "label": "Become Indispensable", "href": "/indispensable" },
-        { "label": "English at Work", "href": "/english" },
-        { "label": "Conduct & Integrity", "href": "/conduct" },
-        { "label": "Career Simulator", "href": "/simulator" }
+        {
+          "label": "Reality Check",
+          "href": "/reality"
+        },
+        {
+          "label": "Become Indispensable",
+          "href": "/indispensable"
+        },
+        {
+          "label": "English at Work",
+          "href": "/english"
+        },
+        {
+          "label": "Conduct & Integrity",
+          "href": "/conduct"
+        },
+        {
+          "label": "Career Simulator",
+          "href": "/simulator"
+        }
       ]
     },
     {
       "title": "Grow",
       "desc": "Deep-dives and tools for when the basics hold and you want more. Reach for these later.",
       "links": [
-        { "label": "Find Work", "href": "/apply" },
-        { "label": "Interview Prep", "href": "/interview" },
-        { "label": "Own Your Clients", "href": "/clients" },
-        { "label": "Get Legit", "href": "/legit" },
-        { "label": "Salary Guide", "href": "/salary" },
-        { "label": "Client Markets", "href": "/markets" },
-        { "label": "Tracker", "href": "/tracker" },
-        { "label": "30-Day Plan", "href": "/plan" },
-        { "label": "Niches", "href": "/niches" },
-        { "label": "Languages", "href": "/languages" },
-        { "label": "Equipment", "href": "/equipment" },
-        { "label": "Privacy", "href": "/privacy" }
+        {
+          "label": "Find Work",
+          "href": "/apply"
+        },
+        {
+          "label": "Interview Prep",
+          "href": "/interview"
+        },
+        {
+          "label": "Own Your Clients",
+          "href": "/clients"
+        },
+        {
+          "label": "Get Legit",
+          "href": "/legit"
+        },
+        {
+          "label": "Salary Guide",
+          "href": "/salary"
+        },
+        {
+          "label": "Client Markets",
+          "href": "/markets"
+        },
+        {
+          "label": "Tracker",
+          "href": "/tracker"
+        },
+        {
+          "label": "30-Day Plan",
+          "href": "/plan"
+        },
+        {
+          "label": "Niches",
+          "href": "/niches"
+        },
+        {
+          "label": "Languages",
+          "href": "/languages"
+        },
+        {
+          "label": "Equipment",
+          "href": "/equipment"
+        },
+        {
+          "label": "Privacy",
+          "href": "/privacy"
+        }
       ]
     }
   ],
   "primaryNav": [
-    { "label": "Start here", "href": "/start" },
-    { "label": "The Method", "href": "/method" },
-    { "label": "AI-First", "href": "/ai-first" },
-    { "label": "Reality Check", "href": "/reality" },
-    { "label": "Find Work", "href": "/apply" }
+    {
+      "label": "Start here",
+      "href": "/start"
+    },
+    {
+      "label": "The Method",
+      "href": "/method"
+    },
+    {
+      "label": "AI-First",
+      "href": "/ai-first"
+    },
+    {
+      "label": "Reality Check",
+      "href": "/reality"
+    },
+    {
+      "label": "Find Work",
+      "href": "/apply"
+    }
   ]
 }
