@@ -1448,7 +1448,7 @@
         { "skill": "HIPAA basics (what PHI is, minimum-necessary, safe handling)", "why": "Every chart is protected health information. Handling it wrong is the fastest way to lose a medical client and expose them to a fine.", "ifYouDont": "Take a free HIPAA awareness course (HIPAA Journal lists several with certificates) before you touch any record." }
       ],
       "resources": [
-        { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI. Pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com" },
+        { "name": "MTSamples", "type": "Dataset", "what": "Thousands of free, public sample medical transcriptions with no real patient PHI. Pick one visit report to chart from.", "free": true, "url": "https://mtsamples.com/site/pages/browse.asp" },
         { "name": "Coursera: Medical Terminology I", "type": "Course", "what": "Audit free; the vocabulary you need to read and write the note.", "free": true, "url": "https://www.coursera.org/learn/medical-terminology-1" },
         { "name": "Freed AI scribe", "type": "Tool", "what": "Free trial notes (one option among several AI scribes, Nabla is another; not an endorsement); generate an AI draft of the same visit to compare against your own.", "free": true, "url": "https://www.getfreed.ai" }
       ],
