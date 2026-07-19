@@ -1200,6 +1200,154 @@
         "change": "AI now transcribes, translates, and even dubs a video into a dozen languages in minutes. A first-draft subtitle file is nearly free to produce.",
         "human": "AI still mistimes a joke, mistranslates an idiom, and cannot tell when a dubbed voice carries none of the original scene's mood. Someone fluent in both the language and the culture has to catch that before it ships. That quality check is the job, and it is yours."
       }
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics & Freight Support",
+      "icon": "truck",
+      "accent": "amber",
+      "tagline": "The person who keeps the freight moving",
+      "blurb": "Dispatch, track-and-trace, and the documentation behind every shipment. A real offshore lane with a free, employer-recognized certification and one honest catch: the entry-level tasks are the ones AI is automating fastest.",
+      "pay": "$600–$1,500/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Beginner-friendly",
+      "startStage": 1,
+      "tools": [
+        "CargoWise",
+        "DAT load board",
+        "Truckstop",
+        "TMS (McLeod, Aljex, Turvo)",
+        "Google Sheets"
+      ],
+      "skills": [
+        "Track-and-trace & check calls",
+        "Appointment scheduling",
+        "Carrier vetting & onboarding",
+        "BOL/POD documentation",
+        "Detention & demurrage auditing"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "CargoWise certification (CCO, CCS, CCP)",
+          "provider": "WiseTech Academy (free)"
+        },
+        {
+          "type": "Course",
+          "title": "Incoterms 2020 free training toolkit",
+          "provider": "ICC Academy (free)"
+        },
+        {
+          "type": "Template",
+          "title": "Complete guide to the DAT load board",
+          "provider": "DAT (free PDF)"
+        }
+      ],
+      "certs": [
+        "CargoWise CCO",
+        "Incoterms 2020 (ICC)"
+      ],
+      "clients": "US freight brokers and 3PLs needing overnight dispatch and track-and-trace cover, and Australian and NZ freight forwarders running CargoWise who need daytime operations and customs documentation staff.",
+      "ai": {
+        "change": "This is the niche where you should read the AI section before the pay. Automated check calls now reach drivers, log ETAs, and write back to the TMS with no keystroke. Rate engines quote lanes continuously. OCR pulls BOLs, PODs, and rate confirmations straight off a scan. That is the entry-level offshore job description, almost line for line, and vendors are actively selling against it.",
+        "human": "So treat track-and-trace as the doorway, not the destination. What does not automate is the 2am call when a carrier no-shows and someone has to decide whether to reroute, re-power, or eat the detention. Exception handling, carrier relationships, negotiating with someone who knows they have leverage, and documentation you are legally accountable for. Move toward those inside your first year or the automation catches up with you."
+      },
+      "regions": {
+        "kicker": "Three lanes, and only one of them is a night shift",
+        "lead": "Freight support is not one job market. US truckload runs on brokers, load boards, and your graveyard hours. Australian and New Zealand forwarding runs on CargoWise in almost your own time zone. Global ocean and customs work runs on documentation accuracy and pays for the specialist, not the beginner. Pick the lane deliberately, because the lane decides your sleep as much as your pay.",
+        "boundary": "Learn one legal line before anything else. A freight broker arranges transport for compensation and must hold FMCSA authority plus a $75,000 surety bond. A dispatcher working for a carrier, under a written agreement, paid by that carrier, needs none of that. The line is discretion: a bona fide agent cannot allocate traffic between unrelated carriers or negotiate directly with shippers. Every 'start your own dispatch business' course glosses exactly this, and that is how people end up brokering without authority.",
+        "items": [
+          {
+            "market": "United States truckload",
+            "flag": "🇺🇸",
+            "accent": "coral",
+            "different": "The biggest lane and the hardest hours. US business hours land roughly 9pm to 6am Philippine time, and posted roles say so outright. The work is dispatch, check calls, appointment setting, and carrier packet collection for brokers and 3PLs. Entry pay clusters low and honestly: verified postings for PH-based dispatchers sit around $600 to $850 a month, sometimes with a per-load commission on top.",
+            "learn": [
+              "The DAT load board vocabulary: lanes, rates, deadhead, and what a good load looks like.",
+              "Carrier vetting: authority and safety checks, insurance certificates, W-9, the carrier packet.",
+              "Check calls and appointment setting, done so the customer never has to ask for a status.",
+              "One broker TMS, on the job. Do not pay for TMS training before you are hired; access is licensed to employers and it is taught in days.",
+              "The broker versus dispatcher line above, well enough to explain it in an interview."
+            ],
+            "sources": [
+              {
+                "label": "DAT: load boards",
+                "url": "https://www.dat.com/load-boards"
+              },
+              {
+                "label": "FMCSA: broker registration",
+                "url": "https://www.fmcsa.dot.gov/registration/broker-registration"
+              },
+              {
+                "label": "FMCSA: fraud alerts",
+                "url": "https://www.fmcsa.dot.gov/registration/fraud-alerts"
+              }
+            ],
+            "stack": "DAT, Truckstop, McLeod, Aljex, Turvo, Samsara and project44 dashboards.",
+            "watchOut": "There is no government licence to be a truck dispatcher. Anyone selling you a mandatory 'dispatcher certification' is selling recycled video, sometimes for over a thousand dollars. Compare that against CargoWise, which is free and comes from the vendor whose software employers actually name in job ads."
+          },
+          {
+            "market": "Australia & New Zealand forwarding",
+            "flag": "🇦🇺",
+            "accent": "emerald",
+            "different": "The lane almost nobody tells beginners about. Australian freight forwarders run CargoWise heavily, they hire Philippine-based operations and documentation staff, and AEST is two hours ahead of Manila. That is a normal working day instead of a graveyard shift, for the same kind of work. If the night shift is the thing that would break you, start here and stop reading about US truckload.",
+            "learn": [
+              "CargoWise to certification standard. It is free, it is the vendor's own credential, and PH job ads name the product by name.",
+              "Incoterms 2020: who pays, who insures, and where risk transfers. Non-negotiable in forwarding.",
+              "Bookings, bills of lading, and air waybills as documents you can check for errors, not just type.",
+              "The shape of a forwarding file end to end, so you can see where a shipment is stuck without asking."
+            ],
+            "sources": [
+              {
+                "label": "CargoWise certification (free)",
+                "url": "https://www.cargowise.com/learning/certifications/"
+              },
+              {
+                "label": "WiseTech Academy",
+                "url": "https://wisetechacademy.com/"
+              },
+              {
+                "label": "ICC: Incoterms 2020",
+                "url": "https://iccwbo.org/business-solutions/incoterms-rules/incoterms-2020/"
+              }
+            ],
+            "stack": "CargoWise, Excel or Sheets, carrier and port portals.",
+            "watchOut": "Customs and entry roles in this lane routinely ask for four to five years of experience. It is not an entry door. Come in through operations or documentation support and earn your way across."
+          },
+          {
+            "market": "Global ocean & customs",
+            "flag": "🌐",
+            "accent": "indigo",
+            "different": "The documentation-heavy end of the trade, and the one where being right has legal weight. Ocean detention and demurrage billing is now a regulated regime in the US: invoices must carry required information, must be issued within 30 calendar days of charges last accruing, and the billed party gets at least 30 days to request a waiver or refund. Miss the required information and the obligation to pay is void.",
+            "learn": [
+              "The FMC detention and demurrage billing rule, closely. It turns 'chase the charge' into 'audit the invoice', which is a service worth paying for.",
+              "Incoterms 2020 again, because place of risk transfer decides who eats a charge.",
+              "Entry preparation in CargoWise, working under a licensed broker who signs.",
+              "Reading a charge sheet well enough to find the error before the client does."
+            ],
+            "sources": [
+              {
+                "label": "FMC: detention and demurrage final rule",
+                "url": "https://www.fmc.gov/articles/fmc-publishes-final-rule-on-detention-and-demurrage-billing-practices/"
+              },
+              {
+                "label": "ICC Academy: free Incoterms 2020 toolkit",
+                "url": "https://academy.iccwbo.org/free-incoterms-2020-training-toolkit/"
+              }
+            ],
+            "stack": "CargoWise, carrier and terminal portals, Excel for charge audits.",
+            "watchOut": "You prepare, a licensed broker files. Customs brokerage is a licensed profession and the licence is held by a person, not outsourced. Preparing entries is real, well-paid work; signing them is not yours to do."
+          }
+        ],
+        "howToStart": [
+          "Decide on the night shift first, honestly. US truckload pays into a bigger market but runs 9pm to 6am Philippine time, and graveyard work carries documented health costs. Australian forwarding is close to your own daylight. That choice comes before any course.",
+          "Take the CargoWise certification. It is free, it is public since 2024, and it is the single highest-value free asset in this niche.",
+          "Work through the ICC's free Incoterms 2020 toolkit and keep the free wallchart open while you do it.",
+          "Read the DAT load board guide if you are going the US truckload route. Free PDF, and it teaches you the vocabulary before an interview does.",
+          "Build one artefact: a shipment tracker for ten invented loads with a written exception log. For each stuck load, what you noticed, who you called, what you decided. Exception judgment is the part AI does not do, so prove you have it."
+        ]
+      }
     }
   ],
   "lastVerified": "2026-07"
