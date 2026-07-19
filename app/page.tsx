@@ -469,17 +469,17 @@ export default function Home() {
 function HeroPanel() {
   // 5 ascending stages: [x, barTopY, fill, number, label]
   const bars = [
-    { x: 30, y: 308, fill: "#0d9488", n: "01", label: "Start" },
+    { x: 30, y: 308, fill: "#0a736a", n: "01", label: "Start" },
     { x: 100, y: 262, fill: "#e39400", n: "02", label: "Get Hired" },
-    { x: 170, y: 212, fill: "#2f9e46", n: "03", label: "Deliver" },
-    { x: 240, y: 156, fill: "#2f6df0", n: "04", label: "Level Up" },
+    { x: 170, y: 212, fill: "#237a35", n: "03", label: "Deliver" },
+    { x: 240, y: 156, fill: "#2558c8", n: "04", label: "Level Up" },
     { x: 310, y: 96, fill: "#0e1f1b", n: "05", label: "Own" },
   ];
   const baseline = 392;
   const barW = 54;
   // centres of each bar top, for the rising trend line
   const nodes = bars.map((b) => [b.x + barW / 2, b.y] as const);
-  const trend = nodes.map(([x, y]) => `${x},${y}`).join(" ") + " 352,74";
+  const trend = nodes.map(([x, y]) => `${x},${y}`).join(" ") + " 348,70";
 
   return (
     <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[var(--radius-lg)] border border-line bg-paper-2 shadow-[var(--shadow-lg)] lg:aspect-auto lg:h-full">
@@ -491,7 +491,7 @@ function HeroPanel() {
 
       <svg
         viewBox="0 0 400 440"
-        className="absolute inset-0 h-full w-full"
+        className="absolute inset-x-0 top-0 bottom-14 w-full"
         preserveAspectRatio="xMidYMid meet"
         role="img"
         aria-label="A rising staircase of career stages, from Start to Own, with an upward trend arrow, representing developing upwards."
@@ -539,22 +539,22 @@ function HeroPanel() {
         <polyline
           points={trend}
           fill="none"
-          stroke="#0d9488"
+          stroke="#0a736a"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeDasharray="2 9"
         />
-        {/* arrowhead */}
-        <path d="M352 74 L338 80 M352 74 L346 88" stroke="#0d9488" strokeWidth="3" strokeLinecap="round" fill="none" />
+        {/* arrowhead, barbs symmetric about the trend's own slope */}
+        <path d="M348 70 L338 78 M348 70 L350 83" stroke="#0a736a" strokeWidth="3" strokeLinecap="round" fill="none" />
         {/* nodes */}
         {nodes.map(([x, y]) => (
-          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0d9488" strokeWidth="2.5" />
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0a736a" strokeWidth="2.5" />
         ))}
-        {/* peak flag */}
-        <g transform="translate(329 60)">
+        {/* peak flag, planted right of the arrow's path so the two never cross */}
+        <g transform="translate(356 52)">
           <line x1="0" y1="0" x2="0" y2="44" stroke="#0e1f1b" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M0 2 L26 9 L0 18 Z" fill="#0d9488" />
+          <path d="M0 2 L26 9 L0 18 Z" fill="#0a736a" />
         </g>
       </svg>
 
