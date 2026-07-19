@@ -503,10 +503,14 @@ function WorkshopTab({
                 </span>
                 <p className="text-xs font-medium text-ink-faint">Live preview, your words</p>
               </div>
-              <div className="flex items-center gap-2">
-                <CopyButton value={document} label="Copy what I wrote" />
-                <DownloadButton value={document} filename={`${lab.id}.md`} />
-              </div>
+              {document.length > 0 ? (
+                <div className="flex items-center gap-2">
+                  <CopyButton value={document} label="Copy what I wrote" />
+                  <DownloadButton value={document} filename={`${lab.id}.md`} />
+                </div>
+              ) : (
+                <p className="text-xs text-ink-faint">Write something first</p>
+              )}
             </div>
             <div className="max-h-[520px] space-y-4 overflow-y-auto px-5 py-5">
               {lab.builder.steps.map((step) => {

@@ -46,7 +46,7 @@ const learnIcon: Record<string, string> = {
 };
 
 export default function PathPage() {
-  const { state, hydrated, hasPath, clearPath, setStage, toggleStep } =
+  const { state, hydrated, hasPath, setStage, toggleStep } =
     usePath();
 
   const track: Track | undefined = state.track
@@ -110,17 +110,8 @@ export default function PathPage() {
     },
   ];
 
-  function handleChangePath() {
-    if (
-      typeof window !== "undefined" &&
-      !window.confirm(
-        "Change your path? This clears your saved progress on this track.",
-      )
-    ) {
-      return;
-    }
-    clearPath();
-  }
+  // Changing path swaps the track via choosePath() on /niches and keeps every
+  // other bit of saved progress (tracker, oath, plan). Nothing destructive here.
 
   return (
     <>
@@ -147,14 +138,13 @@ export default function PathPage() {
                 <p className="mt-1 text-ink-soft">{track.tagline}</p>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={handleChangePath}
+            <Link
+              href="/niches"
               className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-paper-2 px-5 py-2.5 text-sm font-semibold text-ink-soft transition-all hover:border-ink hover:text-ink"
             >
               <RotateCcw size={15} />
               Change path
-            </button>
+            </Link>
           </div>
         </Reveal>
         <Reveal i={2}>

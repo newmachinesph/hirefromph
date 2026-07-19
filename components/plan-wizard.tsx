@@ -57,12 +57,16 @@ const QUESTIONS: Question[] = (plan.questions as unknown as RawQuestion[]).map(
 
 const TRACK_STEP_INDEX = QUESTIONS.findIndex((q) => q.id === "track");
 const TOTAL_DAYS = plan.weeks.reduce((sum, w) => sum + w.days.length, 0);
-const NAV_LABEL: Record<string, string> = Object.fromEntries(
-  [...site.navGroups.flatMap((g) => g.links), ...site.primaryNav].map((n) => [
-    n.href,
-    n.label,
-  ]),
-);
+const NAV_LABEL: Record<string, string> = {
+  // /path is in no navGroup but plan.json day tools link to it.
+  "/path": "Your path",
+  ...Object.fromEntries(
+    [...site.navGroups.flatMap((g) => g.links), ...site.primaryNav].map((n) => [
+      n.href,
+      n.label,
+    ]),
+  ),
+};
 
 const accentSelected: Record<string, string> = {
   coral: "aria-pressed:border-coral aria-pressed:bg-coral-tint",
@@ -136,7 +140,11 @@ export function PlanWizard() {
   useEffect(() => {
     if (!hydrated || resumed) return;
     const saved = state.planAnswers;
-    if (QUESTIONS.every((q) => saved[q.id])) {
+    // Every answer must still be a live option — a retired/renamed track id
+    // would otherwise resume into a plan with a hole where the niche was.
+    const valid = (q: Question) =>
+      q.options.some((o) => o.value === saved[q.id]);
+    if (QUESTIONS.every((q) => saved[q.id] && valid(q))) {
       setAnswers(saved);
       setStep(QUESTIONS.length);
     }

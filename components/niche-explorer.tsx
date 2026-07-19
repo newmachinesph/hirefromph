@@ -84,6 +84,11 @@ export function NicheExplorer() {
         ))}
       </div>
 
+      {tracks.length === 0 && (
+        <p className="mt-6 rounded-2xl border border-line bg-paper-2 p-6 text-sm text-ink-soft">
+          No niches match this filter yet.
+        </p>
+      )}
       <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {tracks.map((t) => {
           const active = selectedId === t.id;

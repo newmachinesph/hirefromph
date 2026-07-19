@@ -117,9 +117,13 @@ export function MicroTasks() {
   useEffect(() => {
     if (!hydrated || autoSelected.current) return;
     autoSelected.current = true;
+    // Only auto-narrow when the track has dedicated tasks — several niches have
+    // just the universal "any" task, and locking the filter onto those would
+    // land the user on a near-empty page.
+    const dedicated = tasks.some((t) => t.track === state.track);
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    if (hasPath && state.track) setTrackFilter(state.track);
-  }, [hydrated, hasPath, state.track]);
+    if (hasPath && state.track && dedicated) setTrackFilter(state.track);
+  }, [hydrated, hasPath, state.track, tasks]);
 
   const filtered = tasks.filter((t) => {
     if (trackFilter !== "all" && !matchesTrack(t, trackFilter)) return false;

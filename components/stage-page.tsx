@@ -29,7 +29,8 @@ const accentSoft: Record<string, string> = {
 type Stage = (typeof stages)[number];
 
 export function StagePage({ id }: { id: string }) {
-  const stage = stages.find((s) => s.id === id) as Stage;
+  const stage: Stage | undefined = stages.find((s) => s.id === id);
+  if (!stage) throw new Error(`StagePage: unknown stage id "${id}"`);
   const prev = stages.find((s) => s.num === stage.num - 1);
   const next = stages.find((s) => s.num === stage.num + 1);
   const a = stage.accent;

@@ -528,15 +528,15 @@ function ApplicationRow({
       <div className="mt-4 grid gap-3 text-xs text-ink-faint sm:grid-cols-4">
         <div>
           <span className="block font-semibold text-ink-soft">Source</span>
-          {app.source || ", "}
+          {app.source || "—"}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Applied</span>
-          {app.appliedAt || ", "}
+          {app.appliedAt || "—"}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Follow-up</span>
-          {app.followUpAt || ", "}
+          {app.followUpAt || "—"}
         </div>
         <div>
           <span className="block font-semibold text-ink-soft">Link</span>
@@ -550,7 +550,7 @@ function ApplicationRow({
               Open <ArrowUpRight size={11} />
             </a>
           ) : (
-            ", "
+            "—"
           )}
         </div>
       </div>
