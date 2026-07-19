@@ -41,7 +41,9 @@ export function PathGate({ children, teaser, unlocks }: Props) {
         {children}
       </div>
 
-      <div className="absolute inset-x-0 top-6 mx-auto max-w-xl">
+      {/* In normal flow (pulled up over the faded preview) so the card can
+          grow with the full niche list instead of overflowing a fixed spacer. */}
+      <div className="relative mx-auto -mt-56 max-w-xl pb-6">
         <div className="rounded-3xl border border-line-strong bg-paper-2/95 p-8 text-center shadow-[var(--shadow-lg)] backdrop-blur-sm">
           <span className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-ink text-paper-2">
             <Lock size={20} />
@@ -84,8 +86,6 @@ export function PathGate({ children, teaser, unlocks }: Props) {
           )}
         </div>
       </div>
-      {/* spacer so the absolute card has room */}
-      <div className={expanded ? "h-[560px]" : "h-[300px]"} />
     </div>
   );
 }

@@ -5,14 +5,25 @@ import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import site from "@/data/site.json";
+import trackNames from "@/data/track-names.json";
 import { track } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 type Item = { label: string; href: string; group: string };
 
-const ITEMS: Item[] = site.navGroups.flatMap((g) =>
-  g.links.map((l) => ({ label: l.label, href: l.href, group: g.title })),
-);
+const ITEMS: Item[] = [
+  ...site.navGroups.flatMap((g) =>
+    g.links.map((l) => ({ label: l.label, href: l.href, group: g.title })),
+  ),
+  // Not in any navGroup but the hub the whole product funnels into.
+  { label: "Your path", href: "/path", group: "The journey" },
+  // Make every niche findable by name ("bookkeeping", "logistics", …).
+  ...Object.values(trackNames).map((name) => ({
+    label: name,
+    href: "/niches",
+    group: "Niches",
+  })),
+];
 
 export function SearchPalette() {
   const router = useRouter();
@@ -137,7 +148,7 @@ export function SearchPalette() {
                 </li>
               ) : (
                 results.map((it, i) => (
-                  <li key={it.href} role="option" aria-selected={i === active}>
+                  <li key={`${it.href}-${it.label}`} role="option" aria-selected={i === active}>
                     <button
                       type="button"
                       onMouseEnter={() => setActive(i)}

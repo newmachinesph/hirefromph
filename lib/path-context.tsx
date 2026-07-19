@@ -94,7 +94,6 @@ type Ctx = {
   hydrated: boolean;
   hasPath: boolean;
   choosePath: (track: string) => void;
-  clearPath: () => void;
   setStage: (stage: number) => void;
   toggleStep: (n: number) => void;
   togglePlanDay: (n: number) => void;
@@ -157,7 +156,6 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
     }));
   }, []);
 
-  const clearPath = useCallback(() => setState(EMPTY), []);
   const setStage = useCallback(
     (stage: number) => setState((s) => ({ ...s, stage })),
     [],
@@ -247,7 +245,6 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       hydrated,
       hasPath: state.track !== null,
       choosePath,
-      clearPath,
       setStage,
       toggleStep,
       togglePlanDay,
@@ -264,7 +261,6 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
       state,
       hydrated,
       choosePath,
-      clearPath,
       setStage,
       toggleStep,
       togglePlanDay,
