@@ -787,7 +787,7 @@
               "name": "MTSamples",
               "free": "Free; public sample transcriptions (no real PHI)",
               "what": "Thousands of real-shape sample reports to practice on",
-              "url": "https://mtsamples.com"
+              "url": "https://mtsamples.com/site/pages/browse.asp"
             }
           ],
           "piece": "A clean SOAP note you wrote from an MTSamples visit transcript, side-by-side with an AI-drafted version and a short list of the errors you caught and corrected."

@@ -3,37 +3,307 @@
   "intro": "The complete DevUp list of agencies, platforms, job boards, headhunters, and BPOs that hire Filipino online professionals. All at no cost. Updated for 2026.",
   "disclaimer": "These are listed for your convenience, not necessarily endorsed by DevUp. Never pay upfront fees to get hired. If it sounds too good to be true, it probably is.",
   "categories": [
-    { "id": "marketplace", "label": "Freelance Marketplaces" },
-    { "id": "ph-boards", "label": "PH Remote Job Boards" },
-    { "id": "global-boards", "label": "Global Remote Boards" },
-    { "id": "agencies", "label": "Agencies & Staffing" },
-    { "id": "bpo", "label": "BPO / Home-based" },
-    { "id": "niche", "label": "Niche & Specialist" }
+    {
+      "id": "marketplace",
+      "label": "Freelance Marketplaces"
+    },
+    {
+      "id": "ph-boards",
+      "label": "PH Remote Job Boards"
+    },
+    {
+      "id": "global-boards",
+      "label": "Global Remote Boards"
+    },
+    {
+      "id": "agencies",
+      "label": "Agencies & Staffing"
+    },
+    {
+      "id": "bpo",
+      "label": "BPO / Home-based"
+    },
+    {
+      "id": "niche",
+      "label": "Niche & Specialist"
+    }
   ],
   "entries": [
-    { "name": "OnlineJobs.ph", "category": "ph-boards", "type": "Job board", "region": "PH-focused", "blurb": "The biggest board for Filipino remote workers. Employers post directly; build a strong profile.", "tags": ["Beginner-friendly", "Direct clients"], "url": "https://www.onlinejobs.ph" },
-    { "name": "Upwork", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Global freelance marketplace. Competitive, but proposals + niche win consistent work.", "tags": ["Portfolio-based", "Global"], "url": "https://www.upwork.com" },
-    { "name": "Fiverr", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Sell productized services as 'gigs'. Great for creative and content niches.", "tags": ["Productized", "Creative"], "url": "https://www.fiverr.com" },
-    { "name": "Freelancer.com", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "Bidding-style marketplace across many categories.", "tags": ["Bidding", "Broad"], "url": "https://www.freelancer.com" },
-    { "name": "Contra", "category": "marketplace", "type": "Marketplace", "region": "Global", "blurb": "0% commission for freelancers; clients cover the platform fees, and a paid Pro tier also exists. Popular with creatives and ops pros.", "tags": ["0% commission", "Modern"], "url": "https://contra.com" },
-    { "name": "VirtualStaff.ph", "category": "ph-boards", "type": "Job board", "region": "PH-focused", "blurb": "PH-focused platform connecting local talent to long-term remote roles.", "tags": ["Long-term", "PH-focused"], "url": "https://www.virtualstaff.ph" },
-    { "name": "Remote Staff", "category": "agencies", "type": "Agency", "region": "PH-focused", "blurb": "Established PH remote-staffing agency placing full-time home-based roles.", "tags": ["Full-time", "Vetted"], "url": "https://www.remotestaff.ph" },
-    { "name": "Kalibrr", "category": "ph-boards", "type": "Job board", "region": "PH / SEA", "blurb": "Popular PH job platform with a growing remote category.", "tags": ["PH", "Corporate"], "url": "https://www.kalibrr.com" },
-    { "name": "We Work Remotely", "category": "global-boards", "type": "Job board", "region": "Global", "blurb": "One of the largest remote-only job boards. Higher-tier roles.", "tags": ["High-tier", "Global"], "url": "https://weworkremotely.com" },
-    { "name": "Remote OK", "category": "global-boards", "type": "Job board", "region": "Global", "blurb": "Aggregator of remote jobs worldwide with strong tech and ops listings.", "tags": ["Tech", "Aggregator"], "url": "https://remoteok.com" },
-    { "name": "Dynamite Jobs", "category": "global-boards", "type": "Job board", "region": "Global", "blurb": "Curated remote roles from vetted, remote-first companies.", "tags": ["Vetted", "Remote-first"], "url": "https://dynamitejobs.com" },
-    { "name": "Working Nomads", "category": "global-boards", "type": "Job board", "region": "Global", "blurb": "Curated newsletter + board of remote listings by category.", "tags": ["Curated", "Newsletter"], "url": "https://www.workingnomads.com" },
-    { "name": "Crossover", "category": "agencies", "type": "Staffing", "region": "Global", "blurb": "Full-time remote roles with a rigorous assessment process and strong pay.", "tags": ["High-pay", "Full-time"], "url": "https://www.crossover.com" },
-    { "name": "MyOutDesk", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "Large remote-staffing firm placing Filipino pros with US businesses.", "tags": ["US clients", "Placement"], "url": "https://www.myoutdesk.com" },
-    { "name": "BELAY", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "US staffing company hiring remote specialists for executives and teams.", "tags": ["US clients", "Executive"], "url": "https://belaysolutions.com" },
-    { "name": "Time Etc", "category": "agencies", "type": "Agency", "region": "US/UK", "blurb": "Agency placing experienced professionals with entrepreneurs.", "tags": ["Experienced", "US/UK"], "url": "https://timeetc.com" },
-    { "name": "Boldr", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "Purpose-driven outsourcing company with home-based and hybrid roles.", "tags": ["Home-based", "Impact"], "url": "https://www.boldrimpact.com" },
-    { "name": "TaskUs", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "Large BPO with work-from-home programs, including bilingual accounts.", "tags": ["WFH", "Bilingual"], "url": "https://www.taskus.com" },
-    { "name": "Concentrix", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "Global BPO hiring home-based support and success roles.", "tags": ["Support", "WFH"], "url": "https://www.concentrix.com" },
-    { "name": "Sutherland", "category": "bpo", "type": "BPO", "region": "PH", "blurb": "BPO with remote roles across support, tech, and back-office.", "tags": ["Back-office", "WFH"], "url": "https://www.sutherlandglobal.com" },
-    { "name": "Toptal", "category": "niche", "type": "Elite network", "region": "Global", "blurb": "Top-3% network for developers, designers, and finance experts. High bar, high pay.", "tags": ["Elite", "High-pay"], "url": "https://www.toptal.com" },
-    { "name": "Paired", "category": "niche", "type": "Matching", "region": "Global", "blurb": "Matches remote talent (marketing, ops, creative) with global startups.", "tags": ["Startups", "Matching"], "url": "https://paired.so" },
-    { "name": "Support Shepherd / Somewhere", "category": "agencies", "type": "Agency", "region": "US clients", "blurb": "Recruiters sourcing offshore talent for US SMBs.", "tags": ["US SMB", "Recruiter"], "url": "https://www.somewhere.com" },
-    { "name": "LinkedIn", "category": "global-boards", "type": "Network", "region": "Global", "blurb": "Not just a resume, a lead engine. Optimize your profile and reach out directly.", "tags": ["Networking", "Direct"], "url": "https://www.linkedin.com" }
+    {
+      "name": "OnlineJobs.ph",
+      "category": "ph-boards",
+      "type": "Job board",
+      "region": "PH-focused",
+      "blurb": "The biggest board for Filipino remote workers. Employers post directly; build a strong profile.",
+      "tags": [
+        "Beginner-friendly",
+        "Direct clients"
+      ],
+      "url": "https://www.onlinejobs.ph"
+    },
+    {
+      "name": "Upwork",
+      "category": "marketplace",
+      "type": "Marketplace",
+      "region": "Global",
+      "blurb": "Global freelance marketplace. Competitive, but proposals + niche win consistent work.",
+      "tags": [
+        "Portfolio-based",
+        "Global"
+      ],
+      "url": "https://www.upwork.com"
+    },
+    {
+      "name": "Fiverr",
+      "category": "marketplace",
+      "type": "Marketplace",
+      "region": "Global",
+      "blurb": "Sell productized services as 'gigs'. Great for creative and content niches.",
+      "tags": [
+        "Productized",
+        "Creative"
+      ],
+      "url": "https://www.fiverr.com"
+    },
+    {
+      "name": "Freelancer.com",
+      "category": "marketplace",
+      "type": "Marketplace",
+      "region": "Global",
+      "blurb": "Bidding-style marketplace across many categories.",
+      "tags": [
+        "Bidding",
+        "Broad"
+      ],
+      "url": "https://www.freelancer.com"
+    },
+    {
+      "name": "Contra",
+      "category": "marketplace",
+      "type": "Marketplace",
+      "region": "Global",
+      "blurb": "0% commission for freelancers; clients cover the platform fees, and a paid Pro tier also exists. Popular with creatives and ops pros.",
+      "tags": [
+        "0% commission",
+        "Modern"
+      ],
+      "url": "https://contra.com"
+    },
+    {
+      "name": "VirtualStaff.ph",
+      "category": "ph-boards",
+      "type": "Job board",
+      "region": "PH-focused",
+      "blurb": "PH-focused platform connecting local talent to long-term remote roles.",
+      "tags": [
+        "Long-term",
+        "PH-focused"
+      ],
+      "url": "https://www.virtualstaff.ph"
+    },
+    {
+      "name": "Remote Staff",
+      "category": "agencies",
+      "type": "Agency",
+      "region": "PH-focused",
+      "blurb": "Established PH remote-staffing agency placing full-time home-based roles.",
+      "tags": [
+        "Full-time",
+        "Vetted"
+      ],
+      "url": "https://www.remotestaff.ph"
+    },
+    {
+      "name": "Kalibrr",
+      "category": "ph-boards",
+      "type": "Job board",
+      "region": "PH / SEA",
+      "blurb": "Popular PH job platform with a growing remote category.",
+      "tags": [
+        "PH",
+        "Corporate"
+      ],
+      "url": "https://www.kalibrr.com"
+    },
+    {
+      "name": "We Work Remotely",
+      "category": "global-boards",
+      "type": "Job board",
+      "region": "Global",
+      "blurb": "One of the largest remote-only job boards. Higher-tier roles.",
+      "tags": [
+        "High-tier",
+        "Global"
+      ],
+      "url": "https://weworkremotely.com"
+    },
+    {
+      "name": "Remote OK",
+      "category": "global-boards",
+      "type": "Job board",
+      "region": "Global",
+      "blurb": "Aggregator of remote jobs worldwide with strong tech and ops listings.",
+      "tags": [
+        "Tech",
+        "Aggregator"
+      ],
+      "url": "https://remoteok.com"
+    },
+    {
+      "name": "Dynamite Jobs",
+      "category": "global-boards",
+      "type": "Job board",
+      "region": "Global",
+      "blurb": "Curated remote roles from vetted, remote-first companies.",
+      "tags": [
+        "Vetted",
+        "Remote-first"
+      ],
+      "url": "https://dynamitejobs.com"
+    },
+    {
+      "name": "Working Nomads",
+      "category": "global-boards",
+      "type": "Job board",
+      "region": "Global",
+      "blurb": "Curated newsletter + board of remote listings by category.",
+      "tags": [
+        "Curated",
+        "Newsletter"
+      ],
+      "url": "https://www.workingnomads.com"
+    },
+    {
+      "name": "Crossover",
+      "category": "agencies",
+      "type": "Staffing",
+      "region": "Global",
+      "blurb": "Full-time remote roles with a rigorous assessment process and strong pay.",
+      "tags": [
+        "High-pay",
+        "Full-time"
+      ],
+      "url": "https://www.crossover.com"
+    },
+    {
+      "name": "MyOutDesk",
+      "category": "agencies",
+      "type": "Agency",
+      "region": "US clients",
+      "blurb": "Large remote-staffing firm placing Filipino pros with US businesses.",
+      "tags": [
+        "US clients",
+        "Placement"
+      ],
+      "url": "https://www.myoutdesk.com"
+    },
+    {
+      "name": "BELAY",
+      "category": "agencies",
+      "type": "Agency",
+      "region": "US clients",
+      "blurb": "US staffing company hiring remote specialists for executives and teams.",
+      "tags": [
+        "US clients",
+        "Executive"
+      ],
+      "url": "https://belaysolutions.com"
+    },
+    {
+      "name": "Boldr",
+      "category": "bpo",
+      "type": "BPO",
+      "region": "PH",
+      "blurb": "Purpose-driven outsourcing company with home-based and hybrid roles.",
+      "tags": [
+        "Home-based",
+        "Impact"
+      ],
+      "url": "https://www.boldrimpact.com"
+    },
+    {
+      "name": "TaskUs",
+      "category": "bpo",
+      "type": "BPO",
+      "region": "PH",
+      "blurb": "Large BPO with work-from-home programs, including bilingual accounts.",
+      "tags": [
+        "WFH",
+        "Bilingual"
+      ],
+      "url": "https://www.taskus.com"
+    },
+    {
+      "name": "Concentrix",
+      "category": "bpo",
+      "type": "BPO",
+      "region": "PH",
+      "blurb": "Global BPO hiring home-based support and success roles.",
+      "tags": [
+        "Support",
+        "WFH"
+      ],
+      "url": "https://www.concentrix.com"
+    },
+    {
+      "name": "Sutherland",
+      "category": "bpo",
+      "type": "BPO",
+      "region": "PH",
+      "blurb": "BPO with remote roles across support, tech, and back-office.",
+      "tags": [
+        "Back-office",
+        "WFH"
+      ],
+      "url": "https://www.sutherlandglobal.com"
+    },
+    {
+      "name": "Toptal",
+      "category": "niche",
+      "type": "Elite network",
+      "region": "Global",
+      "blurb": "Top-3% network for developers, designers, and finance experts. High bar, high pay.",
+      "tags": [
+        "Elite",
+        "High-pay"
+      ],
+      "url": "https://www.toptal.com"
+    },
+    {
+      "name": "Paired",
+      "category": "niche",
+      "type": "Matching",
+      "region": "Global",
+      "blurb": "Matches remote talent (marketing, ops, creative) with global startups.",
+      "tags": [
+        "Startups",
+        "Matching"
+      ],
+      "url": "https://paired.so"
+    },
+    {
+      "name": "Support Shepherd / Somewhere",
+      "category": "agencies",
+      "type": "Agency",
+      "region": "US clients",
+      "blurb": "Recruiters sourcing offshore talent for US SMBs.",
+      "tags": [
+        "US SMB",
+        "Recruiter"
+      ],
+      "url": "https://www.somewhere.com"
+    },
+    {
+      "name": "LinkedIn",
+      "category": "global-boards",
+      "type": "Network",
+      "region": "Global",
+      "blurb": "Not just a resume, a lead engine. Optimize your profile and reach out directly.",
+      "tags": [
+        "Networking",
+        "Direct"
+      ],
+      "url": "https://www.linkedin.com"
+    }
   ]
 }
