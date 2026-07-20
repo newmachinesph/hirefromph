@@ -1348,6 +1348,142 @@
           "Build one artefact: a shipment tracker for ten invented loads with a written exception log. For each stuck load, what you noticed, who you called, what you decided. Exception judgment is the part AI does not do, so prove you have it."
         ]
       }
+    },
+    {
+      "id": "construction",
+      "name": "Construction Estimating & Support",
+      "icon": "hammer",
+      "accent": "indigo",
+      "tagline": "The AU back office of the building trade",
+      "blurb": "Quantity takeoffs, estimates, drafting support, and contracts admin for Australian builders, done from Manila in near-Australian hours. The rare niche where your time zone is the selling point, not the sacrifice.",
+      "pay": "$600–$1,800/mo",
+      "demandLabel": "High",
+      "demand": 4,
+      "difficulty": "Intermediate",
+      "startStage": 1,
+      "tools": [
+        "Bluebeam Revu",
+        "Buildxact",
+        "Cubit (Buildsoft)",
+        "Groundplan",
+        "Google Sheets"
+      ],
+      "skills": [
+        "Plan reading & scaling",
+        "Quantity takeoffs by trade",
+        "BOQ & estimate assembly",
+        "Progress claims & variations admin",
+        "Tender document control"
+      ],
+      "learn": [
+        {
+          "type": "Course",
+          "title": "Bluebeam University",
+          "provider": "Bluebeam (free courses; full access on trial)"
+        },
+        {
+          "type": "Docs",
+          "title": "National Construction Code, full text",
+          "provider": "ABCB (free online)"
+        },
+        {
+          "type": "Course",
+          "title": "Buildxact webinars & tutorials",
+          "provider": "Buildxact (free)"
+        }
+      ],
+      "certs": [
+        "Bluebeam certification (optional)",
+        "NCC/BCA familiarity"
+      ],
+      "clients": "Australian residential and commercial builders, estimating firms, M&E and civil subcontractors, and drafting studios that offshore takeoffs, BOQs, CAD work, and contracts admin to Philippine-based staff.",
+      "ai": {
+        "change": "AI takeoff tools now detect and measure quantities straight off the drawings, and vendors claim the measuring runs five times faster. But measuring is only about a third of estimating. The counting is compressing; the estimate is not.",
+        "human": "What is left is the valuable part: interpreting a messy drawing set, deciding what is in scope and what is excluded, pricing from live local supplier lists, and running the claims and variations paperwork that keeps a builder paid. AI pushes this role up the stack, away from counting and toward judgment, which is exactly where you want to be standing."
+      },
+      "regions": {
+        "kicker": "Three lanes into the same industry",
+        "lead": "This niche is Australia-first on purpose: Manila sits two to three hours behind Australian eastern time, so you work a normal day while covering a builder's full office hours, and Australian firms have been staffing estimators, drafters, and contract administrators from the Philippines for years. Posted offers run from roughly $600 a month for junior estimating roles to $1,800 for experienced M&E and civil estimators. Pick the lane, then go deep.",
+        "boundary": "The legal line is clean: you prepare, a registered person signs. Building approvals, compliance certificates, and occupancy sign-offs belong to state-registered building surveyors and certifiers, and never to an offshore assistant. Takeoffs, BOQs, estimate assembly, drafting under a supervising professional, and development-application paperwork are all legally open to you. Know the line and say it in interviews; it reads as professionalism.",
+        "items": [
+          {
+            "market": "Takeoffs & estimating",
+            "flag": "📐",
+            "accent": "coral",
+            "different": "The core lane, and the one with the most posted PH-based roles: measuring quantities off PDF drawings in Bluebeam, assembling Bills of Quantities, and pricing from supplier lists in Buildxact or Cubit. Residential builders run Buildxact; commercial estimating and QS firms run Cubit and CostX. The junior rung is real but modest; the money follows trade specialisation, M&E and civil in particular.",
+            "learn": [
+              "Plan reading until it is boring: scales, sections, details, and the discipline of reading the specification before the drawings.",
+              "Bluebeam Revu takeoffs. The 14-day trial includes full Bluebeam University access, so structure the fortnight before you start it.",
+              "One trade deeply first: concrete and earthworks are the classic entry takeoffs.",
+              "The National Construction Code, free online. Knowing what the NCC is and how to look things up in it is the cheapest credibility in this niche.",
+              "BOQ assembly: quantities to priced line items, with exclusions and assumptions stated like a professional."
+            ],
+            "sources": [
+              {
+                "label": "Bluebeam University",
+                "url": "https://university.bluebeam.com/"
+              },
+              {
+                "label": "National Construction Code (free)",
+                "url": "https://ncc.abcb.gov.au/"
+              },
+              {
+                "label": "Buildxact takeoff training",
+                "url": "https://www.buildxact.com/au/features/construction-takeoff-software/"
+              }
+            ],
+            "stack": "Bluebeam Revu, Buildxact, Cubit, Groundplan for trades, Excel or Sheets.",
+            "watchOut": "The builder carries the liability for your numbers, so trust is the product. Expect your early work to be calibration jobs that get double-checked line by line, and treat that review as training, not insult."
+          },
+          {
+            "market": "Drafting support",
+            "flag": "📋",
+            "accent": "emerald",
+            "different": "Offshore drafting studios in Manila produce structural and architectural drawings for Australian and New Zealand projects in AutoCAD and Revit, working under supervising professionals onshore. It is a different skill tree from estimating, closer to the Architectural & 3D Visualization niche, but it is hired through the same AU construction pipeline and the same agencies.",
+            "learn": [
+              "AutoCAD fundamentals, then Revit. AU studios name both, plus Civil 3D for civil work.",
+              "Drafting standards discipline: layers, title blocks, revisions. Studios live and die by drawing control.",
+              "Enough NCC awareness to know why a detail is drawn the way it is.",
+              "How markups flow: you draft, the supervising engineer or architect redlines, you resolve. The loop is the job."
+            ],
+            "sources": [
+              {
+                "label": "PAEC, Manila-Queensland drafting studio",
+                "url": "https://www.paec.com.au/"
+              }
+            ],
+            "stack": "AutoCAD, Revit, Civil 3D, Bluebeam for markups.",
+            "watchOut": "You draft under supervision; the registered architect or engineer owns the drawing. Studios asking you to work unsupervised on certifiable documents are the red flag, not the opportunity."
+          },
+          {
+            "market": "Contracts & planning admin",
+            "flag": "🗂️",
+            "accent": "amber",
+            "different": "The paperwork engine of a build: progress claims, variations registers, RFQ chasing, purchase orders, tender document control. Posted PH-based roles combine this with estimating under one title. Town-planning application prep, assembling the documents for an Australian development application, is legally open to anyone and looks like a natural extension, but be honest with yourself: it is an emerging add-on inside admin roles, not yet a proven standalone job title.",
+            "learn": [
+              "The progress-claim cycle: claim, assessment, payment schedule, and why the dates matter.",
+              "A variations register that actually protects the builder: scope change, price, approval trail.",
+              "Document control habits: one register, one naming convention, no orphan revisions.",
+              "How a development application is assembled and lodged, using a state planning portal as the map."
+            ],
+            "sources": [
+              {
+                "label": "Lodging a development application (SA example)",
+                "url": "https://plan.sa.gov.au/development_applications/lodge_an_application"
+              }
+            ],
+            "stack": "Procore or Jobpac at the big end, Buildxact for residential, Excel everywhere.",
+            "watchOut": "Australian residential construction shuts down for three to four weeks over Christmas, and tender work spikes just before it. Salaried staff ride through; freelancers should plan for a quiet January."
+          }
+        ],
+        "howToStart": [
+          "Read the National Construction Code's structure this week. It is free, and 'I know my way around the NCC' is the sentence that separates you from every generic VA applying for the same role.",
+          "Line up the Bluebeam trial deliberately: fourteen days of full Bluebeam University access is the best free training window in this niche, so clear your schedule before you start the clock.",
+          "Find a free public house plan set and take off one trade completely, concrete or framing, with your measurements, assumptions, and exclusions stated. That document is your portfolio piece.",
+          "Add supplier pricing from public Australian sources to turn the takeoff into a priced BOQ.",
+          "Apply to the offshore agencies that specialise in AU construction as well as direct listings; the agencies are where the junior calibration roles live."
+        ]
+      }
     }
   ],
   "lastVerified": "2026-07"

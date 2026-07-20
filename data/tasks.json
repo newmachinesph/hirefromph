@@ -1,7 +1,7 @@
 {
   "kicker": "Micro-Tasks · Zero clients required",
   "headline": "The deadlock ends here.",
-  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 39 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
+  "intro": "You need experience to get hired. You need to be hired to get experience. That's the trap, and it's fake. Below are 40 real, self-contained jobs you can start right now, with no client and no permission. Each one produces a real deliverable: a reconciled set of books, a working automation, a finished video, a rebuilt calendar. Finish one, and you have proof in hand.",
   "creed": "You don't need permission to do the work. No client, no problem, do the job anyway and the artifact IS your experience. Nobody asks whether you were paid for it; they ask whether you can do it. Nothing happens if you do nothing. Start with one.",
   "howItWorks": [
     {
@@ -2924,6 +2924,80 @@
       ],
       "presentIt": "Present it as shift coverage: 'Ten loads, zero silent hours, two exceptions caught and escalated with full narratives, plus how I vet a carrier and audit a detention bill from public records.' The exception log is the interview: it shows judgment, and judgment is the part AI check-calls cannot do.",
       "stretch": "Add an Incoterms cheat sheet for five worked scenarios: who pays and who carries risk at each handoff, per the free ICC materials. It is the bridge from US trucking to the Australian forwarding lane, where your daytime hours are the advantage."
+    },
+    {
+      "id": "single-trade-takeoff",
+      "title": "Take Off One Trade From a Real Drawing Set",
+      "track": "construction",
+      "accent": "indigo",
+      "icon": "hammer",
+      "difficulty": "Intermediate",
+      "time": "4–5 hours",
+      "proves": "You can read an architectural drawing set, measure a full trade off it, and present quantities with assumptions and exclusions stated: the exact first deliverable AU builders hand their offshore estimators.",
+      "prerequisites": [
+        {
+          "skill": "Plan reading basics",
+          "why": "Scales, sections, and details are the language. Measuring a drawing you misread produces confident nonsense.",
+          "ifYouDont": "Bluebeam University's free intro courses cover navigation and measurement; do those before the takeoff."
+        },
+        {
+          "skill": "Spreadsheet discipline",
+          "why": "A takeoff is a structured list: item, location, dimensions, quantity, unit. Loose notes do not survive a builder's review.",
+          "ifYouDont": "Set up the takeoff sheet columns first and let the structure force the discipline."
+        }
+      ],
+      "resources": [
+        {
+          "name": "Bluebeam Revu trial",
+          "type": "Tool",
+          "what": "14 days, full measurement toolset, and free Bluebeam University access while it runs. Plan the fortnight before starting the clock.",
+          "free": true,
+          "url": "https://www.bluebeam.com/trials/"
+        },
+        {
+          "name": "A public house plan set",
+          "type": "Dataset",
+          "what": "Any complete public-domain or sample residential drawing set with a floor plan, elevations, and a section. Builders' sample plans and government sample sets both work.",
+          "free": true,
+          "url": "#"
+        },
+        {
+          "name": "National Construction Code",
+          "type": "Docs",
+          "what": "Free full text. You will not memorise it; you will learn to look things up in it, which is the actual skill.",
+          "free": true,
+          "url": "https://ncc.abcb.gov.au/"
+        }
+      ],
+      "brief": {
+        "scenario": "An Australian builder is quoting a house and needs the concrete package measured by tomorrow morning, Manila time, which is the same working day in Brisbane. They want quantities they can price, and they want to see your working, because they carry the liability if your numbers are wrong.",
+        "deliverable": "A single-trade takeoff pack: the marked-up drawing set showing every measurement, a structured quantity sheet by element (footings, slab, paths), and a half-page of stated assumptions and exclusions.",
+        "constraints": [
+          "Verify the scale before measuring anything. Check a dimensioned wall against your scaled measurement and record the check; skipping it is how takeoffs go wrong silently.",
+          "Every quantity traces to a visible markup on the drawings. A number with no markup is a number the builder cannot check.",
+          "State what you excluded and why. 'Excavation not measured, no soil report in the set' reads as professional; silence reads as missed."
+        ],
+        "steps": [
+          "Pick one trade, concrete is the classic, and read the full drawing set once before measuring anything.",
+          "Run the scale check against a dimensioned element and note the result on the sheet.",
+          "Measure every element of the trade in Bluebeam, colour-coding markups by element type.",
+          "Build the quantity sheet: element, drawing reference, dimensions, quantity, unit, grouped the way a supplier would price it.",
+          "Write the assumptions and exclusions note, then re-walk the drawings once looking only for what you missed."
+        ]
+      },
+      "definitionOfDone": [
+        "The scale check is recorded on the quantity sheet, not just performed.",
+        "Every line in the quantity sheet cites the drawing and markup it came from.",
+        "Markups are colour-coded by element and legible on the exported set.",
+        "The assumptions and exclusions note would survive a builder reading it with their own money at stake."
+      ],
+      "selfCritique": [
+        "If the builder re-measured my three largest quantities, would they land within a few percent of mine?",
+        "Did I measure what the drawings show, or what I assumed a house like this has?",
+        "Is every exclusion a stated decision, or is anything missing because I did not notice it?"
+      ],
+      "presentIt": "Present it as risk management, not measurement: 'Full concrete takeoff, every markup traceable, scale-checked, exclusions stated.' The assumptions note is what makes a builder trust you with the next one.",
+      "stretch": "Price it: add unit rates from public Australian supplier pricing and turn the takeoff into a priced BOQ with trade subtotals. Takeoff proves accuracy; a priced BOQ proves you can be left alone with the whole job."
     }
   ]
 }

@@ -1351,6 +1351,68 @@
           "piece": "An exception playbook: five ways a load goes wrong (no-show, breakdown, missed appointment, detention, damaged POD), what you check, who you call, and what you decide. Plus one worked detention invoice audit against the FMC rule."
         }
       ]
+    },
+    {
+      "id": "construction",
+      "ladder": [
+        {
+          "tier": "Start",
+          "goal": "You can read a drawing set and measure one trade off it, with your working shown.",
+          "tools": [
+            {
+              "name": "Bluebeam Revu trial + Bluebeam University",
+              "free": "14-day trial with full free course access",
+              "what": "Learn PDF takeoffs on the tool AU job ads actually name",
+              "url": "https://university.bluebeam.com/"
+            },
+            {
+              "name": "National Construction Code",
+              "free": "Free full text online",
+              "what": "The AU rulebook; knowing your way around it is instant credibility",
+              "url": "https://ncc.abcb.gov.au/"
+            }
+          ],
+          "piece": "A single-trade takeoff (concrete or framing) from a public house plan set: quantities measured in Bluebeam, with a stated scale check, assumptions, and exclusions, like a professional would submit it."
+        },
+        {
+          "tier": "Level up",
+          "goal": "You can turn quantities into a priced estimate a builder could sanity-check.",
+          "tools": [
+            {
+              "name": "Buildxact trial + free webinars",
+              "free": "14-day trial; free tutorial library and webinars",
+              "what": "The AU residential estimating workflow: takeoff to quote",
+              "url": "https://www.buildxact.com/au/features/construction-takeoff-software/"
+            },
+            {
+              "name": "Groundplan",
+              "free": "7-day trial with free training",
+              "what": "Trade-specific takeoffs the AU/NZ way (roofing, electrical, plumbing)",
+              "url": "https://groundplan.com/"
+            }
+          ],
+          "piece": "A three-trade priced BOQ for a small renovation: quantities, unit rates from public Australian supplier pricing, subtotals by trade, and a one-paragraph exclusions note."
+        },
+        {
+          "tier": "Pro",
+          "goal": "You can run the paperwork that keeps a build moving and a builder paid.",
+          "tools": [
+            {
+              "name": "Google Sheets",
+              "free": "Free with any Google account",
+              "what": "Variations register, progress-claim tracker, document register",
+              "url": "https://sheets.google.com"
+            },
+            {
+              "name": "ChatGPT",
+              "free": "Free tier; drafting and summarising",
+              "what": "Draft claim cover notes and RFQ chasers at volume; you own the numbers",
+              "url": "https://chatgpt.com"
+            }
+          ],
+          "piece": "A contracts-admin pack for an invented build: a variations register with five worked variations and their approval trail, a progress-claim tracker across four claims, and the document register that ties it together."
+        }
+      ]
     }
   ]
 }
