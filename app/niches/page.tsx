@@ -196,7 +196,7 @@ export default function NichesPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <SectionHeading
-            kicker="21 worked examples"
+            kicker={`${tracks.tracks.length} worked examples`}
             title="Tap a niche to see the full breakdown"
             lead={
               <>
