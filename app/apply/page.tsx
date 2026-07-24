@@ -64,7 +64,7 @@ export default function Page() {
           />
         </Reveal>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+        <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
           {findwork.sourcing.map((method, idx) => (
             <Reveal key={method.id} i={idx % 4}>
               <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
@@ -91,7 +91,7 @@ export default function Page() {
                       key={ex}
                       className="flex items-center justify-between gap-3 rounded-xl border border-line-strong bg-paper-3 px-3.5 py-2.5"
                     >
-                      <code className="flex-1 overflow-x-auto whitespace-pre font-mono text-xs text-ink-soft">
+                      <code className="min-w-0 flex-1 overflow-x-auto whitespace-pre font-mono text-xs text-ink-soft">
                         {ex}
                       </code>
                       <CopyButton value={ex} label="Copy" />
