@@ -91,7 +91,7 @@ export default function TrackerPage() {
                 A quick reconciliation.
               </p>
               <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                Everywhere else on DevUp we refuse to hand you a finished
+                Everywhere else on Hire From PH we refuse to hand you a finished
                 file, we teach you to build your own. This page is the one
                 exception, on purpose: your job hunt is a tool for{" "}
                 <em>your</em> life, not a deliverable you&rsquo;d hand a

@@ -93,7 +93,7 @@ export function StagePage({ id }: { id: string }) {
                 {stage.quote}
               </blockquote>
               <figcaption className="mt-6 text-sm font-medium text-ink-soft">
-                DevUp · {stage.subtitle}
+                Hire From PH · {stage.subtitle}
               </figcaption>
             </figure>
           </Reveal>
