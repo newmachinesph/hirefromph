@@ -19,6 +19,8 @@
 - **Exact brand strings** come from spec §2 verbatim. Do not paraphrase them.
 - **Palette values** come from spec §3 verbatim. Do not adjust a hex "to taste" — every value is contrast-checked.
 - `git` in this repo needs `-c safe.directory=D:/startups/my-projects/DevUpProject/devupwebsite` on every invocation (the worktree is owned by a different Windows SID).
+- **`node --test` has one PRE-EXISTING failure on master**, in `lib/calculators.test.mjs`: `monthlyEffective` returns `259.8 × 0.75` where the assertion expects `× 0.67`. It predates this branch, `lib/` is untouched by the rebrand, and fixing it is **out of scope**. Treat `node --test` as passing when that is the only failure — but if a *second* test starts failing, that one is yours.
+- Never run `git stash`, `git reset --hard`, or `git checkout <branch>`. The repo has an unrelated pre-existing stash belonging to the user; popping it corrupts the working tree.
 - Windows: use `set PORT=3000 && npx next start`, not `-p`.
 
 ## File Ownership
@@ -731,10 +733,15 @@ Expected: all clean.
 - [ ] **Step 2: Completion grep**
 
 ```bash
-grep -rniE 'devup|coral|emerald|indigo|amber|#0a736a|#f1f6f4|#0e1f1b|#0d9488' \
-  app components data lib public scripts
+grep -rnE '\b(devup|DevUp|coral|emerald|indigo|amber)\b|#0a736a|#f1f6f4|#0e1f1b|#0d9488' \
+  app components data lib public scripts \
+  | grep -v 'Red/Amber/Green' | grep -v 'Amber = at risk'
 ```
 Expected: no output. Any hit is a missed rename.
+
+**Two known-legitimate exclusions**, confirmed during Task 1 — do not "fix" either:
+- `data/tasks.json:715` and `:758` contain `RAG (Red/Amber/Green)` — project-management terminology in frozen learning content, not a design token.
+- `app/globals.css`'s header comment says "electric violet", not "electric indigo". Task 1's sweep would have rewritten the literal word `indigo` to `info` mid-sentence. The colour is unchanged; only the prose word differs.
 
 - [ ] **Step 3: Signal-vs-info adjacency audit**
 
