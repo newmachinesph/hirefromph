@@ -30,13 +30,13 @@ const STATUS_LABEL: Record<AppStatus, string> = {
 
 const STATUS_TONE: Record<
   AppStatus,
-  "neutral" | "indigo" | "amber" | "emerald" | "coral"
+  "neutral" | "info" | "caution" | "verified" | "signal"
 > = {
   applied: "neutral",
-  replied: "indigo",
-  interview: "amber",
-  offer: "emerald",
-  rejected: "coral",
+  replied: "info",
+  interview: "caution",
+  offer: "verified",
+  rejected: "signal",
 };
 
 const FOLLOW_UP_DEFAULT_DAYS = 4;
@@ -204,7 +204,7 @@ export function ApplicationTracker() {
         className={cn(
           "rounded-2xl border p-6",
           overdue.length > 0
-            ? "border-coral/30 bg-coral-tint"
+            ? "border-signal/30 bg-signal-tint"
             : "border-line bg-paper-2",
         )}
       >
@@ -213,8 +213,8 @@ export function ApplicationTracker() {
             className={cn(
               "grid h-10 w-10 shrink-0 place-items-center rounded-full",
               overdue.length > 0
-                ? "bg-coral text-white"
-                : "bg-emerald-tint text-emerald",
+                ? "bg-signal text-white"
+                : "bg-verified-tint text-verified",
             )}
           >
             <AlertTriangle size={18} aria-hidden />
@@ -225,7 +225,7 @@ export function ApplicationTracker() {
               aria-live="polite"
               className={cn(
                 "mt-0.5 font-display text-lg leading-tight",
-                overdue.length > 0 ? "text-coral-deep" : "text-ink",
+                overdue.length > 0 ? "text-signal-deep" : "text-ink",
               )}
             >
               {overdue.length === 0
@@ -242,7 +242,7 @@ export function ApplicationTracker() {
               return (
                 <li
                   key={a.id}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-coral/25 bg-paper-2 px-4 py-3"
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-signal/25 bg-paper-2 px-4 py-3"
                 >
                   <div>
                     <p className="text-sm font-semibold text-ink">
@@ -299,10 +299,10 @@ export function ApplicationTracker() {
         </dl>
 
         {showDiagnostic && (
-          <div className="mt-4 flex items-start gap-3 rounded-2xl border border-amber/30 bg-amber-tint px-5 py-4">
+          <div className="mt-4 flex items-start gap-3 rounded-2xl border border-caution/30 bg-caution-tint px-5 py-4">
             <TrendingDown
               size={18}
-              className="mt-0.5 shrink-0 text-amber-text"
+              className="mt-0.5 shrink-0 text-caution-text"
               aria-hidden
             />
             <p className="text-sm leading-relaxed text-[#6b4d00]">
@@ -421,14 +421,14 @@ export function ApplicationTracker() {
         </div>
 
         {formError && (
-          <p role="alert" className="mt-3 text-sm font-medium text-coral-deep">
+          <p role="alert" className="mt-3 text-sm font-medium text-signal-deep">
             {formError}
           </p>
         )}
 
         <button
           type="submit"
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral"
+          className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal"
         >
           <Plus size={16} /> Add application
         </button>
@@ -545,7 +545,7 @@ function ApplicationRow({
               href={app.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-ink hover:text-coral"
+              className="inline-flex items-center gap-1 text-ink hover:text-signal"
             >
               Open <ArrowUpRight size={11} />
             </a>
@@ -575,7 +575,7 @@ function ApplicationRow({
         <button
           type="button"
           onClick={onDelete}
-          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold text-ink-faint transition-colors hover:text-coral"
+          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold text-ink-faint transition-colors hover:text-signal"
         >
           <Trash2 size={13} /> Delete
         </button>

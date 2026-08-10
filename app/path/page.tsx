@@ -15,28 +15,28 @@ import { cn } from "@/lib/utils";
 type Track = (typeof tracks.tracks)[number];
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep border-coral/25",
-  amber: "bg-amber-tint text-amber-text border-amber/30",
-  emerald: "bg-emerald-tint text-emerald border-emerald/25",
-  indigo: "bg-indigo-tint text-indigo border-indigo/25",
+  signal: "bg-signal-tint text-signal-deep border-signal/25",
+  caution: "bg-caution-tint text-caution-text border-caution/30",
+  verified: "bg-verified-tint text-verified border-verified/25",
+  info: "bg-info-tint text-info border-info/25",
 };
 const iconTone: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 
 const learnIcon: Record<string, string> = {
@@ -149,7 +149,7 @@ export default function PathPage() {
         </Reveal>
         <Reveal i={2}>
           <div className="mt-6 flex flex-wrap gap-2.5">
-            <Pill tone={track.accent as "coral"}>{track.pay}</Pill>
+            <Pill tone={track.accent as "signal"}>{track.pay}</Pill>
             <Pill tone="neutral">{track.demandLabel} demand</Pill>
             <Pill tone="neutral">{track.difficulty}</Pill>
           </div>
@@ -289,7 +289,7 @@ export default function PathPage() {
                       type="checkbox"
                       checked={checked}
                       onChange={() => toggleStep(step.n)}
-                      className="mt-0.5 h-5 w-5 shrink-0 accent-coral"
+                      className="mt-0.5 h-5 w-5 shrink-0 accent-signal"
                     />
                     <span>
                       <span className="block text-sm font-semibold text-ink">
@@ -391,7 +391,7 @@ export default function PathPage() {
             <p className="kicker mb-3">Tools you&rsquo;ll use</p>
             <div className="flex flex-wrap gap-2">
               {track.tools.map((t) => (
-                <Pill key={t} tone={track.accent as "coral"}>
+                <Pill key={t} tone={track.accent as "signal"}>
                   {t}
                 </Pill>
               ))}
@@ -401,7 +401,7 @@ export default function PathPage() {
             <p className="kicker mb-3">Certifications</p>
             <div className="flex flex-wrap gap-2">
               {track.certs.map((c) => (
-                <Pill key={c} tone="emerald">
+                <Pill key={c} tone="verified">
                   <Sparkles size={11} />
                   {c}
                 </Pill>

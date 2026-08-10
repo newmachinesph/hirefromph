@@ -19,7 +19,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       <span className="text-balance">Source: {label}</span>
       <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
@@ -39,14 +39,14 @@ export default function ClientsPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -64,7 +64,7 @@ export default function ClientsPage() {
               <div className="hidden grid-cols-[1.1fr_1fr_1fr] border-b border-line bg-paper-3/70 sm:grid">
                 <span className="p-4 kicker text-ink-faint">Dimension</span>
                 <span className="p-4 kicker text-ink-faint">Employee</span>
-                <span className="p-4 kicker text-emerald">Independent contractor</span>
+                <span className="p-4 kicker text-verified">Independent contractor</span>
               </div>
               <ul className="divide-y divide-line">
                 {mindset.rows.map((r) => (
@@ -76,8 +76,8 @@ export default function ClientsPage() {
                       <span className="kicker mr-2 text-ink-faint sm:hidden">Employee ·</span>
                       {r.employee}
                     </span>
-                    <span className="text-sm font-medium leading-relaxed text-ink sm:bg-emerald-tint/40 sm:p-4">
-                      <span className="kicker mr-2 text-emerald sm:hidden">Contractor ·</span>
+                    <span className="text-sm font-medium leading-relaxed text-ink sm:bg-verified-tint/40 sm:p-4">
+                      <span className="kicker mr-2 text-verified sm:hidden">Contractor ·</span>
                       {r.contractor}
                     </span>
                   </li>
@@ -87,7 +87,7 @@ export default function ClientsPage() {
           </Reveal>
 
           <Reveal i={2}>
-            <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-emerald/30 bg-emerald-tint p-6">
+            <div className="mt-8 flex flex-col gap-3 rounded-2xl border border-verified/30 bg-verified-tint p-6">
               <p className="max-w-3xl text-sm font-medium leading-relaxed text-ink">
                 {mindset.note}
               </p>
@@ -113,11 +113,11 @@ export default function ClientsPage() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">{road.blurb}</p>
 
                 <div className="mt-6 flex flex-col gap-3">
-                  <p className="kicker text-emerald">Pros</p>
+                  <p className="kicker text-verified">Pros</p>
                   <ul className="flex flex-col gap-2.5">
                     {road.pros.map((p) => (
                       <li key={p} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink">
-                        <Check size={16} className="mt-0.5 shrink-0 text-emerald" />
+                        <Check size={16} className="mt-0.5 shrink-0 text-verified" />
                         {p}
                       </li>
                     ))}
@@ -125,11 +125,11 @@ export default function ClientsPage() {
                 </div>
 
                 <div className="mt-6 flex flex-col gap-3">
-                  <p className="kicker text-coral-deep">Cons</p>
+                  <p className="kicker text-signal-deep">Cons</p>
                   <ul className="flex flex-col gap-2.5">
                     {road.cons.map((c) => (
                       <li key={c} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
-                        <X size={16} className="mt-0.5 shrink-0 text-coral" />
+                        <X size={16} className="mt-0.5 shrink-0 text-signal" />
                         {c}
                       </li>
                     ))}
@@ -141,7 +141,7 @@ export default function ClientsPage() {
         </div>
 
         <Reveal i={1}>
-          <p className="mt-8 max-w-3xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <p className="mt-8 max-w-3xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {roads.verdict}
           </p>
         </Reveal>
@@ -170,7 +170,7 @@ export default function ClientsPage() {
               ) => (
                 <Reveal key={s.title} i={idx % 2}>
                   <div className="flex h-full gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                    <span className="font-display text-3xl leading-none text-coral">
+                    <span className="font-display text-3xl leading-none text-signal">
                       {String(idx + 1).padStart(2, "0")}
                     </span>
                     <div className="flex-1">
@@ -179,7 +179,7 @@ export default function ClientsPage() {
                       {s.crossref && (
                         <a
                           href={s.crossref.href}
-                          className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-coral transition-colors hover:text-paper-2"
+                          className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-signal transition-colors hover:text-paper-2"
                         >
                           <span className="link-sweep">{s.crossref.label}</span>
                           <ExternalLink size={12} />
@@ -193,7 +193,7 @@ export default function ClientsPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-10 max-w-3xl border-l-2 border-emerald pl-5 text-sm font-medium leading-relaxed text-paper-2/90">
+            <p className="mt-10 max-w-3xl border-l-2 border-verified pl-5 text-sm font-medium leading-relaxed text-paper-2/90">
               {getDirect.note}
             </p>
           </Reveal>
@@ -245,7 +245,7 @@ export default function ClientsPage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

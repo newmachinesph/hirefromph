@@ -58,7 +58,7 @@ export function SelfAudit({ statements, levels }: Props) {
             aria-label={`Score ${score} of ${total}`}
             className="grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
             style={{
-              background: `conic-gradient(var(--emerald) ${pct}%, var(--line) ${pct}% 100%)`,
+              background: `conic-gradient(var(--verified) ${pct}%, var(--line) ${pct}% 100%)`,
             }}
           >
             <div className="grid h-[72px] w-[72px] place-items-center rounded-full bg-paper-2">
@@ -80,9 +80,9 @@ export function SelfAudit({ statements, levels }: Props) {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                  className="mt-4 w-full rounded-xl border border-emerald/25 bg-emerald-tint p-4 text-left"
+                  className="mt-4 w-full rounded-xl border border-verified/25 bg-verified-tint p-4 text-left"
                 >
-                  <p className="kicker text-emerald">Your level</p>
+                  <p className="kicker text-verified">Your level</p>
                   <p className="mt-1 font-display text-xl text-ink">
                     {level.label}
                   </p>
@@ -129,7 +129,7 @@ function StatementRow({
       className={cn(
         "flex flex-col gap-3 rounded-2xl border p-5 transition-colors duration-300 sm:flex-row sm:items-center sm:justify-between",
         answer === "agree"
-          ? "border-emerald/30 bg-emerald-tint"
+          ? "border-verified/30 bg-verified-tint"
           : "border-line bg-paper-2",
       )}
     >
@@ -158,7 +158,7 @@ function StatementRow({
                 className={cn(
                   "block cursor-pointer rounded-full px-4 py-1.5 text-xs font-semibold capitalize text-ink-soft transition-colors hover:text-ink",
                   v === "agree"
-                    ? "peer-checked:bg-emerald peer-checked:text-white"
+                    ? "peer-checked:bg-verified peer-checked:text-white"
                     : "peer-checked:bg-ink peer-checked:text-paper-2",
                 )}
               >

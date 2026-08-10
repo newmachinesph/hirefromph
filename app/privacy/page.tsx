@@ -33,7 +33,7 @@ export default function PrivacyPage() {
           <>
             We can&rsquo;t leak what
             <br />
-            <span className="text-coral">we never collect.</span>
+            <span className="text-signal">we never collect.</span>
           </>
         }
         titleWidth="max-w-4xl"
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         }
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             The only data we&rsquo;re comfortable holding is none of yours.
           </blockquote>
         </Reveal>
@@ -195,7 +195,7 @@ export default function PrivacyPage() {
       <section className="container-x py-20 pb-24 lg:py-24">
         <Reveal>
           <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
-            <Pill tone="emerald">No inbox to email, and that&rsquo;s the point</Pill>
+            <Pill tone="verified">No inbox to email, and that&rsquo;s the point</Pill>
             <h2 className="mt-6 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
               Questions about privacy? Message the Page.
             </h2>

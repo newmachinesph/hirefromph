@@ -17,22 +17,22 @@ export const metadata: Metadata = pageMeta({
 });
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep border-coral/20",
-  amber: "bg-amber-tint text-amber-text border-amber/25",
-  emerald: "bg-emerald-tint text-emerald border-emerald/20",
-  indigo: "bg-indigo-tint text-indigo border-indigo/20",
+  signal: "bg-signal-tint text-signal-deep border-signal/20",
+  caution: "bg-caution-tint text-caution-text border-caution/25",
+  verified: "bg-verified-tint text-verified border-verified/20",
+  info: "bg-info-tint text-info border-info/20",
 };
 
 /** Turn *word* markers from JSON copy into an emphasized inline span. */
@@ -48,7 +48,7 @@ function withEmphasis(text: string): ReactNode[] {
   );
 }
 
-const principleAccents = ["coral", "indigo", "emerald", "amber", "indigo", "coral"];
+const principleAccents = ["signal", "info", "verified", "caution", "info", "signal"];
 const principleSpans = [
   "lg:col-span-4",
   "lg:col-span-2",
@@ -68,11 +68,11 @@ export default function MethodPage() {
         kicker={doctrine.kicker}
         title={<>
           <span className="block text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-ink-faint">{titleLead}.</span>
-          <span className="block tracking-[-0.03em] text-ink">{titleMain.replace(" build it.", " ")}<span className="text-coral">build it.</span></span>
+          <span className="block tracking-[-0.03em] text-ink">{titleMain.replace(" build it.", " ")}<span className="text-signal">build it.</span></span>
         </>}
         titleWidth="max-w-4xl"
         backdrop={
-          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-8%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-8%] h-[480px] w-[480px] rounded-full bg-signal/10 blur-3xl" />
         }
       >
         <Reveal i={2}>
@@ -166,17 +166,17 @@ export default function MethodPage() {
                   <div className="flex items-start gap-3">
                     <X
                       size={16}
-                      className="mt-1 shrink-0 text-coral"
+                      className="mt-1 shrink-0 text-signal"
                       aria-hidden
                     />
-                    <p className="text-ink-soft line-through decoration-coral/50 decoration-2">
+                    <p className="text-ink-soft line-through decoration-signal/50 decoration-2">
                       {item.bad}
                     </p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Check
                       size={16}
-                      className="mt-1 shrink-0 text-emerald"
+                      className="mt-1 shrink-0 text-verified"
                       aria-hidden
                     />
                     <p className="font-medium text-ink">{item.good}</p>
@@ -214,7 +214,7 @@ export default function MethodPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="coral">
+            <Pill tone="signal">
               <Sparkles size={13} /> The method, applied
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

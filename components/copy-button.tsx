@@ -54,8 +54,8 @@ export function CopyButton({ value, label = "Copy", className }: Props) {
       aria-label={text}
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper-2 px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink",
-        copied && "border-emerald text-emerald hover:border-emerald hover:text-emerald",
-        failed && "border-coral text-coral hover:border-coral hover:text-coral",
+        copied && "border-verified text-verified hover:border-verified hover:text-verified",
+        failed && "border-signal text-signal hover:border-signal hover:text-signal",
         className,
       )}
     >

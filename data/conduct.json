@@ -65,7 +65,7 @@
     {
       "id": "wells-fargo",
       "tag": "Time-tracking fraud",
-      "accent": "coral",
+      "accent": "signal",
       "title": "Wells Fargo fired a dozen people for simulating keyboard activity",
       "when": "May 2024",
       "what": "Wells Fargo dismissed more than a dozen employees from its wealth- and investment-management unit. FINRA disclosures filed in June 2024 state they were discharged after review of allegations involving 'simulation of keyboard activity creating impression of active work'. At least one had been at the bank over seven years.",
@@ -76,7 +76,7 @@
     {
       "id": "besse",
       "tag": "You can be ordered to pay it back",
-      "accent": "coral",
+      "accent": "signal",
       "title": "A remote accountant was ordered to repay her employer CAD $2,756",
       "when": "2023 · BC Civil Resolution Tribunal",
       "what": "Karlee Besse, working remotely for Reach CPA, logged 50.76 hours on her timesheets that time-tracking software showed had no corresponding work activity, the software could distinguish work documents from personal streaming. She sued for wrongful dismissal.",
@@ -87,7 +87,7 @@
     {
       "id": "dprk",
       "tag": "Why clients are paranoid about you",
-      "accent": "indigo",
+      "accent": "info",
       "title": "The DOJ raided 29 'laptop farms' across 16 states",
       "when": "June 2025",
       "what": "North Korean IT workers used stolen and fabricated identities to get hired at over 100 US companies, using deepfakes to pass video interviews. The DOJ searched 29 laptop farms across 16 states and seized 29 financial accounts and 21 fraudulent websites. Two US nationals were sentenced for facilitating it, their role was largely just receiving laptops and letting someone else work under a borrowed identity.",
@@ -98,7 +98,7 @@
     {
       "id": "hallucination",
       "tag": "Shipping unchecked AI output",
-      "accent": "amber",
+      "accent": "caution",
       "title": "Two lawyers were fined $110,000 for citations an AI invented",
       "when": "Ruling late 2025 · widely reported May 2026 · Oregon",
       "what": "The largest US penalty to date for AI hallucinations in a filing: 23 fabricated citations and 8 invented quotations. The court issued the ruling in late 2025; it only became widely reported in May 2026. The $110,000 total combines two lawyers' separate penalties, roughly $95,000 and $14,000. It sits at the top of a ladder, $5,000 (Mata v. Avianca, 2023), $10,000 (California, 2025), $110,000 (2026). A public database now tracks well over a thousand such court decisions worldwide, and the count keeps growing.",
@@ -109,7 +109,7 @@
     {
       "id": "jss",
       "tag": "Ghosting has a number attached",
-      "accent": "amber",
+      "accent": "caution",
       "title": "Abandoning a contract permanently marks your score",
       "when": "Ongoing · Upwork",
       "what": "Upwork's Job Success Score factors in the reasons past contracts ended. As of this writing, below 79% you start struggling to win work at all; top freelancers sit above 90%. Feedback manipulation, trading reviews, hiring yourself, bribing a client, or threatening bad feedback (Upwork names these 'bribery and extortion'), can permanently block your account. If you're suspended for it, you must wait six months before you can even appeal.",
@@ -120,7 +120,7 @@
     {
       "id": "ra10173",
       "tag": "Philippine law applies to you",
-      "accent": "emerald",
+      "accent": "verified",
       "title": "Your laptop in Cebu is a 'Personal Information Processor'",
       "when": "RA 10173 · Data Privacy Act of 2012",
       "what": "The Data Privacy Act applies to any person processing personal information, including foreign controllers using equipment located in the Philippines. Your laptop, processing a US client's customer list, is in scope. Breach notification is required within 72 hours of discovery. Penalties run from six months to seven years imprisonment and ₱500,000 up to ₱5,000,000 in fines.",
@@ -136,7 +136,7 @@
       "id": "time",
       "area": "Your hours",
       "icon": "clock",
-      "accent": "coral",
+      "accent": "signal",
       "dos": [
         "Track only the time you actually worked, to the minute.",
         "Use the client's official tracker. On Upwork, only tracker-logged time with genuine activity is covered by Hourly Payment Protection, manual time is not.",
@@ -154,7 +154,7 @@
       "id": "ai",
       "area": "AI in your work",
       "icon": "sparkles",
-      "accent": "amber",
+      "accent": "caution",
       "dos": [
         "Ask, at the start of the engagement: 'What's your policy on AI-assisted work?' Get the answer in writing.",
         "Verify every factual claim, number, name, citation, and link an AI gives you. You are shipping it under your name.",
@@ -172,7 +172,7 @@
       "id": "data",
       "area": "Client data & access",
       "icon": "shield",
-      "accent": "emerald",
+      "accent": "verified",
       "dos": [
         "Insist on your own named account. Shared logins destroy attribution, when five people use one login, the audit log can't prove you DIDN'T do it.",
         "Keep client data in client-owned systems. Their Drive, their CRM, their repo.",
@@ -191,7 +191,7 @@
       "id": "truth",
       "area": "How you represent yourself",
       "icon": "user-check",
-      "accent": "indigo",
+      "accent": "info",
       "dos": [
         "Show only work you actually did. If it was a team effort, say exactly which part was yours.",
         "State your real experience level. 'I haven't done this specific thing, but here's the closest thing I have done, and here's how I'd approach it' wins more jobs than bluffing.",
@@ -209,7 +209,7 @@
       "id": "commitments",
       "area": "Your commitments",
       "icon": "handshake",
-      "accent": "coral",
+      "accent": "signal",
       "dos": [
         "If a contract has an exclusivity or 'whole time and attention' clause, read it before signing a second one. Breaching it is a civil matter, termination, and possibly damages.",
         "Disclose other work when the contract requires disclosure. Moonlighting is legal; hiding it while a contract forbids it is fraud.",

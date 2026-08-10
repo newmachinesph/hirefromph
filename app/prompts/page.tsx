@@ -39,11 +39,11 @@ export default function PromptsPage() {
         title={promptingData.headline}
         lead={promptingData.intro}
         backdrop={<>
-          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-10%] h-[440px] w-[440px] rounded-full bg-coral/10 blur-3xl" />
-          <div aria-hidden className="pointer-events-none absolute top-56 left-[-8%] h-[360px] w-[360px] rounded-full bg-indigo/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-32 right-[-10%] h-[440px] w-[440px] rounded-full bg-signal/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute top-56 left-[-8%] h-[360px] w-[360px] rounded-full bg-info/10 blur-3xl" />
         </>}
       >
-        <Reveal i={3}><blockquote className="relative mt-10 max-w-2xl rounded-[var(--radius-lg)] border border-coral/20 bg-coral-tint px-8 py-8"><Quote size={26} className="text-coral/50" aria-hidden /><p className="mt-3 font-display text-[length:var(--text-h3)] leading-snug text-ink text-balance">&ldquo;{promptingData.creed}&rdquo;</p></blockquote></Reveal>
+        <Reveal i={3}><blockquote className="relative mt-10 max-w-2xl rounded-[var(--radius-lg)] border border-signal/20 bg-signal-tint px-8 py-8"><Quote size={26} className="text-signal/50" aria-hidden /><p className="mt-3 font-display text-[length:var(--text-h3)] leading-snug text-ink text-balance">&ldquo;{promptingData.creed}&rdquo;</p></blockquote></Reveal>
       </PageHero>
 
       {/* ------------------------------------------------------------ ANATOMY */}
@@ -71,15 +71,15 @@ export default function PromptsPage() {
                   {item.rule}
                 </p>
                 <div className="mt-4 grid flex-1 gap-3 sm:grid-cols-2">
-                  <div className="rounded-xl border border-coral/25 bg-coral-tint p-4">
-                    <p className="flex items-center gap-1.5 text-xs font-semibold text-coral-deep">
+                  <div className="rounded-xl border border-signal/25 bg-signal-tint p-4">
+                    <p className="flex items-center gap-1.5 text-xs font-semibold text-signal-deep">
                       <XCircle size={14} aria-hidden />
                       Weak
                     </p>
                     <p className="mt-2 text-sm leading-relaxed text-ink">{item.weak}</p>
                   </div>
-                  <div className="rounded-xl border border-emerald/25 bg-emerald-tint p-4">
-                    <p className="flex items-center gap-1.5 text-xs font-semibold text-emerald">
+                  <div className="rounded-xl border border-verified/25 bg-verified-tint p-4">
+                    <p className="flex items-center gap-1.5 text-xs font-semibold text-verified">
                       <CheckCircle2 size={14} aria-hidden />
                       Strong
                     </p>
@@ -143,9 +143,9 @@ export default function PromptsPage() {
                       {step.signals.map((s) => (
                         <div
                           key={s.symptom}
-                          className="rounded-xl border border-amber/25 bg-amber-tint p-3 text-xs leading-relaxed"
+                          className="rounded-xl border border-caution/25 bg-caution-tint p-3 text-xs leading-relaxed"
                         >
-                          <p className="font-semibold text-amber-text">{s.symptom}</p>
+                          <p className="font-semibold text-caution-text">{s.symptom}</p>
                           <p className="mt-1 text-ink-soft">→ {s.cause}</p>
                         </div>
                       ))}
@@ -172,7 +172,7 @@ export default function PromptsPage() {
             {promptingData.useCases.map((u, idx) => (
               <Reveal key={u.id} i={idx % 3}>
                 <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-indigo-tint text-indigo">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-info-tint text-info">
                     <Icon name={u.icon} size={20} />
                   </span>
                   <h3 className="mt-5 font-display text-lg leading-tight">{u.title}</h3>
@@ -221,7 +221,7 @@ export default function PromptsPage() {
                   {promptingData.critique.map((c) => (
                     <li key={c.q}>
                       <p className="flex items-start gap-2 text-sm font-semibold text-ink">
-                        <CircleHelp size={16} className="mt-0.5 shrink-0 text-coral" aria-hidden />
+                        <CircleHelp size={16} className="mt-0.5 shrink-0 text-signal" aria-hidden />
                         {c.q}
                       </p>
                       <p className="mt-1.5 pl-6 text-sm leading-relaxed text-ink-soft">{c.why}</p>
@@ -239,11 +239,11 @@ export default function PromptsPage() {
                   {promptingData.slopChecklist.map((s) => (
                     <li key={s.tell}>
                       <p className="flex items-start gap-2 text-sm font-semibold text-ink">
-                        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-coral" aria-hidden />
+                        <AlertTriangle size={16} className="mt-0.5 shrink-0 text-signal" aria-hidden />
                         {s.tell}
                       </p>
                       <p className="mt-1.5 pl-6 text-sm leading-relaxed text-ink-soft">
-                        <span className="font-semibold text-emerald">Fix, </span>
+                        <span className="font-semibold text-verified">Fix, </span>
                         {s.fix}
                       </p>
                     </li>
@@ -280,7 +280,7 @@ export default function PromptsPage() {
                   <p className="mt-2 text-sm leading-relaxed text-ink-soft">{prompt.desc}</p>
                   <div className="mt-3 flex flex-wrap gap-1.5">
                     {specimen.usesParts.map((id) => (
-                      <Pill key={id} tone="indigo">
+                      <Pill key={id} tone="info">
                         {partLabel(id)}
                       </Pill>
                     ))}
@@ -308,7 +308,7 @@ export default function PromptsPage() {
               className="group flex flex-col justify-between rounded-2xl border border-line bg-paper-2 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[var(--shadow-md)]"
             >
               <div>
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-coral">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-signal">
                   <Icon name="key-round" size={20} />
                 </span>
                 <h3 className="mt-5 font-display text-xl">This is the same method, everywhere</h3>
@@ -327,7 +327,7 @@ export default function PromptsPage() {
               className="group flex flex-col justify-between rounded-2xl border border-line bg-paper-2 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[var(--shadow-md)]"
             >
               <div>
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-coral">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-signal">
                   <Icon name="hammer" size={20} />
                 </span>
                 <h3 className="mt-5 font-display text-xl">Now use it on a real deliverable</h3>

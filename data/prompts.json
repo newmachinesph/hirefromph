@@ -7,10 +7,10 @@
     "Always fact-check and personalize AI output. It's a co-pilot, not autopilot."
   ],
   "bots": [
-    { "id": "resume", "name": "Resume Bot", "icon": "file-text", "desc": "Turns your raw history into a results-focused, ATS-friendly resume for a specific role.", "accent": "coral" },
-    { "id": "cover", "name": "Cover Letter Bot", "icon": "mail", "desc": "Writes a tailored cover letter that mirrors the job post and sounds like you.", "accent": "amber" },
-    { "id": "interview", "name": "Interview Coach Bot", "icon": "messages-square", "desc": "Runs a mock interview for your target role and grades your answers.", "accent": "emerald" },
-    { "id": "profile", "name": "Profile Optimizer Bot", "icon": "user-round", "desc": "Rewrites your Upwork / OnlineJobs / LinkedIn profile to get more replies.", "accent": "indigo" }
+    { "id": "resume", "name": "Resume Bot", "icon": "file-text", "desc": "Turns your raw history into a results-focused, ATS-friendly resume for a specific role.", "accent": "signal" },
+    { "id": "cover", "name": "Cover Letter Bot", "icon": "mail", "desc": "Writes a tailored cover letter that mirrors the job post and sounds like you.", "accent": "caution" },
+    { "id": "interview", "name": "Interview Coach Bot", "icon": "messages-square", "desc": "Runs a mock interview for your target role and grades your answers.", "accent": "verified" },
+    { "id": "profile", "name": "Profile Optimizer Bot", "icon": "user-round", "desc": "Rewrites your Upwork / OnlineJobs / LinkedIn profile to get more replies.", "accent": "info" }
   ],
   "categories": [
     { "id": "apply", "label": "Applying" },

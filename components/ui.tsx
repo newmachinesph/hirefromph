@@ -13,7 +13,7 @@ export function Kicker({
 }) {
   return (
     <span className={cn("kicker inline-flex items-center gap-2", className)}>
-      <span className="h-1.5 w-1.5 rounded-full bg-coral" />
+      <span className="h-1.5 w-1.5 rounded-full bg-signal" />
       {children}
     </span>
   );
@@ -25,15 +25,15 @@ export function Pill({
   className,
 }: {
   children: ReactNode;
-  tone?: "neutral" | "coral" | "emerald" | "amber" | "indigo";
+  tone?: "neutral" | "signal" | "verified" | "caution" | "info";
   className?: string;
 }) {
   const tones: Record<string, string> = {
     neutral: "bg-paper-3 text-ink-soft border-line-strong",
-    coral: "bg-coral-tint text-coral-deep border-coral/25",
-    emerald: "bg-emerald-tint text-emerald border-emerald/25",
-    amber: "bg-amber-tint text-amber-text border-amber/30",
-    indigo: "bg-indigo-tint text-indigo border-indigo/25",
+    signal: "bg-signal-tint text-signal-deep border-signal/25",
+    verified: "bg-verified-tint text-verified border-verified/25",
+    caution: "bg-caution-tint text-caution-text border-caution/30",
+    info: "bg-info-tint text-info border-info/25",
   };
   return (
     <span
@@ -67,10 +67,10 @@ export function ButtonLink({
     "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 will-change-transform";
   const variants: Record<string, string> = {
     primary:
-      "bg-ink text-paper-2 hover:bg-coral hover:shadow-[var(--shadow-coral)] hover:-translate-y-0.5",
+      "bg-ink text-paper-2 hover:bg-signal hover:shadow-[var(--shadow-signal)] hover:-translate-y-0.5",
     outline:
       "border border-line-strong text-ink hover:border-ink hover:-translate-y-0.5 bg-paper-2",
-    ghost: "text-ink hover:text-coral",
+    ghost: "text-ink hover:text-signal",
   };
   const inner = (
     <>
@@ -109,7 +109,7 @@ export function ArrowLink({
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-1 text-sm font-semibold text-ink transition-colors hover:text-coral",
+        "group inline-flex items-center gap-1 text-sm font-semibold text-ink transition-colors hover:text-signal",
         className,
       )}
     >
@@ -231,7 +231,7 @@ export function Marquee({ items }: { items: string[] }) {
             className="flex shrink-0 items-center gap-10 font-display text-lg tracking-tight"
           >
             {it}
-            <span className="text-coral">✦</span>
+            <span className="text-signal">✦</span>
           </span>
         ))}
       </div>

@@ -16,17 +16,17 @@ type Props = {
 };
 
 const accentRing: Record<string, string> = {
-  coral: "hover:border-coral/60 data-[active=true]:border-coral data-[active=true]:bg-coral-tint",
-  emerald: "hover:border-emerald/60 data-[active=true]:border-emerald data-[active=true]:bg-emerald-tint",
-  amber: "hover:border-amber/60 data-[active=true]:border-amber data-[active=true]:bg-amber-tint",
-  indigo: "hover:border-indigo/60 data-[active=true]:border-indigo data-[active=true]:bg-indigo-tint",
+  signal: "hover:border-signal/60 data-[active=true]:border-signal data-[active=true]:bg-signal-tint",
+  verified: "hover:border-verified/60 data-[active=true]:border-verified data-[active=true]:bg-verified-tint",
+  caution: "hover:border-caution/60 data-[active=true]:border-caution data-[active=true]:bg-caution-tint",
+  info: "hover:border-info/60 data-[active=true]:border-info data-[active=true]:bg-info-tint",
 };
 
 const iconTone: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 
 export function PathChooser({ compact = false, redirectTo, onChosen }: Props) {
@@ -72,7 +72,7 @@ export function PathChooser({ compact = false, redirectTo, onChosen }: Props) {
                 <Icon name={t.icon} size={20} />
               </span>
               {active && (
-                <span className="grid h-6 w-6 place-items-center rounded-full bg-emerald text-white">
+                <span className="grid h-6 w-6 place-items-center rounded-full bg-verified text-white">
                   <Check size={14} />
                 </span>
               )}
@@ -87,7 +87,7 @@ export function PathChooser({ compact = false, redirectTo, onChosen }: Props) {
             </div>
             <div className="mt-auto flex items-center justify-between pt-1">
               <span className="text-sm font-semibold text-ink">{t.pay}</span>
-              <Pill tone={t.accent as "coral"}>{t.demandLabel}</Pill>
+              <Pill tone={t.accent as "signal"}>{t.demandLabel}</Pill>
             </div>
           </button>
         );

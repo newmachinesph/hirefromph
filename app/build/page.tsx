@@ -22,7 +22,7 @@ export default function BuildPage() {
         lead={labsData.intro}
       >
         <Reveal i={3}>
-          <Pill tone="coral" className="mt-6">
+          <Pill tone="signal" className="mt-6">
             <Ban size={13} /> We hand out zero templates
           </Pill>
         </Reveal>

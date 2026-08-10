@@ -25,7 +25,7 @@ export function JourneyProgress() {
     <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 lg:p-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="kicker text-coral">
+          <p className="kicker text-signal">
             {started ? "Your journey" : "The journey"}
           </p>
           <p className="mt-2 font-display text-2xl leading-none">
@@ -41,7 +41,7 @@ export function JourneyProgress() {
         </div>
         <Link
           href="/path"
-          className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper-2 transition-all hover:-translate-y-0.5 hover:bg-coral"
+          className="inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 text-sm font-semibold text-paper-2 transition-all hover:-translate-y-0.5 hover:bg-signal"
         >
           {started ? "Continue" : "Open your path"}
           <ArrowRight size={15} />
@@ -51,7 +51,7 @@ export function JourneyProgress() {
       {/* progress bar */}
       <div className="mt-6 h-1.5 w-full overflow-hidden rounded-full bg-paper-3">
         <div
-          className="h-full rounded-full bg-coral transition-[width] duration-500"
+          className="h-full rounded-full bg-signal transition-[width] duration-500"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -70,9 +70,9 @@ export function JourneyProgress() {
                 className={cn(
                   "grid h-7 w-7 place-items-center rounded-full border text-xs font-semibold transition-colors",
                   stageDone
-                    ? "border-coral bg-coral text-white"
+                    ? "border-signal bg-signal text-white"
                     : isCurrent
-                      ? "border-coral text-coral"
+                      ? "border-signal text-signal"
                       : "border-line-strong text-ink-faint",
                 )}
               >

@@ -37,7 +37,7 @@ export function DownloadButton({ value, filename, label = "Download .md", classN
       aria-label={label}
       className={cn(
         "inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper-2 px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink",
-        done && "border-emerald text-emerald hover:border-emerald hover:text-emerald",
+        done && "border-verified text-verified hover:border-verified hover:text-verified",
         className,
       )}
     >

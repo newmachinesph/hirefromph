@@ -12,10 +12,10 @@ export const metadata: Metadata = pageMeta({
   description: plan.intro,
 });
 
-const quickFacts: { icon: string; label: string; tone: "coral" | "amber" | "emerald" }[] = [
-  { icon: "sparkles", label: "Open to all", tone: "coral" },
-  { icon: "clock", label: plan.commitment, tone: "amber" },
-  { icon: "save", label: "Progress saved automatically", tone: "emerald" },
+const quickFacts: { icon: string; label: string; tone: "signal" | "caution" | "verified" }[] = [
+  { icon: "sparkles", label: "Open to all", tone: "signal" },
+  { icon: "clock", label: plan.commitment, tone: "caution" },
+  { icon: "save", label: "Progress saved automatically", tone: "verified" },
 ];
 
 const howItWorks = [
@@ -47,12 +47,12 @@ export default function PlanPage() {
         title={
           <span className="tracking-[-0.02em]">
             Thirty days. One clear plan.{" "}
-            <span className="text-coral">Built around you.</span>
+            <span className="text-signal">Built around you.</span>
           </span>
         }
         lead={plan.intro}
         backdrop={
-          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-signal/10 blur-3xl" />
         }
       >
         <Reveal i={3}>
@@ -83,7 +83,7 @@ export default function PlanPage() {
                   <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-ink font-display text-sm text-paper-2">
                     {s.n}
                   </span>
-                  <Icon name={s.icon} size={18} className="text-coral" />
+                  <Icon name={s.icon} size={18} className="text-signal" />
                 </div>
                 <h3 className="mt-5 font-display text-lg leading-tight">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>

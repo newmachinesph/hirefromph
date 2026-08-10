@@ -21,10 +21,10 @@ type Lab = (typeof labsData)["labs"][number];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const DIFFICULTY_TONE: Record<string, "emerald" | "amber" | "coral"> = {
-  Beginner: "emerald",
-  Intermediate: "amber",
-  Advanced: "coral",
+const DIFFICULTY_TONE: Record<string, "verified" | "caution" | "signal"> = {
+  Beginner: "verified",
+  Intermediate: "caution",
+  Advanced: "signal",
 };
 
 const TABS = [
@@ -172,7 +172,7 @@ export function BuildLabs() {
                     className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[var(--shadow-md)]"
                   >
                     <div className="flex items-start justify-between gap-3">
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-coral">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-signal">
                         <Icon name={lab.icon} size={20} />
                       </span>
                       <Pill tone={DIFFICULTY_TONE[lab.difficulty] ?? "neutral"}>
@@ -417,7 +417,7 @@ function AnatomyTab({ lab }: { lab: Lab }) {
         <ul className="mt-3 space-y-2.5">
           {lab.principles.map((p) => (
             <li key={p} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
-              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-emerald" />
+              <CheckCircle2 size={16} className="mt-0.5 shrink-0 text-verified" />
               {p}
             </li>
           ))}
@@ -497,9 +497,9 @@ function WorkshopTab({
             <div className="flex items-center justify-between gap-3 border-b border-line bg-paper-3/60 px-5 py-3">
               <div className="flex items-center gap-2">
                 <span className="flex gap-1.5" aria-hidden>
-                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-coral/70" />
-                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-amber/70" />
-                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-emerald/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-signal/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-caution/70" />
+                  <span className="is-circle h-2.5 w-2.5 rounded-full bg-verified/70" />
                 </span>
                 <p className="text-xs font-medium text-ink-faint">Live preview, your words</p>
               </div>
@@ -558,7 +558,7 @@ function CritiqueTab({
         <ul className="space-y-2.5">
           {lab.mistakes.map((m) => (
             <li key={m} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
-              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-coral" />
+              <AlertTriangle size={16} className="mt-0.5 shrink-0 text-signal" />
               {m}
             </li>
           ))}
@@ -567,7 +567,7 @@ function CritiqueTab({
 
       <div className="mt-6 flex items-center justify-between">
         <p className="kicker">Judge your own draft</p>
-        <Pill tone={doneCount === lab.critique.length ? "emerald" : "neutral"}>
+        <Pill tone={doneCount === lab.critique.length ? "verified" : "neutral"}>
           {doneCount}/{lab.critique.length} checked
         </Pill>
       </div>
@@ -582,7 +582,7 @@ function CritiqueTab({
                 id={fieldId}
                 checked={isChecked}
                 onChange={() => onToggleChecked(i)}
-                className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-emerald"
+                className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-verified"
               />
               <label
                 htmlFor={fieldId}
@@ -631,7 +631,7 @@ function BuildRealTab({
           <button
             type="button"
             onClick={onGoToWorkshop}
-            className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all hover:-translate-y-0.5 hover:bg-coral"
+            className="inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all hover:-translate-y-0.5 hover:bg-signal"
           >
             Go write it in the Workshop
             <ArrowRight size={15} />

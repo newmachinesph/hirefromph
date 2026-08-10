@@ -8,22 +8,22 @@ import { ArrowLink, ButtonLink, Kicker, Pill, SectionHeading } from "@/component
 import { cn } from "@/lib/utils";
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep border-coral/20",
-  amber: "bg-amber-tint text-amber-text border-amber/25",
-  emerald: "bg-emerald-tint text-emerald border-emerald/20",
-  indigo: "bg-indigo-tint text-indigo border-indigo/20",
+  signal: "bg-signal-tint text-signal-deep border-signal/20",
+  caution: "bg-caution-tint text-caution-text border-caution/25",
+  verified: "bg-verified-tint text-verified border-verified/20",
+  info: "bg-info-tint text-info border-info/20",
 };
 
 type Stage = (typeof stages)[number];
@@ -51,7 +51,7 @@ export function StagePage({ id }: { id: string }) {
             <Reveal>
               <div className="flex items-center gap-3">
                 <Kicker>{stage.kicker}</Kicker>
-                <Pill tone={a as "coral"}>{stage.steps}</Pill>
+                <Pill tone={a as "signal"}>{stage.steps}</Pill>
               </div>
             </Reveal>
             <Reveal i={1}>

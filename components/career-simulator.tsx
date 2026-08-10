@@ -61,7 +61,7 @@ function Source({ label, url }: SourceRef) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       Source: {label}
       <ExternalLink size={11} aria-hidden className="opacity-60" />
@@ -119,7 +119,7 @@ function ChoiceGroup({
               <label
                 htmlFor={id}
                 className={cn(
-                  "flex h-full cursor-pointer gap-3 rounded-xl border p-3 transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-coral",
+                  "flex h-full cursor-pointer gap-3 rounded-xl border p-3 transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-signal",
                   active
                     ? "border-ink bg-paper-3"
                     : "border-line bg-paper-2 hover:border-line-strong",
@@ -132,7 +132,7 @@ function ChoiceGroup({
                     active ? "border-ink" : "border-line-strong",
                   )}
                 >
-                  {active && <span className="is-circle h-2 w-2 rounded-full bg-coral" />}
+                  {active && <span className="is-circle h-2 w-2 rounded-full bg-signal" />}
                 </span>
                 <span className="min-w-0">
                   <span className="block text-sm font-semibold leading-snug text-ink">
@@ -233,7 +233,7 @@ function TrajectoryChart({
         </text>
       ))}
 
-      <path d={band} fill="var(--coral)" opacity={0.1} />
+      <path d={band} fill="var(--signal)" opacity={0.1} />
 
       <path
         d={line("base")}
@@ -246,14 +246,14 @@ function TrajectoryChart({
       <path
         d={line("path")}
         fill="none"
-        stroke="var(--coral)"
+        stroke="var(--signal)"
         strokeWidth={3}
         strokeLinecap="round"
         strokeLinejoin="round"
       />
 
       <circle cx={x(36)} cy={y(last.base)} r={4} fill="var(--ink-faint)" />
-      <circle cx={x(36)} cy={y(last.path)} r={5} fill="var(--coral)" />
+      <circle cx={x(36)} cy={y(last.path)} r={5} fill="var(--signal)" />
     </svg>
   );
 }
@@ -475,7 +475,7 @@ export function CareerSimulator() {
             <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-ink">
               {sim.results.title}
             </h2>
-            <Pill tone="amber">
+            <Pill tone="caution">
               <TriangleAlert size={12} aria-hidden />
               {sim.results.modelPill}
             </Pill>
@@ -490,7 +490,7 @@ export function CareerSimulator() {
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
             {model.verdict.body}
           </p>
-          <p className="mt-4 max-w-2xl border-l-2 border-coral pl-4 text-sm font-medium leading-relaxed text-ink">
+          <p className="mt-4 max-w-2xl border-l-2 border-signal pl-4 text-sm font-medium leading-relaxed text-ink">
             {gapNote}
           </p>
 
@@ -507,7 +507,7 @@ export function CareerSimulator() {
                 <p className="mt-2 font-display text-2xl leading-none text-ink">
                   {usd(monthlyEffective(config, m))}
                 </p>
-                <p className="mt-1.5 text-sm font-semibold text-emerald">
+                <p className="mt-1.5 text-sm font-semibold text-verified">
                   {peso(monthlyEffective(config, m), fx)}
                 </p>
                 <p className="mt-2 text-[11px] leading-snug text-ink-faint">
@@ -535,12 +535,12 @@ export function CareerSimulator() {
 
         {/* AI-with-no-craft callout, the heart of the model */}
         {model.noPremium && (
-          <div className="rounded-[var(--radius-lg)] border-2 border-coral bg-coral-tint p-6 lg:p-8">
+          <div className="rounded-[var(--radius-lg)] border-2 border-signal bg-signal-tint p-6 lg:p-8">
             <div className="flex items-start gap-3">
               <AlertTriangle
                 size={20}
                 aria-hidden
-                className="mt-1 shrink-0 text-coral-deep"
+                className="mt-1 shrink-0 text-signal-deep"
               />
               <div className="min-w-0">
                 <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
@@ -549,7 +549,7 @@ export function CareerSimulator() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                   {sim.aiCallout.body}
                 </p>
-                <blockquote className="mt-5 border-l-2 border-coral-deep pl-4">
+                <blockquote className="mt-5 border-l-2 border-signal-deep pl-4">
                   <p className="font-display text-lg leading-snug text-ink">
                     {sim.aiCallout.quote}
                   </p>
@@ -566,7 +566,7 @@ export function CareerSimulator() {
                 </div>
                 <Link
                   href="/niches"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper-2 transition-colors hover:bg-coral-deep"
+                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper-2 transition-colors hover:bg-signal-deep"
                 >
                   {sim.aiCallout.cta}
                 </Link>
@@ -609,7 +609,7 @@ export function CareerSimulator() {
                   y1="4"
                   x2="26"
                   y2="4"
-                  stroke="var(--coral)"
+                  stroke="var(--signal)"
                   strokeWidth="3"
                 />
               </svg>
@@ -620,7 +620,7 @@ export function CareerSimulator() {
             <li className="flex items-center gap-2">
               <span
                 aria-hidden
-                className="h-3 w-6 shrink-0 rounded-sm bg-coral/10"
+                className="h-3 w-6 shrink-0 rounded-sm bg-signal/10"
               />
               {sim.chart.riskBandLabel}
             </li>
@@ -637,7 +637,7 @@ export function CareerSimulator() {
             Months from today
           </p>
 
-          <p className="mt-5 rounded-2xl border border-coral/25 bg-coral-tint p-4 text-xs leading-relaxed text-ink-soft">
+          <p className="mt-5 rounded-2xl border border-signal/25 bg-signal-tint p-4 text-xs leading-relaxed text-ink-soft">
             {sim.chart.riskBandNote}
           </p>
 
@@ -702,7 +702,7 @@ export function CareerSimulator() {
                 </p>
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-2">
-                <Pill tone="amber">{sim.multipliers.tagAssumption}</Pill>
+                <Pill tone="caution">{sim.multipliers.tagAssumption}</Pill>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">
                   Vendor-grade · directional · range ${rangeLow}&ndash;$
                   {rangeHigh}
@@ -731,8 +731,8 @@ export function CareerSimulator() {
                     <p
                       className={cn(
                         "font-display text-lg",
-                        row.value > 1 && "text-emerald",
-                        row.value < 1 && "text-coral-deep",
+                        row.value > 1 && "text-verified",
+                        row.value < 1 && "text-signal-deep",
                         neutral && "text-ink-faint",
                       )}
                     >
@@ -740,7 +740,7 @@ export function CareerSimulator() {
                     </p>
                   </div>
                   <div className="mt-2">
-                    <Pill tone={row.sourced ? "emerald" : "amber"}>
+                    <Pill tone={row.sourced ? "verified" : "caution"}>
                       {row.sourced
                         ? sim.multipliers.tagSourced
                         : sim.multipliers.tagAssumption}
@@ -775,7 +775,7 @@ export function CareerSimulator() {
               <Source {...sim.realityTax.unpaid.source} />
             </div>
           </div>
-          <div className="rounded-[var(--radius-lg)] border border-coral/30 bg-coral-tint p-6">
+          <div className="rounded-[var(--radius-lg)] border border-signal/30 bg-signal-tint p-6">
             <h3 className="font-display text-lg leading-snug text-ink">
               {sim.realityTax.nonPayment.title}
             </h3>

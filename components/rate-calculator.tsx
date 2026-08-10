@@ -30,7 +30,7 @@ function Field({
     <label className="block">
       <span className="flex items-baseline justify-between gap-2">
         <span className="text-sm font-medium text-ink">{label}</span>
-        <span className="font-mono text-sm font-semibold text-coral">
+        <span className="font-mono text-sm font-semibold text-signal">
           {prefix}
           {value.toLocaleString()}
           {suffix}
@@ -43,7 +43,7 @@ function Field({
         step={step}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
-        className="mt-2 w-full accent-coral"
+        className="mt-2 w-full accent-signal"
         aria-label={label}
       />
       {hint && <span className="mt-1 block text-xs text-ink-faint">{hint}</span>}
@@ -89,8 +89,8 @@ export function RateCalculator() {
 
         {/* outputs */}
         <div className="flex flex-col gap-4">
-          <div className="rounded-2xl border border-coral/30 bg-coral-tint p-6">
-            <p className="kicker text-coral-deep">Your real hourly rate</p>
+          <div className="rounded-2xl border border-signal/30 bg-signal-tint p-6">
+            <p className="kicker text-signal-deep">Your real hourly rate</p>
             <p className="mt-2 font-display text-4xl leading-none text-ink">
               ${effHourlyUsd.toFixed(2)}
               <span className="text-xl text-ink-soft"> / hr</span>
@@ -100,7 +100,7 @@ export function RateCalculator() {
               actually work.
             </p>
             {shrink > 0 && (
-              <p className="mt-3 border-l-2 border-coral pl-3 text-sm font-medium text-ink">
+              <p className="mt-3 border-l-2 border-signal pl-3 text-sm font-medium text-ink">
                 That is {shrink}% below your ${rate}/hr headline rate. That gap is
                 the fees, the costs, the tax, and the unpaid time nobody bills for.
               </p>
@@ -122,7 +122,7 @@ export function RateCalculator() {
           </dl>
 
           <p className="flex items-start gap-2 rounded-2xl border border-line bg-paper p-4 text-xs leading-relaxed text-ink-soft">
-            <Icon name="scan-eye" size={16} className="mt-0.5 shrink-0 text-emerald" weight="bold" />
+            <Icon name="scan-eye" size={16} className="mt-0.5 shrink-0 text-verified" weight="bold" />
             An estimate, not a promise. The point is the shape: never compare a
             headline rate to a local salary before you subtract everything above.
           </p>
