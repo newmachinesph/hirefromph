@@ -19,7 +19,7 @@ type QuizOption = {
   label: string;
   desc: string;
   icon?: string;
-  accent?: "coral" | "emerald" | "amber" | "indigo";
+  accent?: "signal" | "verified" | "caution" | "info";
 };
 
 type Question = {
@@ -69,17 +69,17 @@ const NAV_LABEL: Record<string, string> = {
 };
 
 const accentSelected: Record<string, string> = {
-  coral: "aria-pressed:border-coral aria-pressed:bg-coral-tint",
-  emerald: "aria-pressed:border-emerald aria-pressed:bg-emerald-tint",
-  amber: "aria-pressed:border-amber aria-pressed:bg-amber-tint",
-  indigo: "aria-pressed:border-indigo aria-pressed:bg-indigo-tint",
+  signal: "aria-pressed:border-signal aria-pressed:bg-signal-tint",
+  verified: "aria-pressed:border-verified aria-pressed:bg-verified-tint",
+  caution: "aria-pressed:border-caution aria-pressed:bg-caution-tint",
+  info: "aria-pressed:border-info aria-pressed:bg-info-tint",
   neutral: "aria-pressed:border-ink aria-pressed:bg-paper-3",
 };
 const iconTone: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 
 const stepVariants: Variants = {
@@ -108,7 +108,7 @@ function ProgressRing({ value, max }: { value: number; max: number }) {
           cy="50"
           r={r}
           fill="none"
-          stroke="var(--coral)"
+          stroke="var(--signal)"
           strokeWidth="8"
           strokeLinecap="round"
           strokeDasharray={c}
@@ -237,7 +237,7 @@ export function PlanWizard() {
               aria-label={`Question ${step + 1} of ${QUESTIONS.length}`}
             >
               <div
-                className="h-full rounded-full bg-coral transition-[width] duration-500 ease-out"
+                className="h-full rounded-full bg-signal transition-[width] duration-500 ease-out"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
@@ -260,7 +260,7 @@ export function PlanWizard() {
                   <p className="kicker">Your personalized plan</p>
                   <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
                     30 days for {trackLabel ?? "your online career"}, {" "}
-                    <span className="text-coral">{hoursLabel} a day.</span>
+                    <span className="text-signal">{hoursLabel} a day.</span>
                   </h3>
                   {experienceLabel && (
                     <p className="mt-2 text-sm text-ink-soft">
@@ -288,7 +288,7 @@ export function PlanWizard() {
                           </h4>
                           <p className="mt-1 text-sm text-ink-soft">{week.focus}</p>
                         </div>
-                        <Pill tone={doneInWeek === week.days.length ? "emerald" : "neutral"}>
+                        <Pill tone={doneInWeek === week.days.length ? "verified" : "neutral"}>
                           {doneInWeek}/{week.days.length} done
                         </Pill>
                       </div>
@@ -303,7 +303,7 @@ export function PlanWizard() {
                                 checked={checked}
                                 onChange={() => togglePlanDay(day.day)}
                                 aria-label={`Mark day ${day.day} complete: ${day.task}`}
-                                className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-coral"
+                                className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-signal"
                               />
                               <label
                                 htmlFor={`plan-day-${day.day}`}
@@ -342,7 +342,7 @@ export function PlanWizard() {
                 <button
                   type="button"
                   onClick={startOver}
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-coral"
+                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-signal"
                 >
                   <RotateCcw size={14} />
                   Start over
@@ -404,7 +404,7 @@ export function PlanWizard() {
                       </span>
                       <span
                         className={cn(
-                          "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-emerald text-white opacity-0 transition-opacity",
+                          "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-verified text-white opacity-0 transition-opacity",
                           selected && "opacity-100",
                         )}
                       >

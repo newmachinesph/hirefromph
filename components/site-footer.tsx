@@ -16,7 +16,7 @@ export function SiteFooter() {
                 onDark
                 wordmark={
                   <span className="text-3xl">
-                    Dev<span className="text-coral-light">Up</span>
+                    Dev<span className="text-signal-light">Up</span>
                   </span>
                 }
               />
@@ -34,7 +34,7 @@ export function SiteFooter() {
                 href={site.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-paper-2 transition-colors hover:border-coral-light hover:text-coral-light"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-paper-2 transition-colors hover:border-signal-light hover:text-signal-light"
               >
                 <FacebookGlyph size={16} />
                 Follow our Page
@@ -43,7 +43,7 @@ export function SiteFooter() {
                 href={site.social.facebookGroup}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-coral px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-full bg-signal px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-signal-deep hover:-translate-y-0.5"
               >
                 <Users size={16} />
                 Join our Group
@@ -64,7 +64,7 @@ export function SiteFooter() {
                     <li key={l.href}>
                       <Link
                         href={l.href}
-                        className="text-sm text-paper-2/80 transition-colors hover:text-coral-light"
+                        className="text-sm text-paper-2/80 transition-colors hover:text-signal-light"
                       >
                         {l.label}
                       </Link>

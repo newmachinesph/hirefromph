@@ -14,22 +14,22 @@ export const metadata = pageMeta({
 });
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentBorder: Record<string, string> = {
-  coral: "border-coral",
-  amber: "border-amber",
-  emerald: "border-emerald",
-  indigo: "border-indigo",
+  signal: "border-signal",
+  caution: "border-caution",
+  verified: "border-verified",
+  info: "border-info",
 };
 
 /* ---------------------------------------------------------------- Source */
@@ -40,7 +40,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       <span className="text-balance">Source: {label}</span>
       <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
@@ -55,7 +55,7 @@ function fmt(value: number): string {
   return `${sign}${Math.abs(value)}%`;
 }
 
-/** Diverging bar, zero in the middle. Negative left (coral), positive right (emerald). */
+/** Diverging bar, zero in the middle. Negative left (signal), positive right (verified). */
 function ChangeBar({
   label,
   value,
@@ -73,7 +73,7 @@ function ChangeBar({
     <li className="grid gap-2 py-1 sm:grid-cols-[minmax(0,15rem)_1fr] sm:items-center sm:gap-6">
       <div>
         <p className="text-sm font-medium leading-snug text-ink">{label}</p>
-        {note && <p className="mt-0.5 text-xs leading-snug text-emerald">{note}</p>}
+        {note && <p className="mt-0.5 text-xs leading-snug text-verified">{note}</p>}
       </div>
       <div className="flex items-center gap-3">
         <div className="relative h-7 flex-1 overflow-hidden rounded-lg border border-line bg-paper">
@@ -83,7 +83,7 @@ function ChangeBar({
           />
           <span
             aria-hidden
-            className={`absolute inset-y-1 rounded-sm ${up ? "bg-emerald" : "bg-coral"}`}
+            className={`absolute inset-y-1 rounded-sm ${up ? "bg-verified" : "bg-signal"}`}
             style={
               up
                 ? { left: "50%", width: `${width}%` }
@@ -92,7 +92,7 @@ function ChangeBar({
           />
         </div>
         <span
-          className={`w-14 shrink-0 text-right font-mono text-xs font-semibold ${up ? "text-emerald" : "text-coral"}`}
+          className={`w-14 shrink-0 text-right font-mono text-xs font-semibold ${up ? "text-verified" : "text-signal"}`}
         >
           {fmt(value)}
         </span>
@@ -154,7 +154,7 @@ export default function RealityPage() {
         lead={reality.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {reality.creed}
           </blockquote>
         </Reveal>
@@ -200,7 +200,7 @@ export default function RealityPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-coral">
+            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-signal">
               {reality.readANumber.note}
             </p>
           </Reveal>
@@ -229,7 +229,7 @@ export default function RealityPage() {
                     />
                     <p className={`kicker ${accentText[m.accent]}`}>{m.tag}</p>
                   </div>
-                  <p className="mt-4 font-display text-lg leading-snug text-ink-faint line-through decoration-coral/50 decoration-2">
+                  <p className="mt-4 font-display text-lg leading-snug text-ink-faint line-through decoration-signal/50 decoration-2">
                     {m.myth}
                   </p>
                   <h3 className="mt-4 font-display text-[length:var(--text-h3)] leading-snug text-balance">
@@ -272,7 +272,7 @@ export default function RealityPage() {
             <SectionHeading kicker={ai.kicker} title={ai.title} lead={ai.lead} />
           </Reveal>
           <Reveal i={1}>
-            <p className="mt-6 max-w-2xl border-l-2 border-indigo pl-5 text-sm font-medium leading-relaxed text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-info pl-5 text-sm font-medium leading-relaxed text-ink">
               {ai.framing}
             </p>
           </Reveal>
@@ -296,10 +296,10 @@ export default function RealityPage() {
                     </figcaption>
 
                     {chart.baseline && (
-                      <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-indigo/25 bg-indigo-tint px-3 py-1 text-xs font-medium text-indigo">
+                      <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-info/25 bg-info-tint px-3 py-1 text-xs font-medium text-info">
                         <span
                           aria-hidden
-                          className="h-3 w-0 border-l-2 border-dashed border-indigo"
+                          className="h-3 w-0 border-l-2 border-dashed border-info"
                         />
                         {chart.baseline.label}
                       </p>
@@ -360,15 +360,15 @@ export default function RealityPage() {
 
           {/* counter-evidence */}
           <Reveal i={1}>
-            <div className="mt-5 rounded-[var(--radius-lg)] border border-emerald/30 bg-emerald-tint p-8 lg:p-10">
-              <Kicker className="text-emerald">{ai.counter.kicker}</Kicker>
+            <div className="mt-5 rounded-[var(--radius-lg)] border border-verified/30 bg-verified-tint p-8 lg:p-10">
+              <Kicker className="text-verified">{ai.counter.kicker}</Kicker>
               <h3 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
                 {ai.counter.title}
               </h3>
               <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
                 {ai.counter.body}
               </p>
-              <p className="mt-5 max-w-3xl border-l-2 border-emerald pl-5 text-sm font-medium leading-relaxed text-ink">
+              <p className="mt-5 max-w-3xl border-l-2 border-verified pl-5 text-sm font-medium leading-relaxed text-ink">
                 {ai.counter.conclusion}
               </p>
               <div className="mt-6">
@@ -473,8 +473,8 @@ export default function RealityPage() {
 
           <div className="mt-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
             <Reveal>
-              <div className="flex h-full flex-col justify-center rounded-[var(--radius-lg)] border border-emerald/40 bg-emerald/10 p-8">
-                <p className="font-display text-[length:var(--text-display)] leading-none text-emerald">
+              <div className="flex h-full flex-col justify-center rounded-[var(--radius-lg)] border border-verified/40 bg-verified/10 p-8">
+                <p className="font-display text-[length:var(--text-display)] leading-none text-verified">
                   {thesis.premium.stat}
                 </p>
                 <p className="mt-3 font-display text-2xl leading-tight text-paper-2">
@@ -488,7 +488,7 @@ export default function RealityPage() {
                     href={thesis.premium.source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-coral"
+                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-signal"
                   >
                     <span className="text-balance">
                       Source: {thesis.premium.source.label}
@@ -507,7 +507,7 @@ export default function RealityPage() {
                 <p className="mt-4 text-sm leading-relaxed text-paper-2/70">
                   {thesis.nuance.body}
                 </p>
-                <blockquote className="mt-6 border-l-2 border-coral pl-5">
+                <blockquote className="mt-6 border-l-2 border-signal pl-5">
                   <p className="font-display text-xl leading-snug text-paper-2">
                     &ldquo;{thesis.nuance.quote}&rdquo;
                   </p>
@@ -520,7 +520,7 @@ export default function RealityPage() {
                     href={thesis.nuance.source.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-coral"
+                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-signal"
                   >
                     <span className="text-balance">
                       Source: {thesis.nuance.source.label}
@@ -533,7 +533,7 @@ export default function RealityPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-10 max-w-4xl border-l-2 border-emerald pl-6 font-display text-[length:var(--text-h3)] leading-snug text-paper-2">
+            <p className="mt-10 max-w-4xl border-l-2 border-verified pl-6 font-display text-[length:var(--text-h3)] leading-snug text-paper-2">
               {thesis.conclusion}
             </p>
           </Reveal>
@@ -551,7 +551,7 @@ export default function RealityPage() {
               <div className="mt-6">
                 <a
                   href="/indispensable"
-                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-coral"
+                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
                 >
                   <span className="link-sweep">
                     See the full freelancer vs employee breakdown on Become Indispensable
@@ -571,8 +571,8 @@ export default function RealityPage() {
         </Reveal>
 
         <Reveal i={1}>
-          <div className="mt-10 rounded-[var(--radius-lg)] border border-amber/40 bg-amber-tint p-8 lg:p-10">
-            <Pill tone="amber">Warning label</Pill>
+          <div className="mt-10 rounded-[var(--radius-lg)] border border-caution/40 bg-caution-tint p-8 lg:p-10">
+            <Pill tone="caution">Warning label</Pill>
             <h3 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
               {pay.warning.title}
             </h3>
@@ -616,11 +616,11 @@ export default function RealityPage() {
               <Reveal key={u.id} i={idx % 3}>
                 <article className="grid gap-5 rounded-2xl border border-line bg-paper-2 p-6 lg:grid-cols-[1fr_1.3fr] lg:items-start lg:gap-8">
                   <div>
-                    <p className="font-display text-lg leading-snug text-ink-faint line-through decoration-coral/50 decoration-2">
+                    <p className="font-display text-lg leading-snug text-ink-faint line-through decoration-signal/50 decoration-2">
                       {u.claim}
                     </p>
                     <p className="mt-3">
-                      <Pill tone="coral">{u.verdict}</Pill>
+                      <Pill tone="signal">{u.verdict}</Pill>
                     </p>
                   </div>
                   <p className="text-sm leading-relaxed text-ink-soft">{u.why}</p>
@@ -630,7 +630,7 @@ export default function RealityPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-coral">
+            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-signal">
               {unknown.close}
             </p>
           </Reveal>
@@ -668,16 +668,16 @@ export default function RealityPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-coral/40 hover:shadow-[var(--shadow-md)]"
+                      className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-signal/40 hover:shadow-[var(--shadow-md)]"
                     >
                       <p className="kicker">{item.org}</p>
-                      <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-coral">
+                      <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-signal">
                         {item.title}
                       </h4>
                       <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
                         {item.why}
                       </p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-faint transition-colors group-hover:text-coral">
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-faint transition-colors group-hover:text-signal">
                         Open the source
                         <ExternalLink size={12} />
                       </span>
@@ -712,7 +712,7 @@ export default function RealityPage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

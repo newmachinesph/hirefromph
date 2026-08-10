@@ -13,11 +13,11 @@ export const metadata = pageMeta({
     "The free shelf for Filipino online professionals: verified free courses, government programs, docs, and YouTube channels that actually get you hired, plus how to judge any free course before it takes your week, and how to turn study into proof.",
 });
 
-const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {
-  free: "emerald",
-  "open-source": "emerald",
-  freemium: "indigo",
-  "free-trial": "amber",
+const costTone: Record<string, "verified" | "info" | "caution" | "neutral"> = {
+  free: "verified",
+  "open-source": "verified",
+  freemium: "info",
+  "free-trial": "caution",
   paid: "neutral",
 };
 const costLabel: Record<string, string> = {
@@ -35,13 +35,13 @@ type ShelfGroup = { id: string; title: string; note: string; items: ShelfItem[];
 function SavingsCallout({ savings }: { savings: Savings }) {
   const monthly = savings.basis.reduce((sum, b) => sum + b.monthly, 0);
   return (
-    <div className="mt-5 rounded-2xl border border-emerald/25 bg-emerald-tint p-6">
+    <div className="mt-5 rounded-2xl border border-verified/25 bg-verified-tint p-6">
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-        <span className="font-display text-[length:var(--text-h2)] leading-none text-emerald">
+        <span className="font-display text-[length:var(--text-h2)] leading-none text-verified">
           ${monthly}
-          <span className="text-lg font-semibold text-emerald/70">/mo</span>
+          <span className="text-lg font-semibold text-verified/70">/mo</span>
         </span>
-        <span className="text-sm font-semibold text-emerald/80">
+        <span className="text-sm font-semibold text-verified/80">
           about ${monthly * 12} a year, saved on tools alone
         </span>
       </div>
@@ -71,13 +71,13 @@ export default function ResourcesPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -110,7 +110,7 @@ export default function ResourcesPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-coral">{judge.note}</p>
+            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-signal">{judge.note}</p>
           </Reveal>
         </div>
       </section>
@@ -144,19 +144,19 @@ export default function ResourcesPage() {
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-coral/40 hover:shadow-[var(--shadow-md)]"
+                      className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-signal/40 hover:shadow-[var(--shadow-md)]"
                     >
                       <div className="flex items-center justify-between gap-2">
                         <p className="kicker">{item.org}</p>
-                        <Pill tone={costTone[item.cost] ?? "emerald"}>
+                        <Pill tone={costTone[item.cost] ?? "verified"}>
                           {costLabel[item.cost] ?? "Open"}
                         </Pill>
                       </div>
-                      <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-coral">
+                      <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-signal">
                         {item.title}
                       </h4>
                       <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{item.why}</p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-faint transition-colors group-hover:text-coral">
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-faint transition-colors group-hover:text-signal">
                         Open the resource
                         <ExternalLink size={12} />
                       </span>
@@ -184,7 +184,7 @@ export default function ResourcesPage() {
             {protocol.steps.map((s, idx) => (
               <Reveal key={s.n} i={idx % 5}>
                 <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <span className="font-display text-4xl leading-none text-coral">0{s.n}</span>
+                  <span className="font-display text-4xl leading-none text-signal">0{s.n}</span>
                   <h3 className="mt-4 font-display text-lg leading-tight text-paper-2">{s.title}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-paper-2/70">{s.desc}</p>
                 </div>
@@ -198,7 +198,7 @@ export default function ResourcesPage() {
                 <a
                   key={c.href}
                   href={c.href}
-                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-coral"
+                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
                 >
                   <span className="link-sweep">{c.label}</span>
                   <ExternalLink size={14} className="opacity-70" />
@@ -220,7 +220,7 @@ export default function ResourcesPage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

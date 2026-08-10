@@ -86,7 +86,7 @@ export function RateWorksheet() {
     <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 lg:p-8">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="kicker text-coral">Price from live posts</p>
+          <p className="kicker text-signal">Price from live posts</p>
           <h3 className="mt-2 max-w-xl font-display text-[length:var(--text-h3)] leading-snug">
             Don&rsquo;t quote a number. Read it off the market.
           </h3>
@@ -168,7 +168,7 @@ export function RateWorksheet() {
                 type="button"
                 onClick={() => remove(p.id)}
                 aria-label="Remove post"
-                className="grid h-8 w-8 place-items-center justify-self-end rounded-lg text-ink-faint transition-colors hover:bg-paper-3 hover:text-coral"
+                className="grid h-8 w-8 place-items-center justify-self-end rounded-lg text-ink-faint transition-colors hover:bg-paper-3 hover:text-signal"
               >
                 <Trash2 size={15} />
               </button>
@@ -210,7 +210,7 @@ export function RateWorksheet() {
                 key={c.label}
                 className={cn(
                   "rounded-xl border p-4",
-                  c.hero ? "border-coral bg-coral-tint/40" : "border-line bg-paper-2",
+                  c.hero ? "border-signal bg-signal-tint/40" : "border-line bg-paper-2",
                 )}
               >
                 <p className="kicker text-ink-faint">{c.label}</p>
@@ -221,7 +221,7 @@ export function RateWorksheet() {
               </div>
             ))}
           </div>
-          <p className="mt-5 border-l-2 border-coral pl-4 text-sm leading-relaxed text-ink">
+          <p className="mt-5 border-l-2 border-signal pl-4 text-sm leading-relaxed text-ink">
             Just starting and can prove the skill? Aim near the{" "}
             <strong>middle</strong>, not the floor — the floor is where
             under-priced beginners cluster. Experienced with a portfolio? Ask

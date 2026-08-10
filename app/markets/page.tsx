@@ -13,16 +13,16 @@ export const metadata = pageMeta({
 });
 
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentBorder: Record<string, string> = {
-  coral: "border-coral",
-  amber: "border-amber",
-  emerald: "border-emerald",
-  indigo: "border-indigo",
+  signal: "border-signal",
+  caution: "border-caution",
+  verified: "border-verified",
+  info: "border-info",
 };
 
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
@@ -46,14 +46,14 @@ export default function MarketsPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -66,7 +66,7 @@ export default function MarketsPage() {
             <SectionHeading kicker={overlap.kicker} title={overlap.title} lead={overlap.lead} />
           </Reveal>
           <Reveal i={1}>
-            <p className="mt-8 max-w-3xl border-l-2 border-emerald pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-8 max-w-3xl border-l-2 border-verified pl-5 font-display text-xl leading-snug text-ink">
               {overlap.note}
             </p>
           </Reveal>
@@ -124,12 +124,12 @@ export default function MarketsPage() {
             {strategies.items.map((s, idx) => (
               <Reveal key={s.name} i={idx % 3}>
                 <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-coral text-white">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-signal text-white">
                     <Icon name={s.icon} size={20} />
                   </span>
                   <h3 className="mt-5 font-display text-lg leading-tight text-paper-2">{s.name}</h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-paper-2/70">{s.desc}</p>
-                  <p className="mt-4 border-l-2 border-coral pl-4 text-sm leading-relaxed text-paper-2/90">
+                  <p className="mt-4 border-l-2 border-signal pl-4 text-sm leading-relaxed text-paper-2/90">
                     <span className="kicker mb-1 block text-paper-2/50">The trade-off</span>
                     {s.tradeoff}
                   </p>
@@ -142,7 +142,7 @@ export default function MarketsPage() {
             <div className="mt-10">
               <a
                 href={strategies.crossref.href}
-                className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-coral"
+                className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
               >
                 <span className="link-sweep">{strategies.crossref.label}</span>
                 <ExternalLink size={14} className="opacity-70" />
@@ -166,7 +166,7 @@ export default function MarketsPage() {
           {findIndustry.steps.map((s, idx) => (
             <Reveal key={s.n} i={idx % 4}>
               <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="font-display text-4xl leading-none text-coral">0{s.n}</span>
+                <span className="font-display text-4xl leading-none text-signal">0{s.n}</span>
                 <h3 className="mt-4 font-display text-lg leading-tight">{s.title}</h3>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
               </div>
@@ -198,7 +198,7 @@ export default function MarketsPage() {
                 <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
                   <p className="text-3xl" aria-hidden>{v.flag}</p>
                   <h3 className="mt-4 font-display text-lg leading-snug">{v.country}</h3>
-                  <p className="kicker mt-1 text-coral">{v.visa}</p>
+                  <p className="kicker mt-1 text-signal">{v.visa}</p>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{v.detail}</p>
                   <a
                     href={v.source.url}
@@ -215,7 +215,7 @@ export default function MarketsPage() {
 
           <Reveal i={1}>
             <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-soft">{abroad.note}</p>
-            <p className="mt-5 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-5 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {abroad.point}
             </p>
           </Reveal>
@@ -233,7 +233,7 @@ export default function MarketsPage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

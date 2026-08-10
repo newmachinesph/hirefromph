@@ -16,10 +16,10 @@ export const metadata: Metadata = pageMeta({
 });
 
 const accentBg: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  indigo: "bg-indigo-tint text-indigo",
-  amber: "bg-amber-tint text-amber-text",
-  emerald: "bg-emerald-tint text-emerald",
+  signal: "bg-signal-tint text-signal-deep",
+  info: "bg-info-tint text-info",
+  caution: "bg-caution-tint text-caution-text",
+  verified: "bg-verified-tint text-verified",
 };
 
 export default function Page() {
@@ -31,7 +31,7 @@ export default function Page() {
         title={
           <>
             Don&rsquo;t wait for a list.{" "}
-            <span className="text-coral">Learn to find the work.</span>
+            <span className="text-signal">Learn to find the work.</span>
           </>
         }
         lead={findwork.intro}
@@ -43,8 +43,8 @@ export default function Page() {
         </Reveal>
 
         <Reveal i={4}>
-          <div className="mt-6 flex items-start gap-4 rounded-2xl border border-amber/30 bg-amber-tint px-6 py-5">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-amber/25 text-amber-text">
+          <div className="mt-6 flex items-start gap-4 rounded-2xl border border-caution/30 bg-caution-tint px-6 py-5">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-caution/25 text-caution-text">
               <AlertTriangle size={20} aria-hidden />
             </span>
             <p className="text-sm font-medium leading-relaxed text-[#6b4d00]">

@@ -121,7 +121,7 @@ export function FollowModal() {
           >
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-coral/10 blur-2xl"
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-signal/10 blur-2xl"
             />
             <button
               type="button"
@@ -148,11 +148,11 @@ export function FollowModal() {
 
               <ul className="mt-5 flex flex-col gap-2.5 text-sm text-ink">
                 <li className="flex items-center gap-2.5">
-                  <Megaphone size={16} className="shrink-0 text-coral" />
+                  <Megaphone size={16} className="shrink-0 text-signal" />
                   Important news that affects this career, explained early
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Sparkles size={16} className="shrink-0 text-emerald" />
+                  <Sparkles size={16} className="shrink-0 text-verified" />
                   New guides and tools the moment they land
                 </li>
               </ul>
@@ -166,7 +166,7 @@ export function FollowModal() {
                     track("follow_modal_join", { target: "group" });
                     remember();
                   }}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-coral px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-signal-deep hover:-translate-y-0.5"
                 >
                   <Users size={16} />
                   Join our Facebook group
@@ -180,7 +180,7 @@ export function FollowModal() {
                       track("follow_modal_follow", { target: "page" });
                       remember();
                     }}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-soft transition-colors hover:text-coral"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-soft transition-colors hover:text-signal"
                   >
                     <FacebookGlyph size={15} />
                     Follow our page

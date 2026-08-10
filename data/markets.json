@@ -22,7 +22,7 @@
       {
         "name": "United States",
         "flag": "🇺🇸",
-        "accent": "coral",
+        "accent": "signal",
         "tz": "ET to PT (UTC-5 to -8)",
         "offset": "About 12 to 16 hours behind PH",
         "overlap": "PH evening and night lines up with US working hours. Real-time work usually means a night shift.",
@@ -34,7 +34,7 @@
       {
         "name": "United Kingdom & Europe",
         "flag": "🇬🇧",
-        "accent": "emerald",
+        "accent": "verified",
         "tz": "GMT to CET (UTC+0 to +2)",
         "offset": "About 6 to 8 hours behind PH",
         "overlap": "PH afternoon overlaps their morning. Far more daytime-friendly than the US.",
@@ -46,7 +46,7 @@
       {
         "name": "Australia & New Zealand",
         "flag": "🇦🇺",
-        "accent": "indigo",
+        "accent": "info",
         "tz": "AEST to NZST (UTC+10 to +13)",
         "offset": "About 2 to 5 hours ahead of PH",
         "overlap": "Almost a full workday overlap. Your morning is their late morning.",
@@ -58,7 +58,7 @@
       {
         "name": "Middle East",
         "flag": "🇦🇪",
-        "accent": "amber",
+        "accent": "caution",
         "tz": "Gulf Standard Time (UTC+3 to +4)",
         "offset": "About 4 to 5 hours behind PH",
         "overlap": "PH afternoon overlaps most of their workday.",
@@ -70,7 +70,7 @@
       {
         "name": "Canada",
         "flag": "🇨🇦",
-        "accent": "coral",
+        "accent": "signal",
         "tz": "ET to PT, like the US",
         "offset": "About 12 to 16 hours behind PH",
         "overlap": "The same night-shift reality as the US.",
@@ -82,7 +82,7 @@
       {
         "name": "Singapore, Hong Kong & regional Asia",
         "flag": "🇸🇬",
-        "accent": "emerald",
+        "accent": "verified",
         "tz": "UTC+8, the same as PH",
         "offset": "No time difference",
         "overlap": "Perfect overlap. No graveyard shift, ever.",

@@ -200,12 +200,12 @@
     ],
     "qualityLevels": [
       { "count": 0, "label": "Empty", "tone": "neutral", "note": "A prompt needs at least a Task before it can do anything." },
-      { "count": 1, "label": "Bare", "tone": "coral", "note": "This will produce something generic, it doesn't know your situation yet." },
-      { "count": 2, "label": "Thin", "tone": "coral", "note": "Still mostly guessing. Every gap gets filled with a generic assumption." },
-      { "count": 3, "label": "Half-built", "tone": "amber", "note": "Getting somewhere, but the parts you skipped are exactly where it turns generic." },
-      { "count": 4, "label": "Workable", "tone": "amber", "note": "Usable, but the gaps below will still produce generic output." },
-      { "count": 5, "label": "Strong", "tone": "emerald", "note": "One gap left, usually the difference between output, and output that sounds like you." },
-      { "count": 6, "label": "Complete", "tone": "emerald", "note": "All six parts filled. Copy it, run it, then diagnose whatever's still off." }
+      { "count": 1, "label": "Bare", "tone": "signal", "note": "This will produce something generic, it doesn't know your situation yet." },
+      { "count": 2, "label": "Thin", "tone": "signal", "note": "Still mostly guessing. Every gap gets filled with a generic assumption." },
+      { "count": 3, "label": "Half-built", "tone": "caution", "note": "Getting somewhere, but the parts you skipped are exactly where it turns generic." },
+      { "count": 4, "label": "Workable", "tone": "caution", "note": "Usable, but the gaps below will still produce generic output." },
+      { "count": 5, "label": "Strong", "tone": "verified", "note": "One gap left, usually the difference between output, and output that sounds like you." },
+      { "count": 6, "label": "Complete", "tone": "verified", "note": "All six parts filled. Copy it, run it, then diagnose whatever's still off." }
     ]
   },
 

@@ -21,23 +21,23 @@ type Task = (typeof tasksData.tasks)[number];
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-const DIFFICULTY_TONE: Record<string, "emerald" | "amber" | "coral"> = {
-  Starter: "emerald",
-  Intermediate: "amber",
-  Advanced: "coral",
+const DIFFICULTY_TONE: Record<string, "verified" | "caution" | "signal"> = {
+  Starter: "verified",
+  Intermediate: "caution",
+  Advanced: "signal",
 };
 
 const iconTone: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 
 const trackNameById: Record<string, string> = {
@@ -87,7 +87,7 @@ function Linkify({ text }: { text: string }) {
           <Link
             key={i}
             href={part}
-            className="font-semibold text-ink underline decoration-coral/50 underline-offset-2 hover:text-coral"
+            className="font-semibold text-ink underline decoration-signal/50 underline-offset-2 hover:text-signal"
           >
             {part}
           </Link>
@@ -167,8 +167,8 @@ export function MicroTasks() {
             transition={{ duration: 0.25, ease: EASE }}
           >
             {recommended.length > 0 && (
-              <div className="mb-10 rounded-2xl border border-coral/30 bg-coral-tint/40 p-6">
-                <p className="kicker text-coral-deep">
+              <div className="mb-10 rounded-2xl border border-signal/30 bg-signal-tint/40 p-6">
+                <p className="kicker text-signal-deep">
                   Recommended for your path, {trackNameById[state.track ?? ""]}
                 </p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -260,7 +260,7 @@ function PortfolioCounter({ count, hydrated }: { count: number; hydrated: boolea
     <div
       className={cn(
         "mb-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border p-6",
-        celebrate ? "border-emerald/40 bg-emerald-tint/50" : "border-line bg-paper-2",
+        celebrate ? "border-verified/40 bg-verified-tint/50" : "border-line bg-paper-2",
       )}
     >
       <div>
@@ -268,7 +268,7 @@ function PortfolioCounter({ count, hydrated }: { count: number; hydrated: boolea
         <p className="mt-1.5 max-w-xl font-display text-xl leading-snug text-balance sm:text-2xl">
           {celebrate ? (
             <>
-              <span className="text-emerald">{count}</span> micro-task{count === 1 ? "" : "s"} completed
+              <span className="text-verified">{count}</span> micro-task{count === 1 ? "" : "s"} completed
               → your portfolio has {count} piece{count === 1 ? "" : "s"}.
             </>
           ) : (
@@ -326,14 +326,14 @@ function TaskCard({ task, done, onOpen }: { task: Task; done: boolean; onOpen: (
       transition={{ duration: 0.3, ease: EASE }}
       className={cn(
         "group flex h-full flex-col rounded-2xl border p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
-        done ? "border-emerald/50 bg-emerald-tint/40" : "border-line bg-paper-2 hover:border-ink",
+        done ? "border-verified/50 bg-verified-tint/40" : "border-line bg-paper-2 hover:border-ink",
       )}
     >
       <div className="flex items-start justify-between gap-3">
         <span
           className={cn(
             "grid h-11 w-11 shrink-0 place-items-center rounded-xl",
-            done ? "bg-emerald text-white" : iconTone[task.accent],
+            done ? "bg-verified text-white" : iconTone[task.accent],
           )}
         >
           {done ? <Check size={20} /> : <Icon name={task.icon} size={20} />}
@@ -346,7 +346,7 @@ function TaskCard({ task, done, onOpen }: { task: Task; done: boolean; onOpen: (
       <div className="mt-4 flex items-center justify-between border-t border-line pt-4">
         <span className="text-xs font-medium text-ink-faint">{task.time}</span>
         {done ? (
-          <span className="inline-flex items-center gap-1 text-sm font-semibold text-emerald">
+          <span className="inline-flex items-center gap-1 text-sm font-semibold text-verified">
             <Check size={14} /> Built
           </span>
         ) : (
@@ -446,7 +446,7 @@ function TaskDetail({
             <div key={r.name} className="flex flex-col rounded-2xl border border-line bg-paper-2 p-5">
               <div className="flex items-center justify-between gap-2">
                 <Pill tone="neutral">{r.type}</Pill>
-                {r.free && <span className="text-xs font-semibold text-emerald">Open</span>}
+                {r.free && <span className="text-xs font-semibold text-verified">Open</span>}
               </div>
               <p className="mt-3 font-display text-base leading-snug">{r.name}</p>
               <p className="mt-1.5 flex-1 text-sm leading-relaxed text-ink-soft">{r.what}</p>
@@ -459,7 +459,7 @@ function TaskDetail({
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-coral"
+                  className="group mt-4 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-signal"
                 >
                   Open
                   <ExternalLink
@@ -515,7 +515,7 @@ function TaskDetail({
         <div>
           <div className="flex items-center justify-between">
             <h3 className="kicker">Definition of done</h3>
-            <Pill tone={dodDone === task.definitionOfDone.length ? "emerald" : "neutral"}>
+            <Pill tone={dodDone === task.definitionOfDone.length ? "verified" : "neutral"}>
               {dodDone}/{task.definitionOfDone.length}
             </Pill>
           </div>
@@ -530,7 +530,7 @@ function TaskDetail({
                     id={fieldId}
                     checked={checked}
                     onChange={() => onToggleDod(i)}
-                    className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-emerald"
+                    className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-verified"
                   />
                   <label
                     htmlFor={fieldId}
@@ -549,7 +549,7 @@ function TaskDetail({
         <div>
           <div className="flex items-center justify-between">
             <h3 className="kicker">Self-critique</h3>
-            <Pill tone={critiqueDone === task.selfCritique.length ? "emerald" : "neutral"}>
+            <Pill tone={critiqueDone === task.selfCritique.length ? "verified" : "neutral"}>
               {critiqueDone}/{task.selfCritique.length}
             </Pill>
           </div>
@@ -564,7 +564,7 @@ function TaskDetail({
                     id={fieldId}
                     checked={checked}
                     onChange={() => onToggleCritique(i)}
-                    className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-emerald"
+                    className="mt-0.5 h-4 w-4 shrink-0 cursor-pointer accent-verified"
                   />
                   <label
                     htmlFor={fieldId}
@@ -592,10 +592,10 @@ function TaskDetail({
 
       {/* Stretch */}
       <section className="mt-6 max-w-2xl">
-        <div className="flex items-start gap-3 rounded-2xl border border-indigo/25 bg-indigo-tint/50 p-5">
-          <Sparkles size={18} className="mt-0.5 shrink-0 text-indigo" />
+        <div className="flex items-start gap-3 rounded-2xl border border-info/25 bg-info-tint/50 p-5">
+          <Sparkles size={18} className="mt-0.5 shrink-0 text-info" />
           <div>
-            <p className="kicker text-indigo">Stretch it further</p>
+            <p className="kicker text-info">Stretch it further</p>
             <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{task.stretch}</p>
           </div>
         </div>
@@ -620,8 +620,8 @@ function TaskDetail({
           className={cn(
             "inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300",
             isDone
-              ? "bg-emerald text-white hover:-translate-y-0.5"
-              : "bg-ink text-paper-2 hover:-translate-y-0.5 hover:bg-coral",
+              ? "bg-verified text-white hover:-translate-y-0.5"
+              : "bg-ink text-paper-2 hover:-translate-y-0.5 hover:bg-signal",
           )}
         >
           {isDone ? <Check size={16} /> : <Sparkles size={16} />}

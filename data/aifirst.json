@@ -47,7 +47,7 @@
         "purpose": "Deciding what to hand to AI, what to keep for yourself, and how to split the work.",
         "doThis": "Before you prompt, name the one part of this task only a human should own: the judgment call, the client relationship, the final sign-off. Give the rest away on purpose.",
         "icon": "split",
-        "accent": "coral"
+        "accent": "signal"
       },
       {
         "letter": "2",
@@ -55,7 +55,7 @@
         "purpose": "Telling the AI exactly what you want. The skill that used to be called prompting.",
         "doThis": "Give it a role, your real material, the exact task, and the rubric you will judge it by. Vague in, generic out, every time. This is what our AI Leverage page teaches in full.",
         "icon": "pen-line",
-        "accent": "indigo"
+        "accent": "info"
       },
       {
         "letter": "3",
@@ -63,7 +63,7 @@
         "purpose": "Judging whether the output is actually good. The skill the AI premium is really paying for.",
         "doThis": "Read the draft as the client's harshest critic. Where is it generic? What did it make up? A person who can tell good output from confident nonsense is worth more than the model.",
         "icon": "scan-eye",
-        "accent": "emerald"
+        "accent": "verified"
       },
       {
         "letter": "4",
@@ -71,7 +71,7 @@
         "purpose": "Taking responsibility for what you ship: checking facts, protecting data, owning the result.",
         "doThis": "Fact-check every name, number, and claim against a real source before it goes out under your name. The AI is not accountable to your client. You are.",
         "icon": "shield-check",
-        "accent": "amber"
+        "accent": "caution"
       }
     ],
     "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (open)", "url": "https://www.anthropic.com/ai-fluency/overview" },
@@ -88,7 +88,7 @@
         "id": "coding",
         "name": "Coding agents",
         "icon": "terminal",
-        "accent": "coral",
+        "accent": "signal",
         "what": "AI that reads a plain-English request and writes, edits, and runs real code for you, in your terminal or editor. You describe the outcome, it builds the thing.",
         "unlocks": "You no longer need to be a developer to ship a small internal tool, a landing page, a script that cleans a client's messy spreadsheet, or an automation that saves them hours a week. That is a deliverable a generalist could not have offered two years ago.",
         "tools": [
@@ -103,7 +103,7 @@
         "id": "open",
         "name": "Open-source & local AI",
         "icon": "boxes",
-        "accent": "indigo",
+        "accent": "info",
         "what": "Models and runtimes you can run on your own machine or cheaply in the cloud, with open weights. No per-message fee, and the data never leaves your control.",
         "unlocks": "Handle a client's private data without sending it to a third party, work offline, and stop paying per token once your volume grows. Being able to say your data stays on my machine is itself a selling point to a nervous client.",
         "tools": [
@@ -118,7 +118,7 @@
         "id": "image",
         "name": "AI image & audio",
         "icon": "image",
-        "accent": "emerald",
+        "accent": "verified",
         "what": "Generate and edit images, brand assets, mockups, and voiceovers from a description, then direct and refine them like an art director, not a button-pusher.",
         "unlocks": "Thumbnails, ad creative, product mockups, social graphics, and narration: the creative volume a small business needs weekly and cannot afford a studio for. Taste and direction are the scarce part. The render is cheap.",
         "tools": [
@@ -135,7 +135,7 @@
         "id": "video",
         "name": "AI video",
         "icon": "clapperboard",
-        "accent": "amber",
+        "accent": "caution",
         "what": "Generate clips from text or images, create talking-avatar videos, and turn one long video into dozens of short, captioned, platform-ready cuts.",
         "unlocks": "Short-form social clips, UGC-style ads, explainer and avatar videos, and turning a single podcast or webinar into a month of content. This is the +329% lane from the top of the page. The demand is real and the supply is still thin.",
         "tools": [
@@ -151,7 +151,7 @@
         "id": "automation",
         "name": "Workflow automation",
         "icon": "workflow",
-        "accent": "coral",
+        "accent": "signal",
         "what": "Connect the apps a business already uses so a trigger in one quietly does the right thing in another. No code, or AI-written code, depending on the tool.",
         "unlocks": "Sell outcomes, not hours: every new lead is enriched, tagged, and in your CRM within a minute, automatically. Once it is built it runs while you sleep, which is how you escape trading time for money.",
         "tools": [

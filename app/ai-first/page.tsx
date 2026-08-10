@@ -14,29 +14,29 @@ export const metadata = pageMeta({
 });
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentBorder: Record<string, string> = {
-  coral: "border-coral",
-  amber: "border-amber",
-  emerald: "border-emerald",
-  indigo: "border-indigo",
+  signal: "border-signal",
+  caution: "border-caution",
+  verified: "border-verified",
+  info: "border-info",
 };
 
-const costTone: Record<string, "emerald" | "indigo" | "amber" | "neutral"> = {
-  free: "emerald",
-  "open-source": "emerald",
-  freemium: "indigo",
-  "free-trial": "amber",
+const costTone: Record<string, "verified" | "info" | "caution" | "neutral"> = {
+  free: "verified",
+  "open-source": "verified",
+  freemium: "info",
+  "free-trial": "caution",
   paid: "neutral",
 };
 const costLabel: Record<string, string> = {
@@ -54,7 +54,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       <span className="text-balance">Source: {label}</span>
       <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
@@ -75,14 +75,14 @@ export default function AiFirstPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -104,7 +104,7 @@ export default function AiFirstPage() {
             {shift.stats.map((s, idx) => (
               <Reveal key={s.label} i={idx % 3}>
                 <article className="flex h-full flex-col rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                  <p className="font-display text-[length:var(--text-display)] leading-none text-emerald">
+                  <p className="font-display text-[length:var(--text-display)] leading-none text-verified">
                     {s.value}
                   </p>
                   <p className="mt-3 font-display text-lg leading-tight text-ink">
@@ -122,7 +122,7 @@ export default function AiFirstPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-8 max-w-3xl border-l-2 border-emerald pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-8 max-w-3xl border-l-2 border-verified pl-5 font-display text-xl leading-snug text-ink">
               {shift.note}
             </p>
           </Reveal>
@@ -185,7 +185,7 @@ export default function AiFirstPage() {
             />
           </Reveal>
           <Reveal i={1}>
-            <p className="mt-6 max-w-3xl border-l-2 border-indigo pl-5 text-sm font-medium leading-relaxed text-ink">
+            <p className="mt-6 max-w-3xl border-l-2 border-info pl-5 text-sm font-medium leading-relaxed text-ink">
               {landscape.note}
             </p>
           </Reveal>
@@ -231,10 +231,10 @@ export default function AiFirstPage() {
                               href={t.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="group flex h-full flex-col rounded-2xl border border-line bg-paper p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-coral/40 hover:shadow-[var(--shadow-sm)]"
+                              className="group flex h-full flex-col rounded-2xl border border-line bg-paper p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-signal/40 hover:shadow-[var(--shadow-sm)]"
                             >
                               <div className="flex items-center justify-between gap-2">
-                                <span className="font-display text-base leading-tight text-ink transition-colors group-hover:text-coral">
+                                <span className="font-display text-base leading-tight text-ink transition-colors group-hover:text-signal">
                                   {t.name}
                                 </span>
                                 <Pill tone={costTone[t.cost] ?? "neutral"}>
@@ -247,7 +247,7 @@ export default function AiFirstPage() {
                               <p className="mt-2 flex-1 text-xs leading-relaxed text-ink-faint">
                                 {t.useInWork}
                               </p>
-                              <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-ink-faint transition-colors group-hover:text-coral">
+                              <span className="mt-3 inline-flex items-center gap-1 text-[11px] font-semibold text-ink-faint transition-colors group-hover:text-signal">
                                 Open
                                 <ExternalLink size={11} />
                               </span>
@@ -287,7 +287,7 @@ export default function AiFirstPage() {
         </div>
 
         <Reveal i={1}>
-          <p className="mt-8 max-w-3xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <p className="mt-8 max-w-3xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {craft.note}
           </p>
         </Reveal>
@@ -308,7 +308,7 @@ export default function AiFirstPage() {
             {adopt.steps.map((s, idx) => (
               <Reveal key={s.n} i={idx % 5}>
                 <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <span className="font-display text-4xl leading-none text-coral">0{s.n}</span>
+                  <span className="font-display text-4xl leading-none text-signal">0{s.n}</span>
                   <h3 className="mt-4 font-display text-lg leading-tight text-paper-2">
                     {s.title}
                   </h3>
@@ -326,7 +326,7 @@ export default function AiFirstPage() {
                 <a
                   key={c.href}
                   href={c.href}
-                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-coral"
+                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
                 >
                   <span className="link-sweep">{c.label}</span>
                   <ExternalLink size={14} className="opacity-70" />
@@ -351,7 +351,7 @@ export default function AiFirstPage() {
           {guardrails.items.map((it, idx) => (
             <Reveal key={it.title} i={idx % 2}>
               <article className="flex h-full items-start gap-4 rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-coral-tint text-coral-deep">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-signal-tint text-signal-deep">
                   <Icon name={it.icon} size={20} />
                 </span>
                 <div>
@@ -401,7 +401,7 @@ export default function AiFirstPage() {
                 {agentic.why.title}
               </h3>
               <p className="mt-4 max-w-3xl leading-relaxed text-ink-soft">{agentic.why.body}</p>
-              <p className="mt-5 max-w-2xl border-l-2 border-coral pl-5 font-display text-lg leading-snug text-ink">
+              <p className="mt-5 max-w-2xl border-l-2 border-signal pl-5 font-display text-lg leading-snug text-ink">
                 {agentic.note}
               </p>
               <a
@@ -428,7 +428,7 @@ export default function AiFirstPage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

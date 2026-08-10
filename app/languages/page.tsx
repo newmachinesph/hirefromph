@@ -13,21 +13,21 @@ export const metadata: Metadata = pageMeta({
 });
 
 type Language = (typeof languagesData.languages)[number];
-type Tone = "coral" | "amber" | "indigo";
+type Tone = "signal" | "caution" | "info";
 
 const premiumTone: Record<string, Tone> = {
-  Highest: "coral",
-  High: "amber",
-  Moderate: "indigo",
+  Highest: "signal",
+  High: "caution",
+  Moderate: "info",
 };
 const accentBar: Record<Tone, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  info: "bg-info",
 };
 
-function learnTone(type: string): "emerald" | "neutral" {
-  return type.trim().toLowerCase().startsWith("free") ? "emerald" : "neutral";
+function learnTone(type: string): "verified" | "neutral" {
+  return type.trim().toLowerCase().startsWith("free") ? "verified" : "neutral";
 }
 
 export default function Page() {
@@ -41,7 +41,7 @@ export default function Page() {
         title={
           <>
             A second language can{" "}
-            <span className="text-coral">double your pay.</span>
+            <span className="text-signal">double your pay.</span>
           </>
         }
         lead={languagesData.intro}
@@ -123,7 +123,7 @@ export default function Page() {
               <div className="flex shrink-0 flex-wrap gap-3">
                 <ButtonLink
                   href="/level-up"
-                  className="bg-coral text-white hover:bg-white hover:!text-ink"
+                  className="bg-signal text-white hover:bg-white hover:!text-ink"
                 >
                   See Level Up
                 </ButtonLink>
@@ -146,7 +146,7 @@ function LanguageCard({
   language: Language;
   featured?: boolean;
 }) {
-  const tone = premiumTone[language.premium] ?? "indigo";
+  const tone = premiumTone[language.premium] ?? "info";
   return (
     <div
       className={cn(
@@ -223,7 +223,7 @@ function LanguageCard({
                   href={school.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex w-fit items-center gap-1 text-sm font-semibold text-ink hover:text-coral"
+                  className="group inline-flex w-fit items-center gap-1 text-sm font-semibold text-ink hover:text-signal"
                 >
                   Visit site
                   <ExternalLink

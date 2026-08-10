@@ -6,7 +6,7 @@
       "id": "workspace",
       "name": "Google Workspace & Microsoft",
       "icon": "layout-grid",
-      "accent": "coral",
+      "accent": "signal",
       "blurb": "Docs, Sheets, Slides, Gmail, Outlook, Excel, the daily bread of every online professional.",
       "tools": [
         { "name": "Google Sheets", "skill": "Formulas, pivot tables, dashboards", "level": "Core" },
@@ -19,7 +19,7 @@
       "id": "communication",
       "name": "Communication",
       "icon": "message-circle",
-      "accent": "emerald",
+      "accent": "verified",
       "blurb": "How remote teams talk. Master async etiquette and you'll instantly look senior.",
       "tools": [
         { "name": "Slack", "skill": "Channels, threads, statuses, huddles", "level": "Core" },
@@ -32,7 +32,7 @@
       "id": "pm",
       "name": "Project & Productivity",
       "icon": "kanban",
-      "accent": "indigo",
+      "accent": "info",
       "blurb": "Where work is tracked. Learn one deeply and the rest feel familiar.",
       "tools": [
         { "name": "Notion", "skill": "Databases, docs, wikis", "level": "Core" },
@@ -45,7 +45,7 @@
       "id": "crm",
       "name": "Customer Relationship (CRM)",
       "icon": "users",
-      "accent": "amber",
+      "accent": "caution",
       "blurb": "The system of record for leads and clients. A must for sales, support, and ops roles.",
       "tools": [
         { "name": "HubSpot", "skill": "Contacts, deals, pipelines", "level": "Core" },
@@ -58,7 +58,7 @@
       "id": "password",
       "name": "Password Management",
       "icon": "key-round",
-      "accent": "emerald",
+      "accent": "verified",
       "blurb": "Handle client logins the professional, secure way, never over chat.",
       "tools": [
         { "name": "1Password", "skill": "Vaults, secure sharing", "level": "Core" },
@@ -69,7 +69,7 @@
       "id": "marketing",
       "name": "Marketing & Design",
       "icon": "megaphone",
-      "accent": "coral",
+      "accent": "signal",
       "blurb": "Create, schedule, and measure. The toolkit behind content and social roles.",
       "tools": [
         { "name": "Canva", "skill": "Graphics, decks, brand kits", "level": "Core" },
@@ -82,7 +82,7 @@
       "id": "meeting",
       "name": "Meeting & Conferencing",
       "icon": "video",
-      "accent": "indigo",
+      "accent": "info",
       "blurb": "Run meetings that respect everyone's time and end with clear next steps.",
       "tools": [
         { "name": "Calendly", "skill": "Scheduling without back-and-forth", "level": "Core" },
@@ -94,7 +94,7 @@
       "id": "finance",
       "name": "Finance & Expense",
       "icon": "wallet",
-      "accent": "amber",
+      "accent": "caution",
       "blurb": "Get paid and keep clean records, for you and for your clients.",
       "tools": [
         { "name": "Wise / Payoneer", "skill": "Receiving international pay", "level": "Core" },

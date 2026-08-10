@@ -13,16 +13,16 @@ export const metadata = pageMeta({
 });
 
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentBorder: Record<string, string> = {
-  coral: "border-coral",
-  amber: "border-amber",
-  emerald: "border-emerald",
-  indigo: "border-indigo",
+  signal: "border-signal",
+  caution: "border-caution",
+  verified: "border-verified",
+  info: "border-info",
 };
 
 function Source({ label, url }: { label: string; url: string }) {
@@ -32,7 +32,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       <span className="text-balance">Source: {label}</span>
       <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
@@ -52,14 +52,14 @@ export default function IndispensablePage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -73,7 +73,7 @@ export default function IndispensablePage() {
           </Reveal>
           <Reveal i={1}>
             <div className="mt-10 flex flex-col gap-4 rounded-[var(--radius-lg)] border border-line bg-paper-2 p-8 lg:p-10">
-              <p className="max-w-3xl border-l-2 border-emerald pl-5 text-sm font-medium leading-relaxed text-ink">
+              <p className="max-w-3xl border-l-2 border-verified pl-5 text-sm font-medium leading-relaxed text-ink">
                 {why.callout}
               </p>
               <Source label={why.source.label} url={why.source.url} />
@@ -117,7 +117,7 @@ export default function IndispensablePage() {
         </div>
 
         <Reveal i={1}>
-          <p className="mt-8 max-w-3xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <p className="mt-8 max-w-3xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {intelligences.note}
           </p>
         </Reveal>
@@ -165,7 +165,7 @@ export default function IndispensablePage() {
             <div className="mt-12 rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
               <div className="flex flex-wrap items-center gap-5">
                 <span className="inline-flex items-center gap-2 text-xs font-medium text-paper-2/80">
-                  <span aria-hidden className="h-3 w-3 rounded-sm bg-emerald" />
+                  <span aria-hidden className="h-3 w-3 rounded-sm bg-verified" />
                   {proof.legend.freelancer}
                 </span>
                 <span className="inline-flex items-center gap-2 text-xs font-medium text-paper-2/80">
@@ -186,11 +186,11 @@ export default function IndispensablePage() {
                         <div className="h-4 flex-1 overflow-hidden rounded-md bg-white/5">
                           <span
                             aria-hidden
-                            className="block h-full rounded-r-sm bg-emerald"
+                            className="block h-full rounded-r-sm bg-verified"
                             style={{ width: `${r.freelancer}%` }}
                           />
                         </div>
-                        <span className="w-10 shrink-0 text-right font-mono text-xs font-semibold text-emerald">
+                        <span className="w-10 shrink-0 text-right font-mono text-xs font-semibold text-verified">
                           {r.freelancer}%
                         </span>
                       </div>
@@ -216,7 +216,7 @@ export default function IndispensablePage() {
                   href={proof.source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-coral"
+                  className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-signal"
                 >
                   <span className="text-balance">Source: {proof.source.label}</span>
                   <ExternalLink size={11} className="mt-0.5 shrink-0" />
@@ -238,7 +238,7 @@ export default function IndispensablePage() {
             <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
               {closing.body}
             </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 

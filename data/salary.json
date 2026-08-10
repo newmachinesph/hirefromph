@@ -59,9 +59,9 @@
     "title": "The pay ladder, and why you should climb it fast.",
     "monthlyNote": "The monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
     "tiers": [
-      { "level": "Entry", "accent": "coral", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing; see the demonstration below." },
-      { "level": "Mid", "accent": "amber", "monthly": "≈ $600–2,400 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
-      { "level": "Senior / specialist", "accent": "emerald", "monthly": "≈ $1,000–4,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
+      { "level": "Entry", "accent": "signal", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing; see the demonstration below." },
+      { "level": "Mid", "accent": "caution", "monthly": "≈ $600–2,400 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
+      { "level": "Senior / specialist", "accent": "verified", "monthly": "≈ $1,000–4,800+ / mo", "hourly": "≈ $18–35+ / hr", "what": "A named, provable specialty a client cannot easily replace. This is where the AI premium lands on top of your craft, and where the real money starts." }
     ],
     "contradiction": {
       "title": "Proof the numbers are soft: watch two 'guides' disagree by 4x.",

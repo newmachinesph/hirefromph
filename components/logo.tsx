@@ -56,7 +56,7 @@ export function Logo({
         <span className="font-display text-xl leading-none tracking-tight">
           {wordmark ?? (
             <>
-              Dev<span className="text-coral">Up</span>
+              Dev<span className="text-signal">Up</span>
             </>
           )}
         </span>

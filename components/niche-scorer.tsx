@@ -12,35 +12,35 @@ const SCORE_VALUES = [1, 2, 3, 4, 5] as const;
 const DEFAULT_SCORE = 3;
 
 const ICON_TONE: Record<number, string> = {
-  0: "bg-coral-tint text-coral-deep",
-  1: "bg-emerald-tint text-emerald",
-  2: "bg-amber-tint text-amber-text",
-  3: "bg-indigo-tint text-indigo",
+  0: "bg-signal-tint text-signal-deep",
+  1: "bg-verified-tint text-verified",
+  2: "bg-caution-tint text-caution-text",
+  3: "bg-info-tint text-info",
 };
 
 const VERDICT_TIERS = [
   {
     min: 80,
     label: "Strong niche, go deep",
-    tone: "emerald" as const,
+    tone: "verified" as const,
     desc: "It clears the bar across the board. The main risk now is indecision, not the niche itself.",
   },
   {
     min: 60,
     label: "Workable, mind the weak spots",
-    tone: "amber" as const,
+    tone: "caution" as const,
     desc: "Solid enough to start. Look at whatever you scored low and have a plan for it before you commit fully.",
   },
   {
     min: 40,
     label: "Risky, proceed with eyes open",
-    tone: "coral" as const,
+    tone: "signal" as const,
     desc: "More than one fundamental is shaky. Not a hard no, but don't bet your first 90 days on this alone.",
   },
   {
     min: 0,
     label: "Reconsider this one",
-    tone: "coral" as const,
+    tone: "signal" as const,
     desc: "The fundamentals aren't there yet. Re-run this on a different niche before you invest real time.",
   },
 ];
@@ -78,9 +78,9 @@ export function NicheScorer() {
   }
 
   const tierRing: Record<string, string> = {
-    emerald: "var(--emerald)",
-    amber: "var(--amber)",
-    coral: "var(--coral)",
+    verified: "var(--verified)",
+    caution: "var(--caution)",
+    signal: "var(--signal)",
   };
 
   return (
@@ -113,7 +113,7 @@ export function NicheScorer() {
                 aria-labelledby={labelId}
                 className={cn(
                   "rounded-2xl border p-4 transition-colors",
-                  low ? "border-coral/40 bg-coral-tint/40" : "border-line bg-paper",
+                  low ? "border-signal/40 bg-signal-tint/40" : "border-line bg-paper",
                 )}
               >
                 <div className="flex items-start gap-3">
@@ -194,9 +194,9 @@ export function NicheScorer() {
             <p
               className={cn(
                 "mt-1 text-sm font-semibold",
-                tier.tone === "emerald" && "text-emerald",
-                tier.tone === "amber" && "text-amber-text",
-                tier.tone === "coral" && "text-coral-deep",
+                tier.tone === "verified" && "text-verified",
+                tier.tone === "caution" && "text-caution-text",
+                tier.tone === "signal" && "text-signal-deep",
               )}
             >
               {tier.label}
@@ -207,7 +207,7 @@ export function NicheScorer() {
           <div className="border-t border-line pt-5">
             {weakSpots.length > 0 ? (
               <>
-                <p className="kicker flex items-center gap-1.5 text-coral-deep">
+                <p className="kicker flex items-center gap-1.5 text-signal-deep">
                   <AlertTriangle size={13} /> Watch out for
                 </p>
                 <ul className="mt-3 flex flex-col gap-2">
@@ -221,7 +221,7 @@ export function NicheScorer() {
               </>
             ) : (
               <p className="flex items-center gap-1.5 text-xs leading-relaxed text-ink-soft">
-                <Sparkles size={13} className="text-emerald" /> No weak spots scored
+                <Sparkles size={13} className="text-verified" /> No weak spots scored
                 below a 3, nothing glaring to flag.
               </p>
             )}

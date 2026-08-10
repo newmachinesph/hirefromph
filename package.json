@@ -1,5 +1,5 @@
 {
-  "name": "freelearning",
+  "name": "hire-from-ph",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "node --test",
-    "verify:claims": "node scripts/verify-claims.mjs"
+    "verify:claims": "node scripts/verify-claims.mjs",
+    "verify:contrast": "node scripts/verify-contrast.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",

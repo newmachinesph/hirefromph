@@ -11,10 +11,10 @@ import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
 const CRITERION_ICON_TONE = [
-  "bg-coral-tint text-coral-deep",
-  "bg-emerald-tint text-emerald",
-  "bg-amber-tint text-amber-text",
-  "bg-indigo-tint text-indigo",
+  "bg-signal-tint text-signal-deep",
+  "bg-verified-tint text-verified",
+  "bg-caution-tint text-caution-text",
+  "bg-info-tint text-info",
 ];
 
 export const metadata: Metadata = pageMeta({
@@ -206,8 +206,8 @@ export default function NichesPage() {
           />
         </Reveal>
         <Reveal i={1}>
-          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-emerald/30 bg-emerald-tint p-6">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-emerald text-white">
+          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-verified/30 bg-verified-tint p-6">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-verified text-white">
               <Icon name="cpu" size={18} />
             </span>
             <p className="max-w-3xl text-sm font-medium leading-relaxed text-ink">
@@ -266,7 +266,7 @@ export default function NichesPage() {
                 <ButtonLink
                   href="/plan"
                   variant="primary"
-                  className="bg-coral text-white hover:bg-white hover:!text-ink"
+                  className="bg-signal text-white hover:bg-white hover:!text-ink"
                 >
                   Build my 30-day plan
                 </ButtonLink>

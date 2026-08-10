@@ -122,10 +122,10 @@ export function SiteHeader() {
                   .map((group) => (
                     <div
                       key={group.title}
-                      className="rounded-xl border border-coral/25 bg-coral-tint/40 p-4"
+                      className="rounded-xl border border-signal/25 bg-signal-tint/40 p-4"
                     >
                       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                        <h2 className="kicker text-coral">{group.title}</h2>
+                        <h2 className="kicker text-signal">{group.title}</h2>
                         {"desc" in group && group.desc && (
                           <p className="text-xs leading-snug text-ink-faint">
                             {group.desc}
@@ -140,16 +140,16 @@ export function SiteHeader() {
                               key={item.href}
                               href={item.href}
                               className={cn(
-                                "flex items-center gap-2.5 rounded-xl border px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-coral hover:shadow-[var(--shadow-sm)]",
+                                "flex items-center gap-2.5 rounded-xl border px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-signal hover:shadow-[var(--shadow-sm)]",
                                 active
-                                  ? "border-coral bg-paper-2"
-                                  : "border-coral/15 bg-paper-2/70",
+                                  ? "border-signal bg-paper-2"
+                                  : "border-signal/15 bg-paper-2/70",
                               )}
                             >
                               <span
                                 className={cn(
                                   "font-display text-lg leading-none",
-                                  active ? "text-coral" : "text-coral/50",
+                                  active ? "text-signal" : "text-signal/50",
                                 )}
                               >
                                 0{idx + 1}
@@ -170,7 +170,7 @@ export function SiteHeader() {
                     .filter((g) => !("primary" in g && g.primary))
                     .map((group) => (
                       <div key={group.title}>
-                        <h2 className="kicker text-coral">{group.title}</h2>
+                        <h2 className="kicker text-signal">{group.title}</h2>
                         {"desc" in group && group.desc && (
                           <p className="mt-1.5 text-xs leading-snug text-ink-faint">
                             {group.desc}
@@ -208,7 +208,7 @@ export function SiteHeader() {
           {hydrated && hasPath && activeTrackName ? (
             <Link
               href="/path"
-              className="hidden items-center gap-2 rounded-full border border-emerald/30 bg-emerald-tint px-3.5 py-2 text-sm font-medium text-emerald sm:inline-flex"
+              className="hidden items-center gap-2 rounded-full border border-verified/30 bg-verified-tint px-3.5 py-2 text-sm font-medium text-verified sm:inline-flex"
             >
               <Check size={15} />
               {activeTrackName}
@@ -216,7 +216,7 @@ export function SiteHeader() {
           ) : (
             <Link
               href="/start"
-              className="hidden rounded-full bg-coral px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5 sm:inline-block"
+              className="hidden rounded-full bg-signal px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-signal-deep hover:-translate-y-0.5 sm:inline-block"
             >
               Start here
             </Link>

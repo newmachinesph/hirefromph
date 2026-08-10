@@ -14,16 +14,16 @@ export const metadata = pageMeta({
 });
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 
 function Source({ label, url }: { label: string; url: string }) {
@@ -32,7 +32,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       Source: {label}
       <ExternalLink size={11} className="opacity-60" />
@@ -57,7 +57,7 @@ export default function ConductPage() {
         lead={conduct.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {conduct.creed}
           </blockquote>
         </Reveal>
@@ -103,7 +103,7 @@ export default function ConductPage() {
           </div>
 
           <Reveal i={1}>
-            <div className="mt-8 rounded-[var(--radius-lg)] border border-emerald/30 bg-emerald-tint p-8 lg:p-10">
+            <div className="mt-8 rounded-[var(--radius-lg)] border border-verified/30 bg-verified-tint p-8 lg:p-10">
               <h3 className="max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-ink">
                 {conduct.philippineAnchor.title}
               </h3>
@@ -161,13 +161,13 @@ export default function ConductPage() {
                   </p>
                   <p
                     className={`border-l-2 pl-4 text-sm font-medium leading-relaxed text-ink ${
-                      c.accent === "coral"
-                        ? "border-coral"
-                        : c.accent === "amber"
-                          ? "border-amber"
-                          : c.accent === "emerald"
-                            ? "border-emerald"
-                            : "border-indigo"
+                      c.accent === "signal"
+                        ? "border-signal"
+                        : c.accent === "caution"
+                          ? "border-caution"
+                          : c.accent === "verified"
+                            ? "border-verified"
+                            : "border-info"
                     }`}
                   >
                     {c.lesson}
@@ -211,7 +211,7 @@ export default function ConductPage() {
 
                   <div className="mt-7 grid gap-8 md:grid-cols-2">
                     <div>
-                      <p className="kicker flex items-center gap-1.5 text-emerald">
+                      <p className="kicker flex items-center gap-1.5 text-verified">
                         <Check size={13} strokeWidth={3} /> Do
                       </p>
                       <ul className="mt-4 flex flex-col gap-3">
@@ -224,7 +224,7 @@ export default function ConductPage() {
                               size={15}
                               strokeWidth={3}
                               aria-hidden
-                              className="mt-0.5 shrink-0 text-emerald"
+                              className="mt-0.5 shrink-0 text-verified"
                             />
                             {d}
                           </li>
@@ -232,7 +232,7 @@ export default function ConductPage() {
                       </ul>
                     </div>
                     <div>
-                      <p className="kicker flex items-center gap-1.5 text-coral">
+                      <p className="kicker flex items-center gap-1.5 text-signal">
                         <X size={13} strokeWidth={3} /> Never
                       </p>
                       <ul className="mt-4 flex flex-col gap-3">
@@ -245,7 +245,7 @@ export default function ConductPage() {
                               size={15}
                               strokeWidth={3}
                               aria-hidden
-                              className="mt-0.5 shrink-0 text-coral"
+                              className="mt-0.5 shrink-0 text-signal"
                             />
                             {d}
                           </li>
@@ -264,7 +264,7 @@ export default function ConductPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <div className="flex flex-col items-center text-center">
-            <Pill tone="emerald">Nothing to download. Nothing uploaded.</Pill>
+            <Pill tone="verified">Nothing to download. Nothing uploaded.</Pill>
             <h2 className="mt-6 max-w-3xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
               {conduct.oath.title}
             </h2>

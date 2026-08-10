@@ -81,9 +81,9 @@ export function IntegrityOath() {
                   htmlFor={id}
                   className={cn(
                     "flex cursor-pointer items-start gap-4 rounded-2xl border p-4 transition-all duration-200",
-                    "peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-coral",
+                    "peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-signal",
                     on
-                      ? "border-emerald/40 bg-emerald-tint"
+                      ? "border-verified/40 bg-verified-tint"
                       : "border-line bg-paper hover:border-line-strong",
                   )}
                 >
@@ -92,7 +92,7 @@ export function IntegrityOath() {
                     className={cn(
                       "grid h-6 w-6 shrink-0 place-items-center rounded-md border transition-colors",
                       on
-                        ? "border-emerald bg-emerald text-white"
+                        ? "border-verified bg-verified text-white"
                         : "border-line-strong bg-paper-2",
                     )}
                   >
@@ -125,7 +125,7 @@ export function IntegrityOath() {
       >
         {hydrated ? `${accepted} of ${oath.clauses.length} accepted.` : " "}{" "}
         {hydrated && !allAccepted && accepted > 0 && (
-          <span className="text-coral-deep">
+          <span className="text-signal-deep">
             Leaving one unticked is an honest answer. Write down what you&rsquo;d
             have to change to tick it.
           </span>
@@ -156,14 +156,14 @@ export function IntegrityOath() {
       </div>
 
       {/* ---------------------------------------------------- SELF-CRITIQUE */}
-      <div className="mt-8 rounded-2xl border border-amber/30 bg-amber-tint/50 p-5">
-        <p className="kicker flex items-center gap-1.5 text-amber-text">
+      <div className="mt-8 rounded-2xl border border-caution/30 bg-caution-tint/50 p-5">
+        <p className="kicker flex items-center gap-1.5 text-caution-text">
           <AlertTriangle size={13} /> Step 3 · Judge your own draft
         </p>
         <ul className="mt-3 flex flex-col gap-2">
           {oath.selfCritique.map((q) => (
             <li key={q} className="flex gap-2 text-sm leading-relaxed text-ink-soft">
-              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-amber-text" />
+              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-caution-text" />
               {q}
             </li>
           ))}
@@ -173,9 +173,9 @@ export function IntegrityOath() {
       {/* ------------------------------------------------------------- SIGN */}
       <div className="mt-10 border-t border-line pt-8">
         {signedAt ? (
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-emerald/40 bg-emerald-tint p-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col items-start gap-5 rounded-2xl border border-verified/40 bg-verified-tint p-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-4">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald text-white">
+              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-verified text-white">
                 <ShieldCheck size={20} />
               </span>
               <div>
@@ -217,7 +217,7 @@ export function IntegrityOath() {
                 className={cn(
                   "group inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300",
                   canSign
-                    ? "bg-ink text-paper-2 hover:-translate-y-0.5 hover:bg-coral hover:shadow-[var(--shadow-coral)]"
+                    ? "bg-ink text-paper-2 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]"
                     : "cursor-not-allowed bg-paper-3 text-ink-faint",
                 )}
               >

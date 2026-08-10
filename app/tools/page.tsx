@@ -16,27 +16,27 @@ export const metadata: Metadata = pageMeta({
 });
 
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  emerald: "text-emerald",
-  amber: "text-amber-text",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  verified: "text-verified",
+  caution: "text-caution-text",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  emerald: "bg-emerald",
-  amber: "bg-amber",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  verified: "bg-verified",
+  caution: "bg-caution",
+  info: "bg-info",
 };
-const levelTone: Record<string, "neutral" | "coral" | "emerald" | "amber" | "indigo"> = {
-  Core: "emerald",
-  Intermediate: "amber",
-  Advanced: "coral",
+const levelTone: Record<string, "neutral" | "signal" | "verified" | "caution" | "info"> = {
+  Core: "verified",
+  Intermediate: "caution",
+  Advanced: "signal",
 };
 
 export default function ToolsPage() {
@@ -119,7 +119,7 @@ export default function ToolsPage() {
         <Reveal i={1} className="mt-10">
           <div className="overflow-hidden rounded-[var(--radius-lg)] border border-line-strong bg-paper-2">
             <div className="flex items-center gap-3 border-b border-line bg-ink px-6 py-5 text-paper-2">
-              <Icon name="clipboard-check" size={18} className="text-coral" />
+              <Icon name="clipboard-check" size={18} className="text-signal" />
               <span className="font-display text-lg">
                 Run this on any tool before the tutorial
               </span>
@@ -141,8 +141,8 @@ export default function ToolsPage() {
                 </div>
               ))}
             </div>
-            <div className="border-t border-line-strong bg-coral-tint px-6 py-5">
-              <p className="text-sm font-semibold leading-relaxed text-coral-deep">
+            <div className="border-t border-line-strong bg-signal-tint px-6 py-5">
+              <p className="text-sm font-semibold leading-relaxed text-signal-deep">
                 {learn.teardown.principle}
               </p>
             </div>
@@ -270,7 +270,7 @@ export default function ToolsPage() {
                   <h3 className="font-display text-lg leading-tight text-balance">
                     {item.title}
                   </h3>
-                  <Pill tone="indigo" className="shrink-0">
+                  <Pill tone="info" className="shrink-0">
                     {item.lang}
                   </Pill>
                 </div>
@@ -348,7 +348,7 @@ export default function ToolsPage() {
       <section className="container-x pb-24">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="coral">
+            <Pill tone="signal">
               <Sparkles size={13} /> One method, every tool
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

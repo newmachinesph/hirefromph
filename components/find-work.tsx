@@ -33,34 +33,34 @@ const verdictCopy: Record<
   {
     title: string;
     body: string;
-    tone: "emerald" | "amber" | "coral";
+    tone: "verified" | "caution" | "signal";
     icon: typeof ShieldCheck;
   }
 > = {
   clear: {
     title: "No red flags checked, still verify independently.",
     body: "A clean checklist isn't proof by itself. Run the research steps below before you commit to anything.",
-    tone: "emerald",
+    tone: "verified",
     icon: ShieldCheck,
   },
   caution: {
     title: "Proceed with caution.",
     body: "One or two flags aren't always fatal on their own, but they're a reason to slow down and ask more questions before you commit.",
-    tone: "amber",
+    tone: "caution",
     icon: ShieldAlert,
   },
   stop: {
     title: "STOP. Walk away.",
     body: "This one has crossed the line. No fee, no rate, and no urgency is worth what happens next.",
-    tone: "coral",
+    tone: "signal",
     icon: OctagonAlert,
   },
 };
 
-const toneClasses: Record<"emerald" | "amber" | "coral", string> = {
-  emerald: "border-emerald/40 bg-emerald-tint text-emerald",
-  amber: "border-amber/30 bg-amber-tint text-amber-text",
-  coral: "border-coral/40 bg-coral-tint text-coral-deep",
+const toneClasses: Record<"verified" | "caution" | "signal", string> = {
+  verified: "border-verified/40 bg-verified-tint text-verified",
+  caution: "border-caution/30 bg-caution-tint text-caution-text",
+  signal: "border-signal/40 bg-signal-tint text-signal-deep",
 };
 
 /**
@@ -106,7 +106,7 @@ export function VettingTool() {
               className={cn(
                 "flex cursor-pointer gap-3 rounded-2xl border p-4 transition-all duration-200",
                 isChecked
-                  ? "border-coral/40 bg-coral-tint"
+                  ? "border-signal/40 bg-signal-tint"
                   : "border-line bg-paper-2 hover:border-line-strong",
               )}
             >
@@ -116,13 +116,13 @@ export function VettingTool() {
                 checked={isChecked}
                 onChange={() => toggle(flag.id)}
                 aria-describedby={whyId}
-                className="mt-0.5 h-4 w-4 shrink-0 accent-coral"
+                className="mt-0.5 h-4 w-4 shrink-0 accent-signal"
               />
               <span>
                 <span className="flex flex-wrap items-center gap-2 text-sm font-semibold text-ink">
                   {flag.flag}
                   {flag.weight >= INSTANT_STOP_WEIGHT && (
-                    <Pill tone="coral" className="shrink-0">
+                    <Pill tone="signal" className="shrink-0">
                       Instant stop
                     </Pill>
                   )}
@@ -335,7 +335,7 @@ function EntryCard({ entry }: { entry: Entry }) {
         href={entry.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-coral"
+        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-signal"
       >
         Visit
         <ExternalLink

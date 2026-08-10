@@ -13,30 +13,30 @@ type Track = (typeof tracksData.tracks)[number];
 
 const DIFFICULTY_FILTERS = ["Beginner-friendly", "Intermediate", "Advanced"] as const;
 
-const difficultyTone: Record<string, "emerald" | "amber" | "coral"> = {
-  "Beginner-friendly": "emerald",
-  Intermediate: "amber",
-  Advanced: "coral",
+const difficultyTone: Record<string, "verified" | "caution" | "signal"> = {
+  "Beginner-friendly": "verified",
+  Intermediate: "caution",
+  Advanced: "signal",
 };
 
 // Reused from components/path-chooser.tsx, same accent system, same look.
 const accentRing: Record<string, string> = {
-  coral: "hover:border-coral/60 data-[active=true]:border-coral data-[active=true]:bg-coral-tint",
-  emerald: "hover:border-emerald/60 data-[active=true]:border-emerald data-[active=true]:bg-emerald-tint",
-  amber: "hover:border-amber/60 data-[active=true]:border-amber data-[active=true]:bg-amber-tint",
-  indigo: "hover:border-indigo/60 data-[active=true]:border-indigo data-[active=true]:bg-indigo-tint",
+  signal: "hover:border-signal/60 data-[active=true]:border-signal data-[active=true]:bg-signal-tint",
+  verified: "hover:border-verified/60 data-[active=true]:border-verified data-[active=true]:bg-verified-tint",
+  caution: "hover:border-caution/60 data-[active=true]:border-caution data-[active=true]:bg-caution-tint",
+  info: "hover:border-info/60 data-[active=true]:border-info data-[active=true]:bg-info-tint",
 };
 const iconTone: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 
 const learnIcon: Record<string, string> = {
@@ -112,7 +112,7 @@ export function NicheExplorer() {
                   <Icon name={t.icon} size={20} />
                 </span>
                 {isChosen && (
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-emerald text-white">
+                  <span className="grid h-6 w-6 place-items-center rounded-full bg-verified text-white">
                     <Check size={14} />
                   </span>
                 )}
@@ -123,7 +123,7 @@ export function NicheExplorer() {
               </div>
               <div className="mt-auto flex items-center justify-between pt-1">
                 <span className="text-sm font-semibold text-ink">{t.pay}</span>
-                <Pill tone={t.accent as "coral"}>{t.demandLabel}</Pill>
+                <Pill tone={t.accent as "signal"}>{t.demandLabel}</Pill>
               </div>
               <Pill tone={difficultyTone[t.difficulty] ?? "neutral"} className="w-fit">
                 {t.difficulty}
@@ -227,7 +227,7 @@ function DetailCard({
           </h3>
         </div>
         <div className="ml-auto flex items-center gap-2">
-          <Pill tone={track.accent as "coral"}>{track.demandLabel} demand</Pill>
+          <Pill tone={track.accent as "signal"}>{track.demandLabel} demand</Pill>
           <Pill tone={difficultyTone[track.difficulty] ?? "neutral"}>{track.difficulty}</Pill>
         </div>
       </div>
@@ -245,8 +245,8 @@ function DetailCard({
             </h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{track.ai.change}</p>
           </div>
-          <div className="rounded-2xl border border-emerald/30 bg-emerald-tint p-5">
-            <h4 className="kicker text-emerald">Why you are still needed</h4>
+          <div className="rounded-2xl border border-verified/30 bg-verified-tint p-5">
+            <h4 className="kicker text-verified">Why you are still needed</h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink">{track.ai.human}</p>
           </div>
         </div>
@@ -330,14 +330,14 @@ function DetailCard({
           Typical pay: <span className="font-semibold text-ink">{track.pay}</span>
         </p>
         {isChosen ? (
-          <span className="inline-flex items-center gap-2 rounded-full bg-emerald-tint px-6 py-3 text-sm font-semibold text-emerald">
+          <span className="inline-flex items-center gap-2 rounded-full bg-verified-tint px-6 py-3 text-sm font-semibold text-verified">
             <Check size={16} /> This is your path
           </span>
         ) : (
           <button
             type="button"
             onClick={onChoose}
-            className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral hover:shadow-[var(--shadow-coral)]"
+            className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]"
           >
             <Sparkles size={16} />
             Choose this as my path
@@ -351,10 +351,10 @@ function DetailCard({
 type Regions = NonNullable<Extract<Track, { regions: unknown }>["regions"]>;
 
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  emerald: "bg-emerald",
-  amber: "bg-amber",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  verified: "bg-verified",
+  caution: "bg-caution",
+  info: "bg-info",
 };
 
 /** Per-market compliance guide. Only tracks whose rules change by country carry
