@@ -43,16 +43,16 @@ const toolkit = [
 ];
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 
 export default function Home() {
@@ -62,11 +62,11 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden
-          className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full bg-coral/10 blur-3xl"
+          className="pointer-events-none absolute -top-40 right-[-10%] h-[520px] w-[520px] rounded-full bg-signal/10 blur-3xl"
         />
         <div
           aria-hidden
-          className="pointer-events-none absolute top-40 left-[-10%] h-[420px] w-[420px] rounded-full bg-emerald/10 blur-3xl"
+          className="pointer-events-none absolute top-40 left-[-10%] h-[420px] w-[420px] rounded-full bg-verified/10 blur-3xl"
         />
         <div className="container-x relative grid gap-12 pt-16 pb-8 lg:grid-cols-[1.15fr_0.85fr] lg:pt-24 lg:pb-16">
           <div className="flex flex-col justify-center">
@@ -75,7 +75,7 @@ export default function Home() {
                 Build the online
                 <br />
                 career you{" "}
-                <span className="relative whitespace-nowrap text-coral">
+                <span className="relative whitespace-nowrap text-signal">
                   actually own
                   <svg
                     className="absolute -bottom-2 left-0 w-full"
@@ -115,7 +115,7 @@ export default function Home() {
             </Reveal>
             <Reveal i={4}>
               <div className="mt-10 flex items-start gap-3 rounded-2xl border border-line bg-paper-2 p-4 text-sm text-ink-soft">
-                <ShieldCheck size={18} className="mt-0.5 shrink-0 text-emerald" />
+                <ShieldCheck size={18} className="mt-0.5 shrink-0 text-verified" />
                 <span>
                   <strong className="font-semibold text-ink">
                     Every claim here is sourced.
@@ -174,7 +174,7 @@ export default function Home() {
           <Reveal i={1}>
             <div className="rounded-2xl border border-line bg-paper-2 p-6">
               <p className="text-sm leading-relaxed text-ink-soft">
-                <Sparkles size={16} className="mb-1 inline text-coral" /> We keep
+                <Sparkles size={16} className="mb-1 inline text-signal" /> We keep
                 the front calm on purpose. Every workshop, lab, and method is
                 here, but it opens{" "}
                 <strong className="text-ink">as you need it</strong>, tailored to
@@ -334,7 +334,7 @@ export default function Home() {
                 href={t.href}
                 className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[var(--shadow-md)]"
               >
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-coral">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2 transition-colors group-hover:bg-signal">
                   <Icon name={t.icon} size={20} />
                 </span>
                 <h3 className="mt-5 font-display text-xl">{t.title}</h3>
@@ -364,7 +364,7 @@ export default function Home() {
                 <Kicker className="text-paper-2/60">The rate multiplier</Kicker>
                 <h2 className="mt-5 font-display text-[length:var(--text-h2)] leading-tight text-balance">
                   A second language can{" "}
-                  <span className="text-coral">double your pay.</span>
+                  <span className="text-signal">double your pay.</span>
                 </h2>
                 <p className="mt-5 max-w-lg text-paper-2/75">
                   English is a national baseline in the Philippines, it gets you in
@@ -377,7 +377,7 @@ export default function Home() {
                   <ButtonLink
                     href="/languages"
                     variant="primary"
-                    className="bg-coral text-white hover:bg-white hover:!text-ink"
+                    className="bg-signal text-white hover:bg-white hover:!text-ink"
                   >
                     See the language premium
                   </ButtonLink>
@@ -397,7 +397,7 @@ export default function Home() {
                       <span className="text-2xl">{l.flag}</span>
                       {l.name}
                     </span>
-                    <span className="text-sm font-semibold text-coral">{l.pay}</span>
+                    <span className="text-sm font-semibold text-signal">{l.pay}</span>
                   </div>
                 ))}
               </div>
@@ -447,7 +447,7 @@ export default function Home() {
       <section className="container-x pb-24">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="coral">
+            <Pill tone="signal">
               <Sparkles size={13} /> Open to everyone, forever
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
@@ -469,11 +469,11 @@ export default function Home() {
 function HeroPanel() {
   // 5 ascending stages: [x, barTopY, fill, number, label]
   const bars = [
-    { x: 30, y: 308, fill: "#0a736a", n: "01", label: "Start" },
+    { x: 30, y: 308, fill: "var(--signal)", n: "01", label: "Start" },
     { x: 100, y: 262, fill: "#e39400", n: "02", label: "Get Hired" },
     { x: 170, y: 212, fill: "#237a35", n: "03", label: "Deliver" },
     { x: 240, y: 156, fill: "#2558c8", n: "04", label: "Level Up" },
-    { x: 310, y: 96, fill: "#0e1f1b", n: "05", label: "Own" },
+    { x: 310, y: 96, fill: "var(--ink)", n: "05", label: "Own" },
   ];
   const baseline = 392;
   const barW = 54;
@@ -486,7 +486,7 @@ function HeroPanel() {
       <div aria-hidden className="absolute inset-0 dotgrid opacity-60" />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-coral/10 blur-2xl"
+        className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-signal/10 blur-2xl"
       />
 
       <svg
@@ -539,22 +539,22 @@ function HeroPanel() {
         <polyline
           points={trend}
           fill="none"
-          stroke="#0a736a"
+          stroke="var(--signal)"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeDasharray="2 9"
         />
         {/* arrowhead, barbs symmetric about the trend's own slope */}
-        <path d="M348 70 L338 78 M348 70 L350 83" stroke="#0a736a" strokeWidth="3" strokeLinecap="round" fill="none" />
+        <path d="M348 70 L338 78 M348 70 L350 83" stroke="var(--signal)" strokeWidth="3" strokeLinecap="round" fill="none" />
         {/* nodes */}
         {nodes.map(([x, y]) => (
-          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0a736a" strokeWidth="2.5" />
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="var(--signal)" strokeWidth="2.5" />
         ))}
         {/* peak flag, planted right of the arrow's path so the two never cross */}
         <g transform="translate(356 52)">
-          <line x1="0" y1="0" x2="0" y2="44" stroke="#0e1f1b" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M0 2 L26 9 L0 18 Z" fill="#0a736a" />
+          <line x1="0" y1="0" x2="0" y2="44" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M0 2 L26 9 L0 18 Z" fill="var(--signal)" />
         </g>
       </svg>
 
@@ -563,7 +563,7 @@ function HeroPanel() {
         <p className="font-display text-3xl leading-none">11</p>
         <p className="text-[11px] text-paper-2/60">steps to the peak</p>
       </div>
-      <div className="absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border border-emerald/25 bg-emerald-tint px-3 py-1 text-xs font-semibold text-emerald">
+      <div className="absolute bottom-5 right-5 inline-flex items-center gap-1.5 rounded-full border border-verified/25 bg-verified-tint px-3 py-1 text-xs font-semibold text-verified">
         Developing upwards
       </div>
     </div>

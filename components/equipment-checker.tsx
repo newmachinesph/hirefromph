@@ -106,7 +106,7 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
             aria-label={`${readyCount} of ${totalEssentials} essentials ready`}
             className="grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
             style={{
-              background: `conic-gradient(var(--emerald) ${pct}%, var(--line) ${pct}% 100%)`,
+              background: `conic-gradient(var(--verified) ${pct}%, var(--line) ${pct}% 100%)`,
             }}
           >
             <div className="grid h-[72px] w-[72px] place-items-center rounded-full bg-paper-2">
@@ -118,7 +118,7 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
           <p
             className={cn(
               "mt-4 text-sm font-semibold text-balance",
-              allReady ? "text-emerald" : "text-ink",
+              allReady ? "text-verified" : "text-ink",
             )}
           >
             {message}
@@ -165,7 +165,7 @@ function CategoryCard({
         className={cn(
           "flex h-full flex-col rounded-2xl border p-6 transition-all duration-300",
           owned
-            ? "border-emerald/40 bg-emerald-tint"
+            ? "border-verified/40 bg-verified-tint"
             : "border-line bg-paper-2 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
         )}
       >
@@ -175,8 +175,8 @@ function CategoryCard({
               className={cn(
                 "grid h-11 w-11 shrink-0 place-items-center rounded-xl",
                 category.essential
-                  ? "bg-coral-tint text-coral-deep"
-                  : "bg-indigo-tint text-indigo",
+                  ? "bg-signal-tint text-signal-deep"
+                  : "bg-info-tint text-info",
               )}
             >
               <Icon name={category.icon} size={20} />
@@ -186,7 +186,7 @@ function CategoryCard({
                 {category.name}
               </h3>
               <Pill
-                tone={category.essential ? "coral" : "neutral"}
+                tone={category.essential ? "signal" : "neutral"}
                 className="mt-1.5"
               >
                 {category.essential ? "Essential" : "Optional"}
@@ -196,7 +196,7 @@ function CategoryCard({
           {owned && (
             <CheckCircle2
               size={22}
-              className="shrink-0 text-emerald"
+              className="shrink-0 text-verified"
               aria-hidden
             />
           )}
@@ -235,7 +235,7 @@ function CategoryCard({
 
         <div className="mt-3 flex-1 rounded-xl border border-line bg-paper p-3">
           <p className="text-sm font-medium text-ink">{tier.item}</p>
-          <p className="mt-1 text-sm font-semibold text-coral-deep">
+          <p className="mt-1 text-sm font-semibold text-signal-deep">
             {tier.price}
           </p>
         </div>
@@ -245,7 +245,7 @@ function CategoryCard({
             type="checkbox"
             checked={owned}
             onChange={() => toggleEquipment(category.id)}
-            className="h-4 w-4 accent-emerald"
+            className="h-4 w-4 accent-verified"
           />
           I already have this
         </label>

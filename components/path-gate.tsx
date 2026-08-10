@@ -68,7 +68,7 @@ export function PathGate({ children, teaser, unlocks }: Props) {
             <button
               type="button"
               onClick={() => setExpanded(true)}
-              className="mt-6 inline-flex items-center gap-2 rounded-full bg-coral px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-coral-deep hover:-translate-y-0.5"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-signal-deep hover:-translate-y-0.5"
             >
               <Sparkles size={16} />
               Choose my path

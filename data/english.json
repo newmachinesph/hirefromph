@@ -23,7 +23,7 @@
       {
         "id": "intelligibility",
         "n": "01",
-        "accent": "coral",
+        "accent": "signal",
         "yours": true,
         "title": "How easily you're understood",
         "what": "When a listener has to work harder to process what you said, they trust it less. This is not an opinion, in a controlled study, native listeners rated identical trivia statements as LESS TRUE when spoken with a non-native accent, and the effect got stronger the heavier the accent. The mechanism is processing fluency: hard to parse feels like not true. The researchers named job seekers and offshore work explicitly.",
@@ -33,7 +33,7 @@
       {
         "id": "pragmatics",
         "n": "02",
-        "accent": "amber",
+        "accent": "caution",
         "yours": true,
         "title": "How you frame requests, refusals, and status",
         "what": "Hedging, 'just', 'maybe', 'I think', 'sort of', 'kind of', signals that you don't stand behind your own idea. Pile enough qualifiers on a correct recommendation and it lands as a guess. This is the cheapest thing on this page to fix and it changes how senior you sound in a single afternoon.",
@@ -43,7 +43,7 @@
       {
         "id": "bias",
         "n": "03",
-        "accent": "indigo",
+        "accent": "info",
         "yours": false,
         "title": "Client-side bias you did not cause",
         "what": "Researchers ran controlled experiments on simulated freelancer profiles and found a strong, consistent preference for US-based freelancers, in who got selected, AND in the ratings given afterwards for identical work. Some of the ceiling you hit has nothing to do with your English, your skill, or your attitude.",
@@ -71,31 +71,31 @@
         "id": "hedges",
         "label": "Hedges",
         "why": "Each one tells the reader: don't fully trust what I'm about to say. Three in a sentence and your recommendation reads as a guess.",
-        "accent": "coral"
+        "accent": "signal"
       },
       {
         "id": "apology",
         "label": "Reflex apologies",
         "why": "Save 'sorry' for when you actually broke something. Apologizing for existing, for asking, or for taking up space trains the client to see you as a subordinate rather than a peer.",
-        "accent": "coral"
+        "accent": "signal"
       },
       {
         "id": "deference",
         "label": "Deference markers",
         "why": "'Po', 'sir', 'ma'am', 'kindly' are courteous and correct in Philippine register. To a US or AU client they read less as respect and more as subordination, and a subordinate is not who gets asked for an opinion.",
-        "accent": "amber"
+        "accent": "caution"
       },
       {
         "id": "dated",
         "label": "Dated business English",
         "why": "'Revert back', 'as per', 'do the needful', 'for a while' (on a call). These are common in PH and Indian business English and instantly mark the writer as offshore. Plain modern English is stronger anyway.",
-        "accent": "amber"
+        "accent": "caution"
       },
       {
         "id": "filler",
         "label": "Filler and throat-clearing",
         "why": "'I just wanted to reach out', 'I hope this finds you well', 'basically', 'actually'. Delete the runway and start the plane.",
-        "accent": "indigo"
+        "accent": "info"
       }
     ]
   },
@@ -110,7 +110,7 @@
         "name": "BLUF",
         "expand": "Bottom Line Up Front",
         "icon": "arrow-up",
-        "accent": "coral",
+        "accent": "signal",
         "use": "Every status update, every email, every Slack message longer than one line.",
         "rule": "The decision, the ask, or the headline goes in sentence one. Context comes after, for the people who want it. Never make the reader dig for the point.",
         "anatomy": [
@@ -128,7 +128,7 @@
         "name": "SBAR",
         "expand": "Situation · Background · Assessment · Recommendation",
         "icon": "siren",
-        "accent": "amber",
+        "accent": "caution",
         "use": "Escalating a problem. Delivering bad news. Any handoff.",
         "rule": "The R is the whole point. Originating in the US Navy and now standard in hospitals worldwide, SBAR forces you to end with a RECOMMENDATION, not a question. 'What should I do?' makes the problem theirs. 'Here's what I recommend, confirm?' makes you the professional who solved it.",
         "anatomy": [
@@ -146,7 +146,7 @@
         "name": "The trade-off",
         "expand": "How to say no without saying no",
         "icon": "scale",
-        "accent": "emerald",
+        "accent": "verified",
         "use": "Scope creep. Impossible deadlines. The fourth 'quick favor' this week.",
         "rule": "Never refuse. Price it. A refusal invites an argument you'll lose; a trade-off hands the client a decision only they can make, and quietly teaches them that your time is finite.",
         "anatomy": [
@@ -163,7 +163,7 @@
         "name": "The stated assumption",
         "expand": "How to ask without looking lost",
         "icon": "help-circle",
-        "accent": "indigo",
+        "accent": "info",
         "use": "Any brief that's vague. Which is most of them.",
         "rule": "Don't ask an open question, it puts the work back on the client and makes you look like you need supervision. State the assumption you're about to act on and invite a correction. If they say nothing, you're covered, and you were never blocked.",
         "anatomy": [
@@ -194,7 +194,7 @@
       {
         "n": "01",
         "impact": "Highest",
-        "accent": "coral",
+        "accent": "signal",
         "title": "Rate and pausing",
         "what": "Slow down and put real pauses at clause boundaries. Studies on Philippine English intelligibility specifically found speakers become more intelligible by adjusting rhythm and slowing down, not by changing their accent. This is no-cost, it works today, and it is the single highest-leverage change on this list.",
         "drill": "Record a 60-second answer to 'walk me through what you did last week.' Play it back. Count your pauses. If there are fewer than five, you're rushing, and rushing is what makes an accent hard to parse."
@@ -202,7 +202,7 @@
       {
         "n": "02",
         "impact": "High",
-        "accent": "amber",
+        "accent": "caution",
         "title": "Sentence stress",
         "what": "English is stress-timed: content words get punched, function words get swallowed. Philippine English is syllable-timed, every syllable gets roughly equal weight. This single difference is the most-documented gap between PH English and US/UK/AU English, and it's what makes listeners work harder even when every word is correct.",
         "drill": "Take any sentence. Underline only the words that carry meaning, the nouns, verbs, and numbers. Say it again, hitting only those and letting everything else go soft. That's stress-timing."
@@ -210,7 +210,7 @@
       {
         "n": "03",
         "impact": "Medium",
-        "accent": "emerald",
+        "accent": "verified",
         "title": "/f/ vs /p/ and /v/ vs /b/",
         "what": "Worth fixing, not for elegance, but because these two pairs create genuine lexical confusion. Pull versus full. Berry versus very. Best versus vest. When the listener guesses wrong, they lose the sentence.",
         "drill": "Minimal pairs, two minutes a day, out loud: pull/full, pin/fin, copy/coffee, berry/very, boat/vote, best/vest, curb/curve."
@@ -218,7 +218,7 @@
       {
         "n": "04",
         "impact": "Lowest, do this last",
-        "accent": "indigo",
+        "accent": "info",
         "title": "The 'th' sound",
         "what": "Genuinely the lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, the evidence is not on their side.",
         "drill": "Optional. Tongue lightly between the teeth: think, three, this, that. Two minutes, then go back to rhythm work."
@@ -238,7 +238,7 @@
         "what": "The best no-cost grammar checker. Runs in your browser, no account needed, a generous no-cost check length.",
         "use": "Paste every client email into it for one month. You'll stop needing it.",
         "cost": "Open",
-        "tone": "emerald"
+        "tone": "verified"
       },
       {
         "name": "Hemingway Editor",
@@ -246,7 +246,7 @@
         "what": "Kills passive voice and verbosity. No cost, no account, no limit. It is not a grammar checker, pair it with LanguageTool.",
         "use": "Your goal is a lower grade level, not a higher one. Aim for grade 8. Senior people write simply.",
         "cost": "Open",
-        "tone": "emerald"
+        "tone": "verified"
       },
       {
         "name": "Rachel's English (YouTube)",
@@ -254,7 +254,7 @@
         "what": "The best no-cost resource for exactly what the research says matters: connected speech, rhythm, and stress.",
         "use": "Skip the individual-sound videos at first. Go straight to the rhythm and stress playlists.",
         "cost": "Open",
-        "tone": "emerald"
+        "tone": "verified"
       },
       {
         "name": "BBC Learning English",
@@ -262,7 +262,7 @@
         "what": "Daily uploads; '6 Minute English' is the workhorse listening series.",
         "use": "Listening practice at native speed. Play it at 1.25x once it feels easy.",
         "cost": "Open",
-        "tone": "emerald"
+        "tone": "verified"
       },
       {
         "name": "Otter.ai",
@@ -270,7 +270,7 @@
         "what": "Transcribe your own client calls and read yourself back. It has a workable no-cost tier (limits change; check their pricing page).",
         "use": "The most uncomfortable and most useful drill on this page. Count your hedges. Count your apologies. You will be shocked.",
         "cost": "No-cost tier, enough for ~2 calls a week",
-        "tone": "emerald"
+        "tone": "verified"
       },
       {
         "name": "Grammarly",
@@ -278,7 +278,7 @@
         "what": "No-cost tier covers grammar and spelling; it detects tone but won't rewrite it for you.",
         "use": "Fine, but LanguageTool does the no-cost job better and asks for less.",
         "cost": "No-cost tier exists, sources disagree on its exact limits, so check before relying on it",
-        "tone": "amber"
+        "tone": "caution"
       },
       {
         "name": "Toastmasters (District 75, Philippines)",
@@ -286,7 +286,7 @@
         "what": "Genuinely excellent for speaking under pressure. Several PH clubs meet online.",
         "use": "Worth it, but budget for it. It is routinely described as no-cost; it is not.",
         "cost": "PAID, modest dues, paid per half-year (check the current rates), plus club dues",
-        "tone": "coral"
+        "tone": "signal"
       }
     ]
   },

@@ -1,4 +1,4 @@
-# DevUp — Build Guide (read before building any page)
+# Hire From PH — Build Guide (read before building any page)
 
 Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for animation, `lucide-react` icons. Light mode only. TypeScript strict.
 
@@ -43,8 +43,8 @@ We ask users to sign an integrity oath. We therefore hold ourselves to it — a 
 - All content comes from `data/*.json`. Do not hardcode copy that exists in JSON.
 
 ## Design tokens (Tailwind utilities already wired)
-Colors: `paper`, `paper-2`, `paper-3`, `card`, `ink`, `ink-soft`, `ink-faint`, `line`, `line-strong`, `coral`, `coral-deep`, `coral-tint`, `emerald`, `emerald-tint`, `indigo`, `amber`.
-Fonts: `font-display` (Bricolage Grotesque — headings), default sans (Geist), `font-mono` (Geist Mono — kickers/code).
+Colors: `paper`, `paper-2`, `paper-3`, `card`, `ink`, `ink-soft`, `ink-faint`, `line`, `line-strong`, `signal`, `signal-deep`, `signal-tint`, `signal-light`, `verified`, `verified-tint`, `info`, `caution`, `caution-text`.
+Fonts: `font-display` (Space Grotesk — headings), default sans (Inter Tight), `font-mono` (Space Mono — kickers/code).
 Type: `text-[length:var(--text-hero)]`, `--text-display`, `--text-h2`, `--text-h3`, `--text-lead` (pair each with its `--line-height`).
 Radius: `rounded-[var(--radius)]` / `--radius-sm` / `--radius-lg`. Shadows: `shadow-[var(--shadow-sm)]`, `--shadow-md`, `--shadow-lg` (pick one token per class).
 Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotgrid`, `.link-sweep`, `.font-display`.
@@ -70,14 +70,14 @@ Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotg
     <Reveal i={2}><p className="mt-5 max-w-2xl text-[length:var(--text-lead)] text-ink-soft">{intro}</p></Reveal>
   </section>
   ```
-- Cards: `rounded-2xl border border-line bg-paper-2 p-6`, hover `hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300`.
+- Cards: `rounded-[var(--radius)] border border-line bg-paper-2 p-6`, hover `hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300`.
 - accent maps (reuse):
-  - text: coral→`text-coral`, emerald→`text-emerald`, amber→`text-amber-text`, indigo→`text-indigo`
-  - bar/bg: coral→`bg-coral`, emerald→`bg-emerald`, amber→`bg-amber`, indigo→`bg-indigo`
+  - text: signal→`text-signal`, verified→`text-verified`, caution→`text-caution-text`, info→`text-info`
+  - bar/bg: signal→`bg-signal`, verified→`bg-verified`, caution→`bg-caution`, info→`bg-info`
 - Accessibility: semantic landmarks, `alt`/`aria-label`, keyboard-usable controls, focus-visible is styled globally.
 - Reference implementation for tone & polish: `app/page.tsx`.
 
 ## Data shapes (in `data/`)
-- `site.json` ({brand,mission,standard,contact,stats[],**navGroups**[],primaryNav[]} — `navGroups` drives BOTH the mobile nav and the footer; add a route there and it appears in both), `stages.json` (4 stages), `roadmap.json` (9 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json`, `plan.json`, `equipment.json`, `apply.json`, `tools.json`, `languages.json`, `doctrine.json`, `frameworks.json`, `labs.json`, `tasks.json`, `learning.json`, `findwork.json`, `prompting.json`, `learntools.json`.
+- `site.json` ({brand,wordmarkAccent,meaning,tagline,mission,standard,stats[],**navGroups**[],primaryNav[]} — `navGroups` drives BOTH the mobile nav and the footer; add a route there and it appears in both), `stages.json` (4 stages), `roadmap.json` (9 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json`, `plan.json`, `equipment.json`, `apply.json`, `tools.json`, `languages.json`, `doctrine.json`, `frameworks.json`, `labs.json`, `tasks.json`, `learning.json`, `findwork.json`, `prompting.json`, `learntools.json`.
 - Honesty-doctrine pages: `conduct.json` ({intro,creed,principles[],philippineAnchor,cases[],dosDonts[],oath{clauses[]},honesty}), `english.json` ({baseline,threeCauses,honesty,banlist,frameworks[],speaking,resources[],lab}), `reality.json`, `simulator.json`. Each carries `source: {label,url}` objects — render them, never strip them.
 Import JSON directly: `import data from "@/data/x.json";`.

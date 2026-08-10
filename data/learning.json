@@ -20,7 +20,7 @@
       "effort": "Medium, it's uncomfortable, and that's the point",
       "payoff": "Highest of any technique studied",
       "icon": "brain",
-      "accent": "coral"
+      "accent": "signal"
     },
     {
       "id": "spaced-repetition",
@@ -31,7 +31,7 @@
       "effort": "Low per session, needs a simple system",
       "payoff": "Best long-term retention of any method here",
       "icon": "calendar-clock",
-      "accent": "emerald"
+      "accent": "verified"
     },
     {
       "id": "interleaving",
@@ -42,7 +42,7 @@
       "effort": "Medium, feels worse in the moment",
       "payoff": "Better transfer to new, unseen problems",
       "icon": "shuffle",
-      "accent": "indigo"
+      "accent": "info"
     },
     {
       "id": "elaboration",
@@ -53,7 +53,7 @@
       "effort": "Low, mostly a habit shift",
       "payoff": "Deeper, more connected understanding",
       "icon": "link",
-      "accent": "amber"
+      "accent": "caution"
     },
     {
       "id": "concrete-examples",
@@ -64,7 +64,7 @@
       "effort": "Low",
       "payoff": "Faster, sturdier grasp of abstract ideas",
       "icon": "image",
-      "accent": "coral"
+      "accent": "signal"
     },
     {
       "id": "dual-coding",
@@ -75,7 +75,7 @@
       "effort": "Low to medium",
       "payoff": "Stronger recall, but only for material that is genuinely structured",
       "icon": "layers",
-      "accent": "indigo"
+      "accent": "info"
     },
     {
       "id": "deliberate-practice",
@@ -86,7 +86,7 @@
       "effort": "High, this is the uncomfortable one",
       "payoff": "Fastest way to close a known weak spot",
       "icon": "target",
-      "accent": "emerald"
+      "accent": "verified"
     },
     {
       "id": "teach-back",
@@ -97,7 +97,7 @@
       "effort": "Low",
       "payoff": "Instantly reveals hidden gaps",
       "icon": "mic",
-      "accent": "amber"
+      "accent": "caution"
     }
   ],
   "feelsGood": [

@@ -37,7 +37,7 @@ function useDebounced<T>(value: T, delay = 700): T {
   return debounced;
 }
 
-type Tone = "neutral" | "coral" | "emerald" | "amber" | "indigo";
+type Tone = "neutral" | "signal" | "verified" | "caution" | "info";
 
 type PhraseHit = { phrase: string; count: number };
 type CategoryHit = {
@@ -104,7 +104,7 @@ function readDirectness({ total, words }: ScanResult): Verdict {
     return {
       label: "Direct",
       note: "Nothing flagged. This reads like the person in charge of the thing.",
-      tone: "emerald",
+      tone: "verified",
     };
 
   const per50 = (total / words) * 50;
@@ -112,40 +112,40 @@ function readDirectness({ total, words }: ScanResult): Verdict {
     return {
       label: "Mostly direct",
       note: "A couple of soft spots. Cut them and nothing else has to change.",
-      tone: "amber",
+      tone: "caution",
     };
   if (per50 < 6)
     return {
       label: "Softened",
       note: "Enough hedging that your point is negotiable before you've even made it.",
-      tone: "coral",
+      tone: "signal",
     };
   return {
     label: "Buried",
     note: "The message is in there. The reader has to dig for it, and most won't.",
-    tone: "coral",
+    tone: "signal",
   };
 }
 
 /* ------------------------------------------------------------------ VIEW */
 const accentText: Record<string, string> = {
-  coral: "text-coral-deep",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal-deep",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const verdictText: Record<Tone, string> = {
   neutral: "text-ink-faint",
-  coral: "text-coral-deep",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal-deep",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 
 function Results({
@@ -193,9 +193,9 @@ function Results({
       <p className="text-xs leading-relaxed text-ink-soft">{verdict.note}</p>
 
       {result.total === 0 ? (
-        <div className="rounded-xl border border-emerald/30 bg-emerald-tint p-4">
+        <div className="rounded-xl border border-verified/30 bg-verified-tint p-4">
           {typeof cleared === "number" && cleared > 0 && result.words > 0 && (
-            <p className="mb-2 flex items-center gap-1.5 text-xs font-semibold text-emerald">
+            <p className="mb-2 flex items-center gap-1.5 text-xs font-semibold text-verified">
               <ShieldCheck size={14} aria-hidden />
               You cut {cleared} {cleared === 1 ? "flag" : "flags"}. That was you,
               not us.
@@ -274,7 +274,7 @@ export function CommsLab() {
 
   return (
     <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-8">
-      <Pill tone="emerald">
+      <Pill tone="verified">
         <ShieldCheck size={13} aria-hidden />
         Runs in your browser. Nothing is uploaded, stored, or sent anywhere.
       </Pill>
@@ -363,7 +363,7 @@ export function CommsLab() {
                 <input type="checkbox" id={id} className="peer sr-only" />
                 <label
                   htmlFor={id}
-                  className="group flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-ink-soft transition-colors hover:text-ink peer-checked:text-ink-faint peer-checked:line-through peer-checked:[&>span]:border-emerald peer-checked:[&>span]:bg-emerald peer-checked:[&>span]:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-coral"
+                  className="group flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-ink-soft transition-colors hover:text-ink peer-checked:text-ink-faint peer-checked:line-through peer-checked:[&>span]:border-verified peer-checked:[&>span]:bg-verified peer-checked:[&>span]:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-signal"
                 >
                   <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md border border-line-strong bg-paper-2 text-transparent transition-colors group-hover:border-ink">
                     <Check size={13} strokeWidth={3} aria-hidden />

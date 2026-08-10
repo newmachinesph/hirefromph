@@ -10,10 +10,10 @@ import { cn } from "@/lib/utils";
 import { pageMeta } from "@/lib/meta";
 
 const SPEC_ICON_TONE = [
-  "bg-coral-tint text-coral-deep",
-  "bg-emerald-tint text-emerald",
-  "bg-amber-tint text-amber-text",
-  "bg-indigo-tint text-indigo",
+  "bg-signal-tint text-signal-deep",
+  "bg-verified-tint text-verified",
+  "bg-caution-tint text-caution-text",
+  "bg-info-tint text-info",
 ];
 
 export const metadata: Metadata = pageMeta({
@@ -98,8 +98,8 @@ export default function EquipmentPage() {
                       {w.howToJudge}
                     </p>
                   </div>
-                  <div className="mt-3 rounded-xl border border-coral/25 bg-coral-tint/40 p-4">
-                    <p className="kicker text-coral-deep">Don&rsquo;t overpay for</p>
+                  <div className="mt-3 rounded-xl border border-signal/25 bg-signal-tint/40 p-4">
+                    <p className="kicker text-signal-deep">Don&rsquo;t overpay for</p>
                     <p className="mt-1.5 text-sm leading-relaxed text-ink">
                       {w.dontOverpayFor}
                     </p>
@@ -154,7 +154,7 @@ export default function EquipmentPage() {
             <Reveal key={build.name} i={idx}>
               <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
                 <h3 className="font-display text-xl">{build.name}</h3>
-                <p className="mt-1 font-display text-3xl text-coral">
+                <p className="mt-1 font-display text-3xl text-signal">
                   {build.total}
                 </p>
                 <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
@@ -173,7 +173,7 @@ export default function EquipmentPage() {
       <section className="container-x pb-24">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="emerald">
+            <Pill tone="verified">
               <Sparkles size={13} /> Prepared beats perfect
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

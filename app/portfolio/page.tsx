@@ -15,25 +15,25 @@ export const metadata: Metadata = pageMeta({
 });
 
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep border-coral/20",
-  emerald: "bg-emerald-tint text-emerald border-emerald/20",
-  amber: "bg-amber-tint text-amber-text border-amber/25",
-  indigo: "bg-indigo-tint text-indigo border-indigo/20",
+  signal: "bg-signal-tint text-signal-deep border-signal/20",
+  verified: "bg-verified-tint text-verified border-verified/20",
+  caution: "bg-caution-tint text-caution-text border-caution/25",
+  info: "bg-info-tint text-info border-info/20",
 };
 // Literal classes so Tailwind's JIT can see them — a `hover:${var}` concat is
 // invisible to the scanner and the class never gets generated.
 const accentHover: Record<string, string> = {
-  coral: "hover:text-coral",
-  emerald: "hover:text-emerald",
-  amber: "hover:text-amber-text",
-  indigo: "hover:text-indigo",
+  signal: "hover:text-signal",
+  verified: "hover:text-verified",
+  caution: "hover:text-caution-text",
+  info: "hover:text-info",
 };
 
 // Tier → pill tone. One rung per column: Start (get in), Level up, Pro (differentiate).
-const tierTone: Record<string, "emerald" | "amber" | "coral"> = {
-  Start: "emerald",
-  "Level up": "amber",
-  Pro: "coral",
+const tierTone: Record<string, "verified" | "caution" | "signal"> = {
+  Start: "verified",
+  "Level up": "caution",
+  Pro: "signal",
 };
 
 // Join by id so track name/icon/accent stay single-sourced in tracks.json.
@@ -184,7 +184,7 @@ export default function PortfolioPage() {
       <section className="container-x pb-24">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="coral">
+            <Pill tone="signal">
               <Sparkles size={13} /> Proof, not promises
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

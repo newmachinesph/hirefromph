@@ -41,16 +41,16 @@ type FocusItem = {
 };
 
 const accentText: Record<string, string> = {
-  coral: "text-coral",
-  emerald: "text-emerald",
-  amber: "text-amber-text",
-  indigo: "text-indigo",
+  signal: "text-signal",
+  verified: "text-verified",
+  caution: "text-caution-text",
+  info: "text-info",
 };
 const accentSoft: Record<string, string> = {
-  coral: "bg-coral-tint text-coral-deep",
-  emerald: "bg-emerald-tint text-emerald",
-  amber: "bg-amber-tint text-amber-text",
-  indigo: "bg-indigo-tint text-indigo",
+  signal: "bg-signal-tint text-signal-deep",
+  verified: "bg-verified-tint text-verified",
+  caution: "bg-caution-tint text-caution-text",
+  info: "bg-info-tint text-info",
 };
 
 const FEATURED_IDS = ["retrieval-practice", "spaced-repetition"];
@@ -67,7 +67,7 @@ export default function LearnPage() {
         title={learning.headline}
         lead={learning.intro}
         backdrop={
-          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-coral/10 blur-3xl" />
+          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-signal/10 blur-3xl" />
         }
       >
         <Reveal i={3}>
@@ -92,10 +92,10 @@ export default function LearnPage() {
           <div className="relative overflow-hidden rounded-[var(--radius-lg)] bg-ink px-7 py-12 text-paper-2 lg:px-14 lg:py-16">
             <div aria-hidden className="absolute inset-0 dotgrid opacity-[0.06]" />
             <div className="relative">
-              <Pill tone="coral">
+              <Pill tone="signal">
                 <X size={13} /> Myth
               </Pill>
-              <p className="mt-6 max-w-3xl font-display text-2xl leading-snug text-balance text-paper-2/55 decoration-coral decoration-4 line-through lg:text-3xl">
+              <p className="mt-6 max-w-3xl font-display text-2xl leading-snug text-balance text-paper-2/55 decoration-signal decoration-4 line-through lg:text-3xl">
                 {learning.myth.claim}
               </p>
 
@@ -109,7 +109,7 @@ export default function LearnPage() {
                   </p>
                 </div>
                 <div>
-                  <p className="kicker text-emerald">
+                  <p className="kicker text-verified">
                     What the evidence says
                   </p>
                   <p className="mt-3 text-sm leading-relaxed text-paper-2/90">
@@ -124,12 +124,12 @@ export default function LearnPage() {
                 </div>
               </div>
 
-              <div className="mt-10 flex items-start gap-4 rounded-2xl border border-coral/30 bg-coral/10 p-6">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-coral text-white">
+              <div className="mt-10 flex items-start gap-4 rounded-2xl border border-signal/30 bg-signal/10 p-6">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-signal text-white">
                   <Icon name="shield-check" size={18} />
                 </span>
                 <div>
-                  <p className="kicker text-coral">VET lesson, who profits?</p>
+                  <p className="kicker text-signal">VET lesson, who profits?</p>
                   <p className="mt-2 text-sm leading-relaxed text-paper-2">
                     {learning.myth.vetLesson}
                   </p>
@@ -181,10 +181,10 @@ export default function LearnPage() {
             {(learning.feelsGood as FeelsGoodItem[]).map((item, idx) => (
               <Reveal key={item.id} i={idx % 4}>
                 <div className="grid overflow-hidden rounded-2xl border border-line lg:grid-cols-2">
-                  <div className="bg-coral-tint p-6">
+                  <div className="bg-signal-tint p-6">
                     <div className="flex items-center gap-2">
-                      <X size={16} className="shrink-0 text-coral" />
-                      <p className="font-display text-lg leading-tight text-coral-deep text-balance">
+                      <X size={16} className="shrink-0 text-signal" />
+                      <p className="font-display text-lg leading-tight text-signal-deep text-balance">
                         {item.habit}
                       </p>
                     </div>
@@ -199,10 +199,10 @@ export default function LearnPage() {
                       {item.whyItFails}
                     </p>
                   </div>
-                  <div className="bg-emerald-tint p-6">
+                  <div className="bg-verified-tint p-6">
                     <div className="flex items-center gap-2">
-                      <Check size={16} className="shrink-0 text-emerald" />
-                      <p className="font-display text-lg leading-tight text-emerald">
+                      <Check size={16} className="shrink-0 text-verified" />
+                      <p className="font-display text-lg leading-tight text-verified">
                         Do this instead
                       </p>
                     </div>
@@ -239,7 +239,7 @@ export default function LearnPage() {
                 <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-line-strong bg-paper-3/60 px-4 py-3">
                   <ArrowRight
                     size={15}
-                    className="mt-0.5 shrink-0 text-indigo"
+                    className="mt-0.5 shrink-0 text-info"
                   />
                   <p className="text-sm leading-relaxed text-ink">
                     <span className="font-semibold">How: </span>
@@ -254,7 +254,7 @@ export default function LearnPage() {
                   <Icon
                     name="alert-triangle"
                     size={14}
-                    className="mt-0.5 shrink-0 text-amber-text"
+                    className="mt-0.5 shrink-0 text-caution-text"
                   />
                   <p className="text-xs leading-relaxed text-ink-soft">
                     {f.watchOut}
@@ -288,7 +288,7 @@ export default function LearnPage() {
       <section className="container-x py-20 lg:py-28">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="coral">
+            <Pill tone="signal">
               <Sparkles size={13} /> Evidence, not vibes
             </Pill>
             <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">

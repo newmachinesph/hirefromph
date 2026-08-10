@@ -27,18 +27,18 @@ type Props = {
 
 // Map the free-text `tone` string from data/prompting.json to Pill's tone
 // union so we can reuse the shared component without an `any` cast.
-const PILL_TONE: Record<string, "neutral" | "coral" | "emerald" | "amber" | "indigo"> = {
+const PILL_TONE: Record<string, "neutral" | "signal" | "verified" | "caution" | "info"> = {
   neutral: "neutral",
-  coral: "coral",
-  amber: "amber",
-  emerald: "emerald",
+  signal: "signal",
+  caution: "caution",
+  verified: "verified",
 };
 
 const BAR_TONE: Record<string, string> = {
   neutral: "bg-line-strong",
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
 };
 
 function buildPrompt(fields: BuilderField[], values: Record<string, string>): string {

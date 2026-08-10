@@ -6,7 +6,7 @@
       "id": "operators",
       "name": "Search operators, the Google x-ray",
       "icon": "search",
-      "accent": "coral",
+      "accent": "signal",
       "how": "Most people type \"remote jobs Philippines\" into Google and scroll for an hour. Professionals write one precise query instead: quotes force an exact phrase, site: narrows to a single domain, a minus sign removes noise, filetype: finds literal documents.",
       "why": "Quotes stop Google from loosely matching your words across unrelated pages. site: turns the entire web into one filtered board, a job site, a company's own careers page, even a competitor's site. The minus sign cuts out sources you already know are noisy. Pair any of these with Google's Tools → Any time → Past week filter to kill stale listings, the operator finds the needle, the date filter keeps it fresh.",
       "example": [
@@ -20,7 +20,7 @@
       "id": "reverse-sourcing",
       "name": "Reverse-sourcing: find the client, not the job post",
       "icon": "target",
-      "accent": "indigo",
+      "accent": "info",
       "how": "A job post means a business already decided to hire and is now fighting off hundreds of other applicants. Reverse-sourcing skips that fight entirely, you find businesses that have the exact problem you solve, and you reach out before they've written a job post at all. This is where the least competition lives.",
       "why": "You're not searching for the word \"hiring\", you're searching for the pain that eventually leads to hiring. A solo founder complaining about admin work, a shop with inconsistent posting, a business with no one answering their inbox: each is a future client who hasn't realized yet that they can outsource it. You get there first, with a specific offer instead of a generic application.",
       "example": [
@@ -33,7 +33,7 @@
       "id": "hidden-market",
       "name": "Mining the hidden job market",
       "icon": "pickaxe",
-      "accent": "amber",
+      "accent": "caution",
       "how": "Most job posts never touch Indeed, OnlineJobs, or LinkedIn, they live only on the company's own site, in a niche Slack or Discord, in a newsletter, or inside a private community. This is the hidden market. Almost nobody checks it because the big boards feel easier, which is exactly why it has less competition.",
       "why": "Company career pages post roles before anyone pays to list them on a board. Niche Slack and Discord communities and newsletters exist so insiders hear first, that's the entire point of joining one. Checking these on a schedule puts you ahead of everyone still waiting for a board notification.",
       "example": [
@@ -47,7 +47,7 @@
       "id": "competitors",
       "name": "Working backwards from competitors and peers",
       "icon": "binoculars",
-      "accent": "emerald",
+      "accent": "verified",
       "how": "If you know one person doing the job you want, you have a map to ten more opportunities. Find a company that already hired someone in your target role, then look at who else works there, who they used to work for, and who else is hiring for that same role right now.",
       "why": "A competitor's employee list and LinkedIn's \"people also viewed\" are a map of who else hires this role, at what kind of company, with what background. Study five profiles the way the DECONSTRUCT method teaches, what job titles, tools, and companies keep repeating? Those repeats are your next searches, not a coincidence.",
       "example": [
@@ -60,7 +60,7 @@
       "id": "pipeline",
       "name": "Building your own opportunity pipeline",
       "icon": "workflow",
-      "accent": "coral",
+      "accent": "signal",
       "how": "One good search is a lucky find. A pipeline is a system: a short list of sources you check on a fixed day every week, logged somewhere so you never re-check the same dead end twice. This is the habit that eventually replaces needing a directory like the one below at all.",
       "why": "A tracker turns \"looking for work\" from a mood you wait for into a routine you run. Ten minutes, five sources, the same day every week, and you stop depending on luck, or on any single site staying good forever.",
       "example": [

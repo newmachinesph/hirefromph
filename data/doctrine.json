@@ -48,7 +48,7 @@
       "name": "FIND",
       "tagline": "How to find any answer",
       "icon": "search",
-      "accent": "coral",
+      "accent": "signal",
       "summary": "Most people search like a customer. Professionals search like an operator.",
       "steps": [
         { "title": "Go to the primary source first", "desc": "The official docs, the actual job post, the company's own site. Not a blog summarizing it, not a reaction video. Primary sources are more accurate and usually faster." },
@@ -63,7 +63,7 @@
       "name": "DECONSTRUCT",
       "tagline": "How to build something you've never built",
       "icon": "scan-search",
-      "accent": "indigo",
+      "accent": "info",
       "summary": "You never need a template. You need five examples and the ability to see the pattern.",
       "steps": [
         { "title": "Collect five real examples", "desc": "Real ones, made by professionals, for the real situation. Not five templates, five artifacts that actually worked." },
@@ -79,7 +79,7 @@
       "name": "LEARN",
       "tagline": "How to teach yourself any skill, fast",
       "icon": "graduation-cap",
-      "accent": "emerald",
+      "accent": "verified",
       "summary": "Courses are optional. The ability to learn without one is not.",
       "steps": [
         { "title": "Define the outcome, not the topic", "desc": "Not 'learn QuickBooks'. Instead: 'reconcile a month of transactions for a real business without help'. An outcome tells you when you're done." },
@@ -95,7 +95,7 @@
       "name": "VET",
       "tagline": "How to judge information, tools, and opportunities",
       "icon": "shield-check",
-      "accent": "amber",
+      "accent": "caution",
       "summary": "Confidence is not accuracy, and advice often arrives with an incentive attached. Learn to check both.",
       "steps": [
         { "title": "Who benefits if I believe this?", "desc": "Follow the incentive. A recommendation that profits the recommender needs outside evidence." },
@@ -110,7 +110,7 @@
       "name": "ASK",
       "tagline": "How to ask a question that actually gets answered",
       "icon": "message-square-quote",
-      "accent": "indigo",
+      "accent": "info",
       "summary": "A well-formed question gets a professional's help. A vague one gets ignored, everywhere.",
       "steps": [
         { "title": "Show what you're trying to do", "desc": "State the actual goal, not the symptom. 'I'm trying to reconcile March' beats 'it's not working'." },
@@ -125,7 +125,7 @@
       "name": "UNSTICK",
       "tagline": "How to get yourself moving again",
       "icon": "life-buoy",
-      "accent": "coral",
+      "accent": "signal",
       "summary": "Every professional is stuck most of the day. They just have a procedure.",
       "steps": [
         { "title": "Re-read the actual requirement", "desc": "A surprising share of 'stuck' is solving the wrong problem. Read what was actually asked, word for word." },
@@ -141,7 +141,7 @@
       "name": "GIVE",
       "tagline": "How to grow by giving first",
       "icon": "heart-handshake",
-      "accent": "coral",
+      "accent": "signal",
       "summary": "The fastest way into any ecosystem is to put value into it before you ask anything from it.",
       "steps": [
         { "title": "Do real work for a real need, at no cost", "desc": "One scoped pro-bono project for a school, parish, co-op, or small business. Choose where your hours do the most good: a small organization gains more from ten of your hours than a big one ever would." },

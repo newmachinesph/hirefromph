@@ -34,7 +34,7 @@ export function BackToTop() {
       className={cn(
         "fixed bottom-6 right-6 z-40 grid h-11 w-11 place-items-center rounded-full",
         "border border-line-strong bg-ink text-paper-2 shadow-lg",
-        "transition-all duration-300 hover:-translate-y-0.5 hover:bg-coral hover:shadow-[var(--shadow-coral)]",
+        "transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]",
         visible
           ? "opacity-100"
           : "pointer-events-none translate-y-2 opacity-0",

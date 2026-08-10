@@ -137,7 +137,7 @@ import {
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 
 /**
- * DevUp icon set — Phosphor Icons resolved by the kebab names stored in JSON.
+ * Hire From PH icon set — Phosphor Icons resolved by the kebab names stored in JSON.
  * Static named imports + this direct kebab -> component map let the bundler
  * tree-shake to only the icons below instead of shipping the whole package.
  * Anything not listed falls back to Sparkle.

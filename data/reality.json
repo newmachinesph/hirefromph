@@ -45,7 +45,7 @@
   "myths": [
     {
       "id": "pay",
-      "accent": "coral",
+      "accent": "signal",
       "tag": "The pay myth",
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a quarter of your working time will not be paid at all.",
@@ -61,7 +61,7 @@
     },
     {
       "id": "timeline",
-      "accent": "amber",
+      "accent": "caution",
       "tag": "The timeline myth",
       "myth": "\"Get your first client in 10–14 days.\"",
       "headline": "There is no credible data on time-to-first-client. None. Anywhere.",
@@ -77,7 +77,7 @@
     },
     {
       "id": "platforms",
-      "accent": "coral",
+      "accent": "signal",
       "tag": "The protection myth",
       "myth": "\"The platform protects me, that's what the fee is for.\"",
       "headline": "31% had been paid nothing. 38% had been paid late.",
@@ -93,7 +93,7 @@
     },
     {
       "id": "english",
-      "accent": "indigo",
+      "accent": "info",
       "tag": "The English myth",
       "myth": "\"Magaling ako mag-English, that's my edge.\"",
       "headline": "It's your entry ticket. It has never been your differentiator.",
@@ -109,7 +109,7 @@
     },
     {
       "id": "competition",
-      "accent": "coral",
+      "accent": "signal",
       "tag": "The competition myth",
       "myth": "\"There's so much work out there, low competition.\"",
       "headline": "We are the 3rd largest online-work market on Earth.",
@@ -125,12 +125,12 @@
     },
     {
       "id": "law",
-      "accent": "amber",
+      "accent": "caution",
       "tag": "The legal myth",
       "myth": "\"If a client cheats me, I have legal protection.\"",
       "headline": "The Freelance Workers Protection Act is still not law.",
       "body": "It would have required a written contract for every engagement, at least 30% payment upfront, and penalties of ₱50,000 to ₱500,000 for clients who don't pay. It passed the House of Representatives on 6 February 2023, and then it stopped. It has not been enacted. It has been refiled in the 20th Congress. As of now, a Filipino freelancer stiffed by a foreign client in 2026 has no dedicated statutory remedy to reach for.",
-      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed, passed one chamber, three years ago.",
+      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed, passed one chcaution, three years ago.",
       "lesson": "Your contract IS your protection, because nothing else is. Written scope, milestones, escrow, upfront deposit. Build that habit now, while the stakes are small.",
       "source": {
         "label": "BusinessMirror, Bill seeks protection, benefits for freelancers, gig workers",
@@ -141,7 +141,7 @@
     },
     {
       "id": "scams",
-      "accent": "coral",
+      "accent": "signal",
       "tag": "The on-ramp myth",
       "myth": "\"Entry-level admin work is the safe way to start.\"",
       "headline": "It is the single most scam-targeted category there is.",
@@ -240,7 +240,7 @@
       {
         "id": "upwork-ai",
         "title": "Upwork, AI skills, YoY growth in US client demand",
-        "accent": "emerald",
+        "accent": "verified",
         "note": "Demand for skills referencing AI grew 109% year over year. Inside that, the specifics:",
         "source": {
           "label": "Upwork, In-Demand Skills 2026",
@@ -259,7 +259,7 @@
       {
         "id": "upwork-nonai",
         "title": "Upwork, and it is NOT only AI",
-        "accent": "indigo",
+        "accent": "info",
         "note": "Not all of the growth is AI. Plenty of the fastest-growing demand has nothing to do with models at all, it's business capability a client can't prompt into existence.",
         "source": {
           "label": "Upwork, In-Demand Skills 2026",
@@ -278,7 +278,7 @@
       {
         "id": "fiverr",
         "title": "Fiverr, Business Trends Index, June 2026",
-        "accent": "coral",
+        "accent": "signal",
         "note": "Fiverr publishes what buyers are searching for. Read this as a live signal of what clients are trying to buy right now and struggling to find.",
         "source": {
           "label": "Fiverr, Business Trends Index, June 2026",
@@ -357,7 +357,7 @@
       {
         "id": "entry",
         "level": "Entry",
-        "accent": "coral",
+        "accent": "signal",
         "hourly": "$3–6 / hr",
         "monthly": "≈ $300–1,100 / mo",
         "what": "Generic, undifferentiated task work. This is the floor described at the top of this page, the one that is actively collapsing. Do not plan to stay here."
@@ -365,7 +365,7 @@
       {
         "id": "mid",
         "level": "Mid",
-        "accent": "amber",
+        "accent": "caution",
         "hourly": "$7–15 / hr",
         "monthly": "≈ $600–2,400 / mo",
         "what": "You own a process, not a task. The client stops telling you the steps and starts telling you the outcome."
@@ -373,7 +373,7 @@
       {
         "id": "senior",
         "level": "Senior / specialist",
-        "accent": "emerald",
+        "accent": "verified",
         "hourly": "$18–35+ / hr",
         "monthly": "≈ $1,000–4,800+ / mo",
         "what": "A named, provable specialisation, and this is where the AI premium lands on top of the craft, not instead of it."

@@ -1,53 +1,44 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/*  DevUp — Design tokens                                              */
-/*  Editorial-modern, light. Warm paper + ink + coral + emerald.       */
+/*  Hire From PH — Design tokens.                                      */
+/*  Signal: cool near-white, graphite ink, electric violet.            */
 /* ------------------------------------------------------------------ */
 
 :root {
-  /* Surfaces, cool fresh off-white */
-  --paper: #f1f6f4;
-  --paper-2: #ffffff;
-  --paper-3: #e3efeb;
-  --card: #ffffff;
+  --paper: #F6F7F9;
+  --paper-2: #FFFFFF;
+  --paper-3: #ECEEF2;
+  --card: #FFFFFF;
 
-  /* Ink, deep slate-teal near black */
-  --ink: #0e1f1b;
-  --ink-soft: #435551;
-  --ink-faint: #5c6d67;
-  --line: #dbe8e3;
-  --line-strong: #c3d5ce;
+  --ink: #0F1115;
+  --ink-soft: #464B57;
+  --ink-faint: #676D7C;
+  --line: #E2E5EA;
+  --line-strong: #C9CED8;
 
-  /* Signature accent, fresh teal.
-     Darkened to clear 4.5:1 as text on paper and as a fill under white text. */
-  --coral: #0a736a;
-  --coral-deep: #075b54;
-  --coral-tint: #d3efeb;
-  /* Accent for use on the dark (--ink) surfaces, where --coral goes muddy */
-  --coral-light: #2bbaa9;
+  --signal: #3A35D6;
+  --signal-deep: #2A26A8;
+  --signal-tint: #E8E7FC;
+  --signal-light: #8E8AFF;
 
-  /* Growth / free / verified, leaf green */
-  --emerald: #237a35;
-  --emerald-tint: #e6f6e6;
+  --verified: #12724E;
+  --verified-tint: #DDF1E7;
 
-  /* Cool support, info and warnings */
-  --indigo: #2558c8;
-  --indigo-tint: #e9e9fd;
-  --amber: #e39400;
-  --amber-tint: #fdf3d9;
-  /* Darker amber for text on the tint — passes 4.5:1 where #9a6b00 did not */
-  --amber-text: #7a5400;
+  --info: #0E6FA8;
+  --info-tint: #DDEEF8;
+  --caution: #B45309;
+  --caution-tint: #FBEBD5;
+  --caution-text: #8A3F07;
 
-  /* Squared design: no rounded corners anywhere */
-  --radius: 0px;
-  --radius-sm: 0px;
-  --radius-lg: 0px;
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-lg: 10px;
 
   --shadow-sm: 0 1px 2px rgba(14, 31, 27, 0.05), 0 2px 8px rgba(14, 31, 27, 0.04);
   --shadow-md: 0 4px 12px rgba(14, 31, 27, 0.06), 0 16px 40px rgba(14, 31, 27, 0.07);
   --shadow-lg: 0 8px 24px rgba(14, 31, 27, 0.08), 0 30px 70px rgba(14, 31, 27, 0.10);
-  --shadow-coral: 0 10px 30px rgba(13, 148, 136, 0.28);
+  --shadow-signal: 0 10px 30px rgba(58, 53, 214, 0.28);
 
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
@@ -65,24 +56,23 @@
   --color-ink-faint: var(--ink-faint);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
-  --color-coral: var(--coral);
-  --color-coral-deep: var(--coral-deep);
-  --color-coral-tint: var(--coral-tint);
-  --color-coral-light: var(--coral-light);
-  --color-emerald: var(--emerald);
-  --color-emerald-tint: var(--emerald-tint);
-  --color-indigo: var(--indigo);
-  --color-indigo-tint: var(--indigo-tint);
-  --color-amber: var(--amber);
-  --color-amber-tint: var(--amber-tint);
-  --color-amber-text: var(--amber-text);
+  --color-signal: var(--signal);
+  --color-signal-deep: var(--signal-deep);
+  --color-signal-tint: var(--signal-tint);
+  --color-signal-light: var(--signal-light);
+  --color-verified: var(--verified);
+  --color-verified-tint: var(--verified-tint);
+  --color-info: var(--info);
+  --color-info-tint: var(--info-tint);
+  --color-caution: var(--caution);
+  --color-caution-tint: var(--caution-tint);
+  --color-caution-text: var(--caution-text);
 
   --radius-xl2: var(--radius-lg);
 
-  /* One simple, readable sans for everything */
-  --font-display: var(--font-geist-sans);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-sans);
+  --font-display: var(--font-space-grotesk);
+  --font-sans: var(--font-inter-tight);
+  --font-mono: var(--font-space-mono);
 
   /* Fluid type scale (dialled down a step for a calmer, more readable feel) */
   --text-hero: clamp(2.5rem, 1rem + 5.4vw, 5.4rem);
@@ -103,7 +93,7 @@
 *,
 *::before,
 *::after {
-  border-radius: 0 !important;
+  border-radius: var(--radius) !important;
 }
 
 /* Escape hatch: genuinely circular elements (score gauge, status dots, radio
@@ -131,20 +121,8 @@ body {
   overflow-x: hidden;
 }
 
-/* Grain / paper texture overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.035;
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
 ::selection {
-  background: var(--coral);
+  background: var(--signal);
   color: #fff;
 }
 
@@ -184,7 +162,7 @@ body::before {
 
 /* Link underline sweep */
 .link-sweep {
-  background-image: linear-gradient(var(--coral), var(--coral));
+  background-image: linear-gradient(var(--signal), var(--signal));
   background-size: 0% 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -213,7 +191,7 @@ body::before {
 
 /* Focus ring */
 :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid var(--coral);
+  outline: 2px solid var(--signal);
   outline-offset: 3px;
   border-radius: 6px;
 }

@@ -69,7 +69,7 @@ export default function TrackerPage() {
         title={
           <>
             Every application gets a row.{" "}
-            <span className="text-coral">Every follow-up gets a date.</span>
+            <span className="text-signal">Every follow-up gets a date.</span>
           </>
         }
         lead={
@@ -91,7 +91,7 @@ export default function TrackerPage() {
                 A quick reconciliation.
               </p>
               <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                Everywhere else on DevUp we refuse to hand you a finished
+                Everywhere else on Hire From PH we refuse to hand you a finished
                 file, we teach you to build your own. This page is the one
                 exception, on purpose: your job hunt is a tool for{" "}
                 <em>your</em> life, not a deliverable you&rsquo;d hand a
@@ -181,7 +181,7 @@ export default function TrackerPage() {
             </p>
             <p className="mt-4 font-display text-lg leading-snug text-ink text-balance">
               Now go rebuild this yourself, that&rsquo;s the lab at{" "}
-              <Link href="/build" className="text-coral link-sweep">
+              <Link href="/build" className="text-signal link-sweep">
                 /build
               </Link>
               .

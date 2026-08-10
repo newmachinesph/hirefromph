@@ -18,7 +18,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       Source: {label}
       <ExternalLink size={11} aria-hidden className="opacity-60" />
@@ -52,12 +52,12 @@ export default function SimulatorPage() {
       {/* ----------------------------------------------------- MODEL BANNER */}
       <section className="container-x pb-10">
         <Reveal>
-          <div className="rounded-[var(--radius-lg)] border-2 border-amber bg-amber-tint p-6 lg:p-8">
+          <div className="rounded-[var(--radius-lg)] border-2 border-caution bg-caution-tint p-6 lg:p-8">
             <div className="flex items-start gap-3">
               <TriangleAlert
                 size={20}
                 aria-hidden
-                className="mt-0.5 shrink-0 text-amber-text"
+                className="mt-0.5 shrink-0 text-caution-text"
               />
               <div className="min-w-0">
                 <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
@@ -83,7 +83,7 @@ export default function SimulatorPage() {
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
               {sim.dataHonesty.body}
             </p>
-            <p className="mt-4 max-w-3xl border-l-2 border-coral pl-5 text-sm leading-relaxed text-ink">
+            <p className="mt-4 max-w-3xl border-l-2 border-signal pl-5 text-sm leading-relaxed text-ink">
               {sim.dataHonesty.disagreement}
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -120,7 +120,7 @@ export default function SimulatorPage() {
               <ButtonLink href="/reality" variant="outline" className="border-paper-2/30 bg-transparent text-paper-2 hover:border-paper-2">
                 {sim.outro.realityLabel}
               </ButtonLink>
-              <ArrowLink href="/niches" className="text-paper-2 hover:text-coral">
+              <ArrowLink href="/niches" className="text-paper-2 hover:text-signal">
                 {sim.outro.nichesLabel}
               </ArrowLink>
             </div>

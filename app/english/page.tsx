@@ -18,25 +18,25 @@ const MAX_SCORE = 800;
 const GLOBAL_AVG = 488;
 
 const accentText: Record<string, string> = {
-  coral: "text-coral-deep",
-  amber: "text-amber-text",
-  emerald: "text-emerald",
-  indigo: "text-indigo",
+  signal: "text-signal-deep",
+  caution: "text-caution-text",
+  verified: "text-verified",
+  info: "text-info",
 };
 const accentBar: Record<string, string> = {
-  coral: "bg-coral",
-  amber: "bg-amber",
-  emerald: "bg-emerald",
-  indigo: "bg-indigo",
+  signal: "bg-signal",
+  caution: "bg-caution",
+  verified: "bg-verified",
+  info: "bg-info",
 };
 const accentBorder: Record<string, string> = {
-  coral: "border-coral",
-  amber: "border-amber",
-  emerald: "border-emerald",
-  indigo: "border-indigo",
+  signal: "border-signal",
+  caution: "border-caution",
+  verified: "border-verified",
+  info: "border-info",
 };
 
-type Tone = "neutral" | "coral" | "emerald" | "amber" | "indigo";
+type Tone = "neutral" | "signal" | "verified" | "caution" | "info";
 
 function Source({ label, url }: { label: string; url: string }) {
   return (
@@ -44,7 +44,7 @@ function Source({ label, url }: { label: string; url: string }) {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-coral"
+      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
     >
       Source: {label}
       <ExternalLink size={11} className="opacity-60" />
@@ -71,7 +71,7 @@ export default function EnglishPage() {
         lead={english.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {english.creed}
           </blockquote>
         </Reveal>
@@ -115,7 +115,7 @@ export default function EnglishPage() {
                           <p className="flex items-baseline gap-2 text-sm font-semibold text-ink">
                             {s.skill}
                             {isWeakest && (
-                              <span className="text-[11px] font-medium text-coral-deep">
+                              <span className="text-[11px] font-medium text-signal-deep">
                                 weakest
                               </span>
                             )}
@@ -129,7 +129,7 @@ export default function EnglishPage() {
                           <div
                             className={cn(
                               "h-full rounded-full",
-                              isWeakest ? "bg-coral" : "bg-ink",
+                              isWeakest ? "bg-signal" : "bg-ink",
                             )}
                             style={{ width: `${(s.value / MAX_SCORE) * 100}%` }}
                           />
@@ -177,7 +177,7 @@ export default function EnglishPage() {
                   "flex h-full flex-col rounded-[var(--radius-lg)] p-6 transition-all duration-300 lg:p-8",
                   c.yours
                     ? "border border-line bg-paper-2 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
-                    : "border-2 border-dashed border-indigo/40 bg-indigo-tint/50",
+                    : "border-2 border-dashed border-info/40 bg-info-tint/50",
                 )}
               >
                 <div className="flex items-center justify-between gap-3">
@@ -192,7 +192,7 @@ export default function EnglishPage() {
                   {c.yours ? (
                     <Pill tone={c.accent as Tone}>Yours to fix</Pill>
                   ) : (
-                    <Pill tone="indigo">
+                    <Pill tone="info">
                       <ShieldOff size={12} aria-hidden />
                       Not yours to fix
                     </Pill>
@@ -239,7 +239,7 @@ export default function EnglishPage() {
             {english.honesty.points.map((p, idx) => (
               <Reveal key={p} i={idx} as="li">
                 <div className="flex h-full flex-col rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-6 lg:p-8">
-                  <span className="font-mono text-xs font-semibold text-coral">
+                  <span className="font-mono text-xs font-semibold text-signal">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                   <p className="mt-4 text-sm leading-relaxed text-paper-2/80">{p}</p>
@@ -367,8 +367,8 @@ export default function EnglishPage() {
 
                   {/* ---- before / after */}
                   <div className="flex flex-col gap-4">
-                    <div className="rounded-2xl border border-coral/25 bg-coral-tint/60 p-5">
-                      <p className="kicker text-coral-deep">Before, weak</p>
+                    <div className="rounded-2xl border border-signal/25 bg-signal-tint/60 p-5">
+                      <p className="kicker text-signal-deep">Before, weak</p>
                       <p className="mt-3 text-sm leading-relaxed whitespace-pre-line text-ink-soft italic">
                         {f.before}
                       </p>
@@ -381,8 +381,8 @@ export default function EnglishPage() {
                       </span>
                     </div>
 
-                    <div className="flex-1 rounded-2xl border-2 border-emerald/40 bg-emerald-tint p-5 shadow-[var(--shadow-sm)]">
-                      <p className="kicker text-emerald">After, strong</p>
+                    <div className="flex-1 rounded-2xl border-2 border-verified/40 bg-verified-tint p-5 shadow-[var(--shadow-sm)]">
+                      <p className="kicker text-verified">After, strong</p>
                       <p className="mt-3 text-sm leading-relaxed whitespace-pre-line font-medium text-ink">
                         {f.after}
                       </p>
@@ -410,14 +410,14 @@ export default function EnglishPage() {
             </div>
 
             <div className="flex flex-col gap-3">
-              <div className="rounded-2xl border border-coral/25 bg-coral-tint/60 p-5">
-                <p className="kicker text-coral-deep">Never</p>
+              <div className="rounded-2xl border border-signal/25 bg-signal-tint/60 p-5">
+                <p className="kicker text-signal-deep">Never</p>
                 <p className="mt-2 font-display text-lg leading-snug text-ink-soft">
                   {english.estimating.bad}
                 </p>
               </div>
-              <div className="rounded-2xl border-2 border-emerald/40 bg-emerald-tint p-5">
-                <p className="kicker text-emerald">Always</p>
+              <div className="rounded-2xl border-2 border-verified/40 bg-verified-tint p-5">
+                <p className="kicker text-verified">Always</p>
                 <p className="mt-2 font-display text-lg leading-snug text-ink">
                   {english.estimating.good}
                 </p>
@@ -506,17 +506,17 @@ export default function EnglishPage() {
               <article
                 className={cn(
                   "flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
-                  r.tone === "coral"
-                    ? "border-coral/40 bg-coral-tint/60"
+                  r.tone === "signal"
+                    ? "border-signal/40 bg-signal-tint/60"
                     : "border-line bg-paper-2",
                 )}
               >
                 <div className="flex items-start justify-between gap-3">
                   <h3 className="font-display text-xl leading-tight">{r.name}</h3>
                   <Pill tone={r.tone as Tone}>
-                    {r.tone === "emerald"
+                    {r.tone === "verified"
                       ? "Open"
-                      : r.tone === "amber"
+                      : r.tone === "caution"
                         ? "Caveat"
                         : "Paid"}
                   </Pill>
@@ -543,7 +543,7 @@ export default function EnglishPage() {
                   href={r.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-sm font-semibold text-ink transition-colors hover:text-coral"
+                  className="group mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-sm font-semibold text-ink transition-colors hover:text-signal"
                 >
                   <span className="link-sweep">Open {r.name}</span>
                   <ExternalLink

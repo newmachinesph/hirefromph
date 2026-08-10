@@ -39,14 +39,14 @@ export default function InterviewPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -78,7 +78,7 @@ export default function InterviewPage() {
                   <p className="mt-4 rounded-xl bg-paper-3 p-4 text-sm italic leading-relaxed text-ink">
                     {p.example}
                   </p>
-                  <p className="mt-4 border-l-2 border-coral pl-3 text-sm font-medium leading-relaxed text-ink">
+                  <p className="mt-4 border-l-2 border-signal pl-3 text-sm font-medium leading-relaxed text-ink">
                     {p.watch}
                   </p>
                 </article>
@@ -87,7 +87,7 @@ export default function InterviewPage() {
           </div>
 
           <Reveal i={1}>
-            <p className="mt-8 max-w-3xl border-l-2 border-emerald pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-8 max-w-3xl border-l-2 border-verified pl-5 font-display text-xl leading-snug text-ink">
               {star.note}
             </p>
           </Reveal>
@@ -104,7 +104,7 @@ export default function InterviewPage() {
           {workshop.themes.map((t, idx) => (
             <Reveal key={t.theme} i={idx % 4}>
               <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-coral-tint text-coral-deep">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-signal-tint text-signal-deep">
                   <Icon name={t.icon} size={20} />
                 </span>
                 <h3 className="mt-5 font-display text-base leading-snug">{t.theme}</h3>
@@ -169,7 +169,7 @@ export default function InterviewPage() {
             {askThem.items.map((q) => (
               <Reveal key={q}>
                 <li className="flex items-start gap-3 rounded-2xl border border-line bg-paper-2 p-5">
-                  <span className="mt-0.5 shrink-0 text-coral">
+                  <span className="mt-0.5 shrink-0 text-signal">
                     <Icon name="message-circle" size={18} />
                   </span>
                   <span className="text-sm font-medium leading-relaxed text-ink">{q}</span>
@@ -178,7 +178,7 @@ export default function InterviewPage() {
             ))}
           </ul>
           <Reveal i={1}>
-            <p className="mt-6 border-l-2 border-coral pl-5 text-sm leading-relaxed text-ink-soft">
+            <p className="mt-6 border-l-2 border-signal pl-5 text-sm leading-relaxed text-ink-soft">
               {askThem.note}
             </p>
           </Reveal>
@@ -196,7 +196,7 @@ export default function InterviewPage() {
             {formats.items.map((f, idx) => (
               <Reveal key={f.name} i={idx % 2}>
                 <article className="flex h-full gap-4 rounded-2xl border border-line bg-paper-2 p-6">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-emerald-tint text-emerald">
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-verified-tint text-verified">
                     <Icon name={f.icon} size={20} />
                   </span>
                   <div>
@@ -219,9 +219,9 @@ export default function InterviewPage() {
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {redFlags.items.map((f, idx) => (
             <Reveal key={f.flag} i={idx % 2}>
-              <article className="flex h-full flex-col rounded-2xl border border-coral/30 bg-coral-tint/30 p-6">
+              <article className="flex h-full flex-col rounded-2xl border border-signal/30 bg-signal-tint/30 p-6">
                 <div className="flex items-start gap-3">
-                  <span className="mt-0.5 shrink-0 text-coral-deep">
+                  <span className="mt-0.5 shrink-0 text-signal-deep">
                     <Icon name="shield-alert" size={20} />
                   </span>
                   <h3 className="font-display text-base leading-snug text-ink">{f.flag}</h3>
@@ -252,7 +252,7 @@ export default function InterviewPage() {
               {closing.title}
             </h2>
             <p className="mt-5 max-w-2xl leading-relaxed text-ink-soft">{closing.body}</p>
-            <p className="mt-5 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+            <p className="mt-5 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
               {closing.point}
             </p>
 
@@ -263,7 +263,7 @@ export default function InterviewPage() {
                   href={l.href}
                   className="group flex h-full flex-col rounded-2xl border border-line bg-paper-3/50 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
                 >
-                  <h3 className="font-display text-lg leading-tight text-ink group-hover:text-coral">
+                  <h3 className="font-display text-lg leading-tight text-ink group-hover:text-signal">
                     {l.label}
                   </h3>
                   <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{l.desc}</p>

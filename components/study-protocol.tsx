@@ -176,7 +176,7 @@ export function StudyProtocol() {
             aria-label={`Question ${step + 1} of ${QUESTIONS.length}`}
           >
             <div
-              className="h-full rounded-full bg-coral transition-[width] duration-500 ease-out"
+              className="h-full rounded-full bg-signal transition-[width] duration-500 ease-out"
               style={{ width: `${progressPct}%` }}
             />
           </div>
@@ -227,7 +227,7 @@ export function StudyProtocol() {
                       <label
                         htmlFor={id}
                         className={cn(
-                          "group relative flex cursor-pointer flex-col gap-1.5 rounded-2xl border border-line bg-paper p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] peer-checked:border-coral peer-checked:bg-coral-tint peer-focus-visible:ring-2 peer-focus-visible:ring-coral",
+                          "group relative flex cursor-pointer flex-col gap-1.5 rounded-2xl border border-line bg-paper p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] peer-checked:border-signal peer-checked:bg-signal-tint peer-focus-visible:ring-2 peer-focus-visible:ring-signal",
                         )}
                       >
                         <span className="pr-6 font-display text-lg leading-tight">
@@ -238,7 +238,7 @@ export function StudyProtocol() {
                         </span>
                         <span
                           className={cn(
-                            "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-emerald text-white opacity-0 transition-opacity",
+                            "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-verified text-white opacity-0 transition-opacity",
                             selected && "opacity-100",
                           )}
                         >
@@ -281,13 +281,13 @@ function ProtocolResult({
           <p className="kicker">Your study protocol</p>
           <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
             {summary.sessionShape.label}, {" "}
-            <span className="text-coral">{summary.sessionShape.pattern}</span>
+            <span className="text-signal">{summary.sessionShape.pattern}</span>
           </h3>
           <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">
             {summary.sessionShape.desc}
           </p>
         </div>
-        <Pill tone="emerald" className="shrink-0">
+        <Pill tone="verified" className="shrink-0">
           {summary.sessionShape.perDay}
         </Pill>
       </div>
@@ -327,12 +327,12 @@ function ProtocolResult({
       </div>
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        <div className="rounded-2xl border border-coral/25 bg-coral-tint p-5">
-          <p className="kicker text-coral-deep">Stop doing</p>
+        <div className="rounded-2xl border border-signal/25 bg-signal-tint p-5">
+          <p className="kicker text-signal-deep">Stop doing</p>
           <ul className="mt-3 space-y-3">
             {summary.stopDoing.map((f) => (
               <li key={f.id} className="text-sm leading-relaxed">
-                <span className="font-semibold text-coral-deep line-through decoration-coral/50">
+                <span className="font-semibold text-signal-deep line-through decoration-signal/50">
                   {f.habit}
                 </span>
                 <span className="mt-0.5 block text-ink-soft">
@@ -342,8 +342,8 @@ function ProtocolResult({
             ))}
           </ul>
         </div>
-        <div className="rounded-2xl border border-emerald/25 bg-emerald-tint p-5">
-          <p className="kicker text-emerald">Close your feedback loop</p>
+        <div className="rounded-2xl border border-verified/25 bg-verified-tint p-5">
+          <p className="kicker text-verified">Close your feedback loop</p>
           <p className="mt-3 text-sm leading-relaxed text-ink">
             {summary.feedbackNote}
           </p>
@@ -355,7 +355,7 @@ function ProtocolResult({
         <button
           type="button"
           onClick={onRestart}
-          className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-coral"
+          className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-signal"
         >
           <RotateCcw size={14} />
           Start over

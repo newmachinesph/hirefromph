@@ -23,14 +23,14 @@ export default function LegitPage() {
           <>
             {hero.line1}
             <br />
-            <span className="text-coral">{hero.line2}</span>
+            <span className="text-signal">{hero.line2}</span>
           </>
         }
         titleWidth="max-w-4xl"
         lead={hero.intro}
       >
         <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-coral pl-5 font-display text-xl leading-snug text-ink">
+          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
             {hero.creed}
           </blockquote>
         </Reveal>
@@ -67,7 +67,7 @@ export default function LegitPage() {
           {bir.steps.map((s, idx) => (
             <Reveal key={s.n} i={idx % 2}>
               <article className="flex h-full gap-5 rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-coral font-display text-lg text-white">
+                <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-signal font-display text-lg text-white">
                   {s.n}
                 </span>
                 <div>
@@ -110,7 +110,7 @@ export default function LegitPage() {
             {benefits.items.map((b, idx) => (
               <Reveal key={b.name} i={idx % 3}>
                 <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-emerald text-white">
+                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-verified text-white">
                     <Icon name={b.icon} size={20} />
                   </span>
                   <h3 className="mt-5 font-display text-lg leading-snug">{b.name}</h3>
@@ -161,7 +161,7 @@ export default function LegitPage() {
           ))}
         </div>
         <Reveal i={1}>
-          <p className="mt-8 max-w-3xl border-l-2 border-coral pl-5 font-display text-lg leading-snug text-ink">
+          <p className="mt-8 max-w-3xl border-l-2 border-signal pl-5 font-display text-lg leading-snug text-ink">
             {gettingPaid.note}
           </p>
         </Reveal>
@@ -176,7 +176,7 @@ export default function LegitPage() {
               {closing.title}
             </h2>
             <p className="mt-5 max-w-3xl leading-relaxed text-ink-soft">{closing.body}</p>
-            <p className="mt-5 font-display text-lg text-coral">{closing.point}</p>
+            <p className="mt-5 font-display text-lg text-signal">{closing.point}</p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {closing.links.map((l) => (
                 <div key={l.href} className="rounded-2xl border border-line bg-paper p-5">
