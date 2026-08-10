@@ -452,4 +452,4 @@ Not code deliverables; flagged so they are not forgotten.
 1. **Register `hirefrom.ph`** and point DNS at the host.
 2. **301 redirects from `devup.ph`**, path-for-path, or search ranking is lost.
 3. **Create the new social accounts**, then a follow-up pass restores the footer links and a contact channel.
-4. **Google Analytics `G-TYFCQVVHK6`** is retained. Annotate the property at the rebrand date so the traffic discontinuity is explicable later.
+4. **Google Analytics moves to a new property, `G-41TT5P31BY`** (hardcoded in `app/layout.tsx` via `@next/third-parties/google`, replacing `G-TYFCQVVHK6`). Because this is a *different* property rather than a rename, historical DevUp traffic does not carry over — the new property starts empty. If year-over-year continuity matters, export the old property's reports before its retention window closes, or keep both tags firing during a transition period.
