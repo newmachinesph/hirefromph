@@ -469,11 +469,11 @@ export default function Home() {
 function HeroPanel() {
   // 5 ascending stages: [x, barTopY, fill, number, label]
   const bars = [
-    { x: 30, y: 308, fill: "#0a736a", n: "01", label: "Start" },
+    { x: 30, y: 308, fill: "var(--signal)", n: "01", label: "Start" },
     { x: 100, y: 262, fill: "#e39400", n: "02", label: "Get Hired" },
     { x: 170, y: 212, fill: "#237a35", n: "03", label: "Deliver" },
     { x: 240, y: 156, fill: "#2558c8", n: "04", label: "Level Up" },
-    { x: 310, y: 96, fill: "#0e1f1b", n: "05", label: "Own" },
+    { x: 310, y: 96, fill: "var(--ink)", n: "05", label: "Own" },
   ];
   const baseline = 392;
   const barW = 54;
@@ -539,22 +539,22 @@ function HeroPanel() {
         <polyline
           points={trend}
           fill="none"
-          stroke="#0a736a"
+          stroke="var(--signal)"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeDasharray="2 9"
         />
         {/* arrowhead, barbs symmetric about the trend's own slope */}
-        <path d="M348 70 L338 78 M348 70 L350 83" stroke="#0a736a" strokeWidth="3" strokeLinecap="round" fill="none" />
+        <path d="M348 70 L338 78 M348 70 L350 83" stroke="var(--signal)" strokeWidth="3" strokeLinecap="round" fill="none" />
         {/* nodes */}
         {nodes.map(([x, y]) => (
-          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="#0a736a" strokeWidth="2.5" />
+          <circle key={`${x}-${y}`} cx={x} cy={y} r="5.5" fill="#ffffff" stroke="var(--signal)" strokeWidth="2.5" />
         ))}
         {/* peak flag, planted right of the arrow's path so the two never cross */}
         <g transform="translate(356 52)">
-          <line x1="0" y1="0" x2="0" y2="44" stroke="#0e1f1b" strokeWidth="2.5" strokeLinecap="round" />
-          <path d="M0 2 L26 9 L0 18 Z" fill="#0a736a" />
+          <line x1="0" y1="0" x2="0" y2="44" stroke="var(--ink)" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M0 2 L26 9 L0 18 Z" fill="var(--signal)" />
         </g>
       </svg>
 
