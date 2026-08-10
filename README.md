@@ -1,6 +1,6 @@
-# DevUp — Online Career Portal
+# Hire From PH — Online Career Portal
 
-**DevUp** — *developing upwards*: every step compounds on the last, and every skill you gain is one you keep. A light-mode learning portal that takes Filipinos from zero to a thriving remote career as an **online professional** (never an "assistant"). Next.js 16 · React 19 · Tailwind v4 · `motion`. Frontend only — all content lives in `data/*.json`, no backend.
+**Hire From PH** — *Be the reason they hire from the Philippines.*: every step compounds on the last, and every skill you gain is one you keep. A light-mode learning portal that takes Filipinos from zero to a thriving remote career as an **online professional** (never an "assistant"). Next.js 16 · React 19 · Tailwind v4 · `motion`. Frontend only — all content lives in `data/*.json`, no backend.
 
 ## The idea: path-gated depth
 
@@ -16,6 +16,7 @@ This site teaches integrity, so it holds itself to it. **No fabricated social pr
 npm install
 npm run dev                          # http://localhost:3000
 npm run build                        # production build
+npm run verify:contrast              # verify color contrast (WCAG AA)
 set PORT=3000 && npx next start      # serve the build (Windows: PORT env, not -p)
 ```
 
@@ -49,4 +50,4 @@ All copy and data are in `data/`. Swap the JSON to change the site — no code e
 
 ## Design
 
-Warm-paper editorial system: Bricolage Grotesque display × Geist sans, coral signature + emerald "growth" accents, scroll-reveal motion, grain texture. Tokens in `app/globals.css`. Shared conventions in `BUILD_GUIDE.md` — **read it before building any page.**
+Signal system: Space Grotesk display × Inter Tight body × Space Mono kickers, graphite ink on cool near-white, electric indigo signature, 6px radius. Tokens in `app/globals.css`. Shared conventions in `BUILD_GUIDE.md` — **read it before building any page.**
