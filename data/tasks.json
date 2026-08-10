@@ -45,7 +45,7 @@
         {
           "skill": "A basic inbox triage decision framework (e.g. the 4 D's: Do, Delegate, Defer, Delete)",
           "why": "You need a decision rule for every email, not just folders to dump them in.",
-          "ifYouDont": "DevUp's /method, the UNSTICK and FIND methods teach the same decision-first thinking."
+          "ifYouDont": "Hire From PH's /method, the UNSTICK and FIND methods teach the same decision-first thinking."
         }
       ],
       "resources": [
@@ -120,7 +120,7 @@
         {
           "skill": "Time-blocking and priority frameworks (Eisenhower matrix or similar)",
           "why": "You can't decide what to protect without a framework for what matters.",
-          "ifYouDont": "DevUp's Executive Operations track under /niches, or any no-cost Eisenhower Matrix explainer."
+          "ifYouDont": "Hire From PH's Executive Operations track under /niches, or any no-cost Eisenhower Matrix explainer."
         }
       ],
       "resources": [
@@ -269,7 +269,7 @@
         {
           "skill": "Spreadsheet formulas (SUMIF, conditional formatting)",
           "why": "The aging report and prioritization live in a spreadsheet you build yourself.",
-          "ifYouDont": "DevUp's tracker-building lab at /build teaches the exact schema pattern you need."
+          "ifYouDont": "Hire From PH's tracker-building lab at /build teaches the exact schema pattern you need."
         }
       ],
       "resources": [
@@ -339,7 +339,7 @@
         {
           "skill": "Reading a P&L / expense report and recognizing common waste categories (duplicate subscriptions, unused seats, category creep)",
           "why": "The whole audit is pattern recognition across real spend categories.",
-          "ifYouDont": "DevUp's /method FIND drill, plus any no-cost 'startup burn rate' explainer."
+          "ifYouDont": "Hire From PH's /method FIND drill, plus any no-cost 'startup burn rate' explainer."
         },
         {
           "skill": "Basic spreadsheet pivot tables or SUMIF grouping",
@@ -419,7 +419,7 @@
         {
           "skill": "Content calendar structure (pillars, cadence, format mix)",
           "why": "The audit ends in a calendar recommendation, you need the shape of one first.",
-          "ifYouDont": "DevUp's /build portfolio lab or Canva's no-cost content calendar course."
+          "ifYouDont": "Hire From PH's /build portfolio lab or Canva's no-cost content calendar course."
         }
       ],
       "resources": [
@@ -494,7 +494,7 @@
         {
           "skill": "Spreadsheet-based tracker design",
           "why": "The calendar itself is a tracker, status, dates, and an owner column.",
-          "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab teaches the exact schema."
+          "ifYouDont": "Hire From PH's /build 'Build Your Own Tracker' lab teaches the exact schema."
         }
       ],
       "resources": [
@@ -644,7 +644,7 @@
         {
           "skill": "Writing a task/user story that a stranger could execute without asking questions",
           "why": "A board full of vague tasks ('fix the thing') is unmanageable no matter how it's organized.",
-          "ifYouDont": "DevUp's SOP-building lab at /build teaches the same one-action-per-step discipline."
+          "ifYouDont": "Hire From PH's SOP-building lab at /build teaches the same one-action-per-step discipline."
         }
       ],
       "resources": [
@@ -719,7 +719,7 @@
         {
           "skill": "Spreadsheet formulas for status roll-ups (IF/nested IF, conditional formatting)",
           "why": "The dashboard should calculate status from real data, not rely on manual color-picking.",
-          "ifYouDont": "DevUp's tracker-building lab covers the same formula-driven status logic."
+          "ifYouDont": "Hire From PH's tracker-building lab covers the same formula-driven status logic."
         }
       ],
       "resources": [
@@ -863,7 +863,7 @@
         {
           "skill": "Technical/how-to writing (numbered steps, one action per step, screenshots where needed)",
           "why": "Knowledge-base articles live or die on clarity, vague steps generate more tickets, not fewer.",
-          "ifYouDont": "DevUp's SOP-building lab teaches the identical one-action-per-step discipline."
+          "ifYouDont": "Hire From PH's SOP-building lab teaches the identical one-action-per-step discipline."
         },
         {
           "skill": "Basic screenshot annotation (arrows, boxes, numbered callouts)",
@@ -943,7 +943,7 @@
         {
           "skill": "Spreadsheet tracker schema design (unique ID, status dropdown, date trigger)",
           "why": "This task is a direct application of the tracker-building method to a real estate use case.",
-          "ifYouDont": "DevUp's /build 'Build Your Own Tracker' lab."
+          "ifYouDont": "Hire From PH's /build 'Build Your Own Tracker' lab."
         }
       ],
       "resources": [
@@ -1018,7 +1018,7 @@
         {
           "skill": "Writing warm, non-pushy follow-up copy",
           "why": "A follow-up sequence that reads as desperate or spammy gets ignored or reported, real estate specifically fights a 'salesy' reputation.",
-          "ifYouDont": "DevUp's application-message lab teaches the same specific-not-generic principle."
+          "ifYouDont": "Hire From PH's application-message lab teaches the same specific-not-generic principle."
         }
       ],
       "resources": [
@@ -1093,7 +1093,7 @@
         {
           "skill": "Basic form-building (Google Forms) and spreadsheet/lightweight CRM structure",
           "why": "You're wiring real tools together, you need to be able to build both ends of the pipe.",
-          "ifYouDont": "Google Forms Help Center (open) for the form side; DevUp's tracker lab for the CRM-sheet side."
+          "ifYouDont": "Google Forms Help Center (open) for the form side; Hire From PH's tracker lab for the CRM-sheet side."
         }
       ],
       "resources": [
@@ -1238,7 +1238,7 @@
         {
           "skill": "Prompt writing for a classification task (not open-ended chat, a structured, repeatable prompt)",
           "why": "The AI step has to reliably return a consistent category/priority, not a creative free-text answer.",
-          "ifYouDont": "DevUp's /prompts lab teaches how to write your own reliable, repeatable prompts."
+          "ifYouDont": "Hire From PH's /prompts lab teaches how to write your own reliable, repeatable prompts."
         },
         {
           "skill": "Automation trigger/action logic connecting a form or inbox to an AI step to a routing action",
@@ -1255,7 +1255,7 @@
           "url": "https://zapier.com/ai"
         },
         {
-          "name": "DevUp's AI Leverage / Prompts lab",
+          "name": "Hire From PH's AI Leverage / Prompts lab",
           "type": "Docs",
           "what": "Teaches how to write your own structured, repeatable prompts, required before this task's AI step will work reliably.",
           "free": true,
@@ -1468,7 +1468,7 @@
         {
           "skill": "Video editing fundamentals: cuts, pacing, text overlays, background music licensing",
           "why": "The explainer needs professional pacing and legally clean audio, not just raw footage with a voiceover.",
-          "ifYouDont": "DevUp's CapCut Editing Masterclass, or CapCut/DaVinci Resolve's own no-cost tutorials."
+          "ifYouDont": "Hire From PH's CapCut Editing Masterclass, or CapCut/DaVinci Resolve's own no-cost tutorials."
         }
       ],
       "resources": [
@@ -1543,7 +1543,7 @@
         {
           "skill": "Basic overlay design in a no-cost tool like Canva",
           "why": "A stream needs clean starting-soon, BRB, and ending frames, text-on-black looks amateur and loses viewers in the first minute.",
-          "ifYouDont": "Canva Design School's no-cost basics, or DevUp's /build portfolio lab for the design discipline."
+          "ifYouDont": "Canva Design School's no-cost basics, or Hire From PH's /build portfolio lab for the design discipline."
         }
       ],
       "resources": [
@@ -1693,7 +1693,7 @@
         {
           "skill": "Chat moderation fundamentals (pinned messages, banned words, FAQ replies)",
           "why": "During a live sale, buying questions get buried in noise, the mod plan is what keeps orders from getting lost.",
-          "ifYouDont": "Discord's no-cost Moderator Academy covers the moderation mindset, and DevUp's /build lab teaches the SOP structure."
+          "ifYouDont": "Discord's no-cost Moderator Academy covers the moderation mindset, and Hire From PH's /build lab teaches the SOP structure."
         }
       ],
       "resources": [
@@ -1838,7 +1838,7 @@
         {
           "skill": "Clear, skimmable writing (summaries, timestamps, key takeaways)",
           "why": "Show notes are read in 10 seconds, they have to be scannable, not a wall of text.",
-          "ifYouDont": "HubSpot's no-cost content writing lessons, or DevUp's /method for the summarize-first discipline."
+          "ifYouDont": "HubSpot's no-cost content writing lessons, or Hire From PH's /method for the summarize-first discipline."
         },
         {
           "skill": "Basic graphic design in Canva (quote cards, audiograms)",
@@ -1913,12 +1913,12 @@
         {
           "skill": "Event run-of-show and volunteer scheduling basics",
           "why": "An event runs on who-does-what-when; without a timed plan and a roster, the day falls on one exhausted person.",
-          "ifYouDont": "Planning Center's no-cost University covers services and volunteer scheduling, and DevUp's /build lab teaches the tracker structure."
+          "ifYouDont": "Planning Center's no-cost University covers services and volunteer scheduling, and Hire From PH's /build lab teaches the tracker structure."
         },
         {
           "skill": "Clear written communication (invites, reminders, volunteer briefs)",
           "why": "Half of event coordination is getting the right message to the right people at the right time.",
-          "ifYouDont": "DevUp's application-message lab teaches the specific, warm, clear tone this needs."
+          "ifYouDont": "Hire From PH's application-message lab teaches the specific, warm, clear tone this needs."
         }
       ],
       "resources": [
@@ -1993,7 +1993,7 @@
         {
           "skill": "Warm, formatted devotional and community writing",
           "why": "This audience opens for care and reflection, not marketing, the tone and formatting carry it.",
-          "ifYouDont": "DevUp's /method for the clarity discipline, plus studying 3 real ministry newsletters you admire."
+          "ifYouDont": "Hire From PH's /method for the clarity discipline, plus studying 3 real ministry newsletters you admire."
         }
       ],
       "resources": [

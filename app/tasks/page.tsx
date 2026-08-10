@@ -19,7 +19,7 @@ export const metadata: Metadata = pageMeta({
 const itemListLd = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "DevUp micro-tasks",
+  name: "Hire From PH micro-tasks",
   description: tasksData.intro,
   url: `${BASE_URL}/tasks`,
   numberOfItems: tasksData.tasks.length,
