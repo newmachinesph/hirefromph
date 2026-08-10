@@ -9,8 +9,9 @@ import {
   spreadFromPosts,
 } from "@/lib/worksheet-math";
 import { cn } from "@/lib/utils";
+import { migrateKey } from "@/lib/storage";
 
-const KEY = "devup.worksheet.v1";
+const KEY = "hfph.worksheet.v1";
 const DEFAULT_FX = 60;
 
 const UNITS: { value: RateUnit; label: string }[] = [
@@ -42,6 +43,7 @@ export function RateWorksheet() {
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => {
+    migrateKey("devup.worksheet.v1", KEY);
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {

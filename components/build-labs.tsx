@@ -14,8 +14,9 @@ import { CopyButton } from "@/components/copy-button";
 import { DownloadButton } from "@/components/download-button";
 import { Pill } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { migrateKey } from "@/lib/storage";
 
-const LABS_KEY = "devup.labs.v1";
+const LABS_KEY = "hfph.labs.v1";
 
 type Lab = (typeof labsData)["labs"][number];
 
@@ -65,6 +66,7 @@ export function BuildLabs() {
   // Your words are the artifact — keep the draft across reloads, same as the
   // rest of the app persists progress. Load once, then save on change.
   useEffect(() => {
+    migrateKey("devup.labs.v1", LABS_KEY);
     try {
       const raw = localStorage.getItem(LABS_KEY);
       if (raw) {

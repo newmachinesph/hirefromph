@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import tracksData from "@/data/tracks.json";
+import { migrateKey } from "@/lib/storage";
 
 export type AppStatus =
   | "applied"
@@ -87,7 +88,7 @@ const EMPTY: PathState = {
   oath: EMPTY_OATH,
 };
 
-const KEY = "devup.path.v1";
+const KEY = "hfph.path.v1";
 
 type Ctx = {
   state: PathState;
@@ -117,6 +118,7 @@ export function PathProvider({ children }: { children: React.ReactNode }) {
   // seeding state from it in a mount effect is the only correct option here —
   // it runs exactly once and is what keeps the server and client markup identical.
   useEffect(() => {
+    migrateKey("devup.path.v1", KEY);
     try {
       const raw = localStorage.getItem(KEY);
       if (raw) {

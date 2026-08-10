@@ -1,7 +1,7 @@
-// DevUp service worker. Runtime cache only — no precache manifest to drift out
+// Hire From PH service worker. Runtime cache only — no precache manifest to drift out
 // of sync with Next's hashed chunks. Static assets are immutable (cache-first);
 // pages go network-first so content stays fresh, with a cached fallback offline.
-const CACHE = "devup-v1";
+const CACHE = "hfph-v1";
 
 self.addEventListener("install", (e) => {
   // Warm the shell so the very first offline hit still renders something.
