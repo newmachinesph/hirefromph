@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import site from "@/data/site.json";
 
-export const BASE_URL = "https://devup.ph";
+export const BASE_URL = "https://hirefrom.ph";
 
 /**
  * Every content route, derived from the nav so a new page can't be forgotten.
