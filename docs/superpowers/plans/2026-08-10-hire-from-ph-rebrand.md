@@ -269,9 +269,16 @@ verify:contrast to assert every pair clears WCAG AA 4.5:1."
 
 - [ ] **Step 1: Replace the mark with inline SVG**
 
-In `components/logo.tsx`, delete the `next/image` import and the `MARK_W`/`MARK_H` constants. Replace `LogoMark` with an SVG on a 32×32 grid.
+**Geometry chosen from the codex-bridge exploration sheet.** The mark is **48×32 (3:2), not square**. Bracket stroke weight (4 units) is deliberately close to the letter stem weight (3 units) so brackets and letters read as one system; returns are short (7 units) so they frame without crowding. Thin brackets disappeared below 20px in the exploration and heavier ones swallowed the letters — do not adjust these weights.
+
+`size` is the **height**; width is derived as `size * 1.5`, matching how the old raster `LogoMark` derived width from its intrinsic ratio. Callers passing `markSize={34}` therefore need no change.
+
+In `components/logo.tsx`, delete the `next/image` import and the `MARK_W`/`MARK_H` constants.
 
 ```tsx
+/** Aspect of the bracket-PH mark: 48 wide × 32 tall. */
+const MARK_RATIO = 48 / 32;
+
 export function LogoMark({
   size = 32,
   className,
@@ -287,21 +294,24 @@ export function LogoMark({
   const letters = onDark ? "#FFFFFF" : "var(--ink)";
   return (
     <svg
-      width={size}
+      width={Math.round(size * MARK_RATIO)}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 48 32"
       fill="none"
       className={className}
       role={title ? "img" : undefined}
       aria-hidden={title ? undefined : true}
     >
       {title && <title>{title}</title>}
-      <path d="M9 3H3v26h6v-3H6V6h3V3Zm14 0h6v26h-6v-3h3V6h-3V3Z" fill={bracket} />
+      <path d="M0 0H11V4H4V28H11V32H0V0Z" fill={bracket} />
+      <path d="M48 0H37V4H44V28H37V32H48V0Z" fill={bracket} />
       <path
-        d="M11 9h4.2c2.1 0 3.4 1.2 3.4 3.1 0 1.9-1.3 3.1-3.4 3.1H13V23h-2V9Zm2 1.8v2.6h2c.9 0 1.5-.5 1.5-1.3s-.6-1.3-1.5-1.3h-2Z"
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M14 6H18.75A5.25 5.25 0 0 1 18.75 16.5H17V26H14V6ZM17 9V13.5H18.75A2.25 2.25 0 0 0 18.75 9H17Z"
         fill={letters}
       />
-      <path d="M20 9h2v5.4h.3V9h2v14h-2v-6.2h-.3V23h-2V9Z" fill={letters} />
+      <path d="M26 6H29V14.5H32V6H35V26H32V17.5H29V26H26V6Z" fill={letters} />
     </svg>
   );
 }
@@ -338,14 +348,21 @@ export function Bracket({ className }: { className?: string }) {
 
 - [ ] **Step 4: Rewrite `app/icon.svg`**
 
+The favicon must stay square, so it is the same 48×32 mark scaled to `26/48` and centred on a 32×32 indigo tile. Reuse the identical path data — a favicon that is a redrawn approximation of the mark drifts from it over time.
+
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
   <rect width="32" height="32" fill="#3A35D6"/>
-  <path d="M9 5H5v22h4v-2.5H7.5V7.5H9V5Zm14 0h4v22h-4v-2.5h1.5V7.5H23V5Z" fill="#fff" fill-opacity="0.55"/>
-  <path d="M11.5 10h3.6c1.9 0 3 1.1 3 2.8s-1.1 2.8-3 2.8H13.4V22h-1.9V10Zm1.9 1.6v2.4h1.6c.8 0 1.3-.4 1.3-1.2s-.5-1.2-1.3-1.2h-1.6Z" fill="#fff"/>
-  <path d="M19.5 10h1.9v4.7h.6V10h1.9v12h-1.9v-5.7h-.6V22h-1.9V10Z" fill="#fff"/>
+  <g transform="translate(3 7.33) scale(0.5417)" fill="#fff">
+    <path d="M0 0H11V4H4V28H11V32H0V0Z" fill-opacity="0.6"/>
+    <path d="M48 0H37V4H44V28H37V32H48V0Z" fill-opacity="0.6"/>
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M14 6H18.75A5.25 5.25 0 0 1 18.75 16.5H17V26H14V6ZM17 9V13.5H18.75A2.25 2.25 0 0 0 18.75 9H17Z"/>
+    <path d="M26 6H29V14.5H32V6H35V26H32V17.5H29V26H26V6Z"/>
+  </g>
 </svg>
 ```
+
+The brackets drop to 60% opacity here only because on a saturated indigo tile a full-white bracket competes with the letters; in the on-paper mark they stay solid.
 
 - [ ] **Step 5: Rewrite the OG image — do this before deleting the PNG**
 
