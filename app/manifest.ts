@@ -4,14 +4,14 @@ import type { MetadataRoute } from "next";
 // no mobile data, and the site opens even on a dropped connection.
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "DevUp — Developing Upwards",
-    short_name: "DevUp",
+    name: "Hire From PH — the standard, not the discount",
+    short_name: "Hire From PH",
     description:
       "Open learning for Filipino online professionals. Build the online career you actually own.",
     start_url: "/",
     display: "standalone",
-    background_color: "#f1f6f4",
-    theme_color: "#0d9488",
+    background_color: "#F6F7F9",
+    theme_color: "#3A35D6",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "maskable" },
