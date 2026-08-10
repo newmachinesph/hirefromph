@@ -1,13 +1,13 @@
 {
-  "brand": "DevUp",
-  "wordmarkAccent": "Up",
-  "meaning": "Developing upwards",
-  "tagline": "Developing upwards. The complete platform for building an online career, open to every Filipino.",
-  "mission": "DevUp means developing upwards: every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
+  "brand": "Hire From PH",
+  "wordmarkAccent": "PH",
+  "meaning": "Be the reason they hire from the Philippines.",
+  "tagline": "Be the reason they hire from the Philippines. The complete platform for building an online career, open to every Filipino.",
+  "mission": "Hire From PH is built on one idea: the people companies hire from the Philippines should be the ones worth hiring anywhere. Every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
   "standard": {
-    "kicker": "The DevUp standard",
+    "kicker": "The Hire From PH standard",
     "title": "We don't hand you files. We make you resourceful.",
-    "body": "Anyone can give you a resume template. It makes you look like every other applicant, and it stops helping the moment the job is different. DevUp teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and it only ever develops upwards.",
+    "body": "Anyone can give you a resume template. It makes you look like every other applicant, and it stops helping the moment the job is different. Hire From PH teaches you the anatomy, the rules, and the judgment, then you build your own, from a blank page, for any situation. That skill is the actual asset, and no one can take it off you.",
     "principles": [
       {
         "title": "Method over material",
@@ -25,13 +25,6 @@
         "icon": "unlock"
       }
     ]
-  },
-  "social": {
-    "facebook": "https://www.facebook.com/devupph/",
-    "facebookGroup": "https://www.facebook.com/groups/devupph",
-    "instagram": "https://www.instagram.com/devupph/",
-    "youtube": "https://www.youtube.com/@devupph",
-    "tiktok": "https://www.tiktok.com/@devupph"
   },
   "stats": [
     {

@@ -3,11 +3,9 @@ import { Space_Grotesk, Inter_Tight, Space_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { BASE_URL } from "./sitemap";
-import site from "@/data/site.json";
 import { PathProvider } from "@/lib/path-context";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { FollowModal } from "@/components/follow-modal";
 import { MotionProvider } from "@/components/motion-provider";
 import { SWRegister } from "@/components/sw-register";
 import { BackToTop } from "@/components/back-to-top";
@@ -19,12 +17,12 @@ const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "DevUp, Developing Upwards. Build Your Online Career.",
-    template: "%s · DevUp",
+    default: "Hire From PH — Be the reason they hire from the Philippines.",
+    template: "%s · Hire From PH",
   },
   description:
     "Open learning for Filipino online professionals. Real talk on remote work, AI, direct clients, pay, and the skills that make you layoff-proof. We teach you to build it yourself, so you own it.",
-  applicationName: "DevUp",
+  applicationName: "Hire From PH",
   keywords: [
     "online jobs Philippines",
     "online career Philippines",
@@ -38,17 +36,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "DevUp, Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you actually own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
     url: BASE_URL,
-    siteName: "DevUp",
+    siteName: "Hire From PH",
     locale: "en_PH",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "DevUp, Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you actually own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0d9488",
+  themeColor: "#3A35D6",
 };
 
 const jsonLd = {
@@ -65,18 +63,17 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${BASE_URL}/#org`,
-      name: "DevUp",
+      name: "Hire From PH",
       url: BASE_URL,
       description:
         "An open, anonymous, non-commercial learning platform that helps Filipinos build an independent online career.",
       logo: `${BASE_URL}/icon.svg`,
-      sameAs: [site.social.facebook],
     },
     {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
-      name: "DevUp",
+      name: "Hire From PH",
       inLanguage: "en-PH",
       description:
         "Open learning for Filipino online professionals: AI, remote work, direct clients, pay, and the skills that make you layoff-proof.",
@@ -103,13 +100,12 @@ export default function RootLayout({
             <SiteHeader />
             <main className="relative z-[2] flex-1">{children}</main>
             <SiteFooter />
-            <FollowModal />
             <BackToTop />
           </MotionProvider>
         </PathProvider>
         <SWRegister />
       </body>
-      <GoogleAnalytics gaId="G-TYFCQVVHK6" />
+      <GoogleAnalytics gaId="G-41TT5P31BY" />
     </html>
   );
 }

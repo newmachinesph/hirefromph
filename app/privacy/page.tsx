@@ -1,4 +1,3 @@
-import site from "@/data/site.json";
 import { Reveal } from "@/components/reveal";
 import { PageHero, Pill, SectionHeading } from "@/components/ui";
 import { pageMeta } from "@/lib/meta";
@@ -7,7 +6,7 @@ export const metadata = pageMeta({
   path: "/privacy",
   title: "Privacy",
   description:
-    "How DevUp handles data, in plain English: an anonymous, non-commercial project with no accounts and nothing to sell. Google Analytics only, no forms stored, and your rights under RA 10173.",
+    "How Hire From PH handles data, in plain English: an anonymous, non-commercial project with no accounts and nothing to sell. Google Analytics only, no forms stored, and your rights under RA 10173.",
 });
 
 function Out({ href, children }: { href: string; children: string }) {
@@ -39,7 +38,7 @@ export default function PrivacyPage() {
         titleWidth="max-w-4xl"
         lead={
           <>
-            DevUp has no accounts, no login, no shopping cart, and no sales team.
+            Hire From PH has no accounts, no login, no shopping cart, and no sales team.
             There is no database of you here to protect, because we never build
             one. This page says exactly what happens when you visit, in words you
             can actually check.
@@ -60,7 +59,7 @@ export default function PrivacyPage() {
             <SectionHeading
               kicker="Who runs this"
               title="An anonymous, non-commercial project"
-              lead="DevUp is an independent project built for Filipino online professionals. No company name, no registered business, no names attached. It is free, permanently, and it sells nothing, so there is no commercial reason to profile you."
+              lead="Hire From PH is an independent project built for Filipino online professionals. No company name, no registered business, no names attached. It is free, permanently, and it sells nothing, so there is no commercial reason to profile you."
             />
           </Reveal>
         </div>
@@ -142,26 +141,6 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* ----------------------------------------------------------- FACEBOOK */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker="Leaving the site"
-            title="Facebook is Facebook's rules, not ours"
-            lead="We link out to a Facebook Page and Group. The moment you follow one of those links, you're on Facebook's platform and Meta's privacy policy applies, not this one. What you do there is between you and Meta."
-          />
-        </Reveal>
-        <Reveal i={1}>
-          <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2">
-            <Out href={site.social.facebook}>Our Facebook Page</Out>
-            <Out href={site.social.facebookGroup}>Our Facebook Group</Out>
-            <Out href="https://www.facebook.com/privacy/policy/">
-              Meta Privacy Policy
-            </Out>
-          </div>
-        </Reveal>
-      </section>
-
       {/* ------------------------------------------------------------- RIGHTS */}
       <section className="bg-paper-3/60 py-20 lg:py-24">
         <div className="container-x">
@@ -197,16 +176,14 @@ export default function PrivacyPage() {
           <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
             <Pill tone="verified">No inbox to email, and that&rsquo;s the point</Pill>
             <h2 className="mt-6 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              Questions about privacy? Message the Page.
+              There is no contact channel right now.
             </h2>
             <p className="mt-5 max-w-3xl leading-relaxed text-ink-soft">
-              Since the project is anonymous, there is no contact email. The
-              Facebook Page is the one channel that reaches us. Ask there and
-              we&rsquo;ll answer.
+              The Facebook Page this site used to point at belonged to its
+              previous name, and we would rather say so than leave you
+              messaging somewhere nobody reads. When a channel exists, it will
+              be published here.
             </p>
-            <div className="mt-8">
-              <Out href={site.social.facebook}>Message us on Facebook</Out>
-            </div>
           </div>
         </Reveal>
       </section>

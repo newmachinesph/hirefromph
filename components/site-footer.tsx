@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { Users } from "lucide-react";
 import site from "@/data/site.json";
-import { Logo, FacebookGlyph } from "@/components/logo";
-import { SocialLinks } from "@/components/social-links";
+import { Logo } from "@/components/logo";
 
 export function SiteFooter() {
   return (
@@ -16,7 +14,7 @@ export function SiteFooter() {
                 onDark
                 wordmark={
                   <span className="text-3xl">
-                    Dev<span className="text-signal-light">Up</span>
+                    Hire From <span className="text-signal-light">PH</span>
                   </span>
                 }
               />
@@ -27,31 +25,6 @@ export function SiteFooter() {
             <p className="mt-6 kicker text-paper-2">{site.meaning}</p>
             <p className="mt-2 kicker text-paper-2/50">
               Open access · Always will be
-            </p>
-
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a
-                href={site.social.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-semibold text-paper-2 transition-colors hover:border-signal-light hover:text-signal-light"
-              >
-                <FacebookGlyph size={16} />
-                Follow our Page
-              </a>
-              <a
-                href={site.social.facebookGroup}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-signal px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-signal-deep hover:-translate-y-0.5"
-              >
-                <Users size={16} />
-                Join our Group
-              </a>
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-paper-2/50">
-              The group is where the surprises land. Free drops and bombs for
-              members, walang catch.
             </p>
           </div>
 
@@ -76,13 +49,12 @@ export function SiteFooter() {
           </nav>
         </div>
 
-        <div className="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center md:justify-start">
           <p className="max-w-xl text-xs leading-relaxed text-paper-2/50">
-            DevUp is an independent, anonymous, non-commercial project. No names,
+            Hire From PH is an independent, anonymous, non-commercial project. No names,
             no sales team, no agenda beyond leveling you up. Everything on this
             site is free, permanently.
           </p>
-          <SocialLinks />
         </div>
 
         <p className="mt-8 text-xs text-paper-2/60">
