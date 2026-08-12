@@ -58,7 +58,7 @@ All of it lives in `data/pathways.json`. Nothing below may be paraphrased at imp
   "kicker": "Two tracks, one pathway",
   "title": "The Complete Beginner Pathway",
   "subtitle": "Learn the work. Find the clients. Build the career.",
-  "intro": "Everything on this site falls into one of two halves. One half teaches you to do the work well enough that people keep you. The other teaches you to find the people who need it. Most beginners do only the first and wonder why nothing happens. Here is how the two fit together, and where each one lives.",
+  "intro": "Everything on this site falls into one of two halves. One half teaches you to do the work well enough that people keep you. The other teaches you to find the people who need it. It is easy to spend months on the first half alone, getting good at something nobody has been told about yet. Here is how the two fit together, and where each one lives.",
   "flow": [
     { "n": "01", "label": "Build the skills" },
     { "n": "02", "label": "Position your offer" },
@@ -98,7 +98,7 @@ All of it lives in `data/pathways.json`. Nothing below may be paraphrased at imp
   ],
   "together": {
     "title": "Neither half works alone.",
-    "body": "Skill without a pipeline is a hobby. A pipeline without skill is a short career and a bad reputation. Run both, in that order, and each one makes the other easier: the work you can do decides what you can honestly offer, and the clients you meet tell you which skill to build next."
+    "body": "Skill without a pipeline is a hobby. A pipeline without skill is a short career and a bad reputation. Run them together rather than one after the other, and each makes the other easier: the work you can already do decides what you can honestly offer, and the clients you meet tell you which skill to build next."
   },
   "doctrineNote": "You will not find a script, a template, or a done-for-you file on either track. Both teach the anatomy and the judgment, then hand you a blank page. What you write is yours, it sounds like you, and it keeps working when the situation changes."
 }
@@ -253,6 +253,21 @@ Produced through the **codex bridge (`gpt-image-bridge`)**, per the standing ins
 - Header image is ≤ 120 KB and carries `alt=""`
 - At 360px width the SVG is hidden and the stacked step list renders instead
 - `verify:contrast` still passes — the diagram introduces no new colour pairs
+
+### Honesty-doctrine audit of this page's copy
+
+Checked line by line against `data/doctrine.json` and the honesty rules in `BUILD_GUIDE.md`. Two drafts were rejected and are recorded so they don't get reintroduced:
+
+| Rejected draft | Why |
+|---|---|
+| "Most beginners do only the first and wonder why nothing happens." | Asserts a proportion with no source. `/reality` states there is no credible data on freelancer churn or what fraction succeed — this is exactly the claim the site refuses to make. Replaced with "It is easy to spend months on the first half alone", which describes a difficulty rather than counting people. |
+| "Run both, in that order" | Contradicted §5's diagram, which interleaves the tracks across the four steps. Replaced with "Run them together rather than one after the other". |
+
+The surviving copy makes **no statistic, count, testimonial, outcome claim, or timeline promise**, so it needs no `source: {label,url}` object. `"Skill without a pipeline is a hobby"` and `"a short career and a bad reputation"` are judgments in the site's existing aphoristic register (compare `doctrine.json`: *"A file is a fish. A method is a net."*), not empirical claims.
+
+`doctrineNote` is a direct restatement of `doctrine.json`'s creed and principle 2 ("If you can't rebuild it, you don't own it"), which is deliberate — this page should sound like the doctrine because it is indexing content governed by it.
+
+**Optional, not specified:** the page currently carries no Taglish, though `BUILD_GUIDE.md:39` welcomes it. Left to the implementer's judgment on a single line at most; forced Taglish reads worse than none.
 
 ### Completion grep
 
