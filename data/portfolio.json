@@ -372,7 +372,7 @@
         },
         {
           "tier": "Level up",
-          "goal": "You can market a listing and run agent follow-up like a trained assistant.",
+          "goal": "You can market a listing and run agent follow-up like a trained remote professional.",
           "tools": [
             {
               "name": "Canva",

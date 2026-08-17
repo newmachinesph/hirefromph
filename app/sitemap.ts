@@ -6,7 +6,7 @@ export const BASE_URL = "https://hirefrom.ph";
 /**
  * Every content route, derived from the nav so a new page can't be forgotten.
  * `/path` is intentionally excluded — it's a personalized, client-rendered app
- * hub that SSRs only an empty skeleton, so it's noindex (see robots.ts).
+ * hub that SSRs only an empty skeleton, so it's noindex (see path/layout.tsx).
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [

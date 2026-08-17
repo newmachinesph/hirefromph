@@ -81,6 +81,7 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
+                aria-current={active ? "page" : undefined}
                 className={cn(
                   "rounded-full px-3.5 py-2 text-sm font-medium transition-colors",
                   active
@@ -139,6 +140,7 @@ export function SiteHeader() {
                             <Link
                               key={item.href}
                               href={item.href}
+                              aria-current={active ? "page" : undefined}
                               className={cn(
                                 "flex items-center gap-2.5 rounded-xl border px-3 py-2.5 transition-all hover:-translate-y-0.5 hover:border-signal hover:shadow-[var(--shadow-sm)]",
                                 active
@@ -183,6 +185,7 @@ export function SiteHeader() {
                               <Link
                                 key={item.href}
                                 href={item.href}
+                                aria-current={active ? "page" : undefined}
                                 className={cn(
                                   "truncate rounded-lg px-2.5 py-1.5 text-sm transition-colors",
                                   active
@@ -226,7 +229,7 @@ export function SiteHeader() {
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
             aria-expanded={open}
-            className="grid h-10 w-10 place-items-center rounded-full border border-line-strong bg-paper-2 text-ink lg:hidden"
+            className="grid h-11 w-11 place-items-center rounded-full border border-line-strong bg-paper-2 text-ink lg:hidden"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -246,6 +249,7 @@ export function SiteHeader() {
                       <Link
                         key={item.href}
                         href={item.href}
+                        aria-current={active ? "page" : undefined}
                         onClick={() => setOpen(false)}
                         className={cn(
                           "rounded-xl px-4 py-3 text-sm font-medium transition-colors",

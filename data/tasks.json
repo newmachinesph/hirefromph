@@ -2186,7 +2186,7 @@
       "icon": "stethoscope",
       "difficulty": "Intermediate",
       "time": "2–3 hours",
-      "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes: the exact skill US practices now pay a medical VA a premium for.",
+      "proves": "You can chart a clinical visit accurately and catch an AI scribe's mistakes: the exact skill US practices pay a premium for when hiring a medical operations professional.",
       "prerequisites": [
         {
           "skill": "Core medical terminology (body systems, common abbreviations, drug/route basics)",
@@ -2223,7 +2223,7 @@
         }
       ],
       "brief": {
-        "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable, and providers are the bottleneck. They want a VA who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
+        "scenario": "A US telehealth practice is drowning in unwritten notes. Their AI scribe drafts a SOAP note per visit, but a provider has to fix it before it's billable, and providers are the bottleneck. They want a medical operations professional who can chart cleanly and correct the AI so the provider only signs off. Prove you're that person.",
         "deliverable": "One clean, structured SOAP note (Subjective, Objective, Assessment, Plan) written by you from an MTSamples visit transcript, plus a short 'what the AI got wrong' list comparing your note to an AI-drafted version.",
         "constraints": [
           "Use only MTSamples or synthetic data: never a real person's health information, even a friend's.",
@@ -2250,7 +2250,7 @@
         "Is there a single spot where I guessed a value instead of flagging it as absent?"
       ],
       "presentIt": "Present it as a before/after the way a clinic thinks: 'AI draft → provider still had to fix 4 things; my corrected note → sign-ready.' Redact nothing (there's no real PHI) and lead with the errors you caught: that list is the proof you're safe to hand a chart.",
-      "stretch": "Chart three more MTSamples visits across different specialties (a mental-health intake, a dental note, a follow-up) and time yourself. A medical VA who charts a clean note in under 15 minutes is worth a retainer."
+      "stretch": "Chart three more MTSamples visits across different specialties (a mental-health intake, a dental note, a follow-up) and time yourself. Compare each attempt with your first one, but keep accuracy and complete documentation ahead of speed."
     },
     {
       "id": "scale-model-render",
@@ -2334,7 +2334,7 @@
       "icon": "shopping-cart",
       "difficulty": "Starter",
       "time": "2–3 hours",
-      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts: one of the most-requested e-commerce VA skills.",
+      "proves": "You can take a flat, ignored product listing and rebuild it into one that ranks and converts: one of the most-requested skills in e-commerce remote work.",
       "prerequisites": [
         {
           "skill": "Listing anatomy (title, bullets, description, images, A+ content)",
@@ -2398,7 +2398,7 @@
         "Is there a single claim here I couldn't back up if the product arrived tomorrow?"
       ],
       "presentIt": "Present it as a rank-and-conversion play: 'Original listing → page five, flat sales; rebuilt listing → keyword-led, benefit-first, A+ mapped.' Put both versions side by side: the contrast is the proof you can do this for a real store.",
-      "stretch": "Do the same teardown for two competitor listings in the same category and write a one-page 'why theirs wins or loses' note. A VA who can read a whole category, not just one listing, is a strategist a seller keeps."
+      "stretch": "Do the same teardown for two competitor listings in the same category and write a one-page 'why theirs wins or loses' note. A remote professional who can read a whole category, not just one listing, is a strategist a seller keeps."
     },
     {
       "id": "agent-qa-audit",

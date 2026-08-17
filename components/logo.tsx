@@ -70,7 +70,7 @@ export function Logo({
         {showTagline && (
           <span
             className={cn(
-              "mt-1 text-[0.5625rem] font-medium uppercase leading-none tracking-[0.2em]",
+              "mt-1 hidden text-[0.5625rem] font-medium uppercase leading-none tracking-[0.2em] min-[400px]:block",
               onDark ? "text-paper-2/60" : "text-ink-soft",
             )}
           >
