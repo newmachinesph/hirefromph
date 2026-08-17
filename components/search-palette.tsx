@@ -1,6 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import {
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+  type KeyboardEvent as ReactKeyboardEvent,
+} from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
@@ -25,11 +32,18 @@ const ITEMS: Item[] = [
   })),
 ];
 
+function getOptionId(listboxId: string, item: Item) {
+  return `${listboxId}-option-${ITEMS.indexOf(item)}`;
+}
+
 export function SearchPalette() {
   const router = useRouter();
+  const listboxId = useId();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Cmd/Ctrl+K toggles the palette from anywhere.
@@ -63,16 +77,64 @@ export function SearchPalette() {
     );
   }, [query]);
 
+  const activeOptionId = results[active]
+    ? getOptionId(listboxId, results[active])
+    : undefined;
+
+  function closePalette() {
+    setOpen(false);
+    triggerRef.current?.focus({ preventScroll: true });
+  }
+
+  function onDialogKeyDown(event: ReactKeyboardEvent<HTMLDivElement>) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      closePalette();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const focusable = Array.from(
+      dialog.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
+    ).filter((element) => element.getAttribute("aria-hidden") !== "true");
+
+    if (focusable.length === 0) {
+      event.preventDefault();
+      dialog.focus();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const focused = document.activeElement;
+
+    if (event.shiftKey && (focused === first || !dialog.contains(focused))) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && (focused === last || !dialog.contains(focused))) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
   function go(item: Item | undefined) {
     if (!item) return;
     track("site_search_nav", { href: item.href });
-    setOpen(false);
+    closePalette();
     router.push(item.href);
   }
 
   return (
     <>
       <button
+        ref={triggerRef}
         type="button"
         onClick={() => {
           setQuery("");
@@ -81,7 +143,7 @@ export function SearchPalette() {
         }}
         aria-label="Search pages"
         title="Search (Ctrl K)"
-        className="grid h-10 w-10 place-items-center rounded-full border border-line-strong bg-paper-2 text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="grid h-11 w-11 place-items-center rounded-full border border-line-strong bg-paper-2 text-ink-soft transition-colors hover:border-ink hover:text-ink"
       >
         <Search size={17} />
       </button>
@@ -92,13 +154,16 @@ export function SearchPalette() {
           <button
             type="button"
             aria-label="Close search"
-            onClick={() => setOpen(false)}
+            onClick={closePalette}
             className="absolute inset-0 bg-ink/40 backdrop-blur-sm"
           />
           <div
+            ref={dialogRef}
             role="dialog"
             aria-modal="true"
             aria-label="Search pages"
+            tabIndex={-1}
+            onKeyDown={onDialogKeyDown}
             className="relative z-10 w-full max-w-lg overflow-hidden rounded-[var(--radius-lg)] border border-line bg-paper-2 shadow-[var(--shadow-lg)]"
           >
             <div className="flex items-center gap-3 border-b border-line px-4">
@@ -120,15 +185,14 @@ export function SearchPalette() {
                   } else if (e.key === "Enter") {
                     e.preventDefault();
                     go(results[active]);
-                  } else if (e.key === "Escape") {
-                    setOpen(false);
                   }
                 }}
                 type="text"
                 role="combobox"
                 aria-expanded
-                aria-controls="search-results"
+                aria-controls={listboxId}
                 aria-autocomplete="list"
+                aria-activedescendant={activeOptionId}
                 aria-label="Search pages"
                 placeholder="Search pages…"
                 className="h-14 w-full bg-transparent text-base text-ink outline-none placeholder:text-ink-faint"
@@ -138,7 +202,7 @@ export function SearchPalette() {
               </kbd>
             </div>
             <ul
-              id="search-results"
+              id={listboxId}
               role="listbox"
               className="max-h-[50vh] overflow-y-auto p-2"
             >
@@ -148,10 +212,14 @@ export function SearchPalette() {
                 </li>
               ) : (
                 results.map((it, i) => (
-                  <li key={`${it.href}-${it.label}`} role="option" aria-selected={i === active}>
+                  <li key={`${it.href}-${it.label}`} role="none">
                     <button
+                      id={getOptionId(listboxId, it)}
                       type="button"
+                      role="option"
+                      aria-selected={i === active}
                       onMouseEnter={() => setActive(i)}
+                      onFocus={() => setActive(i)}
                       onClick={() => go(it)}
                       className={cn(
                         "flex w-full items-center justify-between gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-colors",

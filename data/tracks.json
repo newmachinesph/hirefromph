@@ -726,7 +726,7 @@
     },
     {
       "id": "medical-va",
-      "name": "Medical Virtual Assistant",
+      "name": "Medical Operations Professional",
       "icon": "stethoscope",
       "accent": "verified",
       "tagline": "The remote backbone of a US practice",
@@ -1404,7 +1404,7 @@
       "regions": {
         "kicker": "Three lanes into the same industry",
         "lead": "This niche is Australia-first on purpose: Manila sits two to three hours behind Australian eastern time, so you work a normal day while covering a builder's full office hours, and Australian firms have been staffing estimators, drafters, and contract administrators from the Philippines for years. Posted offers run from roughly $600 a month for junior estimating roles to $1,800 for experienced M&E and civil estimators. Pick the lane, then go deep.",
-        "boundary": "The legal line is clean: you prepare, a registered person signs. Building approvals, compliance certificates, and occupancy sign-offs belong to state-registered building surveyors and certifiers, and never to an offshore assistant. Takeoffs, BOQs, estimate assembly, drafting under a supervising professional, and development-application paperwork are all legally open to you. Know the line and say it in interviews; it reads as professionalism.",
+        "boundary": "The legal line is clean: you prepare, a registered person signs. Building approvals, compliance certificates, and occupancy sign-offs belong to state-registered building surveyors and certifiers, and never to a remote professional working offshore. Takeoffs, BOQs, estimate assembly, drafting under a supervising professional, and development-application paperwork are all legally open to you. Know the line and say it in interviews; it reads as professionalism.",
         "items": [
           {
             "market": "Takeoffs & estimating",
@@ -1477,7 +1477,7 @@
           }
         ],
         "howToStart": [
-          "Read the National Construction Code's structure this week. It is free, and 'I know my way around the NCC' is the sentence that separates you from every generic VA applying for the same role.",
+          "Read the National Construction Code's structure this week. It is free, and 'I know my way around the NCC' is the sentence that separates you from every generic remote professional applying for the same role.",
           "Line up the Bluebeam trial deliberately: fourteen days of full Bluebeam University access is the best free training window in this niche, so clear your schedule before you start the clock.",
           "Find a free public house plan set and take off one trade completely, concrete or framing, with your measurements, assumptions, and exclusions stated. That document is your portfolio piece.",
           "Add supplier pricing from public Australian sources to turn the takeoff into a priced BOQ.",

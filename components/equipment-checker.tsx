@@ -20,7 +20,7 @@ type Category = {
 
 const DEFAULT_TIER_INDEX = 1;
 
-/** Parse the low end of a "₱9,000–₱15,000" / "₱1,300–₱1,700/mo" / "₱0" string. */
+/** Parse the first amount in a rough range so the checker can show a low-end plan. */
 function parseLowPrice(price: string): number {
   const match = price.replace(/,/g, "").match(/[\d.]+/);
   return match ? parseFloat(match[0]) : 0;
@@ -129,14 +129,14 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
         </div>
 
         <div className="border-t border-line pt-5">
-          <p className="kicker">Estimated to prepare</p>
+          <p className="kicker">Low-end planning total</p>
           <p className="mt-2 font-display text-3xl text-ink">
             ₱{estimateTotal.toLocaleString("en-PH")}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-ink-faint">
-            One-time estimate for what you haven&rsquo;t checked off yet, at
-            your chosen tiers. Monthly costs (like internet) aren&rsquo;t
-            counted here, check each card for the /mo price.
+            Adds the first amount in each rough one-time range you have not
+            checked off. It is a planning floor, not a quote. Monthly service
+            costs are excluded; check each card for any /mo allowance.
           </p>
         </div>
       </aside>

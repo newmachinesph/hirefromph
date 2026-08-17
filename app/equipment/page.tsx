@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sparkles } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import equipment from "@/data/equipment.json";
 import frameworks from "@/data/frameworks.json";
 import { Reveal } from "@/components/reveal";
@@ -45,9 +45,35 @@ export default function EquipmentPage() {
         <Reveal>
           <SectionHeading
             kicker="Check what you have"
-            title="Your setup, mapped to real ₱ prices"
-            lead="Tick off what you already own, pick a tier for the rest, and watch your readiness, and your budget, update live."
+            title="Build a rough budget for your setup"
+            lead="Tick off what you own and choose a planning tier for the rest. The total uses the low end of each rough range; it is not a live quote."
           />
+        </Reveal>
+        <Reveal i={1}>
+          <div className="mt-8 rounded-2xl border border-line bg-paper-3/70 p-5 sm:p-6">
+            <p className="kicker">How to read these numbers</p>
+            <p className="mt-2 max-w-4xl text-sm leading-relaxed text-ink-soft">
+              {equipment.pricingNote}
+            </p>
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
+              {equipment.priceReferences.map((source) => (
+                <a
+                  key={source.url}
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
+                >
+                  <span className="text-balance">Reference: {source.label}</span>
+                  <ExternalLink
+                    size={11}
+                    className="mt-0.5 shrink-0 opacity-60"
+                    aria-hidden
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
         </Reveal>
         <div className="mt-10">
           <EquipmentChecker categories={equipment.categories} />
@@ -104,6 +130,23 @@ export default function EquipmentPage() {
                       {w.dontOverpayFor}
                     </p>
                   </div>
+                  {w.source && (
+                    <a
+                      href={w.source.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group mt-4 inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
+                    >
+                      <span className="text-balance">
+                        Source: {w.source.label}
+                      </span>
+                      <ExternalLink
+                        size={11}
+                        className="mt-0.5 shrink-0 opacity-60"
+                        aria-hidden
+                      />
+                    </a>
+                  )}
                 </div>
               </Reveal>
             ))}

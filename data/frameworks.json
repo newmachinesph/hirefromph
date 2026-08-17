@@ -100,51 +100,69 @@
     ]
   },
   "equipment": {
-    "intro": "The tier lists on this page (a ₱9,000 laptop, a ₱1,300/mo internet plan) are reference points for where the bar sits today, not shopping instructions. What actually decides whether a spec is worth paying for is a short list of physics and failure points, not marketing copy. Learn it once and you'll never overpay for a laptop, a plan, or a gadget again, for this job or any other.",
-    "creed": "Don't buy what a list tells you. Learn what actually matters, then buy the cheapest thing that clears the bar.",
-    "referenceNote": "The tiers below are reference points, not shopping instructions. Use the spec literacy above to judge whether a deal, a hand-me-down, or a secondhand listing actually clears the bar.",
+    "intro": "The budget ranges on this page are rough planning allowances, not quotes or proof that a specific item will suit your work. Prices change with location, condition, seller, and promos. Check current listings and the requirements for the tools you actually use; the useful skill is knowing which specs and failure points to test.",
+    "creed": "Don't buy what a list tells you. Check your workload, test the weak points, then buy the least expensive option that meets those needs.",
+    "referenceNote": "These builds are budget examples, not shopping lists. Confirm current prices, warranty terms, battery condition, and the requirements of your own software before paying.",
     "whatMatters": [
       {
-        "spec": "RAM and SSD, not the CPU generation on the sticker",
-        "whatMattersAndWhy": "RAM decides how many tabs, apps, and calls you can run without freezing mid-shift. An SSD decides how fast the machine boots and opens files. Most office-work slowdowns come from running out of RAM or waiting on a slow hard drive, rarely from CPU speed.",
-        "howToJudge": "8GB RAM is the floor for real client work; go 16GB if you'll run design or dev tools alongside a browser and a call. Confirm it's an SSD, not an HDD, search the exact model name plus \"specs\" if the listing doesn't say.",
-        "dontOverpayFor": "The newest CPU generation. A 3-generation-old i5 with 16GB RAM and an SSD will outperform a brand-new i3 with 8GB and a hard drive, for a fraction of the price.",
-        "icon": "memory-stick"
+        "spec": "RAM and storage, before CPU badges",
+        "whatMattersAndWhy": "RAM headroom helps when several tabs, apps, and a call are open together. An SSD usually makes booting and opening files quicker than a mechanical hard drive. Results still depend on your workload, so a processor label alone cannot tell you whether a laptop will feel fast enough.",
+        "howToJudge": "Start with the published requirements for your heaviest app. As one reference, Adobe Photoshop lists 8GB RAM as its minimum and 16GB or more as recommended. Confirm the machine has an SSD, then test a workload that resembles your real shift.",
+        "dontOverpayFor": "A newer processor badge by itself. Compare the complete machine: RAM, storage, battery condition, ports, warranty, and how it handles the apps you need.",
+        "icon": "memory-stick",
+        "source": {
+          "label": "Adobe Photoshop technical requirements",
+          "url": "https://helpx.adobe.com/photoshop/desktop/get-started/technical-requirements-installation/adobe-photoshop-on-desktop-technical-requirements.html"
+        }
       },
       {
-        "spec": "Upload speed and stability, not the download number on the plan",
-        "whatMattersAndWhy": "Video calls, file uploads, and screen shares depend on upload speed. Most PH home plans advertise download speed because it's the bigger, more impressive number, but a call drops on upload, not download.",
-        "howToJudge": "Ask your ISP for the upload speed specifically, or run a speed test and check the second number, not the first. 5 Mbps+ upload is workable for calls; 10 Mbps+ is comfortable. No drops during peak hours matters more than the top speed on the plan.",
-        "dontOverpayFor": "A 200 Mbps plan when your actual bottleneck is your router's Wi-Fi range or a shared household connection at night. Fix stability and placement first.",
-        "icon": "wifi"
+        "spec": "Upload capacity and stability, not only download speed",
+        "whatMattersAndWhy": "Video calls and file uploads use upstream capacity, while the headline on a home plan usually describes download speed. Wi-Fi coverage, congestion, and other people on the connection can matter as much as the advertised plan speed.",
+        "howToJudge": "Check the requirements for your calling app. Zoom's Web App currently recommends 3.8 Mbps upload and 3.0 Mbps download for 1080p group video, with lower requirements for 720p. Leave headroom for other devices and test at the hours you expect to work.",
+        "dontOverpayFor": "More download speed before checking upload performance, peak-hour drops, router placement, and household sharing. Fix the bottleneck you can measure.",
+        "icon": "wifi",
+        "source": {
+          "label": "Zoom Web App system requirements",
+          "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0058323"
+        }
       },
       {
         "spec": "A power backup, before a better webcam",
-        "whatMattersAndWhy": "A brownout mid-call costs more than any camera upgrade ever will: a missed deadline, a client wondering if you're reliable. In our experience, Filipino remote professionals are far more likely to lose a client to a power outage than to a mediocre webcam.",
-        "howToJudge": "A basic UPS (650VA) buys 15–30 minutes to save your work and switch to mobile data, enough to finish a call gracefully. Check the runtime rating on the box, not just the price tag.",
-        "dontOverpayFor": "A ring light or 4K webcam before you have any backup power at all. Nobody has ever lost a client over camera resolution.",
-        "icon": "battery-charging"
+        "whatMattersAndWhy": "A short outage can end a call or erase unsaved work. The right backup depends on what must stay powered and how long you need to save, send a message, or switch connections.",
+        "howToJudge": "Do not infer runtime from a 650VA label alone. List the wattage of every device you will connect, choose a target runtime, and use the manufacturer's load-specific runtime chart. Test the setup after buying it.",
+        "dontOverpayFor": "Camera gear before you have backup power that matches your actual outage risk and device load.",
+        "icon": "battery-charging",
+        "source": {
+          "label": "APC UPS buying guide",
+          "url": "https://www.apc.com/us/en/support/product-support/ups-buying-guide-for-selecting-a-battery-backup-system.jsp"
+        }
       },
       {
         "spec": "A noise-cancelling microphone, before a better camera",
-        "whatMattersAndWhy": "Clients tolerate a soft-focus camera. They don't tolerate not being able to hear you over a barking dog, a passing jeepney, or an electric fan. Audio clarity reads as competence; video quality barely registers.",
-        "howToJudge": "Test any headset in a noisy room before buying, record a voice memo with background noise playing and listen back. A ₱1,000 USB headset with a boom mic beats a ₱5,000 webcam for how professional you actually sound.",
-        "dontOverpayFor": "4K resolution or wide-angle lenses. 1080p is plenty, most clients video-call at a fraction of that resolution anyway.",
-        "icon": "mic"
+        "whatMattersAndWhy": "Bad audio makes a call hard to follow even when the camera is adequate. Microphone placement, the room, and the noise around you all affect whether speech stays clear.",
+        "howToJudge": "Test the headset in the room where you will work. Record a voice memo while the fan is running and while normal household noise is present; listen for clear speech, rubbing cables, hum, and sudden volume changes.",
+        "dontOverpayFor": "Higher camera resolution before fixing audio, lighting, and framing that you already know are causing trouble.",
+        "icon": "mic",
+        "source": null
       },
       {
         "spec": "Battery health, not just the specs sheet, for anything secondhand",
-        "whatMattersAndWhy": "A used laptop's listed specs (RAM, CPU, storage) say nothing about whether the battery still holds a charge or the charging port is loose. Those are the two things that actually fail on old laptops.",
-        "howToJudge": "Ask the seller for a battery health screenshot (built into Windows or macOS settings) before buying, under 80% health means you're tied to an outlet for life. Test the charging port by gently wiggling the cable while it's plugged in.",
-        "dontOverpayFor": "A \"like new\" claim with no battery health proof attached. Ask, every time, a good seller shows you without hesitation.",
-        "icon": "battery"
+        "whatMattersAndWhy": "A used laptop's RAM, processor, and storage do not show how much charge its battery still holds or whether its ports work reliably. Wear varies by unit, even between two machines with the same model number.",
+        "howToJudge": "Ask for a battery report showing full-charge capacity beside design capacity, then test unplugged runtime with a normal workload. On Windows 11, Microsoft documents the built-in battery report. Also check the charger and every port you need.",
+        "dontOverpayFor": "A \"like new\" description without a battery report, an unplugged test, and time to inspect the ports before payment.",
+        "icon": "battery",
+        "source": {
+          "label": "Microsoft: caring for your battery in Windows",
+          "url": "https://support.microsoft.com/en-us/windows/experience/power-battery/caring-for-your-battery-in-windows"
+        }
       },
       {
         "spec": "A second monitor and ergonomic chair, real upgrades, wrong order",
-        "whatMattersAndWhy": "These genuinely help productivity and your back over years of sitting, but they don't affect whether you get hired. They're quality-of-life upgrades, not requirements to start.",
+        "whatMattersAndWhy": "A second screen can reduce window switching, and a chair that fits can make long sessions more comfortable. Neither item proves you can do the work, so treat both as later purchases unless your current setup is stopping you from working safely.",
         "howToJudge": "Ask yourself: would I lose a client or fail to apply without this? If no, it's a later purchase, once income is steady, not before you've landed your first client.",
-        "dontOverpayFor": "A premium ergonomic chair or a QHD monitor in month one. Start with the ₱1,500 laptop riser and cushion setup; upgrade when your back, or your income, actually tells you to.",
-        "icon": "armchair"
+        "dontOverpayFor": "A premium chair or monitor in month one. Adjust the setup you already own first, then upgrade when a measured work problem justifies the cost.",
+        "icon": "armchair",
+        "source": null
       }
     ],
     "buyingSmart": [
