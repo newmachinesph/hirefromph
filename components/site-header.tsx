@@ -13,6 +13,13 @@ import { cn } from "@/lib/utils";
 import { Logo } from "@/components/logo";
 import { SearchPalette } from "@/components/search-palette";
 
+// TODO(Phase 2 Task 8): site.nav replaces the old primaryNav; this file will
+// be rebuilt against the full nav/groups tree and this shim removed.
+type NavItem = (typeof site.nav)[number];
+const primaryNav = site.nav.flatMap((item: NavItem) =>
+  "href" in item && item.href ? [{ label: item.label, href: item.href }] : [],
+);
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -75,7 +82,7 @@ export function SiteHeader() {
         </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
-          {site.primaryNav.map((item) => {
+          {primaryNav.map((item) => {
             const active = pathname === item.href;
             return (
               <Link
@@ -127,7 +134,7 @@ export function SiteHeader() {
                     >
                       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
                         <h2 className="kicker text-signal">{group.title}</h2>
-                        {"desc" in group && group.desc && (
+                        {"desc" in group && typeof group.desc === "string" && group.desc && (
                           <p className="text-xs leading-snug text-ink-faint">
                             {group.desc}
                           </p>
@@ -173,7 +180,7 @@ export function SiteHeader() {
                     .map((group) => (
                       <div key={group.title}>
                         <h2 className="kicker text-signal">{group.title}</h2>
-                        {"desc" in group && group.desc && (
+                        {"desc" in group && typeof group.desc === "string" && group.desc && (
                           <p className="mt-1.5 text-xs leading-snug text-ink-faint">
                             {group.desc}
                           </p>
