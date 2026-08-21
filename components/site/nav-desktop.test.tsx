@@ -84,4 +84,21 @@ describe("NavDesktop", () => {
     expect(path).toHaveAttribute("aria-expanded", "false");
     expect(work).toHaveAttribute("aria-expanded", "true");
   });
+
+  it("gives every trigger and every open-panel link a 44px minimum touch target", async () => {
+    const user = userEvent.setup();
+    render(<NavDesktop />);
+
+    for (const button of screen.getAllByRole("button")) {
+      expect(button).toHaveClass("min-h-11");
+    }
+
+    await user.click(screen.getByRole("button", { name: "Learn" }));
+
+    const panelLinks = document.querySelectorAll("a[data-nav-item]");
+    expect(panelLinks.length).toBeGreaterThan(0);
+    for (const link of panelLinks) {
+      expect(link).toHaveClass("min-h-11");
+    }
+  });
 });

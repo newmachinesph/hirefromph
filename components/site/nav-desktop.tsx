@@ -39,7 +39,7 @@ export function NavDesktop() {
             href={item.href}
             aria-current={pathname === item.href ? "page" : undefined}
             className={cn(
-              "relative rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
+              "relative inline-flex min-h-11 items-center rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
               pathname === item.href ? "text-primary" : "text-ink-soft hover:text-ink",
             )}
           >
@@ -145,7 +145,7 @@ function NavDropdown({
         onClick={() => onOpenChange(!open)}
         onKeyDown={onTriggerKeyDown}
         className={cn(
-          "relative flex items-center gap-1 rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
+          "relative flex min-h-11 items-center gap-1 rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
           active || open ? "text-primary" : "text-ink-soft hover:text-ink",
         )}
       >
@@ -183,18 +183,20 @@ function NavDropdown({
                         data-nav-item
                         href={link.href}
                         aria-current={pathname === link.href ? "page" : undefined}
-                        className="block rounded-sm px-3 py-2 transition-colors duration-150 hover:bg-band"
+                        className="flex min-h-11 items-center gap-3 rounded-sm px-3 py-2 transition-colors duration-150 hover:bg-band"
                       >
-                        <span
-                          className={cn(
-                            "block text-base font-medium",
-                            pathname === link.href ? "text-primary" : "text-ink",
-                          )}
-                        >
-                          {link.label}
-                        </span>
-                        <span className="mt-0.5 block text-caption text-ink-faint">
-                          {link.desc}
+                        <span className="flex flex-col">
+                          <span
+                            className={cn(
+                              "block text-base font-medium",
+                              pathname === link.href ? "text-primary" : "text-ink",
+                            )}
+                          >
+                            {link.label}
+                          </span>
+                          <span className="mt-0.5 block text-caption text-ink-faint">
+                            {link.desc}
+                          </span>
                         </span>
                       </Link>
                     </li>
@@ -223,7 +225,7 @@ function NavDropdown({
             <Link
               data-nav-item
               href="/library"
-              className="inline-flex items-center gap-1.5 rounded-sm text-small font-semibold text-primary transition-colors duration-150 hover:text-primary-deep"
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-sm px-3 text-small font-semibold text-primary transition-colors duration-150 hover:text-primary-deep"
             >
               Browse everything in the library
               <span aria-hidden className="inline-flex">
