@@ -430,7 +430,7 @@ export default function EnglishPage() {
                         href={r.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                        className="mt-6 inline-flex min-h-11 items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
                       >
                         Open {r.name}
                         <Icon name="arrow-up-right" size={14} />

@@ -240,7 +240,8 @@ export default function AiFirstPage() {
                                   href={t.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="mt-3 inline-flex items-center gap-1 text-caption font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                                  aria-label={`Open ${t.name}`}
+                                  className="mt-3 inline-flex min-h-11 items-center gap-1 text-caption font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
                                 >
                                   Open
                                   <Icon name="arrow-up-right" size={11} />
