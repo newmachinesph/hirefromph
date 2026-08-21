@@ -56,8 +56,8 @@ export function MobileDrawer() {
         placement="right"
         hideClose
       >
-        <div className="flex h-full flex-col overflow-y-auto">
-          <div className="grid border-b border-line p-4">
+        <div className="flex min-h-full flex-col">
+          <div className="grid p-4">
             <Button href={NAV_CTA.href} variant="primary" size="lg">
               {NAV_CTA.label}
             </Button>
@@ -83,7 +83,7 @@ export function MobileDrawer() {
               ))}
             </Accordion>
 
-            <ul className="mt-1 flex flex-col border-t border-line pt-1">
+            <ul className="mt-1 flex flex-col pt-1">
               {NAV.filter((item): item is NavDirect => !isMenu(item)).map(row)}
             </ul>
           </nav>

@@ -89,7 +89,7 @@
     <div class="page-head">
       <p class="eyebrow">diagram-design · profile hirefromph</p>
       <h1>Diagram preview</h1>
-      <p class="lede">The four first-wave diagrams, inlined from their plugin HTML sources with the site's tokens on <code>:root</code>. Open this file directly in a browser — nothing here is built. Regenerate with <code>node design/diagrams/build-preview.mjs</code>.</p>
+      <p class="lede">The seven first-wave diagrams, inlined from their plugin HTML sources with the site's tokens on <code>:root</code>. Open this file directly in a browser — nothing here is built. Regenerate with <code>node design/diagrams/build-preview.mjs</code>.</p>
     </div>
 
     <section class="figure">
@@ -323,6 +323,249 @@
             </g>
           </svg>
       <p class="caption">Five days, five checkpoints. Day 1 is highlighted because everything after it is easier once the recap is sent.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Flowchart · <code>vetting-flow</code> · &lt;VettingFlow /&gt;</p>
+      <h2>Vetting an opportunity, gate by gate</h2>
+      <svg viewBox="0 0 640 616" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="vetting-flow-title vetting-flow-desc">
+            <title id="vetting-flow-title">Vetting an opportunity, gate by gate</title>
+            <desc id="vetting-flow-desc">A top-down flowchart. An opportunity enters at the top and passes five decision gates in order: does it ask for an upfront fee, does it promise guaranteed income, is it vague about the day-to-day work, does it pressure you to decide now, and does it have no verifiable company footprint. A yes at any gate exits right to a single stop. Only an opportunity that answers no to all five reaches the bottom, where the next step is to research it and then apply.</desc>
+
+            <!-- Arrows first, so the nodes cap them. -->
+            <defs>
+              <marker id="vf-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--line-strong)"/>
+              </marker>
+              <marker id="vf-arrow-accent" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--primary)"/>
+              </marker>
+            </defs>
+
+            <g stroke="var(--line-strong)" stroke-width="1" fill="none" marker-end="url(#vf-arrow)">
+              <path d="M220,56 L220,84"/>
+              <path d="M220,148 L220,172"/>
+              <path d="M220,236 L220,260"/>
+              <path d="M220,324 L220,348"/>
+              <path d="M220,412 L220,436"/>
+              <path d="M220,500 L220,528"/>
+            </g>
+
+            <!-- The "yes" rail: five horizontals feeding one vertical into the stop. -->
+            <g stroke="var(--primary)" stroke-width="1" fill="none">
+              <path d="M328,116 L468,116"/>
+              <path d="M328,204 L468,204"/>
+              <path d="M328,292 L468,292"/>
+              <path d="M328,380 L468,380"/>
+              <path d="M328,468 L468,468"/>
+              <path d="M468,116 L468,524" marker-end="url(#vf-arrow-accent)"/>
+            </g>
+
+            <!-- Start -->
+            <rect x="120" y="16" width="200" height="40" rx="20" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="220" y="41" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--ink)">An opportunity lands</text>
+
+            <!-- Five gates -->
+            <g fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1">
+              <polygon points="112,116 220,84 328,116 220,148"/>
+              <polygon points="112,204 220,172 328,204 220,236"/>
+              <polygon points="112,292 220,260 328,292 220,324"/>
+              <polygon points="112,380 220,348 328,380 220,412"/>
+              <polygon points="112,468 220,436 328,468 220,500"/>
+            </g>
+            <g text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600" fill="var(--ink)">
+              <text x="220" y="113">Any upfront fee,</text>
+              <text x="220" y="127">"training", "starter kit"?</text>
+              <text x="220" y="201">Guaranteed income</text>
+              <text x="220" y="215">or guaranteed hiring?</text>
+              <text x="220" y="289">Vague or evasive about</text>
+              <text x="220" y="303">the day-to-day work?</text>
+              <text x="220" y="377">Pressure to decide,</text>
+              <text x="220" y="391">pay, or sign right now?</text>
+              <text x="220" y="465">No verifiable footprint,</text>
+              <text x="220" y="479">no site, no reviews?</text>
+            </g>
+
+            <!-- Branch labels, each on an opaque mask -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500">
+              <g fill="var(--paper)">
+                <rect x="340" y="104" width="26" height="16"/>
+                <rect x="340" y="192" width="26" height="16"/>
+                <rect x="340" y="280" width="26" height="16"/>
+                <rect x="340" y="368" width="26" height="16"/>
+                <rect x="340" y="456" width="26" height="16"/>
+                <rect x="228" y="60" width="24" height="16"/>
+              </g>
+              <g fill="var(--primary)">
+                <text x="344" y="116">yes</text>
+                <text x="344" y="204">yes</text>
+                <text x="344" y="292">yes</text>
+                <text x="344" y="380">yes</text>
+                <text x="344" y="468">yes</text>
+              </g>
+              <text x="232" y="72" fill="var(--ink-faint)">no</text>
+            </g>
+
+            <!-- Stop, the one focal element -->
+            <rect x="396" y="524" width="144" height="56" rx="8" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+            <text x="468" y="548" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" fill="var(--ink)">Stop. Walk away.</text>
+            <text x="468" y="564" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-soft)">No rate is worth it.</text>
+
+            <!-- End -->
+            <rect x="104" y="528" width="232" height="48" rx="20" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="220" y="548" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--ink)">Research it, then apply</text>
+            <text x="220" y="564" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-soft)">A clean checklist is not proof.</text>
+
+            <text x="16" y="606" fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" font-style="italic">Every downward arrow is a no. Gate order follows the weights in data/findwork.json.</text>
+          </svg>
+      <p class="caption">Read top to bottom. Every downward arrow is a no; a single yes exits right and ends the conversation. Only a clean run reaches the bottom, and even then the next step is research, not applying.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Swimlane · <code>agency-vs-direct</code> · &lt;AgencyVsDirect /&gt;</p>
+      <h2>Agency or direct: who holds the relationship</h2>
+      <svg viewBox="0 0 720 288" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="avd-title avd-desc">
+            <title id="avd-title">Agency or direct: who holds the relationship</title>
+            <desc id="avd-desc">Two lanes across four steps — find the client, set the rate, do the work, keep the client. In the agency lane the agency finds the client, sets the rate and keeps the client, and you only do the work. In the direct lane you do all four, and keeping the client is the highlighted end of that lane.</desc>
+
+            <!-- Column eyebrows -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="0.14em" fill="var(--ink-faint)">
+              <text x="160" y="28">FIND</text>
+              <text x="300" y="28">SET THE RATE</text>
+              <text x="440" y="28">DO THE WORK</text>
+              <text x="580" y="28">KEEP THE CLIENT</text>
+            </g>
+
+            <!-- Lane dividers -->
+            <g stroke="var(--line)" stroke-width="1">
+              <line x1="16" y1="56" x2="704" y2="56"/>
+              <line x1="16" y1="172" x2="704" y2="172"/>
+              <line x1="16" y1="272" x2="704" y2="272"/>
+            </g>
+
+            <!-- Lane labels -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="0.14em" fill="var(--ink-soft)">
+              <text x="16" y="120">AGENCY</text>
+              <text x="16" y="232">DIRECT</text>
+            </g>
+
+            <!-- Arrows within each lane -->
+            <defs>
+              <marker id="avd-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M0,0 L8,4 L0,8 Z" fill="var(--line-strong)"/>
+              </marker>
+            </defs>
+            <g stroke="var(--line-strong)" stroke-width="1" fill="none" marker-end="url(#avd-arrow)">
+              <path d="M276,116 L300,116"/>
+              <path d="M416,116 L440,116"/>
+              <path d="M556,116 L580,116"/>
+              <path d="M276,228 L300,228"/>
+              <path d="M416,228 L440,228"/>
+              <path d="M556,228 L580,228"/>
+            </g>
+
+            <!-- Agency lane -->
+            <g fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1">
+              <rect x="160" y="88" width="116" height="56" rx="8"/>
+              <rect x="300" y="88" width="116" height="56" rx="8"/>
+              <rect x="440" y="88" width="116" height="56" rx="8"/>
+              <rect x="580" y="88" width="116" height="56" rx="8"/>
+            </g>
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--ink)" text-anchor="middle">
+              <text x="218" y="112">Agency finds</text>
+              <text x="358" y="112">Agency sets</text>
+              <text x="498" y="112">You do it</text>
+              <text x="638" y="112">Agency keeps</text>
+            </g>
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-soft)" text-anchor="middle">
+              <text x="218" y="128">no selling for you</text>
+              <text x="358" y="128">their rate card</text>
+              <text x="498" y="128">under their name</text>
+              <text x="638" y="128">you cannot take them</text>
+            </g>
+
+            <!-- Direct lane -->
+            <g fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1">
+              <rect x="160" y="200" width="116" height="56" rx="8"/>
+              <rect x="300" y="200" width="116" height="56" rx="8"/>
+              <rect x="440" y="200" width="116" height="56" rx="8"/>
+            </g>
+            <!-- The one focal node -->
+            <rect x="580" y="200" width="116" height="56" rx="8" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="var(--ink)" text-anchor="middle">
+              <text x="218" y="224">You find</text>
+              <text x="358" y="224">You set</text>
+              <text x="498" y="224">You do it</text>
+              <text x="638" y="224">You keep</text>
+            </g>
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-soft)" text-anchor="middle">
+              <text x="218" y="240">selling is your job</text>
+              <text x="358" y="240">your price</text>
+              <text x="498" y="240">under your name</text>
+              <text x="638" y="240">referrals are yours</text>
+            </g>
+
+            <text x="16" y="284" fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" font-style="italic">Same four steps. The difference is who owns the last one.</text>
+          </svg>
+      <p class="caption">Both lanes do the same four steps. Follow the last column: in the agency lane the client stays with the agency, in the direct lane the client is yours.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Line · <code>forgetting-curve</code> · &lt;ForgettingCurve /&gt;</p>
+      <h2>What review does to what you remember</h2>
+      <svg viewBox="0 0 720 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="fc-title fc-desc">
+            <title id="fc-title">What review does to what you remember</title>
+            <desc id="fc-desc">Two qualitative curves with no numbers. Both start with everything remembered. Without review the line falls steeply and keeps falling. With spaced retrieval the line falls, is pulled back up at each review point, and each fall is shallower than the last, so a month later it is still near the top.</desc>
+
+            <!-- Axis frame: two hairlines only -->
+            <g stroke="var(--line-strong)" stroke-width="1">
+              <line x1="132" y1="40" x2="132" y2="248"/>
+              <line x1="132" y1="248" x2="688" y2="248"/>
+            </g>
+
+            <!-- Review markers -->
+            <g stroke="var(--line)" stroke-width="0.8" stroke-dasharray="4 3">
+              <line x1="271" y1="40" x2="271" y2="248"/>
+              <line x1="410" y1="40" x2="410" y2="248"/>
+              <line x1="549" y1="40" x2="549" y2="248"/>
+            </g>
+
+            <!-- Without review -->
+            <polyline points="132,40 271,140 410,196 549,224 688,240" fill="none" stroke="var(--ink-faint)" stroke-width="1.2" stroke-dasharray="7 4" stroke-linejoin="round"/>
+
+            <!-- With spaced retrieval: each vertical is a review pulling it back up -->
+            <polyline points="132,40 271,140 271,56 410,120 410,60 549,104 549,56 688,88" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            <g fill="var(--primary)">
+              <circle cx="271" cy="56" r="4"/>
+              <circle cx="410" cy="60" r="4"/>
+              <circle cx="549" cy="56" r="4"/>
+              <circle cx="688" cy="88" r="4"/>
+            </g>
+
+            <!-- Axis words, not numbers -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-faint)" text-anchor="end">
+              <text x="124" y="44">All of it</text>
+              <text x="124" y="252">Most of it gone</text>
+            </g>
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="var(--ink-faint)" text-anchor="middle">
+              <text x="132" y="268">learned it</text>
+              <text x="271" y="268">review 1</text>
+              <text x="410" y="268">review 2</text>
+              <text x="549" y="268">review 3</text>
+              <text x="688" y="268">review 4</text>
+            </g>
+
+            <!-- Series labels on opaque masks -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600">
+              <rect x="440" y="70" width="152" height="16" fill="var(--paper)"/>
+              <text x="444" y="82" fill="var(--primary)">with spaced retrieval</text>
+              <rect x="472" y="212" width="120" height="16" fill="var(--paper)"/>
+              <text x="476" y="224" fill="var(--ink-faint)">without review</text>
+            </g>
+
+            <text x="16" y="310" fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" font-style="italic">Shape only, no numbers. The marks are the review points, not a time scale.</text>
+          </svg>
+      <p class="caption">Both lines start with everything. The dashed one keeps falling; the solid one is pulled back up at each review, and each fall after that is shallower.</p>
     </section>
   </main>
 </body>

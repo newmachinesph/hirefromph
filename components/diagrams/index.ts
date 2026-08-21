@@ -6,16 +6,29 @@
  * Every component is a server component and draws no accessible name of its
  * own — wrap it in `DiagramFrame`, which supplies the title, the caption, and
  * the horizontal scroll container.
+ *
+ * Data-driven charts live one level down, in components/diagrams/charts/.
  */
 import type { ComponentType } from "react";
 
+import { AgencyVsDirect } from "./agency-vs-direct";
 import { FirstWeekTimeline } from "./first-week-timeline";
+import { ForgettingCurve } from "./forgetting-curve";
 import { HiringFunnel } from "./hiring-funnel";
 import { JourneyMap } from "./journey-map";
 import { MethodLoop } from "./method-loop";
+import { VettingFlow } from "./vetting-flow";
 import type { DiagramProps } from "./types";
 
-export { FirstWeekTimeline, HiringFunnel, JourneyMap, MethodLoop };
+export {
+  AgencyVsDirect,
+  FirstWeekTimeline,
+  ForgettingCurve,
+  HiringFunnel,
+  JourneyMap,
+  MethodLoop,
+  VettingFlow,
+};
 export type { DiagramProps };
 
 export const DIAGRAMS = {
@@ -23,6 +36,9 @@ export const DIAGRAMS = {
   "method-loop": MethodLoop,
   "hiring-funnel": HiringFunnel,
   "first-week-timeline": FirstWeekTimeline,
+  "vetting-flow": VettingFlow,
+  "agency-vs-direct": AgencyVsDirect,
+  "forgetting-curve": ForgettingCurve,
 } satisfies Record<string, ComponentType<DiagramProps>>;
 
 export type DiagramId = keyof typeof DIAGRAMS;

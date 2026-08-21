@@ -300,7 +300,7 @@ export default function PromptsPage() {
       </section>
 
       {/* --------------------------------------------------------------- CLOSE */}
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <div className="grid gap-5 sm:grid-cols-2">
             <Link

@@ -20,21 +20,59 @@ model's presets (1024x1536, 1536x1024); the optimise step crops to each `ratio`.
 
 ## Art direction
 
-Photoreal editorial photography, 35mm or 50mm, natural window light, shallow
-but not creamy depth of field, honest skin and fabric texture, neutral-warm
-grade. Filipino subjects of varied ages and builds in real Philippine settings:
+Documentary editorial photography — frames a human photographer took on
+assignment, never a render. 35mm or 50mm prime, available natural light only,
+neutral untouched colour, subtle film grain and a slight natural vignette,
+off-centre composition, and the real imperfections of a room someone uses:
+dust, smudges, tangled cable, worn edges, something set down crooked. No HDR,
+no colour grading, no lens flare, no bokeh balls, no studio look, no pastel
+props, no perfectly tidy surfaces.
+
+Filipino subjects of varied ages and builds in real Philippine settings:
 apartment corner desks, provincial homes with capiz or jalousie windows,
-Cebu/Davao co-working spaces, a provincial street at dusk. Tidy but lived-in.
-Subjects work; they never pose or look at the camera. No lens flare, neon,
-screen-glow faces, watermarks, logos, flags, or readable text on any screen or
-page (UI and documents are rendered blurred or abstract).
+Cebu/Davao co-working spaces, a low-rise provincial street under flat overcast
+daylight (`cta-band`). Tidy but lived-in. Subjects work; they never pose. Faces
+are turned away or in profile — no direct eye contact, no symmetrical front-on
+portraits. Hands rest or are cropped by the frame, exactly five fingers when
+visible, nothing held up mid-air.
+
+The subjects that carry the "human-made" direction hardest are, in order of
+regeneration: `home-hero`, a woman seen from three-quarters behind at a
+cluttered home desk in raking morning light; `home-standard`, a close
+over-the-shoulder view of a well-used notebook with handwritten notes;
+`stage-level-up`, a man reading a well-thumbed printed manual in profile under
+overcast light; `library-hero`, a desk corner of notebooks, spiral-bound
+manuals and torn paper page tabs shot at an oblique angle; `stage-get-hired`, a
+video interview seen from behind the candidate's shoulder, earphones in and a
+printed CV lying face-down; `stage-deliver`, a woman in profile on a headset
+mid-sentence beside a switched-off desk lamp, a wire tray of papers and a desk
+fan; `stage-own`, a man from three-quarters behind at a small table reading a
+printed sheet, phone face-down beside a mug in jalousie morning light; and
+`og-default`, the wide social-card frame of the same family as `home-hero` —
+one window, one desk, the worker from behind.
+
+`og-default` is the one id cropped hard after the fact: `optimize-images.mjs`
+resizes it to exactly 1200x630, which cuts the top and bottom sixth off the
+1536x1024 render. Its prompt therefore carries an explicit headroom rule — the
+subject's head must sit between a fifth and a third of the way down the frame —
+because a head that reads fine in the raw render can be sliced by that crop.
+
+Text is present in these scenes as real ink and real screen content — blank
+sheets and blank books read as staged renders. It is made unreadable only by
+honest optics: too small, too far, or outside the plane of focus. Never a
+model-blurred smear, never squiggles standing in for letterforms, and never
+legible. No signage, no sticky notes bearing writing, no watermarks, no logos,
+no flags.
 
 ## Honesty rules
 
-- Every generated image is captioned "Illustrative image" through `Figure`.
+- Every generated image is captioned through `Figure`, which appends its
+  `ILLUSTRATIVE_CAPTION` to whatever caption the caller passes.
 - No generated person sits next to a quote, a name, a role, or a number.
 - No generated document that could pass as a real credential, payslip, invoice,
-  or contract. Document surfaces are abstract shapes only.
+  or contract. Printed matter is present but always small, angled away, or
+  outside the plane of focus, so no word, name or figure resolves and no frame
+  can be mistaken for a specific real document.
 - `alt` describes the scene, never a claim like "a successful professional".
 
 ## Where files go

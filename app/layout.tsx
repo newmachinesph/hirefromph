@@ -11,6 +11,7 @@ import {
   SiteHeader,
   SWRegister,
 } from "@/components/site";
+import { READER_SCRIPT } from "@/components/practice/reader-controls";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Hire From PH — Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
     url: BASE_URL,
@@ -44,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire From PH — Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
@@ -89,6 +90,7 @@ export default function RootLayout({
       className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <script dangerouslySetInnerHTML={{ __html: READER_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -64,6 +64,30 @@ const DIAGRAMS = [
       "Five days, five checkpoints. Day 1 is highlighted because everything after it is easier once the recap is sent.",
     component: "FirstWeekTimeline",
   },
+  {
+    id: "vetting-flow",
+    type: "Flowchart",
+    title: "Vetting an opportunity, gate by gate",
+    caption:
+      "Read top to bottom. Every downward arrow is a no; a single yes exits right and ends the conversation. Only a clean run reaches the bottom, and even then the next step is research, not applying.",
+    component: "VettingFlow",
+  },
+  {
+    id: "agency-vs-direct",
+    type: "Swimlane",
+    title: "Agency or direct: who holds the relationship",
+    caption:
+      "Both lanes do the same four steps. Follow the last column: in the agency lane the client stays with the agency, in the direct lane the client is yours.",
+    component: "AgencyVsDirect",
+  },
+  {
+    id: "forgetting-curve",
+    type: "Line",
+    title: "What review does to what you remember",
+    caption:
+      "Both lines start with everything. The dashed one keeps falling; the solid one is pulled back up at each review, and each fall after that is shallower.",
+    component: "ForgettingCurve",
+  },
 ];
 
 /** Pull the first <svg>…</svg> out of a plugin HTML file. */
@@ -198,7 +222,7 @@ const page = `<!DOCTYPE html>
     <div class="page-head">
       <p class="eyebrow">diagram-design · profile hirefromph</p>
       <h1>Diagram preview</h1>
-      <p class="lede">The four first-wave diagrams, inlined from their plugin HTML sources with the site's tokens on <code>:root</code>. Open this file directly in a browser — nothing here is built. Regenerate with <code>node design/diagrams/build-preview.mjs</code>.</p>
+      <p class="lede">The seven first-wave diagrams, inlined from their plugin HTML sources with the site's tokens on <code>:root</code>. Open this file directly in a browser — nothing here is built. Regenerate with <code>node design/diagrams/build-preview.mjs</code>.</p>
     </div>
 
 ${sections.join("\n\n")}

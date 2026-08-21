@@ -16,7 +16,7 @@
       },
       {
         "title": "You build it, you own it",
-        "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, forever.",
+        "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, for any client.",
         "icon": "pencil-ruler"
       },
       {
@@ -43,7 +43,7 @@
         {
           "title": "The path",
           "links": [
-            { "label": "Start here", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
+            { "label": "Start Right", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
             { "label": "Get Hired", "href": "/get-hired", "desc": "Stage 2. Source leads, apply, and close the offer." },
             { "label": "Deliver", "href": "/deliver", "desc": "Stage 3. Onboard, write SOPs, keep the client." },
             { "label": "Level Up", "href": "/level-up", "desc": "Stage 4. Specialise, automate, and raise your rate." },
@@ -83,8 +83,8 @@
         }
       ],
       "footerLinks": [
-        { "label": "Practice", "href": "/practice", "desc": "Flashcards and quizzes on a spacing schedule.", "pending": true },
-        { "label": "Glossary", "href": "/glossary", "desc": "Plain definitions for every term this site uses.", "pending": true }
+        { "label": "Practice", "href": "/practice", "desc": "Flashcards and quizzes on a spacing schedule." },
+        { "label": "Glossary", "href": "/glossary", "desc": "Plain definitions for every term this site uses." }
       ]
     },
     {
@@ -121,7 +121,7 @@
       "title": "The path",
       "up": { "label": "Your path", "href": "/path" },
       "links": [
-        { "label": "Start here", "href": "/start" },
+        { "label": "Start Right", "href": "/start" },
         { "label": "Get Hired", "href": "/get-hired" },
         { "label": "Deliver", "href": "/deliver" },
         { "label": "Level Up", "href": "/level-up" },
@@ -148,8 +148,8 @@
         { "label": "Conduct & Integrity", "href": "/conduct" },
         { "label": "Career Simulator", "href": "/simulator" },
         { "label": "Resource Shelf", "href": "/resources" },
-        { "label": "Practice", "href": "/practice", "pending": true },
-        { "label": "Glossary", "href": "/glossary", "pending": true }
+        { "label": "Practice", "href": "/practice" },
+        { "label": "Glossary", "href": "/glossary" }
       ]
     },
     {

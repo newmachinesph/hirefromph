@@ -9,9 +9,9 @@ import educators from "@/data/educators.json";
 import roadmap from "@/data/roadmap.json";
 import site from "@/data/site.json";
 import stages from "@/data/stages.json";
-import { KIT_FILES, hashKitPayload } from "./kit.mjs";
+import { KIT_FILES, PUBLISHED_KIT_FILES, hashKitPayload } from "./kit.mjs";
 
-export { KIT_FILES };
+export { KIT_FILES, PUBLISHED_KIT_FILES };
 export type { KitFile } from "./kit.mjs";
 
 /** A citation on a kit sheet. PDFs have no hover, so the URL gets printed. */

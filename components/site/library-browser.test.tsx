@@ -1,8 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { LibraryBrowser } from "@/components/site/library-browser";
-import { LIVE_LIBRARY } from "@/lib/nav";
+import { LIBRARY, LIVE_LIBRARY, isLive } from "@/lib/nav";
 
 const { replace } = vi.hoisted(() => ({ replace: vi.fn() }));
 
@@ -27,8 +27,15 @@ describe("LibraryBrowser", () => {
   });
 
   it("never lists a page whose route ships in a later phase", () => {
+    // Derived from the data itself, not a named route: whichever entries
+    // carry `pending: true` in library.json today must never render.
+    const pendingEntries = LIBRARY.filter((entry) => !isLive(entry));
+    expect(pendingEntries.length).toBeGreaterThan(0);
+
     render(<LibraryBrowser />);
-    expect(screen.queryByRole("link", { name: /Flashcards and quizzes/ })).toBeNull();
+    for (const entry of pendingEntries) {
+      expect(screen.queryByRole("link", { name: entry.label })).toBeNull();
+    }
   });
 
   it("narrows the grid when a group chip is pressed, and mirrors it to the URL", async () => {
@@ -73,6 +80,40 @@ describe("LibraryBrowser", () => {
 
     expect(screen.queryAllByRole("link")).toHaveLength(0);
     expect(screen.getByText(/no pages match/i)).toBeInTheDocument();
+  });
+
+  it("debounces the URL sync while typing, instead of one replace per keystroke", () => {
+    // userEvent's own internals lean on real timers, so this drives the
+    // input with fireEvent (synchronous, no timer dependency) and advances
+    // vitest's fake clock by hand. try/finally guarantees real timers come
+    // back even if an assertion throws, so a failure here can't hang every
+    // test that runs after it.
+    vi.useFakeTimers();
+    try {
+      render(<LibraryBrowser />);
+      replace.mockClear();
+      const input = screen.getByRole("searchbox", { name: /search the library/i });
+
+      for (const value of ["j", "ja", "jap", "japan", "japanese"]) {
+        fireEvent.change(input, { target: { value } });
+      }
+      expect(replace).not.toHaveBeenCalled();
+
+      vi.advanceTimersByTime(300);
+
+      expect(replace).toHaveBeenCalledTimes(1);
+      expect(replace).toHaveBeenCalledWith("/library?q=japanese", { scroll: false });
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
+  it("gives the Clear filters link a 44px minimum touch target", async () => {
+    const user = userEvent.setup();
+    render(<LibraryBrowser />);
+    await user.click(screen.getByRole("button", { name: "The path" }));
+
+    expect(screen.getByRole("button", { name: "Clear filters" })).toHaveClass("min-h-11");
   });
 
   it("gives every filter chip a 44px minimum touch target", () => {

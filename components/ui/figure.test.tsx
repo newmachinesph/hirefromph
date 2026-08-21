@@ -47,19 +47,19 @@ describe("Figure", () => {
     expect(
       screen.getByAltText("A woman reviews a spreadsheet at a home desk"),
     ).toBeInTheDocument();
-    expect(screen.getByText(/Illustrative image/)).toBeInTheDocument();
+    expect(screen.getByText(/AI-generated image/)).toBeInTheDocument();
   });
 
   it("keeps the author's caption alongside the illustrative note", () => {
     render(<Figure id="home-hero" caption="A corner desk in Cebu" />);
-    const caption = screen.getByText(/Illustrative image/);
+    const caption = screen.getByText(/AI-generated image/);
     expect(caption).toHaveTextContent("A corner desk in Cebu");
   });
 
   it("does not add the illustrative note to a non-generated image", () => {
     render(<Figure id="journey-map" />);
     expect(screen.getByText("The path, end to end")).toBeInTheDocument();
-    expect(screen.queryByText(/Illustrative image/)).toBeNull();
+    expect(screen.queryByText(/AI-generated image/)).toBeNull();
   });
 
   it("renders a visible labelled placeholder for an unknown id, never a crash", () => {

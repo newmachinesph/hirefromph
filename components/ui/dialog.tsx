@@ -145,7 +145,9 @@ export function Dialog({
         tabIndex={-1}
         className={cn(
           "relative z-10 w-full overflow-hidden border border-line bg-paper shadow-[var(--shadow-md)]",
-          placement === "right" ? "h-full max-w-xs rounded-none" : cn("rounded-lg", SIZES[size]),
+          placement === "right"
+            ? "flex h-full max-h-dvh max-w-xs flex-col rounded-none"
+            : cn("rounded-lg", SIZES[size]),
           className,
         )}
       >
@@ -175,7 +177,14 @@ export function Dialog({
           )}
         </div>
 
-        <div className={cn(flush ? "" : "px-6 py-5")}>{children}</div>
+        <div
+          className={cn(
+            flush ? "" : "px-6 py-5",
+            placement === "right" && "min-h-0 flex-1 overflow-y-auto",
+          )}
+        >
+          {children}
+        </div>
       </div>
     </div>,
     document.body,

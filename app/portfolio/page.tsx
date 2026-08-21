@@ -1,209 +1,185 @@
 import type { Metadata } from "next";
-import { ArrowUpRight, Sparkles, Target } from "lucide-react";
 import tracks from "@/data/tracks.json";
 import portfolio from "@/data/portfolio.json";
-import { Reveal } from "@/components/reveal";
-import { Icon } from "@/components/icon";
-import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { FreshnessNote } from "@/components/freshness-note";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+} from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
+
+const HREF = "/portfolio";
 
 export const metadata: Metadata = pageMeta({
-  path: "/portfolio",
+  path: HREF,
   title: "Portfolio Ladder",
   description: portfolio.intro,
 });
 
-const accentSoft: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep border-signal/20",
-  verified: "bg-verified-tint text-verified border-verified/20",
-  caution: "bg-caution-tint text-caution-text border-caution/25",
-  info: "bg-info-tint text-info border-info/20",
-};
-// Literal classes so Tailwind's JIT can see them — a `hover:${var}` concat is
-// invisible to the scanner and the class never gets generated.
-const accentHover: Record<string, string> = {
-  signal: "hover:text-signal",
-  verified: "hover:text-verified",
-  caution: "hover:text-caution-text",
-  info: "hover:text-info",
-};
-
-// Tier → pill tone. One rung per column: Start (get in), Level up, Pro (differentiate).
-const tierTone: Record<string, "verified" | "caution" | "signal"> = {
+/** Tier -> badge tone. One rung per column: Start (get in), Level up, Pro (differentiate). */
+const TIER_TONE: Record<string, "verified" | "caution" | "signal"> = {
   Start: "verified",
   "Level up": "caution",
   Pro: "signal",
 };
 
-// Join by id so track name/icon/accent stay single-sourced in tracks.json.
+/** Join by id so track name/icon/accent stay single-sourced in tracks.json. */
 const trackById = Object.fromEntries(tracks.tracks.map((t) => [t.id, t]));
 
 export default function PortfolioPage() {
   return (
     <>
-      {/* ---------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker={portfolio.kicker}
         title={portfolio.headline}
         lead={portfolio.intro}
       >
-        <Reveal i={3}>
-          <div className="mt-8 max-w-2xl rounded-2xl border border-line-strong bg-ink px-6 py-5 text-paper-2">
-            <p className="font-display text-lg leading-snug text-balance">
-              {portfolio.creed}
-            </p>
-          </div>
-        </Reveal>
-        <Reveal i={4}>
-          <div className="mt-6">
-            <FreshnessNote date={portfolio.lastVerified} />
-          </div>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {portfolio.creed}
+        </Callout>
+        <FreshnessNote date={portfolio.lastVerified} />
+        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/portfolio" /></Section> */}
       </PageHero>
 
       {/* -------------------------------------------------------- HOW IT WORKS */}
-      <section className="container-x pb-16 lg:pb-24">
-        <Reveal>
-          <SectionHeading
-            kicker="Three rungs, same craft"
-            title="How the ladder works"
-            lead={portfolio.tiersNote}
-          />
-        </Reveal>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {portfolio.howItWorks.map((step, idx) => (
-            <Reveal key={step.tier} i={idx}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <Pill tone={tierTone[step.tier] ?? "neutral"}>{step.tier}</Pill>
-                <p className="mt-4 text-sm leading-relaxed text-ink-soft">
-                  {step.meaning}
-                </p>
-              </div>
-            </Reveal>
+      <Section>
+        <SectionHeading
+          kicker="Three rungs, same craft"
+          title="How the ladder works"
+          lead={portfolio.tiersNote}
+        />
+        <CardGrid cols={3} className="mt-10">
+          {portfolio.howItWorks.map((step) => (
+            <Card key={step.tier}>
+              <Badge tone={TIER_TONE[step.tier] ?? "neutral"}>{step.tier}</Badge>
+              <Text size="small" className="mt-4 flex-1">
+                {step.meaning}
+              </Text>
+            </Card>
           ))}
-        </div>
-      </section>
+        </CardGrid>
+      </Section>
 
       {/* ------------------------------------------------------- TRACK LADDERS */}
-      <section className="container-x pb-20 lg:pb-28">
-        <Reveal>
-          <SectionHeading
-            kicker="Pick your lane, climb the rungs"
-            title="The tool ladder for every niche"
-            lead="Each niche has its own climb, from the free tool you start on today to the paid one that sets your rate apart. Every rung leaves you a portfolio piece."
-          />
-        </Reveal>
+      <Section band="tint">
+        <SectionHeading
+          kicker="Pick your lane, climb the rungs"
+          title="The tool ladder for every niche"
+          lead="Each niche has its own climb, from the free tool you start on today to the paid one that sets your rate apart. Every rung leaves you a portfolio piece."
+        />
 
         <div className="mt-12 flex flex-col gap-16">
           {portfolio.tracks.map((entry) => {
             const meta = trackById[entry.id];
             if (!meta) return null;
-            const a = meta.accent;
+            const a = accent(meta.accent);
             return (
-              <Reveal key={entry.id}>
-                <div>
-                  {/* Track header */}
-                  <div className="flex items-center gap-4">
-                    <span
-                      className={`grid h-12 w-12 shrink-0 place-items-center rounded-2xl border ${accentSoft[a]}`}
-                    >
-                      <Icon name={meta.icon} size={22} />
-                    </span>
-                    <div>
-                      <h3 className="font-display text-2xl leading-tight">
-                        {meta.name}
-                      </h3>
-                      <p className="text-sm text-ink-soft">{meta.tagline}</p>
-                    </div>
-                  </div>
-
-                  {/* Three tiers */}
-                  <div className="mt-6 grid gap-4 lg:grid-cols-3">
-                    {entry.ladder.map((rung) => (
-                      <div
-                        key={rung.tier}
-                        className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6"
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <Pill tone={tierTone[rung.tier] ?? "neutral"}>
-                            {rung.tier}
-                          </Pill>
-                        </div>
-                        <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-                          {rung.goal}
-                        </p>
-
-                        <ul className="mt-5 flex flex-1 flex-col gap-3 border-t border-line pt-4">
-                          {rung.tools.map((tool) => (
-                            <li key={tool.name}>
-                              <div className="flex items-center justify-between gap-2">
-                                <a
-                                  href={tool.url}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className={`group inline-flex items-center gap-1 text-sm font-semibold text-ink transition-colors ${accentHover[a]}`}
-                                >
-                                  {tool.name}
-                                  <ArrowUpRight
-                                    size={13}
-                                    className="text-ink-faint transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                                  />
-                                </a>
-                                <span className="shrink-0 rounded-full bg-paper-3 px-2 py-0.5 text-[10px] font-medium text-ink-faint">
-                                  {tool.free}
-                                </span>
-                              </div>
-                              <p className="mt-0.5 text-xs leading-relaxed text-ink-faint">
-                                {tool.what}
-                              </p>
-                            </li>
-                          ))}
-                        </ul>
-
-                        <div
-                          className={`mt-5 flex items-start gap-2 rounded-xl border p-3 ${accentSoft[a]}`}
-                        >
-                          <Target size={14} className="mt-0.5 shrink-0" />
-                          <p className="text-xs leading-relaxed">
-                            <span className="font-semibold">Portfolio piece: </span>
-                            {rung.piece}
-                          </p>
-                        </div>
-                      </div>
-                    ))}
+              <div key={entry.id}>
+                <div className="flex items-center gap-4">
+                  <span
+                    className={cn(
+                      "grid h-12 w-12 shrink-0 place-items-center rounded-md border",
+                      a.soft,
+                    )}
+                  >
+                    <Icon name={meta.icon} size={22} />
+                  </span>
+                  <div>
+                    <Heading level={3} size="h4">
+                      {meta.name}
+                    </Heading>
+                    <Text size="small">{meta.tagline}</Text>
                   </div>
                 </div>
-              </Reveal>
+
+                <CardGrid cols={3} className="mt-6">
+                  {entry.ladder.map((rung) => (
+                    <Card key={rung.tier} onBand>
+                      <Badge tone={TIER_TONE[rung.tier] ?? "neutral"}>{rung.tier}</Badge>
+                      <Text size="small" className="mt-3">
+                        {rung.goal}
+                      </Text>
+
+                      <ul className="mt-5 flex flex-1 flex-col gap-3 border-t border-line pt-4">
+                        {rung.tools.map((tool) => (
+                          <li key={tool.name}>
+                            <div className="flex items-center justify-between gap-2">
+                              <a
+                                href={tool.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={cn(
+                                  "inline-flex items-center gap-1 text-small font-semibold text-ink transition-colors duration-150 ease-out",
+                                  "hover:text-primary",
+                                )}
+                              >
+                                {tool.name}
+                                <Icon name="arrow-up-right" size={13} className="text-ink-faint" />
+                              </a>
+                              <Badge>{tool.free}</Badge>
+                            </div>
+                            <Text size="caption" tone="faint" className="mt-0.5">
+                              {tool.what}
+                            </Text>
+                          </li>
+                        ))}
+                      </ul>
+
+                      <div className={cn("mt-5 flex items-start gap-2 rounded-sm border p-3", a.soft)}>
+                        <Icon name="target" size={14} className="mt-0.5 shrink-0" />
+                        <Text size="caption" tone="inherit" as="span">
+                          <span className="font-semibold">Portfolio piece: </span>
+                          {rung.piece}
+                        </Text>
+                      </div>
+                    </Card>
+                  ))}
+                </CardGrid>
+              </div>
             );
           })}
         </div>
-      </section>
+      </Section>
 
-      {/* ---------------------------------------------------------- CLOSE */}
-      <section className="container-x pb-24">
-        <Reveal>
-          <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="signal">
-              <Sparkles size={13} /> Proof, not promises
-            </Pill>
-            <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-              A tool is only proof once you&rsquo;ve built something with it.
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-soft">
-              The ladder tells you what to learn next. The micro-tasks turn each
-              rung into a real deliverable you can show. Pick a lane, then go
-              build the first piece.
-            </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <ButtonLink href="/tasks">Build a portfolio piece</ButtonLink>
-              <ButtonLink href="/niches" variant="outline">
-                Pick your niche
-              </ButtonLink>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+      {/* --------------------------------------------------------------- CLOSE */}
+      <Section>
+        <SectionHeading
+          align="center"
+          kicker="Proof, not promises"
+          title="A tool is only proof once you've built something with it."
+          lead="The ladder tells you what to learn next. The micro-tasks turn each rung into a real deliverable you can show. Pick a lane, then go build the first piece."
+          size="display"
+        />
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <Button href="/tasks">Build a portfolio piece</Button>
+          <Button href="/niches" variant="outline">
+            Pick your niche
+          </Button>
+        </div>
+      </Section>
+
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/portfolio" /> */}
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }

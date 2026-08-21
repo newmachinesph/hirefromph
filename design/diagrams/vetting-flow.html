@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vetting an opportunity, gate by gate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --paper: #FFFFFF;
+      --band: #F7F6FF;
+      --ink: #0E1230;
+      --ink-soft: #4A4F66;
+      --ink-faint: #6B7087;
+      --line: #E4E4EA;
+      --line-strong: #CFCFD8;
+      --primary: #4B4EF6;
+      --primary-tint: #EEEDFF;
+      --info: #026AA2;
+      --font-display: 'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif;
+      --font-text: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    }
+    body {
+      font-family: var(--font-text);
+      background: var(--paper);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+    .frame { max-width: 720px; width: 100%; }
+    .eyebrow {
+      font-family: var(--font-text);
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    svg { width: 100%; min-width: 560px; display: block; }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <p class="eyebrow">Flowchart · Hire From PH</p>
+    <h1>Vetting an opportunity, gate by gate</h1>
+
+    <svg viewBox="0 0 640 616" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="vetting-flow-title vetting-flow-desc">
+      <title id="vetting-flow-title">Vetting an opportunity, gate by gate</title>
+      <desc id="vetting-flow-desc">A top-down flowchart. An opportunity enters at the top and passes five decision gates in order: does it ask for an upfront fee, does it promise guaranteed income, is it vague about the day-to-day work, does it pressure you to decide now, and does it have no verifiable company footprint. A yes at any gate exits right to a single stop. Only an opportunity that answers no to all five reaches the bottom, where the next step is to research it and then apply.</desc>
+
+      <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+      <!-- Arrows first, so the nodes cap them. -->
+      <defs>
+        <marker id="vf-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#CFCFD8"/>
+        </marker>
+        <marker id="vf-arrow-accent" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L8,4 L0,8 Z" fill="#4B4EF6"/>
+        </marker>
+      </defs>
+
+      <g stroke="#CFCFD8" stroke-width="1" fill="none" marker-end="url(#vf-arrow)">
+        <path d="M220,56 L220,84"/>
+        <path d="M220,148 L220,172"/>
+        <path d="M220,236 L220,260"/>
+        <path d="M220,324 L220,348"/>
+        <path d="M220,412 L220,436"/>
+        <path d="M220,500 L220,528"/>
+      </g>
+
+      <!-- The "yes" rail: five horizontals feeding one vertical into the stop. -->
+      <g stroke="#4B4EF6" stroke-width="1" fill="none">
+        <path d="M328,116 L468,116"/>
+        <path d="M328,204 L468,204"/>
+        <path d="M328,292 L468,292"/>
+        <path d="M328,380 L468,380"/>
+        <path d="M328,468 L468,468"/>
+        <path d="M468,116 L468,524" marker-end="url(#vf-arrow-accent)"/>
+      </g>
+
+      <!-- Start -->
+      <rect x="120" y="16" width="200" height="40" rx="20" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+      <text x="220" y="41" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0E1230">An opportunity lands</text>
+
+      <!-- Five gates -->
+      <g fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1">
+        <polygon points="112,116 220,84 328,116 220,148"/>
+        <polygon points="112,204 220,172 328,204 220,236"/>
+        <polygon points="112,292 220,260 328,292 220,324"/>
+        <polygon points="112,380 220,348 328,380 220,412"/>
+        <polygon points="112,468 220,436 328,468 220,500"/>
+      </g>
+      <g text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="11" font-weight="600" fill="#0E1230">
+        <text x="220" y="113">Any upfront fee,</text>
+        <text x="220" y="127">"training", "starter kit"?</text>
+        <text x="220" y="201">Guaranteed income</text>
+        <text x="220" y="215">or guaranteed hiring?</text>
+        <text x="220" y="289">Vague or evasive about</text>
+        <text x="220" y="303">the day-to-day work?</text>
+        <text x="220" y="377">Pressure to decide,</text>
+        <text x="220" y="391">pay, or sign right now?</text>
+        <text x="220" y="465">No verifiable footprint,</text>
+        <text x="220" y="479">no site, no reviews?</text>
+      </g>
+
+      <!-- Branch labels, each on an opaque mask -->
+      <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500">
+        <g fill="#FFFFFF">
+          <rect x="340" y="104" width="26" height="16"/>
+          <rect x="340" y="192" width="26" height="16"/>
+          <rect x="340" y="280" width="26" height="16"/>
+          <rect x="340" y="368" width="26" height="16"/>
+          <rect x="340" y="456" width="26" height="16"/>
+          <rect x="228" y="60" width="24" height="16"/>
+        </g>
+        <g fill="#4B4EF6">
+          <text x="344" y="116">yes</text>
+          <text x="344" y="204">yes</text>
+          <text x="344" y="292">yes</text>
+          <text x="344" y="380">yes</text>
+          <text x="344" y="468">yes</text>
+        </g>
+        <text x="232" y="72" fill="#6B7087">no</text>
+      </g>
+
+      <!-- Stop, the one focal element -->
+      <rect x="396" y="524" width="144" height="56" rx="8" fill="#EEEDFF" stroke="#4B4EF6" stroke-width="1.2"/>
+      <text x="468" y="548" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="700" fill="#0E1230">Stop. Walk away.</text>
+      <text x="468" y="564" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#4A4F66">No rate is worth it.</text>
+
+      <!-- End -->
+      <rect x="104" y="528" width="232" height="48" rx="20" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+      <text x="220" y="548" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" fill="#0E1230">Research it, then apply</text>
+      <text x="220" y="564" text-anchor="middle" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" fill="#4A4F66">A clean checklist is not proof.</text>
+
+      <text x="16" y="606" fill="#6B7087" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" font-style="italic">Every downward arrow is a no. Gate order follows the weights in data/findwork.json.</text>
+    </svg>
+  </div>
+</body>
+</html>

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { CardGrid } from "@/components/layout";
 import { Badge, Card, CardBody, EmptyState, Heading, Text } from "@/components/ui";
 import {
@@ -39,6 +39,10 @@ const CHIP =
 const CHIP_ON = "border-primary bg-tint text-primary-deep";
 const CHIP_OFF = "border-line text-ink-soft hover:border-ink hover:text-ink";
 
+/** Typing shouldn't fire one RSC navigation per keystroke; chips still sync
+ *  immediately since a click is already a deliberate, discrete action. */
+const SEARCH_DEBOUNCE_MS = 300;
+
 export function LibraryBrowser() {
   const params = useSearchParams();
   const pathname = usePathname();
@@ -50,6 +54,23 @@ export function LibraryBrowser() {
   const [type, setType] = useState<TypeFilter>(() => asType(params.get("type")));
   const [query, setQuery] = useState(() => params.get("q") ?? "");
 
+  // Debounces only the query path's URL sync; group/type chips still sync on
+  // the same tick since a click is already a deliberate, discrete action.
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    return () => {
+      if (debounceRef.current) clearTimeout(debounceRef.current);
+    };
+  }, []);
+
+  function cancelPendingSync() {
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current);
+      debounceRef.current = null;
+    }
+  }
+
   function syncUrl(next: { group: GroupFilter; type: TypeFilter; query: string }) {
     const search = new URLSearchParams();
     if (next.group !== "all") search.set("group", next.group);
@@ -60,21 +81,27 @@ export function LibraryBrowser() {
   }
 
   function pickGroup(next: GroupFilter) {
+    cancelPendingSync();
     setGroup(next);
     syncUrl({ group: next, type, query });
   }
 
   function pickType(next: TypeFilter) {
+    cancelPendingSync();
     setType(next);
     syncUrl({ group, type: next, query });
   }
 
   function setSearch(next: string) {
     setQuery(next);
-    syncUrl({ group, type, query: next });
+    cancelPendingSync();
+    debounceRef.current = setTimeout(() => {
+      syncUrl({ group, type, query: next });
+    }, SEARCH_DEBOUNCE_MS);
   }
 
   function clear() {
+    cancelPendingSync();
     setGroup("all");
     setType("all");
     setQuery("");
@@ -162,7 +189,7 @@ export function LibraryBrowser() {
           <button
             type="button"
             onClick={clear}
-            className="rounded-sm text-small font-semibold text-primary transition-colors duration-150 hover:text-primary-deep"
+            className="inline-flex min-h-11 -mx-2 items-center rounded-sm px-2 text-small font-semibold text-primary transition-colors duration-150 hover:text-primary-deep"
           >
             Clear filters
           </button>

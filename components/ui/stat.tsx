@@ -20,10 +20,15 @@ export function Stat({ value, label, sub, source, className }: StatProps) {
   const inStrip = useContext(StatStripContext);
   const body = (
     <div className={cn("flex flex-col gap-1", className)}>
-      <dd className="font-display text-h3 tabular-nums text-ink">{value}</dd>
-      <dt className="text-small font-medium text-ink-soft">{label}</dt>
-      {sub && <p className="text-caption text-ink-faint">{sub}</p>}
-      {source && <Source {...source} />}
+      {/* dt precedes dd in the DOM (valid dl); flex order keeps the value on top. */}
+      <dt className="order-2 text-small font-medium text-ink-soft">{label}</dt>
+      <dd className="order-1 font-display text-h3 tabular-nums text-ink">{value}</dd>
+      {sub && <dd className="order-3 text-caption text-ink-faint">{sub}</dd>}
+      {source && (
+        <dd className="order-4">
+          <Source {...source} />
+        </dd>
+      )}
     </div>
   );
   // Outside a StatStrip, dt/dd need their own dl ancestor to stay valid HTML.
@@ -39,7 +44,7 @@ export function StatStrip({
   className?: string;
 }) {
   return (
-    <dl className={cn("flex flex-wrap gap-x-10 gap-y-6", className)}>
+    <dl className={cn("grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-flow-col lg:auto-cols-fr", className)}>
       <StatStripContext.Provider value={true}>{children}</StatStripContext.Provider>
     </dl>
   );

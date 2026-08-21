@@ -75,7 +75,7 @@
   --dur: 150ms;
 
   /* Layout */
-  --maxw: 1280px;
+  --maxw: 1536px; /* Tailwind screen-2xl */
   --maxw-wide: 1440px;
   --maxw-narrow: 720px;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
@@ -296,4 +296,386 @@ body {
   .marquee-track {
     animation: none;
   }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Educator kit — print sheets (spec §7.5)                            */
+/*                                                                     */
+/*  Every kit route paints one .kit-page element per printed sheet at   */
+/*  exact paper dimensions, and `@page` carries margin 0 so the sheet   */
+/*  itself owns the 14mm margin. Page breaks are authored, not          */
+/*  discovered. There is no `@page` rule in this file on purpose: the   */
+/*  at-rule is document-scoped, so each kit route declares its own      */
+/*  paper size once (components/kit/kit-page.tsx).                     */
+/*                                                                     */
+/*  The site type scale is fluid (clamp + vw) and a paper box has no    */
+/*  viewport to be fluid against, so the kit declares fixed point       */
+/*  sizes. This is the one place in the codebase allowed to do that.    */
+/* ------------------------------------------------------------------ */
+
+.kit {
+  --kit-pad: 14mm;
+  --kit-rule: #d8d8e0;
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 10.5pt;
+  line-height: 1.45;
+  print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+}
+
+/* One printed sheet. Heights sit a hair under the paper so Chromium's
+   sub-pixel rounding never spills a blank page after every sheet.
+   overflow:hidden makes a spill measurable (scrollHeight > clientHeight),
+   which is what scripts/build-kit-pdf.mjs fails the build on. */
+.kit-page {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 210mm;
+  height: 296.5mm;
+  padding: var(--kit-pad);
+  margin: 0 auto;
+  overflow: hidden;
+  background: #ffffff;
+}
+.kit-page--landscape {
+  width: 297mm;
+  height: 209.5mm;
+}
+.kit-page--slide {
+  width: 338.6mm;
+  height: 190mm;
+  padding: 18mm;
+}
+.kit-page--navy {
+  background: var(--ink);
+  color: var(--on-navy);
+}
+
+.kit-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+/* Children keep their natural height so an overflow is a real overflow
+   rather than a silent flex squeeze. */
+.kit-body > * {
+  flex: 0 0 auto;
+}
+.kit-stack > * + * {
+  margin-top: 5mm;
+}
+
+.kit-foot {
+  margin-top: auto;
+  padding-top: 4mm;
+  border-top: 1px solid var(--kit-rule);
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8mm;
+  font-size: 7.5pt;
+  color: var(--ink-faint);
+}
+.kit-page--navy .kit-foot {
+  border-top-color: color-mix(in srgb, var(--on-navy) 25%, transparent);
+  color: color-mix(in srgb, var(--on-navy) 75%, transparent);
+}
+
+/* Type ramp */
+.kit-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 26pt;
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+}
+.kit-h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15pt;
+  line-height: 1.15;
+}
+.kit-h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11pt;
+  line-height: 1.25;
+}
+.kit-kicker {
+  font-size: 7.5pt;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.kit-page--navy .kit-kicker {
+  color: var(--primary-soft);
+}
+.kit-lead {
+  font-size: 11pt;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.kit-small {
+  font-size: 9pt;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.kit-note {
+  font-size: 8pt;
+  line-height: 1.35;
+  color: var(--ink-faint);
+}
+.kit-page--navy .kit-lead,
+.kit-page--navy .kit-small,
+.kit-page--navy .kit-note {
+  color: color-mix(in srgb, var(--on-navy) 78%, transparent);
+}
+.kit-num {
+  font-variant-numeric: tabular-nums;
+}
+/* A printed link is only as good as the URL beside it. */
+.kit-url {
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+  color: var(--primary);
+}
+
+/* Header block */
+.kit-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 5mm;
+  padding-bottom: 4mm;
+  border-bottom: 1px solid var(--kit-rule);
+}
+.kit-head__mark {
+  flex: 0 0 auto;
+  color: var(--ink);
+}
+.kit-page--navy .kit-head__mark {
+  color: var(--on-navy);
+}
+
+/* Boxes and grids */
+.kit-card {
+  border: 1px solid var(--kit-rule);
+  border-radius: 6px;
+  padding: 4mm;
+  background: #ffffff;
+}
+.kit-card--tint {
+  background: var(--tint);
+  border-color: color-mix(in srgb, var(--primary) 25%, #ffffff);
+}
+.kit-grid {
+  display: grid;
+  gap: 4mm;
+}
+.kit-grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.kit-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.kit-grid--5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.kit-list {
+  margin: 0;
+  padding-left: 5mm;
+  font-size: 9pt;
+  line-height: 1.4;
+  color: var(--ink-soft);
+}
+.kit-list > li + li {
+  margin-top: 2mm;
+}
+
+/* Tables */
+.kit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+}
+.kit-table th {
+  text-align: left;
+  padding: 0 3mm 2mm 0;
+  border-bottom: 1px solid var(--kit-rule);
+  font-size: 7.5pt;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.kit-table td {
+  vertical-align: top;
+  padding: 3mm 3mm 3mm 0;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.4;
+}
+.kit-table th:last-child,
+.kit-table td:last-child {
+  padding-right: 0;
+}
+
+/* Diagram box on the path map: 190mm keeps the journey map above its own
+   560px minimum width while leaving room for the sheet below it. */
+.kit-map {
+  width: 190mm;
+  margin: 0 auto;
+}
+
+/* Methods cheat-sheet */
+.kit-method {
+  display: grid;
+  grid-template-columns: 56mm minmax(0, 1fr);
+  gap: 6mm;
+  padding-bottom: 4mm;
+  border-bottom: 1px solid var(--line);
+}
+.kit-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 8.5pt;
+  line-height: 1.35;
+  color: var(--ink-soft);
+}
+.kit-steps > li + li {
+  margin-top: 1.5mm;
+}
+.kit-drill {
+  margin-top: 2.5mm;
+  padding-left: 3mm;
+  border-left: 2px solid var(--primary);
+  font-size: 8.5pt;
+  line-height: 1.35;
+}
+
+/* Slides */
+.kit-slide {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6mm;
+}
+.kit-slide--split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+}
+.kit-slide__media {
+  border: 1px solid var(--kit-rule);
+  border-radius: 6px;
+  padding: 6mm;
+  background: #ffffff;
+}
+.kit-slide-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 30pt;
+  line-height: 1.06;
+  letter-spacing: -0.015em;
+}
+.kit-slide-body {
+  font-size: 14pt;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.kit-page--navy .kit-slide-body {
+  color: color-mix(in srgb, var(--on-navy) 82%, transparent);
+}
+
+/* Screen: show the sheets on a soft desk so authoring matches the PDF. */
+@media screen {
+  .kit {
+    padding: 24px 0;
+    background: var(--band);
+    overflow-x: auto;
+  }
+  .kit-page {
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-sm);
+  }
+  .kit-page + .kit-page {
+    margin-top: 8mm;
+  }
+}
+
+@media print {
+  .kit {
+    padding: 0;
+    background: #ffffff;
+  }
+  .kit-page {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    break-after: page;
+  }
+  .kit-page:last-child {
+    break-after: auto;
+  }
+  .kit-avoid,
+  .kit-card,
+  .kit-method,
+  .kit-table tr {
+    break-inside: avoid;
+  }
+}
+
+/* ------------------------------------------------------------------ */
+/*  Reader modes (spec §7.4.7)                                         */
+/*  Driven by ReaderControls and by the pre-paint script in            */
+/*  app/layout.tsx. These rules sit outside @layer on purpose: an      */
+/*  unlayered rule beats a layered utility, so `reading-comfort` can   */
+/*  override `text-center` and `text-balance` without !important.      */
+/* ------------------------------------------------------------------ */
+
+/* Text size. Everything on the type scale is in rem, so moving the root
+   size moves body copy, controls and spacing together. Headline sizes use
+   clamp() with a vw term, so they scale less — which is what you want. */
+html.text-size-sm { font-size: 15px; }
+html.text-size-md { font-size: 16px; }
+html.text-size-lg { font-size: 18px; }
+
+/* Comfortable reading: wider tracking, 1.8 leading, ragged-right, and a
+   measure that stays inside 68 characters. */
+html.reading-comfort body {
+  letter-spacing: 0.012em;
+  word-spacing: 0.06em;
+  line-height: 1.8;
+}
+html.reading-comfort :where(p, li, blockquote, figcaption) {
+  line-height: 1.8;
+  max-width: 68ch;
+}
+html.reading-comfort :where(p, li, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+  text-align: left;
+  text-wrap: wrap;
+}
+
+/* Low-data mode: photographs are replaced by a labelled placeholder.
+   Diagrams (DiagramFrame renders a <figure> with no <img>) are untouched.
+   Lazy images inside a display:none subtree are never fetched, which covers
+   every Figure except the one `priority` hero per page. */
+html.low-data figure:has(img) > div:has(img) {
+  display: none;
+}
+html.low-data figure:has(img)::before {
+  content: "Image hidden. Low-data mode is on.";
+  display: block;
+  padding: 1.25rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-lg);
+  background: var(--band);
+  color: var(--ink-faint);
+  font-size: var(--text-caption);
+  text-align: center;
 }

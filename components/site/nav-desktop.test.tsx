@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { NavDesktop, splitColumns } from "@/components/site/nav-desktop";
+import { NAV, isLive, isMenu } from "@/lib/nav";
 
 vi.mock("next/navigation", () => ({ usePathname: () => "/" }));
 vi.mock("next/link", () => ({
@@ -39,11 +40,29 @@ describe("NavDesktop", () => {
     ).toHaveAttribute("href", "/library");
   });
 
-  it("hides links whose route ships in a later phase", async () => {
+  it("renders a menu link only when its route is live, for every dropdown", async () => {
+    // Derived from the data itself: whatever a menu's groups/footerLinks say
+    // is pending must stay hidden, and whatever is live must render — no
+    // route named here, so this keeps working as pending flags flip.
     const user = userEvent.setup();
     render(<NavDesktop />);
-    await user.click(screen.getByRole("button", { name: "Learn" }));
-    expect(screen.queryByRole("link", { name: /Glossary/ })).toBeNull();
+
+    for (const item of NAV) {
+      if (!isMenu(item)) continue;
+      await user.click(screen.getByRole("button", { name: item.label }));
+
+      const allLinks = [...item.groups.flatMap((group) => group.links), ...(item.footerLinks ?? [])];
+      for (const link of allLinks) {
+        // Group links carry a trailing desc in their accessible name, so
+        // match the label as a substring rather than exactly.
+        const found = screen.queryByRole("link", {
+          name: (accessibleName) => accessibleName.includes(link.label),
+        });
+        expect(found !== null).toBe(isLive(link));
+      }
+
+      await user.click(screen.getByRole("button", { name: item.label }));
+    }
   });
 
   it("opens on ArrowDown from the trigger", async () => {

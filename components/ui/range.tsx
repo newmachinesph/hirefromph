@@ -21,7 +21,7 @@ export function Range({
         type="range"
         id={id ?? field.id}
         aria-describedby={describedBy ?? field.describedBy}
-        className="h-6 w-full accent-primary disabled:cursor-not-allowed"
+        className="h-11 w-full accent-primary disabled:cursor-not-allowed"
       />
       {valueLabel !== undefined && (
         <span className="text-caption tabular-nums text-ink-faint">{valueLabel}</span>

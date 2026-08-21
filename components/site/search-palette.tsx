@@ -53,6 +53,16 @@ export function SearchPalette() {
   const optionId = (index: number) => `${listboxId}-option-${index}`;
   const activeOptionId = results[active] ? optionId(active) : undefined;
 
+  // Keeps the highlighted row on screen: the listbox scrolls its own 50vh
+  // box, so ArrowDown past the fold must drag the active option back into
+  // view (APG combobox pattern — aria-activedescendant already carries the
+  // selection, this just keeps it visible).
+  useEffect(() => {
+    if (!open) return;
+    document.getElementById(optionId(active))?.scrollIntoView({ block: "nearest" });
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- optionId only closes over the stable listboxId
+  }, [active, open]);
+
   function go(index: number) {
     const item = results[index];
     if (!item) return;
@@ -138,6 +148,7 @@ export function SearchPalette() {
                   id={optionId(index)}
                   type="button"
                   role="option"
+                  tabIndex={-1}
                   aria-selected={index === active}
                   onMouseEnter={() => setActive(index)}
                   onFocus={() => setActive(index)}

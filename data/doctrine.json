@@ -66,7 +66,7 @@
       "accent": "info",
       "summary": "You never need a template. You need five examples and the ability to see the pattern.",
       "steps": [
-        { "title": "Collect five real examples", "desc": "Real ones, made by professionals, for the real situation. Not five templates, five artifacts that actually worked." },
+        { "title": "Collect five real examples", "desc": "Real ones, made by professionals, for the real situation. Not five templates, five artifacts that worked." },
         { "title": "Extract the skeleton", "desc": "List what every single example contains. That common structure is not a style choice, it's the function. That's your skeleton." },
         { "title": "Name the variables", "desc": "Note what changes between examples. Those differences are the judgment calls you'll have to make. Understand why each one was made." },
         { "title": "Write the rules", "desc": "Turn what you saw into explicit rules: 'every bullet contains a measurable result', 'the summary names the target role'. Now you have a method, not a copy." },
@@ -108,7 +108,7 @@
     {
       "id": "ask",
       "name": "ASK",
-      "tagline": "How to ask a question that actually gets answered",
+      "tagline": "How to ask a question that gets answered",
       "icon": "message-square-quote",
       "accent": "info",
       "summary": "A well-formed question gets a professional's help. A vague one gets ignored, everywhere.",
@@ -128,7 +128,7 @@
       "accent": "signal",
       "summary": "Every professional is stuck most of the day. They just have a procedure.",
       "steps": [
-        { "title": "Re-read the actual requirement", "desc": "A surprising share of 'stuck' is solving the wrong problem. Read what was actually asked, word for word." },
+        { "title": "Re-read the actual requirement", "desc": "A surprising share of 'stuck' is solving the wrong problem. Read what was asked, word for word." },
         { "title": "Shrink it to the smallest failing piece", "desc": "Cut the problem in half until you find the exact point where it breaks. Vague problems are unsolvable; small ones are trivial." },
         { "title": "Change one thing at a time", "desc": "Change two and you learn nothing from the result. Slow is fast." },
         { "title": "Explain it out loud", "desc": "Say the problem aloud to a wall, a friend, or an AI. The act of forming the sentence solves it more often than you'd believe." },

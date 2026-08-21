@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 export type FigureRatio = "4/5" | "3/2" | "16/9" | "1/1" | "21/9" | "3/1" | "hero";
 
 /** Honesty doctrine (spec §7.1): every generated asset says so, visibly. */
-export const ILLUSTRATIVE_CAPTION = "Illustrative image";
+export const ILLUSTRATIVE_CAPTION = "AI-generated image";
 
 export type FigureProps = {
   /** Manifest id. Takes precedence over src/alt/width/height. */

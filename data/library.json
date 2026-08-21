@@ -2,7 +2,7 @@
   "lastVerified": "2026-08",
   "entries": [
     {
-      "label": "Start here",
+      "label": "Start Right",
       "href": "/start",
       "group": "path",
       "type": "guide",
@@ -231,7 +231,6 @@
       "href": "/practice",
       "group": "tools",
       "type": "tool",
-      "pending": true,
       "desc": "Flashcards and quizzes on a spacing schedule, so what you read stays."
     },
     {
@@ -239,7 +238,6 @@
       "href": "/glossary",
       "group": "tools",
       "type": "tool",
-      "pending": true,
       "desc": "Plain definitions for every term this site uses, with Tagalog glosses."
     },
     {

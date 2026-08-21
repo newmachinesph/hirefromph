@@ -1,747 +1,528 @@
-import { ExternalLink } from "lucide-react";
+import type { Metadata } from "next";
 import reality from "@/data/reality.json";
-import { Icon } from "@/components/icon";
-import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
+import { Bars } from "@/components/diagrams/charts";
 import { FreshnessNote } from "@/components/freshness-note";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+  Toc,
+} from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  DiagramFrame,
+  Heading,
+  Icon,
+  Kicker,
+  Source,
+  Stat,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
 
-export const metadata = pageMeta({
-  path: "/reality",
+const HREF = "/reality";
+
+export const metadata: Metadata = pageMeta({
+  path: HREF,
   title: "Reality Check",
   description:
-    "What the evidence actually says about remote and online work for Filipinos right now. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is genuinely growing, every number with its source, and an honest list of what nobody knows.",
+    "What the evidence says about remote and online work for Filipinos right now. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is growing, every number with its source, and an honest list of what nobody knows.",
 });
 
-const accentText: Record<string, string> = {
-  signal: "text-signal",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-const accentBorder: Record<string, string> = {
-  signal: "border-signal",
-  caution: "border-caution",
-  verified: "border-verified",
-  info: "border-info",
-};
+const TOC = [
+  { id: "read-a-number", label: "Read a number" },
+  { id: "myths", label: "Seven myths" },
+  { id: "ai", label: "What AI cut" },
+  { id: "growth", label: "Where it grows" },
+  { id: "thesis", label: "The thesis" },
+  { id: "pay", label: "Pay" },
+  { id: "unknown", label: "What nobody knows" },
+  { id: "reading", label: "Read it yourself" },
+];
 
-/* ---------------------------------------------------------------- Source */
-
-function Source({ label, url }: { label: string; url: string }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
-    >
-      <span className="text-balance">Source: {label}</span>
-      <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
-    </a>
-  );
-}
-
-/* ------------------------------------------------------------ Bar charts */
-
+/** The chart's number format: signed percent, minus sign not hyphen. */
 function fmt(value: number): string {
   const sign = value > 0 ? "+" : "−";
   return `${sign}${Math.abs(value)}%`;
 }
-
-/** Diverging bar, zero in the middle. Negative left (signal), positive right (verified). */
-function ChangeBar({
-  label,
-  value,
-  max,
-  note,
-}: {
-  label: string;
-  value: number;
-  max: number;
-  note: string;
-}) {
-  const width = (Math.abs(value) / max) * 50;
-  const up = value > 0;
-  return (
-    <li className="grid gap-2 py-1 sm:grid-cols-[minmax(0,15rem)_1fr] sm:items-center sm:gap-6">
-      <div>
-        <p className="text-sm font-medium leading-snug text-ink">{label}</p>
-        {note && <p className="mt-0.5 text-xs leading-snug text-verified">{note}</p>}
-      </div>
-      <div className="flex items-center gap-3">
-        <div className="relative h-7 flex-1 overflow-hidden rounded-lg border border-line bg-paper">
-          <span
-            aria-hidden
-            className="absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-line-strong"
-          />
-          <span
-            aria-hidden
-            className={`absolute inset-y-1 rounded-sm ${up ? "bg-verified" : "bg-signal"}`}
-            style={
-              up
-                ? { left: "50%", width: `${width}%` }
-                : { right: "50%", width: `${width}%` }
-            }
-          />
-        </div>
-        <span
-          className={`w-14 shrink-0 text-right font-mono text-xs font-semibold ${up ? "text-verified" : "text-signal"}`}
-        >
-          {fmt(value)}
-        </span>
-      </div>
-    </li>
-  );
-}
-
-/** Simple left-to-right growth bar. */
-function GrowthBar({
-  label,
-  value,
-  max,
-  accent,
-}: {
-  label: string;
-  value: number;
-  max: number;
-  accent: string;
-}) {
-  const width = Math.max((value / max) * 100, 5);
-  return (
-    <li className="grid gap-1.5 py-1.5 sm:grid-cols-[minmax(0,17rem)_1fr] sm:items-center sm:gap-6">
-      <p className="text-sm font-medium leading-snug text-ink">{label}</p>
-      <div className="flex items-center gap-3">
-        <div className="h-7 flex-1 overflow-hidden rounded-lg border border-line bg-paper">
-          <span
-            aria-hidden
-            className={`block h-full rounded-r-sm ${accentBar[accent]}`}
-            style={{ width: `${width}%` }}
-          />
-        </div>
-        <span className="w-16 shrink-0 text-right font-mono text-xs font-semibold text-ink">
-          +{value}%
-        </span>
-      </div>
-    </li>
-  );
-}
-
-/* ------------------------------------------------------------------ Page */
 
 export default function RealityPage() {
   const { ai, growth, thesis, pay, unknown, reading, closing } = reality;
 
   return (
     <>
-      {/* ------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker="Reality check · every number sourced"
-        titleWidth="max-w-4xl"
-        title={
-          <>
-            {reality.heroTitle.line1}
-            <br />
-            {reality.heroTitle.line2}
-          </>
-        }
+        title={reality.heroTitle.line1}
+        accent={reality.heroTitle.line2}
         lead={reality.intro}
       >
-        <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-            {reality.creed}
-          </blockquote>
-        </Reveal>
-        <Reveal i={4}>
-          <p className="mt-8 max-w-2xl rounded-2xl border border-line bg-paper-2 p-5 text-sm leading-relaxed text-ink-soft">
-            {reality.whyItMatters}
-          </p>
-        </Reveal>
-        <Reveal i={5}>
-          <div className="mt-6">
-            <FreshnessNote date={reality.lastVerified} />
-          </div>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {reality.creed}
+        </Callout>
+        <Text size="small" className="max-w-2xl">
+          {reality.whyItMatters}
+        </Text>
+        <FreshnessNote date={reality.lastVerified} />
+        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/reality" /></Section> */}
       </PageHero>
 
-      {/* ---------------------------------------------------- READ A NUMBER */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker={reality.readANumber.kicker}
-              title={reality.readANumber.title}
-              lead={reality.readANumber.lead}
-            />
-          </Reveal>
+      <Section>
+        <div className="grid gap-12 xl:grid-cols-[200px_minmax(0,1fr)]">
+          <Toc items={TOC} />
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2">
-            {reality.readANumber.tests.map((t, idx) => (
-              <Reveal key={t.id} i={idx % 2}>
-                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2">
-                    <Icon name={t.icon} size={20} />
-                  </span>
-                  <h3 className="mt-5 font-display text-xl leading-snug text-balance">
-                    {t.q}
-                  </h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
-                    {t.why}
-                  </p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+          <div className="flex min-w-0 flex-col gap-20">
+            {/* ----------------------------------------------- READ A NUMBER */}
+            <section id="read-a-number">
+              <SectionHeading
+                kicker={reality.readANumber.kicker}
+                title={reality.readANumber.title}
+                lead={reality.readANumber.lead}
+              />
+              <CardGrid cols={2} className="mt-12">
+                {reality.readANumber.tests.map((t) => (
+                  <Card key={t.id} as="article">
+                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
+                      <Icon name={t.icon} size={20} />
+                    </span>
+                    <Heading level={3} size="h4" className="mt-5" balance>
+                      {t.q}
+                    </Heading>
+                    <Text size="small" className="mt-3 flex-1">
+                      {t.why}
+                    </Text>
+                  </Card>
+                ))}
+              </CardGrid>
+              <Callout tone="signal" className="mt-8 max-w-2xl">
+                {reality.readANumber.note}
+              </Callout>
+            </section>
 
-          <Reveal i={1}>
-            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-signal">
-              {reality.readANumber.note}
-            </p>
-          </Reveal>
-        </div>
-      </section>
+            {/* ------------------------------------------------------- MYTHS */}
+            <section id="myths">
+              <SectionHeading
+                kicker="Expectation vs reality"
+                title="Seven things you were told. Seven things the data says."
+                lead={reality.mythsIntro}
+              />
 
-      {/* ------------------------------------------------------------ MYTHS */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker="Expectation vs reality"
-            title="Seven things you were told. Seven things the data says."
-            lead={reality.mythsIntro}
-          />
-        </Reveal>
+              <div className="mt-12 flex flex-col gap-5">
+                {reality.myths.map((m) => {
+                  const a = accent(m.accent);
+                  return (
+                    <Card key={m.id} as="article" padding="lg">
+                      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+                        <div>
+                          <Badge tone={m.accent as "signal"} variant="outline">
+                            {m.tag}
+                          </Badge>
+                          <Text
+                            size="lead"
+                            tone="faint"
+                            className="mt-4 font-display line-through decoration-coral/50 decoration-2"
+                          >
+                            {m.myth}
+                          </Text>
+                          <Heading level={3} size="h3" className="mt-4" balance>
+                            {m.headline}
+                          </Heading>
+                          <div className="mt-5 flex flex-col gap-2">
+                            <Source label={m.source.label} url={m.source.url} />
+                            {m.source2 && <Source label={m.source2.label} url={m.source2.url} />}
+                            {m.sourceNote && (
+                              <Text size="caption" tone="faint" className="max-w-sm">
+                                {m.sourceNote}
+                              </Text>
+                            )}
+                          </div>
+                        </div>
 
-        <div className="mt-12 flex flex-col gap-5">
-          {reality.myths.map((m, idx) => (
-            <Reveal key={m.id} i={idx % 3}>
-              <article className="grid gap-6 rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:grid-cols-[0.9fr_1.1fr] lg:p-8">
-                <div>
-                  <div className="flex flex-wrap items-center gap-3">
-                    <span
-                      aria-hidden
-                      className={`h-2.5 w-2.5 rounded-full ${accentBar[m.accent]}`}
-                    />
-                    <p className={`kicker ${accentText[m.accent]}`}>{m.tag}</p>
-                  </div>
-                  <p className="mt-4 font-display text-lg leading-snug text-ink-faint line-through decoration-signal/50 decoration-2">
-                    {m.myth}
-                  </p>
-                  <h3 className="mt-4 font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                    {m.headline}
-                  </h3>
-                  <div className="mt-5 flex flex-col gap-2">
-                    <Source label={m.source.label} url={m.source.url} />
-                    {m.source2 && (
-                      <Source label={m.source2.label} url={m.source2.url} />
-                    )}
-                    {m.sourceNote && (
-                      <p className="max-w-sm text-xs leading-relaxed text-ink-faint">
-                        {m.sourceNote}
-                      </p>
-                    )}
-                  </div>
-                </div>
+                        <div className="flex flex-col gap-4">
+                          <Text size="small">{m.body}</Text>
+                          <Card padding="sm">
+                            <Text size="small" tone="ink">
+                              <span className="font-semibold">The sting:</span> {m.sting}
+                            </Text>
+                          </Card>
+                          <Text
+                            size="small"
+                            tone="ink"
+                            className={cn("border-l-2 pl-4 font-medium", a.border)}
+                          >
+                            {m.lesson}
+                          </Text>
+                        </div>
+                      </div>
+                    </Card>
+                  );
+                })}
+              </div>
+            </section>
 
-                <div className="flex flex-col gap-4">
-                  <p className="text-sm leading-relaxed text-ink-soft">{m.body}</p>
-                  <p className="rounded-2xl border border-line bg-paper p-4 text-sm leading-relaxed text-ink">
-                    <strong className="font-semibold">The sting:</strong> {m.sting}
-                  </p>
-                  <p
-                    className={`border-l-2 pl-4 text-sm font-medium leading-relaxed text-ink ${accentBorder[m.accent]}`}
-                  >
-                    {m.lesson}
-                  </p>
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+            {/* ---------------------------------------------------------- AI */}
+            <section id="ai">
+              <SectionHeading kicker={ai.kicker} title={ai.title} lead={ai.lead} />
+              <Callout tone="info" className="mt-6 max-w-2xl">
+                {ai.framing}
+              </Callout>
 
-      {/* --------------------------------------------------------------- AI */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading kicker={ai.kicker} title={ai.title} lead={ai.lead} />
-          </Reveal>
-          <Reveal i={1}>
-            <p className="mt-6 max-w-2xl border-l-2 border-info pl-5 text-sm font-medium leading-relaxed text-ink">
-              {ai.framing}
-            </p>
-          </Reveal>
-
-          <div className="mt-12 flex flex-col gap-5">
-            {ai.charts.map((chart, idx) => {
-              const max = Math.max(
-                ...chart.items.map((it) => Math.abs(it.value)),
-                chart.baseline ? Math.abs(chart.baseline.value) : 0,
-              );
-              return (
-                <Reveal key={chart.id} i={idx % 3}>
-                  <figure className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                    <figcaption>
-                      <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                        {chart.title}
-                      </h3>
-                      <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">
-                        {chart.note}
-                      </p>
-                    </figcaption>
-
-                    {chart.baseline && (
-                      <p className="mt-6 inline-flex items-center gap-2 rounded-full border border-info/25 bg-info-tint px-3 py-1 text-xs font-medium text-info">
-                        <span
-                          aria-hidden
-                          className="h-3 w-0 border-l-2 border-dashed border-info"
-                        />
-                        {chart.baseline.label}
-                      </p>
-                    )}
-
-                    <ul className="mt-6 flex flex-col divide-y divide-line">
-                      {chart.items.map((it) => (
-                        <ChangeBar
-                          key={it.label}
-                          label={it.label}
-                          value={it.value}
+              <div className="mt-12 flex flex-col gap-10">
+                {ai.charts.map((chart) => {
+                  const max = Math.max(
+                    ...chart.items.map((it) => Math.abs(it.value)),
+                    chart.baseline ? Math.abs(chart.baseline.value) : 0,
+                  );
+                  return (
+                    <div key={chart.id}>
+                      <DiagramFrame title={chart.title} caption={chart.note}>
+                        <Bars
+                          diverging
                           max={max}
-                          note={it.note}
+                          format={fmt}
+                          labelWidth={260}
+                          data={chart.items.map((it) => ({
+                            id: it.label,
+                            label: it.label,
+                            value: it.value,
+                            note: it.note || undefined,
+                          }))}
+                          reference={
+                            chart.baseline
+                              ? { value: chart.baseline.value, label: chart.baseline.label }
+                              : undefined
+                          }
                         />
-                      ))}
-                    </ul>
-
-                    <div className="mt-6 border-t border-line pt-4">
-                      <Source label={chart.source.label} url={chart.source.url} />
+                      </DiagramFrame>
+                      <Source label={chart.source.label} url={chart.source.url} className="mt-4" />
                     </div>
-                  </figure>
-                </Reveal>
-              );
-            })}
-          </div>
+                  );
+                })}
+              </div>
 
-          <div className="mt-5 grid gap-5 lg:grid-cols-2">
-            <Reveal>
-              <article className="flex h-full flex-col rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                  {ai.peerReviewed.title}
-                </h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {ai.peerReviewed.body}
-                </p>
-                <div className="mt-6">
+              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                <Card as="article" padding="lg">
+                  <Heading level={3} size="h3" balance>
+                    {ai.peerReviewed.title}
+                  </Heading>
+                  <Text size="small" className="mt-4 flex-1">
+                    {ai.peerReviewed.body}
+                  </Text>
                   <Source
                     label={ai.peerReviewed.source.label}
                     url={ai.peerReviewed.source.url}
+                    className="mt-6"
                   />
-                </div>
-              </article>
-            </Reveal>
-            <Reveal i={1}>
-              <article className="flex h-full flex-col rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                  {ai.wef.title}
-                </h3>
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {ai.wef.body}
-                </p>
-                <div className="mt-6">
-                  <Source label={ai.wef.source.label} url={ai.wef.source.url} />
-                </div>
-              </article>
-            </Reveal>
-          </div>
+                </Card>
+                <Card as="article" padding="lg">
+                  <Heading level={3} size="h3" balance>
+                    {ai.wef.title}
+                  </Heading>
+                  <Text size="small" className="mt-4 flex-1">
+                    {ai.wef.body}
+                  </Text>
+                  <Source label={ai.wef.source.label} url={ai.wef.source.url} className="mt-6" />
+                </Card>
+              </div>
 
-          {/* counter-evidence */}
-          <Reveal i={1}>
-            <div className="mt-5 rounded-[var(--radius-lg)] border border-verified/30 bg-verified-tint p-8 lg:p-10">
-              <Kicker className="text-verified">{ai.counter.kicker}</Kicker>
-              <h3 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
-                {ai.counter.title}
-              </h3>
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-                {ai.counter.body}
-              </p>
-              <p className="mt-5 max-w-3xl border-l-2 border-verified pl-5 text-sm font-medium leading-relaxed text-ink">
-                {ai.counter.conclusion}
-              </p>
-              <div className="mt-6">
+              <Callout tone="verified" title={ai.counter.title} className="mt-6">
+                <Kicker tone="verified">{ai.counter.kicker}</Kicker>
+                <Text size="small" className="mt-4 max-w-3xl">
+                  {ai.counter.body}
+                </Text>
+                <Text size="small" tone="ink" className="mt-5 max-w-3xl font-medium">
+                  {ai.counter.conclusion}
+                </Text>
                 <Source
                   label={ai.counter.source.label}
                   url={ai.counter.source.url}
+                  className="mt-5"
                 />
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
+              </Callout>
+            </section>
 
-      {/* ----------------------------------------------------------- GROWTH */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={growth.kicker}
-            title={growth.title}
-            lead={growth.lead}
-          />
-        </Reveal>
+            {/* ------------------------------------------------------ GROWTH */}
+            <section id="growth">
+              <SectionHeading kicker={growth.kicker} title={growth.title} lead={growth.lead} />
 
-        <div className="mt-12 flex flex-col gap-5">
-          {growth.groups.map((g, idx) => {
-            const max = Math.max(...g.items.map((it) => it.value));
-            return (
-              <Reveal key={g.id} i={idx % 3}>
-                <figure className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                  <figcaption className="flex flex-col gap-3">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <span
-                        aria-hidden
-                        className={`h-2.5 w-2.5 rounded-full ${accentBar[g.accent]}`}
-                      />
-                      <h3 className="font-display text-[length:var(--text-h3)] leading-snug">
-                        {g.title}
-                      </h3>
+              <div className="mt-12 flex flex-col gap-10">
+                {growth.groups.map((g) => {
+                  const a = accent(g.accent);
+                  const max = Math.max(...g.items.map((it) => it.value));
+                  return (
+                    <div key={g.id}>
+                      <DiagramFrame title={g.title} caption={g.note}>
+                        <Bars
+                          max={max}
+                          format={(v) => `+${v}%`}
+                          labelWidth={280}
+                          data={g.items.map((it, idx) => ({
+                            id: it.label,
+                            label: it.label,
+                            value: it.value,
+                            focal: idx === 0,
+                          }))}
+                        />
+                      </DiagramFrame>
+                      {g.extra && (
+                        <Text
+                          size="small"
+                          tone="ink"
+                          className={cn("mt-6 border-l-2 pl-4 font-medium", a.border)}
+                        >
+                          {g.extra}
+                        </Text>
+                      )}
+                      <Source label={g.source.label} url={g.source.url} className="mt-4" />
                     </div>
-                    <p className="max-w-3xl text-sm leading-relaxed text-ink-soft">
-                      {g.note}
-                    </p>
-                  </figcaption>
+                  );
+                })}
 
-                  <ul className="mt-6 flex flex-col divide-y divide-line">
-                    {g.items.map((it) => (
-                      <GrowthBar
-                        key={it.label}
-                        label={it.label}
-                        value={it.value}
-                        max={max}
-                        accent={g.accent}
-                      />
-                    ))}
-                  </ul>
-
-                  {g.extra && (
-                    <p
-                      className={`mt-6 border-l-2 pl-4 text-sm font-medium leading-relaxed text-ink ${accentBorder[g.accent]}`}
-                    >
-                      {g.extra}
-                    </p>
-                  )}
-
-                  <div className="mt-6 border-t border-line pt-4">
-                    <Source label={g.source.label} url={g.source.url} />
-                  </div>
-                </figure>
-              </Reveal>
-            );
-          })}
-
-          <Reveal i={1}>
-            <article className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-8 lg:p-10">
-              <h3 className="max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                {growth.linkedin.title}
-              </h3>
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-                {growth.linkedin.body}
-              </p>
-              <div className="mt-6">
-                <Source
-                  label={growth.linkedin.source.label}
-                  url={growth.linkedin.source.url}
-                />
+                <Card as="article" padding="lg">
+                  <Heading level={3} size="h3" balance>
+                    {growth.linkedin.title}
+                  </Heading>
+                  <Text size="small" className="mt-4 max-w-3xl">
+                    {growth.linkedin.body}
+                  </Text>
+                  <Source
+                    label={growth.linkedin.source.label}
+                    url={growth.linkedin.source.url}
+                    className="mt-6"
+                  />
+                </Card>
               </div>
-            </article>
-          </Reveal>
-        </div>
-      </section>
+            </section>
 
-      {/* ----------------------------------------------------------- THESIS */}
-      <section className="bg-ink py-20 text-paper-2 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <Kicker className="text-paper-2/60">{thesis.kicker}</Kicker>
-            <h2 className="mt-5 max-w-4xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {thesis.title}
-            </h2>
-            <p className="mt-5 max-w-2xl text-paper-2/70">{thesis.lead}</p>
-          </Reveal>
+            {/* ------------------------------------------------------ THESIS */}
+            <section id="thesis">
+              <SectionHeading kicker={thesis.kicker} title={thesis.title} lead={thesis.lead} />
 
-          <div className="mt-14 grid gap-5 lg:grid-cols-[0.8fr_1.2fr]">
-            <Reveal>
-              <div className="flex h-full flex-col justify-center rounded-[var(--radius-lg)] border border-verified/40 bg-verified/10 p-8">
-                <p className="font-display text-[length:var(--text-display)] leading-none text-verified">
-                  {thesis.premium.stat}
-                </p>
-                <p className="mt-3 font-display text-2xl leading-tight text-paper-2">
-                  {thesis.premium.label}
-                </p>
-                <p className="mt-5 text-sm leading-relaxed text-paper-2/70">
-                  {thesis.premium.body}
-                </p>
+              <div className="mt-14 grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+                <Card padding="lg">
+                  <Stat
+                    value={thesis.premium.stat}
+                    label={thesis.premium.label}
+                    sub={thesis.premium.body}
+                    source={{
+                      label: thesis.premium.source.label,
+                      url: thesis.premium.source.url,
+                    }}
+                  />
+                </Card>
+
+                <Card padding="lg">
+                  <Heading level={3} size="h4" balance>
+                    {thesis.nuance.title}
+                  </Heading>
+                  <Text size="small" className="mt-4">
+                    {thesis.nuance.body}
+                  </Text>
+                  <blockquote className="mt-6 border-l-2 border-primary pl-5">
+                    <Text size="lead" tone="ink" className="font-display">
+                      &ldquo;{thesis.nuance.quote}&rdquo;
+                    </Text>
+                    <footer className="mt-3">
+                      <Kicker>{thesis.nuance.attribution}</Kicker>
+                    </footer>
+                  </blockquote>
+                  <Source
+                    label={thesis.nuance.source.label}
+                    url={thesis.nuance.source.url}
+                    className="mt-6"
+                  />
+                </Card>
+              </div>
+
+              <Callout tone="verified" className="mt-10 max-w-4xl">
+                {thesis.conclusion}
+              </Callout>
+
+              <Card padding="lg" className="mt-12">
+                <Heading level={3} size="h4" balance>
+                  {thesis.proof.title}
+                </Heading>
+                <Text size="small" className="mt-4 max-w-3xl">
+                  {thesis.proof.body}
+                </Text>
                 <div className="mt-6">
-                  <a
-                    href={thesis.premium.source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-signal"
+                  <Button
+                    href="/indispensable"
+                    variant="link"
+                    iconEnd={<Icon name="arrow-up-right" size={16} />}
                   >
-                    <span className="text-balance">
-                      Source: {thesis.premium.source.label}
-                    </span>
-                    <ExternalLink size={11} className="mt-0.5 shrink-0" />
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-
-            <Reveal i={1}>
-              <div className="flex h-full flex-col rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-                <h3 className="font-display text-2xl leading-tight text-balance">
-                  {thesis.nuance.title}
-                </h3>
-                <p className="mt-4 text-sm leading-relaxed text-paper-2/70">
-                  {thesis.nuance.body}
-                </p>
-                <blockquote className="mt-6 border-l-2 border-signal pl-5">
-                  <p className="font-display text-xl leading-snug text-paper-2">
-                    &ldquo;{thesis.nuance.quote}&rdquo;
-                  </p>
-                  <footer className="mt-3 kicker text-paper-2/50">
-                    {thesis.nuance.attribution}
-                  </footer>
-                </blockquote>
-                <div className="mt-6">
-                  <a
-                    href={thesis.nuance.source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-start gap-1 text-xs font-medium text-paper-2/50 transition-colors hover:text-signal"
-                  >
-                    <span className="text-balance">
-                      Source: {thesis.nuance.source.label}
-                    </span>
-                    <ExternalLink size={11} className="mt-0.5 shrink-0" />
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-
-          <Reveal i={1}>
-            <p className="mt-10 max-w-4xl border-l-2 border-verified pl-6 font-display text-[length:var(--text-h3)] leading-snug text-paper-2">
-              {thesis.conclusion}
-            </p>
-          </Reveal>
-
-          {/* proof, freelancers vs employees */}
-          <Reveal i={2}>
-            <div className="mt-12 rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-8 lg:p-10">
-              <h3 className="max-w-2xl font-display text-2xl leading-tight text-balance">
-                {thesis.proof.title}
-              </h3>
-              <p className="mt-4 max-w-3xl text-sm leading-relaxed text-paper-2/70">
-                {thesis.proof.body}
-              </p>
-
-              <div className="mt-6">
-                <a
-                  href="/indispensable"
-                  className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
-                >
-                  <span className="link-sweep">
                     See the full freelancer vs employee breakdown on Become Indispensable
-                  </span>
-                  <ExternalLink size={14} className="opacity-70" />
-                </a>
-              </div>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* -------------------------------------------------------------- PAY */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading kicker={pay.kicker} title={pay.title} />
-        </Reveal>
-
-        <Reveal i={1}>
-          <div className="mt-10 rounded-[var(--radius-lg)] border border-caution/40 bg-caution-tint p-8 lg:p-10">
-            <Pill tone="caution">Warning label</Pill>
-            <h3 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
-              {pay.warning.title}
-            </h3>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {pay.warning.body}
-            </p>
-          </div>
-        </Reveal>
-
-        <Reveal i={2}>
-          <div className="mt-10 rounded-[var(--radius-lg)] border border-line bg-paper-2 p-8 lg:p-10">
-            <p className="max-w-2xl text-sm font-medium leading-relaxed text-ink">
-              {pay.tiersNote}
-            </p>
-            <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
-              We moved the full picture to its own page so it can breathe: the tier
-              ranges, the roles clients are hiring for now, full-time vs hourly vs
-              retainer, and how to price yourself. Same warning label, all the way
-              down.
-            </p>
-            <div className="mt-6">
-              <ButtonLink href="/salary">Open the Salary Guide</ButtonLink>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ---------------------------------------------------------- UNKNOWN */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker={unknown.kicker}
-              title={unknown.title}
-              lead={unknown.lead}
-            />
-          </Reveal>
-
-          <div className="mt-12 flex flex-col gap-4">
-            {unknown.items.map((u, idx) => (
-              <Reveal key={u.id} i={idx % 3}>
-                <article className="grid gap-5 rounded-2xl border border-line bg-paper-2 p-6 lg:grid-cols-[1fr_1.3fr] lg:items-start lg:gap-8">
-                  <div>
-                    <p className="font-display text-lg leading-snug text-ink-faint line-through decoration-signal/50 decoration-2">
-                      {u.claim}
-                    </p>
-                    <p className="mt-3">
-                      <Pill tone="signal">{u.verdict}</Pill>
-                    </p>
-                  </div>
-                  <p className="text-sm leading-relaxed text-ink-soft">{u.why}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal i={1}>
-            <p className="mt-8 max-w-2xl font-display text-xl leading-snug text-signal">
-              {unknown.close}
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------- READING */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={reading.kicker}
-            title={reading.title}
-            lead={reading.lead}
-          />
-        </Reveal>
-
-        <div className="mt-12 flex flex-col gap-14">
-          {reading.groups.map((g) => (
-            <div key={g.id}>
-              <Reveal>
-                <div className="flex flex-col gap-3 border-t border-line-strong pt-6">
-                  <h3 className="font-display text-[length:var(--text-h3)] leading-snug">
-                    {g.title}
-                  </h3>
-                  <p className="max-w-2xl text-sm leading-relaxed text-ink-soft">
-                    {g.note}
-                  </p>
+                  </Button>
                 </div>
-              </Reveal>
+              </Card>
+            </section>
 
-              <div className="mt-7 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                {g.items.map((item, idx) => (
-                  <Reveal key={item.url} i={idx % 3}>
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-signal/40 hover:shadow-[var(--shadow-md)]"
-                    >
-                      <p className="kicker">{item.org}</p>
-                      <h4 className="mt-3 font-display text-lg leading-snug text-balance text-ink transition-colors group-hover:text-signal">
-                        {item.title}
-                      </h4>
-                      <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
-                        {item.why}
-                      </p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold text-ink-faint transition-colors group-hover:text-signal">
-                        Open the source
-                        <ExternalLink size={12} />
-                      </span>
-                    </a>
-                  </Reveal>
+            {/* --------------------------------------------------------- PAY */}
+            <section id="pay">
+              <SectionHeading kicker={pay.kicker} title={pay.title} />
+
+              <Callout tone="caution" title={pay.warning.title} className="mt-10">
+                <Badge tone="caution">Warning label</Badge>
+                <Text size="small" className="mt-4 max-w-3xl">
+                  {pay.warning.body}
+                </Text>
+              </Callout>
+
+              <Card padding="lg" className="mt-10">
+                <Text size="small" tone="ink" className="max-w-2xl font-medium">
+                  {pay.tiersNote}
+                </Text>
+                <Text size="small" className="mt-4 max-w-2xl">
+                  We moved the full picture to its own page so it can breathe: the tier ranges,
+                  the roles clients are hiring for now, full-time vs hourly vs retainer, and how
+                  to price yourself. Same warning label, all the way down.
+                </Text>
+                <div className="mt-6">
+                  <Button href="/salary">Open the Salary Guide</Button>
+                </div>
+              </Card>
+            </section>
+
+            {/* ----------------------------------------------------- UNKNOWN */}
+            <section id="unknown">
+              <SectionHeading kicker={unknown.kicker} title={unknown.title} lead={unknown.lead} />
+
+              <div className="mt-12 flex flex-col gap-4">
+                {unknown.items.map((u) => (
+                  <Card key={u.id} as="article">
+                    <div className="grid gap-5 lg:grid-cols-[1fr_1.3fr] lg:items-start lg:gap-8">
+                      <div>
+                        <Text
+                          size="lead"
+                          tone="faint"
+                          className="font-display line-through decoration-coral/50 decoration-2"
+                        >
+                          {u.claim}
+                        </Text>
+                        <div className="mt-3">
+                          <Badge tone="coral">{u.verdict}</Badge>
+                        </div>
+                      </div>
+                      <Text size="small">{u.why}</Text>
+                    </div>
+                  </Card>
                 ))}
               </div>
-            </div>
+
+              <Callout tone="signal" className="mt-8 max-w-2xl">
+                {unknown.close}
+              </Callout>
+            </section>
+
+            {/* ----------------------------------------------------- READING */}
+            <section id="reading">
+              <SectionHeading kicker={reading.kicker} title={reading.title} lead={reading.lead} />
+
+              <div className="mt-12 flex flex-col gap-14">
+                {reading.groups.map((g) => (
+                  <div key={g.id}>
+                    <div className="flex flex-col gap-3 border-t border-line-strong pt-6">
+                      <Heading level={3} size="h3">
+                        {g.title}
+                      </Heading>
+                      <Text size="small" className="max-w-2xl">
+                        {g.note}
+                      </Text>
+                    </div>
+
+                    <CardGrid cols={3} className="mt-7">
+                      {g.items.map((item) => (
+                        <Card key={item.url} href={item.url} as="article">
+                          <Kicker>{item.org}</Kicker>
+                          <Heading level={4} size="h5" className="mt-3" balance>
+                            {item.title}
+                          </Heading>
+                          <Text size="small" className="mt-3 flex-1">
+                            {item.why}
+                          </Text>
+                          <Text
+                            size="caption"
+                            tone="faint"
+                            className="mt-5 inline-flex items-center gap-1.5"
+                          >
+                            Open the source
+                            <Icon name="arrow-up-right" size={12} />
+                          </Text>
+                        </Card>
+                      ))}
+                    </CardGrid>
+                  </div>
+                ))}
+              </div>
+
+              <Card className="mt-10">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <Text size="small" className="max-w-xl">
+                    Looking for open courses, government programs, and YouTube channels to
+                    build the skills? We keep the whole shelf, and how to judge any course, on
+                    one page.
+                  </Text>
+                  <Button
+                    href="/resources"
+                    variant="link"
+                    iconEnd={<Icon name="arrow-up-right" size={16} />}
+                  >
+                    Open the Resources shelf
+                  </Button>
+                </div>
+              </Card>
+            </section>
+          </div>
+        </div>
+      </Section>
+
+      {/* ------------------------------------------------------------ CLOSING */}
+      <Section band="tint">
+        <SectionHeading kicker={closing.kicker} title={closing.title} lead={closing.body} />
+        <Callout tone="signal" className="mt-6 max-w-2xl">
+          {closing.point}
+        </Callout>
+
+        <CardGrid cols={3} className="mt-10">
+          {closing.links.map((l) => (
+            <Card key={l.href} href={l.href} onBand>
+              <Heading level={3} size="h5">
+                {l.label}
+              </Heading>
+              <Text size="small" className="mt-3 flex-1">
+                {l.desc}
+              </Text>
+            </Card>
           ))}
+        </CardGrid>
+
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <Button href="/tasks">Start building proof</Button>
+          <Button href="/niches" variant="outline">
+            Pick your lane
+          </Button>
         </div>
 
-        <Reveal i={1}>
-          <div className="mt-10 flex flex-col gap-3 rounded-2xl border border-line bg-paper-2 p-6 sm:flex-row sm:items-center sm:justify-between">
-            <p className="max-w-xl text-sm leading-relaxed text-ink-soft">
-              Looking for open courses, government programs, and YouTube channels
-              to actually build the skills? We keep the whole shelf, and how
-              to judge any course, on one page.
-            </p>
-            <ArrowLink href="/resources">Open the Resources shelf</ArrowLink>
-          </div>
-        </Reveal>
-      </section>
+        <Text size="small" className="mt-10 max-w-2xl border-t border-line-strong pt-6">
+          {closing.last}
+        </Text>
+      </Section>
 
-      {/* ---------------------------------------------------------- CLOSING */}
-      <section className="container-x pb-24">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
-            <Kicker>{closing.kicker}</Kicker>
-            <h2 className="mt-6 max-w-4xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {closing.title}
-            </h2>
-            <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {closing.body}
-            </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-              {closing.point}
-            </p>
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/reality" /> */}
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-              {closing.links.map((l, idx) => (
-                <Reveal key={l.href} i={idx % 3}>
-                  <div className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6">
-                    <ArrowLink href={l.href}>{l.label}</ArrowLink>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
-                      {l.desc}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <ButtonLink href="/tasks">Start building proof</ButtonLink>
-              <ButtonLink href="/niches" variant="outline">
-                Pick your lane
-              </ButtonLink>
-            </div>
-
-            <p className="mt-10 max-w-2xl border-t border-line pt-6 text-sm leading-relaxed text-ink-soft">
-              {closing.last}
-            </p>
-          </div>
-        </Reveal>
-      </section>
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }

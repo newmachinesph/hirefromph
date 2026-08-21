@@ -15,6 +15,8 @@ export type JourneyStepperVariant = "compact" | "full";
 export type JourneyStepperProps = {
   /** `compact` (default) is the stepper row only; `full` adds the diagram, bar and link. */
   variant?: JourneyStepperVariant;
+  /** Full variant only: render the five-stage row under the progress card. Pages that list the stages themselves pass false. */
+  showRow?: boolean;
   /** 1-based stage to mark as current. Falls back to the visitor's saved stage. */
   current?: number;
   className?: string;
@@ -30,6 +32,7 @@ export type JourneyStepperProps = {
  */
 export function JourneyStepper({
   variant = "compact",
+  showRow = true,
   current,
   className,
 }: JourneyStepperProps) {
@@ -122,7 +125,7 @@ export function JourneyStepper({
         </Button>
       </div>
 
-      <nav aria-label="The five stages">{stepper}</nav>
+      {showRow && <nav aria-label="The five stages">{stepper}</nav>}
     </div>
   );
 }

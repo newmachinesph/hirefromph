@@ -55,7 +55,7 @@ From the plugin's style guide and spec §7.2:
 
 ---
 
-## The four diagrams
+## The seven diagrams
 
 ### `journey-map` — *The path — five stages, eleven steps*
 
@@ -89,6 +89,30 @@ Timeline. **5 markers** on one baseline, Day 1 to Day 5, each with a two-line ch
 - Equal spacing is honest here: the intervals really are one day each.
 - **Content:** the `first-week` scenario in `data/scenarios.json` (Monday's recap, the dated log, the SOP, the Thursday time-box, Friday's unrequested update) and the `first-week-plan` lab in `data/labs.json`.
 
+### `vetting-flow` — *Vetting an opportunity, gate by gate*
+
+Flowchart, top-down. **8 nodes**: one start oval, five decision diamonds, one stop, one end. `viewBox 0 0 640 616`.
+
+- **Accent (1):** the Stop terminal together with the rail that feeds it — one focal group.
+- **Content:** `data/findwork.json` → `vetting.redFlags`, taken in weight order (the two weight-3 flags first), and `vetting.research` for the end node.
+- **Documented deviation:** each "yes" branch is labelled; the "no" spine is labelled once at the first gap, with the footnote *"Every downward arrow is a no."* Ten labels at 10px inside a 640-wide frame breaks the density budget.
+
+### `agency-vs-direct` — *Agency or direct: who holds the relationship*
+
+Swimlane, two horizontal lanes across four columns. **8 nodes**. `viewBox 0 0 720 288`.
+
+- **Accent (1):** the Direct lane's "You keep" node.
+- **Content:** `data/clients.json` → `roads.agency.cons` ("You rarely own the relationship…") and `roads.direct.pros` ("You own the relationship and the portfolio").
+- **No numbers.** The diagram states who owns each step. Margins and rates are on the page, with their sources; they never enter the figure.
+
+### `forgetting-curve` — *What review does to what you remember*
+
+Line, two qualitative series. `viewBox 0 0 720 320`.
+
+- **Accent (1):** the spaced-retrieval line and its four review dots.
+- **Qualitative on purpose:** no y scale, no elapsed time. The x marks are the review points, and the in-figure footnote says so. `/learn` renders the two citations beneath the frame with `<SourceList>`.
+- **Content:** `data/learning.json` → `forgettingCurve` (copy, axis words, footnote, sources) and `works[spaced-repetition].how` (the 1 / 3 / 7 / 30 review rhythm the four marks stand for).
+
 ---
 
 ## Using the components
@@ -101,13 +125,13 @@ import { JourneyMap, DIAGRAMS, type DiagramId } from "@/components/diagrams";
 </DiagramFrame>
 ```
 
-`components/diagrams/index.ts` exports the four components, the `DIAGRAMS` map keyed by id (`journey-map`, `method-loop`, `hiring-funnel`, `first-week-timeline`), the `DiagramId` union, and the shared `DiagramProps` type.
+`components/diagrams/index.ts` exports the seven components, the `DIAGRAMS` map keyed by id (`journey-map`, `method-loop`, `hiring-funnel`, `first-week-timeline`, `vetting-flow`, `agency-vs-direct`, `forgetting-curve`), the `DiagramId` union, and the shared `DiagramProps` type.
 
 Every component takes the same props:
 
 | Prop | Type | Notes |
 |---|---|---|
-| `current` | `number \| undefined` | Journey map only — the 1-based stage to highlight. Out-of-range and omitted values highlight nothing. The other three accept it and ignore it, so the `DIAGRAMS` map stays uniformly typed. |
+| `current` | `number \| undefined` | Journey map only — the 1-based stage to highlight. Out-of-range and omitted values highlight nothing. The other six accept it and ignore it, so the `DIAGRAMS` map stays uniformly typed. |
 | `className` | `string \| undefined` | Passed straight to the `<svg>`. |
 
 **Deliberate differences between the HTML source and the component:**
@@ -138,7 +162,7 @@ python3 ~/.claude/plugins/cache/diagram-design/diagram-design/2.6.1/skills/diagr
   design/diagrams/*.html
 ```
 
-It checks the accessible-SVG contract (`role="img"`, first-child `<title>`, non-empty `<desc>`, diagram-prefixed ids), single-file safety (no remote assets beyond the approved Google Fonts `/css2` stylesheet), and that nothing has smuggled in a script. All five files in this folder pass.
+It checks the accessible-SVG contract (`role="img"`, first-child `<title>`, non-empty `<desc>`, diagram-prefixed ids), single-file safety (no remote assets beyond the approved Google Fonts `/css2` stylesheet), and that nothing has smuggled in a script. All seven `.html` files in this folder pass.
 
 Then type-check the components:
 
