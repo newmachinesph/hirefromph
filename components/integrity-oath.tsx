@@ -1,9 +1,18 @@
 "use client";
 
 import { useId } from "react";
-import { AlertTriangle, Check, PenLine, RotateCcw, ShieldCheck } from "lucide-react";
 import conduct from "@/data/conduct.json";
 import { usePath } from "@/lib/path-context";
+import {
+  Button,
+  Callout,
+  Card,
+  Checkbox,
+  Field,
+  Icon,
+  Input,
+  Textarea,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 const { oath } = conduct;
@@ -20,15 +29,15 @@ export function IntegrityOath() {
     return (
       <div
         aria-hidden
-        className="animate-pulse rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 lg:p-10"
+        className="animate-pulse rounded-lg border border-line-strong bg-paper p-6 lg:p-10"
       >
-        <div className="h-4 w-2/3 rounded bg-line" />
+        <div className="h-4 w-2/3 rounded-sm bg-line" />
         <div className="mt-6 flex flex-col gap-2">
           {Array.from({ length: 5 }).map((_, i) => (
-            <div key={i} className="h-16 rounded-2xl bg-line/50" />
+            <div key={i} className="h-16 rounded-md bg-line/50" />
           ))}
         </div>
-        <div className="mt-8 h-40 rounded-2xl bg-line/50" />
+        <div className="mt-8 h-40 rounded-md bg-line/50" />
       </div>
     );
   }
@@ -58,65 +67,39 @@ export function IntegrityOath() {
     : null;
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-10">
+    <div className="flex flex-col">
       {/* ---------------------------------------------------------- CLAUSES */}
-      <fieldset>
-        <legend className="kicker">
-          Step 1 · Read each one. Tick only what you can actually keep.
-        </legend>
+      <Field as="group" label="Step 1 · Read each one. Tick only what you can actually keep.">
         <ul className="mt-5 flex flex-col gap-2">
           {oath.clauses.map((c, idx) => {
             const on = !!clauses[c.id];
-            const id = `${uid}-${c.id}`;
             return (
               <li key={c.id}>
-                <input
-                  type="checkbox"
-                  id={id}
-                  checked={on}
-                  onChange={() => toggleOathClause(c.id)}
-                  className="peer sr-only"
-                />
-                <label
-                  htmlFor={id}
-                  className={cn(
-                    "flex cursor-pointer items-start gap-4 rounded-2xl border p-4 transition-all duration-200",
-                    "peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-signal",
-                    on
-                      ? "border-verified/40 bg-verified-tint"
-                      : "border-line bg-paper hover:border-line-strong",
-                  )}
+                <Card
+                  padding="sm"
+                  className={cn(on && "border-verified bg-verified-tint")}
                 >
-                  <span
-                    aria-hidden
-                    className={cn(
-                      "grid h-6 w-6 shrink-0 place-items-center rounded-md border transition-colors",
-                      on
-                        ? "border-verified bg-verified text-white"
-                        : "border-line-strong bg-paper-2",
-                    )}
-                  >
-                    {on && <Check size={14} strokeWidth={3} />}
-                  </span>
-                  <span className="min-w-0">
-                    <span className="font-mono text-[11px] font-bold tracking-[0.14em] text-ink-faint">
-                      {String(idx + 1).padStart(2, "0")}
-                    </span>
-                    <span
-                      className={cn(
-                        "mt-1 block text-sm leading-relaxed",
-                        on ? "text-ink" : "text-ink-soft",
-                      )}
-                    >
-                      {c.text}
-                    </span>
-                  </span>
-                </label>
+                  <Checkbox
+                    id={`${uid}-${c.id}`}
+                    checked={on}
+                    onChange={() => toggleOathClause(c.id)}
+                    label={
+                      <span className="flex flex-col gap-1">
+                        <span className="text-caption font-bold tabular-nums tracking-widest text-ink-faint">
+                          {String(idx + 1).padStart(2, "0")}
+                        </span>
+                        <span className={cn("text-small leading-relaxed", on ? "text-ink" : "text-ink-soft")}>
+                          {c.text}
+                        </span>
+                      </span>
+                    }
+                  />
+                </Card>
               </li>
             );
           })}
         </ul>
-      </fieldset>
+      </Field>
 
       <p
         className="mt-4 text-xs text-ink-faint"
@@ -134,20 +117,17 @@ export function IntegrityOath() {
 
       {/* ------------------------------------------------------ COMMITMENT */}
       <div className="mt-10 border-t border-line pt-8">
-        <label htmlFor={`${uid}-commitment`} className="kicker">
-          Step 2 · Now write the part we can&rsquo;t write for you
-        </label>
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-          {oath.commitmentPrompt}
-        </p>
-        <textarea
-          id={`${uid}-commitment`}
-          value={commitment}
-          onChange={(e) => updateOath({ commitment: e.target.value })}
-          rows={7}
-          placeholder={oath.commitmentPlaceholder}
-          className="mt-4 w-full rounded-2xl border border-line-strong bg-paper px-4 py-3.5 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink"
-        />
+        <Field
+          label="Step 2 · Now write the part we can’t write for you"
+          hint={oath.commitmentPrompt}
+        >
+          <Textarea
+            value={commitment}
+            onChange={(e) => updateOath({ commitment: e.target.value })}
+            rows={7}
+            placeholder={oath.commitmentPlaceholder}
+          />
+        </Field>
         <p className="mt-2 text-xs text-ink-faint" suppressHydrationWarning>
           {commitment.trim().length} characters.{" "}
           {!commitmentLongEnough &&
@@ -156,10 +136,7 @@ export function IntegrityOath() {
       </div>
 
       {/* ---------------------------------------------------- SELF-CRITIQUE */}
-      <div className="mt-8 rounded-2xl border border-caution/30 bg-caution-tint/50 p-5">
-        <p className="kicker flex items-center gap-1.5 text-caution-text">
-          <AlertTriangle size={13} /> Step 3 · Judge your own draft
-        </p>
+      <Callout tone="caution" icon="alert-triangle" title="Step 3 · Judge your own draft" className="mt-8">
         <ul className="mt-3 flex flex-col gap-2">
           {oath.selfCritique.map((q) => (
             <li key={q} className="flex gap-2 text-sm leading-relaxed text-ink-soft">
@@ -168,16 +145,17 @@ export function IntegrityOath() {
             </li>
           ))}
         </ul>
-      </div>
+      </Callout>
 
       {/* ------------------------------------------------------------- SIGN */}
       <div className="mt-10 border-t border-line pt-8">
         {signedAt ? (
-          <div className="flex flex-col items-start gap-5 rounded-2xl border border-verified/40 bg-verified-tint p-6 sm:flex-row sm:items-center sm:justify-between">
+          <Callout
+            tone="verified"
+            className="flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between"
+          >
             <div className="flex items-start gap-4">
-              <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-verified text-white">
-                <ShieldCheck size={20} />
-              </span>
+              <Icon name="shield-check" size={20} />
               <div>
                 <p className="font-display text-xl leading-tight text-ink">
                   Signed by {name.trim()}
@@ -187,43 +165,33 @@ export function IntegrityOath() {
                 </p>
               </div>
             </div>
-            <button
-              type="button"
+            <Button
+              variant="outline"
+              size="sm"
               onClick={unsign}
-              className="inline-flex shrink-0 items-center gap-1.5 rounded-full border border-line-strong bg-paper-2 px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+              icon={<Icon name="rotate-ccw" size={14} />}
             >
-              <RotateCcw size={14} /> Revise it
-            </button>
-          </div>
+              Revise it
+            </Button>
+          </Callout>
         ) : (
-          <>
-            <label htmlFor={`${uid}-name`} className="kicker">
-              Step 4 · {oath.signPrompt}
-            </label>
-            <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-              <input
-                id={`${uid}-name`}
+          <Field label={`Step 4 · ${oath.signPrompt}`}>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <Input
                 type="text"
                 value={name}
                 onChange={(e) => updateOath({ name: e.target.value })}
                 placeholder="Your full name"
                 autoComplete="name"
-                className="w-full rounded-full border border-line-strong bg-paper px-5 py-3 text-sm text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink sm:max-w-xs"
+                className="sm:max-w-xs"
               />
-              <button
-                type="button"
+              <Button
                 onClick={sign}
                 disabled={!canSign}
-                className={cn(
-                  "group inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300",
-                  canSign
-                    ? "bg-ink text-paper-2 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]"
-                    : "cursor-not-allowed bg-paper-3 text-ink-faint",
-                )}
+                icon={<Icon name="pen-line" size={15} />}
               >
-                <PenLine size={15} />
                 Sign the oath
-              </button>
+              </Button>
             </div>
             {!canSign && (
               <p className="mt-3 text-xs text-ink-faint" aria-live="polite">
@@ -234,7 +202,7 @@ export function IntegrityOath() {
                     : "Add your name to sign."}
               </p>
             )}
-          </>
+          </Field>
         )}
         <p className="mt-5 text-xs leading-relaxed text-ink-faint">
           {oath.signedNote} There is no account, no server, and no copy of this
