@@ -1,561 +1,454 @@
-import { ArrowRight, ExternalLink, ShieldOff } from "lucide-react";
+import type { Metadata } from "next";
 import english from "@/data/english.json";
+import { Bars } from "@/components/diagrams/charts";
 import { CommsLab } from "@/components/comms-lab";
-import { Icon } from "@/components/icon";
-import { Reveal } from "@/components/reveal";
-import { Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
-import { cn } from "@/lib/utils";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+  Toc,
+} from "@/components/layout";
+import {
+  Badge,
+  Callout,
+  Card,
+  DiagramFrame,
+  Heading,
+  Icon,
+  Kicker,
+  Source,
+  Step,
+  StepList,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
 
-export const metadata = pageMeta({
-  path: "/english",
+const HREF = "/english";
+
+/** The chart's domain, not styling: EF EPI is scored out of 800 with a published global mean. */
+const MAX_SCORE = 800;
+const GLOBAL_AVG = 488;
+
+export const metadata: Metadata = pageMeta({
+  path: HREF,
   title: "English at Work",
   description:
     "Filipinos already write English better than most of the world. What costs you money is smaller: hedges, reflex apologies, and deference markers. Audit a real client message, learn four structures, and hear the honest priority order for speaking.",
 });
 
-const MAX_SCORE = 800;
-const GLOBAL_AVG = 488;
-
-const accentText: Record<string, string> = {
-  signal: "text-signal-deep",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-const accentBorder: Record<string, string> = {
-  signal: "border-signal",
-  caution: "border-caution",
-  verified: "border-verified",
-  info: "border-info",
-};
-
-type Tone = "neutral" | "signal" | "verified" | "caution" | "info";
-
-function Source({ label, url }: { label: string; url: string }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
-    >
-      Source: {label}
-      <ExternalLink size={11} className="opacity-60" />
-    </a>
-  );
-}
+const TOC = [
+  { id: "baseline", label: "The baseline" },
+  { id: "causes", label: "Three causes" },
+  { id: "honesty", label: "No spin" },
+  { id: "banlist", label: "The banlist" },
+  { id: "lab", label: "The lab" },
+  { id: "frameworks", label: "Four structures" },
+  { id: "speaking", label: "Speaking" },
+  { id: "resources", label: "Resources" },
+];
 
 export default function EnglishPage() {
   const weakest = Math.min(...english.baseline.scores.map((s) => s.value));
 
   return (
     <>
-      {/* ------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker="English · Pragmatics · Speaking"
-        title={
-          <>
-            Your English is not the problem.
-            <br />
-            The habits around it are.
-          </>
-        }
-        titleWidth="max-w-4xl"
+        title="Your English is not the problem."
+        accent="The habits around it are."
         lead={english.intro}
       >
-        <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-            {english.creed}
-          </blockquote>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {english.creed}
+        </Callout>
+        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/english" /></Section> */}
       </PageHero>
 
-      {/* --------------------------------------------------------- BASELINE */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <div className="grid gap-12 lg:grid-cols-[1fr_1.1fr] lg:items-start lg:gap-16">
-            <Reveal>
+      <Section>
+        <div className="grid gap-12 xl:grid-cols-[200px_minmax(0,1fr)]">
+          <Toc items={TOC} />
+
+          <div className="flex min-w-0 flex-col gap-20">
+            {/* ---------------------------------------------------- BASELINE */}
+            <section id="baseline">
               <SectionHeading
                 kicker={english.baseline.kicker}
                 title={english.baseline.title}
+                lead={english.baseline.body}
               />
-              <p className="mt-6 max-w-xl text-sm leading-relaxed text-ink-soft">
-                {english.baseline.body}
-              </p>
-              <div className="mt-6">
-                <Source
-                  label={english.baseline.source.label}
-                  url={english.baseline.source.url}
-                />
-              </div>
-            </Reveal>
 
-            <Reveal i={1}>
-              <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                <div className="flex items-baseline justify-between">
-                  <p className="kicker">EF EPI 2025 · Philippines</p>
-                  <p className="font-mono text-xs text-ink-faint">
-                    out of {MAX_SCORE}
-                  </p>
-                </div>
-
-                <ul className="mt-7 flex flex-col gap-6">
-                  {english.baseline.scores.map((s) => {
-                    const isWeakest = s.value === weakest;
-                    return (
-                      <li key={s.skill}>
-                        <div className="flex items-baseline justify-between gap-4">
-                          <p className="flex items-baseline gap-2 text-sm font-semibold text-ink">
-                            {s.skill}
-                            {isWeakest && (
-                              <span className="text-[11px] font-medium text-signal-deep">
-                                weakest
-                              </span>
-                            )}
-                          </p>
-                          <p className="font-display text-lg leading-none text-ink">
-                            {s.value}
-                          </p>
-                        </div>
-
-                        <div className="relative mt-2.5 h-2.5 w-full rounded-full bg-line">
-                          <div
-                            className={cn(
-                              "h-full rounded-full",
-                              isWeakest ? "bg-signal" : "bg-ink",
-                            )}
-                            style={{ width: `${(s.value / MAX_SCORE) * 100}%` }}
-                          />
-                          <span
-                            aria-hidden
-                            className="absolute top-[-4px] bottom-[-4px] w-px bg-ink-faint"
-                            style={{ left: `${(GLOBAL_AVG / MAX_SCORE) * 100}%` }}
-                          />
-                        </div>
-
-                        <p className="mt-2 text-xs leading-relaxed text-ink-soft">
-                          {s.note}
-                        </p>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <p className="mt-7 flex items-center gap-2 border-t border-line pt-5 text-xs text-ink-faint">
-                  <span aria-hidden className="h-3 w-px bg-ink-faint" />
-                  The vertical line is the global average, {GLOBAL_AVG}. Every one
-                  of your four scores clears it.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
-      {/* ----------------------------------------------------- THREE CAUSES */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={english.threeCauses.kicker}
-            title={english.threeCauses.title}
-            lead={english.threeCauses.lead}
-          />
-        </Reveal>
-
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
-          {english.threeCauses.causes.map((c, idx) => (
-            <Reveal key={c.id} i={idx}>
-              <article
-                className={cn(
-                  "flex h-full flex-col rounded-[var(--radius-lg)] p-6 transition-all duration-300 lg:p-8",
-                  c.yours
-                    ? "border border-line bg-paper-2 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
-                    : "border-2 border-dashed border-info/40 bg-info-tint/50",
-                )}
+              <DiagramFrame
+                title={`EF EPI 2025 · Philippines, out of ${MAX_SCORE}`}
+                caption={`The dashed line is the global average, ${GLOBAL_AVG}. Every one of the four scores clears it; the highlighted bar is only the weakest of four strong results.`}
+                className="mt-10"
               >
-                <div className="flex items-center justify-between gap-3">
-                  <span
-                    className={cn(
-                      "font-mono text-xs font-semibold",
-                      accentText[c.accent],
-                    )}
-                  >
-                    {c.n}
-                  </span>
-                  {c.yours ? (
-                    <Pill tone={c.accent as Tone}>Yours to fix</Pill>
-                  ) : (
-                    <Pill tone="info">
-                      <ShieldOff size={12} aria-hidden />
-                      Not yours to fix
-                    </Pill>
-                  )}
-                </div>
-
-                <h3 className="mt-5 font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                  {c.title}
-                </h3>
-
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {c.what}
-                </p>
-
-                <p
-                  className={cn(
-                    "mt-5 border-l-2 pl-4 text-sm font-medium leading-relaxed text-ink",
-                    accentBorder[c.accent],
-                  )}
-                >
-                  {c.fix}
-                </p>
-
-                <div className="mt-5 border-t border-line pt-4">
-                  <Source label={c.source.label} url={c.source.url} />
-                </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------- HONESTY */}
-      <section className="bg-ink py-20 text-paper-2 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <Kicker className="text-paper-2/60">No spin</Kicker>
-            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {english.honesty.title}
-            </h2>
-          </Reveal>
-
-          <ol className="mt-12 grid gap-5 lg:grid-cols-3">
-            {english.honesty.points.map((p, idx) => (
-              <Reveal key={p} i={idx} as="li">
-                <div className="flex h-full flex-col rounded-[var(--radius-lg)] border border-white/10 bg-white/[0.03] p-6 lg:p-8">
-                  <span className="font-mono text-xs font-semibold text-signal">
-                    {String(idx + 1).padStart(2, "0")}
-                  </span>
-                  <p className="mt-4 text-sm leading-relaxed text-paper-2/80">{p}</p>
-                </div>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      {/* ---------------------------------------------------------- BANLIST */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={english.banlist.kicker}
-            title={english.banlist.title}
-            lead={english.banlist.lead}
-          />
-        </Reveal>
-
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {english.banlist.categories.map((c, idx) => (
-            <Reveal key={c.id} i={idx % 3}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                <span
-                  aria-hidden
-                  className={cn("h-1 w-10 rounded-full", accentBar[c.accent])}
+                <Bars
+                  data={english.baseline.scores.map((s) => ({
+                    id: s.skill,
+                    label: s.skill,
+                    value: s.value,
+                    note: s.value === weakest ? "weakest of the four" : undefined,
+                    focal: s.value === weakest,
+                  }))}
+                  max={MAX_SCORE}
+                  reference={{ value: GLOBAL_AVG, label: "global average" }}
+                  format={(v) => String(v)}
                 />
-                <h3 className="mt-5 font-display text-xl leading-tight">
-                  {c.label}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-soft">{c.why}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+              </DiagramFrame>
 
-      {/* -------------------------------------------------------------- LAB */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker={english.lab.kicker}
-              title={english.lab.title}
-              lead={english.lab.lead}
-            />
-          </Reveal>
-          <Reveal i={1} className="mt-12">
-            <CommsLab />
-          </Reveal>
-        </div>
-      </section>
+              <Source
+                label={english.baseline.source.label}
+                url={english.baseline.source.url}
+                className="mt-4"
+              />
 
-      {/* ------------------------------------------------------- FRAMEWORKS */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={english.frameworks.kicker}
-            title={english.frameworks.title}
-            lead={english.frameworks.lead}
-          />
-        </Reveal>
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+                {english.baseline.scores.map((s) => (
+                  <li key={s.skill}>
+                    <Card padding="sm" className="h-full">
+                      <div className="flex items-baseline justify-between gap-3">
+                        <Text size="small" tone="ink" as="span" className="font-semibold">
+                          {s.skill}
+                        </Text>
+                        <span className="font-display text-h5 tabular-nums text-ink">
+                          {s.value}
+                        </span>
+                      </div>
+                      <Text size="caption" className="mt-2">
+                        {s.note}
+                      </Text>
+                    </Card>
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-        <div className="mt-12 flex flex-col gap-5">
-          {english.frameworks.items.map((f, idx) => (
-            <Reveal key={f.id} i={idx % 3}>
-              <article className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-                  {/* ---- what it is */}
-                  <div>
-                    <div className="flex items-center gap-4">
-                      <span
-                        className={cn(
-                          "grid h-11 w-11 shrink-0 place-items-center rounded-xl text-white",
-                          accentBar[f.accent],
+            {/* ------------------------------------------------ THREE CAUSES */}
+            <section id="causes">
+              <SectionHeading
+                kicker={english.threeCauses.kicker}
+                title={english.threeCauses.title}
+                lead={english.threeCauses.lead}
+              />
+
+              <div className="mt-12 grid gap-6 lg:grid-cols-3">
+                {english.threeCauses.causes.map((c) => {
+                  const a = accent(c.accent);
+                  return (
+                    <Card key={c.id} as="article" padding="lg">
+                      <div className="flex items-center justify-between gap-3">
+                        <span className={cn("text-caption font-semibold tabular-nums", a.text)}>
+                          {c.n}
+                        </span>
+                        {c.yours ? (
+                          <Badge tone={c.accent as "signal"}>Yours to fix</Badge>
+                        ) : (
+                          <Badge tone="info">
+                            <Icon name="shield-off" size={12} />
+                            Not yours to fix
+                          </Badge>
                         )}
+                      </div>
+
+                      <Heading level={3} size="h4" className="mt-5" balance>
+                        {c.title}
+                      </Heading>
+                      <Text size="small" className="mt-4 flex-1">
+                        {c.what}
+                      </Text>
+                      <Text
+                        size="small"
+                        tone="ink"
+                        className={cn("mt-5 border-l-2 pl-4 font-medium", a.border)}
                       >
-                        <Icon name={f.icon} size={20} aria-hidden />
-                      </span>
-                      <div>
-                        <h3 className="font-display text-2xl leading-tight">
-                          {f.name}
-                        </h3>
-                        <p className="text-xs text-ink-faint">{f.expand}</p>
+                        {c.fix}
+                      </Text>
+                      <div className="mt-5 border-t border-line pt-4">
+                        <Source label={c.source.label} url={c.source.url} />
                       </div>
-                    </div>
+                    </Card>
+                  );
+                })}
+              </div>
+            </section>
 
-                    <p className="mt-6 text-xs font-semibold tracking-wide text-ink-faint uppercase">
-                      Use it for
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                      {f.use}
-                    </p>
+            {/* ----------------------------------------------------- HONESTY */}
+            <section id="honesty">
+              <SectionHeading kicker="No spin" title={english.honesty.title} />
+              <StepList className="mt-12">
+                {english.honesty.points.map((p, idx) => (
+                  <Step key={p} n={idx + 1} title={p} />
+                ))}
+              </StepList>
+            </section>
 
-                    <p
-                      className={cn(
-                        "mt-5 border-l-2 pl-4 text-sm leading-relaxed text-ink",
-                        accentBorder[f.accent],
-                      )}
-                    >
-                      {f.rule}
-                    </p>
+            {/* ----------------------------------------------------- BANLIST */}
+            <section id="banlist">
+              <SectionHeading
+                kicker={english.banlist.kicker}
+                title={english.banlist.title}
+                lead={english.banlist.lead}
+              />
+              <CardGrid cols={3} className="mt-12">
+                {english.banlist.categories.map((c) => {
+                  const a = accent(c.accent);
+                  return (
+                    <Card key={c.id} as="article">
+                      <span aria-hidden className={cn("h-1 w-10 rounded-pill", a.fill)} />
+                      <Heading level={3} size="h4" className="mt-5">
+                        {c.label}
+                      </Heading>
+                      <Text size="small" className="mt-3">
+                        {c.why}
+                      </Text>
+                    </Card>
+                  );
+                })}
+              </CardGrid>
+            </section>
 
-                    <ol className="mt-6 flex flex-col gap-2.5 border-t border-line pt-5">
-                      {f.anatomy.map((a, i) => (
-                        <li key={a} className="flex gap-3 text-sm text-ink-soft">
-                          <span
-                            aria-hidden
-                            className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md bg-paper-3 font-mono text-[10px] font-semibold text-ink"
+            {/* --------------------------------------------------------- LAB */}
+            <section id="lab">
+              <SectionHeading
+                kicker={english.lab.kicker}
+                title={english.lab.title}
+                lead={english.lab.lead}
+              />
+              <Card padding="lg" className="mt-12">
+                <CommsLab />
+              </Card>
+            </section>
+
+            {/* -------------------------------------------------- FRAMEWORKS */}
+            <section id="frameworks">
+              <SectionHeading
+                kicker={english.frameworks.kicker}
+                title={english.frameworks.title}
+                lead={english.frameworks.lead}
+              />
+
+              <div className="mt-12 flex flex-col gap-5">
+                {english.frameworks.items.map((f) => {
+                  const a = accent(f.accent);
+                  return (
+                    <Card key={f.id} as="article" padding="lg">
+                      <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+                        <div>
+                          <div className="flex items-center gap-4">
+                            <span
+                              className={cn(
+                                "grid h-11 w-11 shrink-0 place-items-center rounded-sm",
+                                a.fill,
+                              )}
+                            >
+                              <Icon name={f.icon} size={20} />
+                            </span>
+                            <div>
+                              <Heading level={3} size="h4">
+                                {f.name}
+                              </Heading>
+                              <Text size="caption" tone="faint">
+                                {f.expand}
+                              </Text>
+                            </div>
+                          </div>
+
+                          <Kicker className="mt-6">Use it for</Kicker>
+                          <Text size="small" className="mt-1.5">
+                            {f.use}
+                          </Text>
+
+                          <Text
+                            size="small"
+                            tone="ink"
+                            className={cn("mt-5 border-l-2 pl-4", a.border)}
                           >
-                            {i + 1}
-                          </span>
-                          <span className="leading-snug">{a}</span>
-                        </li>
-                      ))}
-                    </ol>
+                            {f.rule}
+                          </Text>
 
-                    {f.source && (
-                      <div className="mt-6">
-                        <Source label={f.source.label} url={f.source.url} />
+                          <ol className="mt-6 flex flex-col gap-2.5 border-t border-line pt-5">
+                            {f.anatomy.map((line, i) => (
+                              <li key={line} className="flex gap-3">
+                                <span
+                                  aria-hidden
+                                  className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-sm bg-band text-caption font-semibold tabular-nums text-ink"
+                                >
+                                  {i + 1}
+                                </span>
+                                <Text size="small" as="span">
+                                  {line}
+                                </Text>
+                              </li>
+                            ))}
+                          </ol>
+
+                          {f.source && (
+                            <Source label={f.source.label} url={f.source.url} className="mt-6" />
+                          )}
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                          <Callout tone="coral" title="Before, weak">
+                            <span className="whitespace-pre-line italic">{f.before}</span>
+                          </Callout>
+
+                          <div className="flex items-center gap-2 pl-1">
+                            <Icon name="arrow-right" size={14} className="text-ink-faint" />
+                            <Text size="caption" tone="faint">
+                              Same facts. Same person. Different shape.
+                            </Text>
+                          </div>
+
+                          <Callout tone="verified" title="After, strong" className="flex-1">
+                            <span className="whitespace-pre-line font-medium text-ink">
+                              {f.after}
+                            </span>
+                          </Callout>
+                        </div>
                       </div>
-                    )}
+                    </Card>
+                  );
+                })}
+              </div>
+            </section>
+
+            {/* -------------------------------------------------- ESTIMATING */}
+            <section id="estimating">
+              <Card padding="lg">
+                <div className="grid gap-8 lg:grid-cols-2 lg:items-center">
+                  <div>
+                    <Kicker>{english.estimating.kicker}</Kicker>
+                    <Heading level={2} size="h3" className="mt-5" balance>
+                      {english.estimating.title}
+                    </Heading>
+                    <Text size="small" className="mt-4 max-w-md">
+                      {english.estimating.body}
+                    </Text>
                   </div>
-
-                  {/* ---- before / after */}
-                  <div className="flex flex-col gap-4">
-                    <div className="rounded-2xl border border-signal/25 bg-signal-tint/60 p-5">
-                      <p className="kicker text-signal-deep">Before, weak</p>
-                      <p className="mt-3 text-sm leading-relaxed whitespace-pre-line text-ink-soft italic">
-                        {f.before}
-                      </p>
-                    </div>
-
-                    <div className="flex items-center gap-2 pl-1 text-ink-faint">
-                      <ArrowRight size={14} aria-hidden />
-                      <span className="text-xs font-medium">
-                        Same facts. Same person. Different shape.
-                      </span>
-                    </div>
-
-                    <div className="flex-1 rounded-2xl border-2 border-verified/40 bg-verified-tint p-5 shadow-[var(--shadow-sm)]">
-                      <p className="kicker text-verified">After, strong</p>
-                      <p className="mt-3 text-sm leading-relaxed whitespace-pre-line font-medium text-ink">
-                        {f.after}
-                      </p>
-                    </div>
+                  <div className="flex flex-col gap-3">
+                    <Callout tone="coral" title="Never">
+                      {english.estimating.bad}
+                    </Callout>
+                    <Callout tone="verified" title="Always">
+                      {english.estimating.good}
+                    </Callout>
                   </div>
                 </div>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+              </Card>
+            </section>
 
-      {/* ------------------------------------------------------- ESTIMATING */}
-      <section className="container-x pb-20 lg:pb-24">
-        <Reveal>
-          <div className="grid gap-8 rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:grid-cols-[1fr_1fr] lg:items-center lg:p-10">
-            <div>
-              <Kicker>{english.estimating.kicker}</Kicker>
-              <h2 className="mt-5 font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                {english.estimating.title}
-              </h2>
-              <p className="mt-4 max-w-md text-sm leading-relaxed text-ink-soft">
-                {english.estimating.body}
-              </p>
-            </div>
+            {/* ---------------------------------------------------- SPEAKING */}
+            <section id="speaking">
+              <SectionHeading
+                kicker={english.speaking.kicker}
+                title={english.speaking.title}
+                lead={english.speaking.lead}
+              />
 
-            <div className="flex flex-col gap-3">
-              <div className="rounded-2xl border border-signal/25 bg-signal-tint/60 p-5">
-                <p className="kicker text-signal-deep">Never</p>
-                <p className="mt-2 font-display text-lg leading-snug text-ink-soft">
-                  {english.estimating.bad}
-                </p>
-              </div>
-              <div className="rounded-2xl border-2 border-verified/40 bg-verified-tint p-5">
-                <p className="kicker text-verified">Always</p>
-                <p className="mt-2 font-display text-lg leading-snug text-ink">
-                  {english.estimating.good}
-                </p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+              <ol className="mt-12 flex flex-col gap-5">
+                {english.speaking.priorities.map((p) => {
+                  const a = accent(p.accent);
+                  return (
+                    <li key={p.n}>
+                      <Card as="article" padding="lg">
+                        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr]">
+                          <div>
+                            <div className="flex items-center gap-3">
+                              <span className="text-caption font-semibold tabular-nums text-ink-faint">
+                                {p.n}
+                              </span>
+                              <span className={cn("text-caption font-semibold", a.text)}>
+                                Impact: {p.impact}
+                              </span>
+                            </div>
+                            <Heading level={3} size="h3" className="mt-4" balance>
+                              {p.title}
+                            </Heading>
+                          </div>
 
-      {/* --------------------------------------------------------- SPEAKING */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker={english.speaking.kicker}
-              title={english.speaking.title}
-              lead={english.speaking.lead}
-            />
-          </Reveal>
+                          <div className="flex flex-col gap-4">
+                            <Text size="small">{p.what}</Text>
+                            <Card padding="sm">
+                              <Text size="small" tone="ink">
+                                <span className="font-semibold">The drill:</span> {p.drill}
+                              </Text>
+                            </Card>
+                          </div>
+                        </div>
+                      </Card>
+                    </li>
+                  );
+                })}
+              </ol>
 
-          <ol className="mt-12 flex flex-col gap-5">
-            {english.speaking.priorities.map((p, idx) => (
-              <Reveal key={p.n} i={idx % 3} as="li">
-                <article className="grid gap-6 rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:grid-cols-[0.8fr_1.2fr] lg:p-8">
-                  <div>
-                    <div className="flex items-center gap-3">
-                      <span
-                        aria-hidden
-                        className={cn(
-                          "h-2.5 w-2.5 rounded-full",
-                          accentBar[p.accent],
-                        )}
-                      />
-                      <span className="font-mono text-xs font-semibold text-ink-faint">
-                        {p.n}
-                      </span>
-                      <span
-                        className={cn(
-                          "text-xs font-semibold",
-                          accentText[p.accent],
-                        )}
-                      >
-                        Impact: {p.impact}
-                      </span>
-                    </div>
-                    <h3 className="mt-4 font-display text-[length:var(--text-h3)] leading-snug text-balance">
-                      {p.title}
-                    </h3>
-                  </div>
-
-                  <div className="flex flex-col gap-4">
-                    <p className="text-sm leading-relaxed text-ink-soft">{p.what}</p>
-                    <p className="rounded-2xl border border-line bg-paper p-4 text-sm leading-relaxed text-ink">
-                      <strong className="font-semibold">The drill:</strong> {p.drill}
-                    </p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-          </ol>
-
-          <Reveal i={1}>
-            <div className="mt-8">
               <Source
                 label={english.speaking.source.label}
                 url={english.speaking.source.url}
+                className="mt-8"
               />
-            </div>
-          </Reveal>
+            </section>
+
+            {/* --------------------------------------------------- RESOURCES */}
+            <section id="resources">
+              <SectionHeading
+                kicker={english.resources.kicker}
+                title={english.resources.title}
+                lead={english.resources.lead}
+              />
+              <CardGrid cols={3} className="mt-12">
+                {english.resources.items.map((r) => {
+                  const a = accent(r.tone);
+                  return (
+                    <Card key={r.name} as="article">
+                      <div className="flex items-start justify-between gap-3">
+                        <Heading level={3} size="h4">
+                          {r.name}
+                        </Heading>
+                        <Badge tone={r.tone as "signal"}>
+                          {r.tone === "verified" ? "Open" : r.tone === "caution" ? "Caveat" : "Paid"}
+                        </Badge>
+                      </div>
+
+                      <Text size="small" as="p" className={cn("mt-4 font-semibold", a.text)}>
+                        {r.cost}
+                      </Text>
+                      <Text size="small" className="mt-4 flex-1">
+                        {r.what}
+                      </Text>
+                      <Text size="small" tone="ink" className="mt-4 border-l-2 border-line-strong pl-4">
+                        {r.use}
+                      </Text>
+
+                      <a
+                        href={r.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                      >
+                        Open {r.name}
+                        <Icon name="arrow-up-right" size={14} />
+                      </a>
+                    </Card>
+                  );
+                })}
+              </CardGrid>
+            </section>
+          </div>
         </div>
-      </section>
+      </Section>
 
-      {/* -------------------------------------------------------- RESOURCES */}
-      <section className="container-x py-20 lg:py-28">
-        <Reveal>
-          <SectionHeading
-            kicker={english.resources.kicker}
-            title={english.resources.title}
-            lead={english.resources.lead}
-          />
-        </Reveal>
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/english" /> */}
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {english.resources.items.map((r, idx) => (
-            <Reveal key={r.name} i={idx % 3}>
-              <article
-                className={cn(
-                  "flex h-full flex-col rounded-2xl border p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
-                  r.tone === "signal"
-                    ? "border-signal/40 bg-signal-tint/60"
-                    : "border-line bg-paper-2",
-                )}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="font-display text-xl leading-tight">{r.name}</h3>
-                  <Pill tone={r.tone as Tone}>
-                    {r.tone === "verified"
-                      ? "Open"
-                      : r.tone === "caution"
-                        ? "Caveat"
-                        : "Paid"}
-                  </Pill>
-                </div>
-
-                <p
-                  className={cn(
-                    "mt-4 text-sm font-semibold leading-snug",
-                    accentText[r.tone],
-                  )}
-                >
-                  {r.cost}
-                </p>
-
-                <p className="mt-4 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {r.what}
-                </p>
-
-                <p className="mt-4 border-l-2 border-line-strong pl-4 text-sm leading-relaxed text-ink">
-                  {r.use}
-                </p>
-
-                <a
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-sm font-semibold text-ink transition-colors hover:text-signal"
-                >
-                  <span className="link-sweep">Open {r.name}</span>
-                  <ExternalLink
-                    size={14}
-                    className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                  />
-                </a>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }
