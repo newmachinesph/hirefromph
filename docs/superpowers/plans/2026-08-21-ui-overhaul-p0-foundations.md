@@ -1019,3 +1019,17 @@ $G commit -m "docs(plan): phase 0 complete"
 - Spec §4.1 type scale → Task 3 `@theme` block (all 11 roles + button/nav handled by primitives in Phase 1). §4.2 colour → Task 3 `:root` + Task 1 accent map. §4.3 radii/shadows → Task 3. §4.6 icons → constraint only (migration in Phase 5). §10 skip link/focus ring → Task 4 and Task 3. §2 logo row → Task 5. §13 Vitest → Task 1. §15 docs → Task 6.
 - Names used consistently: `ACCENT`, `accent()`, `isAccent`, `--font-inter`, `--font-cabinet`, `text-primary`, `bg-*-fill`.
 - Deliberate deviations from the spec: semantic token naming (bare = text value) — recorded in Global Constraints and BUILD_GUIDE.
+
+## Status
+
+- **Date:** 2026-08-21
+- **Last task commit SHA:** `42779ea` (docs(plan): correct contrast pair count (37))
+- **Phase exit gate:** `npm run verify:all && npm test && npm run build` — all green.
+  - `verify:contrast`: Contrast OK — **37 pairs** pass.
+  - `verify:claims`: 17 dated pages, all verified within 6 months (exit 0).
+  - `lint` (eslint): clean, no output.
+  - `tsc --noEmit`: clean, no output.
+  - `npm test`: `node --test` 12/12 assertions-suites passed (calculators, rate-math, simulator-math, storage) + Vitest `lib/accent.test.ts` 4/4 tests passed.
+  - `npm run build`: Next.js 16.2.10 (Turbopack) compiled successfully; 40/40 static pages generated; 39 routes listed in the route table.
+- **Font check:** `.next/static/media` contains 3 Cabinet Grotesk woff2 files (`CabinetGrotesk_Bold`, `CabinetGrotesk_Extrabold`, `CabinetGrotesk_Medium`) and 6 additional hashed woff2 files that are the self-hosted Inter variable font — `next/font/google` hashes Google-font filenames without embedding the font name (unlike `next/font/local`, which preserves the source stem), so they don't literally match a `grep -i inter`, but `lib/fonts.ts` confirms Inter is the only `next/font/google` call in the repo and no other font consumes those files.
+- **Phase 0 (Tasks 1–7): complete.**
