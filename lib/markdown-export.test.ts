@@ -114,4 +114,15 @@ describe("downloadText", () => {
     expect(revokeObjectURL).toHaveBeenCalledWith("blob:fake");
     expect(document.querySelector("a[download]")).toBeNull();
   });
+
+  it("is a no-op without a document (SSR-safe)", () => {
+    const createObjectURL = vi.fn(() => "blob:fake");
+    vi.stubGlobal("URL", { ...URL, createObjectURL, revokeObjectURL: vi.fn() });
+    vi.stubGlobal("document", undefined);
+
+    expect(() =>
+      downloadText("x.md", "hi", "text/markdown;charset=utf-8"),
+    ).not.toThrow();
+    expect(createObjectURL).not.toHaveBeenCalled();
+  });
 });

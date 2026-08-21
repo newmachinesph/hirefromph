@@ -58,6 +58,7 @@ export function safeFilename(value: string, extension: string): string {
 }
 
 export function downloadText(filename: string, text: string, mime: ExportMime): void {
+  if (typeof document === "undefined" || typeof URL === "undefined" || typeof URL.createObjectURL !== "function") return;
   const url = URL.createObjectURL(new Blob([text], { type: mime }));
   const anchor = document.createElement("a");
   anchor.href = url;
