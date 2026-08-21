@@ -43,7 +43,7 @@ describe("SearchPalette", () => {
     push.mockClear();
     const { user, input } = await openPalette();
     // "stage" hits the five stage descriptions in library.json order:
-    // Start here, Get Hired, Deliver, Level Up, Own.
+    // Start Right, Get Hired, Deliver, Level Up, Own.
     await user.type(input, "stage");
     expect(screen.getAllByRole("option")).toHaveLength(5);
 

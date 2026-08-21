@@ -43,7 +43,7 @@
         {
           "title": "The path",
           "links": [
-            { "label": "Start here", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
+            { "label": "Start Right", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
             { "label": "Get Hired", "href": "/get-hired", "desc": "Stage 2. Source leads, apply, and close the offer." },
             { "label": "Deliver", "href": "/deliver", "desc": "Stage 3. Onboard, write SOPs, keep the client." },
             { "label": "Level Up", "href": "/level-up", "desc": "Stage 4. Specialise, automate, and raise your rate." },
@@ -121,7 +121,7 @@
       "title": "The path",
       "up": { "label": "Your path", "href": "/path" },
       "links": [
-        { "label": "Start here", "href": "/start" },
+        { "label": "Start Right", "href": "/start" },
         { "label": "Get Hired", "href": "/get-hired" },
         { "label": "Deliver", "href": "/deliver" },
         { "label": "Level Up", "href": "/level-up" },
