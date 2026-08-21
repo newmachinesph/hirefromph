@@ -20,14 +20,36 @@ model's presets (1024x1536, 1536x1024); the optimise step crops to each `ratio`.
 
 ## Art direction
 
-Photoreal editorial photography, 35mm or 50mm, natural window light, shallow
-but not creamy depth of field, honest skin and fabric texture, neutral-warm
-grade. Filipino subjects of varied ages and builds in real Philippine settings:
+Documentary editorial photography — frames a human photographer took on
+assignment, never a render. 35mm or 50mm prime, available natural light only,
+neutral untouched colour, subtle film grain and a slight natural vignette,
+off-centre composition, and the real imperfections of a room someone uses:
+dust, smudges, tangled cable, worn edges, something set down crooked. No HDR,
+no colour grading, no lens flare, no bokeh balls, no studio look, no pastel
+props, no perfectly tidy surfaces.
+
+Filipino subjects of varied ages and builds in real Philippine settings:
 apartment corner desks, provincial homes with capiz or jalousie windows,
-Cebu/Davao co-working spaces, a provincial street at dusk. Tidy but lived-in.
-Subjects work; they never pose or look at the camera. No lens flare, neon,
-screen-glow faces, watermarks, logos, flags, or readable text on any screen or
-page (UI and documents are rendered blurred or abstract).
+Cebu/Davao co-working spaces, a low-rise provincial street under flat overcast
+daylight (`cta-band`). Tidy but lived-in. Subjects work; they never pose. Faces
+are turned away or in profile — no direct eye contact, no symmetrical front-on
+portraits. Hands rest or are cropped by the frame, exactly five fingers when
+visible, nothing held up mid-air.
+
+Four subjects carry the "human-made" direction hardest: `home-hero`, a woman
+seen from three-quarters behind at a cluttered home desk in raking morning
+light; `home-standard`, a close over-the-shoulder view of a well-used notebook
+with handwritten notes; `stage-level-up`, a man reading a well-thumbed printed
+manual in profile under overcast light; and `library-hero`, a desk corner of
+notebooks, spiral-bound manuals and torn paper page tabs shot at an oblique
+angle.
+
+Text is present in these scenes as real ink and real screen content — blank
+sheets and blank books read as staged renders. It is made unreadable only by
+honest optics: too small, too far, or outside the plane of focus. Never a
+model-blurred smear, never squiggles standing in for letterforms, and never
+legible. No signage, no sticky notes bearing writing, no watermarks, no logos,
+no flags.
 
 ## Honesty rules
 
