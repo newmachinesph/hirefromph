@@ -31,7 +31,7 @@ export function HeaderCta() {
 
   return (
     <div className="hidden sm:block">
-      <Button href={NAV_CTA.href} variant="primary" size="md">
+      <Button href={NAV_CTA.href} variant="primary" size="lg">
         {NAV_CTA.label}
       </Button>
     </div>
