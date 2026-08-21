@@ -7,7 +7,7 @@ import { StudyTimer } from "@/components/practice/study-timer";
 describe("StudyTimer", () => {
   beforeEach(() => {
     localStorage.clear();
-    vi.useFakeTimers();
+    vi.useFakeTimers({ shouldAdvanceTime: true });
     vi.setSystemTime(new Date(2026, 7, 21, 9, 0, 0));
   });
 
