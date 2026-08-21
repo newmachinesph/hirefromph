@@ -1,13 +1,11 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
-  DEFAULT_READER,
   EMPTY_QUIZ,
   PRACTICE_KEYS,
   parseDeckState,
   parseJournalState,
   parsePlanDayDates,
   parseQuizState,
-  parseReaderPrefs,
   parseTimerState,
   readSlot,
   writeSlot,
@@ -26,7 +24,7 @@ describe("PRACTICE_KEYS", () => {
     for (const key of Object.values(PRACTICE_KEYS)) {
       expect(key.startsWith("hfph.practice.")).toBe(true);
     }
-    expect(new Set(Object.values(PRACTICE_KEYS)).size).toBe(6);
+    expect(new Set(Object.values(PRACTICE_KEYS)).size).toBe(5);
   });
 });
 
@@ -98,22 +96,6 @@ describe("parseJournalState", () => {
         "2026-W35": { text: 7, updated: "2026-08-28" },
       }),
     ).toEqual({ "2026-W34": { text: "Found one client off-board.", updated: "2026-08-21" } });
-  });
-});
-
-describe("parseReaderPrefs", () => {
-  it("returns the defaults for anything unusable", () => {
-    expect(parseReaderPrefs(undefined)).toEqual(DEFAULT_READER);
-    expect(DEFAULT_READER).toEqual({ size: "md", comfort: false, lowData: false });
-  });
-
-  it("keeps valid fields and repairs invalid ones", () => {
-    expect(parseReaderPrefs({ size: "lg", comfort: true, lowData: "yes" })).toEqual({
-      size: "lg",
-      comfort: true,
-      lowData: false,
-    });
-    expect(parseReaderPrefs({ size: "enormous" }).size).toBe("md");
   });
 });
 

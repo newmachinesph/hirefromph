@@ -5,18 +5,15 @@ import reflectionData from "@/data/reflection.json";
 import { isoWeekKey, todayISO, type IsoDate } from "@/lib/dates";
 import { usePath } from "@/lib/path-context";
 import {
-  DEFAULT_READER,
   EMPTY_JOURNAL,
   EMPTY_PLAN_DAYS,
   PRACTICE_KEYS,
   parseJournalState,
   parsePlanDayDates,
-  parseReaderPrefs,
   readSlot,
   writeSlot,
   type JournalEntry,
   type PlanDayDates,
-  type ReaderPrefs,
 } from "@/lib/practice-store";
 
 /**
@@ -131,43 +128,6 @@ export function usePlanDays(): {
     markPlanDay,
     hydrated: hydrated && pathHydrated && today !== "",
   };
-}
-
-const READER_CLASSES = ["text-size-sm", "text-size-md", "text-size-lg"] as const;
-
-function applyReaderClasses(prefs: ReaderPrefs): void {
-  const html = document.documentElement;
-  for (const className of READER_CLASSES) html.classList.remove(className);
-  html.classList.add(`text-size-${prefs.size}`);
-  html.classList.toggle("reading-comfort", prefs.comfort);
-  html.classList.toggle("low-data", prefs.lowData);
-}
-
-/**
- * Reader preferences plus the three `<html>` classes they drive. The pre-paint
- * script in `app/layout.tsx` sets the same classes before React runs; this
- * hook is what keeps them in step afterwards.
- */
-export function useReaderPrefs(): {
-  prefs: ReaderPrefs;
-  setPrefs: (next: ReaderPrefs) => void;
-  hydrated: boolean;
-} {
-  const { value, set, hydrated } = usePracticeSlot(
-    PRACTICE_KEYS.reader,
-    DEFAULT_READER,
-    parseReaderPrefs,
-  );
-
-  const setPrefs = useCallback(
-    (next: ReaderPrefs) => {
-      set(next);
-      applyReaderClasses(next);
-    },
-    [set],
-  );
-
-  return { prefs: value, setPrefs, hydrated };
 }
 
 const PROMPTS = reflectionData.prompts;

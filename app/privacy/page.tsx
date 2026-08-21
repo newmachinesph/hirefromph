@@ -108,13 +108,15 @@ export default function PrivacyPage() {
         <SectionHeading
           kicker="Cookies · Opting out"
           title="You can switch the analytics off"
-          lead="The only cookies here are the ones Google Analytics sets. You can refuse them and the site works exactly the same."
+          lead="The only cookies here are the ones Google Analytics sets, and it does not start until you accept the notice at the bottom of the page. Decline it and the site works exactly the same."
         />
         <Card className="mt-8 max-w-3xl">
           <Text size="small">
-            Two ways to opt out: clear or block cookies in your browser
-            settings, or install Google&rsquo;s official opt-out add-on, which
-            stops Analytics on every site you visit, not just this one.
+            Press Decline on the notice and Analytics never loads. Changed
+            your mind later? Clear this site&rsquo;s cookies and the notice
+            comes back. You can also block cookies in your browser settings,
+            or install Google&rsquo;s official opt-out add-on, which stops
+            Analytics on every site you visit, not just this one.
           </Text>
           <div className="mt-5 flex flex-wrap gap-x-8 gap-y-2">
             <Out href="https://tools.google.com/dlpage/gaoptout">
