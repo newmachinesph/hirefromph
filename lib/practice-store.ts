@@ -1,14 +1,13 @@
 /**
  * The practice layer's localStorage namespace (spec §5.2b, §12).
  *
- * Six independent slots under `hfph.practice.*`. Independent because a quota
+ * Five independent slots under `hfph.practice.*`. Independent because a quota
  * error or a corrupt write in one feature must never cost the visitor their
- * journal, and because the pre-paint reader script (app/layout.tsx) has to
- * parse the reader slot before anything else on the page runs.
+ * journal.
  *
  * Every parser is total: it keeps the entries it recognises, drops the ones it
  * does not, and returns the empty value rather than throwing. Nothing here
- * reads or writes outside these six keys, and nothing here touches the
+ * reads or writes outside these five keys, and nothing here touches the
  * `hfph.path.v1` key that `lib/path-context.tsx` owns.
  */
 
@@ -19,7 +18,6 @@ export const PRACTICE_KEYS = {
   quiz: "hfph.practice.quiz.v1",
   deck: "hfph.practice.deck.v1",
   journal: "hfph.practice.journal.v1",
-  reader: "hfph.practice.reader.v1",
   planDays: "hfph.practice.plan-days.v1",
   timer: "hfph.practice.timer.v1",
 } as const;
@@ -124,26 +122,6 @@ export function parseJournalState(raw: unknown): JournalState {
     out[week] = { text: value.text, updated: value.updated };
   }
   return out;
-}
-
-/* ---------------------------------------------------------------- */
-/*  Reader preferences                                               */
-/* ---------------------------------------------------------------- */
-
-export type FontSize = "sm" | "md" | "lg";
-export type ReaderPrefs = { size: FontSize; comfort: boolean; lowData: boolean };
-
-export const DEFAULT_READER: ReaderPrefs = { size: "md", comfort: false, lowData: false };
-
-const FONT_SIZES: readonly FontSize[] = ["sm", "md", "lg"];
-
-export function parseReaderPrefs(raw: unknown): ReaderPrefs {
-  if (!isRecord(raw)) return DEFAULT_READER;
-  return {
-    size: FONT_SIZES.includes(raw.size as FontSize) ? (raw.size as FontSize) : DEFAULT_READER.size,
-    comfort: raw.comfort === true,
-    lowData: raw.lowData === true,
-  };
 }
 
 /* ---------------------------------------------------------------- */

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Container } from "@/components/layout";
-import { ReaderControls } from "@/components/practice";
 import site from "@/data/site.json";
 import { NAV, NAV_GROUPS, isLive, isMenu, type NavLink, type NavMenu } from "@/lib/nav";
 import { Logo } from "./logo";
@@ -59,9 +58,6 @@ export function SiteFooter() {
         </div>
 
         <div className="border-t border-line py-8">
-          <div className="mb-6">
-            <ReaderControls layout="row" />
-          </div>
           <p className="text-caption text-ink-faint">
             {site.brand}. {site.footer.note}
           </p>

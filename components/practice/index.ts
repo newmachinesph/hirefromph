@@ -7,7 +7,6 @@ export {
   useJournalWeek,
   usePlanDays,
   usePracticeSlot,
-  useReaderPrefs,
   useToday,
 } from "./hooks";
 export { Journal } from "./journal";
@@ -15,7 +14,6 @@ export { PracticeFooter } from "./practice-footer";
 export { PracticeHub } from "./practice-hub";
 export { Quiz, getQuestions } from "./quiz";
 export { QuizRunner, type QuizQuestion } from "./quiz-runner";
-export { READER_SCRIPT, ReaderControls } from "./reader-controls";
 export { Scenario } from "./scenario";
 export { Streak } from "./streak";
 export { StudyTimer, SHAPES, type SessionShape } from "./study-timer";

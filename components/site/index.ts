@@ -10,3 +10,4 @@ export { BackToTop } from "./back-to-top";
 export { SWRegister } from "./sw-register";
 export { MotionProvider } from "./motion-provider";
 export { JsonLd } from "./json-ld";
+export { CookieNotice } from "./cookie-consent";

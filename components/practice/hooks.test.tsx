@@ -2,11 +2,10 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { PRACTICE_KEYS, parseDeckState, EMPTY_DECK } from "@/lib/practice-store";
-import { usePracticeSlot, useJournalWeek, useReaderPrefs } from "@/components/practice/hooks";
+import { usePracticeSlot, useJournalWeek } from "@/components/practice/hooks";
 
 beforeEach(() => {
   localStorage.clear();
-  document.documentElement.className = "";
 });
 
 function SlotHarness() {
@@ -52,34 +51,6 @@ describe("usePracticeSlot", () => {
     render(<SlotHarness />);
     expect(await screen.findByText("true")).toBeInTheDocument();
     expect(screen.getByTestId("count")).toHaveTextContent("0");
-  });
-});
-
-function ReaderHarness() {
-  const { prefs, setPrefs } = useReaderPrefs();
-  return (
-    <button type="button" onClick={() => setPrefs({ ...prefs, size: "lg", lowData: true })}>
-      Go large
-    </button>
-  );
-}
-
-describe("useReaderPrefs", () => {
-  it("puts the stored classes on <html> and keeps them in step with changes", async () => {
-    const user = userEvent.setup();
-    render(<ReaderHarness />);
-    await user.click(screen.getByRole("button", { name: "Go large" }));
-
-    const html = document.documentElement;
-    expect(html.classList.contains("text-size-lg")).toBe(true);
-    expect(html.classList.contains("text-size-md")).toBe(false);
-    expect(html.classList.contains("low-data")).toBe(true);
-    expect(html.classList.contains("reading-comfort")).toBe(false);
-    expect(JSON.parse(localStorage.getItem(PRACTICE_KEYS.reader) ?? "{}")).toEqual({
-      size: "lg",
-      comfort: false,
-      lowData: true,
-    });
   });
 });
 

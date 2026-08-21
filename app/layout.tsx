@@ -1,17 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { BASE_URL } from "./sitemap";
 import { inter, cabinet } from "@/lib/fonts";
 import { PathProvider } from "@/lib/path-context";
 import {
   BackToTop,
+  CookieNotice,
   MotionProvider,
   SiteFooter,
   SiteHeader,
   SWRegister,
 } from "@/components/site";
-import { READER_SCRIPT } from "@/components/practice/reader-controls";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -90,7 +89,6 @@ export default function RootLayout({
       className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
-        <script dangerouslySetInnerHTML={{ __html: READER_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -109,8 +107,8 @@ export default function RootLayout({
           </MotionProvider>
         </PathProvider>
         <SWRegister />
+        <CookieNotice />
       </body>
-      <GoogleAnalytics gaId="G-41TT5P31BY" />
     </html>
   );
 }
