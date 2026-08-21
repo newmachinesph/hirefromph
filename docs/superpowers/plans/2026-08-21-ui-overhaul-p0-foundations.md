@@ -716,7 +716,7 @@ console.log(`Contrast OK — ${checked} pairs pass.`);
 - [ ] **Step 3: Run the contrast gate**
 
 Run: `npm run verify:contrast`
-Expected: `Contrast OK — 38 pairs pass.` If a pair fails, the hex in `globals.css` is wrong — compare against the Global Constraints list; do not lower the threshold.
+Expected: `Contrast OK — 37 pairs pass.` (23 text + 9 white-on-fill + 4 ink-on-fill + 1 UI) If a pair fails, the hex in `globals.css` is wrong — compare against the Global Constraints list; do not lower the threshold.
 
 - [ ] **Step 4: Build and eyeball**
 
@@ -997,7 +997,7 @@ Run:
 ```bash
 npm run verify:all && npm test && npm run build
 ```
-Expected: contrast OK (38 pairs), claims check exits 0 (warnings allowed), lint clean, `tsc` clean, node tests + 4 vitest tests pass, build succeeds with every route listed.
+Expected: contrast OK (37 pairs), claims check exits 0 (warnings allowed), lint clean, `tsc` clean, node tests + 4 vitest tests pass, build succeeds with every route listed.
 
 - [ ] **Step 2: Check the font files shipped**
 
