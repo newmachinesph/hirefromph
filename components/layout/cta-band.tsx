@@ -34,7 +34,7 @@ export function CtaBand({
               ratio="21/9"
               radius="none"
               sizes="100vw"
-              className="h-full [&>div]:h-full [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:opacity-20 [&_figcaption]:absolute [&_figcaption]:right-4 [&_figcaption]:bottom-3 [&_figcaption]:text-on-navy/70"
+              className="h-full [&>div]:h-full [&>div]:bg-transparent [&_img]:h-full [&_img]:w-full [&_img]:object-cover [&_img]:opacity-20 [&_figcaption]:absolute [&_figcaption]:right-4 [&_figcaption]:bottom-3 [&_figcaption]:text-on-navy/70"
             />
           ) : (
             media.node
