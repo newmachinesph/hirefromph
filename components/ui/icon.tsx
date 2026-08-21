@@ -138,12 +138,27 @@ import {
   YoutubeLogo,
 } from "@phosphor-icons/react";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
+import { ICON_NAMES, type IconName } from "./icon-registry";
+
+// Re-exported for existing importers (`components/icon.tsx`, `icon.test.tsx`,
+// direct `@/components/ui/icon` imports). A Server Component should prefer
+// `@/components/ui` (whose barrel points `ICON_NAMES`/`IconName` at
+// `./icon-registry` directly) or `@/components/ui/icon-registry` itself —
+// going through this client module still yields a client-reference proxy
+// for a server caller.
+export { ICON_NAMES, type IconName };
 
 /**
  * Hire From PH icon set — Phosphor Icons resolved by the kebab names stored in JSON.
  * Static named imports + this direct kebab -> component map let the bundler
  * tree-shake to only the icons below instead of shipping the whole package.
  * Anything not listed falls back to Sparkle.
+ *
+ * Lives here (not in `./icon-registry`) because `@phosphor-icons/react`
+ * calls `createContext` at module scope, so anything importing its named
+ * icon exports must sit behind a `"use client"` boundary. Keep this map's
+ * keys in sync with `ICON_NAMES` in `./icon-registry` — `icon.test.tsx`
+ * checks it.
  */
 const REGISTRY: Record<string, PhosphorIcon> = {
   armchair: Armchair,
@@ -296,8 +311,6 @@ const REGISTRY: Record<string, PhosphorIcon> = {
   youtube: YoutubeLogo,
   zap: Lightning,
 };
-
-export const ICON_NAMES: readonly string[] = Object.keys(REGISTRY).sort();
 
 export type IconProps = {
   /** Kebab name as stored in `data/*.json`. Unknown names fall back to Sparkle. */
