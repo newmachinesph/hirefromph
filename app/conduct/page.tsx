@@ -280,7 +280,7 @@ export default function ConductPage() {
       </section>
 
       {/* ---------------------------------------------------------- HONESTY */}
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <div className="mx-auto max-w-3xl rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-8 lg:p-10">
             <Kicker>{conduct.honesty.title}</Kicker>

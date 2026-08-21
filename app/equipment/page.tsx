@@ -213,7 +213,7 @@ export default function EquipmentPage() {
       </section>
 
       {/* ---------------------------------------------------------- CLOSE */}
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
             <Pill tone="verified">

@@ -93,7 +93,7 @@ export default function PlanPage() {
         </div>
       </section>
 
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <PlanWizard />
         </Reveal>

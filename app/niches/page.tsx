@@ -254,7 +254,7 @@ export default function NichesPage() {
       </section>
 
       {/* ------------------------------------------------------------ NEXT STEPS */}
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="rounded-[var(--radius-lg)] border border-line bg-ink px-8 py-10 text-paper-2">

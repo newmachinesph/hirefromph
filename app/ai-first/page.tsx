@@ -418,7 +418,7 @@ export default function AiFirstPage() {
       </section>
 
       {/* ------------------------------------------------------------ CLOSING */}
-      <section className="container-x pb-24">
+      <section className="container-x pt-16 pb-24">
         <Reveal>
           <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
             <Kicker>{closing.kicker}</Kicker>
