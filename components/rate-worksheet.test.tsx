@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { RateWorksheet } from "@/components/rate-worksheet";
+import { DEFAULT_FX } from "@/lib/simulator-math";
 
 describe("RateWorksheet", () => {
   it("seeds six example posts and shows an evidence range", () => {
@@ -22,5 +23,18 @@ describe("RateWorksheet", () => {
     render(<RateWorksheet />);
     await user.click(screen.getAllByRole("button", { name: /remove post/i })[0]);
     expect(screen.getAllByLabelText(/^role$/i)).toHaveLength(5);
+  });
+
+  it("starts from the site-wide FX rate", () => {
+    render(<RateWorksheet />);
+    const fx = screen.getByLabelText(/assumed pesos per us dollar/i) as HTMLInputElement;
+    expect(Number(fx.value)).toBe(DEFAULT_FX);
+  });
+
+  it("shows where the example rows came from, with a date and a link", () => {
+    render(<RateWorksheet />);
+    const link = screen.getByRole("link", { name: /onlinejobs\.ph/i });
+    expect(link).toHaveAttribute("href", expect.stringContaining("onlinejobs.ph"));
+    expect(link.parentElement?.textContent).toContain("July 2026");
   });
 });

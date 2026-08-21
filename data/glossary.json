@@ -311,6 +311,49 @@
       "term": "Fractional",
       "definition": "Working as a senior operator for several companies part-time, a few days a month each, instead of full-time for one. It is how experienced independents price seniority.",
       "href": "/niches"
+    },
+    {
+      "id": "agent",
+      "term": "Agent (AI agent)",
+      "definition": "AI that does not just answer: it acts. It reads files, browses, and runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work.",
+      "taglish": "AI na kumikilos at tumatapos ng trabaho, hindi lang sumasagot.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "context-file",
+      "term": "Context file (AGENTS.md)",
+      "definition": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "agent-skills",
+      "term": "Skills and commands (agent)",
+      "definition": "Reusable procedures an agent loads on demand: how we do the monthly report, written once, run many times. The SOPs you learn to write in the Build Labs become executable.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "subagent",
+      "term": "Subagent",
+      "definition": "One agent delegating pieces of a job to others working in parallel. The underlying skill is decomposition: cutting a job into clean, checkable pieces. That is a manager's skill, and it is learnable.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "mcp",
+      "term": "MCP (Model Context Protocol)",
+      "definition": "The open standard that plugs an agent into real tools: the client's sheets, inbox, CRM, database. It is why an agent can act on the actual business instead of just talking about it.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "hooks",
+      "term": "Hooks and guardrails (agent)",
+      "definition": "Rules that fire automatically around an agent's actions: block the dangerous ones, double-check the important ones. Trust in automation is built with brakes, not hope.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "loop-engineering",
+      "term": "Loop engineering",
+      "definition": "Designing the cycle: the agent works, the output gets verified, errors go back in, repeat until the check passes. Whoever writes the checks controls the quality. That is the part AI cannot do for itself.",
+      "href": "/ai-first"
     }
   ]
 }

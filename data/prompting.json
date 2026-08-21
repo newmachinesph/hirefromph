@@ -78,29 +78,9 @@
       "icon": "crosshair"
     },
     {
-      "title": "Give it the rubric you'll judge by",
-      "desc": "Tell the AI what 'good' looks like before it drafts, not after you've read three bad drafts and are guessing why.",
-      "icon": "list-checks"
-    },
-    {
       "title": "Ask for options, not one answer",
       "desc": "Request 3 versions and pick the strongest, or merge two. One draft is a guess dressed as an answer; three is an actual choice.",
       "icon": "layers"
-    },
-    {
-      "title": "Make it critique its own output",
-      "desc": "After it drafts, ask 'what's weak about this, and fix it.' AI catches its own generic phrasing better than you'd expect.",
-      "icon": "refresh-ccw"
-    },
-    {
-      "title": "Never trust a fact it produces",
-      "desc": "Names, numbers, dates, quotes, verify every one against a source you can point to. AI states wrong facts as confidently as right ones.",
-      "icon": "shield-alert"
-    },
-    {
-      "title": "Paste real material instead of describing it",
-      "desc": "Summarizing your resume from memory loses the exact details that make output specific. Paste the actual text, every time.",
-      "icon": "clipboard-paste"
     }
   ],
 
@@ -189,7 +169,7 @@
   ],
 
   "builder": {
-    "intro": "This quick builder covers the 6 core parts; Examples and Success criteria from the full anatomy above aren't included here. Fill in what you know. Skip what you don't have yet, the meter below will tell you exactly what that gap costs you.",
+    "intro": "This quick builder covers the 6 core parts; Examples and Success criteria from the full anatomy below aren't included here. Fill in what you know, or load the sample to see a finished one. Skip what you don't have yet, the meter will tell you exactly what that gap costs you.",
     "fields": [
       { "id": "role", "label": "Role", "hint": "Who should the AI be, and what's the stake if it gets this wrong?", "placeholder": "e.g. A careful editor who rejects any sentence that could be shorter." },
       { "id": "context", "label": "Context", "hint": "Paste your real material here, not a summary of it.", "placeholder": "e.g. Paste the actual job post, email, or draft you're working from." },
@@ -211,10 +191,10 @@
 
   "useCases": [
     { "id": "research", "title": "Research", "icon": "search", "desc": "Ask it to summarize a client's industry, a tool's docs, or a company before a call, then verify the two facts that matter most, yourself." },
-    { "id": "drafting", "title": "Drafting", "icon": "pen-line", "desc": "Get a fast first version of anything, an email, an SOP, a proposal, then edit it into your own voice before it goes out." },
+    { "id": "drafting", "title": "Drafting", "icon": "pen-line", "desc": "Get a fast first version of anything, an email, an SOP, a proposal, then edit it into your own voice before it goes out.", "href": "/build", "hrefLabel": "Build the SOP in a lab" },
     { "id": "critique", "title": "Critique", "icon": "eye", "desc": "Paste your own draft and ask it to find the weakest paragraph, the vaguest claim, or the line a client would push back on." },
-    { "id": "mock-interviews", "title": "Mock interviews", "icon": "messages-square", "desc": "Have it play a skeptical hiring manager and grade your answers, practice handling pressure, not just reciting a script." },
-    { "id": "learning", "title": "Learning a tool fast", "icon": "graduation-cap", "desc": "Ask it to explain the 20% of a tool's features that cover 80% of real jobs, then have it quiz you until you can do it cold." },
+    { "id": "mock-interviews", "title": "Mock interviews", "icon": "messages-square", "desc": "Have it play a skeptical hiring manager and grade your answers, practice handling pressure, not just reciting a script.", "href": "/interview", "hrefLabel": "Run a mock interview" },
+    { "id": "learning", "title": "Learning a tool fast", "icon": "graduation-cap", "desc": "Ask it to explain the 20% of a tool's features that cover 80% of real jobs, then have it quiz you until you can do it cold.", "href": "/tools", "hrefLabel": "The learn-any-tool method" },
     { "id": "automation-design", "title": "Automation design", "icon": "workflow", "desc": "Describe a repetitive task and ask it to map the trigger, the steps, and the edge cases, before you touch Zapier or Make." }
   ],
 

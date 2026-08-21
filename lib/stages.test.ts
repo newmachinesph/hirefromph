@@ -44,13 +44,29 @@ describe("stage data", () => {
     ]);
   });
 
-  it("gives every stage four tools the library can describe", () => {
+  it("links every doFirst step to a page the library describes", () => {
     const bad = STAGES.flatMap((stage) =>
-      stage.tools.length === 4
-        ? stage.tools.filter((tool) => !routeDesc(tool.href)).map((tool) => tool.href)
-        : [`${stage.id} has ${stage.tools.length} tools`],
+      stage.doFirst
+        .filter((item) => !routeDesc(item.href.split(/[?#]/)[0]))
+        .map((item) => `${stage.id} → ${item.href}`),
     );
     expect(bad).toEqual([]);
+  });
+
+  it("keeps every tool off the doFirst list, so the 'Also useful' line never repeats a step", () => {
+    const bad = STAGES.flatMap((stage) => {
+      const steps = new Set(stage.doFirst.map((item) => item.href.split(/[?#]/)[0]));
+      return stage.tools
+        .filter((tool) => steps.has(tool.href.split(/[?#]/)[0]) || !routeDesc(tool.href.split(/[?#]/)[0]))
+        .map((tool) => `${stage.id} → ${tool.href}`);
+    });
+    expect(bad).toEqual([]);
+  });
+
+  it("cuts Start Right to the four pages a beginner needs, with the other two as tools", () => {
+    const start = getStage("start");
+    expect(start?.doFirst.map((item) => item.href)).toEqual(["/equipment", "/tasks", "/build?lab=resume", "/niches"]);
+    expect(start?.tools.map((tool) => tool.href)).toEqual(["/learn", "/tools"]);
   });
 
   it("covers all eleven roadmap steps across the five stages", () => {

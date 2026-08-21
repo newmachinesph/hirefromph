@@ -309,9 +309,14 @@ function DetailCard({
           Typical pay: <span className="font-semibold text-ink">{track.pay}</span>
         </p>
         {isChosen ? (
-          <Badge tone="verified">
-            <Icon name="check" size={16} /> This is your path
-          </Badge>
+          <div className="flex flex-wrap items-center gap-3">
+            <Badge tone="verified">
+              <Icon name="check" size={16} /> This is your path
+            </Badge>
+            <Button href="/plan" iconEnd={<Icon name="arrow-right" size={16} />}>
+              Build your 30-day plan for this niche
+            </Button>
+          </div>
         ) : (
           <Button onClick={onChoose}>Choose this as my path</Button>
         )}

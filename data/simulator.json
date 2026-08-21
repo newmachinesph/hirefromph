@@ -8,7 +8,8 @@
   },
   "banner": {
     "title": "Read this before you read a single number.",
-    "body": "This is a MODEL. It is not a prediction, a forecast, a promise, or an offer. Nobody can tell you what you will earn, not us, not a salary guide, not a coach. What a model can honestly do is show you the shape of a decision: which choices bend the line, and which ones only feel like they do. Every figure below means 'roughly, directionally, if the model is right'. Treat it as a teaching instrument, never as a plan for your rent."
+    "body": "This is a MODEL. It is not a prediction, a forecast, a promise, or an offer. Nobody can tell you what you will earn, not us, not a salary guide, not a coach. What a model can honestly do is show you the shape of a decision: which choices bend the line, and which ones only feel like they do. Every figure below means 'roughly, directionally, if the model is right'. Treat it as a teaching instrument, never as a plan for your rent.",
+    "oneLine": "A model, not a prediction. Every figure below means \"roughly, directionally, if the model is right\"; never plan your rent on it."
   },
   "dataHonesty": {
     "title": "Why nobody has an honest chart of Philippine freelance rates, including us",
@@ -163,7 +164,7 @@
   "fx": {
     "label": "Assumed exchange rate",
     "suffix": "₱ per $1",
-    "note": "This is an assumption, and FX moves. Change it to whatever today's rate is, the peso figures update live. We default to ₱61.5, the BSP rate sampled in mid-July 2026, so check it against today's number before you trust it."
+    "note": "This is an assumption, and FX moves. Change it to whatever today's rate is, the peso figures update live. We default to ₱{fx}, the BSP rate sampled in {sampled}, so check it against today's number before you trust it."
   },
   "multipliers": {
     "title": "Every multiplier, and where it came from",
@@ -183,7 +184,7 @@
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",
-        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, a vendor-reported figure, not an independently audited one, but the nuance matters more than the headline: the callout below shows where that premium lands."
+        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, so the multiplier is ×1.34, a vendor-reported figure, not an independently audited one, but the nuance matters more than the headline: the callout below shows where that premium lands."
       },
       "ai-augmented-building": {
         "label": "AI, built into a craft you're still learning",
@@ -295,5 +296,8 @@
     "body": "The hard part is that the highest line on this chart belongs to someone who spent 30 months being worse than they wanted to be, at one specific thing, on purpose. There is no version of this where the line bends and the craft doesn't. Get the real market data, then pick the thing.",
     "realityLabel": "See the sourced market data",
     "nichesLabel": "Pick the craft"
+  },
+  "estimates": {
+    "title": "Why these numbers are estimates"
   }
 }

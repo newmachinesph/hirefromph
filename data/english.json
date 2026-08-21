@@ -1,16 +1,20 @@
 {
-  "intro": "Your English is not the problem. Filipino professionals score 603 out of 800 on the EF English Proficiency Index's written-English measure, above the global average, and stronger than most of the region. What costs you money is smaller and more fixable than 'my English isn't good enough': it's the handful of habits that make a fluent message read as junior.",
+  "lastVerified": "2026-08",
+  "intro": "Your English is not the problem. On the EF English Proficiency Index 2025, Filipino professionals score 603 out of 800 for writing (that is the writing sub-score; the overall score is 569), above the global average and stronger than most of the region. What costs you money is smaller and more fixable than 'my English isn't good enough': it's the handful of habits that make a fluent message read as junior.",
   "creed": "You are not trying to sound American. You are trying to sound like the person in charge of the thing you're in charge of.",
 
   "baseline": {
     "kicker": "Start from the truth",
     "title": "You are already good at English. Stop apologizing for it.",
-    "body": "The Philippines ranks 28th of 123 countries on the EF English Proficiency Index 2025, 'high proficiency', well above the global average of 488. But look at the split: Writing 603. Reading 573. Listening 567. Speaking 539. Speaking is the weak spot, and even that is high by world standards. Nobody needs to fix your grammar. This page is about the two things the score doesn't measure, how you're understood out loud, and how you're read between the lines.",
+    "body": "The Philippines ranks 28th of 123 countries on the EF English Proficiency Index 2025, 'high proficiency', well above the global average. Look at the split below: writing is the strongest of the four sub-scores, speaking the weakest, and even that is high by world standards. Speaking is also where the money is. Nobody needs to fix your grammar. This page is about the two things the score doesn't measure, how you're understood out loud, and how you're read between the lines.",
+    "edition": 2025,
+    "maxScore": 800,
+    "globalAverage": 488,
     "scores": [
-      { "skill": "Writing", "value": 603, "note": "Your strongest. Better than most of Europe." },
-      { "skill": "Reading", "value": 573, "note": "Comfortably high." },
-      { "skill": "Listening", "value": 567, "note": "Solid. Fast native speech is the gap." },
-      { "skill": "Speaking", "value": 539, "note": "Your weakest, and where the money is." }
+      { "skill": "Writing", "value": 603 },
+      { "skill": "Reading", "value": 573 },
+      { "skill": "Listening", "value": 567 },
+      { "skill": "Speaking", "value": 539 }
     ],
     "source": { "label": "EF English Proficiency Index 2025, Philippines", "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/" }
   },
@@ -38,7 +42,7 @@
         "title": "How you frame requests, refusals, and status",
         "what": "Hedging, 'just', 'maybe', 'I think', 'sort of', 'kind of', signals that you don't stand behind your own idea. Pile enough qualifiers on a correct recommendation and it lands as a guess. This is the cheapest thing on this page to fix and it changes how senior you sound in a single afternoon.",
         "fix": "Fixable in a week. This is where your leverage is.",
-        "source": { "label": "On hedging and perceived competence", "url": "https://www.stemwomen.com/the-language-women-use-in-the-workplace-and-what-it-means" }
+        "source": { "label": "On hedging and perceived competence (a recruiter's blog, not a study; the research below is the evidence)", "url": "https://www.stemwomen.com/the-language-women-use-in-the-workplace-and-what-it-means" }
       },
       {
         "id": "bias",
@@ -56,7 +60,7 @@
   "honesty": {
     "title": "What we refuse to tell you",
     "points": [
-      "We will not claim that better English raises your rate by some percentage. Upwork asserts that strong communication leads to higher rates, but that's a platform's marketing research, not a controlled study. Any specific number you see quoted (\"improve your English, earn 40% more\") is invented.",
+      "We will not claim that better English raises your rate by some percentage. In our reading, nobody has measured that in a controlled study; what circulates is platform marketing and vendor blogs. Any specific number you see quoted (\"improve your English, earn 40% more\") is invented.",
       "Nobody here will tell you that Filipinos are 'too indirect' as a matter of fact. Every article claiming that traces back to BPO and outsourcing-vendor blogs, not research. There is no peer-reviewed study showing Filipino remote workers are perceived as less senior because of po, sir/ma'am, or indirectness. Treat the habits below as things to audit in your own writing, not as a diagnosis of your culture.",
       "Accent reduction is not on sale here either. The research field moved away from that decades ago. The goal is being understood, not sounding American, and the two are not the same thing."
     ]
@@ -295,9 +299,12 @@
     "kicker": "The workshop",
     "title": "Audit a message you sent",
     "lead": "We're not going to hand you scripts to copy, you'd sound like ten thousand other people using the same ones. Paste in a real message you sent a client this week. The lab flags every habit above so you can see your own patterns, then you rewrite it yourself.",
-    "placeholder": "Paste a real Slack message, email, or proposal you sent a client…\n\nTry this one if you don't have anything handy:\n\"Hi Sir, sorry to bother you! I just wanted to kindly follow up on the designs. I think maybe there might be a small issue with the spacing but I'm not sure. Please revert back when you can. Sorry again and thank you po!\"",
+    "placeholder": "Paste a real Slack message, email, or proposal you sent a client… or use the sample message if you don't have one handy.",
+    "sampleLabel": "Use the sample message",
+    "sample": "Hi Sir, sorry to bother you! I just wanted to kindly follow up on the designs. I think maybe there might be a small issue with the spacing but I'm not sure. Please revert back when you can. Sorry again and thank you po!",
     "cleanTitle": "Nothing flagged.",
-    "cleanBody": "Either your message is already direct, or it's too short to tell. Try a longer one: a real follow-up, a status update, or the last time you had to push back on a client.",
+    "cleanBody": "This reads direct. The scan catches words, not structure, so run the five questions below on it anyway.",
+    "cleanShortBody": "Too short to tell. Try a longer one: a real follow-up, a status update, or the last time you had to push back on a client.",
     "rewritePrompt": "Now rewrite it yourself. Same message, same facts, no hedges, no apology, bottom line first.",
     "rewritePlaceholder": "Your rewrite. Don't ask us for the answer, the point is that you can do this without us.\n\nRules: start with the point. Delete every flagged word. Give a recommendation, not a question. End with what you need and by when.",
     "selfCritique": [

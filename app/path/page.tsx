@@ -1,7 +1,13 @@
 "use client";
 
+import Link from "next/link";
 import { JourneyStepper, PathChooser } from "@/components/journey";
-import { CardGrid, Section, SectionHeading } from "@/components/layout";
+import {
+  CardGrid,
+  PageFooterNav,
+  Section,
+  SectionHeading,
+} from "@/components/layout";
 import { Journal, Streak } from "@/components/practice";
 import {
   Badge,
@@ -9,33 +15,47 @@ import {
   Callout,
   Card,
   Checkbox,
-  ChoiceCard,
   EmptyState,
   Field,
   Figure,
   Heading,
   Icon,
   ProgressBar,
+  Select,
   Text,
   type BadgeTone,
 } from "@/components/ui";
 import roadmap from "@/data/roadmap.json";
 import tracks from "@/data/tracks.json";
 import { isAccent } from "@/lib/accent";
+import { findNavNeighbours } from "@/lib/nav";
 import { usePath } from "@/lib/path-context";
 import { STAGES } from "@/lib/stages";
 import { cn } from "@/lib/utils";
 
+const HREF = "/path";
+
 type Track = (typeof tracks.tracks)[number];
+type LearnResource = Track["learn"][number];
 
 const LEARN_ICON: Record<string, string> = {
   YouTube: "youtube",
   Course: "book-open",
   Template: "layout-template",
+  Lab: "pencil-ruler",
 };
 
 function tone(accent: string): BadgeTone {
   return isAccent(accent) ? accent : "neutral";
+}
+
+/**
+ * tracks.json carries no URLs, so the only hrefs we can honestly render are the
+ * in-app ones the provider text names, e.g. "In-app (/build)". Everything else
+ * is a course on the provider's own site, and the lead says so.
+ */
+function learnHref(resource: LearnResource): string | undefined {
+  return /\((\/[a-z0-9-]+)\)/.exec(resource.provider)?.[1];
 }
 
 export default function PathPage() {
@@ -48,13 +68,15 @@ export default function PathPage() {
   if (!hydrated) return <PathSkeleton />;
   if (!hasPath || !track) return <NoPathState />;
 
-  const currentStage = STAGES.find((stage) => stage.num === state.stage);
+  const currentStage = STAGES.find((stage) => stage.num === state.stage) ?? STAGES[0];
+  const firstStage = STAGES[0];
   const doneCount = roadmap.steps.filter((step) => state.steps[step.n]).length;
   const portfolioCount = Object.values(state.tasks).filter(Boolean).length;
   const applied = state.applications.length;
   const interviews = state.applications.filter(
     (application) => application.status === "interview" || application.status === "offer",
   ).length;
+  const nothingRecorded = portfolioCount + applied + interviews + doneCount === 0;
 
   const counters = [
     {
@@ -78,6 +100,11 @@ export default function PathPage() {
     },
   ];
 
+  // In-app resources first, so "start with the lab" points at something clickable.
+  const learn = [...track.learn].sort(
+    (a, b) => Number(Boolean(learnHref(b))) - Number(Boolean(learnHref(a))),
+  );
+
   const nextMoves = [
     {
       title: "Build proof with micro-tasks",
@@ -92,8 +119,8 @@ export default function PathPage() {
       icon: "table",
     },
     {
-      title: `Build your ${track.name} 30-day plan`,
-      desc: "A day-by-day path built around this niche.",
+      title: `Your ${track.name} 30-day plan`,
+      desc: `One proven 30-day sequence, with ${track.name}'s tools and your daily hours filled in.`,
       href: "/plan",
       icon: "calendar-check",
     },
@@ -133,6 +160,9 @@ export default function PathPage() {
               <Icon name={track.icon} size={26} weight="duotone" />
             </span>
             <div className="min-w-0">
+              <Text size="caption" tone="faint" className="uppercase tracking-wider">
+                Your dashboard
+              </Text>
               <Heading level={1} size="h2" balance>
                 {track.name}
               </Heading>
@@ -156,85 +186,70 @@ export default function PathPage() {
           <Badge tone="neutral">{track.difficulty}</Badge>
         </div>
 
-        <CardGrid cols={4} as="ul" className="mt-8">
-          {counters.map((counter) => (
-            <li key={counter.label} className="flex">
-              <Card href={counter.href} padding="sm" className="w-full">
-                <span className="font-display text-h3 tabular-nums text-ink">
-                  {counter.value}
-                </span>
-                <Text size="small" className="mt-1">
-                  {counter.label}
-                </Text>
-                <Text size="caption" tone="faint">
-                  {counter.sub}
-                </Text>
-              </Card>
-            </li>
-          ))}
-        </CardGrid>
+        {nothingRecorded ? (
+          <Text className="mt-8">
+            Nothing recorded yet. Start with{" "}
+            <Link href={firstStage.href} className="font-medium text-primary underline underline-offset-4">
+              Stage 1: {firstStage.title}
+            </Link>
+            , then come back and tick its steps below.
+          </Text>
+        ) : (
+          <CardGrid cols={4} as="ul" className="mt-8">
+            {counters.map((counter) => (
+              <li key={counter.label} className="flex">
+                <Card href={counter.href} padding="sm" className="w-full">
+                  <span className="font-display text-h3 tabular-nums text-ink">
+                    {counter.value}
+                  </span>
+                  <Text size="small" className="mt-1">
+                    {counter.label}
+                  </Text>
+                  <Text size="caption" tone="faint">
+                    {counter.sub}
+                  </Text>
+                </Card>
+              </li>
+            ))}
+          </CardGrid>
+        )}
 
+        {/* The stepper is the one rendering of the five stages: it carries the
+            current marker and the done ticks. The select below only sets it. */}
         <JourneyStepper current={state.stage} className="mt-10" />
+
+        <Callout
+          tone={isAccent(currentStage.accent) ? currentStage.accent : "neutral"}
+          title={`Where you are: ${currentStage.title}`}
+          className="mt-6"
+        >
+          <Text size="small">{currentStage.summary}</Text>
+          <div className="mt-4 flex flex-wrap items-end gap-4">
+            <Button href={currentStage.href} variant="primary" size="sm">
+              Open {currentStage.title}
+            </Button>
+            <Field label="Set your current stage" className="w-full max-w-xs">
+              <Select
+                value={String(state.stage)}
+                onChange={(event) => setStage(Number(event.target.value))}
+              >
+                {STAGES.map((stage) => (
+                  <option key={stage.id} value={String(stage.num)}>
+                    {stage.num}. {stage.title}
+                  </option>
+                ))}
+              </Select>
+            </Field>
+          </div>
+        </Callout>
 
         <div className="mt-8">
           <Streak />
         </div>
       </Section>
 
-      {/* JOURNAL */}
-      <Section>
-        <SectionHeading
-          kicker="One question a week"
-          title="What moved this week"
-          lead="Twelve prompts, rotating. Saved in this browser, read by nobody else."
-        />
-        <div className="mt-8">
-          <Journal />
-        </div>
-      </Section>
-
-      {/* CURRENT STAGE */}
-      <Section band="tint">
-        <SectionHeading
-          kicker="Where you are"
-          title="Your current stage"
-          lead="Set it here, or let it follow the roadmap ticks below."
-        />
-
-        <Field as="group" label="Your current stage" hideLabel className="mt-8">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {STAGES.map((stage) => (
-              <ChoiceCard
-                key={stage.id}
-                name="current-stage"
-                value={String(stage.num)}
-                checked={state.stage === stage.num}
-                onChange={(value) => setStage(Number(value))}
-                label={`${stage.num}. ${stage.title}`}
-                description={stage.role}
-              />
-            ))}
-          </div>
-        </Field>
-
-        {currentStage && (
-          <Callout
-            tone={isAccent(currentStage.accent) ? currentStage.accent : "neutral"}
-            title={currentStage.title}
-            className="mt-6"
-          >
-            <Text size="small">{currentStage.summary}</Text>
-            <div className="mt-4">
-              <Button href={currentStage.href} variant="primary" size="sm">
-                Open {currentStage.title}
-              </Button>
-            </div>
-          </Callout>
-        )}
-      </Section>
-
       {/* ROADMAP */}
-      <Section id="roadmap" className="scroll-mt-28">
+      <Section id="roadmap" band="tint" className="scroll-mt-28">
         <SectionHeading
           kicker="Eleven steps, five stages"
           title="Your roadmap progress"
@@ -257,7 +272,7 @@ export default function PathPage() {
                 <Card
                   key={step.n}
                   padding="sm"
-                  onBand={false}
+                  onBand
                   className={cn(checked && "bg-band")}
                 >
                   <Checkbox
@@ -283,30 +298,47 @@ export default function PathPage() {
       </Section>
 
       {/* NEXT MOVES */}
-      <Section band="tint">
+      <Section>
         <SectionHeading
           kicker="Your next moves"
           title="What to do right now"
-          lead={`Curated for ${track.name}. Start at the top.`}
+          lead={`Curated for ${track.name}. The in-app lab is a link; the courses live on the provider's own site, search the title there.`}
         />
 
-        <div className="mt-8 flex flex-wrap gap-2.5">
-          {track.learn.map((resource) => (
-            <span
-              key={resource.title}
-              className="inline-flex items-center gap-2 rounded-pill border border-line-strong bg-paper px-4 py-2 text-small"
-            >
-              <Icon name={LEARN_ICON[resource.type] ?? "book-open"} size={15} />
-              <span className="font-medium text-ink">{resource.title}</span>
-              <span className="text-ink-faint">· {resource.provider}</span>
-            </span>
-          ))}
-        </div>
+        <ul className="mt-8 flex flex-wrap gap-2.5">
+          {learn.map((resource) => {
+            const href = learnHref(resource);
+            const body = (
+              <>
+                <Icon name={LEARN_ICON[resource.type] ?? "book-open"} size={15} />
+                <span className="font-medium text-ink">{resource.title}</span>
+                <span className="text-ink-faint">· {resource.provider}</span>
+              </>
+            );
+            const pill =
+              "inline-flex items-center gap-2 rounded-pill border border-line-strong bg-paper px-4 py-2 text-small";
+            return (
+              <li key={resource.title}>
+                {href ? (
+                  <Link
+                    href={href}
+                    className={cn(pill, "transition-colors duration-150 ease-out hover:border-ink hover:bg-band")}
+                  >
+                    {body}
+                    <Icon name="arrow-up-right" size={13} className="text-primary" />
+                  </Link>
+                ) : (
+                  <span className={pill}>{body}</span>
+                )}
+              </li>
+            );
+          })}
+        </ul>
 
         <CardGrid cols={3} as="ul" className="mt-8">
           {nextMoves.map((move) => (
             <li key={move.href} className="flex">
-              <Card href={move.href} onBand className="w-full">
+              <Card href={move.href} className="w-full">
                 <span className="grid h-11 w-11 place-items-center rounded-md bg-primary-tint text-primary-deep">
                   <Icon name={move.icon} size={20} weight="duotone" />
                 </span>
@@ -324,6 +356,18 @@ export default function PathPage() {
             </li>
           ))}
         </CardGrid>
+      </Section>
+
+      {/* JOURNAL, after the tools: a weekly reflection is not the second thing to do */}
+      <Section band="tint">
+        <SectionHeading
+          kicker="One question a week"
+          title="What moved this week"
+          lead="Twelve prompts, rotating. Saved in this browser, read by nobody else."
+        />
+        <div className="mt-8">
+          <Journal />
+        </div>
       </Section>
 
       {/* NICHE TOOLKIT */}
@@ -375,6 +419,31 @@ export default function PathPage() {
           </Text>
           <Text className="mt-2">{track.clients}</Text>
         </Card>
+      </Section>
+
+      {/* NEXT STEP */}
+      <Section band="tint">
+        <SectionHeading
+          kicker="Next step"
+          title={`Keep going on ${currentStage.title}`}
+          lead="Open the stage you are in, or turn this path into a dated 30-day checklist."
+        />
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <Button href={currentStage.href} variant="primary">
+            Open {currentStage.title}
+          </Button>
+          <Button
+            href="/plan"
+            variant="outline"
+            iconEnd={<Icon name="arrow-right" size={16} />}
+          >
+            Build your 30-day plan
+          </Button>
+        </div>
+      </Section>
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
       </Section>
     </>
   );

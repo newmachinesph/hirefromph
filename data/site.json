@@ -178,7 +178,7 @@
         { "label": "Reality Check", "href": "/reality" },
         { "label": "Library", "href": "/library" },
         { "label": "Privacy", "href": "/privacy" },
-        { "label": "For educators", "href": "/educators", "pending": true }
+        { "label": "For educators", "href": "/educators" }
       ]
     }
   ]

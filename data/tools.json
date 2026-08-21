@@ -1,6 +1,5 @@
 {
   "lastVerified": "2026-07",
-  "intro": "Learn the essential tools fast with step-by-step tutorials, the daily toolkit clients expect you to know.",
   "categories": [
     {
       "id": "workspace",
@@ -86,8 +85,7 @@
       "blurb": "Run meetings that respect everyone's time and end with clear next steps.",
       "tools": [
         { "name": "Calendly", "skill": "Scheduling without back-and-forth", "level": "Core" },
-        { "name": "Fireflies / Otter", "skill": "AI meeting notes", "level": "Intermediate" },
-        { "name": "Google Meet", "skill": "Hosting + recording", "level": "Core" }
+        { "name": "Fireflies / Otter", "skill": "AI meeting notes", "level": "Intermediate" }
       ]
     },
     {

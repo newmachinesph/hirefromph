@@ -9,6 +9,8 @@ import {
   SectionHeading,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
   Button,
   Callout,
@@ -39,6 +41,7 @@ const COST_TONE: Record<string, "verified" | "info" | "caution" | "neutral"> = {
   "open-source": "verified",
   freemium: "info",
   "free-trial": "caution",
+  "no-cost-trial": "caution",
   paid: "neutral",
 };
 const COST_LABEL: Record<string, string> = {
@@ -46,11 +49,17 @@ const COST_LABEL: Record<string, string> = {
   "open-source": "Open source",
   freemium: "No-cost tier",
   "free-trial": "Trial",
+  "no-cost-trial": "Trial",
   paid: "Paid",
 };
 
 type ShelfItem = { org: string; title: string; url: string; why: string; cost: string };
-type Savings = { note: string; asOf: string; basis: { tool: string; monthly: number }[] };
+type Savings = {
+  note: string;
+  asOf: string;
+  source: { label: string; url: string };
+  basis: { tool: string; monthly: number }[];
+};
 type ShelfGroup = {
   id: string;
   title: string;
@@ -65,8 +74,9 @@ function SavingsCallout({ savings }: { savings: Savings }) {
     <Callout tone="verified" className="mt-5">
       <Stat
         value={`$${monthly}/mo`}
-        label={`about $${monthly * 12} a year, saved on tools alone`}
+        label={`about $${(monthly * 12).toLocaleString("en-US")} a year, saved on tools alone`}
         sub={savings.note}
+        source={savings.source}
       />
       <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1">
         {savings.basis.map((b) => (
@@ -84,6 +94,7 @@ function SavingsCallout({ savings }: { savings: Savings }) {
 
 export default function ResourcesPage() {
   const { hero, judge, shelf, protocol, closing } = resources;
+  const firstMove = shelf.groups.find((g) => g.id === "ai")?.items[0];
 
   return (
     <>
@@ -94,6 +105,17 @@ export default function ResourcesPage() {
         title={hero.line1}
         accent={hero.line2}
         lead={hero.intro}
+        actions={
+          firstMove && (
+            <Button
+              href={firstMove.url}
+              external
+              iconEnd={<Icon name="arrow-up-right" size={16} />}
+            >
+              Do the AI Fluency course first
+            </Button>
+          )
+        }
       >
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
@@ -102,36 +124,13 @@ export default function ResourcesPage() {
         <Section spacing="none"><Tldr route="/resources" /></Section>
       </PageHero>
 
-      {/* -------------------------------------------------------------- JUDGE */}
-      <Section band="tint">
-        <SectionHeading kicker={judge.kicker} title={judge.title} lead={judge.lead} />
-        <CardGrid cols={3} className="mt-12">
-          {judge.tests.map((t) => (
-            <Card key={t.q} as="article" onBand>
-              <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
-                <Icon name={t.icon} size={20} />
-              </span>
-              <Heading level={3} size="h4" className="mt-5" balance>
-                {t.q}
-              </Heading>
-              <Text size="small" className="mt-3 flex-1">
-                {t.why}
-              </Text>
-            </Card>
-          ))}
-        </CardGrid>
-        <Callout tone="signal" className="mt-8 max-w-2xl">
-          {judge.note}
-        </Callout>
-      </Section>
-
       {/* -------------------------------------------------------------- SHELF */}
       <Section>
         <SectionHeading kicker={shelf.kicker} title={shelf.title} lead={shelf.lead} />
 
         <div className="mt-12 flex flex-col gap-14">
           {(shelf.groups as ShelfGroup[]).map((g) => (
-            <div key={g.id}>
+            <div key={g.id} id={g.id} className="scroll-mt-24">
               <div className="flex flex-col gap-3 border-t border-line-strong pt-6">
                 <Heading level={3} size="h3">
                   {g.title}
@@ -168,6 +167,30 @@ export default function ResourcesPage() {
             </div>
           ))}
         </div>
+      </Section>
+
+      {/* -------------------------------------------------------------- JUDGE */}
+      <Section band="tint">
+        <SectionHeading kicker={judge.kicker} title={judge.title} lead={judge.lead} />
+        <Accordion type="multiple" className="mt-10 max-w-3xl">
+          {judge.tests.map((t) => (
+            <AccordionItem
+              key={t.q}
+              id={t.icon}
+              title={
+                <span className="flex items-center gap-3">
+                  <Icon name={t.icon} size={18} className="shrink-0 text-primary" />
+                  {t.q}
+                </span>
+              }
+            >
+              <Text size="small">{t.why}</Text>
+            </AccordionItem>
+          ))}
+        </Accordion>
+        <Callout tone="signal" className="mt-8 max-w-2xl">
+          {judge.note}
+        </Callout>
       </Section>
 
       {/* ----------------------------------------------------------- PROTOCOL */}

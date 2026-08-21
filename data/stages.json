@@ -14,18 +14,40 @@
     "quote": "Nobody checks your diploma here; what you finish this week is the thing that counts.",
     "outcome": "You'll have a working setup and the foundational skills to apply with confidence.",
     "doFirst": [
-      { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker, see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
-      { "title": "Do your first micro-task", "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.", "href": "/tasks", "cta": "Pick a task" },
-      { "title": "Learn how to learn", "desc": "Most study habits quietly fail you. Build a study protocol from what the evidence supports.", "href": "/learn", "cta": "How to learn" },
-      { "title": "Learn the foundation skills", "desc": "The core toolkit every online professional needs before applying.", "href": "/tools", "cta": "Learn tools" },
-      { "title": "Build your first documents", "desc": "Learn the anatomy of a resume and a tracker, then write your own. No file to download.", "href": "/build", "cta": "Open Build Labs" },
-      { "title": "Pick a direction", "desc": "Explore the niches so you know which lane you're heading toward.", "href": "/niches", "cta": "Explore niches" }
+      {
+        "title": "Check your equipment",
+        "desc": "Run the interactive Equipment Checker, see what you have, plan what to buy in ₱.",
+        "href": "/equipment",
+        "cta": "Open checker"
+      },
+      {
+        "title": "Do your first micro-task",
+        "desc": "A real job you can do today with no client. It finishes as your first portfolio piece.",
+        "href": "/tasks",
+        "cta": "Pick a task"
+      },
+      {
+        "title": "Build your first documents",
+        "desc": "Learn the anatomy of a resume and a tracker, then write your own. No file to download.",
+        "href": "/build?lab=resume",
+        "cta": "Open Build Labs"
+      },
+      {
+        "title": "Pick a direction",
+        "desc": "Explore the niches so you know which lane you're heading toward.",
+        "href": "/niches",
+        "cta": "Explore niches"
+      }
     ],
     "tools": [
-      { "label": "Equipment Checker", "href": "/equipment" },
-      { "label": "Micro-Tasks", "href": "/tasks" },
-      { "label": "Build Labs", "href": "/build" },
-      { "label": "Niche Explorer", "href": "/niches" }
+      {
+        "label": "How to Learn",
+        "href": "/learn"
+      },
+      {
+        "label": "Learn Any Tool",
+        "href": "/tools"
+      }
     ],
     "closing": "Finish one micro-task this week and you have something to send."
   },
@@ -41,21 +63,46 @@
     "diagram": "hiring-funnel",
     "kicker": "Stage 02",
     "subtitle": "Land your first client, systematically",
-    "summary": "Build assets that get replies, work the vetted directory of places to apply, track everything, and close the offer.",
+    "summary": "Build assets that get replies, source your own leads and score each one for red flags, track everything, and close the offer.",
     "quote": "You will not feel ready, so send the application anyway and let the interviews teach you.",
     "outcome": "You'll have a live pipeline of applications and the prep to convert interviews into offers.",
     "doFirst": [
-      { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer, build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
-      { "title": "Show proof, not promises", "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.", "href": "/tasks", "cta": "Build proof" },
-      { "title": "Run your own mock interview", "desc": "Write an interview-coach prompt yourself, then practice against it until the answers are sharp.", "href": "/prompts", "cta": "Write the prompt" },
-      { "title": "Track every application", "desc": "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.", "href": "/tracker", "cta": "Open tracker" },
-      { "title": "Negotiate with evidence", "desc": "Know your worth and ask with proof, the VET and ASK methods do the heavy lifting.", "href": "/method", "cta": "The method" }
+      {
+        "title": "Learn to source work yourself",
+        "desc": "Search operators, reverse-sourcing, and a red-flag scorer, build your own pipeline, not a bookmark list.",
+        "href": "/apply",
+        "cta": "Find work"
+      },
+      {
+        "title": "Show proof, not promises",
+        "desc": "No client yet? Do micro-tasks. Each one finishes as a portfolio piece you can send today.",
+        "href": "/tasks",
+        "cta": "Build proof"
+      },
+      {
+        "title": "Run your own mock interview",
+        "desc": "Write an interview-coach prompt yourself, then practice against it until the answers are sharp.",
+        "href": "/prompts",
+        "cta": "Write the prompt"
+      },
+      {
+        "title": "Track every application",
+        "desc": "A working pipeline with a follow-up radar. Most offers are lost to silence, not rejection.",
+        "href": "/tracker",
+        "cta": "Open tracker"
+      },
+      {
+        "title": "Negotiate with evidence",
+        "desc": "Know your worth and ask with proof, the VET and ASK methods do the heavy lifting.",
+        "href": "/method",
+        "cta": "The method"
+      }
     ],
     "tools": [
-      { "label": "Find Work", "href": "/apply" },
-      { "label": "Application Tracker", "href": "/tracker" },
-      { "label": "Micro-Tasks", "href": "/tasks" },
-      { "label": "Build Labs", "href": "/build" }
+      {
+        "label": "Build Labs",
+        "href": "/build?lab=resume"
+      }
     ],
     "closing": "Most offers are lost to silence, so apply on a schedule and follow up on every one."
   },
@@ -75,18 +122,48 @@
     "quote": "Your first week is an audition for the second one, and organisation is what it scores.",
     "outcome": "You'll run the work on written systems, which is the reason clients keep you and refer you.",
     "doFirst": [
-      { "title": "Write your own first-week plan", "desc": "Learn what a first week must prove, then write the plan yourself.", "href": "/build", "cta": "Open the lab" },
-      { "title": "Learn any tool, fast", "desc": "The transferable method for mastering software in a weekend, not a tutorial to follow.", "href": "/tools", "cta": "Learn the method" },
-      { "title": "Learn to write SOPs", "desc": "Document any process so well you never explain it twice. You write them; you own them.", "href": "/build", "cta": "Open the lab" },
-      { "title": "Build the trackers your role needs", "desc": "Schema, formulas, and judgment, so you can build a tracker for anything.", "href": "/build", "cta": "Build trackers" },
-      { "title": "Communicate like a professional", "desc": "Status updates, async etiquette, and managing expectations.", "href": "/method", "cta": "The ASK method" },
-      { "title": "Become indispensable", "desc": "Stop waiting to be told. Anticipate what the client needs next and own the outcome, not the task, that's the person they can't replace.", "href": "/indispensable", "cta": "Own outcomes" }
+      {
+        "title": "Write your own first-week plan",
+        "desc": "Learn what a first week must prove, then write the plan yourself.",
+        "href": "/build?lab=first-week-plan",
+        "cta": "Open the lab"
+      },
+      {
+        "title": "Learn any tool, fast",
+        "desc": "The transferable method for mastering software in a weekend, not a tutorial to follow.",
+        "href": "/tools",
+        "cta": "Learn the method"
+      },
+      {
+        "title": "Learn to write SOPs",
+        "desc": "Document any process so well you never explain it twice. You write them; you own them.",
+        "href": "/build?lab=sop",
+        "cta": "Open the lab"
+      },
+      {
+        "title": "Build the trackers your role needs",
+        "desc": "Schema, formulas, and judgment, so you can build a tracker for anything.",
+        "href": "/build?lab=tracker",
+        "cta": "Build trackers"
+      },
+      {
+        "title": "Communicate like a professional",
+        "desc": "Status updates, async etiquette, and managing expectations.",
+        "href": "/method",
+        "cta": "The ASK method"
+      },
+      {
+        "title": "Become indispensable",
+        "desc": "Stop waiting to be told. Anticipate what the client needs next and own the outcome, not the task, that's the person they can't replace.",
+        "href": "/indispensable",
+        "cta": "Own outcomes"
+      }
     ],
     "tools": [
-      { "label": "Build Labs", "href": "/build" },
-      { "label": "Learn Any Tool", "href": "/tools" },
-      { "label": "The Method", "href": "/method" },
-      { "label": "Niche Hub", "href": "/niches" }
+      {
+        "label": "Niche Hub",
+        "href": "/niches"
+      }
     ],
     "closing": "A professional runs on written systems; a hire runs on memory."
   },
@@ -105,18 +182,38 @@
     "quote": "Systemise anything you do twice, and hand the rest to a machine that does not get bored.",
     "outcome": "You'll own a niche and have the evidence to ask for a higher rate.",
     "doFirst": [
-      { "title": "Pick and master a niche", "desc": "Curated learning per specialization in the Niche Learning Hub.", "href": "/niches", "cta": "Choose niche" },
-      { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin draws from a far thinner pool of candidates, and a thinner pool is what moves a rate. Here's where to learn.", "href": "/languages", "cta": "Language premium" },
-      { "title": "Automate the repetitive", "desc": "Codes for efficiency, Zapier/Make flows, and reusable systems.", "href": "/tools", "cta": "Automation" },
-      { "title": "Build the advanced artifacts", "desc": "Dashboards, decision frameworks, and pro SOPs, built by you, from the rules up.", "href": "/build", "cta": "Open Build Labs" },
-      { "title": "Teach it back", "desc": "Teaching is how you find the gaps you can't see. It's the last step of mastery.", "href": "/method", "cta": "The method" }
+      {
+        "title": "Pick and master a niche",
+        "desc": "Curated learning per specialization in the Niche Learning Hub.",
+        "href": "/niches",
+        "cta": "Choose niche"
+      },
+      {
+        "title": "Learn a premium language",
+        "desc": "Japanese, Korean, or Mandarin draws from a far thinner pool of candidates, and a thinner pool is what moves a rate. Here's where to learn.",
+        "href": "/languages",
+        "cta": "Language premium"
+      },
+      {
+        "title": "Automate the repetitive",
+        "desc": "Zapier, Make, and n8n flows for the work that repeats. AI-First lays out each tool and what it unlocks for a client.",
+        "href": "/ai-first#landscape",
+        "cta": "See the automation tools"
+      },
+      {
+        "title": "Build the advanced artifacts",
+        "desc": "Dashboards, decision frameworks, and pro SOPs, built by you, from the rules up.",
+        "href": "/build?lab=sop",
+        "cta": "Open Build Labs"
+      },
+      {
+        "title": "Teach it back",
+        "desc": "Teaching is how you find the gaps you can't see. It's the last step of mastery.",
+        "href": "/method",
+        "cta": "The method"
+      }
     ],
-    "tools": [
-      { "label": "Niche Learning Hub", "href": "/niches" },
-      { "label": "Language Premium", "href": "/languages" },
-      { "label": "Learn Any Tool", "href": "/tools" },
-      { "label": "Build Labs", "href": "/build" }
-    ],
+    "tools": [],
     "closing": "Specialise in one lane, then raise the rate the evidence supports."
   },
   {
@@ -134,18 +231,38 @@
     "quote": "The platform succeeds when you no longer need it. So does every stage before this one.",
     "outcome": "You'll own client relationships, invoice as a registered professional, and carry a name people vouch for: the three assets no platform can revoke.",
     "doFirst": [
-      { "title": "Own your clients", "desc": "Move from platform gigs to direct relationships, referrals, retainers, and rates you set.", "href": "/clients", "cta": "Own your clients" },
-      { "title": "Get legit", "desc": "BIR registration, the 8% option, your own benefits, and the payment rail that protects your rate.", "href": "/legit", "cta": "Make it official" },
-      { "title": "Aim at an end-goal role", "desc": "GTM engineer, RevOps, fractional operator. The roles you grow into from any lane.", "href": "/niches", "cta": "See end goals" },
-      { "title": "Take it anywhere", "desc": "Your clients travel with you. Some countries now issue visas for exactly what you've become.", "href": "/markets", "cta": "Work abroad" },
-      { "title": "Give back", "desc": "One pro-bono project, one beginner you unstick. The GIVE method: the ecosystem you feed feeds you.", "href": "/method", "cta": "The GIVE method" }
+      {
+        "title": "Own your clients",
+        "desc": "Move from platform gigs to direct relationships, referrals, retainers, and rates you set.",
+        "href": "/clients",
+        "cta": "Own your clients"
+      },
+      {
+        "title": "Get legit",
+        "desc": "BIR registration, the 8% option, your own benefits, and the payment rail that protects your rate.",
+        "href": "/legit",
+        "cta": "Make it official"
+      },
+      {
+        "title": "Aim at an end-goal role",
+        "desc": "GTM engineer, RevOps, fractional operator. The roles you grow into from any lane.",
+        "href": "/niches",
+        "cta": "See end goals"
+      },
+      {
+        "title": "Take it anywhere",
+        "desc": "Your clients travel with you. Some countries now issue visas for exactly what you've become.",
+        "href": "/markets",
+        "cta": "Work abroad"
+      },
+      {
+        "title": "Give back",
+        "desc": "One pro-bono project, one beginner you unstick. The GIVE method: the ecosystem you feed feeds you.",
+        "href": "/method",
+        "cta": "The GIVE method"
+      }
     ],
-    "tools": [
-      { "label": "Own Your Clients", "href": "/clients" },
-      { "label": "Get Legit", "href": "/legit" },
-      { "label": "Client Markets", "href": "/markets" },
-      { "label": "The Method", "href": "/method" }
-    ],
+    "tools": [],
     "closing": "Build the things nobody can revoke: your skill, your client list, and the name people vouch for. Then hold the door for whoever is next."
   }
 ]

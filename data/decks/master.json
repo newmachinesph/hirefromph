@@ -1,0 +1,242 @@
+{
+  "id": "master",
+  "title": "Be the reason they hire from the Philippines",
+  "subtitle": "The Hire From PH doctrine: five stages, seven methods, and how to run them in your own room",
+  "lastVerified": "2026-08",
+  "slides": [
+    {
+      "id": "title",
+      "type": "title",
+      "kicker": "Hire From PH",
+      "title": "Be the reason they hire from the Philippines",
+      "body": "An open path for Filipinos building a remote career as an online professional. No fee, no sign-up, no catch, and this deck carries the method, not the files.",
+      "media": { "photo": "deck-title" },
+      "notes": "Say who you are and why you are running this, then say the one thing the room needs to hear first: nobody here will be handed a finished file today. Ask how many people have downloaded a template and how far it got them. Take two honest answers and correct neither."
+    },
+    {
+      "id": "chapter-why",
+      "type": "chapter",
+      "kicker": "Why this exists",
+      "title": "The standard, not the discount",
+      "body": "The people companies hire from the Philippines should be the ones worth hiring anywhere. Competing on price invites replacement; competing on judgment does not.",
+      "media": { "photo": "deck-why" },
+      "notes": "Say it plainly: a worker hired because they are cheap is replaced the moment someone cheaper appears. A worker hired for judgment is kept and referred. Ask the room which one they have been so far, and which one they want to be by the end of the year. Everything after this slide builds toward the second answer."
+    },
+    {
+      "id": "honesty",
+      "type": "statement",
+      "kicker": "The honesty rule",
+      "title": "No number without its source",
+      "body": "Every figure on the site ships with a link to where it came from, and where the data does not exist we say so instead of inventing it. We do not know how many rooms this kit reaches, so we will never publish a learner count.",
+      "notes": "We ask learners to write an integrity oath, so we hold ourselves to the same rule. Tell the room that any pay figure or market claim they meet on the site is an estimate with a citation, never a promise. Ask them when they last believed a number about online work without checking where it came from. That question is the seed of the VET method later."
+    },
+    {
+      "id": "method-over-material",
+      "type": "statement",
+      "kicker": "The doctrine",
+      "title": "We don't give you the file. We teach you to build it.",
+      "body": "A file solves today; a method solves every tomorrow. Everything here is built to make you resourceful, so that one day you don't need this platform at all.",
+      "notes": "A template makes you identical to every other applicant and stops helping the moment the job is slightly different. Someone who understands why a document is shaped the way it is can rebuild it for any situation, in any tool, from a blank page. Ask the room: if your resume disappeared tonight, could you rebuild it tomorrow, better? If not, they never had a resume, they had a download."
+    },
+    {
+      "id": "chapter-path",
+      "type": "chapter",
+      "kicker": "The path",
+      "title": "One line from zero to a career you own",
+      "body": "Five stages, eleven steps. You never have to guess what's next.",
+      "media": { "photo": "deck-path" },
+      "notes": "This chapter shows the whole route before the methods, so the room knows where the methods get used. Say that every stage names who you are at that point, and that the line ends in independence, not employment. Ask people to place themselves on the line as you go; most rooms spread across the first three stages."
+    },
+    {
+      "id": "five-stages",
+      "type": "diagram",
+      "kicker": "The path",
+      "title": "Five stages, one line",
+      "body": "Start Right, Get Hired, Deliver, Level Up, Own. Each stage names who you are at that point: the beginner, the job hunter, the online professional, the specialist, the independent.",
+      "media": { "diagram": "journey-map" },
+      "notes": "Walk the map left to right and say one line per stage. Start Right needs no degree, no experience and no capital, only a working setup and one finished micro-task. Get Hired is a pipeline you build and track, not a bookmark list; Deliver is written systems; Level Up is one niche and a higher rate; Own is direct clients, a registered business, and a name people vouch for. Ask the room which stage they are in today and which one scares them."
+    },
+    {
+      "id": "eleven-steps",
+      "type": "list",
+      "kicker": "The path",
+      "title": "Eleven steps, no guessing",
+      "body": "One ordered line from zero to a career you own. You never have to guess what's next.",
+      "items": [
+        "Start Right: set up and mindset, then learn the foundation.",
+        "Get Hired: build your assets, apply everywhere, interview and negotiate.",
+        "Deliver: ace your first week, systemize your work, become indispensable.",
+        "Level Up: specialize and automate, then raise your rate on evidence.",
+        "Own: go direct and get legit, then give back."
+      ],
+      "notes": "Read the steps as a sequence, because the order is the point: nobody should be negotiating a rate before they have finished one real artifact. Point out that the last step is giving back, and that the platform counts itself successful when the person no longer needs it. Ask which single step each person would do this week if they had to pick one."
+    },
+    {
+      "id": "chapter-methods",
+      "type": "chapter",
+      "kicker": "Seven methods",
+      "title": "Resourcefulness is not knowing the answer. It's reliably finding it.",
+      "body": "Seven procedures you can run without us: find, deconstruct, learn, vet, ask, unstick, give.",
+      "media": { "photo": "deck-methods" },
+      "notes": "Almost everything a person needs is public and costs nothing; the skill is knowing where to look and what to trust. Say that each of the next seven slides is a procedure, not advice, and that every one ends in a drill the participant does alone. Ask the room to pick the one they are worst at while you go through them. That is the one they take home."
+    },
+    {
+      "id": "method-find",
+      "type": "method",
+      "kicker": "Method",
+      "title": "FIND: how to find any answer",
+      "body": "Drill: pick something you don't know and find a trustworthy answer from primary sources alone, in under ten minutes. Write down the query that worked.",
+      "items": [
+        "Go to the primary source first: the official docs, the actual job post, the company's own site.",
+        "Search like an operator: exact phrases in quotes, a site or file type limit, a minus sign for noise.",
+        "Triangulate before you trust, then ask when it was true and who profits if you believe it."
+      ],
+      "media": { "icon": "find" },
+      "notes": "Most people search like a customer; professionals search like an operator. Show one query live if you can: a job title in quotes, limited to one site, with a noise word subtracted. Say that if only one place says something, it is a rumour until a second and third independent source agree. Ask the room what the last thing they believed from a single confident source was."
+    },
+    {
+      "id": "method-deconstruct",
+      "type": "method",
+      "kicker": "Method",
+      "title": "DECONSTRUCT: how to build something you've never built",
+      "body": "Drill: take one deliverable you've never made, find five real ones, and write your rules. Then build yours from the rules alone, examples closed.",
+      "items": [
+        "Collect five real examples, made by professionals for the real situation. Not five templates.",
+        "Extract the skeleton, what every example contains, then name the variables, what differs and why.",
+        "Write testable rules from what you saw, and build from the rules on a blank page."
+      ],
+      "media": { "icon": "deconstruct" },
+      "notes": "You never need a template; you need five examples and the ability to see the pattern. The common structure across all five is not a style choice, it is the function. The differences are the judgment calls the participant will have to make for themselves. Ask the room which deliverable they have been avoiding because they had no template for it, and tell them that is their drill."
+    },
+    {
+      "id": "method-learn",
+      "type": "method",
+      "kicker": "Method",
+      "title": "LEARN: how to teach yourself any skill, fast",
+      "body": "Drill: pick one tool from your niche and, within two days, produce one real artifact with it. Then write a one-page SOP so someone else can do the same.",
+      "items": [
+        "Define the outcome, not the topic. An outcome tells you when you're done.",
+        "Learn the handful of functions used daily, then build a real, flawed artifact straight away.",
+        "Get feedback that stings a little, and teach it back. A gap you can't explain is a gap you've found."
+      ],
+      "media": { "icon": "learn" },
+      "notes": "Courses are optional; the ability to learn without one is not. Contrast learn QuickBooks with reconcile a month of real transactions without help, and ask which one tells you when you are finished. Warn the room against six hours of tutorial: twenty minutes of input, then build something broken, because the flaws tell you exactly what to learn next. Ask who in the room has taught someone a skill and what they discovered about their own gaps while doing it."
+    },
+    {
+      "id": "method-vet",
+      "type": "method",
+      "kicker": "Method",
+      "title": "VET: how to judge information, tools, and opportunities",
+      "body": "Drill: run any opportunity or course you're considering through the four questions, in writing. No evidence, no action.",
+      "items": [
+        "Who benefits if I believe this? Then: is this evidence, or is this vibes?",
+        "Is it still true? Rules, rates, and tools change every year; an old answer is a guess wearing a suit.",
+        "Run the red-flag check: upfront fees, guaranteed income, secrecy, urgency, vagueness. Any one is a stop."
+      ],
+      "media": { "icon": "vet" },
+      "notes": "Confidence is not accuracy, and advice usually arrives with an incentive attached. Numbers, named sources and dates are evidence; confidence, screenshots and lifestyle are not. Make the room say out loud that one hard stop ends it no matter how good the rest looks. Ask each person to name one thing they said yes to too quickly; everyone has one, so allow no shaming and no advice."
+    },
+    {
+      "id": "method-ask",
+      "type": "method",
+      "kicker": "Method",
+      "title": "ASK: how to ask a question that gets answered",
+      "body": "Drill: rewrite the last question you asked anyone into this four-part form. Notice how often you can now answer it yourself.",
+      "items": [
+        "Show what you're trying to do: the actual goal, not the symptom.",
+        "Show what you already tried, and show what happened in the exact words, not your paraphrase.",
+        "Ask for the method, not the file. That makes you a colleague, and you keep what you learn."
+      ],
+      "media": { "icon": "ask" },
+      "notes": "A well-formed question gets a professional's help; a vague one gets ignored, everywhere. Read two questions aloud, a bare plea for help and a four-part one, and ask which they would answer with four minutes left and a full inbox. Refuse the phrase I tried everything, because it tells the reader nothing. Ask how many people have answered their own question while writing down what they already tried."
+    },
+    {
+      "id": "method-unstick",
+      "type": "method",
+      "kicker": "Method",
+      "title": "UNSTICK: how to get yourself moving again",
+      "body": "Drill: next time you're stuck, run the steps in order and write down which one freed you. Within a month you'll know your own failure pattern.",
+      "items": [
+        "Re-read the actual requirement, word for word. Much of stuck is solving the wrong problem.",
+        "Shrink it to the smallest failing piece, and change one thing at a time.",
+        "Explain it out loud, then time-box it. When the limit passes, stop grinding and ask well."
+      ],
+      "media": { "icon": "unstick" },
+      "notes": "Being stuck is a step, not a wall; every professional is stuck most of the day and simply has a procedure for it. Say that grinding past a hard time limit is ego, not work, and that asking well is what the limit is for. Point back to the ASK slide, since the two methods only work as a pair. Ask the room how long they usually stay stuck before telling anyone."
+    },
+    {
+      "id": "method-give",
+      "type": "method",
+      "kicker": "Method",
+      "title": "GIVE: how to grow by giving first",
+      "body": "Drill: this week, give one hour of scoped, no-cost help to one real person or organisation, and write one answer to a beginner's question. Notice what both cost you, and what they start.",
+      "items": [
+        "Do real work for a real need at no cost: one scoped project for a school, parish, co-op, or small business.",
+        "Teach what you just learned, and share the method behind a win, not only the win.",
+        "Show up in your niche's rooms and answer real questions. Referrals arrive before job posts do."
+      ],
+      "media": { "icon": "give" },
+      "notes": "The fastest way into any ecosystem is to put value into it before you ask anything from it. A small organisation gains more from a few of your hours than a large one ever would, so choose where the hours do the most good. Teaching is also the strongest test of understanding, which is why this method loops back to LEARN. Ask the room who they could help this week for free, and what they would write up afterwards."
+    },
+    {
+      "id": "method-loop",
+      "type": "diagram",
+      "kicker": "Seven methods",
+      "title": "The methods run as a loop, not a list",
+      "body": "Find the source, deconstruct what works, learn by building, vet before you commit, ask well when the time-box runs out, get yourself unstuck, then give it back. Teaching is how you find the gaps you can't see, which sends you back to the start.",
+      "media": { "diagram": "method-loop" },
+      "notes": "Trace the loop with your hand. Point out the two joins the room will use most: UNSTICK hands off to ASK when the time limit passes, and GIVE hands back to LEARN because teaching exposes what you do not know. Say that nobody runs all seven in one day; they run whichever one the moment needs. Ask the room to name where on the loop they usually stall."
+    },
+    {
+      "id": "anti-patterns",
+      "type": "list",
+      "kicker": "Anti-patterns",
+      "title": "Spoon-fed habits to unlearn",
+      "body": "These feel like progress. None of them are.",
+      "items": [
+        "Asking for the file. Ask how it's built instead, then build it; the file expires, the method compounds.",
+        "Collecting resources. A folder of saved links has taught you nothing; one finished thing has.",
+        "Copying without understanding. Extract the rule, then write your own; the job is always slightly different.",
+        "Waiting to be taught. Find the primary source yourself. Nobody is coming, and that is the good news.",
+        "Endless tutorials, and courses bought to feel safe. Build something broken, and run VET first."
+      ],
+      "notes": "Read each habit and let the room recognise itself; most people will see at least three of their own. Say that discomfort is not a signal to spend money, it is a signal to start. Ask everyone to write down the one habit they will drop this month and what replaces it. Do not ask them to share it; the written commitment is enough."
+    },
+    {
+      "id": "run-a-session",
+      "type": "list",
+      "kicker": "How to run a session",
+      "title": "Ninety minutes, a projector, and a printed run-sheet",
+      "body": "Everything in this kit is built for a facilitator with a room. You do not need us present, and you do not need our permission.",
+      "items": [
+        "Pick one session and read the run-sheet end to end before you commit to a date.",
+        "Book the room, test the connection the day before, and tell participants what to bring.",
+        "Print the run-sheet and run the clock out loud. Say each block as it starts.",
+        "Run it once as written before you change it. The steps that look skippable carry the learning.",
+        "Close with the drill and the next date. A drill without a next date quietly expires."
+      ],
+      "notes": "If the room is full of facilitators, this is the slide to slow down on. Each session asks a different thing of the room: DECONSTRUCT needs argument, VET needs honesty, ASK needs quiet, so choose the one your group can carry today. Warn them that the blank-page build, the read-aloud and the written verdict look skippable and are the whole session; cut them and you have run a lecture. Ask who has a room and a date already, and who still needs one."
+    },
+    {
+      "id": "chapter-close",
+      "type": "chapter",
+      "kicker": "How to use this",
+      "title": "Run it, adapt it, pass it on",
+      "body": "Nothing here needs our permission or our presence. If you improve a run-sheet, tell the next facilitator; that is the GIVE method applied to this kit.",
+      "media": { "photo": "deck-close" },
+      "notes": "Close by saying the proof of a session is in the room and in what participants build, not in a number on our page. Adapt after the first run, not before, and send what you changed to whoever runs it next. Ask each person to name the drill they are taking home and the date the group meets again, out loud, so the room can hold them to it."
+    },
+    {
+      "id": "licence",
+      "type": "close",
+      "kicker": "Licence",
+      "title": "CC BY 4.0, with attribution",
+      "body": "Share and adapt this material, including inside training you are paid to run, as long as you credit Hire From PH (hirefrom.ph) and say what you changed. The platform itself stays open and at no cost to learners.",
+      "source": {
+        "label": "Creative Commons Attribution 4.0 International",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "notes": "State the licence in one breath: use it, change it, charge for your time if you must, credit the source and say what you altered. Say that the site itself stays free and asks for nobody's email. Leave this slide up while people write down their drill and the next date."
+    }
+  ]
+}

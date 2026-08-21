@@ -73,10 +73,10 @@
     "title": "Direct clients don't fall from the sky. They are built, step by step.",
     "lead": "This is the part that scares people off direct work, and it is a learnable process, not a personality trait. You do not need to be an extrovert or a salesperson. You need a clear position, real proof, and a repeatable way to start conversations. Here is the sequence.",
     "steps": [
-      { "title": "Get specific about who you help", "how": "Pick a narrow lane and a clear outcome. I keep Shopify stores' books clean, not I do admin. Specific is easier to refer, easier to trust, and easier to price.", "crossref": { "href": "/niches", "label": "Pick your lane with the rubric" } },
+      { "title": "Get specific about who you help", "how": "Pick a narrow lane and a clear outcome. \"I keep Shopify stores' books clean,\" not \"I do admin.\" Specific is easier to refer, easier to trust, and easier to price.", "crossref": { "href": "/niches", "label": "Pick your lane with the rubric" } },
       { "title": "Build proof before you pitch", "how": "Ship two or three real, visible pieces of work, even self-made or for a cause you like. Nobody hires a claim. They hire evidence they can see.", "crossref": { "href": "/tasks", "label": "Build real proof" } },
       { "title": "Turn your warm network on first", "how": "Tell everyone you know, former colleagues, batchmates, past clients, exactly what you now do and who you help. Your first direct clients almost always come from people who already trust you.", "crossref": null },
-      { "title": "Do focused outbound", "how": "Make a short list of businesses that fit your lane and reach out with one specific, useful observation about their work, not a generic I am available. A good list beats a big one.", "crossref": { "href": "/apply", "label": "Source & vet clients yourself" } },
+      { "title": "Do focused outbound", "how": "Make a short list of businesses that fit your lane and reach out with one specific, useful observation about their work, not a generic \"I am available.\" A good list beats a big one.", "crossref": { "href": "/apply", "label": "Source & vet clients yourself" } },
       { "title": "Let content pull people in", "how": "Post what you know where your clients look, a tip, a teardown, a before-and-after. Over time it makes clients come to you, already half-sold. Slow to start, compounding.", "crossref": null },
       { "title": "Run the discovery call like a diagnosis", "how": "Ask more than you pitch. Understand the client's real problem and what a good outcome is worth to them before you ever talk price. You are prescribing, not selling.", "crossref": null },
       { "title": "Propose the outcome, not the hours", "how": "Send a short proposal that restates their goal, your plan, the deliverables, and a clear price. Sell the result you will produce, not the time you will spend.", "crossref": { "href": "/build", "label": "Write it from a blank page" } },
@@ -94,6 +94,7 @@
         "title": "There is still no freelancer protection law",
         "desc": "The Freelance Workers Protection Act, written contracts, upfront payment, penalties for non-payment, passed the House in 2023 and then stalled. It is not yet law. So you cannot lean on a statute. You have to build the protection into every deal yourself.",
         "icon": "scale",
+        "crossref": null,
         "source": {
           "label": "BusinessMirror, Bill seeks protection for freelancers, gig workers",
           "url": "https://businessmirror.com.ph/2026/05/06/bill-seeks-protection-benefits-for-freelancers-gig-workers/"
@@ -103,12 +104,14 @@
         "title": "Contract, scope, and a deposit, every time",
         "desc": "Written scope so done is defined, milestones so you are never carrying weeks of unpaid work, and a deposit before you start. Build the habit now while the stakes are small, so it is automatic when they are large.",
         "icon": "file-signature",
+        "crossref": null,
         "source": null
       },
       {
         "title": "Register, and invoice like a supplier",
-        "desc": "A registered freelancer in the Philippines can use the 8% flat-tax option (on gross receipts above ₱250,000, if you stay under the ₱3M VAT threshold) and issue a proper invoice. These figures are current as of Taxumo's 2025 guide; BIR thresholds can change, so reconfirm them yearly before you file. Being invoice-ready is itself a rate differentiator, because it lets a serious client book you as a real supplier, not a favor.",
+        "desc": "A registered freelancer in the Philippines can issue a proper invoice and pick the tax option that fits their size. The thresholds and rates live on the Get Legit page, which links the official BIR sources. Being invoice-ready is itself a rate differentiator, because it lets a serious client book you as a real supplier, not a favor.",
         "icon": "receipt-text",
+        "crossref": { "href": "/legit", "label": "The BIR steps and current thresholds" },
         "source": {
           "label": "Taxumo, Taxes for Freelancers in the Philippines (2025 guide)",
           "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/"
@@ -118,6 +121,7 @@
         "title": "Get paid through channels that protect you",
         "desc": "Use tracked, professional payment rails and keep the paper trail. Never move work off-platform to save the fee before trust is earned, and treat any unfunded milestone as unpaid work, because that is what it is.",
         "icon": "shield-check",
+        "crossref": null,
         "source": null
       }
     ],

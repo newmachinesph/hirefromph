@@ -1,5 +1,5 @@
 {
-  "lastVerified": "2026-07",
+  "lastVerified": "2026-08",
   "hero": {
     "kicker": "Open · real · sourced",
     "line1": "The shelf.",
@@ -10,7 +10,7 @@
   "judge": {
     "kicker": "Before you enrol · the filter",
     "title": "How to judge any open course before it takes your week.",
-    "lead": "There is an ocean of open learning, and most of it is a comfortable way to feel productive without becoming more hireable. Run any course, including the ones we list below, through these five questions first. The ones worth your time survive all five.",
+    "lead": "There is an ocean of open learning, and most of it is a comfortable way to feel productive without becoming more hireable. Run any course, including the ones on the shelf above, through these five questions first. The ones worth your time survive all five.",
     "tests": [
       {
         "q": "Does it end in a real artifact?",
@@ -146,62 +146,13 @@
       {
         "id": "opensource",
         "title": "Free & open-source, skip the subscription",
-        "note": "Paid subscriptions add up fast on a new freelancer's rate. These tools cover the same jobs, design, video, docs, PDF, screen recording, notes, so you can deliver client work without a stack of monthly bills. The open-source ones you can self-host and keep; the freemium ones have a real no-cost tier, not just a trial.",
+        "note": "Paid subscriptions add up fast on a new freelancer's rate. These seven cover the jobs this audience bills for, screen recording, video, PDF, office files, quick image edits, diagrams, and audio, without a stack of monthly bills. The open-source ones you can install and keep; the freemium ones have a real no-cost tier, not just a trial.",
         "items": [
           {
-            "org": "Penpot · open",
-            "title": "Penpot, collaborative design and prototyping",
-            "url": "https://penpot.app",
-            "why": "Replaces Figma's paid seats for interface design and prototyping, self-hostable and free with no per-editor fee.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Inkscape · open",
-            "title": "Inkscape, vector illustration and logo design",
-            "url": "https://inkscape.org",
-            "why": "Replaces Adobe Illustrator (about $23/month) for logos, icons, and vector artwork, with full SVG support.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Excalidraw · open",
-            "title": "Excalidraw, hand-drawn diagrams and whiteboarding",
-            "url": "https://excalidraw.com",
-            "why": "Replaces paid whiteboards like Miro for client mockups, flowcharts, and quick wireframes.",
-            "cost": "open-source"
-          },
-          {
-            "org": "GIMP · open",
-            "title": "GIMP, raster photo and image editor",
-            "url": "https://www.gimp.org",
-            "why": "Replaces Adobe Photoshop (about $23/month) for photo retouching, compositing, and raster editing.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Krita · open",
-            "title": "Krita, digital painting and illustration",
-            "url": "https://krita.org",
-            "why": "Replaces Procreate or Photoshop for digital painting, comic art, and illustration gigs, brushes included.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Photopea",
-            "title": "Photopea, browser-based PSD editor",
-            "url": "https://www.photopea.com",
-            "why": "Opens and edits PSD, AI, and XD files right in the browser for one-off jobs, no Creative Cloud subscription.",
-            "cost": "freemium"
-          },
-          {
-            "org": "OpenCut · open",
-            "title": "OpenCut, browser and desktop video editor",
-            "url": "https://opencut.app",
-            "why": "Replaces CapCut Pro or Premiere Pro for timeline video editing, processes files locally with no watermark or upload.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Kdenlive · open",
-            "title": "Kdenlive, multi-track desktop video editor",
-            "url": "https://kdenlive.org",
-            "why": "Replaces Premiere Pro for multi-track video editing on Windows, Mac, and Linux at zero cost.",
+            "org": "OBS Studio · open",
+            "title": "OBS Studio, screen recording and streaming",
+            "url": "https://obsproject.com",
+            "why": "Replaces Loom or Camtasia for screen recordings, client walkthroughs, and video proposals.",
             "cost": "open-source"
           },
           {
@@ -212,27 +163,6 @@
             "cost": "freemium"
           },
           {
-            "org": "Audacity · open",
-            "title": "Audacity, multi-track audio editor",
-            "url": "https://www.audacityteam.org",
-            "why": "Replaces Adobe Audition for podcast editing, noise cleanup, and multi-track audio recording.",
-            "cost": "open-source"
-          },
-          {
-            "org": "LibreOffice · open",
-            "title": "LibreOffice, docs, spreadsheets, and slides",
-            "url": "https://www.libreoffice.org",
-            "why": "Replaces Microsoft 365 Personal (about $70/year) for documents, spreadsheets, and slides, saved in .docx/.xlsx/.pptx when a client needs it.",
-            "cost": "open-source"
-          },
-          {
-            "org": "ONLYOFFICE · open",
-            "title": "ONLYOFFICE, MS Office-format editors",
-            "url": "https://www.onlyoffice.com",
-            "why": "Replaces Microsoft 365 for clients who need pixel-accurate .docx/.xlsx/.pptx formatting that LibreOffice sometimes shifts.",
-            "cost": "open-source"
-          },
-          {
             "org": "Stirling PDF · open",
             "title": "Stirling PDF, merge, split, sign, and OCR PDFs",
             "url": "https://www.stirlingpdf.com",
@@ -240,44 +170,41 @@
             "cost": "open-source"
           },
           {
-            "org": "OBS Studio · open",
-            "title": "OBS Studio, screen recording and streaming",
-            "url": "https://obsproject.com",
-            "why": "Replaces Loom or Camtasia for screen recordings, client walkthroughs, and video proposals.",
+            "org": "LibreOffice · open",
+            "title": "LibreOffice, docs, spreadsheets, and slides",
+            "url": "https://www.libreoffice.org",
+            "why": "Replaces Microsoft 365 Personal ($99.99 a year on Microsoft's own pricing page, checked August 2026) for documents, spreadsheets, and slides, saved in .docx/.xlsx/.pptx when a client needs it.",
             "cost": "open-source"
           },
           {
-            "org": "AppFlowy · open",
-            "title": "AppFlowy, Notion-style docs and databases",
-            "url": "https://appflowy.io",
-            "why": "Replaces Notion's paid plan for notes, wikis, and databases, self-hostable so client data stays on your own server.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Wekan · open",
-            "title": "Wekan, kanban task and project boards",
-            "url": "https://wekan.github.io",
-            "why": "Replaces Trello's paid power-ups for kanban boards, checklists, and swimlanes, self-hosted or on a free community instance.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Instatic · open",
-            "title": "Instatic, self-hosted website builder and CMS",
-            "url": "https://github.com/CoreBunch/Instatic",
-            "why": "Replaces Webflow or Framer subscriptions for client sites, MIT licensed and free on your own server, though still an early release.",
-            "cost": "open-source"
-          },
-          {
-            "org": "Agnes AI",
-            "title": "Agnes AI, multimodal AI workspace",
-            "url": "https://agnes-ai.com",
-            "why": "Replaces a ChatGPT Plus or Notion AI subscription for everyday AI chat, docs, and drafting; the free tier is rate-limited, paid plans start around $4/month.",
+            "org": "Photopea",
+            "title": "Photopea, browser-based PSD editor",
+            "url": "https://www.photopea.com",
+            "why": "Opens and edits PSD, AI, and XD files right in the browser for one-off jobs, no Creative Cloud subscription.",
             "cost": "freemium"
+          },
+          {
+            "org": "Excalidraw · open",
+            "title": "Excalidraw, hand-drawn diagrams and whiteboarding",
+            "url": "https://excalidraw.com",
+            "why": "Replaces paid whiteboards like Miro for client mockups, flowcharts, and quick wireframes.",
+            "cost": "open-source"
+          },
+          {
+            "org": "Audacity · open",
+            "title": "Audacity, multi-track audio editor",
+            "url": "https://www.audacityteam.org",
+            "why": "Replaces Adobe Audition for podcast editing, noise cleanup, and multi-track audio recording.",
+            "cost": "open-source"
           }
         ],
         "savings": {
-          "note": "A working freelancer's paid stack runs about this much every month. This shelf covers all of it for free.",
-          "asOf": "Approximate list prices, mid-2026.",
+          "note": "A working freelancer's paid image, video, PDF, and office stack runs about this much every month. The tools in this group cover those four jobs at no cost; AI chat and project boards are not counted because nothing here replaces them.",
+          "asOf": "Approximate list prices, August 2026. Microsoft 365 Personal is $99.99 a year billed annually, about $8 a month.",
+          "source": {
+            "label": "Microsoft: compare all Microsoft 365 plans (Personal, $99.99/year)",
+            "url": "https://www.microsoft.com/en-us/microsoft-365/buy/compare-all-microsoft-365-products"
+          },
           "basis": [
             {
               "tool": "Adobe Photoshop",
@@ -292,16 +219,8 @@
               "monthly": 20
             },
             {
-              "tool": "Microsoft 365",
-              "monthly": 6
-            },
-            {
-              "tool": "Notion (paid plan)",
-              "monthly": 10
-            },
-            {
-              "tool": "ChatGPT Plus",
-              "monthly": 20
+              "tool": "Microsoft 365 Personal",
+              "monthly": 8
             }
           ]
         }

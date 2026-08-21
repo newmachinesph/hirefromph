@@ -1,8 +1,32 @@
 "use client";
 
 import { useState } from "react";
-import { Callout, Card, Field, Icon, Kicker, Range, Stat, StatStrip, Text } from "@/components/ui";
-import { computeRate } from "@/lib/rate-math";
+import {
+  Callout,
+  Card,
+  Field,
+  Icon,
+  Kicker,
+  Range,
+  Source,
+  Stat,
+  StatStrip,
+  Text,
+} from "@/components/ui";
+import { computeRate, unpaidShareToAddon } from "@/lib/rate-math";
+import { DEFAULT_FX, UNPAID_KEEP } from "@/lib/simulator-math";
+
+/**
+ * Unpaid share of all working time, as a percent. Derived from the simulator's
+ * keep-rate so the two tools cannot disagree: the ILO (2015–17 surveys)
+ * measured ~20 unpaid minutes per paid hour, about a quarter of the time you work.
+ */
+export const DEFAULT_UNPAID_SHARE = Math.round((1 - UNPAID_KEEP) * 100);
+
+export const UNPAID_SOURCE = {
+  label: "ILO, Digital labour platforms and the future of work (2018), surveys 2015–2017",
+  url: "https://www.ilo.org/media/414716/download",
+};
 
 /** A labelled slider. The value read-out is part of the label, per Field's contract. */
 function SliderField({
@@ -53,10 +77,10 @@ export function RateCalculator() {
   const [rate, setRate] = useState(8); // $/hr billed
   const [hours, setHours] = useState(40); // billable hours/week
   const [fee, setFee] = useState(10); // platform fee %
-  const [unpaid, setUnpaid] = useState(30); // unpaid time %
+  const [unpaidShare, setUnpaidShare] = useState(DEFAULT_UNPAID_SHARE); // % of all working time
   const [costs, setCosts] = useState(4000); // ₱/mo internet, power, tools
   const [tax, setTax] = useState(8); // %
-  const [fx, setFx] = useState(60); // ₱ per $1
+  const [fx, setFx] = useState(DEFAULT_FX); // ₱ per $1
 
   const {
     afterFeeUsd,
@@ -66,7 +90,15 @@ export function RateCalculator() {
     effHourlyPhp,
     effHourlyUsd,
     shrink,
-  } = computeRate({ rate, hours, fee, unpaid, costs, tax, fx });
+  } = computeRate({
+    rate,
+    hours,
+    fee,
+    unpaid: unpaidShareToAddon(unpaidShare),
+    costs,
+    tax,
+    fx,
+  });
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
@@ -84,13 +116,13 @@ export function RateCalculator() {
           hint="Upwork and similar take a cut. 0 if the client is fully direct."
         />
         <SliderField
-          label="Unpaid time"
-          value={unpaid}
-          setValue={setUnpaid}
+          label="Unpaid share of your working time"
+          value={unpaidShare}
+          setValue={setUnpaidShare}
           min={0}
           max={60}
           suffix="%"
-          hint="Hunting for work, unpaid tests, proposals nobody answers. Research puts this near a third."
+          hint="Hunting for work, unpaid tests, proposals nobody answers. The ILO measured about 20 unpaid minutes for every paid hour: a quarter of the time you work."
         />
         <SliderField
           label="Monthly costs"
@@ -111,7 +143,16 @@ export function RateCalculator() {
           suffix="%"
           hint="The BIR 8% flat option is a common starting point."
         />
-        <SliderField label="Exchange rate" value={fx} setValue={setFx} min={45} max={70} prefix="₱" suffix=" / $1" />
+        <SliderField
+          label="Exchange rate"
+          value={fx}
+          setValue={setFx}
+          min={45}
+          max={70}
+          step={0.5}
+          prefix="₱"
+          suffix=" / $1"
+        />
       </div>
 
       {/* outputs */}
@@ -148,10 +189,13 @@ export function RateCalculator() {
         <Card padding="sm">
           <div className="flex items-start gap-2">
             <Icon name="scan-eye" size={16} weight="bold" className="mt-0.5 shrink-0 text-verified" />
-            <Text size="caption">
-              An estimate, not a promise. The point is the shape: never compare a headline rate
-              to a local salary before you subtract everything above.
-            </Text>
+            <div className="flex flex-col gap-2">
+              <Text size="caption">
+                An estimate, not a promise. The point is the shape: never compare a headline rate
+                to a local salary before you subtract everything above.
+              </Text>
+              <Source label={UNPAID_SOURCE.label} url={UNPAID_SOURCE.url} />
+            </div>
           </div>
         </Card>
       </div>

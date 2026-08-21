@@ -11,6 +11,8 @@ import {
   Toc,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
   Button,
   Callout,
@@ -35,16 +37,14 @@ export const metadata: Metadata = pageMeta({
   path: HREF,
   title: "Reality Check",
   description:
-    "What the evidence says about remote and online work for Filipinos right now. The unpaid third of your hours, the non-payment rate, what AI really cut, where demand is growing, every number with its source, and an honest list of what nobody knows.",
+    "What the evidence says about remote and online work for Filipinos right now. The unpaid quarter of your hours, the non-payment rate, what AI really cut, where demand is growing, every number with its source, and an honest list of what nobody knows.",
 });
 
 const TOC = [
-  { id: "read-a-number", label: "Read a number" },
   { id: "myths", label: "Seven myths" },
-  { id: "ai", label: "What AI cut" },
+  { id: "proof", label: "What AI cut" },
   { id: "growth", label: "Where it grows" },
   { id: "thesis", label: "The thesis" },
-  { id: "pay", label: "Pay" },
   { id: "unknown", label: "What nobody knows" },
   { id: "reading", label: "Read it yourself" },
 ];
@@ -56,7 +56,7 @@ function fmt(value: number): string {
 }
 
 export default function RealityPage() {
-  const { ai, growth, thesis, pay, unknown, reading, closing } = reality;
+  const { method, ai, growth, thesis, unknown, reading, closing } = reality;
 
   return (
     <>
@@ -68,12 +68,10 @@ export default function RealityPage() {
         accent={reality.heroTitle.line2}
         lead={reality.intro}
       >
+        <Toc items={TOC} mobile />
         <Callout tone="signal" className="max-w-2xl">
           {reality.creed}
         </Callout>
-        <Text size="small" className="max-w-2xl">
-          {reality.whyItMatters}
-        </Text>
         <FreshnessNote date={reality.lastVerified} />
         <Section spacing="none"><Tldr route="/reality" /></Section>
       </PageHero>
@@ -83,32 +81,22 @@ export default function RealityPage() {
           <Toc items={TOC} />
 
           <div className="flex min-w-0 flex-col gap-20">
-            {/* ----------------------------------------------- READ A NUMBER */}
-            <section id="read-a-number">
-              <SectionHeading
-                kicker={reality.readANumber.kicker}
-                title={reality.readANumber.title}
-                lead={reality.readANumber.lead}
-              />
-              <CardGrid cols={2} className="mt-12">
-                {reality.readANumber.tests.map((t) => (
-                  <Card key={t.id} as="article">
-                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
-                      <Icon name={t.icon} size={20} />
-                    </span>
-                    <Heading level={3} size="h4" className="mt-5" balance>
-                      {t.q}
-                    </Heading>
-                    <Text size="small" className="mt-3 flex-1">
-                      {t.why}
-                    </Text>
-                  </Card>
-                ))}
-              </CardGrid>
-              <Callout tone="signal" className="mt-8 max-w-2xl">
-                {reality.readANumber.note}
-              </Callout>
-            </section>
+            {/* ------------------------------------------------------ METHOD */}
+            <Callout tone="info" title={method.title} className="max-w-3xl">
+              <Kicker>{method.kicker}</Kicker>
+              <Text size="small" className="mt-4">
+                {method.body}
+              </Text>
+              <div className="mt-4">
+                <Button
+                  href={method.link.href}
+                  variant="link"
+                  iconEnd={<Icon name="arrow-up-right" size={16} />}
+                >
+                  {method.link.label}
+                </Button>
+              </div>
+            </Callout>
 
             {/* ------------------------------------------------------- MYTHS */}
             <section id="myths">
@@ -118,61 +106,64 @@ export default function RealityPage() {
                 lead={reality.mythsIntro}
               />
 
-              <div className="mt-12 flex flex-col gap-5">
+              <Accordion type="multiple" className="mt-12">
                 {reality.myths.map((m) => {
                   const a = accent(m.accent);
                   return (
-                    <Card key={m.id} as="article" padding="lg">
-                      <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-                        <div>
-                          <Badge tone={m.accent as "signal"} variant="outline">
-                            {m.tag}
-                          </Badge>
+                    <AccordionItem
+                      key={m.id}
+                      id={m.id}
+                      title={
+                        <span className="flex flex-col gap-2 pr-2">
+                          <span>
+                            <Badge tone={m.accent as "signal"} variant="outline">
+                              {m.tag}
+                            </Badge>
+                          </span>
                           <Text
+                            as="span"
                             size="lead"
                             tone="faint"
-                            className="mt-4 font-display line-through decoration-coral/50 decoration-2"
+                            className="font-display line-through decoration-coral/50 decoration-2"
                           >
                             {m.myth}
                           </Text>
-                          <Heading level={3} size="h3" className="mt-4" balance>
-                            {m.headline}
-                          </Heading>
-                          <div className="mt-5 flex flex-col gap-2">
-                            <Source label={m.source.label} url={m.source.url} />
-                            {m.source2 && <Source label={m.source2.label} url={m.source2.url} />}
-                            {m.sourceNote && (
-                              <Text size="caption" tone="faint" className="max-w-sm">
-                                {m.sourceNote}
-                              </Text>
-                            )}
-                          </div>
-                        </div>
-
-                        <div className="flex flex-col gap-4">
-                          <Text size="small">{m.body}</Text>
-                          <Card padding="sm">
-                            <Text size="small" tone="ink">
-                              <span className="font-semibold">The sting:</span> {m.sting}
-                            </Text>
-                          </Card>
-                          <Text
-                            size="small"
-                            tone="ink"
-                            className={cn("border-l-2 pl-4 font-medium", a.border)}
-                          >
-                            {m.lesson}
+                          <Text as="span" size="small" tone="ink" className="font-sans font-normal">
+                            <span className="font-semibold">The sting:</span> {m.sting}
                           </Text>
+                        </span>
+                      }
+                    >
+                      <article className="flex flex-col gap-4">
+                        <Heading level={3} size="h4" balance>
+                          {m.headline}
+                        </Heading>
+                        <Text size="small">{m.body}</Text>
+                        <Text
+                          size="small"
+                          tone="ink"
+                          className={cn("border-l-2 pl-4 font-medium", a.border)}
+                        >
+                          {m.lesson}
+                        </Text>
+                        <div className="flex flex-col gap-2">
+                          <Source label={m.source.label} url={m.source.url} />
+                          {m.source2 && <Source label={m.source2.label} url={m.source2.url} />}
+                          {m.sourceNote && (
+                            <Text size="caption" tone="faint" className="max-w-xl">
+                              {m.sourceNote}
+                            </Text>
+                          )}
                         </div>
-                      </div>
-                    </Card>
+                      </article>
+                    </AccordionItem>
                   );
                 })}
-              </div>
+              </Accordion>
             </section>
 
-            {/* ---------------------------------------------------------- AI */}
-            <section id="ai">
+            {/* ------------------------------------------------------- PROOF */}
+            <section id="proof">
               <SectionHeading kicker={ai.kicker} title={ai.title} lead={ai.lead} />
               <Callout tone="info" className="mt-6 max-w-2xl">
                 {ai.framing}
@@ -356,6 +347,11 @@ export default function RealityPage() {
                 <Text size="small" className="mt-4 max-w-3xl">
                   {thesis.proof.body}
                 </Text>
+                <Source
+                  label={thesis.proof.source.label}
+                  url={thesis.proof.source.url}
+                  className="mt-4"
+                />
                 <div className="mt-6">
                   <Button
                     href="/indispensable"
@@ -364,32 +360,6 @@ export default function RealityPage() {
                   >
                     See the full freelancer vs employee breakdown on Become Indispensable
                   </Button>
-                </div>
-              </Card>
-            </section>
-
-            {/* --------------------------------------------------------- PAY */}
-            <section id="pay">
-              <SectionHeading kicker={pay.kicker} title={pay.title} />
-
-              <Callout tone="caution" title={pay.warning.title} className="mt-10">
-                <Badge tone="caution">Warning label</Badge>
-                <Text size="small" className="mt-4 max-w-3xl">
-                  {pay.warning.body}
-                </Text>
-              </Callout>
-
-              <Card padding="lg" className="mt-10">
-                <Text size="small" tone="ink" className="max-w-2xl font-medium">
-                  {pay.tiersNote}
-                </Text>
-                <Text size="small" className="mt-4 max-w-2xl">
-                  We moved the full picture to its own page so it can breathe: the tier ranges,
-                  the roles clients are hiring for now, full-time vs hourly vs retainer, and how
-                  to price yourself. Same warning label, all the way down.
-                </Text>
-                <div className="mt-6">
-                  <Button href="/salary">Open the Salary Guide</Button>
                 </div>
               </Card>
             </section>

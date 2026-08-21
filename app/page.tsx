@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { JourneyStepper, PathChooser } from "@/components/journey";
+import { PathChooser } from "@/components/journey";
 import {
   CardGrid,
   CtaBand,
@@ -14,8 +14,6 @@ import {
   Badge,
   Button,
   Card,
-  CardBody,
-  CardMedia,
   Figure,
   Heading,
   Icon,
@@ -43,6 +41,10 @@ function tone(accent: string): BadgeTone {
  * Every string on this page comes from data/home.json, data/site.json,
  * data/faq.json, data/stages.json, or data/library.json — nothing is authored
  * in JSX, so the Phase 8 copy pass is a diff of data files.
+ *
+ * The five stages appear once, as the five cards in section 3. The stepper
+ * and its progress card stay off this page: a cold visitor has no progress
+ * to show, and the dashboard link in the section heading covers returning ones.
  */
 export default function Home() {
   return (
@@ -99,10 +101,12 @@ export default function Home() {
           kicker={HOME.path.kicker}
           title={HOME.path.title}
           lead={HOME.path.lead}
+          action={
+            <Button href={HOME.path.action.href} variant="outline">
+              {HOME.path.action.label}
+            </Button>
+          }
         />
-
-        {/* The stage cards below already list the five stages, so the stepper row stays off. */}
-        <JourneyStepper variant="full" showRow={false} className="mt-12" />
 
         {/* Five stages read best as five columns; CardGrid tops out at four. */}
         <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -170,23 +174,16 @@ export default function Home() {
             if (!entry) return null;
             return (
               <li key={item.href} className="flex">
-                <Card href={item.href} padding="none" onBand className="w-full">
-                  <CardMedia ratio="16/9">
-                    <div className="grid h-full place-items-center bg-tint">
-                      <Icon
-                        name={item.icon}
-                        size={40}
-                        weight="duotone"
-                        className="text-primary"
-                      />
-                    </div>
-                  </CardMedia>
-                  <CardBody>
-                    <Heading level={3} size="h5">
-                      {entry.label}
-                    </Heading>
-                    <Text size="small">{entry.desc}</Text>
-                  </CardBody>
+                <Card href={item.href} onBand className="flex w-full flex-col">
+                  <span className="grid h-11 w-11 place-items-center rounded-sm bg-tint text-primary">
+                    <Icon name={item.icon} size={22} weight="duotone" />
+                  </span>
+                  <Heading level={3} size="h5" className="mt-4">
+                    {entry.label}
+                  </Heading>
+                  <Text size="small" className="mt-2">
+                    {entry.desc}
+                  </Text>
                 </Card>
               </li>
             );

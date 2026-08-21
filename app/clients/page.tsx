@@ -9,6 +9,8 @@ import {
   SectionHeading,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Button,
   Callout,
   Card,
@@ -25,6 +27,9 @@ import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 
 const HREF = "/clients";
+
+/** Pros and cons shown up front per road; the rest sit behind a disclosure. */
+const ROAD_POINTS_SHOWN = 3;
 
 export const metadata: Metadata = pageMeta({
   path: HREF,
@@ -105,54 +110,46 @@ export default function ClientsPage() {
       <Section>
         <SectionHeading kicker={roads.kicker} title={roads.title} lead={roads.lead} />
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          {[roads.agency, roads.direct].map((road) => (
-            <Card key={road.title} as="article" padding="lg">
-              <Heading level={3} size="h3">
-                {road.title}
-              </Heading>
-              <Text size="small" className="mt-3">
-                {road.blurb}
-              </Text>
-
-              <div className="mt-6 flex flex-col gap-3">
-                <Kicker tone="verified">Pros</Kicker>
-                <ul className="flex flex-col gap-2.5">
-                  {road.pros.map((p) => (
-                    <li key={p} className="flex items-start gap-2.5">
-                      <Icon name="check" size={16} className="mt-0.5 shrink-0 text-verified" />
-                      <Text size="small" tone="ink" as="span">
-                        {p}
-                      </Text>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-6 flex flex-col gap-3">
-                <Kicker tone="coral">Cons</Kicker>
-                <ul className="flex flex-col gap-2.5">
-                  {road.cons.map((c) => (
-                    <li key={c} className="flex items-start gap-2.5">
-                      <Icon name="x" size={16} className="mt-0.5 shrink-0 text-coral" />
-                      <Text size="small" as="span">
-                        {c}
-                      </Text>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Card>
-          ))}
-        </div>
-
         <DiagramFrame
           title="Agency or direct: who holds the relationship"
           caption="Both lanes do the same four steps. Follow the last column: in the agency lane the client stays with the agency, in the direct lane the client is yours."
-          className="mt-10"
+          className="mt-12"
         >
           <AgencyVsDirect />
         </DiagramFrame>
+
+        <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          {[
+            { id: "agency", road: roads.agency },
+            { id: "direct", road: roads.direct },
+          ].map(({ id, road }) => {
+            const morePros = road.pros.slice(ROAD_POINTS_SHOWN);
+            const moreCons = road.cons.slice(ROAD_POINTS_SHOWN);
+            const moreCount = morePros.length + moreCons.length;
+            return (
+              <Card key={id} as="article" padding="lg">
+                <Heading level={3} size="h3">
+                  {road.title}
+                </Heading>
+                <Text size="small" className="mt-3">
+                  {road.blurb}
+                </Text>
+
+                <RoadPoints kind="pros" items={road.pros.slice(0, ROAD_POINTS_SHOWN)} />
+                <RoadPoints kind="cons" items={road.cons.slice(0, ROAD_POINTS_SHOWN)} />
+
+                {moreCount > 0 && (
+                  <Accordion className="mt-6">
+                    <AccordionItem id={`${id}-more`} title={`${moreCount} more to weigh`}>
+                      {morePros.length > 0 && <RoadPoints kind="pros" items={morePros} />}
+                      {moreCons.length > 0 && <RoadPoints kind="cons" items={moreCons} />}
+                    </AccordionItem>
+                  </Accordion>
+                )}
+              </Card>
+            );
+          })}
+        </div>
 
         <Callout tone="signal" className="mt-8 max-w-3xl">
           {roads.verdict}
@@ -205,6 +202,13 @@ export default function ClientsPage() {
               <Text size="small" className="mt-4 flex-1">
                 {it.desc}
               </Text>
+              {it.crossref && (
+                <div className="mt-5">
+                  <Button href={it.crossref.href} variant="outline" size="sm">
+                    {it.crossref.label}
+                  </Button>
+                </div>
+              )}
               {it.source && (
                 <div className="mt-5 border-t border-line pt-4">
                   <Source label={it.source.label} url={it.source.url} />
@@ -244,18 +248,34 @@ export default function ClientsPage() {
             </Card>
           ))}
         </CardGrid>
-
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button href="/apply">Find clients yourself</Button>
-          <Button href="/tracker" variant="outline">
-            Build your pipeline
-          </Button>
-        </div>
       </Section>
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />
       </Section>
     </>
+  );
+}
+
+function RoadPoints({ kind, items }: { kind: "pros" | "cons"; items: string[] }) {
+  const isPro = kind === "pros";
+  return (
+    <div className="mt-6 flex flex-col gap-3">
+      <Kicker tone={isPro ? "verified" : "coral"}>{isPro ? "Pros" : "Cons"}</Kicker>
+      <ul className="flex flex-col gap-2.5">
+        {items.map((p) => (
+          <li key={p} className="flex items-start gap-2.5">
+            <Icon
+              name={isPro ? "check" : "x"}
+              size={16}
+              className={isPro ? "mt-0.5 shrink-0 text-verified" : "mt-0.5 shrink-0 text-coral"}
+            />
+            <Text size="small" tone={isPro ? "ink" : undefined} as="span">
+              {p}
+            </Text>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

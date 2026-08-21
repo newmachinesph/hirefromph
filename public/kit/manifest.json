@@ -1,0 +1,48 @@
+{
+  "hash": "eda68123dee19f7e988cb6adcea5a2c4cf533998aab06ff409708e902bdbfdd4",
+  "builtAt": "2026-08-21",
+  "files": [
+    {
+      "slug": "hirefromph-doctrine-one-pager",
+      "file": "kit/hirefromph-doctrine-one-pager.pdf",
+      "route": "/educators/kit/one-pager",
+      "pages": 1,
+      "bytes": 120621
+    },
+    {
+      "slug": "hirefromph-path-map",
+      "file": "kit/hirefromph-path-map.pdf",
+      "route": "/educators/kit/path-map",
+      "pages": 1,
+      "bytes": 156255
+    },
+    {
+      "slug": "hirefromph-seven-methods",
+      "file": "kit/hirefromph-seven-methods.pdf",
+      "route": "/educators/kit/methods",
+      "pages": 3,
+      "bytes": 172244
+    },
+    {
+      "slug": "hirefromph-session-deconstruct-resume",
+      "file": "kit/hirefromph-session-deconstruct-resume.pdf",
+      "route": "/educators/kit/session/deconstruct-resume",
+      "pages": 4,
+      "bytes": 135817
+    },
+    {
+      "slug": "hirefromph-session-vet-opportunity",
+      "file": "kit/hirefromph-session-vet-opportunity.pdf",
+      "route": "/educators/kit/session/vet-opportunity",
+      "pages": 4,
+      "bytes": 133736
+    },
+    {
+      "slug": "hirefromph-session-ask-well",
+      "file": "kit/hirefromph-session-ask-well.pdf",
+      "route": "/educators/kit/session/ask-well",
+      "pages": 4,
+      "bytes": 133106
+    }
+  ]
+}

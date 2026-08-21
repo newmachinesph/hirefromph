@@ -12,6 +12,7 @@ import {
   Input,
   Kicker,
   Select,
+  Source,
   Stat,
   StatStrip,
   Text,
@@ -22,11 +23,18 @@ import {
   toMonthlyPhp,
   spreadFromPosts,
 } from "@/lib/worksheet-math";
+import { DEFAULT_FX } from "@/lib/simulator-math";
 import { cn } from "@/lib/utils";
 import { migrateKey } from "@/lib/storage";
 
 const KEY = "hfph.worksheet.v1";
-const DEFAULT_FX = 60;
+
+/** Where the example rows came from; rendered under the rows, not just in a comment. */
+export const SEED_SOURCE = {
+  label: "OnlineJobs.ph, live job listings",
+  url: "https://www.onlinejobs.ph/jobseekers/jobsearch",
+  date: "July 2026",
+};
 
 const UNITS: { value: RateUnit; label: string }[] = [
   { value: "php_month", label: "₱/mo" },
@@ -183,6 +191,7 @@ export function RateWorksheet() {
                 )}
               >
                 {monthly === null ? "—" : php(monthly)}
+                {monthly !== null && <span className="text-ink-faint sm:hidden"> / mo</span>}
               </span>
               <Button
                 variant="ghost"
@@ -211,6 +220,13 @@ export function RateWorksheet() {
         >
           Reset to examples
         </Button>
+      </div>
+
+      <div className="mt-3 flex flex-col gap-1">
+        <Text size="caption" tone="faint">
+          The example rows are six live listings, range posts entered at their midpoint.
+        </Text>
+        <Source label={SEED_SOURCE.label} url={SEED_SOURCE.url} date={SEED_SOURCE.date} />
       </div>
 
       {/* result */}

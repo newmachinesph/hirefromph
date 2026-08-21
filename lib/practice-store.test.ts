@@ -5,6 +5,7 @@ import {
   parseDeckState,
   parseJournalState,
   parsePlanDayDates,
+  parsePortfolioState,
   parseQuizState,
   parseTimerState,
   readSlot,
@@ -24,7 +25,7 @@ describe("PRACTICE_KEYS", () => {
     for (const key of Object.values(PRACTICE_KEYS)) {
       expect(key.startsWith("hfph.practice.")).toBe(true);
     }
-    expect(new Set(Object.values(PRACTICE_KEYS)).size).toBe(5);
+    expect(new Set(Object.values(PRACTICE_KEYS)).size).toBe(6);
   });
 });
 
@@ -104,6 +105,15 @@ describe("parsePlanDayDates", () => {
     expect(parsePlanDayDates({ "1": "2026-08-21", "2": "nope", x: "2026-08-21" })).toEqual({
       1: "2026-08-21",
     });
+  });
+});
+
+describe("parsePortfolioState", () => {
+  it("keeps true rung keys and drops everything else", () => {
+    expect(
+      parsePortfolioState({ "bookkeeping:Start": true, "bookkeeping:Pro": false, nocolon: true }),
+    ).toEqual({ "bookkeeping:Start": true });
+    expect(parsePortfolioState(null)).toEqual({});
   });
 });
 

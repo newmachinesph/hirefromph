@@ -1,0 +1,58 @@
+{
+  "hash": "1203bb24d5a72f8dfc945242b6650fe263ba132baa0985c1fc91769e39d56a26",
+  "builtAt": "2026-08-21",
+  "decks": [
+    {
+      "id": "master",
+      "title": "Be the reason they hire from the Philippines",
+      "slides": 20,
+      "files": {
+        "pdf": "kit/decks/master.pdf",
+        "pptx": "kit/decks/master.pptx",
+        "presenter": "kit/decks/master-presenter.pptx"
+      },
+      "bytes": {
+        "pdf": 1238639
+      }
+    },
+    {
+      "id": "session-ask-well",
+      "title": "Ask a question that gets answered",
+      "slides": 11,
+      "files": {
+        "pdf": "kit/decks/session-ask-well.pdf",
+        "pptx": "kit/decks/session-ask-well.pptx",
+        "presenter": "kit/decks/session-ask-well-presenter.pptx"
+      },
+      "bytes": {
+        "pdf": 443653
+      }
+    },
+    {
+      "id": "session-deconstruct-resume",
+      "title": "Deconstruct a resume",
+      "slides": 11,
+      "files": {
+        "pdf": "kit/decks/session-deconstruct-resume.pdf",
+        "pptx": "kit/decks/session-deconstruct-resume.pptx",
+        "presenter": "kit/decks/session-deconstruct-resume-presenter.pptx"
+      },
+      "bytes": {
+        "pdf": 434143
+      }
+    },
+    {
+      "id": "session-vet-opportunity",
+      "title": "Vet an opportunity",
+      "slides": 11,
+      "files": {
+        "pdf": "kit/decks/session-vet-opportunity.pdf",
+        "pptx": "kit/decks/session-vet-opportunity.pptx",
+        "presenter": "kit/decks/session-vet-opportunity-presenter.pptx"
+      },
+      "bytes": {
+        "pdf": 426683
+      }
+    }
+  ]
+}

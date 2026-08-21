@@ -150,7 +150,7 @@
     }
   ],
   "buildYourOwnDirectory": {
-    "intro": "This page's directory will be out of date within a year, platforms shut down, agencies change their process, boards get replaced by better ones. Your own list won't, because you're the one maintaining it.",
+    "intro": "Platforms shut down, agencies change their process, boards get replaced by better ones. Your own list keeps up, because you're the one maintaining it.",
     "steps": [
       {
         "title": "Start with what already works",

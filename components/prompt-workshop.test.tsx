@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { PromptWorkshop } from "@/components/prompt-workshop";
 
 const FIELDS = [
-  { id: "role", label: "Role", hint: "Who is it?", placeholder: "a bookkeeper" },
+  { id: "role", label: "Role", hint: "Who is it?", placeholder: "e.g. a bookkeeper" },
   { id: "context", label: "Context", hint: "What is going on?", placeholder: "a messy ledger" },
 ];
 const LEVELS = [
@@ -27,5 +27,21 @@ describe("PromptWorkshop", () => {
     await user.type(screen.getByLabelText(/role/i), "a bookkeeper");
     expect(screen.getByText(/Role: a bookkeeper/)).toBeInTheDocument();
     expect(screen.getByText("Thin")).toBeInTheDocument();
+  });
+
+  it("loads the sample from the placeholders, minus the e.g. prefix, and clears it again", async () => {
+    const user = userEvent.setup();
+    render(<PromptWorkshop intro="Build one." fields={FIELDS} qualityLevels={LEVELS} />);
+    expect(screen.queryByRole("button", { name: /clear/i })).not.toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: /use the sample/i }));
+    expect(screen.getByLabelText(/role/i)).toHaveValue("a bookkeeper");
+    expect(screen.getByLabelText(/context/i)).toHaveValue("a messy ledger");
+    expect(screen.getByText(/Context: a messy ledger/)).toBeInTheDocument();
+    expect(screen.getByText("Solid")).toBeInTheDocument();
+
+    await user.click(screen.getByRole("button", { name: /clear/i }));
+    expect(screen.getByLabelText(/role/i)).toHaveValue("");
+    expect(screen.getByText("Empty")).toBeInTheDocument();
   });
 });

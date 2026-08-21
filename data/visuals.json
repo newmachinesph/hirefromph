@@ -12,6 +12,61 @@
       "generated": true
     },
     {
+      "id": "deck-close",
+      "src": {
+        "jpg": "/images/deck-close.jpg",
+        "webp": "/images/deck-close.webp"
+      },
+      "width": 1536,
+      "height": 864,
+      "alt": "Seen from behind, an older woman shows a younger woman something on a laptop at a kitchen table in the evening, a single lamp lighting the scene.",
+      "generated": true
+    },
+    {
+      "id": "deck-methods",
+      "src": {
+        "jpg": "/images/deck-methods.jpg",
+        "webp": "/images/deck-methods.webp"
+      },
+      "width": 1536,
+      "height": 864,
+      "alt": "Two people at a whiteboard in a small office, seen from behind, one drawing boxes and arrows with a marker.",
+      "generated": true
+    },
+    {
+      "id": "deck-path",
+      "src": {
+        "jpg": "/images/deck-path.jpg",
+        "webp": "/images/deck-path.webp"
+      },
+      "width": 1536,
+      "height": 864,
+      "alt": "A young woman with a backpack walking up a steep outdoor concrete stairway between houses at dawn, seen from behind.",
+      "generated": true
+    },
+    {
+      "id": "deck-title",
+      "src": {
+        "jpg": "/images/deck-title.jpg",
+        "webp": "/images/deck-title.webp"
+      },
+      "width": 1536,
+      "height": 864,
+      "alt": "Seen from the back of a small community hall in the Philippines, rows of plastic chairs with a few people seated, a blank white projector screen at the front catching morning light.",
+      "generated": true
+    },
+    {
+      "id": "deck-why",
+      "src": {
+        "jpg": "/images/deck-why.jpg",
+        "webp": "/images/deck-why.webp"
+      },
+      "width": 1536,
+      "height": 864,
+      "alt": "Three-quarter view from behind of a Filipino man at a home desk, headset on, two monitors showing blurred spreadsheets, a fan and a mug beside him.",
+      "generated": true
+    },
+    {
       "id": "home-hero",
       "src": {
         "jpg": "/images/home-hero.jpg",

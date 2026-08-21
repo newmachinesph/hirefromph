@@ -56,7 +56,8 @@ describe("MobileDrawer", () => {
     // route: whichever links carry `pending: true` in navGroups today must
     // never render, whoever they are.
     const pendingLinks = NAV_GROUPS.flatMap((group) => group.links).filter((link) => !isLive(link));
-    expect(pendingLinks.length).toBeGreaterThan(0);
+    // Nothing is pending today; the filter itself still has to hold.
+    expect(isLive({ pending: true })).toBe(false);
     for (const link of pendingLinks) {
       expect(screen.queryByRole("link", { name: link.label })).toBeNull();
     }

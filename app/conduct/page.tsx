@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import conduct from "@/data/conduct.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import { IntegrityOath } from "@/components/integrity-oath";
 import {
   CardGrid,
@@ -9,7 +10,10 @@ import {
   SectionHeading,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
+  Button,
   Callout,
   Card,
   Heading,
@@ -43,6 +47,11 @@ export default function ConductPage() {
         title="Nobody is watching you work."
         accent="That is the entire test."
         lead={conduct.intro}
+        actions={
+          <Button href="#oath" icon={<Icon name="pen-line" size={15} />}>
+            Write your oath
+          </Button>
+        }
       >
         <Callout tone="signal" className="max-w-2xl">
           {conduct.creed}
@@ -50,6 +59,7 @@ export default function ConductPage() {
         <Text size="small" className="max-w-2xl">
           {conduct.whyItMatters}
         </Text>
+        <FreshnessNote date={conduct.lastVerified} />
         <Section spacing="none"><Tldr route="/conduct" /></Section>
       </PageHero>
 
@@ -143,34 +153,53 @@ export default function ConductPage() {
         </div>
       </Section>
 
-      {/* --------------------------------------------------------- DOS/DONTS */}
-      <Section band="tint">
+      {/* --------------------------------------------------------------- OATH */}
+      <Section id="oath" band="tint" className="scroll-mt-20">
         <SectionHeading
-          kicker="Do's and don'ts"
+          align="center"
+          kicker={conduct.oath.kicker}
+          title={conduct.oath.title}
+          lead={conduct.oath.lead}
+          size="display"
+        />
+        <div className="mt-6 flex justify-center">
+          <Badge tone="verified">No template. Nothing uploaded.</Badge>
+        </div>
+        <Card padding="lg" className="mx-auto mt-12 max-w-3xl">
+          <IntegrityOath />
+        </Card>
+      </Section>
+
+      {/* --------------------------------------------------------- DOS/DONTS */}
+      <Section>
+        <SectionHeading
+          kicker="Do's and don'ts · the clauses, spelled out per situation"
           title="The line is never blurry in the moment. It gets blurry in the retelling."
           lead={conduct.dosDontsIntro}
         />
 
-        <div className="mt-14 flex flex-col gap-5">
+        <Accordion type="multiple" className="mt-10">
           {conduct.dosDonts.map((area) => {
             const a = accent(area.accent);
             return (
-              <Card key={area.id} as="article" padding="lg" onBand>
-                <div className="flex items-center gap-4">
-                  <span
-                    className={cn(
-                      "grid h-11 w-11 shrink-0 place-items-center rounded-sm",
-                      a.fill,
-                    )}
-                  >
-                    <Icon name={area.icon} size={20} />
-                  </span>
-                  <Heading level={3} size="h4">
+              <AccordionItem
+                key={area.id}
+                id={area.id}
+                title={
+                  <span className="flex items-center gap-3">
+                    <span
+                      className={cn(
+                        "grid h-9 w-9 shrink-0 place-items-center rounded-sm",
+                        a.fill,
+                      )}
+                    >
+                      <Icon name={area.icon} size={18} />
+                    </span>
                     {area.area}
-                  </Heading>
-                </div>
-
-                <div className="mt-7 grid gap-8 md:grid-cols-2">
+                  </span>
+                }
+              >
+                <div className="grid gap-8 md:grid-cols-2">
                   <div>
                     <Kicker tone="verified">Do</Kicker>
                     <ul className="mt-4 flex flex-col gap-3">
@@ -202,26 +231,10 @@ export default function ConductPage() {
                     </ul>
                   </div>
                 </div>
-              </Card>
+              </AccordionItem>
             );
           })}
-        </div>
-      </Section>
-
-      {/* --------------------------------------------------------------- OATH */}
-      <Section>
-        <SectionHeading
-          align="center"
-          title={conduct.oath.title}
-          lead={conduct.oath.lead}
-          size="display"
-        />
-        <div className="mt-6 flex justify-center">
-          <Badge tone="verified">Nothing to download. Nothing uploaded.</Badge>
-        </div>
-        <Card padding="lg" className="mx-auto mt-12 max-w-3xl">
-          <IntegrityOath />
-        </Card>
+        </Accordion>
       </Section>
 
       {/* ------------------------------------------------------------ HONESTY */}

@@ -206,8 +206,8 @@ describe("data/annotated.json", () => {
 });
 
 describe("data/glossary.json", () => {
-  it("has 50 terms with unique ids", () => {
-    expect(glossary.terms).toHaveLength(50);
+  it("has 57 terms with unique ids", () => {
+    expect(glossary.terms).toHaveLength(57);
     const ids = glossary.terms.map((term) => term.id);
     expect(new Set(ids).size).toBe(ids.length);
   });

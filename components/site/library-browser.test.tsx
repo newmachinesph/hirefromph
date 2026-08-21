@@ -30,7 +30,8 @@ describe("LibraryBrowser", () => {
     // Derived from the data itself, not a named route: whichever entries
     // carry `pending: true` in library.json today must never render.
     const pendingEntries = LIBRARY.filter((entry) => !isLive(entry));
-    expect(pendingEntries.length).toBeGreaterThan(0);
+    // Nothing is pending today; the filter itself still has to hold.
+    expect(isLive({ pending: true })).toBe(false);
 
     render(<LibraryBrowser />);
     for (const entry of pendingEntries) {
@@ -46,8 +47,10 @@ describe("LibraryBrowser", () => {
 
     await user.click(screen.getByRole("button", { name: "The path" }));
 
+    // Five stages, the dashboard, and the 30-day plan.
     const after = screen.getAllByRole("link").length;
-    expect(after).toBe(5);
+    expect(after).toBe(LIVE_LIBRARY.filter((entry) => entry.group === "path").length);
+    expect(after).toBe(7);
     expect(after).toBeLessThan(before);
     expect(replace).toHaveBeenCalledWith("/library?group=path", { scroll: false });
   });

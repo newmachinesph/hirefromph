@@ -1,0 +1,138 @@
+{
+  "id": "session-ask-well",
+  "title": "Ask a question that gets answered",
+  "subtitle": "A 45-minute session",
+  "minutes": 45,
+  "lastVerified": "2026-08",
+  "slides": [
+    {
+      "id": "title",
+      "type": "title",
+      "kicker": "Hire From PH · For educators",
+      "title": "Ask a question that gets answered",
+      "body": "A forty-five-minute session in pairs, quiet enough that a normal voice carries across one table. Everyone brings a question nobody answered, and sends a rewritten one before they leave.",
+      "media": { "photo": "deck-methods" },
+      "notes": "Open on this slide while pairs settle facing each other. This session runs on reading aloud, so keep the room quiet and the tables close. Check that everyone has their unanswered question, screenshot or written, because the exact wording is the material of the next forty-five minutes."
+    },
+    {
+      "id": "why",
+      "type": "statement",
+      "kicker": "Why this session",
+      "title": "A well-formed question gets help. A vague one gets ignored, everywhere.",
+      "body": "By the end, you can turn a vague plea into a four-part question a busy professional will answer, and you notice how often writing the second part answers it before anyone replies. You send one well-formed question to a real person or a real community before you leave the room.",
+      "notes": "Read two questions aloud: 'hi po, pa help, di gumagana' and a four-part one. Ask which they would answer with four minutes left and a full inbox; nobody needs convincing after that. Say that this is not a session about politeness but about respecting the reader's time, because politeness without structure still gets scrolled past."
+    },
+    {
+      "id": "method",
+      "type": "method",
+      "kicker": "The method this session drills",
+      "title": "ASK: get your question answered",
+      "body": "Rewrite the last question you asked anyone into this four-part form. Notice how often you can now answer it yourself.",
+      "items": [
+        "Show what you are trying to do: the goal, not the symptom",
+        "Show what you already tried, and what happened, in the exact words",
+        "Ask for the method, not the file"
+      ],
+      "media": { "icon": "ask" },
+      "notes": "Put the ASK card on the screen and have the room write the four parts down the page: goal, tried, happened, ask. Say that showing what you tried proves you respect the other person's time and removes the first five things they would have suggested. Keep the UNSTICK card beside it for the close, since the two methods only work as a pair."
+    },
+    {
+      "id": "clock",
+      "type": "list",
+      "kicker": "The clock",
+      "title": "Forty-five minutes, one question each",
+      "items": [
+        "13 min · Frame why good people ignore your question, then put the unanswered question on the table",
+        "7 min · Parts one and two: the goal and the attempts",
+        "7 min · Part three: what happened, exactly",
+        "8 min · Part four: ask for the method, not the file",
+        "10 min · Read it aloud, send it, then close with the time-box"
+      ],
+      "source": { "label": "Hire From PH educators kit run-sheet", "url": "https://hirefrom.ph/educators" },
+      "notes": "Announce each block as it starts; the parts are short and the room will want to linger on grammar, so keep moving. Protect the last block above everything else. A rewritten question that stays in a notebook has changed nothing about the participant's week."
+    },
+    {
+      "id": "brief",
+      "type": "list",
+      "kicker": "The brief",
+      "title": "What you do in this room",
+      "body": "Pairs facing each other, a device or paper each, and one real unanswered question from the past week. Screenshots are welcome, because the exact wording is the material.",
+      "items": [
+        "Say which of two questions you would answer with four minutes left and a full inbox, and why",
+        "Write the four parts down the page: goal, tried, happened, ask",
+        "Copy your unanswered question word for word; the tidied-up version hides the fault",
+        "Tick which of the four parts is present and circle what is missing"
+      ],
+      "notes": "Insist on word for word when they copy the original question, because the polish hides the fault. Most pages end up with one tick and three circles, and that is the point, not a failure. Watch for anyone who starts rewriting before they have ticked and circled; the diagnosis comes first."
+    },
+    {
+      "id": "drill",
+      "type": "drill",
+      "kicker": "The drill",
+      "title": "Rewrite it in four parts, read it aloud, then send it",
+      "body": "Part one is the goal, not the symptom. Part three is the literal error, the literal reply, the literal number, never your paraphrase of it.",
+      "items": [
+        "Write the outcome you want in one sentence, then list what you tried and what each attempt ruled out",
+        "Replace every paraphrase with the exact text, message, or number",
+        "Write the ask twice, for the file and for the method; read both aloud, keep the second, cross out the first",
+        "Read the rewritten question to your partner and answer theirs",
+        "Send your own to a real person or a real community before you leave the room"
+      ],
+      "minutes": 8,
+      "notes": "Refuse 'I tried everything'; it tells the reader nothing and costs them time. Take one paraphrase from the room and ask for the exact words in front of everyone, so the gap between the two is visible to all of them. At the read-aloud, ask the listener one thing: could you answer this? Then ask the writer whether they can now answer it themselves, and count the hands; that count is the lesson of the session."
+    },
+    {
+      "id": "debrief",
+      "type": "list",
+      "kicker": "Debrief",
+      "title": "Questions for the room",
+      "items": [
+        "How many of you answered your own question while writing part two?",
+        "What does 'I tried everything' tell the person reading it?",
+        "Why does showing your attempts get a better answer than showing your desperation?",
+        "When is it too early to ask, and when is it too late?",
+        "What is the difference between the answer you wanted and an answer you can reuse next month?"
+      ],
+      "notes": "Start with the first prompt and count the hands again, because the number who answered themselves is the argument for the whole method. On the last prompt, push towards asking for the method: the file ends the day it goes out of date, and the method is something they keep. Watch for the person whose rewritten question still asks for a file, and ask them to read both versions aloud."
+    },
+    {
+      "id": "mistakes",
+      "type": "list",
+      "kicker": "Common mistakes",
+      "title": "What goes wrong, and the fix",
+      "items": [
+        "Rewriting a participant's question for them → ask the four questions and let them write the words",
+        "Fixing grammar → move them back to structure; imperfect English with all four parts still gets answered",
+        "Nobody sends anything → protect the last block; a rewritten question left in a notebook changes nothing",
+        "Teaching this as a session about politeness → say plainly it is about respecting the reader's time"
+      ],
+      "notes": "A question you wrote is a question they cannot reproduce next week without you, so keep your hands off their words. A polished vague question does not get answered; a rough one with all four parts does. If the clock is against you, cut the debrief before you cut the sending."
+    },
+    {
+      "id": "take-home",
+      "type": "statement",
+      "kicker": "Take-home",
+      "title": "You leave having sent one question a busy professional will answer",
+      "body": "A time limit you set yourself, written on the page, and the UNSTICK card for when asking is the right move and when it is an escape. The drill: rewrite the last question you asked anyone into the four parts.",
+      "notes": "Name the rule that stops grinding: a hard limit, then ask. Point at the UNSTICK card so they know when asking is the right move and when it is an escape. Say the drill out loud, have them write it on the page, and name when the group meets again."
+    },
+    {
+      "id": "next",
+      "type": "statement",
+      "kicker": "Next session",
+      "title": "Next: Deconstruct a resume",
+      "body": "A ninety-minute session where pairs hunt five real resumes, write their own testable rules, and build from a blank page with the examples closed. It needs a room that can argue.",
+      "notes": "Each session asks a different thing of the room: this one needed quiet, DECONSTRUCT needs argument, VET needs honesty. Choose the one your group can carry next. Book the room with tables in fours and test the connection the day before, not on the hour."
+    },
+    {
+      "id": "licence",
+      "type": "close",
+      "kicker": "Licence",
+      "title": "Run it, adapt it, pass it on",
+      "body": "CC BY 4.0, with attribution",
+      "source": { "label": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
+      "media": { "photo": "deck-close" },
+      "notes": "Share and adapt this session, including inside training you are paid to run, as long as you credit Hire From PH (hirefrom.ph) and say what you changed. Run it once as written before you change it, then tell the next facilitator what you improved. Nothing here needs our permission or our presence."
+    }
+  ]
+}

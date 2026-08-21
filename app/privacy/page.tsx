@@ -1,5 +1,6 @@
 import { PageFooterNav, PageHero, Section, SectionHeading } from "@/components/layout";
 import { Badge, Button, Callout, Card, Heading, Icon, Text } from "@/components/ui";
+import site from "@/data/site.json";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 
@@ -142,8 +143,8 @@ export default function PrivacyPage() {
             Here is the honest part: we hold no personal data about you, so
             there is nothing for us to hand over, edit, or delete on request.
             If that ever changes, this page changes first, and your rights
-            under RA 10173 still stand. For anything Google or Meta holds
-            through their tools, you exercise those rights with them directly.
+            under RA 10173 still stand. For anything Google holds through
+            Analytics, you exercise those rights with Google directly.
           </Text>
           <div className="mt-5">
             <Out href="https://privacy.gov.ph/data-privacy-act/">
@@ -164,7 +165,8 @@ export default function PrivacyPage() {
             The Facebook Page this site used to point at belonged to its
             previous name, and we would rather say so than leave you
             messaging somewhere nobody reads. When a channel exists, it will
-            be published here.
+            be published here. Until then, the line in the footer of every
+            page is the whole commitment: &ldquo;{site.footer.honesty}&rdquo;
           </Text>
         </Card>
       </Section>

@@ -12,6 +12,8 @@ import {
   Toc,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
   Button,
   Callout,
@@ -30,6 +32,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { DEFAULT_FX, DEFAULT_FX_SAMPLED } from "@/lib/simulator-math";
 import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
@@ -39,22 +42,38 @@ export const metadata: Metadata = pageMeta({
   path: HREF,
   title: "Salary Guide",
   description:
-    "What online work really pays for Filipino professionals right now. In-demand roles from live OnlineJobs.ph listings, honest vendor-grade pay ranges, full-time vs part-time vs hourly vs project vs retainer, and how to price yourself. Every number labeled for what it is.",
+    "What online work really pays for Filipino professionals right now. Honest vendor-grade pay ranges, a worksheet that prices you from live OnlineJobs.ph posts, a real-rate calculator, how to price yourself, and full-time vs part-time vs hourly vs project vs retainer. Every number labeled for what it is.",
 });
 
 const TOC = [
   { id: "warning", label: "Warning label" },
-  { id: "in-demand", label: "In demand" },
-  { id: "emerging", label: "Emerging" },
   { id: "rates", label: "The ranges" },
   { id: "worksheet", label: "Price it yourself" },
-  { id: "engagement", label: "Engagement types" },
-  { id: "price", label: "How to price" },
   { id: "calculator", label: "Real rate" },
+  { id: "price", label: "How to price" },
+  { id: "engagement", label: "Engagement types" },
+  { id: "roles", label: "Roles clients post for" },
 ];
 
+type RoleItem = { role: string; icon: string; blurb: string };
+
+function RoleList({ roles }: { roles: RoleItem[] }) {
+  return (
+    <ul className="mt-4 flex flex-col gap-3">
+      {roles.map((r) => (
+        <li key={r.role} className="flex items-start gap-3">
+          <Icon name={r.icon} size={16} className="mt-1 shrink-0 text-ink-faint" />
+          <Text size="small" as="span">
+            <span className="font-medium text-ink">{r.role}.</span> {r.blurb}
+          </Text>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export default function SalaryPage() {
-  const { hero, warning, inDemand, emerging, rates, engagement, price, closing } = salary;
+  const { hero, warning, roles, inDemand, emerging, rates, engagement, price, closing } = salary;
 
   return (
     <>
@@ -65,7 +84,9 @@ export default function SalaryPage() {
         title={hero.line1}
         accent={hero.line2}
         lead={hero.intro}
+        actions={<Button href="#calculator">{hero.jumpLabel}</Button>}
       >
+        <Toc items={TOC} mobile />
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
         </Callout>
@@ -88,75 +109,6 @@ export default function SalaryPage() {
               </Callout>
             </section>
 
-            {/* --------------------------------------------------- IN DEMAND */}
-            <section id="in-demand">
-              <SectionHeading
-                kicker={inDemand.kicker}
-                title={inDemand.title}
-                lead={inDemand.lead}
-              />
-              <CardGrid cols={4} className="mt-12">
-                {inDemand.roles.map((r) => (
-                  <Card key={r.role} as="article">
-                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
-                      <Icon name={r.icon} size={20} />
-                    </span>
-                    <Heading level={3} size="h5" className="mt-5" balance>
-                      {r.role}
-                    </Heading>
-                    <Text size="small" className="mt-2 flex-1">
-                      {r.blurb}
-                    </Text>
-                  </Card>
-                ))}
-              </CardGrid>
-              <Callout tone="verified" className="mt-8">
-                <Text size="lead" tone="ink" className="font-display">
-                  {inDemand.note}
-                </Text>
-                <Source
-                  label={inDemand.source.label}
-                  url={inDemand.source.url}
-                  className="mt-3"
-                />
-              </Callout>
-            </section>
-
-            {/* ---------------------------------------------------- EMERGING */}
-            <section id="emerging">
-              <SectionHeading
-                kicker={emerging.kicker}
-                title={emerging.title}
-                lead={emerging.lead}
-              />
-              <CardGrid cols={3} className="mt-12">
-                {emerging.roles.map((r) => (
-                  <Card key={r.role} as="article">
-                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-primary text-white">
-                      <Icon name={r.icon} size={20} />
-                    </span>
-                    <Heading level={3} size="h5" className="mt-5" balance>
-                      {r.role}
-                    </Heading>
-                    <Text size="small" className="mt-2 flex-1">
-                      {r.blurb}
-                    </Text>
-                  </Card>
-                ))}
-              </CardGrid>
-              <Callout tone="signal" className="mt-8 max-w-3xl">
-                {emerging.note}
-              </Callout>
-              <Text size="small" tone="ink" className="mt-5 max-w-3xl font-medium">
-                {emerging.note2}
-              </Text>
-              <Source
-                label={emerging.source.label}
-                url={emerging.source.url}
-                className="mt-3"
-              />
-            </section>
-
             {/* ------------------------------------------------------- RATES */}
             <section id="rates">
               <SectionHeading kicker={rates.kicker} title={rates.title} />
@@ -173,9 +125,10 @@ export default function SalaryPage() {
                       <div className="mt-5">
                         <Kicker tone={t.accent as "signal"}>{t.level}</Kicker>
                       </div>
-                      <StatStrip className="mt-3">
-                        <Stat value={t.monthly} label={t.hourly} />
-                      </StatStrip>
+                      <div className="mt-3 flex flex-col gap-4">
+                        <Stat value={t.monthly} label={rates.labels.monthly} />
+                        <Stat value={t.hourly} label={rates.labels.hourly} />
+                      </div>
                       <Text size="small" className="mt-5 flex-1">
                         {t.what}
                       </Text>
@@ -183,6 +136,9 @@ export default function SalaryPage() {
                   );
                 })}
               </CardGrid>
+              <Text size="caption" tone="faint" className="mt-4 max-w-3xl">
+                {rates.reconcileNote}
+              </Text>
 
               <Card padding="lg" className="mt-6">
                 <Heading level={3} size="h3" balance>
@@ -190,6 +146,11 @@ export default function SalaryPage() {
                 </Heading>
                 <Text size="small" className="mt-4 max-w-3xl">
                   {rates.contradiction.body}
+                </Text>
+                <Text size="caption" tone="faint" className="mt-3 max-w-3xl">
+                  Dollar figures on this page convert at ≈₱{DEFAULT_FX} per $1, the{" "}
+                  {DEFAULT_FX_SAMPLED} reference rate. The worksheet and calculator below start
+                  from the same number and let you change it.
                 </Text>
 
                 <div className="mt-7 grid max-w-2xl gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
@@ -224,56 +185,26 @@ export default function SalaryPage() {
 
             {/* --------------------------------------------------- WORKSHEET */}
             <section id="worksheet">
-              <Card padding="lg">
+              <SectionHeading
+                kicker="Price it yourself · from live posts"
+                title="Five real posts beat any guide."
+                lead="Paste in listings you found for your role. The worksheet normalizes each one to pesos a month and hands you a floor, a middle, and a ceiling you can defend in a negotiation."
+              />
+              <Card padding="lg" className="mt-12">
                 <RateWorksheet />
               </Card>
             </section>
 
-            {/* -------------------------------------------------- ENGAGEMENT */}
-            <section id="engagement">
+            {/* -------------------------------------------------- CALCULATOR */}
+            <section id="calculator">
               <SectionHeading
-                kicker={engagement.kicker}
-                title={engagement.title}
-                lead={engagement.lead}
+                kicker="Do the math yourself"
+                title="Your real rate calculator."
+                lead="Drag the sliders with your own numbers. Watch your headline rate shrink into what you take home, once the fees, the costs, the tax, and the unpaid time are counted. This is the honest number to plan your life around."
               />
-              <CardGrid cols={3} className="mt-12">
-                {engagement.types.map((t) => (
-                  <Card key={t.name} as="article">
-                    <div className="flex items-center gap-3">
-                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
-                        <Icon name={t.icon} size={18} />
-                      </span>
-                      <Heading level={3} size="h5">
-                        {t.name}
-                      </Heading>
-                    </div>
-                    <Text size="caption" className="mt-3 font-medium text-verified">
-                      {t.best}
-                    </Text>
-
-                    <ul className="mt-4 flex flex-col gap-2">
-                      {t.pros.map((p) => (
-                        <li key={p} className="flex items-start gap-2">
-                          <Icon name="check" size={15} className="mt-0.5 shrink-0 text-verified" />
-                          <Text size="small" tone="ink" as="span">
-                            {p}
-                          </Text>
-                        </li>
-                      ))}
-                    </ul>
-                    <ul className="mt-3 flex flex-col gap-2">
-                      {t.cons.map((c) => (
-                        <li key={c} className="flex items-start gap-2">
-                          <Icon name="x" size={15} className="mt-0.5 shrink-0 text-coral" />
-                          <Text size="small" as="span">
-                            {c}
-                          </Text>
-                        </li>
-                      ))}
-                    </ul>
-                  </Card>
-                ))}
-              </CardGrid>
+              <Card padding="lg" className="mt-12">
+                <RateCalculator />
+              </Card>
             </section>
 
             {/* ------------------------------------------------------- PRICE */}
@@ -288,16 +219,114 @@ export default function SalaryPage() {
               </StepList>
             </section>
 
-            {/* -------------------------------------------------- CALCULATOR */}
-            <section id="calculator">
+            {/* -------------------------------------------------- ENGAGEMENT */}
+            <section id="engagement">
               <SectionHeading
-                kicker="Do the math yourself"
-                title="Your real rate calculator."
-                lead="Drag the sliders with your own numbers. Watch your headline rate shrink into what you take home, once the fees, the costs, the tax, and the unpaid time are counted. This is the honest number to plan your life around."
+                kicker={engagement.kicker}
+                title={engagement.title}
+                lead={engagement.lead}
               />
-              <Card padding="lg" className="mt-12">
-                <RateCalculator />
-              </Card>
+              <Accordion type="multiple" className="mt-10">
+                {engagement.types.map((t) => (
+                  <AccordionItem
+                    key={t.name}
+                    id={t.name}
+                    title={
+                      <span className="flex items-center gap-3">
+                        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
+                          <Icon name={t.icon} size={16} />
+                        </span>
+                        <span className="flex flex-col gap-0.5">
+                          <span>{t.name}</span>
+                          <Text as="span" size="caption" className="font-sans font-medium text-verified">
+                            {t.best}
+                          </Text>
+                        </span>
+                      </span>
+                    }
+                  >
+                    <div className="grid gap-4 sm:grid-cols-2">
+                      <ul className="flex flex-col gap-2">
+                        {t.pros.map((p) => (
+                          <li key={p} className="flex items-start gap-2">
+                            <Icon name="check" size={15} className="mt-0.5 shrink-0 text-verified" />
+                            <Text size="small" tone="ink" as="span">
+                              {p}
+                            </Text>
+                          </li>
+                        ))}
+                      </ul>
+                      <ul className="flex flex-col gap-2">
+                        {t.cons.map((c) => (
+                          <li key={c} className="flex items-start gap-2">
+                            <Icon name="x" size={15} className="mt-0.5 shrink-0 text-coral" />
+                            <Text size="small" as="span">
+                              {c}
+                            </Text>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </section>
+
+            {/* ------------------------------------------------------- ROLES */}
+            <section id="roles">
+              <SectionHeading kicker={roles.kicker} title={roles.title} lead={roles.lead} />
+
+              <div className="mt-10 grid gap-10 lg:grid-cols-2">
+                <div>
+                  <Heading level={3} size="h5">
+                    {roles.postingTitle}
+                  </Heading>
+                  <RoleList roles={inDemand.roles} />
+                  <Source
+                    label={inDemand.source.label}
+                    url={inDemand.source.url}
+                    className="mt-4"
+                  />
+                </div>
+                <div>
+                  <Heading level={3} size="h5">
+                    {roles.emergingTitle}
+                  </Heading>
+                  <RoleList roles={emerging.roles} />
+                  <Text size="small" className="mt-4 max-w-xl">
+                    {emerging.note}
+                  </Text>
+                  <div className="mt-3">
+                    <Button
+                      href={emerging.note2Href}
+                      variant="link"
+                      iconEnd={<Icon name="arrow-up-right" size={16} />}
+                    >
+                      {emerging.note2}
+                    </Button>
+                  </div>
+                  <Source
+                    label={emerging.source.label}
+                    url={emerging.source.url}
+                    className="mt-4"
+                  />
+                </div>
+              </div>
+
+              <Callout tone="verified" className="mt-8 max-w-3xl">
+                <Text size="lead" tone="ink" className="font-display">
+                  {inDemand.note}
+                </Text>
+                <div className="mt-4">
+                  <Button
+                    href={roles.nichesLink.href}
+                    variant="link"
+                    iconEnd={<Icon name="arrow-up-right" size={16} />}
+                  >
+                    {roles.nichesLink.label}
+                  </Button>
+                </div>
+              </Callout>
             </section>
           </div>
         </div>
@@ -324,9 +353,9 @@ export default function SalaryPage() {
         </CardGrid>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button href="/niches">Pick your lane</Button>
-          <Button href="/reality" variant="outline">
-            See the full market data
+          <Button href="#worksheet">Price yourself from live posts</Button>
+          <Button href="/niches" variant="outline">
+            Pick your lane
           </Button>
         </div>
       </Section>

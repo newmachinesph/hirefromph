@@ -1,6 +1,11 @@
 import stagesData from "@/data/stages.json";
 
 export type StageDoFirst = { title: string; desc: string; href: string; cta: string };
+/**
+ * A page that belongs to the stage without being one of its steps. Never a
+ * route that `doFirst` already links: the stage page prints these as one
+ * "Also useful" line under the steps, and a repeat there is noise.
+ */
 export type StageTool = { label: string; href: string };
 
 /**

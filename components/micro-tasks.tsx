@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
@@ -13,8 +14,10 @@ import {
   Card,
   Checkbox,
   EmptyState,
+  Field,
   Heading,
   Icon,
+  Select,
   Text,
 } from "@/components/ui";
 import { accent } from "@/lib/accent";
@@ -68,6 +71,14 @@ const ROUTE_PATTERN = new RegExp(
   "g",
 );
 
+/** The open task lives in the URL, so Back closes it and a link to it can be shared. */
+const TASK_PARAM = "task";
+
+function scrollToStart(el: HTMLElement | null) {
+  // jsdom has no scrollIntoView; the guard keeps the tests honest without a stub.
+  if (el && typeof el.scrollIntoView === "function") el.scrollIntoView({ block: "start" });
+}
+
 function Linkify({ text }: { text: string }) {
   const parts = text.split(ROUTE_PATTERN);
   return (
@@ -92,13 +103,27 @@ function Linkify({ text }: { text: string }) {
 export function MicroTasks() {
   const { state, hydrated, hasPath, toggleTask } = usePath();
   const tasks = tasksData.tasks;
+  const params = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const [trackFilter, setTrackFilter] = useState("all");
   const [difficultyFilter, setDifficultyFilter] = useState("all");
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const selectedId = params.get(TASK_PARAM);
   const [dodChecked, setDodChecked] = useState<Record<string, Record<number, boolean>>>({});
   const [critiqueChecked, setCritiqueChecked] = useState<Record<string, Record<number, boolean>>>({});
   const autoSelected = useRef(false);
+  const rootRef = useRef<HTMLDivElement>(null);
+
+  // Opening pushes a history entry so Back returns to the gallery; closing
+  // replaces it so the gallery URL is clean again without a second Back.
+  function openTask(id: string) {
+    router.push(`${pathname}?${TASK_PARAM}=${encodeURIComponent(id)}`, { scroll: false });
+  }
+  function closeTask() {
+    router.replace(pathname, { scroll: false });
+    scrollToStart(rootRef.current);
+  }
 
   // Once path data has hydrated, default the track filter to the user's path.
   // The chosen track lives in localStorage, which is unreadable during the SSR
@@ -144,7 +169,7 @@ export function MicroTasks() {
   }
 
   return (
-    <div>
+    <div ref={rootRef} className="scroll-mt-28">
       <PortfolioCounter count={completedCount} hydrated={hydrated} />
 
       <AnimatePresence mode="wait" initial={false}>
@@ -163,55 +188,16 @@ export function MicroTasks() {
                 </p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                   {recommended.map((t) => (
-                    <TaskCard key={t.id} task={t} done={!!doneMap[t.id]} onOpen={() => setSelectedId(t.id)} />
+                    <TaskCard key={t.id} task={t} done={!!doneMap[t.id]} onOpen={() => openTask(t.id)} />
                   ))}
                 </div>
               </div>
             )}
 
-            <div role="group" aria-label="Filter by track" className="flex flex-wrap gap-2">
-              <Button
-                size="sm"
-                variant={trackFilter === "all" ? "primary" : "outline"}
-                onClick={() => setTrackFilter("all")}
-                aria-label={`All tracks, ${tasks.length} tasks`}
-                className="min-h-11"
-                iconEnd={
-                  <span
-                    className={cn(
-                      "tabular-nums",
-                      trackFilter === "all" ? "text-white/70" : "text-ink-faint",
-                    )}
-                  >
-                    {tasks.length}
-                  </span>
-                }
-              >
-                All tracks
-              </Button>
-              {tracksData.tracks.map((t) => {
-                const count = tasks.filter((task) => matchesTrack(task, t.id)).length;
-                const active = trackFilter === t.id;
-                return (
-                  <Button
-                    key={t.id}
-                    size="sm"
-                    variant={active ? "primary" : "outline"}
-                    onClick={() => setTrackFilter(t.id)}
-                    aria-label={`${t.name}, ${count} tasks`}
-                    className="min-h-11"
-                    iconEnd={
-                      <span className={cn("tabular-nums", active ? "text-white/70" : "text-ink-faint")}>
-                        {count}
-                      </span>
-                    }
-                  >
-                    {t.name}
-                  </Button>
-                );
-              })}
-            </div>
-            <div role="group" aria-label="Filter by difficulty" className="mt-3 flex flex-wrap gap-2">
+            {/* Four difficulty chips and one niche select: 22 niche chips wrapped
+                to ten rows on a phone, and eleven of them opened a two-card page. */}
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+              <div role="group" aria-label="Filter by difficulty" className="flex flex-wrap gap-2">
               <Button
                 size="sm"
                 variant={difficultyFilter === "all" ? "primary" : "outline"}
@@ -252,6 +238,20 @@ export function MicroTasks() {
                   </Button>
                 );
               })}
+              </div>
+              <Field label="Filter by niche" className="sm:w-72">
+                <Select value={trackFilter} onChange={(e) => setTrackFilter(e.target.value)}>
+                  <option value="all">All niches ({tasks.length})</option>
+                  {tracksData.tracks.map((t) => {
+                    const count = tasks.filter((task) => matchesTrack(task, t.id)).length;
+                    return (
+                      <option key={t.id} value={t.id}>
+                        {t.name} ({count})
+                      </option>
+                    );
+                  })}
+                </Select>
+              </Field>
             </div>
 
             <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
@@ -265,7 +265,7 @@ export function MicroTasks() {
                     key={task.id}
                     task={task}
                     done={!!doneMap[task.id]}
-                    onOpen={() => setSelectedId(task.id)}
+                    onOpen={() => openTask(task.id)}
                   />
                 ))}
               </AnimatePresence>
@@ -292,10 +292,11 @@ export function MicroTasks() {
           </motion.div>
         ) : (
           <TaskDetail
+            key={selected.id}
             task={selected}
             isDone={hydrated && !!state.tasks[selected.id]}
             onToggleDone={() => toggleTask(selected.id)}
-            onBack={() => setSelectedId(null)}
+            onBack={closeTask}
             dodChecked={dodChecked[selected.id] ?? {}}
             onToggleDod={(i) => toggleDod(selected.id, i)}
             critiqueChecked={critiqueChecked[selected.id] ?? {}}
@@ -413,9 +414,18 @@ function TaskDetail({
 }: TaskDetailProps) {
   const dodDone = task.definitionOfDone.filter((_, i) => dodChecked[i]).length;
   const critiqueDone = task.selfCritique.filter((_, i) => critiqueChecked[i]).length;
+  const topRef = useRef<HTMLDivElement>(null);
+
+  // The detail replaces a gallery that may be 6000px tall; without this the
+  // browser clamps to the new bottom and the visitor lands on "I built this".
+  useEffect(() => {
+    scrollToStart(topRef.current);
+  }, []);
 
   return (
     <motion.div
+      ref={topRef}
+      className="scroll-mt-28"
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -12 }}
@@ -482,7 +492,7 @@ function TaskDetail({
             <Card key={r.name} padding="md">
               <div className="flex items-center justify-between gap-2">
                 <Badge tone="neutral">{r.type}</Badge>
-                {r.free && <span className="text-xs font-semibold text-verified">Open</span>}
+                {r.free && <span className="text-xs font-semibold text-verified">No-cost</span>}
               </div>
               <p className="mt-3 font-display text-base leading-snug">{r.name}</p>
               <Text size="small" className="mt-1.5 flex-1">

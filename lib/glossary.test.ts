@@ -2,8 +2,8 @@ import { describe, expect, it } from "vitest";
 import { TERMS, filterTerms, getTerm, groupByLetter } from "@/lib/glossary";
 
 describe("TERMS", () => {
-  it("loads the fifty authored terms", () => {
-    expect(TERMS).toHaveLength(50);
+  it("loads the fifty-seven authored terms", () => {
+    expect(TERMS).toHaveLength(57);
   });
 });
 
@@ -38,16 +38,16 @@ describe("groupByLetter", () => {
     expect(groups[0].letter).toBe("#");
   });
 
-  it("groups all fifty authored terms without losing one", () => {
+  it("groups all fifty-seven authored terms without losing one", () => {
     const grouped = groupByLetter(TERMS).flatMap((group) => group.terms);
-    expect(grouped).toHaveLength(50);
+    expect(grouped).toHaveLength(57);
   });
 });
 
 describe("filterTerms", () => {
   it("returns everything for an empty or blank query", () => {
-    expect(filterTerms(TERMS, "")).toHaveLength(50);
-    expect(filterTerms(TERMS, "   ")).toHaveLength(50);
+    expect(filterTerms(TERMS, "")).toHaveLength(57);
+    expect(filterTerms(TERMS, "   ")).toHaveLength(57);
   });
 
   it("matches the term and the definition, case-insensitively", () => {

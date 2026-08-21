@@ -38,8 +38,10 @@ export const CRAFT_RAMP: Record<Craft, number> = { none: 3, building: 18, deep: 
 /**
  * THE MOST IMPORTANT LINE IN THIS FILE.
  * The AI premium is conditional on craft. AI multiplies a craft; it cannot multiply zero.
+ * `deep` is the one sourced figure: Upwork's reported +34% per hour for AI work
+ * (simulator.json `ai-augmented-deep`). `building` is our interpolation.
  */
-export const AI_AUGMENTED: Record<Craft, number> = { none: 1.0, building: 1.15, deep: 1.4 };
+export const AI_AUGMENTED: Record<Craft, number> = { none: 1.0, building: 1.15, deep: 1.34 };
 export const AI_USER = 1.05;
 
 export const OWNERSHIP_OUTCOMES = 1.25;
@@ -57,8 +59,13 @@ export const NON_PAYMENT_RISK = 0.31;
 
 export const WEEKS_PER_MONTH = 4.33;
 export const MONTHS = 36;
-// USD to PHP, sampled 2026-07. Keep in sync with simulator.json fx.note.
+/**
+ * USD to PHP default. BSP reference rate sampled mid-July 2026.
+ * The only place this number lives: simulator.json `fx.note` reads it through
+ * the `{fx}` and `{sampled}` tokens, so the prose cannot drift from the math.
+ */
 export const DEFAULT_FX = 61.5;
+export const DEFAULT_FX_SAMPLED = "mid-July 2026";
 
 /** Clamped smoothstep, legible easing, not a physics engine. */
 export function ease(t: number): number {

@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-08",
   "hero": {
     "kicker": "Get legit · BIR · benefits · getting paid",
     "line1": "Make it official.",
@@ -14,7 +15,7 @@
       {
         "icon": "receipt-text",
         "title": "You become invoice-capable",
-        "desc": "Serious clients, especially companies, need a real invoice or official receipt to book you as a supplier. Freelancers who can issue one get considered for bigger contracts and better rates. The ones who can't stay in the informal pile."
+        "desc": "Serious clients, especially companies, need a real invoice to book you as a supplier. Freelancers who can issue one get considered for bigger contracts and better rates. The ones who can't stay in the informal pile."
       },
       {
         "icon": "shield-check",
@@ -60,7 +61,7 @@
       { "label": "BIR ORUS: online registration portal", "url": "https://orus.bir.gov.ph" },
       { "label": "Taxumo: freelancer tax guide, 2025 edition (8% option explained; check for a newer version)", "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/" }
     ],
-    "note": "Numbers that matter here (the ₱250,000 exemption, the ₱3M threshold, the 8% rate) are set by law and can change. The official pages above outrank anything you read elsewhere, including this page."
+    "note": "Numbers that matter here (the ₱250,000 exemption, the ₱3M threshold, the 8% rate) are set by law and can change; they are stated as of the 2025 rules, so check the BIR site before you act on them. The official pages above outrank anything you read elsewhere, including this page."
   },
 
   "benefits": {
@@ -71,7 +72,7 @@
       {
         "icon": "bank",
         "name": "SSS",
-        "what": "Sickness, maternity, disability, unemployment, retirement, and salary loans. Register or switch to self-employed/voluntary through the My.SSS portal and pay monthly or quarterly.",
+        "what": "Sickness, maternity, disability, retirement, and salary loans. Register or switch to self-employed/voluntary through the My.SSS portal and pay monthly or quarterly.",
         "source": { "label": "SSS: official site", "url": "https://www.sss.gov.ph" }
       },
       {

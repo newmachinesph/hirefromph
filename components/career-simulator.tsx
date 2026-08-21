@@ -24,6 +24,7 @@ import {
   BASE,
   BASE_RANGE,
   DEFAULT_FX,
+  DEFAULT_FX_SAMPLED,
   MONTHS,
   NON_PAYMENT_RISK,
   aiMultiplier,
@@ -68,6 +69,10 @@ const ITEMS = sim.multipliers.items as Record<
 >;
 const SOURCES = sim.multipliers.sources as Record<string, SourceRef>;
 const MILESTONES = [6, 12, 24, 36] as const;
+// The FX note reads its number and date from the math module, never the JSON.
+const FX_NOTE = sim.fx.note
+  .replace("{fx}", String(DEFAULT_FX))
+  .replace("{sampled}", DEFAULT_FX_SAMPLED);
 
 /* ------------------------------------------------------------------ */
 /*  Controls                                                           */
@@ -209,9 +214,9 @@ export function CareerSimulator() {
       {
         key: aiKey,
         value: aiMultiplier(config),
-        // The +40% AI premium and its "you needed the expertise first" nuance are both sourced.
-        // The partial premium for a half-built craft is our interpolation.
-        sourced: aiKey === "ai-augmented-deep" || aiKey === "ai-augmented-none",
+        // Only the +34% premium on a deep craft is sourced (Upwork). The ×1.0 on
+        // no craft and the partial premium on a half-built one are our reading.
+        sourced: aiKey === "ai-augmented-deep",
         sources:
           ai === "augmented"
             ? [SOURCES["upwork-skills"], SOURCES["axios-ai"]]
@@ -273,6 +278,23 @@ export function CareerSimulator() {
     <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-start [&>*]:min-w-0">
       {/* ------------------------------------------------------- CONTROLS */}
       <div className="flex flex-col gap-4">
+        {/* Below lg the results sit several screens under the controls, so a
+            sticky strip keeps the verdict and the month-36 figure in view
+            while the visitor changes inputs. Hidden from lg up, where the
+            results column is beside the controls. The strip is not
+            aria-live: the full verdict below already announces. */}
+        <div
+          aria-hidden
+          className="sticky top-20 z-10 -mx-1 rounded-md border border-line-strong bg-paper px-4 py-3 shadow-sm lg:hidden"
+        >
+          <p className="text-caption uppercase tracking-wider text-ink-faint">
+            Month 36, your path · {usd(model.at36)} ({peso(model.at36, fx)})
+          </p>
+          <p className="mt-1 text-small font-medium leading-snug text-ink">
+            {model.verdict.label}
+          </p>
+        </div>
+
         <div>
           <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-ink">
             {sim.controls.title}
@@ -333,7 +355,7 @@ export function CareerSimulator() {
         />
 
         <Card padding="sm">
-          <Field label={sim.fx.label} hint={sim.fx.note}>
+          <Field label={sim.fx.label} hint={FX_NOTE}>
             <div className="flex items-center gap-3">
               <Input
                 id={`${uid}-fx`}

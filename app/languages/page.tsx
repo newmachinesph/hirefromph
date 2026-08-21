@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import languagesData from "@/data/languages.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import {
   CardGrid,
   PageFooterNav,
@@ -10,11 +11,11 @@ import {
 import {
   Badge,
   Button,
+  Callout,
   Card,
   Heading,
   Icon,
   Kicker,
-  ProgressBar,
   Step,
   StepList,
   Text,
@@ -22,13 +23,12 @@ import {
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 import { PracticeFooter, Tldr } from "@/components/practice";
-import { cn } from "@/lib/utils";
 
 const HREF = "/languages";
 
 export const metadata: Metadata = pageMeta({
   path: HREF,
-  title: "Language Premium, A Second Language Can Double Your Pay",
+  title: "Language Edge, A Second Language Thins the Field",
   description: languagesData.intro,
 });
 
@@ -58,11 +58,12 @@ export default function LanguagesPage() {
       <PageHero
         compact
         breadcrumb={getBreadcrumb(HREF)}
-        kicker="The rate multiplier"
-        title="A second language can"
-        accent="double your pay."
+        kicker="The language edge"
+        title="A second language"
+        accent="thins the field."
         lead={languagesData.intro}
       >
+        <FreshnessNote date={languagesData.lastVerified} />
         <Section spacing="none"><Tldr route="/languages" /></Section>
       </PageHero>
 
@@ -73,6 +74,27 @@ export default function LanguagesPage() {
           title="Which language pays the most"
           lead={languagesData.premiumNote}
         />
+
+        <Callout
+          tone="verified"
+          icon="graduation-cap"
+          title={languagesData.startFree.title}
+          className="mt-8 max-w-3xl"
+        >
+          <Text size="small" tone="ink">
+            {languagesData.startFree.body}
+          </Text>
+          <div className="mt-2">
+            <Button
+              href={languagesData.startFree.url}
+              external
+              variant="link"
+              iconEnd={<Icon name="arrow-up-right" size={13} />}
+            >
+              {languagesData.startFree.label}
+            </Button>
+          </div>
+        </Callout>
 
         <div className="mt-10">
           <LanguageCard language={hero} featured />
@@ -141,20 +163,9 @@ function LanguageCard({
   return (
     <Card as="article" padding={featured ? "lg" : "md"}>
       <div className="flex items-start justify-between gap-4">
-        <div className="min-w-0">
-          <Heading level={3} size={featured ? "h3" : "h4"}>
-            {language.name}
-          </Heading>
-          <div className={cn("mt-3", featured ? "max-w-xs" : "max-w-[12rem]")}>
-            <ProgressBar
-              value={language.premiumScore}
-              max={5}
-              label={`Premium score for ${language.name}`}
-              hideLabel
-              tone={tone}
-            />
-          </div>
-        </div>
+        <Heading level={3} size={featured ? "h3" : "h4"} className="min-w-0">
+          {language.name}
+        </Heading>
         <Badge tone={tone}>{language.premium}</Badge>
       </div>
 

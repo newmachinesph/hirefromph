@@ -97,5 +97,50 @@
     "alt": "A blank notebook and pen beside a closed laptop on a wooden desk in morning light.",
     "caption": "Illustrative image",
     "prompt": "Photoreal editorial photography, shot on a 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest texture in paper, wood, and brushed metal, neutral-warm colour grade with documentary restraint. A real Philippine home, tidy but lived-in, with no people in frame. Scene: a blank open notebook with clean unlined pages and a simple pen resting across it, placed beside a closed laptop on a plain wooden desk, morning light coming through a nearby window. A glass of water and the edge of a woven abaca placemat add quiet texture. Nothing is written anywhere; the pages are empty. Composition: horizontal 3:2 frame at a gentle three-quarter angle, notebook in the foreground left-of-centre, the closed laptop behind and to the right, uncluttered negative space above for a short heading. Lens and light: 50mm at f/2.8, soft low-angle morning daylight from camera-right casting long gentle shadows across the desk, cool window light against warm wood. Negatives: no lens flare, no neon, no watermarks, no readable text anywhere, no logos, no flags, no stock-photo gloss, no hands or people, no open screens."
+  },
+  {
+    "id": "deck-title",
+    "where": "master deck · title slide",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "Seen from the back of a small community hall in the Philippines, rows of plastic chairs with a few people seated, a blank white projector screen at the front catching morning light.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: the back of a small barangay hall or school classroom in the Philippines set up for a workshop. Rows of white plastic monobloc chairs, a handful of adults already seated and seen only from behind, a cheap tripod projector screen at the front that is plain blank white, a ceiling fan, louvred windows at the side letting in hard morning sun in bands across the tiled floor. Wide, slightly low camera from the back row. Muted natural colour, nothing staged.",
+    "caption": "Illustrative image"
+  },
+  {
+    "id": "deck-why",
+    "where": "master deck · why chapter",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "Three-quarter view from behind of a Filipino man at a home desk, headset on, two monitors showing blurred spreadsheets, a fan and a mug beside him.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: a Filipino man in his thirties at a home work desk in a modest apartment, photographed from three-quarters behind his right shoulder so only the side of his head, a headset and one ear are visible. Two mismatched monitors show softly out-of-focus spreadsheet grids with no readable text. A small desk fan, a chipped mug, a phone face-down, a notebook with unreadable scribbles. Late-afternoon light from a window to the left, warm on the wall, the rest in shade.",
+    "caption": "Illustrative image"
+  },
+  {
+    "id": "deck-path",
+    "where": "master deck · the path chapter",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "A young woman with a backpack walking up a steep outdoor concrete stairway between houses at dawn, seen from behind.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: a young Filipina with a small backpack walking up a long, steep outdoor concrete stairway that threads between close-set houses in a hillside barangay at dawn, photographed from behind and below so we see her back, her ponytail and the stairs rising ahead. Painted concrete walls, a few potted plants, electrical wires overhead, soft blue-grey early light with the first warm sun touching the top of the stairs. Wide shot, she is small in the frame.",
+    "caption": "Illustrative image"
+  },
+  {
+    "id": "deck-methods",
+    "where": "master deck · seven methods chapter",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "Two people at a whiteboard in a small office, seen from behind, one drawing boxes and arrows with a marker.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: two Filipino professionals, one standing and one seated on a stool, both seen from behind, working at a whiteboard in a small plain office. The standing one draws simple boxes and arrows with a black marker; the board carries only rough rectangles, arrows and a few dots, no letters or words. A window on the right gives soft daylight, a laptop closed on the table, a paper cup. Natural, candid, slightly wide framing.",
+    "caption": "Illustrative image"
+  },
+  {
+    "id": "deck-close",
+    "where": "master deck · closing chapter",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "Seen from behind, an older woman shows a younger woman something on a laptop at a kitchen table in the evening, a single lamp lighting the scene.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: at a small kitchen table in a Philippine home in the evening, an older Filipina leans in to show a younger woman something on a laptop, both seen from behind and three-quarter so no faces are readable. The laptop screen is a soft, unreadable glow. One warm table lamp and a kitchen light in the background, a plate with bread, a glass of water, a plastic tablecloth. Intimate, quiet, hand-me-down knowledge; nothing staged.",
+    "caption": "Illustrative image"
   }
 ]

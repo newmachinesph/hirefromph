@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import apply from "@/data/apply.json";
 import findwork from "@/data/findwork.json";
-import { VettingFlow } from "@/components/diagrams/vetting-flow";
 import { CopyButton } from "@/components/copy-button";
+import { FreshnessNote } from "@/components/freshness-note";
 import { FindWorkDirectory, VettingTool } from "@/components/find-work";
 import {
   CardGrid,
@@ -15,7 +15,6 @@ import {
   Button,
   Callout,
   Card,
-  DiagramFrame,
   Heading,
   Icon,
   Kicker,
@@ -33,7 +32,8 @@ const HREF = "/apply";
 export const metadata: Metadata = pageMeta({
   path: HREF,
   title: "Find Work",
-  description: findwork.intro,
+  description:
+    "Source work before it is posted, vet any offer so you never get scammed, research a client before you apply, and study 23 places that hire Filipinos.",
 });
 
 export default function Page() {
@@ -46,13 +46,12 @@ export default function Page() {
         title="Don’t wait for a list."
         accent="Learn to find the work."
         lead={findwork.intro}
+        actions={<Button href="#directory">Skip to the directory</Button>}
       >
         <Callout tone="signal" className="max-w-2xl">
           {findwork.creed}
         </Callout>
-        <Callout tone="caution" icon="alert-triangle" className="max-w-2xl">
-          {apply.disclaimer}
-        </Callout>
+        <FreshnessNote date={apply.lastVerified} />
       </PageHero>
 
       {/* HOW TO SOURCE OPPORTUNITIES */}
@@ -110,15 +109,7 @@ export default function Page() {
           lead={findwork.vetting.intro}
         />
 
-        <DiagramFrame
-          title="Vetting an opportunity, gate by gate"
-          caption="Read top to bottom. Every downward arrow is a no; a single yes exits right and ends the conversation."
-          className="mt-12"
-        >
-          <VettingFlow />
-        </DiagramFrame>
-
-        <Card padding="lg" className="mt-10">
+        <Card padding="lg" className="mt-12">
           <VettingTool />
         </Card>
       </Section>
@@ -140,12 +131,15 @@ export default function Page() {
       </Section>
 
       {/* THE DIRECTORY, REFRAMED AS STUDY MATERIAL */}
-      <Section>
+      <Section id="directory" className="scroll-mt-24">
         <SectionHeading
           kicker="Study material, not a shortcut"
           title="The directory below, study it, don't just click it"
           lead="These are real, working places Filipino online professionals get hired. Study the pattern across all of them, who they are, what they need, how they're structured, then use the method above to add your own. This list is a seed, not a substitute for knowing how to find work."
         />
+        <Callout tone="caution" icon="alert-triangle" className="mt-8 max-w-2xl">
+          {apply.disclaimer}
+        </Callout>
       </Section>
       <FindWorkDirectory />
 

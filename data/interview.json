@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-08",
   "hero": {
     "kicker": "Interviews · STAR method · your own answers",
     "line1": "The interview is not a test.",
@@ -77,7 +78,7 @@
       { "q": "What's your biggest weakness?", "approach": "Name a real one you are actively working on, and the concrete step you take to manage it. The trap is a fake weakness (\"I work too hard\"); it signals you can't self-assess.", "icon": "scan-eye" },
       { "q": "Walk me through your experience.", "approach": "Lead with proof, not titles. \"Here's a system I built\" beats \"I was responsible for.\" If you have no paid experience yet, a portfolio micro-task is real experience; present it as one.", "icon": "briefcase" },
       { "q": "How do you handle deadlines / multiple clients?", "approach": "Describe your actual system: the tracker, the calendar, the communication cadence. Vague answers here scare remote clients most, because they can't see you work.", "icon": "calendar-check" },
-      { "q": "What are your rate expectations?", "approach": "Anchor on value and give a range, then invite their budget. Do your homework on live posts first so the number isn't a guess. See the Salary Guide for how to price.", "icon": "wallet" }
+      { "q": "What are your rate expectations?", "approach": "Anchor on value and give a range, then invite their budget. Do your homework on live posts first so the number isn't a guess.", "icon": "wallet", "links": [{ "label": "How to price: the Salary Guide", "href": "/salary" }] }
     ]
   },
 
@@ -102,7 +103,7 @@
     "items": [
       { "name": "One-way video", "icon": "message-square", "desc": "You record answers to preset questions on your own; no live person. Common for first-round screening. Treat it as a live interview: good light, quiet room, look at the lens, and do a test take first." },
       { "name": "Live video call", "icon": "wifi", "desc": "The classic. Test your internet, audio, and background beforehand. Have your STAR stories and your questions on a note off-camera, near the lens." },
-      { "name": "Paid or unpaid test task", "icon": "clipboard-check", "desc": "A small sample of the real work. Reasonable when it's short and scoped. A red flag when it's large, suspiciously specific, or looks like free labor; see Conduct & Reality." },
+      { "name": "Paid or unpaid test task", "icon": "clipboard-check", "desc": "A small sample of the real work. Reasonable when it's short and scoped. A red flag when it's large, suspiciously specific, or looks like free labor.", "links": [{ "label": "Conduct & Integrity", "href": "/conduct" }, { "label": "Reality Check", "href": "/reality" }] },
       { "name": "Async written interview", "icon": "pen-line", "desc": "Questions over email or a form. Your written English carries everything here. Structure your answers, proofread, and keep them tight." }
     ]
   },
@@ -110,14 +111,13 @@
   "redFlags": {
     "kicker": "Protect yourself · interview red flags",
     "title": "A real interview never asks for these.",
-    "lead": "Job scams often hide inside a fake interview, because it feels legitimate. If any of these appear, stop, no matter how good the role sounds. This is the same vetting instinct the Reality and Find Work pages teach, applied to the interview itself.",
+    "lead": "Job scams often hide inside a fake interview, because it feels legitimate. If either of these appears, stop, no matter how good the role sounds. The general flags (fees, deposits, instant huge offers) are on the Find Work vetting checklist; these two are specific to the interview itself.",
     "items": [
-      { "flag": "They ask for money, a fee, or a deposit", "why": "No legitimate employer or client ever charges you to be hired, trained, or equipped. This is the single most common job scam." },
       { "flag": "They want ID, bank details, or an OTP before any contract", "why": "Identity and payment details come after a signed agreement, never during a first chat. An OTP request is almost always account theft." },
-      { "flag": "The whole 'interview' happens over text on WhatsApp or Telegram", "why": "Real hiring uses email, a real call, or the platform. A rushed chat-only process that skips a proper conversation is a classic pattern." },
-      { "flag": "The offer is instant, huge, and vague about the actual work", "why": "\"$40/hr, start today, easy tasks\" with no clear role is bait. Real roles describe real responsibilities and take more than one message to fill." }
+      { "flag": "The whole 'interview' happens over text on WhatsApp or Telegram", "why": "Real hiring uses email, a real call, or the platform. A rushed chat-only process that skips a proper conversation is a classic pattern." }
     ],
-    "source": { "label": "PH 2nd most attacked by job scams (Manila Bulletin / SEEK, Nov 2025). Re-verify this ranking going into 2027.", "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport" }
+    "crossref": { "label": "Run the full vetting checklist on Find Work", "href": "/apply" },
+    "source": { "label": "PH 2nd most attacked by job scams (Manila Bulletin / SEEK, Nov 2025)", "_note": "Re-verify this ranking going into 2027.", "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport" }
   },
 
   "closing": {

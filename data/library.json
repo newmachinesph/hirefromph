@@ -37,6 +37,20 @@
       "desc": "Stage five. Go direct, register with the BIR, and grow into an end-goal role."
     },
     {
+      "label": "Your dashboard",
+      "href": "/path",
+      "group": "path",
+      "type": "tool",
+      "desc": "See your saved track and how far you are."
+    },
+    {
+      "label": "30-Day Plan",
+      "href": "/plan",
+      "group": "path",
+      "type": "tool",
+      "desc": "Answer five questions and get a day-by-day plan for your next month."
+    },
+    {
       "label": "The Method",
       "href": "/method",
       "group": "learn",
@@ -106,32 +120,9 @@
       "desc": "Verified free courses and programs, plus how to judge one before starting it."
     },
     {
-      "label": "Niches",
-      "href": "/niches",
-      "group": "learn",
-      "type": "tool",
-      "stage": 1,
-      "desc": "Compare the lanes on cited pay bands and what AI has changed."
-    },
-    {
-      "label": "Languages",
-      "href": "/languages",
-      "group": "learn",
-      "type": "guide",
-      "stage": 4,
-      "desc": "A second language thins the candidate pool, and PH has free places to learn one."
-    },
-    {
-      "label": "Reality Check",
-      "href": "/reality",
-      "group": "work",
-      "type": "data",
-      "desc": "What the evidence says about online work here, and what nobody knows."
-    },
-    {
       "label": "Become Indispensable",
       "href": "/indispensable",
-      "group": "work",
+      "group": "learn",
       "type": "guide",
       "stage": 3,
       "desc": "The judgment and taste that make you hard to replace in an AI market."
@@ -139,23 +130,61 @@
     {
       "label": "English at Work",
       "href": "/english",
-      "group": "work",
+      "group": "learn",
       "type": "guide",
       "desc": "Audit a real client message, cut the hedges, learn four writing structures."
     },
     {
       "label": "Conduct & Integrity",
       "href": "/conduct",
-      "group": "work",
+      "group": "learn",
       "type": "guide",
       "desc": "The behaviour that gets people fired or delisted, and an oath you write."
     },
     {
       "label": "Career Simulator",
       "href": "/simulator",
-      "group": "work",
+      "group": "learn",
       "type": "data",
       "desc": "Model 36 months of a task-taker against a specialist, with every assumption tagged."
+    },
+    {
+      "label": "Equipment",
+      "href": "/equipment",
+      "group": "learn",
+      "type": "tool",
+      "stage": 1,
+      "desc": "Check what you already own and budget in pesos for whatever is missing."
+    },
+    {
+      "label": "Practice",
+      "href": "/practice",
+      "group": "learn",
+      "type": "tool",
+      "desc": "Flashcards and quizzes on a spacing schedule, so what you read stays."
+    },
+    {
+      "label": "Glossary",
+      "href": "/glossary",
+      "group": "learn",
+      "type": "tool",
+      "desc": "Plain definitions for every term this site uses, with Tagalog glosses."
+    },
+    {
+      "label": "Niches",
+      "href": "/niches",
+      "group": "work",
+      "type": "tool",
+      "stage": 1,
+      "desc": "Compare the lanes on cited pay bands and what AI has changed."
+    },
+    {
+      "label": "Languages",
+      "href": "/languages",
+      "group": "work",
+      "type": "guide",
+      "stage": 4,
+      "desc": "A second language thins the candidate pool, and PH has free places to learn one."
     },
     {
       "label": "Find Work",
@@ -206,46 +235,23 @@
     {
       "label": "Tracker",
       "href": "/tracker",
-      "group": "tools",
+      "group": "work",
       "type": "tool",
       "stage": 2,
       "desc": "Log every application and get nudged the moment a follow-up runs late."
     },
     {
-      "label": "30-Day Plan",
-      "href": "/plan",
-      "group": "tools",
-      "type": "tool",
-      "desc": "Answer five questions and get a day-by-day plan for your next month."
-    },
-    {
-      "label": "Equipment",
-      "href": "/equipment",
-      "group": "tools",
-      "type": "tool",
-      "stage": 1,
-      "desc": "Check what you already own and budget in pesos for whatever is missing."
-    },
-    {
-      "label": "Practice",
-      "href": "/practice",
-      "group": "tools",
-      "type": "tool",
-      "desc": "Flashcards and quizzes on a spacing schedule, so what you read stays."
-    },
-    {
-      "label": "Glossary",
-      "href": "/glossary",
-      "group": "tools",
-      "type": "tool",
-      "desc": "Plain definitions for every term this site uses, with Tagalog glosses."
+      "label": "Reality Check",
+      "href": "/reality",
+      "group": "more",
+      "type": "data",
+      "desc": "What the evidence says about online work here, and what nobody knows."
     },
     {
       "label": "For Educators",
       "href": "/educators",
-      "group": "tools",
+      "group": "more",
       "type": "guide",
-      "pending": true,
       "desc": "Run a session from this material: run-sheets, slides, and the licence."
     }
   ]

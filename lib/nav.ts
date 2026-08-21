@@ -19,7 +19,9 @@ export type NavDirect = { label: string; href: string };
 export type NavItem = NavMenu | NavDirect;
 export type NavGroup = { title: string; up: NavLink; links: NavLink[] };
 
-export type LibraryGroup = "path" | "learn" | "work" | "tools";
+/** One library group per navGroups bucket, so the breadcrumb (library group)
+ *  and the footer "up" link (nav bucket) always name the same place. */
+export type LibraryGroup = "path" | "learn" | "work" | "more";
 export type LibraryType = "guide" | "workshop" | "tool" | "data";
 export type LibraryEntry = {
   label: string;
@@ -44,14 +46,14 @@ export const NAV_GROUPS = siteData.navGroups as NavGroup[];
 export const NAV_CTA = siteData.cta as NavLink;
 export const LIBRARY = libraryData.entries as LibraryEntry[];
 
-export const LIBRARY_GROUPS: LibraryGroup[] = ["path", "learn", "work", "tools"];
+export const LIBRARY_GROUPS: LibraryGroup[] = ["path", "learn", "work", "more"];
 export const LIBRARY_TYPES: LibraryType[] = ["guide", "workshop", "tool", "data"];
 
 export const GROUP_LABELS: Record<LibraryGroup, string> = {
   path: "The path",
   learn: "Learn",
   work: "Work",
-  tools: "Tools",
+  more: "More",
 };
 
 export const TYPE_LABELS: Record<LibraryType, string> = {

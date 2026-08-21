@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import english from "@/data/english.json";
 import { Bars } from "@/components/diagrams/charts";
 import { CommsLab } from "@/components/comms-lab";
+import { FreshnessNote } from "@/components/freshness-note";
 import {
   CardGrid,
   PageFooterNav,
@@ -11,7 +12,10 @@ import {
   Toc,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
+  Button,
   Callout,
   Card,
   DiagramFrame,
@@ -19,8 +23,6 @@ import {
   Icon,
   Kicker,
   Source,
-  Step,
-  StepList,
   Text,
 } from "@/components/ui";
 import { accent } from "@/lib/accent";
@@ -30,10 +32,6 @@ import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/english";
-
-/** The chart's domain, not styling: EF EPI is scored out of 800 with a published global mean. */
-const MAX_SCORE = 800;
-const GLOBAL_AVG = 488;
 
 export const metadata: Metadata = pageMeta({
   path: HREF,
@@ -45,16 +43,20 @@ export const metadata: Metadata = pageMeta({
 const TOC = [
   { id: "baseline", label: "The baseline" },
   { id: "causes", label: "Three causes" },
-  { id: "honesty", label: "No spin" },
   { id: "banlist", label: "The banlist" },
   { id: "lab", label: "The lab" },
   { id: "frameworks", label: "Four structures" },
+  { id: "estimating", label: "Estimating" },
   { id: "speaking", label: "Speaking" },
   { id: "resources", label: "Resources" },
 ];
 
+const resourceBadge = (tone: string) =>
+  tone === "verified" ? "Open" : tone === "caution" ? "Caveat" : "Paid";
+
 export default function EnglishPage() {
-  const weakest = Math.min(...english.baseline.scores.map((s) => s.value));
+  const { baseline } = english;
+  const weakest = Math.min(...baseline.scores.map((s) => s.value));
 
   return (
     <>
@@ -65,11 +67,18 @@ export default function EnglishPage() {
         title="Your English is not the problem."
         accent="The habits around it are."
         lead={english.intro}
+        actions={
+          <Button href="#lab" icon={<Icon name="pen-line" size={15} />}>
+            Audit a message you sent
+          </Button>
+        }
       >
         <Callout tone="signal" className="max-w-2xl">
           {english.creed}
         </Callout>
+        <FreshnessNote date={english.lastVerified} />
         <Section spacing="none"><Tldr route="/english" /></Section>
+        <Toc items={TOC} mobile />
       </PageHero>
 
       <Section>
@@ -80,55 +89,35 @@ export default function EnglishPage() {
             {/* ---------------------------------------------------- BASELINE */}
             <section id="baseline">
               <SectionHeading
-                kicker={english.baseline.kicker}
-                title={english.baseline.title}
-                lead={english.baseline.body}
+                kicker={baseline.kicker}
+                title={baseline.title}
+                lead={baseline.body}
               />
 
               <DiagramFrame
-                title={`EF EPI 2025 · Philippines, out of ${MAX_SCORE}`}
-                caption={`The dashed line is the global average, ${GLOBAL_AVG}. Every one of the four scores clears it; the highlighted bar is only the weakest of four strong results.`}
+                title={`EF EPI ${baseline.edition} · Philippines, four sub-scores out of ${baseline.maxScore}`}
+                caption={`The dashed line is the global average, ${baseline.globalAverage}. Every one of the four scores clears it; the highlighted bar is only the weakest of four strong results.`}
                 className="mt-10"
               >
                 <Bars
-                  data={english.baseline.scores.map((s) => ({
+                  data={baseline.scores.map((s) => ({
                     id: s.skill,
                     label: s.skill,
                     value: s.value,
                     note: s.value === weakest ? "weakest of the four" : undefined,
                     focal: s.value === weakest,
                   }))}
-                  max={MAX_SCORE}
-                  reference={{ value: GLOBAL_AVG, label: "global average" }}
+                  max={baseline.maxScore}
+                  reference={{ value: baseline.globalAverage, label: "global average" }}
                   format={(v) => String(v)}
                 />
               </DiagramFrame>
 
               <Source
-                label={english.baseline.source.label}
-                url={english.baseline.source.url}
+                label={baseline.source.label}
+                url={baseline.source.url}
                 className="mt-4"
               />
-
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-                {english.baseline.scores.map((s) => (
-                  <li key={s.skill}>
-                    <Card padding="sm" className="h-full">
-                      <div className="flex items-baseline justify-between gap-3">
-                        <Text size="small" tone="ink" as="span" className="font-semibold">
-                          {s.skill}
-                        </Text>
-                        <span className="font-display text-h5 tabular-nums text-ink">
-                          {s.value}
-                        </span>
-                      </div>
-                      <Text size="caption" className="mt-2">
-                        {s.note}
-                      </Text>
-                    </Card>
-                  </li>
-                ))}
-              </ul>
             </section>
 
             {/* ------------------------------------------------ THREE CAUSES */}
@@ -178,16 +167,27 @@ export default function EnglishPage() {
                   );
                 })}
               </div>
-            </section>
 
-            {/* ----------------------------------------------------- HONESTY */}
-            <section id="honesty">
-              <SectionHeading kicker="No spin" title={english.honesty.title} />
-              <StepList className="mt-12">
-                {english.honesty.points.map((p, idx) => (
-                  <Step key={p} n={idx + 1} title={p} />
-                ))}
-              </StepList>
+              {/* The "no spin" points qualify the claims above, so they sit here. */}
+              <div id="honesty" className="mt-8 scroll-mt-28">
+                <Callout tone="neutral" icon="shield-check" title={english.honesty.title}>
+                  <ul className="mt-2 flex flex-col gap-3">
+                    {english.honesty.points.map((p, idx) => (
+                      <li key={p} className="flex gap-3">
+                        <span
+                          aria-hidden
+                          className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-sm bg-band text-caption font-semibold tabular-nums text-ink"
+                        >
+                          {idx + 1}
+                        </span>
+                        <Text size="small" as="span">
+                          {p}
+                        </Text>
+                      </li>
+                    ))}
+                  </ul>
+                </Callout>
+              </div>
             </section>
 
             {/* ----------------------------------------------------- BANLIST */}
@@ -216,7 +216,7 @@ export default function EnglishPage() {
             </section>
 
             {/* --------------------------------------------------------- LAB */}
-            <section id="lab">
+            <section id="lab" className="scroll-mt-28">
               <SectionHeading
                 kicker={english.lab.kicker}
                 title={english.lab.title}
@@ -403,45 +403,57 @@ export default function EnglishPage() {
                 title={english.resources.title}
                 lead={english.resources.lead}
               />
-              <CardGrid cols={3} className="mt-12">
+              <Accordion className="mt-10">
                 {english.resources.items.map((r) => {
                   const a = accent(r.tone);
                   return (
-                    <Card key={r.name} as="article">
-                      <div className="flex items-start justify-between gap-3">
-                        <Heading level={3} size="h4">
+                    <AccordionItem
+                      key={r.name}
+                      id={r.name}
+                      title={
+                        <span className="flex flex-wrap items-center gap-3">
                           {r.name}
-                        </Heading>
-                        <Badge tone={r.tone as "signal"}>
-                          {r.tone === "verified" ? "Open" : r.tone === "caution" ? "Caveat" : "Paid"}
-                        </Badge>
-                      </div>
-
-                      <Text size="small" as="p" className={cn("mt-4 font-semibold", a.text)}>
+                          <Badge tone={r.tone as "signal"}>{resourceBadge(r.tone)}</Badge>
+                        </span>
+                      }
+                    >
+                      <Text size="small" as="p" className={cn("font-semibold", a.text)}>
                         {r.cost}
                       </Text>
-                      <Text size="small" className="mt-4 flex-1">
+                      <Text size="small" className="mt-3">
                         {r.what}
                       </Text>
-                      <Text size="small" tone="ink" className="mt-4 border-l-2 border-line-strong pl-4">
+                      <Text size="small" tone="ink" className="mt-3 border-l-2 border-line-strong pl-4">
                         {r.use}
                       </Text>
-
                       <a
                         href={r.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-6 inline-flex min-h-11 items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                        className="mt-4 inline-flex min-h-11 items-center gap-1.5 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
                       >
                         Open {r.name}
                         <Icon name="arrow-up-right" size={14} />
                       </a>
-                    </Card>
+                    </AccordionItem>
                   );
                 })}
-              </CardGrid>
+              </Accordion>
             </section>
           </div>
+        </div>
+      </Section>
+
+      {/* ------------------------------------------------------------- CLOSE */}
+      <Section band="tint">
+        <SectionHeading
+          align="center"
+          kicker="One next step"
+          title="Now say it under pressure."
+          lead="The rate-and-pause drill and the rhythm work above are interview material. The interview workshop is where you run them live, on answers you wrote yourself."
+        />
+        <div className="mt-9 flex justify-center">
+          <Button href="/interview">Go to the interview workshop</Button>
         </div>
       </Section>
 

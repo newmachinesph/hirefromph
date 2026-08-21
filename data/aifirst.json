@@ -4,7 +4,7 @@
     "kicker": "AI-first · every role",
     "line1": "Every role now",
     "line2": "runs on AI.",
-    "intro": "There is no longer such a thing as a non-AI role. The bookkeeper reconciles with AI. The social media manager plans with AI. The ops person builds their own tools with AI. The question stopped being should I use AI years ago. The only question left is whether you run the AI, on purpose and with judgment, or whether the work quietly gets done without you. This page is about becoming the person who runs it.",
+    "intro": "The bookkeeper reconciles with AI, the social media manager plans with AI, the ops person builds their own tools with AI. The only question left is whether you run it, on purpose and with judgment, or whether the work quietly gets done without you.",
     "creed": "AI does not replace an online professional. A professional who owns an AI-assisted outcome replaces one who still does it all by hand, and charges more for it."
   },
 
@@ -75,14 +75,15 @@
       }
     ],
     "source": { "label": "Anthropic, AI Fluency: Framework & Foundations (open)", "url": "https://www.anthropic.com/ai-fluency/overview" },
-    "note": "These four come from Anthropic's no-cost AI Fluency course, a few hours and no cost. It's one company's framework, not the only way to think about this, but a clear one worth learning first. It is on the No-cost Resources page too."
+    "note": "These four come from Anthropic's no-cost AI Fluency course, a few hours and no cost. It is on the No-cost Resources page too."
   },
 
   "landscape": {
     "kicker": "The landscape · specimens, not a shopping list",
     "title": "Five layers of AI a modern professional uses.",
     "lead": "These are not tools to memorize. The specific names will change, and half of them will have new rivals by the time you read this. They are here as worked examples of five things you can now put under any craft. For each layer we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you will still have the layer.",
-    "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons. Once you're ready to sell the work, many freemium tools gate commercial use behind a paid tier, and paying it needs an internationally-billable card (Wise or Payoneer).",
+    "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons. Once you're ready to sell the work, many freemium tools gate commercial use behind a paid tier, and paying it needs a card that bills internationally: Wise, Payoneer, or a bank's virtual card.",
+    "toolsLabel": "Show {n} tools to try",
     "categories": [
       {
         "id": "coding",
@@ -214,34 +215,23 @@
   "agentic": {
     "kicker": "The next layer · agents",
     "title": "Chat was the preview. Agents are the job.",
-    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools such as Claude Code, Cursor, and GitHub Copilot's agent mode plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category, and the market is nowhere near full. Every piece of this stack is no-cost to learn.",
-    "items": [
-      { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer: it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
-      { "icon": "file-text", "term": "Context files (AGENTS.md)", "desc": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset." },
-      { "icon": "list-checks", "term": "Skills & commands", "desc": "Reusable procedures an agent loads on demand: 'how we do the monthly report', written once, run. The SOPs you learn to write in the Build Labs become executable." },
-      { "icon": "git-fork", "term": "Subagents", "desc": "One agent delegating pieces of a job to others working in parallel. The underlying skill is decomposition: cutting a job into clean, checkable pieces. That is a manager's skill, and it is learnable." },
-      { "icon": "plugs-connected", "term": "MCP", "desc": "Model Context Protocol, the open standard that plugs an agent into real tools: the client's sheets, inbox, CRM, database. It is why an agent can act on the actual business instead of just talking about it." },
-      { "icon": "shield-check", "term": "Hooks & guardrails", "desc": "Rules that fire automatically around an agent's actions: block the dangerous ones, double-check the important ones. Trust in automation is built with brakes, not hope." },
-      { "icon": "arrows-clockwise", "term": "Loop engineering", "desc": "Designing the cycle: the agent works, the output gets verified, errors go back in, repeat until the check passes. Whoever writes the checks controls the quality. That is the part AI cannot do for itself." }
-    ],
+    "lead": "The frontier has moved from asking AI questions to running AI that works: agent tools such as Claude Code, Cursor, and GitHub Copilot's agent mode plan a task, use real tools, check their own output, and finish whole workflows. The professionals who can direct, verify, and operate agents are a new hiring category, and the market is nowhere near full. Every piece of this stack has a no-cost tier or a no-cost alternative to learn on.",
+    "glossaryLink": { "href": "/glossary#agent", "label": "See the agent terms in the Glossary: agents, context files, skills, subagents, MCP, hooks, loop engineering" },
     "why": {
       "title": "Why this matters to you specifically",
       "body": "Repeating a task for more clients grows your income one hour at a time. Operating agents breaks that ceiling: the bookkeeper who runs a reconciliation pipeline, the marketer who runs a content system, the GTM engineer whose entire role is built on this stack; they bill for outcomes, not hours. Filipinos won the last wave of remote work on skill and reliability. This wave goes to whoever learns to direct the machine first, and almost nobody has started."
     },
-    "note": "Start now: point an agent tool's no-cost tier at one micro-task from /tasks and practice the loop: brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
+    "note": "Start now: point an agent tool's no-cost tier at one micro-task and practice the loop: brief, verify, correct, repeat. That single habit is the whole skill in miniature.",
+    "cta": { "href": "/tasks", "label": "Pick a micro-task to run an agent on" },
     "source": { "label": "Anthropic, Claude Code documentation (one example of an agentic coding tool)", "url": "https://code.claude.com/docs" }
   },
 
   "closing": {
     "kicker": "The honest bottom line",
     "title": "You are still early, but the premium has an expiry date.",
-    "body": "Every role runs on AI now, and that is not a threat to a professional who owns a craft. It is the biggest lever you will ever be handed at no cost. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
+    "body": "None of this is a threat to a professional who owns a craft. It is the biggest lever you will ever be handed at no cost. The generic floor is falling either way. The AI-multiplied ceiling is rising, the demand is measured and growing, and the people filling it are still few. That gap is your opening. It will not stay this wide.",
     "point": "Pick one layer. Put it under the craft you are already building. Ship something real with it this week.",
-    "links": [
-      { "href": "/prompts", "label": "Learn to direct AI", "desc": "Description is the entry skill. Learn to write the brief, from a blank box, for anything." },
-      { "href": "/resources", "label": "The AI courses", "desc": "Start with the no-cost AI-fluency course, the highest-leverage no-cost thing on the shelf." },
-      { "href": "/niches", "label": "Pick the craft to multiply", "desc": "AI needs something to multiply. Choose the lane on purpose, using the rubric." },
-      { "href": "/reality", "label": "See the evidence", "desc": "Every number on this page, in context, with the counter-evidence included. Check us." }
-    ]
+    "primary": { "href": "/prompts", "label": "Learn to direct AI" },
+    "secondary": { "href": "/niches", "label": "Pick the craft to multiply" }
   }
 }

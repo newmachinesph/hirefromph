@@ -42,10 +42,16 @@ describe("findNavNeighbours", () => {
     expect(findNavNeighbours("/not-a-route")).toEqual({});
   });
 
-  it("skips links whose route ships in a later phase", () => {
-    // "For educators" is pending, so Privacy is the last live link in More.
-    expect(findNavNeighbours("/privacy").next).toBeUndefined();
+  it("walks to the last live link in More and stops there", () => {
+    // "For educators" shipped, so it is the last live link in More.
+    expect(findNavNeighbours("/privacy").next).toEqual({ label: "For educators", href: "/educators" });
     expect(findNavNeighbours("/privacy").prev).toEqual({ label: "Library", href: "/library" });
+    expect(findNavNeighbours("/educators").next).toBeUndefined();
+  });
+
+  it("skips links whose route ships in a later phase", () => {
+    expect(isLive({ pending: true })).toBe(false);
+    expect(isLive({})).toBe(true);
   });
 });
 
@@ -66,12 +72,31 @@ describe("getBreadcrumb", () => {
     ]);
   });
 
-  it("falls back to the nav bucket for routes outside the library", () => {
+  it("links the dashboard crumb through the library now that /path is listed there", () => {
     expect(getBreadcrumb("/path")).toEqual([
       { label: "Home", href: "/" },
-      { label: "The path" },
+      { label: "The path", href: "/library?group=path" },
       { label: "Your dashboard" },
     ]);
+  });
+
+  it("falls back to the nav bucket for routes outside the library", () => {
+    expect(getBreadcrumb("/privacy")).toEqual([
+      { label: "Home", href: "/" },
+      { label: "More" },
+      { label: "Privacy" },
+    ]);
+  });
+
+  it("names the same bucket as the footer 'up' link for every library entry", () => {
+    // The breadcrumb reads the library group; PageFooterNav reads navGroups.
+    // They only agree if every entry's group is its navGroups bucket.
+    const bucket: Record<string, string> = { "The path": "path", Learn: "learn", Work: "work", More: "more" };
+    const mismatched = LIBRARY.filter((entry) => {
+      const group = NAV_GROUPS.find((g) => g.links.some((l) => l.href === entry.href));
+      return !group || bucket[group.title] !== entry.group;
+    });
+    expect(mismatched.map((entry) => `${entry.href}: ${entry.group}`)).toEqual([]);
   });
 
   it("returns a single unlinked crumb for the homepage", () => {
@@ -110,8 +135,8 @@ describe("nav data", () => {
     expect(menuLinks().filter((l) => banned.test(l.desc ?? "")).map((l) => l.href)).toEqual([]);
   });
 
-  it("offers Library and Privacy as secondary links, without the pending ones", () => {
-    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/privacy"]);
+  it("offers Library, Privacy and For educators as secondary links, without the pending ones", () => {
+    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/privacy", "/educators"]);
   });
 });
 
@@ -126,6 +151,11 @@ describe("SEARCH_INDEX", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/library")).toBe(true);
   });
 
+  it("lists the dashboard in the library, under The path", () => {
+    const path = LIBRARY.find((entry) => entry.href === "/path");
+    expect(path).toMatchObject({ label: "Your dashboard", group: "path", type: "tool" });
+  });
+
   it("indexes every niche by name so it is findable from the palette", () => {
     expect(SEARCH_INDEX.some((i) => i.label === "Bookkeeping & Accounting" && i.href === "/niches")).toBe(true);
   });
@@ -135,8 +165,8 @@ describe("SEARCH_INDEX", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/glossary")).toBe(true);
   });
 
-  it("never indexes a route that ships in a later phase", () => {
-    expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(false);
+  it("indexes /educators now that it has shipped", () => {
+    expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(true);
   });
 
   it("every SEARCH_INDEX href is live: it never points at a pending library or nav route", () => {

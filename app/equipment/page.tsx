@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import equipment from "@/data/equipment.json";
 import frameworks from "@/data/frameworks.json";
 import { EquipmentChecker } from "@/components/equipment-checker";
+import { FreshnessNote } from "@/components/freshness-note";
 import { CardGrid, PageFooterNav, PageHero, Section, SectionHeading } from "@/components/layout";
 import { Badge, Button, Card, Heading, Icon, Kicker, Source, SourceList, Text } from "@/components/ui";
 import { accent, type Accent } from "@/lib/accent";
@@ -13,9 +14,12 @@ const HREF = "/equipment";
 
 const ACCENT_CYCLE: Accent[] = ["signal", "verified", "caution", "info"];
 
+/** The year comes from the data stamp, so the title rolls forward with each re-check. */
+const GUIDE_TITLE = `Equipment Guide ${equipment.lastVerified.split("-")[0]}`;
+
 export const metadata: Metadata = pageMeta({
   path: HREF,
-  title: "Equipment Guide 2026",
+  title: GUIDE_TITLE,
   description: equipment.intro,
 });
 
@@ -26,7 +30,7 @@ export default function EquipmentPage() {
       <PageHero
         compact
         breadcrumb={getBreadcrumb(HREF)}
-        kicker="Equipment Guide 2026"
+        kicker={GUIDE_TITLE}
         title="Get prepared, not perfect."
         lead={equipment.intro}
       >
@@ -37,6 +41,7 @@ export default function EquipmentPage() {
             </Text>
           </blockquote>
         </Card>
+        <FreshnessNote date={equipment.lastVerified} />
       </PageHero>
 
       {/* ------------------------------------------------------------- CHECKER */}
@@ -44,7 +49,7 @@ export default function EquipmentPage() {
         <SectionHeading
           kicker="Check what you have"
           title="Build a rough budget for your setup"
-          lead="Tick off what you own and choose a planning tier for the rest. The total uses the low end of each rough range; it is not a live quote."
+          lead="Tick off what you own, choose a planning tier for the rest, and count in any optional item you want budgeted."
         />
         <div className="mt-8 rounded-md border border-line-strong bg-band p-6">
           <Kicker>How to read these numbers</Kicker>
@@ -61,11 +66,6 @@ export default function EquipmentPage() {
       {/* ------------------------------------------------- WHAT ACTUALLY MATTERS */}
       <Section band="tint">
         <SectionHeading kicker="Spec literacy" title="What matters" lead={frameworks.equipment.intro} />
-        <blockquote className="mt-8 max-w-2xl border-l-2 border-primary pl-5">
-          <Text size="lead" tone="ink" className="font-display">
-            &ldquo;{frameworks.equipment.creed}&rdquo;
-          </Text>
-        </blockquote>
 
         <CardGrid cols={2} className="mt-10">
           {frameworks.equipment.whatMatters.map((w, idx) => {

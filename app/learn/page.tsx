@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import learning from "@/data/learning.json";
 import { ForgettingCurve } from "@/components/diagrams/forgetting-curve";
 import { StudyProtocol } from "@/components/study-protocol";
 import {
-  CardGrid,
   PageFooterNav,
   PageHero,
   Section,
@@ -11,6 +11,8 @@ import {
   Toc,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
   Button,
   Callout,
@@ -33,7 +35,7 @@ const HREF = "/learn";
 export const metadata: Metadata = pageMeta({
   path: HREF,
   title: "How to Learn",
-  description: learning.intro,
+  description: learning.description,
 });
 
 type Work = {
@@ -62,19 +64,22 @@ type FocusItem = {
   watchOut: string;
 };
 
+/* The builder sits right after the evidence; everything under it is the
+   reference the result links into, so each technique is explained once. */
 const TOC = [
   { id: "myth", label: "The myth" },
   { id: "curve", label: "The curve" },
-  { id: "works", label: "What works" },
+  { id: "protocol", label: "Your protocol" },
+  { id: "works", label: "The eight techniques" },
   { id: "feels-good", label: "Feels productive" },
   { id: "focus", label: "Focus systems" },
-  { id: "protocol", label: "Your protocol" },
 ];
 
 const FEATURED_IDS = ["retrieval-practice", "spaced-repetition"];
 const works = learning.works as Work[];
-const featuredWorks = works.filter((w) => FEATURED_IDS.includes(w.id));
-const restWorks = works.filter((w) => !FEATURED_IDS.includes(w.id));
+
+const INLINE_LINK =
+  "font-medium text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-current";
 
 export default function LearnPage() {
   return (
@@ -85,11 +90,17 @@ export default function LearnPage() {
         kicker={learning.kicker}
         title={learning.headline}
         lead={learning.intro}
+        actions={
+          <Button href="#protocol" icon={<Icon name="pen-line" size={15} />}>
+            Build my study protocol
+          </Button>
+        }
       >
         <Callout tone="signal" className="max-w-2xl">
           {learning.creed}
         </Callout>
         <Section spacing="none"><Tldr route="/learn" /></Section>
+        <Toc items={TOC} mobile />
       </PageHero>
 
       <Section>
@@ -102,7 +113,17 @@ export default function LearnPage() {
               <SectionHeading
                 kicker="Killed first, on purpose"
                 title="The myth we're not going to let slide"
-                lead="This is the clearest worked example of the VET method on the whole platform: a belief that's popular, intuitive, and wrong. Debunking it up front is what earns the rest of this page its credibility."
+                lead={
+                  <>
+                    The clearest worked example of{" "}
+                    <Link href="/method" className={INLINE_LINK}>
+                      the VET method
+                    </Link>{" "}
+                    on the whole platform: a belief that is popular, intuitive,
+                    and wrong. Debunking it up front is what earns the rest of
+                    this page its credibility.
+                  </>
+                }
               />
 
               <Card padding="lg" className="mt-10">
@@ -161,87 +182,80 @@ export default function LearnPage() {
               <SourceList sources={learning.forgettingCurve.sources} className="mt-4" />
             </section>
 
-            {/* ---------------------------------------- WHAT REALLY WORKS */}
+            {/* -------------------------------------------- PROTOCOL BUILDER */}
+            <section id="protocol" className="scroll-mt-28">
+              <SectionHeading
+                align="center"
+                kicker="Build it yourself, from your own constraints"
+                title="Your study protocol"
+                lead={learning.protocol.intro}
+              />
+              <Card padding="lg" className="mt-12">
+                <StudyProtocol
+                  afterResult={
+                    <Accordion>
+                      <AccordionItem id="session" title="Start a session">
+                        <StudyTimer />
+                      </AccordionItem>
+                    </Accordion>
+                  }
+                />
+              </Card>
+            </section>
+
+            {/* ------------------------------------- THE EIGHT TECHNIQUES */}
             <section id="works">
               <SectionHeading
-                kicker="The curriculum"
-                title="What works"
-                lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
+                kicker="The reference"
+                title="The eight techniques"
+                lead="Real evidence behind every one, findings, not tips. Your protocol names three of them; the two with the strongest evidence start open."
               />
 
-              <div className="mt-10 grid gap-6 lg:grid-cols-2">
-                {featuredWorks.map((w) => {
+              <Accordion type="multiple" defaultOpen={FEATURED_IDS} className="mt-10">
+                {works.map((w) => {
                   const a = accent(w.accent);
+                  const featured = FEATURED_IDS.includes(w.id);
                   return (
-                    <Card key={w.id} as="article" padding="lg">
-                      <div className="flex items-center gap-4">
-                        <span
-                          className={cn(
-                            "grid h-14 w-14 shrink-0 place-items-center rounded-md",
-                            a.tint,
-                            a.text,
-                          )}
-                        >
-                          <Icon name={w.icon} size={24} />
-                        </span>
-                        <div>
-                          <span className={cn("text-kicker uppercase", a.text)}>
-                            Strongest evidence
-                          </span>
-                          <Heading level={3} size="h4" className="mt-1">
+                    <div key={w.id} id={`technique-${w.id}`} className="scroll-mt-28">
+                      <AccordionItem
+                        id={w.id}
+                        title={
+                          <span className="flex flex-wrap items-center gap-3">
+                            <span
+                              className={cn(
+                                "grid h-9 w-9 shrink-0 place-items-center rounded-sm",
+                                a.tint,
+                                a.text,
+                              )}
+                            >
+                              <Icon name={w.icon} size={18} />
+                            </span>
                             {w.name}
-                          </Heading>
-                        </div>
-                      </div>
-                      <Text size="small" tone="ink" className="mt-5">
-                        {w.what}
-                      </Text>
-                      <Text size="small" className="mt-3">
-                        {w.why}
-                      </Text>
-                      <Callout tone={w.accent as "signal"} className="mt-5">
-                        <span className="font-semibold">How: </span>
-                        {w.how}
-                      </Callout>
-                      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-5">
-                        <Badge>Effort: {w.effort}</Badge>
-                        <Badge tone={w.accent as "signal"}>Payoff: {w.payoff}</Badge>
-                      </div>
-                    </Card>
-                  );
-                })}
-              </div>
-
-              <CardGrid cols={3} className="mt-6">
-                {restWorks.map((w) => {
-                  const a = accent(w.accent);
-                  return (
-                    <Card key={w.id} as="article">
-                      <span
-                        className={cn(
-                          "grid h-11 w-11 place-items-center rounded-sm",
-                          a.tint,
-                          a.text,
-                        )}
+                            {featured && (
+                              <Badge tone={w.accent as "signal"}>Strongest evidence</Badge>
+                            )}
+                          </span>
+                        }
                       >
-                        <Icon name={w.icon} size={19} />
-                      </span>
-                      <Heading level={3} size="h5" className="mt-4">
-                        {w.name}
-                      </Heading>
-                      <Text size="small" className="mt-2">
-                        {w.what}
-                      </Text>
-                      <Text size="caption" tone="faint" className="mt-3 flex-1">
-                        {w.how}
-                      </Text>
-                      <Text size="caption" tone="faint" className="mt-4 border-t border-line pt-4">
-                        Effort: {w.effort} · Payoff: {w.payoff}
-                      </Text>
-                    </Card>
+                        <Text size="small" tone="ink">
+                          {w.what}
+                        </Text>
+                        <Text size="small" className="mt-3">
+                          {w.why}
+                        </Text>
+                        <Callout tone={w.accent as "signal"} className="mt-5">
+                          <span className="font-semibold">How: </span>
+                          {w.how}
+                        </Callout>
+                        <div className="mt-5 flex flex-wrap items-center gap-2">
+                          <Badge>Effort: {w.effort}</Badge>
+                          <Badge tone={w.accent as "signal"}>Payoff: {w.payoff}</Badge>
+                        </div>
+                      </AccordionItem>
+                    </div>
                   );
                 })}
-              </CardGrid>
+              </Accordion>
             </section>
 
             {/* ----------------------------------- FEELS PRODUCTIVE, ISN'T */}
@@ -249,61 +263,51 @@ export default function LearnPage() {
               <SectionHeading
                 kicker="The self-deception is the point"
                 title="What feels productive but isn't"
-                lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives, it's comfortable, and comfort is not evidence."
+                lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives: it's comfortable, and comfort is not evidence. Your protocol already names the three to stop first."
               />
-              <div className="mt-10 flex flex-col gap-4">
+              <Accordion className="mt-10">
                 {(learning.feelsGood as FeelsGoodItem[]).map((item) => (
-                  <Card key={item.id} padding="none">
-                    <div className="grid lg:grid-cols-2">
-                      <div className="bg-coral-tint p-6">
-                        <div className="flex items-center gap-2">
-                          <Icon name="x" size={16} className="shrink-0 text-coral" />
-                          <Heading level={3} size="h5" className="text-coral" balance>
-                            {item.habit}
-                          </Heading>
-                        </div>
-                        <Text size="small" tone="ink" className="mt-3">
-                          <span className="font-semibold">Feels like progress: </span>
-                          {item.whyItFeelsGood}
-                        </Text>
-                        <Text size="small" className="mt-2">
-                          <span className="font-semibold">Why it fails: </span>
-                          {item.whyItFails}
-                        </Text>
-                      </div>
-                      <div className="bg-verified-tint p-6">
-                        <div className="flex items-center gap-2">
-                          <Icon name="check" size={16} className="shrink-0 text-verified" />
-                          <Heading level={3} size="h5" className="text-verified">
-                            Do this instead
-                          </Heading>
-                        </div>
-                        <Text size="small" tone="ink" className="mt-3">
-                          {item.doInstead}
-                        </Text>
-                      </div>
-                    </div>
-                  </Card>
+                  <AccordionItem
+                    key={item.id}
+                    id={item.id}
+                    title={
+                      <span className="flex items-center gap-2">
+                        <Icon name="x" size={16} className="shrink-0 text-coral" />
+                        {item.habit}
+                      </span>
+                    }
+                  >
+                    <Text size="small" tone="ink">
+                      <span className="font-semibold">Feels like progress: </span>
+                      {item.whyItFeelsGood}
+                    </Text>
+                    <Text size="small" className="mt-2">
+                      <span className="font-semibold">Why it fails: </span>
+                      {item.whyItFails}
+                    </Text>
+                    <Callout tone="verified" title="Do this instead" className="mt-4">
+                      {item.doInstead}
+                    </Callout>
+                  </AccordionItem>
                 ))}
-              </div>
+              </Accordion>
             </section>
 
             {/* ----------------------------------------------- FOCUS SYSTEMS */}
             <section id="focus">
-              <SectionHeading
-                kicker="A different job entirely"
-                title="Focus systems, not learning methods"
-                lead="Everything above builds knowledge. Everything below manages your attention and your clock. Confusing the two is the most common mistake on this page's topic, pair one system from here with a few techniques from above, and you have a real session."
-              />
-              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+              <Kicker>A different job entirely</Kicker>
+              <Heading level={2} size="h4" className="mt-3">
+                Focus systems, not learning methods
+              </Heading>
+              <Text size="small" className="mt-3 max-w-2xl">
+                The techniques above build knowledge. These manage your attention
+                and your clock. The builder already picked your session shape;
+                the rest are here if your day changes.
+              </Text>
+              <Accordion className="mt-6">
                 {(learning.focus as FocusItem[]).map((f) => (
-                  <Card key={f.name} as="article">
-                    <Heading level={3} size="h4">
-                      {f.name}
-                    </Heading>
-                    <Text size="small" className="mt-2">
-                      {f.what}
-                    </Text>
+                  <AccordionItem key={f.name} id={f.name} title={f.name}>
+                    <Text size="small">{f.what}</Text>
                     <Callout tone="info" className="mt-4">
                       <span className="font-semibold">How: </span>
                       {f.howTo}
@@ -320,25 +324,9 @@ export default function LearnPage() {
                       />
                       <Text size="caption">{f.watchOut}</Text>
                     </div>
-                  </Card>
+                  </AccordionItem>
                 ))}
-              </div>
-            </section>
-
-            {/* -------------------------------------------- PROTOCOL BUILDER */}
-            <section id="protocol">
-              <SectionHeading
-                align="center"
-                kicker="Build it yourself, from your own constraints"
-                title="Your study protocol"
-                lead={learning.protocol.intro}
-              />
-              <Card padding="lg" className="mt-12">
-                <StudyProtocol />
-                <div className="mt-10">
-                  <StudyTimer />
-                </div>
-              </Card>
+              </Accordion>
             </section>
           </div>
         </div>

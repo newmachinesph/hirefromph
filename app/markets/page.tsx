@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import markets from "@/data/markets.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import {
   CardGrid,
   PageFooterNav,
@@ -8,6 +9,8 @@ import {
   SectionHeading,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Button,
   Callout,
   Card,
@@ -37,7 +40,7 @@ export const metadata: Metadata = pageMeta({
 /** One labelled row of a region card. */
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="grid grid-cols-[6.5rem_1fr] gap-3 py-2">
+    <div className="grid gap-1 py-2 sm:grid-cols-[6.5rem_1fr] sm:gap-3">
       <Kicker className="border-0 px-0 py-0">{label}</Kicker>
       <Text size="small" as="span">
         {children}
@@ -62,6 +65,7 @@ export default function MarketsPage() {
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
         </Callout>
+        <FreshnessNote date={markets.lastVerified} />
         <Section spacing="none"><Tldr route="/markets" /></Section>
       </PageHero>
 
@@ -77,6 +81,9 @@ export default function MarketsPage() {
       {/* ------------------------------------------------------------ REGIONS */}
       <Section id="regions">
         <SectionHeading kicker={regions.kicker} title={regions.title} lead={regions.lead} />
+        <Text size="small" tone="faint" className="mt-4">
+          Time zones and overlap hours live in the tool above, which works them out for the month you pick.
+        </Text>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {regions.items.map((r) => {
@@ -89,9 +96,6 @@ export default function MarketsPage() {
                 <span aria-hidden className={cn("mt-4 h-1 w-12 rounded-pill", a.fill)} />
 
                 <div className="mt-4 divide-y divide-line">
-                  <Row label="Time zone">{r.tz}</Row>
-                  <Row label="Vs PH">{r.offset}</Row>
-                  <Row label="Overlap">{r.overlap}</Row>
                   <Row label="Pay">{r.pay}</Row>
                   <Row label="Style">{r.style}</Row>
                   <Row label="Industries">{r.industries}</Row>
@@ -104,6 +108,17 @@ export default function MarketsPage() {
                 >
                   {r.verdict}
                 </Text>
+                {"link" in r && r.link ? (
+                  <div className="mt-4">
+                    <Button
+                      href={r.link}
+                      variant="link"
+                      iconEnd={<Icon name="arrow-right" size={16} />}
+                    >
+                      See the Languages page
+                    </Button>
+                  </div>
+                ) : null}
               </Card>
             );
           })}
@@ -176,22 +191,23 @@ export default function MarketsPage() {
       <Section band="tint" id="abroad">
         <SectionHeading kicker={abroad.kicker} title={abroad.title} lead={abroad.lead} />
 
-        <CardGrid cols={3} className="mt-12">
+        <Accordion type="multiple" className="mt-10 max-w-3xl">
           {abroad.items.map((v) => (
-            <Card key={v.country} as="article" onBand>
-              <Heading level={3} size="h5">
-                {v.country}
-              </Heading>
-              <div className="mt-2">
-                <Kicker tone="signal">{v.visa}</Kicker>
-              </div>
-              <Text size="small" className="mt-3 flex-1">
-                {v.detail}
-              </Text>
+            <AccordionItem
+              key={v.country}
+              id={v.country}
+              title={
+                <span className="flex flex-wrap items-center gap-x-3 gap-y-1">
+                  {v.country}
+                  <Kicker tone="signal">{v.visa}</Kicker>
+                </span>
+              }
+            >
+              <Text size="small">{v.detail}</Text>
               <Source label={v.source.label} url={v.source.url} className="mt-4" />
-            </Card>
+            </AccordionItem>
           ))}
-        </CardGrid>
+        </Accordion>
 
         <Text size="small" className="mt-8 max-w-3xl">
           {abroad.note}
@@ -222,7 +238,7 @@ export default function MarketsPage() {
         </CardGrid>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button href="/salary">See what each market pays</Button>
+          <Button href="/salary">Price yourself from live listings</Button>
           <Button href="/apply" variant="outline">
             Find clients yourself
           </Button>

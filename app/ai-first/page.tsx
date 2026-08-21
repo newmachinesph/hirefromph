@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import aifirst from "@/data/aifirst.json";
 import { FreshnessNote } from "@/components/freshness-note";
 import {
-  CardGrid,
   PageFooterNav,
   PageHero,
   Section,
@@ -10,6 +9,8 @@ import {
   Toc,
 } from "@/components/layout";
 import {
+  Accordion,
+  AccordionItem,
   Badge,
   Button,
   Callout,
@@ -36,7 +37,7 @@ export const metadata: Metadata = pageMeta({
   path: HREF,
   title: "AI-First",
   description:
-    "Every role runs on AI now. Coding agents, open-source and local models, AI image, AI video, and automation, taught as how to fold AI into your craft, with the four habits that turn it into leverage instead of slop. Every claim sourced.",
+    "Every role runs on AI now. Five layers of AI tools, four working habits, and a method for folding AI into your craft without shipping slop.",
 });
 
 const TOC = [
@@ -89,6 +90,7 @@ export default function AiFirstPage() {
           {hero.creed}
         </Callout>
         <FreshnessNote date={aifirst.lastVerified} />
+        <Toc items={TOC} mobile />
         <Section spacing="none"><Tldr route="/ai-first" /></Section>
       </PageHero>
 
@@ -218,9 +220,12 @@ export default function AiFirstPage() {
                           </div>
                         </div>
 
-                        <div>
-                          <Kicker>A few real ones to try</Kicker>
-                          <div className="mt-3 grid gap-3 sm:grid-cols-2">
+                        <Accordion className="self-start">
+                          <AccordionItem
+                            id={`${c.id}-tools`}
+                            title={landscape.toolsLabel.replace("{n}", String(c.tools.length))}
+                          >
+                          <div className="grid gap-3 sm:grid-cols-2">
                             {(c.tools as Tool[]).map((t) => (
                               <Card key={t.name} padding="sm" className="h-full">
                                 <div className="flex items-center justify-between gap-2">
@@ -250,7 +255,8 @@ export default function AiFirstPage() {
                               </Card>
                             ))}
                           </div>
-                        </div>
+                          </AccordionItem>
+                        </Accordion>
                       </div>
                     </Card>
                   );
@@ -347,21 +353,15 @@ export default function AiFirstPage() {
             {/* ----------------------------------------------------- AGENTIC */}
             <section id="agentic">
               <SectionHeading kicker={agentic.kicker} title={agentic.title} lead={agentic.lead} />
-              <CardGrid cols={3} className="mt-12">
-                {agentic.items.map((it) => (
-                  <Card key={it.term} as="article">
-                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
-                      <Icon name={it.icon} size={20} />
-                    </span>
-                    <Heading level={3} size="h5" className="mt-5">
-                      {it.term}
-                    </Heading>
-                    <Text size="small" className="mt-3 flex-1">
-                      {it.desc}
-                    </Text>
-                  </Card>
-                ))}
-              </CardGrid>
+              <div className="mt-6">
+                <Button
+                  href={agentic.glossaryLink.href}
+                  variant="link"
+                  iconEnd={<Icon name="arrow-up-right" size={16} />}
+                >
+                  {agentic.glossaryLink.label}
+                </Button>
+              </div>
 
               <Card padding="lg" className="mt-10">
                 <Heading level={3} size="h3">
@@ -373,6 +373,11 @@ export default function AiFirstPage() {
                 <Callout tone="signal" className="mt-5">
                   {agentic.note}
                 </Callout>
+                <div className="mt-5">
+                  <Button href={agentic.cta.href} variant="outline">
+                    {agentic.cta.label}
+                  </Button>
+                </div>
                 <Source
                   label={agentic.source.label}
                   url={agentic.source.url}
@@ -391,23 +396,10 @@ export default function AiFirstPage() {
           {closing.point}
         </Callout>
 
-        <CardGrid cols={2} className="mt-10">
-          {closing.links.map((l) => (
-            <Card key={l.href} href={l.href} onBand>
-              <Heading level={3} size="h5">
-                {l.label}
-              </Heading>
-              <Text size="small" className="mt-3 flex-1">
-                {l.desc}
-              </Text>
-            </Card>
-          ))}
-        </CardGrid>
-
         <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button href="/prompts">Learn to direct AI</Button>
-          <Button href="/resources" variant="outline">
-            Get the free courses
+          <Button href={closing.primary.href}>{closing.primary.label}</Button>
+          <Button href={closing.secondary.href} variant="outline">
+            {closing.secondary.label}
           </Button>
         </div>
       </Section>
