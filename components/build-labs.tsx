@@ -423,7 +423,6 @@ function WorkshopTab({
             return (
               <Field key={step.id} label={step.label} hint={step.hint}>
                 <Textarea
-                  id={fieldId}
                   name={fieldId}
                   rows={3}
                   value={answers[step.id] ?? ""}
