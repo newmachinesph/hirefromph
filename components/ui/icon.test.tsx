@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { render } from "@testing-library/react";
-import { ICON_NAMES, Icon } from "@/components/ui/icon";
+import { ICON_NAMES, Icon, REGISTRY } from "@/components/ui/icon";
 
 describe("Icon", () => {
   it("exposes every registry name, sorted", () => {
@@ -8,6 +8,10 @@ describe("Icon", () => {
     expect(ICON_NAMES).toContain("compass");
     expect(ICON_NAMES).toContain("arrow-right");
     expect([...ICON_NAMES]).toEqual([...ICON_NAMES].sort());
+  });
+
+  it("keeps REGISTRY's keys in sync with ICON_NAMES", () => {
+    expect(Object.keys(REGISTRY).sort()).toEqual([...ICON_NAMES].sort());
   });
 
   it("renders an svg for a known name", () => {

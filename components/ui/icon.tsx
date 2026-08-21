@@ -160,7 +160,7 @@ export { ICON_NAMES, type IconName };
  * keys in sync with `ICON_NAMES` in `./icon-registry` — `icon.test.tsx`
  * checks it.
  */
-const REGISTRY: Record<string, PhosphorIcon> = {
+export const REGISTRY: Record<string, PhosphorIcon> = {
   armchair: Armchair,
   "arrow-right": ArrowRight,
   "arrow-up": ArrowUp,
