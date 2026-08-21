@@ -1,0 +1,41 @@
+{
+  "lastVerified": "2026-08",
+  "items": [
+    {
+      "id": "free",
+      "q": "Is it really free?",
+      "a": "Yes. Walang bayad, walang catch. There is no paid tier and nothing to buy. You do not need an account, and we never ask for your email. What you build is saved in your own browser, on your own device. Nobody is monetising your attention here. If a page carrying this name ever asks you for money, it is not ours.",
+      "href": "/privacy"
+    },
+    {
+      "id": "va-course",
+      "q": "Is this a \"VA course\"?",
+      "a": "No. There is no course to enroll in and no certificate at the end. We say \"online professional\" because the ceiling matters. Task work is a fine place to start, and plenty of people here start there. The path keeps going from it: you learn to own an outcome, then to own the client relationship. That is a career, and it takes longer than any course.",
+      "href": "/method"
+    },
+    {
+      "id": "degree",
+      "q": "Do I need a degree or experience?",
+      "a": "No. Nothing here checks your diploma. Stage one assumes you have neither, which is why it starts with your equipment and a micro-task you can finish today with no client. Each micro-task ends in a real deliverable, like a reconciled ledger or a working automation. That is the proof you send. Experience is something you make, and you can start making it this week.",
+      "href": "/tasks"
+    },
+    {
+      "id": "ai-jobs",
+      "q": "Is AI taking these jobs?",
+      "a": "Some of it, yes, and the honest version is narrower than the panic. Posting data shows generic task work collapsed in price while work where a person owns an outcome held up. Read any figure against its baseline, since the whole job market cooled in the same window. Reality Check carries each number with a link to its source. AI-First teaches the habits that turn AI into leverage instead of slop.",
+      "href": "/reality"
+    },
+    {
+      "id": "first-client",
+      "q": "How long until a first client?",
+      "a": "Nobody knows. Anyone who gives you a number is inventing it. No platform or research body publishes time-to-first-client for Filipino online professionals, so the \"10 to 14 days\" line in coaching ads has nothing behind it. What you can control is the input: applications sent and follow-ups made. Reality Check collects claims like this one and shows how to spot the next one.",
+      "href": "/reality"
+    },
+    {
+      "id": "who-runs-this",
+      "q": "Who runs this?",
+      "a": "It is built independently and published anonymously. There is no company behind it and nothing on the site is for sale. The anonymity is deliberate: with no personal brand to grow, nothing bends the advice toward a funnel. Judge the work by its sources instead of its author. Every claim links out to where it came from, and a claim you cannot check is a fault worth reporting.",
+      "href": "/conduct"
+    }
+  ]
+}

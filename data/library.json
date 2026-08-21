@@ -1,0 +1,251 @@
+{
+  "lastVerified": "2026-08",
+  "entries": [
+    {
+      "label": "Start here",
+      "href": "/start",
+      "group": "path",
+      "type": "guide",
+      "desc": "Stage one. Set up your workspace and build proof before you apply anywhere."
+    },
+    {
+      "label": "Get Hired",
+      "href": "/get-hired",
+      "group": "path",
+      "type": "guide",
+      "desc": "Stage two. Source your own leads, track applications, and close the offer."
+    },
+    {
+      "label": "Deliver",
+      "href": "/deliver",
+      "group": "path",
+      "type": "guide",
+      "desc": "Stage three. Onboard well, write SOPs, and communicate so clients keep you."
+    },
+    {
+      "label": "Level Up",
+      "href": "/level-up",
+      "group": "path",
+      "type": "guide",
+      "desc": "Stage four. Specialise, automate what repeats, and raise your rate on evidence."
+    },
+    {
+      "label": "Own",
+      "href": "/own",
+      "group": "path",
+      "type": "guide",
+      "desc": "Stage five. Go direct, register with the BIR, and grow into an end-goal role."
+    },
+    {
+      "label": "The Method",
+      "href": "/method",
+      "group": "learn",
+      "type": "guide",
+      "stage": 2,
+      "desc": "Six principles and seven methods for building any deliverable from a blank page."
+    },
+    {
+      "label": "How to Learn",
+      "href": "/learn",
+      "group": "learn",
+      "type": "guide",
+      "stage": 1,
+      "desc": "How memory works, which study habits hold, and a protocol you write yourself."
+    },
+    {
+      "label": "AI-First",
+      "href": "/ai-first",
+      "group": "learn",
+      "type": "guide",
+      "desc": "Fold AI into your craft: coding agents, local models, and four working habits."
+    },
+    {
+      "label": "Micro-Tasks",
+      "href": "/tasks",
+      "group": "learn",
+      "type": "workshop",
+      "stage": 1,
+      "desc": "Forty self-contained jobs you can start today, each ending as portfolio proof."
+    },
+    {
+      "label": "Build Labs",
+      "href": "/build",
+      "group": "learn",
+      "type": "workshop",
+      "stage": 1,
+      "desc": "Learn the anatomy of a resume, an SOP, or a tracker, then write yours."
+    },
+    {
+      "label": "Learn Any Tool",
+      "href": "/tools",
+      "group": "learn",
+      "type": "guide",
+      "stage": 1,
+      "desc": "The transferable method for picking up unfamiliar software in a weekend."
+    },
+    {
+      "label": "Portfolio Ladder",
+      "href": "/portfolio",
+      "group": "learn",
+      "type": "guide",
+      "desc": "Each niche's tool ladder, free to paid, with a finished piece at every rung."
+    },
+    {
+      "label": "AI Leverage",
+      "href": "/prompts",
+      "group": "learn",
+      "type": "workshop",
+      "stage": 2,
+      "desc": "Prompt anatomy, so you can write the right one for any situation."
+    },
+    {
+      "label": "Resource Shelf",
+      "href": "/resources",
+      "group": "learn",
+      "type": "guide",
+      "desc": "Verified free courses and programs, plus how to judge one before starting it."
+    },
+    {
+      "label": "Niches",
+      "href": "/niches",
+      "group": "learn",
+      "type": "tool",
+      "stage": 1,
+      "desc": "Explore the lanes with pay bands, demand, skills, and how AI changes each."
+    },
+    {
+      "label": "Languages",
+      "href": "/languages",
+      "group": "learn",
+      "type": "guide",
+      "stage": 4,
+      "desc": "Japanese, Korean, or Mandarin thins the candidate pool. Where to learn free."
+    },
+    {
+      "label": "Reality Check",
+      "href": "/reality",
+      "group": "work",
+      "type": "data",
+      "desc": "What the evidence says about online work here, and what nobody knows."
+    },
+    {
+      "label": "Become Indispensable",
+      "href": "/indispensable",
+      "group": "work",
+      "type": "guide",
+      "stage": 3,
+      "desc": "The judgment and taste that make you hard to replace in an AI market."
+    },
+    {
+      "label": "English at Work",
+      "href": "/english",
+      "group": "work",
+      "type": "guide",
+      "desc": "Audit a real client message, cut the hedges, learn four writing structures."
+    },
+    {
+      "label": "Conduct & Integrity",
+      "href": "/conduct",
+      "group": "work",
+      "type": "guide",
+      "desc": "The behaviour that gets people fired or delisted, and an oath you write."
+    },
+    {
+      "label": "Career Simulator",
+      "href": "/simulator",
+      "group": "work",
+      "type": "data",
+      "desc": "Model 36 months of a task-taker against a specialist. Every assumption tagged."
+    },
+    {
+      "label": "Find Work",
+      "href": "/apply",
+      "group": "work",
+      "type": "workshop",
+      "stage": 2,
+      "desc": "Search operators, reverse-sourcing, and a red-flag scorer for vetting any lead."
+    },
+    {
+      "label": "Interview Prep",
+      "href": "/interview",
+      "group": "work",
+      "type": "workshop",
+      "desc": "STAR structure, the question bank, and the red flags of a scam interview."
+    },
+    {
+      "label": "Own Your Clients",
+      "href": "/clients",
+      "group": "work",
+      "type": "guide",
+      "stage": 5,
+      "desc": "Move from platform gigs to direct clients, retainers, and rates you set."
+    },
+    {
+      "label": "Get Legit",
+      "href": "/legit",
+      "group": "work",
+      "type": "guide",
+      "stage": 5,
+      "desc": "BIR registration, the 8% option, SSS and PhilHealth, and payment rails."
+    },
+    {
+      "label": "Salary Guide",
+      "href": "/salary",
+      "group": "work",
+      "type": "data",
+      "desc": "Vendor-grade pay ranges, labeled as such, plus how to price your own work."
+    },
+    {
+      "label": "Client Markets",
+      "href": "/markets",
+      "group": "work",
+      "type": "data",
+      "stage": 5,
+      "desc": "Where clients are, what each market pays, and your overlap hours from UTC+8."
+    },
+    {
+      "label": "Tracker",
+      "href": "/tracker",
+      "group": "tools",
+      "type": "tool",
+      "stage": 2,
+      "desc": "Log every application and get nudged the moment a follow-up runs late."
+    },
+    {
+      "label": "30-Day Plan",
+      "href": "/plan",
+      "group": "tools",
+      "type": "tool",
+      "desc": "Answer five questions and get a day-by-day plan for your next month."
+    },
+    {
+      "label": "Equipment",
+      "href": "/equipment",
+      "group": "tools",
+      "type": "tool",
+      "stage": 1,
+      "desc": "Check what you already own and budget in pesos for whatever is missing."
+    },
+    {
+      "label": "Practice",
+      "href": "/practice",
+      "group": "tools",
+      "type": "tool",
+      "desc": "Flashcards and quizzes on a spacing schedule, so what you read stays."
+    },
+    {
+      "label": "Glossary",
+      "href": "/glossary",
+      "group": "tools",
+      "type": "tool",
+      "desc": "Plain definitions for every term this site uses, with Tagalog glosses."
+    },
+    {
+      "label": "For Educators",
+      "href": "/educators",
+      "group": "tools",
+      "type": "guide",
+      "desc": "Run a session from this material: run-sheets, slides, and the licence."
+    }
+  ]
+}
