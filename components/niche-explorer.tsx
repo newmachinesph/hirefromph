@@ -390,7 +390,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
         ))}
       </div>
 
-      <h4 className="text-kicker uppercase text-ink-faint mt-8">How to actually start</h4>
+      <h4 className="text-kicker uppercase text-ink-faint mt-8">How to start</h4>
       <ol className="mt-3 grid gap-2">
         {regions.howToStart.map((step, i) => (
           <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
