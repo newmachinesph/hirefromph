@@ -99,20 +99,16 @@ export default function Home() {
           kicker={HOME.path.kicker}
           title={HOME.path.title}
           lead={HOME.path.lead}
-          action={
-            <Button href={HOME.path.action.href} variant="outline">
-              {HOME.path.action.label}
-            </Button>
-          }
         />
 
-        <JourneyStepper variant="full" className="mt-12" />
+        {/* The stage cards below already list the five stages, so the stepper row stays off. */}
+        <JourneyStepper variant="full" showRow={false} className="mt-12" />
 
         {/* Five stages read best as five columns; CardGrid tops out at four. */}
         <ul className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-5">
           {STAGES.map((stage) => (
             <li key={stage.id} className="flex">
-              <Card href={stage.href} onBand className="w-full">
+              <Card href={stage.href} onBand className="flex w-full flex-col">
                 <div className="flex items-center justify-between gap-3">
                   <span className="font-display text-h4 text-line-strong">
                     {String(stage.num).padStart(2, "0")}
@@ -130,7 +126,7 @@ export default function Home() {
                 <Text size="small" className="mt-3">
                   {stage.subtitle}
                 </Text>
-                <span className="mt-5 inline-flex items-center gap-1 text-small font-medium text-primary">
+                <span className="mt-auto inline-flex items-center gap-1 pt-5 text-small font-medium text-primary">
                   Open
                   <Icon name="arrow-right" size={14} />
                 </span>
@@ -175,7 +171,7 @@ export default function Home() {
             return (
               <li key={item.href} className="flex">
                 <Card href={item.href} padding="none" onBand className="w-full">
-                  <CardMedia ratio="3/2">
+                  <CardMedia ratio="16/9">
                     <div className="grid h-full place-items-center bg-tint">
                       <Icon
                         name={item.icon}
