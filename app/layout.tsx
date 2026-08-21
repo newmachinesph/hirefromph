@@ -4,11 +4,13 @@ import "./globals.css";
 import { BASE_URL } from "./sitemap";
 import { inter, cabinet } from "@/lib/fonts";
 import { PathProvider } from "@/lib/path-context";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { MotionProvider } from "@/components/motion-provider";
-import { SWRegister } from "@/components/sw-register";
-import { BackToTop } from "@/components/back-to-top";
+import {
+  BackToTop,
+  MotionProvider,
+  SiteFooter,
+  SiteHeader,
+  SWRegister,
+} from "@/components/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
