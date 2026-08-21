@@ -1,11 +1,21 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2 } from "lucide-react";
 import { usePath } from "@/lib/path-context";
-import { Icon } from "@/components/icon";
-import { Pill } from "@/components/ui";
-import { Reveal } from "@/components/reveal";
+import {
+  Badge,
+  Card,
+  Checkbox,
+  Field,
+  Heading,
+  Icon,
+  Kicker,
+  ProgressBar,
+  Radio,
+  Stat,
+  StatStrip,
+  Text,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 type Tier = { tier: string; item: string; price: string };
@@ -47,11 +57,11 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
           {Array.from({ length: 4 }).map((_, i) => (
             <div
               key={i}
-              className="h-56 animate-pulse rounded-2xl border border-line bg-paper-2"
+              className="h-56 animate-pulse rounded-md border border-line bg-paper"
             />
           ))}
         </div>
-        <div className="h-72 animate-pulse rounded-2xl border border-line bg-paper-2" />
+        <div className="h-72 animate-pulse rounded-md border border-line bg-paper" />
       </div>
     );
   }
@@ -62,8 +72,6 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
   const essentials = categories.filter((c) => c.essential);
   const readyCount = essentials.filter((c) => state.equipment[c.id]).length;
   const totalEssentials = essentials.length;
-  const pct =
-    totalEssentials > 0 ? Math.round((readyCount / totalEssentials) * 100) : 0;
   const allReady = totalEssentials > 0 && readyCount === totalEssentials;
 
   const remaining = totalEssentials - readyCount;
@@ -83,11 +91,10 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:items-start">
       <div className="grid gap-5 sm:grid-cols-2">
-        {categories.map((category, idx) => (
+        {categories.map((category) => (
           <CategoryCard
             key={category.id}
             category={category}
-            index={idx}
             tierIndex={getTierIndex(category)}
             onTierChange={(i) =>
               setTierIndex((prev) => ({ ...prev, [category.id]: i }))
@@ -96,25 +103,18 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
         ))}
       </div>
 
-      <aside className="flex flex-col gap-6 rounded-2xl border border-line bg-paper-2 p-6 shadow-[var(--shadow-md)] lg:sticky lg:top-24">
+      <Card as="section" padding="md" className="gap-6 lg:sticky lg:top-24">
         <div
           className="flex flex-col items-center text-center"
           aria-live="polite"
         >
-          <div
-            role="img"
-            aria-label={`${readyCount} of ${totalEssentials} essentials ready`}
-            className="grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
-            style={{
-              background: `conic-gradient(var(--verified) ${pct}%, var(--line) ${pct}% 100%)`,
-            }}
-          >
-            <div className="grid h-[72px] w-[72px] place-items-center rounded-full bg-paper-2">
-              <span className="font-display text-xl text-ink">
-                {readyCount}/{totalEssentials}
-              </span>
-            </div>
-          </div>
+          <ProgressBar
+            value={readyCount}
+            max={totalEssentials}
+            label={`${readyCount} of ${totalEssentials} essentials ready`}
+            showValue
+            tone="verified"
+          />
           <p
             className={cn(
               "mt-4 text-sm font-semibold text-balance",
@@ -123,35 +123,31 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
           >
             {message}
           </p>
-          <p className="mt-1 text-xs text-ink-faint">
+          <Kicker tone={allReady ? "verified" : "neutral"} className="mt-1">
             {readyCount} of {totalEssentials} essentials ready
-          </p>
+          </Kicker>
         </div>
 
         <div className="border-t border-line pt-5">
-          <p className="kicker">Low-end planning total</p>
-          <p className="mt-2 font-display text-3xl text-ink">
-            ₱{estimateTotal.toLocaleString("en-PH")}
-          </p>
-          <p className="mt-2 text-xs leading-relaxed text-ink-faint">
-            Adds the first amount in each rough one-time range you have not
-            checked off. It is a planning floor, not a quote. Monthly service
-            costs are excluded; check each card for any /mo allowance.
-          </p>
+          <StatStrip>
+            <Stat
+              value={`₱${estimateTotal.toLocaleString("en-PH")}`}
+              label="Low-end planning total"
+              sub="Adds the first amount in each rough one-time range you have not checked off. It is a planning floor, not a quote. Monthly service costs are excluded; check each card for any /mo allowance."
+            />
+          </StatStrip>
         </div>
-      </aside>
+      </Card>
     </div>
   );
 }
 
 function CategoryCard({
   category,
-  index,
   tierIndex,
   onTierChange,
 }: {
   category: Category;
-  index: number;
   tierIndex: number;
   onTierChange: (i: number) => void;
 }) {
@@ -160,96 +156,67 @@ function CategoryCard({
   const tier = category.tiers[tierIndex] ?? category.tiers[0];
 
   return (
-    <Reveal i={index % 4}>
-      <div
-        className={cn(
-          "flex h-full flex-col rounded-2xl border p-6 transition-all duration-300",
-          owned
-            ? "border-verified/40 bg-verified-tint"
-            : "border-line bg-paper-2 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
-        )}
-      >
-        <div className="flex items-start justify-between gap-3">
-          <div className="flex items-center gap-3">
-            <span
-              className={cn(
-                "grid h-11 w-11 shrink-0 place-items-center rounded-xl",
-                category.essential
-                  ? "bg-signal-tint text-signal-deep"
-                  : "bg-info-tint text-info",
-              )}
-            >
-              <Icon name={category.icon} size={20} />
-            </span>
-            <div>
-              <h3 className="font-display text-lg leading-tight">
-                {category.name}
-              </h3>
-              <Pill
-                tone={category.essential ? "signal" : "neutral"}
-                className="mt-1.5"
-              >
-                {category.essential ? "Essential" : "Optional"}
-              </Pill>
-            </div>
-          </div>
-          {owned && (
-            <CheckCircle2
-              size={22}
-              className="shrink-0 text-verified"
-              aria-hidden
-            />
+    <Card
+      padding="md"
+      className={cn("h-full", owned && "border-verified bg-verified-tint")}
+    >
+      <div className="flex items-center gap-3">
+        <span
+          className={cn(
+            "grid h-11 w-11 shrink-0 place-items-center rounded-sm",
+            category.essential
+              ? "bg-signal-tint text-signal-deep"
+              : "bg-info-tint text-info",
           )}
+        >
+          <Icon name={category.icon} size={20} />
+        </span>
+        <div>
+          <Heading level={3} size="h5">
+            {category.name}
+          </Heading>
+          <Badge
+            tone={category.essential ? "signal" : "neutral"}
+            className="mt-1.5"
+          >
+            {category.essential ? "Essential" : "Optional"}
+          </Badge>
         </div>
-
-        <p className="mt-3 text-sm leading-relaxed text-ink-soft">
-          {category.note}
-        </p>
-
-        <fieldset className="mt-5">
-          <legend className="kicker mb-2">Pick a tier</legend>
-          <div className="grid grid-cols-3 gap-1.5 rounded-full border border-line-strong bg-paper-3 p-1">
-            {category.tiers.map((t, i) => {
-              const id = `${category.id}-tier-${i}`;
-              return (
-                <div key={t.tier}>
-                  <input
-                    type="radio"
-                    id={id}
-                    name={`tier-${category.id}`}
-                    checked={i === tierIndex}
-                    onChange={() => onTierChange(i)}
-                    className="peer sr-only"
-                  />
-                  <label
-                    htmlFor={id}
-                    className="block cursor-pointer rounded-full px-2 py-1.5 text-center text-xs font-semibold text-ink-soft transition-colors hover:text-ink peer-checked:bg-ink peer-checked:text-paper-2"
-                  >
-                    {t.tier}
-                  </label>
-                </div>
-              );
-            })}
-          </div>
-        </fieldset>
-
-        <div className="mt-3 flex-1 rounded-xl border border-line bg-paper p-3">
-          <p className="text-sm font-medium text-ink">{tier.item}</p>
-          <p className="mt-1 text-sm font-semibold text-signal-deep">
-            {tier.price}
-          </p>
-        </div>
-
-        <label className="mt-5 flex cursor-pointer items-center gap-2.5 border-t border-line pt-4 text-sm font-medium text-ink">
-          <input
-            type="checkbox"
-            checked={owned}
-            onChange={() => toggleEquipment(category.id)}
-            className="h-4 w-4 accent-verified"
-          />
-          I already have this
-        </label>
       </div>
-    </Reveal>
+
+      <Text size="small" className="mt-3 leading-relaxed">
+        {category.note}
+      </Text>
+
+      <Field as="group" label="Pick a tier" className="mt-5">
+        <div className="grid grid-cols-3 gap-2">
+          {category.tiers.map((t, i) => (
+            <Radio
+              key={t.tier}
+              id={`${category.id}-tier-${i}`}
+              name={`tier-${category.id}`}
+              checked={i === tierIndex}
+              onChange={() => onTierChange(i)}
+              label={t.tier}
+            />
+          ))}
+        </div>
+      </Field>
+
+      <div className="mt-3 flex-1 rounded-sm border border-line bg-paper p-3">
+        <p className="text-sm font-medium text-ink">{tier.item}</p>
+        <p className="mt-1 text-sm font-semibold text-signal-deep">
+          {tier.price}
+        </p>
+      </div>
+
+      <div className="mt-5 border-t border-line pt-4">
+        <Checkbox
+          checked={owned}
+          onChange={() => toggleEquipment(category.id)}
+          label="I already have this"
+        />
+      </div>
+    </Card>
   );
 }
