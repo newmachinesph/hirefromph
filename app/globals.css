@@ -629,3 +629,53 @@ body {
     break-inside: avoid;
   }
 }
+
+/* ------------------------------------------------------------------ */
+/*  Reader modes (spec §7.4.7)                                         */
+/*  Driven by ReaderControls and by the pre-paint script in            */
+/*  app/layout.tsx. These rules sit outside @layer on purpose: an      */
+/*  unlayered rule beats a layered utility, so `reading-comfort` can   */
+/*  override `text-center` and `text-balance` without !important.      */
+/* ------------------------------------------------------------------ */
+
+/* Text size. Everything on the type scale is in rem, so moving the root
+   size moves body copy, controls and spacing together. Headline sizes use
+   clamp() with a vw term, so they scale less — which is what you want. */
+html.text-size-sm { font-size: 15px; }
+html.text-size-md { font-size: 16px; }
+html.text-size-lg { font-size: 18px; }
+
+/* Comfortable reading: wider tracking, 1.8 leading, ragged-right, and a
+   measure that stays inside 68 characters. */
+html.reading-comfort body {
+  letter-spacing: 0.012em;
+  word-spacing: 0.06em;
+  line-height: 1.8;
+}
+html.reading-comfort :where(p, li, blockquote, figcaption) {
+  line-height: 1.8;
+  max-width: 68ch;
+}
+html.reading-comfort :where(p, li, h1, h2, h3, h4, h5, h6, blockquote, figcaption) {
+  text-align: left;
+  text-wrap: wrap;
+}
+
+/* Low-data mode: photographs are replaced by a labelled placeholder.
+   Diagrams (DiagramFrame renders a <figure> with no <img>) are untouched.
+   Lazy images inside a display:none subtree are never fetched, which covers
+   every Figure except the one `priority` hero per page. */
+html.low-data figure:has(img) > div:has(img) {
+  display: none;
+}
+html.low-data figure:has(img)::before {
+  content: "Image hidden. Low-data mode is on.";
+  display: block;
+  padding: 1.25rem;
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--r-lg);
+  background: var(--band);
+  color: var(--ink-faint);
+  font-size: var(--text-caption);
+  text-align: center;
+}

@@ -11,6 +11,7 @@ import {
   SiteHeader,
   SWRegister,
 } from "@/components/site";
+import { READER_SCRIPT } from "@/components/practice/reader-controls";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -89,6 +90,7 @@ export default function RootLayout({
       className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <script dangerouslySetInnerHTML={{ __html: READER_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
