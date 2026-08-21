@@ -49,7 +49,7 @@ export function NavDesktop() {
   /* eslint-enable react-hooks/set-state-in-effect */
 
   return (
-    <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
+    <nav aria-label="Primary" className="relative hidden items-center gap-1 lg:flex">
       {NAV.map((item) =>
         isMenu(item) ? (
           <NavDropdown
@@ -105,6 +105,9 @@ function NavDropdown({
 
   const footerLinks = (item.footerLinks ?? []).filter(isLive);
   const columns = splitColumns(item.groups);
+  // Panels three columns and wider are centred under the whole nav (so they
+  // never clip at the viewport edge); narrower ones hang from their trigger.
+  const wide = columns.length >= 3;
   const active = [...item.groups.flatMap((group) => group.links), ...footerLinks].some(
     (link) => link.href === pathname,
   );
@@ -162,7 +165,7 @@ function NavDropdown({
   }
 
   return (
-    <div className="relative" ref={wrapRef}>
+    <div className={wide ? "static" : "relative"} ref={wrapRef}>
       <button
         ref={triggerRef}
         type="button"
@@ -192,7 +195,8 @@ function NavDropdown({
           ref={panelRef}
           onKeyDown={onPanelKeyDown}
           className={cn(
-            "absolute left-0 top-[calc(100%+0.75rem)] z-50 max-w-[calc(100vw-3rem)]",
+            "absolute top-[calc(100%+0.75rem)] z-50 max-w-[calc(100vw-3rem)]",
+            wide ? "left-1/2 -translate-x-1/2" : "left-0",
             "rounded-md border border-line bg-paper p-5 shadow-[var(--shadow-sm)]",
             PANEL_WIDTH[Math.min(columns.length, 4) - 1],
           )}
