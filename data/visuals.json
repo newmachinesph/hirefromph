@@ -1,0 +1,125 @@
+{
+  "images": [
+    {
+      "id": "cta-band",
+      "src": {
+        "jpg": "/images/cta-band.jpg",
+        "webp": "/images/cta-band.webp"
+      },
+      "width": 1536,
+      "height": 658,
+      "alt": "A quiet provincial street at dusk with warm light in the windows of low houses.",
+      "generated": true
+    },
+    {
+      "id": "home-hero",
+      "src": {
+        "jpg": "/images/home-hero.jpg",
+        "webp": "/images/home-hero.webp"
+      },
+      "width": 1024,
+      "height": 1280,
+      "alt": "A woman at a corner desk in a small apartment reviews a spreadsheet on a second monitor, a headset resting beside her laptop.",
+      "generated": true
+    },
+    {
+      "id": "home-standard",
+      "src": {
+        "jpg": "/images/home-standard.jpg",
+        "webp": "/images/home-standard.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "Hands annotate printed notes with a pen beside an open laptop.",
+      "generated": true
+    },
+    {
+      "id": "library-hero",
+      "src": {
+        "jpg": "/images/library-hero.jpg",
+        "webp": "/images/library-hero.webp"
+      },
+      "width": 1536,
+      "height": 512,
+      "alt": "Overhead view of a desk with an open notebook, a laptop, a phone, a printed checklist, and a cup of coffee.",
+      "generated": true
+    },
+    {
+      "id": "og-default",
+      "src": {
+        "jpg": "/images/og-default.jpg",
+        "webp": "/images/og-default.webp"
+      },
+      "width": 1200,
+      "height": 630,
+      "alt": "A woman at a corner desk reviews a spreadsheet on a second monitor, a headset resting beside her laptop.",
+      "generated": true
+    },
+    {
+      "id": "path-dashboard",
+      "src": {
+        "jpg": "/images/path-dashboard.jpg",
+        "webp": "/images/path-dashboard.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A blank notebook and pen beside a closed laptop on a wooden desk in morning light.",
+      "generated": true
+    },
+    {
+      "id": "stage-deliver",
+      "src": {
+        "jpg": "/images/stage-deliver.jpg",
+        "webp": "/images/stage-deliver.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A person updates a tracker on a laptop at a home desk, sticky notes on the wall and a cup of coffee nearby.",
+      "generated": true
+    },
+    {
+      "id": "stage-get-hired",
+      "src": {
+        "jpg": "/images/stage-get-hired.jpg",
+        "webp": "/images/stage-get-hired.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A person sits upright at a desk in front of a plain wall during a video call on a laptop, an open notebook beside them.",
+      "generated": true
+    },
+    {
+      "id": "stage-level-up",
+      "src": {
+        "jpg": "/images/stage-level-up.jpg",
+        "webp": "/images/stage-level-up.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A person studies handwritten flashcards beside a laptop showing a workflow canvas, a capiz window behind them.",
+      "generated": true
+    },
+    {
+      "id": "stage-own",
+      "src": {
+        "jpg": "/images/stage-own.jpg",
+        "webp": "/images/stage-own.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A person in a co-working space reads a document on a tablet at a shared table.",
+      "generated": true
+    },
+    {
+      "id": "stage-start",
+      "src": {
+        "jpg": "/images/stage-start.jpg",
+        "webp": "/images/stage-start.webp"
+      },
+      "width": 1536,
+      "height": 1024,
+      "alt": "A young man sets up a second-hand monitor and tests a headset in a small bedroom office with jalousie windows.",
+      "generated": true
+    }
+  ]
+}
