@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#3A35D6",
+  themeColor: "#4B4EF6",
 };
 
 const jsonLd = {
@@ -93,10 +93,13 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         <PathProvider>
           <MotionProvider>
             <SiteHeader />
-            <main className="relative z-[2] flex-1">{children}</main>
+            <main id="main" tabIndex={-1} className="relative z-[2] flex-1 outline-none">{children}</main>
             <SiteFooter />
             <BackToTop />
           </MotionProvider>
