@@ -2,23 +2,38 @@ import type { Metadata } from "next";
 import tracks from "@/data/tracks.json";
 import frameworks from "@/data/frameworks.json";
 import salary from "@/data/salary.json";
-import { Reveal } from "@/components/reveal";
-import { Icon } from "@/components/icon";
 import { NicheExplorer } from "@/components/niche-explorer";
 import { NicheScorer } from "@/components/niche-scorer";
-import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
-import { cn } from "@/lib/utils";
+import {
+  CardGrid,
+  CtaBand,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+  Toc,
+} from "@/components/layout";
+import { Badge, Button, Callout, Card, Heading, Icon, Kicker, Text } from "@/components/ui";
+import { accent, type Accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
 
-const CRITERION_ICON_TONE = [
-  "bg-signal-tint text-signal-deep",
-  "bg-verified-tint text-verified",
-  "bg-caution-tint text-caution-text",
-  "bg-info-tint text-info",
+const HREF = "/niches";
+
+const ACCENT_CYCLE: Accent[] = ["signal", "verified", "caution", "info"];
+
+const TOC = [
+  { id: "method", label: "The method" },
+  { id: "research", label: "How to research" },
+  { id: "score", label: "Score it yourself" },
+  { id: "how-it-works", label: "How it works" },
+  { id: "explorer", label: "Niche explorer" },
+  { id: "emerging", label: "Where it leads" },
 ];
 
 export const metadata: Metadata = pageMeta({
-  path: "/niches",
+  path: HREF,
   title: "Niche Learning Hub",
   description:
     "Pick your lane and go deep. Explore 22 online-career niches, including newer lanes like AI agent operations, no-code app building, and logistics and freight support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
@@ -40,7 +55,7 @@ const steps = [
   {
     n: "03",
     title: "Get certified",
-    desc: "Earn the certs clients actually look for, most at no cost.",
+    desc: "Earn the certs clients look for, most at no cost.",
     icon: "award",
   },
   {
@@ -56,236 +71,212 @@ export default function NichesPage() {
     <>
       {/* ---------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker="Niche Learning Hub"
         title="Pick your lane. Go deep."
         lead={tracks.intro}
       />
 
-      {/* ------------------------------------------------------ EVALUATE ANY NICHE */}
-      <section className="pb-14 lg:pb-20">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="The method"
-              title="How to evaluate any niche"
-              lead={frameworks.niche.intro}
-            />
-          </Reveal>
-          <Reveal i={1}>
-            <blockquote className="mt-8 max-w-2xl rounded-2xl border border-line bg-paper-2 p-6">
-              <p className="font-display text-xl leading-snug text-ink text-balance">
-                &ldquo;{frameworks.niche.creed}&rdquo;
-              </p>
-            </blockquote>
-          </Reveal>
+      <Section>
+        <div className="grid gap-12 xl:grid-cols-[200px_minmax(0,1fr)]">
+          <Toc items={TOC} />
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {frameworks.niche.criteria.map((c, idx) => (
-              <Reveal key={c.id} i={idx % 3}>
-                <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <div className="flex items-start justify-between gap-3">
-                    <span
-                      className={cn(
-                        "grid h-11 w-11 place-items-center rounded-xl",
-                        CRITERION_ICON_TONE[idx % 4],
-                      )}
-                    >
-                      <Icon name={c.icon} size={20} />
-                    </span>
-                    <span className="mt-1 shrink-0 text-[11px] font-medium uppercase tracking-wide text-ink-faint">
-                      Weight ×{c.weight}
-                    </span>
-                  </div>
-                  <h3 className="mt-5 font-display text-lg leading-tight">
-                    {c.name}
-                  </h3>
-                  <p className="mt-2 text-sm font-semibold text-ink">
-                    {c.question}
-                  </p>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                    {c.why}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+          <div className="flex min-w-0 flex-col gap-20">
+            {/* ------------------------------------------------------- METHOD */}
+            <section id="method">
+              <SectionHeading
+                kicker="The method"
+                title="How to evaluate any niche"
+                lead={frameworks.niche.intro}
+              />
+              <blockquote className="mt-8 max-w-2xl border-l-2 border-primary pl-5">
+                <Text size="lead" tone="ink" className="font-display">
+                  &ldquo;{frameworks.niche.creed}&rdquo;
+                </Text>
+              </blockquote>
 
-          <Reveal i={1} className="mt-14">
-            <SectionHeading
-              kicker="Answer it yourself"
-              title="How to research each question"
-              lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer."
-            />
-          </Reveal>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            {frameworks.niche.howToResearch.map((m, idx) => (
-              <Reveal key={m.id} i={idx % 2}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-line bg-paper-2 p-6">
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-ink text-paper-2">
-                    <Icon name={m.icon} size={18} />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-lg leading-tight">
-                      {m.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                      {m.desc}
-                    </p>
-                    <div className="mt-3 flex flex-wrap gap-1.5">
-                      {m.answers.map((a) => {
-                        const crit = frameworks.niche.criteria.find(
-                          (c) => c.id === a,
-                        );
-                        return crit ? (
-                          <Pill key={a} tone="neutral">
-                            {crit.name}
-                          </Pill>
-                        ) : null;
-                      })}
+              <CardGrid cols={3} className="mt-10">
+                {frameworks.niche.criteria.map((c, idx) => {
+                  const a = accent(ACCENT_CYCLE[idx % 4]);
+                  return (
+                    <Card key={c.id} as="article">
+                      <div className="flex items-start justify-between gap-3">
+                        <span className={cn("grid h-11 w-11 place-items-center rounded-sm", a.tint, a.text)}>
+                          <Icon name={c.icon} size={20} />
+                        </span>
+                        <Text size="caption" tone="faint" className="mt-1 shrink-0 uppercase">
+                          Weight ×{c.weight}
+                        </Text>
+                      </div>
+                      <Heading level={3} size="h5" className="mt-5">
+                        {c.name}
+                      </Heading>
+                      <Text size="small" tone="ink" className="mt-2 font-semibold">
+                        {c.question}
+                      </Text>
+                      <Text size="small" className="mt-2 flex-1">
+                        {c.why}
+                      </Text>
+                    </Card>
+                  );
+                })}
+              </CardGrid>
+            </section>
+
+            {/* ----------------------------------------------------- RESEARCH */}
+            <section id="research">
+              <SectionHeading
+                kicker="Answer it yourself"
+                title="How to research each question"
+                lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer."
+              />
+              <CardGrid cols={2} className="mt-8">
+                {frameworks.niche.howToResearch.map((m) => (
+                  <Card key={m.id} as="article">
+                    <div className="flex items-start gap-4">
+                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
+                        <Icon name={m.icon} size={18} />
+                      </span>
+                      <div>
+                        <Heading level={3} size="h5">
+                          {m.title}
+                        </Heading>
+                        <Text size="small" className="mt-2">
+                          {m.desc}
+                        </Text>
+                        <div className="mt-3 flex flex-wrap gap-1.5">
+                          {m.answers.map((a) => {
+                            const crit = frameworks.niche.criteria.find((c) => c.id === a);
+                            return crit ? <Badge key={a}>{crit.name}</Badge> : null;
+                          })}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                  </Card>
+                ))}
+              </CardGrid>
+            </section>
 
-          <Reveal i={1} className="mt-14">
-            <SectionHeading
-              kicker="Try it now"
-              title="Score a niche yourself"
-              lead="Any niche, including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
-            />
-          </Reveal>
-          <Reveal i={2} className="mt-8">
-            <NicheScorer />
-          </Reveal>
+            {/* --------------------------------------------------------- SCORE */}
+            <section id="score">
+              <SectionHeading
+                kicker="Try it now"
+                title="Score a niche yourself"
+                lead="Any niche, including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
+              />
+              <Card padding="lg" className="mt-8">
+                <NicheScorer />
+              </Card>
+            </section>
+
+            {/* ------------------------------------------------------ HOW IT WORKS */}
+            <section id="how-it-works">
+              <SectionHeading
+                kicker="How it works"
+                title="Four steps from curious to hired"
+                align="center"
+                className="mx-auto"
+              />
+              <CardGrid cols={4} className="mt-10">
+                {steps.map((s) => (
+                  <Card key={s.n} as="article">
+                    <div className="flex items-center justify-between">
+                      <span className="font-display text-3xl text-line-strong">{s.n}</span>
+                      <span className="grid h-10 w-10 place-items-center rounded-sm bg-ink text-on-navy">
+                        <Icon name={s.icon} size={18} />
+                      </span>
+                    </div>
+                    <Heading level={3} size="h5" className="mt-5">
+                      {s.title}
+                    </Heading>
+                    <Text size="small" className="mt-2 flex-1">
+                      {s.desc}
+                    </Text>
+                  </Card>
+                ))}
+              </CardGrid>
+            </section>
+
+            {/* -------------------------------------------------------- EXPLORER */}
+            <section id="explorer">
+              <SectionHeading
+                kicker={`${tracks.tracks.length} worked examples`}
+                title="Tap a niche to see the full breakdown"
+                lead={
+                  <>
+                    {tracks.note} {frameworks.niche.examplesNote}
+                  </>
+                }
+              />
+              <Callout tone="verified" icon="cpu" className="mt-8 max-w-3xl">
+                <Text size="small" tone="ink" className="font-medium">
+                  {tracks.aiFraming}
+                </Text>
+              </Callout>
+              <Card padding="lg" className="mt-10">
+                <NicheExplorer />
+              </Card>
+            </section>
+
+            {/* -------------------------------------------------------- EMERGING */}
+            <section id="emerging">
+              <SectionHeading
+                kicker="Where these lanes lead · not where you start"
+                title={salary.emerging.title}
+                lead={salary.emerging.lead}
+              />
+              <CardGrid cols={3} className="mt-10">
+                {salary.emerging.roles.map((r) => (
+                  <Card key={r.role} as="article">
+                    <div className="flex items-start gap-4">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
+                        <Icon name={r.icon} size={18} />
+                      </span>
+                      <div>
+                        <Heading level={3} size="h5">
+                          {r.role}
+                        </Heading>
+                        <Text size="small" className="mt-1.5">
+                          {r.blurb}
+                        </Text>
+                      </div>
+                    </div>
+                  </Card>
+                ))}
+              </CardGrid>
+              <Text size="small" className="mt-8 max-w-3xl">
+                {salary.emerging.note2}
+              </Text>
+            </section>
+          </div>
         </div>
-      </section>
+      </Section>
 
-      {/* ---------------------------------------------------------- HOW IT WORKS */}
-      <section className="border-y border-line bg-paper-3/60 py-14 lg:py-20">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="How it works"
-              title="Four steps from curious to hired"
-              align="center"
-              className="mx-auto"
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, idx) => (
-              <Reveal key={s.n} i={idx}>
-                <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <div className="flex items-center justify-between">
-                    <span className="font-display text-3xl text-line-strong">{s.n}</span>
-                    <span className="grid h-10 w-10 place-items-center rounded-xl bg-ink text-paper-2">
-                      <Icon name={s.icon} size={18} />
-                    </span>
-                  </div>
-                  <h3 className="mt-5 font-display text-lg">{s.title}</h3>
-                  <p className="mt-2 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ------------------------------------------------------------ NEXT STEP */}
+      <CtaBand
+        kicker="Next step"
+        title="Turn your niche into a 30-day plan."
+        actions={<Button href="/plan">Build my 30-day plan</Button>}
+      />
 
-      {/* -------------------------------------------------------- NICHE EXPLORER */}
-      <section className="container-x py-20 lg:py-28">
-        <Reveal>
-          <SectionHeading
-            kicker={`${tracks.tracks.length} worked examples`}
-            title="Tap a niche to see the full breakdown"
-            lead={
-              <>
-                {tracks.note} {frameworks.niche.examplesNote}
-              </>
-            }
-          />
-        </Reveal>
-        <Reveal i={1}>
-          <div className="mt-8 flex items-start gap-4 rounded-2xl border border-verified/30 bg-verified-tint p-6">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-verified text-white">
-              <Icon name="cpu" size={18} />
-            </span>
-            <p className="max-w-3xl text-sm font-medium leading-relaxed text-ink">
-              {tracks.aiFraming}
-            </p>
+      <Section>
+        <Card padding="lg" className="max-w-xl">
+          <Kicker>Rate multiplier</Kicker>
+          <Heading level={2} size="h3" className="mt-3" balance>
+            Add a premium language to your niche.
+          </Heading>
+          <div className="mt-6">
+            <Button href="/languages" variant="outline">
+              See the language premium
+            </Button>
           </div>
-        </Reveal>
-        <Reveal i={2} className="mt-10">
-          <NicheExplorer />
-        </Reveal>
-      </section>
+        </Card>
+      </Section>
 
-      {/* ------------------------------------------------------------ END GOALS */}
-      <section className="border-y border-line bg-paper-3/60 py-14 lg:py-20">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="Where these lanes lead · not where you start"
-              title={salary.emerging.title}
-              lead={salary.emerging.lead}
-            />
-          </Reveal>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {salary.emerging.roles.map((r, idx) => (
-              <Reveal key={r.role} i={idx % 3}>
-                <div className="flex h-full items-start gap-4 rounded-2xl border border-line bg-paper-2 p-5">
-                  <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ink text-paper-2">
-                    <Icon name={r.icon} size={18} />
-                  </span>
-                  <div>
-                    <h3 className="font-display text-base leading-snug">{r.role}</h3>
-                    <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">{r.blurb}</p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-          <Reveal i={1}>
-            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {salary.emerging.note2}
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------ NEXT STEPS */}
-      <section className="container-x pt-16 pb-24">
-        <Reveal>
-          <div className="grid gap-5 sm:grid-cols-2">
-            <div className="rounded-[var(--radius-lg)] border border-line bg-ink px-8 py-10 text-paper-2">
-              <p className="kicker text-paper-2/60">Next step</p>
-              <h2 className="mt-3 font-display text-2xl leading-tight text-balance">
-                Turn your niche into a 30-day plan.
-              </h2>
-              <div className="mt-6">
-                <ButtonLink
-                  href="/plan"
-                  variant="primary"
-                  className="bg-signal text-white hover:bg-white hover:!text-ink"
-                >
-                  Build my 30-day plan
-                </ButtonLink>
-              </div>
-            </div>
-            <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 px-8 py-10">
-              <p className="kicker">Rate multiplier</p>
-              <h2 className="mt-3 font-display text-2xl leading-tight text-balance text-ink">
-                Add a premium language to your niche.
-              </h2>
-              <div className="mt-6">
-                <ButtonLink href="/languages" variant="outline">
-                  See the language premium
-                </ButtonLink>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }
