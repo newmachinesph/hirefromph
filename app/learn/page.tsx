@@ -25,7 +25,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
-import { PracticeFooter, Tldr } from "@/components/practice";
+import { PracticeFooter, StudyTimer, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/learn";
@@ -335,6 +335,9 @@ export default function LearnPage() {
               />
               <Card padding="lg" className="mt-12">
                 <StudyProtocol />
+                <div className="mt-10">
+                  <StudyTimer />
+                </div>
               </Card>
             </section>
           </div>

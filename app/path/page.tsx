@@ -181,6 +181,18 @@ export default function PathPage() {
         </div>
       </Section>
 
+      {/* JOURNAL */}
+      <Section>
+        <SectionHeading
+          kicker="One question a week"
+          title="What moved this week"
+          lead="Twelve prompts, rotating. Saved in this browser, read by nobody else."
+        />
+        <div className="mt-8">
+          <Journal />
+        </div>
+      </Section>
+
       {/* CURRENT STAGE */}
       <Section band="tint">
         <SectionHeading
