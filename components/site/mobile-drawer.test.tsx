@@ -53,4 +53,10 @@ describe("MobileDrawer", () => {
     expect(screen.queryByRole("link", { name: /For educators/i })).toBeNull();
     expect(screen.queryByRole("link", { name: "Glossary" })).toBeNull();
   });
+
+  it("focuses the CTA as the first focusable element when opened", async () => {
+    await openDrawer();
+    const cta = screen.getByRole("link", { name: "Find your path" });
+    expect(document.activeElement).toBe(cta);
+  });
 });

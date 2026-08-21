@@ -35,7 +35,7 @@ export type DialogProps = {
   hideTitle?: boolean;
   description?: string;
   size?: keyof typeof SIZES;
-  placement?: "center" | "top";
+  placement?: "center" | "top" | "right";
   /** Drop the header chrome and body padding (search palettes, media). */
   flush?: boolean;
   hideClose?: boolean;
@@ -124,8 +124,10 @@ export function Dialog({
     <div
       onKeyDown={onKeyDown}
       className={cn(
-        "fixed inset-0 z-[110] flex justify-center p-4",
-        placement === "top" ? "items-start pt-[12vh]" : "items-center",
+        "fixed inset-0 z-[110] flex",
+        placement === "right"
+          ? "justify-end items-stretch"
+          : cn("justify-center p-4", placement === "top" ? "items-start pt-[12vh]" : "items-center"),
       )}
     >
       <button
@@ -142,8 +144,8 @@ export function Dialog({
         aria-describedby={description ? descId : undefined}
         tabIndex={-1}
         className={cn(
-          "relative z-10 w-full overflow-hidden rounded-lg border border-line bg-paper shadow-[var(--shadow-md)]",
-          SIZES[size],
+          "relative z-10 w-full overflow-hidden border border-line bg-paper shadow-[var(--shadow-md)]",
+          placement === "right" ? "h-full max-w-xs rounded-none" : cn("rounded-lg", SIZES[size]),
           className,
         )}
       >

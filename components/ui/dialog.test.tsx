@@ -23,6 +23,20 @@ function Harness() {
   );
 }
 
+function RightHarness() {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button type="button" onClick={() => setOpen(true)}>
+        Open drawer
+      </button>
+      <Dialog open={open} onClose={() => setOpen(false)} title="Drawer" placement="right">
+        <button type="button">Inside drawer</button>
+      </Dialog>
+    </>
+  );
+}
+
 describe("Dialog", () => {
   it("is closed until asked to open", () => {
     render(<Harness />);
@@ -69,5 +83,14 @@ describe("Dialog", () => {
     await user.click(screen.getByRole("button", { name: "Open search" }));
     await user.click(screen.getByRole("button", { name: "Close Search pages" }));
     expect(screen.queryByRole("dialog")).toBeNull();
+  });
+
+  it("renders a full-height right-side panel for placement=\"right\"", async () => {
+    const user = userEvent.setup();
+    render(<RightHarness />);
+    await user.click(screen.getByRole("button", { name: "Open drawer" }));
+    const dialog = screen.getByRole("dialog", { name: "Drawer" });
+    expect(dialog.className).toContain("h-full");
+    expect(dialog.className).toContain("max-w-xs");
   });
 });

@@ -10,17 +10,6 @@ import { cn } from "@/lib/utils";
 /** 48px rows, one column (spec §6.2). */
 const ROW = "flex min-h-12 items-center rounded-sm px-3 text-base transition-colors duration-150";
 
-/**
- * `Dialog` only ships `placement: "center" | "top"` (Phase 1). Rather than
- * widen that union for a single caller, this pins the panel to the right
- * edge and stretches it full-height with `!`-important utilities, which
- * beat Dialog's own (non-important) position/size classes regardless of
- * class-list order since `cn` here is plain `clsx`, not `tailwind-merge`.
- * `--shadow-md` and the backdrop/focus-trap/Esc/scroll-lock behavior all
- * still come from `Dialog` untouched.
- */
-const PANEL = "!fixed !inset-y-0 !right-0 !max-w-xs !rounded-none";
-
 export function MobileDrawer() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -64,7 +53,8 @@ export function MobileDrawer() {
         title="Menu"
         hideTitle
         flush
-        className={PANEL}
+        placement="right"
+        hideClose
       >
         <div className="flex h-full flex-col overflow-y-auto">
           <div className="grid border-b border-line p-4">
