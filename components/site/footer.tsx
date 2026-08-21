@@ -47,7 +47,7 @@ export function SiteFooter() {
 
         <div className="border-t border-line py-8">
           <p className="text-caption text-ink-faint">
-            © 2026 {site.brand}. {COPYRIGHT}
+            {site.brand}. {COPYRIGHT}
           </p>
         </div>
       </Container>
