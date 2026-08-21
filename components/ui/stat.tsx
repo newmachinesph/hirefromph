@@ -39,7 +39,7 @@ export function StatStrip({
   className?: string;
 }) {
   return (
-    <dl className={cn("flex flex-wrap gap-x-10 gap-y-6", className)}>
+    <dl className={cn("grid grid-cols-2 gap-x-10 gap-y-6 lg:flex lg:flex-wrap", className)}>
       <StatStripContext.Provider value={true}>{children}</StatStripContext.Provider>
     </dl>
   );
