@@ -1,35 +1,46 @@
-import { ExternalLink } from "lucide-react";
+import type { Metadata } from "next";
 import markets from "@/data/markets.json";
-import { Icon } from "@/components/icon";
-import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, PageHero, SectionHeading } from "@/components/ui";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+} from "@/components/layout";
+import {
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  Kicker,
+  Source,
+  Step,
+  StepList,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
 
-export const metadata = pageMeta({
-  path: "/markets",
+const HREF = "/markets";
+
+export const metadata: Metadata = pageMeta({
+  path: HREF,
   title: "Client Markets & Time Zones",
   description:
     "Where your online clients are (US, UK & EU, Australia, Middle East, Canada, regional Asia), how each market differs in pay, culture, and industries, and the timezone and overlap-hours math for a Filipino professional on UTC+8.",
 });
 
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-const accentBorder: Record<string, string> = {
-  signal: "border-signal",
-  caution: "border-caution",
-  verified: "border-verified",
-  info: "border-info",
-};
-
+/** One labelled row of a region card. */
 function Row({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="grid grid-cols-[6.5rem_1fr] gap-3 py-2">
-      <span className="kicker text-ink-faint">{label}</span>
-      <span className="text-sm leading-relaxed text-ink-soft">{children}</span>
+      <Kicker className="border-0 px-0 py-0">{label}</Kicker>
+      <Text size="small" as="span">
+        {children}
+      </Text>
     </div>
   );
 }
@@ -39,55 +50,42 @@ export default function MarketsPage() {
 
   return (
     <>
-      {/* --------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker={hero.kicker}
-        title={
-          <>
-            {hero.line1}
-            <br />
-            <span className="text-signal">{hero.line2}</span>
-          </>
-        }
-        titleWidth="max-w-4xl"
+        title={hero.line1}
+        accent={hero.line2}
         lead={hero.intro}
       >
-        <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-            {hero.creed}
-          </blockquote>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {hero.creed}
+        </Callout>
+        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/markets" /></Section> */}
       </PageHero>
 
       {/* ------------------------------------------------------------ OVERLAP */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading kicker={overlap.kicker} title={overlap.title} lead={overlap.lead} />
-          </Reveal>
-          <Reveal i={1}>
-            <p className="mt-8 max-w-3xl border-l-2 border-verified pl-5 font-display text-xl leading-snug text-ink">
-              {overlap.note}
-            </p>
-          </Reveal>
-        </div>
-      </section>
+      <Section band="tint" id="overlap">
+        <SectionHeading kicker={overlap.kicker} title={overlap.title} lead={overlap.lead} />
+        <Callout tone="verified" className="mt-8 max-w-3xl">
+          {overlap.note}
+        </Callout>
+        {/* practice: TimezoneOverlap — Phase 6 mounts <TimezoneOverlap regions={regions.items} /> here */}
+      </Section>
 
       {/* ------------------------------------------------------------ REGIONS */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading kicker={regions.kicker} title={regions.title} lead={regions.lead} />
-        </Reveal>
+      <Section id="regions">
+        <SectionHeading kicker={regions.kicker} title={regions.title} lead={regions.lead} />
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-2">
-          {regions.items.map((r, idx) => (
-            <Reveal key={r.name} i={idx % 2}>
-              <article className="flex h-full flex-col rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl leading-none">{r.flag}</span>
-                  <h3 className="font-display text-[length:var(--text-h3)] leading-tight">{r.name}</h3>
-                </div>
-                <span aria-hidden className={`mt-4 h-1 w-12 rounded-full ${accentBar[r.accent]}`} />
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
+          {regions.items.map((r) => {
+            const a = accent(r.accent);
+            return (
+              <Card key={r.name} as="article" padding="lg">
+                <Heading level={3} size="h3">
+                  {r.name}
+                </Heading>
+                <span aria-hidden className={cn("mt-4 h-1 w-12 rounded-pill", a.fill)} />
 
                 <div className="mt-4 divide-y divide-line">
                   <Row label="Time zone">{r.tz}</Row>
@@ -98,165 +96,143 @@ export default function MarketsPage() {
                   <Row label="Industries">{r.industries}</Row>
                 </div>
 
-                <p
-                  className={`mt-5 border-l-2 pl-4 text-sm font-medium leading-relaxed text-ink ${accentBorder[r.accent]}`}
+                <Text
+                  size="small"
+                  tone="ink"
+                  className={cn("mt-5 border-l-2 pl-4 font-medium", a.border)}
                 >
                   {r.verdict}
-                </p>
-              </article>
-            </Reveal>
-          ))}
+                </Text>
+              </Card>
+            );
+          })}
         </div>
-      </section>
+      </Section>
 
       {/* --------------------------------------------------------- STRATEGIES */}
-      <section className="bg-ink py-20 text-paper-2 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <Kicker className="text-paper-2/60">{strategies.kicker}</Kicker>
-            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {strategies.title}
-            </h2>
-            <p className="mt-5 max-w-2xl text-paper-2/70">{strategies.lead}</p>
-          </Reveal>
+      <Section band="tint" id="strategies">
+        <SectionHeading kicker={strategies.kicker} title={strategies.title} lead={strategies.lead} />
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {strategies.items.map((s, idx) => (
-              <Reveal key={s.name} i={idx % 3}>
-                <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-signal text-white">
-                    <Icon name={s.icon} size={20} />
-                  </span>
-                  <h3 className="mt-5 font-display text-lg leading-tight text-paper-2">{s.name}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-paper-2/70">{s.desc}</p>
-                  <p className="mt-4 border-l-2 border-signal pl-4 text-sm leading-relaxed text-paper-2/90">
-                    <span className="kicker mb-1 block text-paper-2/50">The trade-off</span>
-                    {s.tradeoff}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+        <CardGrid cols={3} className="mt-14">
+          {strategies.items.map((s) => (
+            <Card key={s.name} as="article" onBand>
+              <span className="grid h-11 w-11 place-items-center rounded-sm bg-primary text-white">
+                <Icon name={s.icon} size={20} />
+              </span>
+              <Heading level={3} size="h5" className="mt-5">
+                {s.name}
+              </Heading>
+              <Text size="small" className="mt-2 flex-1">
+                {s.desc}
+              </Text>
+              <div className="mt-4 border-l-2 border-primary pl-4">
+                <Kicker>The trade-off</Kicker>
+                <Text size="small" tone="ink" className="mt-1">
+                  {s.tradeoff}
+                </Text>
+              </div>
+            </Card>
+          ))}
+        </CardGrid>
 
-          <Reveal i={1}>
-            <div className="mt-10">
-              <a
-                href={strategies.crossref.href}
-                className="group inline-flex items-center gap-1 text-sm font-semibold text-paper-2 transition-colors hover:text-signal"
-              >
-                <span className="link-sweep">{strategies.crossref.label}</span>
-                <ExternalLink size={14} className="opacity-70" />
-              </a>
-            </div>
-          </Reveal>
+        <div className="mt-10">
+          <Button
+            href={strategies.crossref.href}
+            variant="link"
+            iconEnd={<Icon name="arrow-up-right" size={16} />}
+          >
+            {strategies.crossref.label}
+          </Button>
         </div>
-      </section>
+      </Section>
 
       {/* ------------------------------------------------------ FIND INDUSTRY */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading
-            kicker={findIndustry.kicker}
-            title={findIndustry.title}
-            lead={findIndustry.lead}
-          />
-        </Reveal>
-
-        <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {findIndustry.steps.map((s, idx) => (
-            <Reveal key={s.n} i={idx % 4}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="font-display text-4xl leading-none text-signal">0{s.n}</span>
-                <h3 className="mt-4 font-display text-lg leading-tight">{s.title}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{s.desc}</p>
-              </div>
-            </Reveal>
+      <Section id="find-industry">
+        <SectionHeading
+          kicker={findIndustry.kicker}
+          title={findIndustry.title}
+          lead={findIndustry.lead}
+        />
+        <StepList className="mt-12">
+          {findIndustry.steps.map((s) => (
+            <Step key={s.n} n={s.n} title={s.title}>
+              {s.desc}
+            </Step>
           ))}
+        </StepList>
+        <div className="mt-6">
+          <Button
+            href={findIndustry.crossref.href}
+            variant="link"
+            iconEnd={<Icon name="arrow-up-right" size={16} />}
+          >
+            {findIndustry.crossref.label}
+          </Button>
         </div>
-
-        <Reveal i={1}>
-          <div className="mt-6">
-            <ArrowLink href={findIndustry.crossref.href}>{findIndustry.crossref.label}</ArrowLink>
-          </div>
-        </Reveal>
-      </section>
+      </Section>
 
       {/* ------------------------------------------------------------- ABROAD */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <Kicker>{abroad.kicker}</Kicker>
-            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {abroad.title}
-            </h2>
-            <p className="mt-5 max-w-2xl text-ink-soft">{abroad.lead}</p>
-          </Reveal>
+      <Section band="tint" id="abroad">
+        <SectionHeading kicker={abroad.kicker} title={abroad.title} lead={abroad.lead} />
 
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {abroad.items.map((v, idx) => (
-              <Reveal key={v.country} i={idx % 3}>
-                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                  <p className="text-3xl" aria-hidden>{v.flag}</p>
-                  <h3 className="mt-4 font-display text-lg leading-snug">{v.country}</h3>
-                  <p className="kicker mt-1 text-signal">{v.visa}</p>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{v.detail}</p>
-                  <a
-                    href={v.source.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 text-xs font-semibold text-ink link-sweep"
-                  >
-                    {v.source.label} ↗
-                  </a>
-                </article>
-              </Reveal>
-            ))}
-          </div>
+        <CardGrid cols={3} className="mt-12">
+          {abroad.items.map((v) => (
+            <Card key={v.country} as="article" onBand>
+              <Heading level={3} size="h5">
+                {v.country}
+              </Heading>
+              <div className="mt-2">
+                <Kicker tone="signal">{v.visa}</Kicker>
+              </div>
+              <Text size="small" className="mt-3 flex-1">
+                {v.detail}
+              </Text>
+              <Source label={v.source.label} url={v.source.url} className="mt-4" />
+            </Card>
+          ))}
+        </CardGrid>
 
-          <Reveal i={1}>
-            <p className="mt-8 max-w-3xl text-sm leading-relaxed text-ink-soft">{abroad.note}</p>
-            <p className="mt-5 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-              {abroad.point}
-            </p>
-          </Reveal>
-        </div>
-      </section>
+        <Text size="small" className="mt-8 max-w-3xl">
+          {abroad.note}
+        </Text>
+        <Callout tone="signal" className="mt-5 max-w-2xl">
+          {abroad.point}
+        </Callout>
+      </Section>
 
       {/* ------------------------------------------------------------ CLOSING */}
-      <section className="container-x pt-16 pb-24">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
-            <Kicker>{closing.kicker}</Kicker>
-            <h2 className="mt-6 max-w-4xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {closing.title}
-            </h2>
-            <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {closing.body}
-            </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-              {closing.point}
-            </p>
+      <Section>
+        <SectionHeading kicker={closing.kicker} title={closing.title} lead={closing.body} />
+        <Callout tone="signal" className="mt-6 max-w-2xl">
+          {closing.point}
+        </Callout>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {closing.links.map((l, idx) => (
-                <Reveal key={l.href} i={idx % 4}>
-                  <div className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6">
-                    <ArrowLink href={l.href}>{l.label}</ArrowLink>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{l.desc}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+        <CardGrid cols={4} className="mt-10">
+          {closing.links.map((l) => (
+            <Card key={l.href} href={l.href}>
+              <Heading level={3} size="h5">
+                {l.label}
+              </Heading>
+              <Text size="small" className="mt-3 flex-1">
+                {l.desc}
+              </Text>
+            </Card>
+          ))}
+        </CardGrid>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <ButtonLink href="/salary">See what each market pays</ButtonLink>
-              <ButtonLink href="/apply" variant="outline">
-                Find clients yourself
-              </ButtonLink>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <Button href="/salary">See what each market pays</Button>
+          <Button href="/apply" variant="outline">
+            Find clients yourself
+          </Button>
+        </div>
+      </Section>
+
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/markets" /> */}
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }
