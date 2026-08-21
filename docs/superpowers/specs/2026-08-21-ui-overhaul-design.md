@@ -58,13 +58,15 @@ The brief was given asynchronously, so these calls were made with stated default
 | Motion | None on scroll. `Reveal` (already a no-op) is deleted. `motion` stays for state changes inside interactive tools. |
 | Tests | Add Vitest + Testing Library for interactive primitives (Tabs, Accordion, Dialog, Field, Button-as-link) and `lib/accent.ts`. Presentational work is verified by screenshots and the verify scripts. |
 | Copy | Shell copy only: home, nav labels/descriptions, stage page chrome, CTAs, FAQ, empty states. The 30 content JSON files are out of scope except for a slop-pattern sweep (§11). |
-| Logo | Bracket-PH mark kept, recoloured to the new primary; wordmark set in Cabinet Grotesk. No logo redesign. |
+| Logo | **Redesigned** (requested 2026-08-21). New mark + wordmark in Cabinet Grotesk, authored as SVG via the `logo-conceptualization` and `brand-identity` skills; concepts explored with gpt-image-2, final mark hand-drawn as vector. Must work at 16px favicon, in the header at 28–32px, on the navy CTA band, and in print (educator kit). No flag heraldry, no eight-ray sun (standing decision from the 2026-08-10 rebrand). Ships in Phase 0 so every later screenshot carries it. |
 | Dark mode | Still light-only. |
+| Practice layer (added 2026-08-21, approved) | Retrieval checks and flashcard decks, branching scenarios, annotated worked examples, export-your-own-work, weekly reflection and plan streaks, glossary and timezone/study utilities, reader accessibility toggles. Audio, video, and sandboxes are explicitly deferred (§7.4). |
 
 ### Explicit non-goals
 
 - No new lessons, workshops, or data; no changes to tool logic (`lib/*-math.ts`, `path-context`, storage).
-- No route removals. One addition: `/library`. A dev-only `/dev/ui` gallery, excluded from sitemap, robots, and production builds.
+- No route removals. Additions: `/library`, `/practice`, `/glossary`, `/educators` (+ its print-only `kit/*` routes). A dev-only `/dev/ui` gallery, excluded from sitemap, robots, and production builds.
+- No audio (read-aloud, speech drills), no video (Remotion/Manim explainers), no code/formula sandboxes or typing tests in this project. They are a documented second wave.
 - No rewrite of content JSON voice (follow-up project).
 - No backend, auth, or analytics changes.
 - No employer-facing pages.
@@ -213,6 +215,26 @@ lib/
 | `EmptyState` | icon, title, body, action | Tracker/plan/path empty states. |
 | `Icon` | `name`, `weight`, `size` | Moved; Phosphor only. |
 
+### 5.2b Practice components (`components/practice/`)
+
+Compound components built from the primitives above; all client components; all persist through `lib/storage.ts` under a `practice.*` namespace.
+
+| Component | Props (essentials) | Notes |
+|---|---|---|
+| `Quiz` | `id` (route key), questions from `data/practice.json` | 3 items per guide; multiple choice or reveal-answer; records attempts, last score, next-review date (Leitner). Rendered before `PageFooterNav`. |
+| `Deck` | `deckId` | Flashcards with flip, "got it / not yet", five-box Leitner schedule; due count exposed through `usePracticeDue()`. |
+| `Scenario` | `scenarioId` | Branching nodes; choice → consequence → next; ends with a debrief listing the path taken and the rule each choice tested. No score. |
+| `Annotated` | `exampleId` | A realistic artifact (resume, SOP, status message, invoice) with numbered hotspots; click or focus reveals *why this exists* and *the rule it follows*. Keyboard: hotspots are buttons in reading order. |
+| `BeforeAfter` | `pairId` | Two versions of a message with a draggable divider on desktop and stacked tabs on mobile; changed phrases highlighted. |
+| `ExportButton` | `title`, `markdown` or `ics`, `filename` | Client-side Blob download. Only ever receives text the user wrote or settings they chose. |
+| `Journal` | weekly prompt from `data/reflection.json` | One entry per ISO week in localStorage; shown on `/path`. |
+| `Streak` | reads plan-day state | Consecutive plan days completed; shown on `/plan` and `/path`. No badges, no points. |
+| `Term` | `id` | Inline glossary term: dotted underline, hover/focus card with definition and optional Taglish gloss, `aria-describedby`. |
+| `TimezoneOverlap` | `regions` | Slider for the visitor's working window (UTC+8) against client regions; shows overlap hours; notes DST months. |
+| `StudyTimer` | `blocks` from the study protocol | Focus/break timer with a visible plan; persists the running block. |
+| `Tldr` | `route` | "TL;DR sa Tagalog" block from `data/tldr.json`, collapsed by default. |
+| `ReaderControls` | — | Font size (S/M/L), comfortable-reading toggle (wider letter and word spacing, 1.8 leading, left-aligned), low-data mode (`Figure` renders its caption placeholder instead of the image). Persisted; applied as classes on `<html>` before paint to avoid flicker. |
+
 ### 5.3 Layout (`components/layout/`)
 
 `Container`, `Section` (`band: none|tint|navy`, `spacing`), `SectionHeading` (kicker, title, lead, `action` slot for the Learnora heading-left/button-right pattern, `align`), `PageHero` (breadcrumb, kicker, title, lead, `actions`, `media: {figureId} | {diagram} | none`, `compact?`), `PageFooterNav` (prev/next/up), `CtaBand`, `FeatureRow` (icon + title + body, 3-up), `CardGrid` (`cols`), `Toc` (on-page nav for long guides, xl+ only), `Breadcrumb`.
@@ -268,7 +290,7 @@ Wired into `npm run verify:all` alongside `verify:contrast`, `verify:links`, `ve
 | Dropdown | Contents | Count |
 |---|---|---|
 | **Path** | Stage 1–5 as a numbered list with one-line roles, then "Your dashboard" (`/path`) and "Build a 30-day plan" (`/plan`) | 7 |
-| **Learn** | Two columns: *Build skills* (Method, AI-First, How to Learn, Micro-Tasks, Build Labs, Learn Any Tool, Portfolio Ladder, AI Leverage, Equipment) · *Work like a professional* (Become Indispensable, English at Work, Conduct & Integrity, Career Simulator, Resource Shelf) | 14 |
+| **Learn** | Two columns: *Build skills* (Method, AI-First, How to Learn, Micro-Tasks, Build Labs, Learn Any Tool, Portfolio Ladder, AI Leverage, Equipment) · *Work like a professional* (Become Indispensable, English at Work, Conduct & Integrity, Career Simulator, Resource Shelf) · footer links: Practice (`/practice`), Glossary (`/glossary`) | 14 + 2 |
 | **Work** | Two columns: *Get hired* (Find Work, Interview Prep, Application Tracker, Niches) · *Get paid and stay* (Salary Guide, Client Markets, Own Your Clients, Get Legit, Languages) | 9 |
 
 Every dropdown ends with a footer row: "Browse everything in the library →" (`/library`). Each item shows label + 6–10-word description (from `site.json`). Keyboard: arrows move, Esc closes, focus returns to the trigger.
@@ -349,6 +371,61 @@ Second wave candidates: `/plan` Gantt, `/niches` radar (interactive), `/salary` 
 ### 7.3 Manifest and components
 
 `data/visuals.json` lists images; `components/diagrams/index.ts` lists diagrams by id. `PageHero media` accepts either. The `/library` cards and stage cards show the stage image as `CardMedia`.
+
+### 7.4 Practice layer
+
+The site teaches that retrieval beats re-reading, that judgment is learned by making decisions, and that you own what you build. The practice layer makes every guide *do* those three things. Everything is JSON-driven, frontend-only, and persisted in localStorage under `practice.*`.
+
+**7.4.1 Retrieval practice.**
+- `Quiz`: three questions at the end of each of the 13 guide pages and 5 stage pages (54 questions). Formats: multiple choice with a one-line explanation per option, or "think, then reveal". Results feed a Leitner schedule; `/practice` lists what is due.
+- `Deck`: four decks in the first wave: *Interview questions* (from `interview.json`), *Red flags* (from `apply.json` / `findwork.json`), *Get Legit terms* (BIR, 8%, OR, 2307, PhilHealth…), *English habits* (from `english.json` banlist). ~80 cards total, each with a `source` where it states a fact.
+- `/practice` page: due cards, decks, quiz history, streak; empty state explains the method and links `/learn`.
+
+**7.4.2 Scenarios.** Four branching scenarios, each 8–14 nodes, authored in `data/scenarios.json`:
+- *The 11 pm request* (`/conduct`): scope, boundaries, tone.
+- *The interview that isn't* (`/apply`): spotting the five red flags as they appear.
+- *First week* (`/deliver`): what to ask, what to log, when to escalate.
+- *The scope creep* (`/clients`): retainer boundaries and the ASK method.
+Each ends with a debrief: the path taken, the principle each fork tested, and a link to the rule in the guide. No right-answer score; some forks are trade-offs.
+
+**7.4.3 Annotated worked examples.** Four artifacts in `data/annotated.json` with 6–10 hotspots each: a resume (Build Labs), an SOP (Build Labs), a status update message (English at Work), a supplier invoice (Get Legit). Each hotspot has `why` and `rule`. The doctrine note renders above every example: "Study it, extract the rules, then close it and write your own." Three `BeforeAfter` pairs for message rewrites, sourced from the existing English at Work material.
+
+**7.4.4 Export your own work.** `ExportButton` on every lab output (resume draft, SOP, oath, first-week plan, rate worksheet), the 30-day plan (`.ics` with one all-day event per plan day and Markdown), and the tracker (CSV). A print stylesheet for guides. The build guide gains the rule: *export is for what the user wrote; never for anything we wrote.*
+
+**7.4.5 Reflection and rhythm.** `Journal` on `/path` with one weekly prompt from `data/reflection.json` (12 prompts, rotating); `Streak` computed from plan-day completion dates; milestone markers on `JourneyStepper` when a stage's steps are all done. No badges, points, or leaderboards.
+
+**7.4.6 Utilities.** `data/glossary.json` (~40 terms, each with definition, optional Taglish gloss, link to the guide that explains it) rendered inline via `Term` and on `/glossary` (A–Z, filter box). `TimezoneOverlap` on `/markets`. `StudyTimer` on `/learn`.
+
+**7.4.7 Reader accessibility.** `ReaderControls` in the footer and the mobile drawer: font size, comfortable-reading toggle, low-data mode. `Tldr` ("TL;DR sa Tagalog", 60–90 words) on the 13 guides and 5 stages from `data/tldr.json`. Drafts are written in this project and **flagged for native-speaker review before publish**; the block carries a "draft translation" note until the flag is cleared.
+
+**Deferred (documented second wave):** read-aloud and speech drills (Web Speech API), Remotion/Manim explainers from the diagram components, formula playground (HyperFormula), typing test, live comms linter.
+
+### 7.5 Educator kit (`/educators`)
+
+Teachers, trainers, community organisers, and senior professionals running workshops should be able to carry the doctrine into a room without us. The kit is the GIVE method applied to the platform itself.
+
+**Doctrine clarification (added to `BUILD_GUIDE.md`).** The no-downloads rule protects learners from dependence on finished *deliverables* (a resume to rename). Material that teaches *the method* (principles, run-sheets, the path map) is teaching material and may be distributed as PDF. The test stays the same: does this make the reader more capable or more dependent? A facilitation guide makes a facilitator more capable.
+
+**Contents (first release).**
+
+| Piece | Format | Source of truth |
+|---|---|---|
+| *The Hire From PH doctrine*, one-pager | A4 portrait PDF | `doctrine.json`, `site.json.standard` |
+| *The path*, map of five stages and eleven steps | A4 landscape PDF | `stages.json`, `roadmap.json`, the journey diagram |
+| *Seven methods*, cheat-sheet with the drill for each | A4 portrait PDF, 2 pages | `doctrine.json.methods` |
+| *Three workshop run-sheets*: DECONSTRUCT a resume (90 min) · VET an opportunity (60 min) · ASK well (45 min) | A4 portrait PDF, one per session | new `data/educators.json`: objectives, room setup, timed steps, discussion prompts, which site tools to open live, common facilitator mistakes |
+| *Slides*: 16 slides covering doctrine, path, methods, honesty rule | 16:9 landscape PDF | same data; one slide per method/stage |
+| *How to use and cite this* | included in every PDF's last page | `data/educators.json.license` |
+
+All numbers in the kit carry their `Source`; the kit prefers principles to statistics for that reason.
+
+**Build.** The kit pages are ordinary routes under `app/educators/kit/*` rendered from the same JSON as the site, with a print stylesheet (`@page` size and margins, no header/footer chrome, fonts embedded). `scripts/build-kit-pdf.mjs` starts the dev server, renders each kit route with Playwright's Chromium (`page.pdf`, `printBackground`), and writes `public/kit/*.pdf`. PDFs are regenerated and committed whenever the underlying JSON changes (a `verify:kit` check compares a content hash stored in the PDF metadata against the JSON). Visitors can also print any kit page themselves.
+
+**Landing page `/educators`.** Who it is for, what each piece is (with thumbnails), download buttons, a "run a session" quick start, the licence, and the honesty note (no learner counts; we do not know how many rooms this reaches). Linked from the footer ("For educators"), `/library`, and the GIVE section of `/method`.
+
+**Licence.** Default CC BY 4.0 so the material spreads with attribution; the site's own non-commercial stance is unaffected because the licence applies to the kit, not to the brand. See §16 Q11.
+
+**Deferred:** editable PPTX/Google Slides export, translated editions, a facilitator feedback channel (needs a server).
 
 ---
 
@@ -440,14 +517,24 @@ The 30 content JSON files get a mechanical sweep only (the banned-word list abov
 | `data/faq.json` | new, 6 items |
 | `data/library.json` | new, 32 entries |
 | `data/visuals.json` | new, generated by the optimise script |
+| `data/practice.json` | new: `{ [route]: { questions: [{ id, prompt, type: "choice"\|"reveal", options?: [{ text, correct, why }], answer?, source? }] } }` |
+| `data/decks.json` | new: `[{ id, title, blurb, cards: [{ id, front, back, source? }] }]` |
+| `data/scenarios.json` | new: `[{ id, title, route, start, nodes: { [id]: { text, choices?: [{ label, next, tests }], end?: true, debrief? } } }]` |
+| `data/annotated.json` | new: `[{ id, kind, title, blocks: [{ id, text }], hotspots: [{ block, n, title, why, rule }] }]` + `pairs: [{ id, before, after, changes: [{ from, to, why }] }]` |
+| `data/glossary.json` | new: `[{ id, term, definition, taglish?, href? }]` |
+| `data/reflection.json` | new: `[{ week: 1–12, prompt }]` |
+| `data/tldr.json` | new: `{ [route]: { tl: string, reviewed: boolean } }` |
+| `data/educators.json` | new: `{ intro, sessions: [{ id, title, minutes, method, objectives[], setup[], steps: [{ minutes, title, facilitator, participants, tool? }], prompts[], mistakes[] }], slides: [{ id, kicker, title, body, source? }], license: { name, url, attribution } }` |
 | `data/track-names.json` | unchanged |
 | content JSONs | banned-word sweep only |
+
+Dates are stored as ISO `YYYY-MM-DD` strings; schedules as `{ box: 1–5, due: "YYYY-MM-DD" }`.
 
 ---
 
 ## 13. Testing and verification
 
-- **Unit (Vitest + Testing Library):** `Button` renders `Link`/`a`/`button` correctly; `Tabs` keyboard model; `Accordion` open/close and single-open mode; `Dialog` focus trap and Esc; `Field` wires `aria-describedby` for hint/error; `lib/accent.ts` has every accent × every key. Existing `node --test` math tests keep running.
+- **Unit (Vitest + Testing Library):** `Button` renders `Link`/`a`/`button` correctly; `Tabs` keyboard model; `Accordion` open/close and single-open mode; `Dialog` focus trap and Esc; `Field` wires `aria-describedby` for hint/error; `lib/accent.ts` has every accent × every key. Practice logic is pure and tested first: `lib/leitner.ts` (box promotion/demotion, due dates), `lib/streak.ts`, `lib/ics.ts` (valid VCALENDAR output), `lib/scenario.ts` (graph walk, unreachable-node and dead-end detection over `scenarios.json`), plus a data-integrity test that every `Quiz`/`Term`/`Tldr` route exists and every `Scenario` `next` resolves. Existing `node --test` math tests keep running.
 - **Static:** `verify:primitives`, `verify:contrast`, `verify:links`, `verify:claims`, `tsc`, `eslint`, `voice-audit`.
 - **Visual:** scripted screenshots (chrome-devtools or Playwright) at 375 / 768 / 1280 / 1536 for `/`, `/start`, `/method`, `/reality`, `/tracker`, `/library`, `/dev/ui`, plus header dropdown and mobile drawer open states; stored under `screenshots/` and referenced in a refreshed `DESIGN_REVIEW.md`.
 - **Lighthouse:** mobile home and one stage page; a11y ≥ 95, perf ≥ 90.
@@ -467,10 +554,12 @@ Each phase is its own implementation plan and PR. The site builds and deploys af
 | 3 | **Visual content pipeline** (runs in background from Phase 1 onward) | Shot list, `gen-images.mjs`, `optimize-images.mjs`, `visuals.json`, `Figure`; `diagram-design` profile + marker, first 4 diagrams | 11 images optimised and committed; 4 diagrams rendered in `DiagramFrame` |
 | 4 | **Home and stage template** | `app/page.tsx` rebuilt (§8.1), `faq.json`, `StagePage` rebuilt, `JourneyStepper`, `PathChooser limit` | Home ≤ 8 sections; 4-breakpoint screenshots; Lighthouse targets met |
 | 5 | **Interior migration** | Batch A: 13 guide pages · Batch B: 4 data pages with chart primitives and remaining diagrams · Batch C: 17 workshops on form primitives · `Reveal` and `lucide-react` removed | `verify:primitives` switched to fail-on-violation and passing repo-wide |
-| 6 | **Copy pass** | Shell copy per §11, content-JSON sweep | `voice-audit` clean; hero ≤ 8 words |
-| 7 | **Verification and docs** | Full check suite, screenshots, `DESIGN_REVIEW.md` v2, `README.md` routes/design sections, dead-file removal | All checks green; review doc published |
+| 6 | **Practice layer** | `lib/leitner|streak|ics|scenario` with tests · `components/practice/*` · `/practice`, `/glossary` · data files (54 questions, 4 decks, 4 scenarios, 4 annotated examples + 3 pairs, ~40 terms, 12 prompts, 18 TL;DRs) · `ExportButton` wired into labs, plan, tracker · `ReaderControls` | Data-integrity tests pass; every guide ends with a `Quiz`; `/practice` shows due items; exports open in Calendar/Markdown apps |
+| 7 | **Educator kit** | `data/educators.json` · `app/educators` landing + `kit/*` print routes · print stylesheet · `scripts/build-kit-pdf.mjs` + `verify:kit` · `public/kit/*.pdf` (6 files) | PDFs open cleanly in Acrobat/Preview/Chrome; fonts embedded; every figure sourced; landing page linked from footer, library, and `/method` |
+| 8 | **Copy pass** | Shell copy per §11, content-JSON sweep, TL;DR drafts flagged for review | `voice-audit` clean; hero ≤ 8 words |
+| 9 | **Verification and docs** | Full check suite, screenshots, `DESIGN_REVIEW.md` v2, `README.md` routes/design sections, dead-file removal | All checks green; review doc published |
 
-Rough effort: Phases 0–2 are mechanical and fast; Phase 5 Batch C is the long tail (17 stateful components); Phase 3's wall-clock is dominated by ~1 hour of background image generation.
+Rough effort: Phases 0–2 are mechanical and fast; Phase 5 Batch C and Phase 6's content authoring are the long tails; Phase 3's wall-clock is dominated by ~1 hour of background image generation.
 
 ---
 
@@ -491,3 +580,7 @@ Rough effort: Phases 0–2 are mechanical and fast; Phase 5 Batch C is the long 
 7. **Cabinet Grotesk self-hosting** under the ITF Free Font License. Default self-host (`next/font/local`); alternative is the Fontshare CDN link, which adds a third-party request.
 8. **Language-premium panel** leaves the homepage and lives on `/languages` and the Level Up stage. Default yes.
 9. **Dev gallery** `/dev/ui` behind `NODE_ENV`. Default yes.
+10. **Tagalog TL;DRs** ship marked "draft translation" until a native speaker clears them. Default yes; tell me if you'd rather hold them back entirely until reviewed.
+11. **Educator kit licence.** CC BY 4.0 applied (spread with attribution). Alternatives if you change your mind later: CC BY-SA 4.0 or CC BY-NC-SA 4.0; swapping is a one-line change in `data/educators.json`.
+
+**Approval:** full spec approved 2026-08-21 ("implement it… do everything, no need to ask"). Practice layer approved minus audio/video/sandboxes; educator kit and logo redesign added the same day. All defaults 1–11 applied.
