@@ -342,7 +342,7 @@ One page listing all routes as `Card`s: title, one-line description, type badge 
 | `og-default` | Open Graph | 1200×630 | Crop of `home-hero` with wordmark |
 | `path-dashboard` | `/path` empty state | 3:2 | Blank notebook and pen beside a closed laptop, morning light |
 
-**Honesty rules.** Every generated image carries a visible caption "Illustrative image" via `Figure`. No generated person is ever placed next to a quote, name, role, or number. No generated image of a document that could be mistaken for a real credential, payslip, or contract. `alt` text describes the scene, not a claim ("A woman reviews a spreadsheet at a home desk", never "A successful online professional").
+**Honesty rules.** Every generated image carries a visible caption "AI-generated image" via `Figure`. No generated person is ever placed next to a quote, name, role, or number. No generated image of a document that could be mistaken for a real credential, payslip, or contract. `alt` text describes the scene, not a claim ("A woman reviews a spreadsheet at a home desk", never "A successful online professional").
 
 **Build guide amendment.** "No external images" becomes "No hotlinked or third-party images. First-party assets in `public/images/` rendered through `Figure` are allowed; every generated asset is captioned as illustrative."
 
@@ -578,7 +578,7 @@ Rough effort: Phases 0–2 are mechanical and fast; Phase 5 Batch C and Phase 6'
 3. **Vitest for interactive primitives.** Default yes (small: ~6 test files).
 4. **Phosphor-only icons.** Default yes; lucide removed.
 5. **Copy scope.** Default shell only. Say the word if you want the content JSONs rewritten in the same project; that roughly doubles the copy phase.
-6. **Image subjects and captions.** Default Filipino subjects, real PH settings, "Illustrative image" caption on every generated asset. Confirm you are comfortable with generated people on the site at all; the fallback is object/desk/environment shots only.
+6. **Image subjects and captions.** Default Filipino subjects, real PH settings, "AI-generated image" caption on every generated asset. Confirm you are comfortable with generated people on the site at all; the fallback is object/desk/environment shots only.
 7. **Cabinet Grotesk self-hosting** under the ITF Free Font License. Default self-host (`next/font/local`); alternative is the Fontshare CDN link, which adds a third-party request.
 8. **Language-premium panel** leaves the homepage and lives on `/languages` and the Level Up stage. Default yes.
 9. **Dev gallery** `/dev/ui` behind `NODE_ENV`. Default yes.
