@@ -110,7 +110,7 @@ export default function Home() {
             <li key={stage.id} className="flex">
               <Card href={stage.href} onBand className="flex w-full flex-col">
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-display text-h4 text-line-strong">
+                  <span className="font-display text-h4 text-ink-faint">
                     {String(stage.num).padStart(2, "0")}
                   </span>
                   <Badge tone={tone(stage.accent)} variant="outline">
