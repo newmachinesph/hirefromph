@@ -49,13 +49,19 @@ describe("Stat", () => {
     expect(container.querySelector("dl > div > dt")).not.toBeNull();
   });
 
-  it("StatStrip renders exactly one dl for multiple Stats", () => {
+  it("every Stat in a StatStrip owns a valid dl (dt before dd), and the strip itself is not a dl", () => {
     const { container } = render(
       <StatStrip>
         <Stat value="5" label="stages" />
         <Stat value="12" label="days" />
       </StatStrip>,
     );
-    expect(container.querySelectorAll("dl")).toHaveLength(1);
+    const lists = container.querySelectorAll("dl");
+    expect(lists).toHaveLength(2);
+    lists.forEach((dl) => {
+      expect(dl.querySelector("dt")).not.toBeNull();
+      expect(dl.querySelector("dd")).not.toBeNull();
+    });
+    expect(container.firstElementChild?.tagName).toBe("DIV");
   });
 });
