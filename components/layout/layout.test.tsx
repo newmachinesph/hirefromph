@@ -13,6 +13,7 @@ vi.mock("next/link", () => ({
 
 import { Breadcrumb } from "@/components/layout/breadcrumb";
 import { Container } from "@/components/layout/container";
+import { CtaBand } from "@/components/layout/cta-band";
 import { Section } from "@/components/layout/section";
 
 describe("Breadcrumb", () => {
@@ -86,5 +87,20 @@ describe("Section", () => {
     const flush = container.querySelector("section");
     expect(flush?.className).not.toContain("py-16");
     expect(flush?.className).not.toContain("py-20");
+  });
+});
+
+describe("CtaBand", () => {
+  it("hides decorative background media from assistive tech", () => {
+    const { container } = render(
+      <CtaBand
+        title="x"
+        actions={<span>a</span>}
+        // eslint-disable-next-line @next/next/no-img-element
+        media={{ node: <img alt="scene" src="/x.jpg" /> }}
+      />,
+    );
+    expect(container.querySelector('[aria-hidden="true"] img')).not.toBeNull();
+    expect(screen.queryByRole("img")).toBeNull();
   });
 });
