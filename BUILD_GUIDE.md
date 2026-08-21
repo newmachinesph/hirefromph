@@ -1,6 +1,6 @@
 # Hire From PH — Build Guide (read before building any page)
 
-Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for animation, `lucide-react` icons. Light mode only. TypeScript strict.
+Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `components/icon.tsx` (lucide is being removed; add no new lucide imports). Light mode only. TypeScript strict.
 
 ## THE CORE DOCTRINE (read `data/doctrine.json` — this governs everything)
 
@@ -43,11 +43,17 @@ We ask users to sign an integrity oath. We therefore hold ourselves to it — a 
 - All content comes from `data/*.json`. Do not hardcode copy that exists in JSON.
 
 ## Design tokens (Tailwind utilities already wired)
-Colors: `paper`, `paper-2`, `paper-3`, `card`, `ink`, `ink-soft`, `ink-faint`, `line`, `line-strong`, `signal`, `signal-deep`, `signal-tint`, `signal-light`, `verified`, `verified-tint`, `info`, `caution`, `caution-text`.
-Fonts: `font-display` (Space Grotesk — headings), default sans (Inter Tight), `font-mono` (Space Mono — kickers/code).
-Type: `text-[length:var(--text-hero)]`, `--text-display`, `--text-h2`, `--text-h3`, `--text-lead` (pair each with its `--line-height`).
-Radius: `rounded-[var(--radius)]` / `--radius-sm` / `--radius-lg`. Shadows: `shadow-[var(--shadow-sm)]`, `--shadow-md`, `--shadow-lg` (pick one token per class).
-Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotgrid`, `.link-sweep`, `.font-display`.
+Spec: `docs/superpowers/specs/2026-08-21-ui-overhaul-design.md` §4. Phase 0 of the overhaul shipped these; Phases 1–5 replace the page structure.
+
+Surfaces: `paper` (white), `band` (lavender section band), `tint`, `card`. Ink: `ink`, `ink-soft`, `ink-faint`, `on-navy`. Lines: `line`, `line-strong`, `control` (form borders, 3:1).
+Primary: `primary`, `primary-deep`, `primary-tint`, `primary-soft`.
+Semantic accents — the bare name is the **text/deep** value (AA on paper and on its tint); `*-fill` is the vibrant shape colour and takes **ink text only**; `*-tint` is the pale surface: `verified`, `caution`, `info`, `coral` (red flags). Stage ids in JSON (`signal|caution|verified|info`) resolve through `lib/accent.ts` — **never re-declare accent maps in a page.**
+White text is allowed only on `primary`, `primary-deep`, `ink`, and the deep semantic values.
+
+Fonts: `font-display` (Cabinet Grotesk — headings, buttons, wordmark), `font-sans` (Inter — everything else). No mono family.
+Type: `text-hero` `text-display` `text-h2` `text-h3` `text-h4` `text-h5` `text-lead` `text-body` `text-small` `text-caption` `text-kicker` — each utility already carries its line-height, weight, and tracking; do not pair with `leading-*`.
+Radius: `rounded-sm` (8) `rounded-md` (12) `rounded-lg` (20) `rounded-pill`. Shadows: `shadow-[var(--shadow-sm)]` (dropdowns) and `--shadow-md` (dialogs) only — cards use borders, never shadows, never hover lifts.
+Helpers (globals.css): `.container-x`, `.skip-link`. Legacy helpers `.kicker`, `.font-display`, `.link-sweep` remain until Phase 5.
 
 ## Shared components (import and REUSE — do not re-invent)
 - `@/components/ui` → `Kicker`, `Pill` (tone: neutral|coral|emerald|amber|indigo), `ButtonLink` (variant: primary|outline|ghost; `external`), `ArrowLink`, `SectionHeading` ({kicker,title,lead,align}), `Marquee`.

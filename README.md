@@ -50,4 +50,4 @@ All copy and data are in `data/`. Swap the JSON to change the site — no code e
 
 ## Design
 
-Signal system: Space Grotesk display × Inter Tight body × Space Mono kickers, graphite ink on cool near-white, electric indigo signature, 6px radius. Tokens in `app/globals.css`. Shared conventions in `BUILD_GUIDE.md` — **read it before building any page.**
+Inter (text) × Cabinet Grotesk (display), navy ink on white with lavender bands, one blue-violet primary and four semantic accents, 8/12/20px radii, bordered cards. Tokens in `app/globals.css`; the overhaul spec lives in `docs/superpowers/specs/2026-08-21-ui-overhaul-design.md`. Shared conventions in `BUILD_GUIDE.md` — **read it before building any page.**
