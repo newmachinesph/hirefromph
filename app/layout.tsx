@@ -1,8 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { BASE_URL } from "./sitemap";
 import { inter, cabinet } from "@/lib/fonts";
 import { PathProvider } from "@/lib/path-context";
+import { CONSENT_SCRIPT, GA_ID } from "@/lib/consent";
 import {
   BackToTop,
   CookieNotice,
@@ -89,6 +91,7 @@ export default function RootLayout({
       className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
+        <script dangerouslySetInnerHTML={{ __html: CONSENT_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -109,6 +112,7 @@ export default function RootLayout({
         <SWRegister />
         <CookieNotice />
       </body>
+      <GoogleAnalytics gaId={GA_ID} />
     </html>
   );
 }
