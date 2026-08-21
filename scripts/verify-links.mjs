@@ -1,3 +1,18 @@
+/**
+ * Static internal-link audit. No dev server, no network: it derives the route
+ * set from app/**\/page.* and the asset set from public/**, then checks every
+ * internal href/url/redirectTo it can find in app/, components/, data/, lib/.
+ *
+ * Sources covered: data/site.json (nav, navGroups, cta), data/library.json,
+ * every other data/*.json, JSX href/src attributes, object literals, and
+ * router.push()/redirect() string arguments.
+ *
+ * A link object carrying `"pending": true` is authored in the information
+ * architecture but its route ships in a later phase, so the whole object is
+ * skipped and counted. See lib/nav.ts for the convention.
+ *
+ * Run: npm run verify:links (part of npm run verify:all)
+ */
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -7,6 +22,9 @@ const APP_DIR = path.join(ROOT, "app");
 const SOURCE_DIRS = ["app", "components", "data", "lib"];
 const SOURCE_EXTENSIONS = new Set([".js", ".jsx", ".ts", ".tsx", ".json"]);
 const PAGE_FILE = /^page\.(?:js|jsx|ts|tsx)$/;
+
+/** Links skipped because their route ships in a later phase. */
+let pendingLinks = 0;
 
 function walk(directory) {
   if (!fs.existsSync(directory)) return [];
@@ -66,6 +84,12 @@ function extractJsonReferences(file, source) {
     }
 
     if (value && typeof value === "object") {
+      // Authored in the IA, route ships in a later phase — skip the subtree.
+      if (value.pending === true) {
+        pendingLinks += 1;
+        return;
+      }
+
       Object.entries(value).forEach(([childKey, child]) =>
         visit(child, childKey, `${pointer}.${childKey}`),
       );
@@ -182,6 +206,7 @@ if (problems.length) {
 } else {
   console.log(
     `Link audit passed: ${routes.size} routes, ${references.length} internal references, ` +
-      `${publicAssets.size} public assets, ${intentionalPlaceholders} intentional placeholders.`,
+      `${publicAssets.size} public assets, ${intentionalPlaceholders} intentional placeholders, ` +
+      `${pendingLinks} links pending a later phase.`,
   );
 }

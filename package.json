@@ -14,7 +14,7 @@
     "verify:contrast": "node scripts/verify-contrast.mjs",
     "verify:links": "node scripts/verify-links.mjs",
     "verify:primitives": "node scripts/verify-primitives.mjs",
-    "verify:all": "npm run verify:contrast && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives",
+    "verify:all": "npm run verify:contrast && npm run verify:links && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives",
     "images:optimize": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
