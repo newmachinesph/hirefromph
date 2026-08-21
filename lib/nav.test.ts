@@ -116,7 +116,7 @@ describe("nav data", () => {
 describe("SEARCH_INDEX", () => {
   it("indexes the live library", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/method")).toBe(true);
-    expect(LIVE_LIBRARY).toHaveLength(30);
+    expect(LIVE_LIBRARY).toHaveLength(32);
   });
 
   it("indexes nav routes that the library does not list", () => {
@@ -128,9 +128,12 @@ describe("SEARCH_INDEX", () => {
     expect(SEARCH_INDEX.some((i) => i.label === "Bookkeeping & Accounting" && i.href === "/niches")).toBe(true);
   });
 
+  it("indexes /practice and /glossary now that they have shipped", () => {
+    expect(SEARCH_INDEX.some((i) => i.href === "/practice")).toBe(true);
+    expect(SEARCH_INDEX.some((i) => i.href === "/glossary")).toBe(true);
+  });
+
   it("never indexes a route that ships in a later phase", () => {
-    expect(SEARCH_INDEX.some((i) => i.href === "/practice")).toBe(false);
-    expect(SEARCH_INDEX.some((i) => i.href === "/glossary")).toBe(false);
     expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(false);
   });
 

@@ -250,7 +250,7 @@ function NavDropdown({
                   key={link.href}
                   data-nav-item
                   href={link.href}
-                  className="rounded-pill border border-line px-3 py-1.5 text-small font-medium text-ink-soft transition-colors duration-150 hover:border-ink hover:text-ink"
+                  className="inline-flex min-h-11 items-center rounded-pill border border-line px-3 py-1.5 text-small font-medium text-ink-soft transition-colors duration-150 hover:border-ink hover:text-ink"
                 >
                   {link.label}
                 </Link>

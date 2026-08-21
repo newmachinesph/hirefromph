@@ -83,8 +83,8 @@
         }
       ],
       "footerLinks": [
-        { "label": "Practice", "href": "/practice", "desc": "Flashcards and quizzes on a spacing schedule.", "pending": true },
-        { "label": "Glossary", "href": "/glossary", "desc": "Plain definitions for every term this site uses.", "pending": true }
+        { "label": "Practice", "href": "/practice", "desc": "Flashcards and quizzes on a spacing schedule." },
+        { "label": "Glossary", "href": "/glossary", "desc": "Plain definitions for every term this site uses." }
       ]
     },
     {
@@ -148,8 +148,8 @@
         { "label": "Conduct & Integrity", "href": "/conduct" },
         { "label": "Career Simulator", "href": "/simulator" },
         { "label": "Resource Shelf", "href": "/resources" },
-        { "label": "Practice", "href": "/practice", "pending": true },
-        { "label": "Glossary", "href": "/glossary", "pending": true }
+        { "label": "Practice", "href": "/practice" },
+        { "label": "Glossary", "href": "/glossary" }
       ]
     },
     {
