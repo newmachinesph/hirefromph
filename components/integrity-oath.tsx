@@ -110,7 +110,7 @@ export function IntegrityOath() {
       >
         {hydrated ? `${accepted} of ${oath.clauses.length} accepted.` : " "}{" "}
         {hydrated && !allAccepted && accepted > 0 && (
-          <span className="text-signal-deep">
+          <span className="text-primary-deep">
             Leaving one unticked is an honest answer. Write down what you&rsquo;d
             have to change to tick it.
           </span>
@@ -142,7 +142,7 @@ export function IntegrityOath() {
         <ul className="mt-3 flex flex-col gap-2">
           {oath.selfCritique.map((q) => (
             <li key={q} className="flex gap-2 text-sm leading-relaxed text-ink-soft">
-              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-caution-text" />
+              <span aria-hidden className="mt-2 h-1 w-1 shrink-0 rounded-full bg-caution" />
               {q}
             </li>
           ))}

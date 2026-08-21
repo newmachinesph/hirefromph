@@ -201,7 +201,7 @@ function Results({
                   aria-hidden
                   className={cn("h-2 w-2 shrink-0 rounded-full", accent(g.accent).fill)}
                 />
-                <p className={cn("kicker", accent(g.accent).text)}>{g.label}</p>
+                <p className={cn("text-kicker uppercase", accent(g.accent).text)}>{g.label}</p>
                 <span className="ml-auto text-xs font-semibold text-ink">
                   {g.total}
                 </span>

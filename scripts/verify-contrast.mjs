@@ -23,14 +23,9 @@ const TEXT = [
   ["coral", "coral-tint"],
   ["on-navy", "ink"],
   ["primary-soft", "ink"],
-  // legacy aliases still rendered by pre-overhaul pages
-  ["signal", "paper"],
-  ["signal-deep", "signal-tint"],
-  ["signal-light", "ink"],
-  ["caution-text", "caution-tint"],
 ];
 // White text on these fills must pass 4.5:1.
-const WHITE_ON = ["primary", "primary-deep", "ink", "verified", "caution", "info", "coral", "signal", "signal-deep"];
+const WHITE_ON = ["primary", "primary-deep", "ink", "verified", "caution", "info", "coral"];
 // Ink text on the vibrant fills must pass 4.5:1.
 const INK_ON = ["verified-fill", "caution-fill", "info-fill", "coral-fill"];
 // Non-text UI boundaries need 3:1.

@@ -379,11 +379,11 @@ export function CareerSimulator() {
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
             {model.verdict.body}
           </p>
-          <p className="mt-4 max-w-2xl border-l-2 border-signal pl-4 text-sm font-medium leading-relaxed text-ink">
+          <p className="mt-4 max-w-2xl border-l-2 border-primary pl-4 text-sm font-medium leading-relaxed text-ink">
             {gapNote}
           </p>
 
-          <p className="kicker mt-8">{sim.results.milestoneLabel}</p>
+          <p className="text-kicker uppercase text-ink-faint mt-8">{sim.results.milestoneLabel}</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {MILESTONES.map((m) => (
               <Card key={m} padding="sm">
@@ -424,7 +424,7 @@ export function CareerSimulator() {
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                   {sim.aiCallout.body}
                 </p>
-                <blockquote className="mt-5 border-l-2 border-signal-deep pl-4">
+                <blockquote className="mt-5 border-l-2 border-primary-deep pl-4">
                   <p className="font-display text-lg leading-snug text-ink">
                     {sim.aiCallout.quote}
                   </p>
@@ -557,7 +557,7 @@ export function CareerSimulator() {
                       className={cn(
                         "font-display",
                         row.value > 1 && "text-verified",
-                        row.value < 1 && "text-signal-deep",
+                        row.value < 1 && "text-primary-deep",
                         neutral && "text-ink-faint",
                       )}
                     >

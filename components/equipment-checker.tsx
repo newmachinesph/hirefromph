@@ -165,7 +165,7 @@ function CategoryCard({
           className={cn(
             "grid h-11 w-11 shrink-0 place-items-center rounded-sm",
             category.essential
-              ? "bg-signal-tint text-signal-deep"
+              ? "bg-primary-tint text-primary-deep"
               : "bg-info-tint text-info",
           )}
         >
@@ -205,7 +205,7 @@ function CategoryCard({
 
       <div className="mt-3 flex-1 rounded-sm border border-line bg-paper p-3">
         <p className="text-sm font-medium text-ink">{tier.item}</p>
-        <p className="mt-1 text-sm font-semibold text-signal-deep">
+        <p className="mt-1 text-sm font-semibold text-primary-deep">
           {tier.price}
         </p>
       </div>

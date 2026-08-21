@@ -331,7 +331,7 @@ function LabDetail({
 function WhyTab({ lab }: { lab: Lab }) {
   return (
     <div className="max-w-2xl">
-      <p className="kicker">Why this, not a download</p>
+      <p className="text-kicker uppercase text-ink-faint">Why this, not a download</p>
       <p className="mt-3 text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
         {lab.whyBuild}
       </p>
@@ -343,11 +343,11 @@ function StudyTab({ lab }: { lab: Lab }) {
   return (
     <div className="max-w-2xl space-y-5">
       <Card padding="md">
-        <p className="kicker">What to find</p>
+        <p className="text-kicker uppercase text-ink-faint">What to find</p>
         <p className="mt-2 text-base leading-relaxed text-ink">{lab.studyFirst.what}</p>
       </Card>
       <Card padding="md">
-        <p className="kicker">How to find it</p>
+        <p className="text-kicker uppercase text-ink-faint">How to find it</p>
         <p className="mt-2 text-base leading-relaxed text-ink-soft">{lab.studyFirst.how}</p>
       </Card>
       <p className="text-xs italic text-ink-faint">
@@ -384,7 +384,7 @@ function AnatomyTab({ lab }: { lab: Lab }) {
       </div>
 
       <div className="mt-8">
-        <p className="kicker">Build by these rules</p>
+        <p className="text-kicker uppercase text-ink-faint">Build by these rules</p>
         <ul className="mt-3 space-y-2.5">
           {lab.principles.map((p) => (
             <li key={p} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
@@ -480,7 +480,7 @@ function WorkshopTab({
                 const value = answers[step.id]?.trim();
                 return (
                   <div key={step.id} className="border-b border-line pb-4 last:border-0 last:pb-0">
-                    <p className="kicker mb-1">{step.label}</p>
+                    <p className="text-kicker uppercase text-ink-faint mb-1">{step.label}</p>
                     {value ? (
                       <p className="whitespace-pre-wrap font-mono text-[13px] leading-relaxed text-ink">
                         {value}
@@ -517,7 +517,7 @@ function CritiqueTab({
   return (
     <div className="max-w-2xl">
       <Card padding="md">
-        <p className="kicker mb-3">Watch out for</p>
+        <p className="text-kicker uppercase text-ink-faint mb-3">Watch out for</p>
         <ul className="space-y-2.5">
           {lab.mistakes.map((m) => (
             <li key={m} className="flex items-start gap-2.5 text-sm leading-relaxed text-ink-soft">
@@ -529,7 +529,7 @@ function CritiqueTab({
       </Card>
 
       <div className="mt-6 flex items-center justify-between">
-        <p className="kicker">Judge your own draft</p>
+        <p className="text-kicker uppercase text-ink-faint">Judge your own draft</p>
         <Badge tone={doneCount === lab.critique.length ? "verified" : "neutral"}>
           {doneCount}/{lab.critique.length} checked
         </Badge>
@@ -571,7 +571,7 @@ function BuildRealTab({
   return (
     <div className="max-w-2xl">
       <Card padding="md">
-        <p className="kicker">Where to build it</p>
+        <p className="text-kicker uppercase text-ink-faint">Where to build it</p>
         <Heading level={3} size="h5" className="mt-2">
           {lab.buildIn.tool}
         </Heading>

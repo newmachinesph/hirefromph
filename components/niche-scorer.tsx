@@ -103,7 +103,7 @@ export function NicheScorer() {
                 aria-labelledby={labelId}
                 className={cn(
                   "rounded-md border p-4 transition-colors",
-                  low ? "border-signal/40 bg-signal-tint/40" : "border-line bg-paper",
+                  low ? "border-primary/40 bg-primary-tint/40" : "border-line bg-paper",
                 )}
               >
                 <div className="flex items-start gap-3">
@@ -173,8 +173,8 @@ export function NicheScorer() {
               className={cn(
                 "mt-1 text-sm font-semibold",
                 tier.tone === "verified" && "text-verified",
-                tier.tone === "caution" && "text-caution-text",
-                tier.tone === "signal" && "text-signal-deep",
+                tier.tone === "caution" && "text-caution",
+                tier.tone === "signal" && "text-primary-deep",
               )}
             >
               {tier.label}
@@ -185,7 +185,7 @@ export function NicheScorer() {
           <div className="border-t border-line pt-5">
             {weakSpots.length > 0 ? (
               <>
-                <p className="kicker flex items-center gap-1.5 text-signal-deep">
+                <p className="text-kicker uppercase flex items-center gap-1.5 text-primary-deep">
                   <Icon name="alert-triangle" size={13} /> Watch out for
                 </p>
                 <ul className="mt-3 flex flex-col gap-2">

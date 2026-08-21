@@ -250,7 +250,7 @@ function ProtocolResult({
           <Kicker>Your study protocol</Kicker>
           <Heading level={3} size="h3" balance className="mt-2">
             {summary.sessionShape.label},{" "}
-            <span className="text-signal">{summary.sessionShape.pattern}</span>
+            <span className="text-primary">{summary.sessionShape.pattern}</span>
           </Heading>
           <Text size="small" className="mt-2 max-w-xl">
             {summary.sessionShape.desc}
@@ -277,7 +277,7 @@ function ProtocolResult({
           {summary.techniques.map((t, i) => (
             <Card key={t.id} padding="md">
               <div className="flex items-center gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink font-display text-sm text-paper-2">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink font-display text-sm text-paper">
                   {i + 1}
                 </span>
                 <span className="font-display text-lg leading-tight">
@@ -297,7 +297,7 @@ function ProtocolResult({
           <ul className="mt-1 space-y-3">
             {summary.stopDoing.map((f) => (
               <li key={f.id} className="text-small leading-relaxed">
-                <span className="font-semibold text-signal-deep line-through decoration-signal/50">
+                <span className="font-semibold text-primary-deep line-through decoration-primary/50">
                   {f.habit}
                 </span>
                 <span className="mt-0.5 block text-ink-soft">

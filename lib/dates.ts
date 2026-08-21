@@ -53,7 +53,7 @@ export function daysBetween(from: IsoDate, to: IsoDate): number {
   return Math.round((toUTCms(to) - toUTCms(from)) / DAY_MS);
 }
 
-/** The visitor's local calendar date — what a `<input type="date">` shows. */
+/** The visitor's local calendar date — what a date input control shows. */
 export function todayISO(now: Date = new Date()): IsoDate {
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }

@@ -1,6 +1,6 @@
 # Hire From PH — Build Guide (read before building any page)
 
-Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `components/icon.tsx` (lucide is being removed; add no new lucide imports). Light mode only. TypeScript strict.
+Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `Icon` from `@/components/ui` (`lucide-react` was removed in Phase 5; add no lucide imports). Light mode only. TypeScript strict.
 
 ## THE CORE DOCTRINE (read `data/doctrine.json` — this governs everything)
 
@@ -54,7 +54,7 @@ White text is allowed only on `primary`, `primary-deep`, `ink`, and the deep sem
 Fonts: `font-display` (Cabinet Grotesk — headings, buttons, wordmark), `font-sans` (Inter — everything else). No mono family.
 Type: `text-hero` `text-display` `text-h2` `text-h3` `text-h4` `text-h5` `text-lead` `text-body` `text-small` `text-caption` `text-kicker` — each utility already carries its line-height, weight, and tracking; do not pair with `leading-*`.
 Radius: `rounded-sm` (8) `rounded-md` (12) `rounded-lg` (20) `rounded-pill`. Shadows: `shadow-[var(--shadow-sm)]` (dropdowns) and `--shadow-md` (dialogs) only — cards use borders, never shadows, never hover lifts.
-Helpers (globals.css): `.container-x`, `.skip-link`. Legacy helpers `.kicker`, `.font-display`, `.link-sweep` remain until Phase 5.
+Legacy aliases (`--paper-2`, `--paper-3`, `--signal*`, `--caution-text`, `--radius`, `--shadow-lg`, `--shadow-signal`) and the helper classes (`.kicker`, `.font-display`, `.font-mono`, `.link-sweep`, `.marquee-track`, `.dotgrid`) were removed in Phase 5. The radius vocabulary is exactly `rounded-sm | rounded-md | rounded-lg | rounded-pill`; Tailwind's default scale is wiped, so `rounded-2xl` is not a class.
 
 ## Shared components (import and REUSE — do not re-invent)
 
@@ -74,6 +74,8 @@ fails the build.
 - `@/components/layout` — page structure: `Breadcrumb`, `CardGrid`, `Container`,
   `CtaBand`, `FeatureRow`, `PageFooterNav`, `PageHero`, `Section`,
   `SectionHeading`, `Toc`.
+- **Charts** live in `components/diagrams/charts/`. `Axis`, `Bars`, `Line`, `Legend`, `ValueLabel`, all token-driven, geometry from `lib/chart-scale.ts`. Wrap every chart in `DiagramFrame` and put its `Source` under the frame.
+- **Archetypes.** Every interior page is a Guide, a Workshop, or a Data page (spec §8.3). A page that is none of those is a page that has not been designed yet.
 
 Rules that matter more than the list:
 
@@ -104,31 +106,30 @@ Rules that matter more than the list:
 Still current, unchanged by the overhaul:
 
 - `@/components/copy-button` → `CopyButton` ({value, label}).
-- `@/components/path-chooser` → `PathChooser` ({compact?, redirectTo?, onChosen?}).
-- `@/components/path-gate` → `PathGate` ({children, teaser?, unlocks?}) — wrap DEEP content; before the user picks a path it shows a locked invitation + inline chooser, after it reveals children.
+- `@/components/journey` → `PathChooser` ({compact?, redirectTo?, onChosen?}), `PathGate` ({children, teaser?, unlocks?}) — wrap DEEP content; before the user picks a path it shows a locked invitation + inline chooser, after it reveals children — `StagePage`, `JourneyStepper`.
 - `@/lib/path-context` → `usePath()` → `{state, hydrated, hasPath, choosePath, clearPath, setStage, toggleStep, togglePlanDay, toggleEquipment, setPlanAnswers}`. Client only.
 - `@/lib/accent` → `ACCENT`, `accent(id)`, `isAccent`, `ACCENTS` — the single accent map.
 - `@/lib/utils` → `cn(...)`.
 
-Deprecated, kept only so pre-overhaul pages compile (Phase 5 deletes them):
-`Pill` (use `Badge`), `ButtonLink` (use `Button`), `ArrowLink` (use
-`Button variant="link"`), `Marquee`, and the old `PageHero` / `SectionHeading`
-signatures re-exported from `@/components/ui`. `@/components/reveal` → `Reveal`
-is a no-op wrapper and is being unwrapped as pages migrate — do not add new uses.
-`@/components/icon` re-exports `Icon` from `@/components/ui/icon`; import from
-`@/components/ui` in new code.
+Phase 5 deleted `Reveal`, the flat `@/components/ui` shim (`Pill`, `ButtonLink`,
+`ArrowLink`, `Marquee`, and the legacy `PageHero` / `SectionHeading` signatures),
+and the `@/components/icon` re-export. Import `Icon`, `Button`, `Badge`,
+`PageHero`, `SectionHeading` etc. from `@/components/ui` / `@/components/layout`
+directly; there is no animation wrapper — sections render plain.
 
 ## Page conventions
 - Every route is `app/<slug>/page.tsx`. Add `export const metadata = { title, description }`.
 - Default to Server Components. Add `"use client"` only for interactivity (wizards, filters, toggles, copy). Split interactive bits into their own client component under `components/` and import into the server page.
-- Page shell pattern:
+- Page shell pattern — open every route with `PageHero` from `@/components/layout`, not hand-rolled markup:
   ```tsx
-  <section className="container-x pt-14 pb-10 lg:pt-20">
-    <Reveal><Kicker>…</Kicker></Reveal>
-    <Reveal i={1}><h1 className="mt-5 font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">…</h1></Reveal>
-    <Reveal i={2}><p className="mt-5 max-w-2xl text-[length:var(--text-lead)] text-ink-soft">{intro}</p></Reveal>
-  </section>
+  <PageHero
+    kicker={data.hero.kicker}
+    title={data.hero.title}
+    lead={data.hero.lead}
+    accent={data.hero.accent}
+  />
   ```
+  Body sections use `<Section>`; there is no entrance-animation wrapper — `Reveal` was deleted in Phase 5 and sections render plain.
 - Cards: use `<Card>`. Bordered, **never shadowed** — `rounded-md border border-line bg-paper` on paper, `border-line-strong` on a band (`<Card onBand>`). Padding is `padding="sm" | "md" | "lg"`. `interactive` (or `href`) hovers to `border-ink` + `bg-band` only: no translate, no shadow, no scale. Compose media cards as `<Card padding="none"><CardMedia/><CardBody/><CardFooter/></Card>`.
 - Accents: `import { ACCENT, accent, type Accent } from "@/lib/accent"`. Stage ids in JSON stay `signal | caution | verified | info`; `coral` is added for red-flag content. Read classes off the map — `accent(stage.accent).text | .fill | .tint | .border | .ring | .soft` — and **never re-declare an accent map in a page**. `verify:primitives` flags `const accentText`, `accentBar`, `accentSoft`, `accentBorder`.
 - Accessibility: semantic landmarks, `alt`/`aria-label`, keyboard-usable controls, focus-visible is styled globally.

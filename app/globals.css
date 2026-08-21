@@ -45,29 +45,15 @@
   --coral-fill: #FF5A5F;
   --coral-tint: #FFECEB;
 
-  /* LEGACY:P5 — consumed by pre-overhaul pages. Removed in Phase 5. */
-  --paper-2: var(--paper);
-  --paper-3: var(--band);
-  --signal: var(--primary);
-  --signal-deep: var(--primary-deep);
-  --signal-tint: var(--primary-tint);
-  --signal-light: #8D8BFF;
-  --caution-text: var(--caution);
-
   /* Shape */
   --r-sm: 8px;
   --r-md: 12px;
   --r-lg: 20px;
   --r-pill: 999px;
-  /* LEGACY:P5 */
-  --radius: 12px;
 
   /* Depth — borders carry hierarchy; shadows are for floating layers only */
   --shadow-sm: 0 1px 2px rgb(14 18 48 / 0.06);
   --shadow-md: 0 8px 24px rgb(14 18 48 / 0.08);
-  /* LEGACY:P5 */
-  --shadow-lg: 0 8px 24px rgb(14 18 48 / 0.08);
-  --shadow-signal: none;
 
   /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -110,19 +96,13 @@
   --color-coral-fill: var(--coral-fill);
   --color-coral-tint: var(--coral-tint);
 
-  /* LEGACY:P5 — colour utilities (Phase 5 removes) */
-  --color-paper-2: var(--paper-2);
-  --color-paper-3: var(--paper-3);
-  --color-signal: var(--signal);
-  --color-signal-deep: var(--signal-deep);
-  --color-signal-tint: var(--signal-tint);
-  --color-signal-light: var(--signal-light);
-  --color-caution-text: var(--caution-text);
-
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
+  /* Wipe Tailwind's shipped scale (xs…4xl) so `rounded-2xl` cannot resolve;
+     the four tokens below are the whole vocabulary (spec §4.3). */
+  --radius-*: initial;
   --radius-sm: var(--r-sm);
   --radius-md: var(--r-md);
   --radius-lg: var(--r-lg);
@@ -221,66 +201,6 @@ body {
   top: 1rem;
 }
 
-/* Page gutter + max width */
-.container-x {
-  width: 100%;
-  max-width: var(--maxw);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-}
-
-/* ------------------------------------------------------------------ */
-/*  Legacy helpers (pre-overhaul pages). Phase 1 ships primitives;     */
-/*  Phase 5 deletes these.                                             */
-/* ------------------------------------------------------------------ */
-
-@layer base {
-  /* LEGACY:P5 */
-  .font-display {
-    font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.01em;
-  }
-
-  .kicker {
-    font-family: var(--font-sans);
-    font-size: var(--text-kicker);
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-
-  .font-mono {
-    font-variant-numeric: tabular-nums;
-  }
-
-  .link-sweep {
-    text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 0.2em;
-    transition: text-decoration-color var(--dur) var(--ease-out);
-  }
-  .link-sweep:hover {
-    text-decoration-color: currentColor;
-  }
-}
-
-/* Legacy marquee + dot grid — still rendered by pre-overhaul pages. Phase 5 deletes both. */
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.marquee-track {
-  display: flex;
-  width: max-content;
-  animation: marquee 32s linear infinite;
-}
-.dotgrid {
-  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
-  background-size: 22px 22px;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -291,10 +211,6 @@ body {
   }
   html {
     scroll-behavior: auto;
-  }
-  /* LEGACY:P5 */
-  .marquee-track {
-    animation: none;
   }
 }
 

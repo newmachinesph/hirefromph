@@ -158,7 +158,7 @@ export function MicroTasks() {
           >
             {recommended.length > 0 && (
               <div className="mb-10 rounded-md border border-primary/30 bg-primary-tint/40 p-6">
-                <p className="kicker text-primary-deep">
+                <p className="text-kicker uppercase text-primary-deep">
                   Recommended for your path, {trackNameById[state.track ?? ""]}
                 </p>
                 <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -317,7 +317,7 @@ function PortfolioCounter({ count, hydrated }: { count: number; hydrated: boolea
       )}
     >
       <div>
-        <p className="kicker">Your portfolio</p>
+        <p className="text-kicker uppercase text-ink-faint">Your portfolio</p>
         <p className="mt-1.5 max-w-xl font-display text-xl leading-snug text-balance sm:text-2xl">
           {celebrate ? (
             <>
@@ -366,7 +366,7 @@ function TaskCard({ task, done, onOpen }: { task: Task; done: boolean; onOpen: (
         </span>
         <Badge tone={DIFFICULTY_TONE[task.difficulty] ?? "neutral"}>{task.difficulty}</Badge>
       </div>
-      <p className={cn("mt-4 kicker", accent(task.accent).text)}>{trackNameById[task.track]}</p>
+      <p className={cn("mt-4 text-kicker uppercase", accent(task.accent).text)}>{trackNameById[task.track]}</p>
       <Heading level={3} size="h5" className="mt-1">
         {task.title}
       </Heading>
@@ -436,7 +436,7 @@ function TaskDetail({
             <Icon name={task.icon} size={24} />
           </span>
           <div>
-            <p className={cn("kicker", accent(task.accent).text)}>{trackNameById[task.track]}</p>
+            <p className={cn("text-kicker uppercase", accent(task.accent).text)}>{trackNameById[task.track]}</p>
             <Heading level={2} size="h3" className="mt-1">
               {task.title}
             </Heading>
@@ -449,7 +449,7 @@ function TaskDetail({
       </div>
 
       <div className="mt-6 max-w-2xl rounded-md border border-line-strong bg-band/60 p-5">
-        <p className="kicker mb-1.5">What this proves</p>
+        <p className="text-kicker uppercase text-ink-faint mb-1.5">What this proves</p>
         <Text size="base" tone="ink">
           {task.proves}
         </Text>
@@ -457,7 +457,7 @@ function TaskDetail({
 
       {/* Prerequisites */}
       <section className="mt-10">
-        <h3 className="kicker">1 · Prerequisite</h3>
+        <h3 className="text-kicker uppercase text-ink-faint">1 · Prerequisite</h3>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {task.prerequisites.map((p) => (
             <Card key={p.skill} padding="md">
@@ -476,7 +476,7 @@ function TaskDetail({
 
       {/* Resources */}
       <section className="mt-10">
-        <h3 className="kicker">2 · Resources</h3>
+        <h3 className="text-kicker uppercase text-ink-faint">2 · Resources</h3>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           {task.resources.map((r) => (
             <Card key={r.name} padding="md">
@@ -514,7 +514,7 @@ function TaskDetail({
 
       {/* The Task */}
       <section className="mt-10 max-w-2xl">
-        <h3 className="kicker">3 · The Task</h3>
+        <h3 className="text-kicker uppercase text-ink-faint">3 · The Task</h3>
         <div className="mt-4 space-y-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-wide text-ink-faint">Scenario</p>
@@ -557,7 +557,7 @@ function TaskDetail({
       <section className="mt-10 grid gap-6 lg:grid-cols-2">
         <div>
           <div className="flex items-center justify-between">
-            <h3 className="kicker">Definition of done</h3>
+            <h3 className="text-kicker uppercase text-ink-faint">Definition of done</h3>
             <Badge tone={dodDone === task.definitionOfDone.length ? "verified" : "neutral"}>
               {dodDone}/{task.definitionOfDone.length}
             </Badge>
@@ -583,7 +583,7 @@ function TaskDetail({
         </div>
         <div>
           <div className="flex items-center justify-between">
-            <h3 className="kicker">Self-critique</h3>
+            <h3 className="text-kicker uppercase text-ink-faint">Self-critique</h3>
             <Badge tone={critiqueDone === task.selfCritique.length ? "verified" : "neutral"}>
               {critiqueDone}/{task.selfCritique.length}
             </Badge>
@@ -611,7 +611,7 @@ function TaskDetail({
 
       {/* Prove it */}
       <section className="mt-10 max-w-2xl">
-        <h3 className="kicker">4 · Prove it</h3>
+        <h3 className="text-kicker uppercase text-ink-faint">4 · Prove it</h3>
         <div className="mt-4 rounded-md border border-line-strong bg-band/60 p-6">
           <Text size="base">{task.presentIt}</Text>
         </div>
@@ -620,7 +620,7 @@ function TaskDetail({
       {/* Stretch */}
       <section className="mt-6 max-w-2xl">
         <div className="rounded-md border border-info/25 bg-info-tint/50 p-5">
-          <p className="kicker text-info">Stretch it further</p>
+          <p className="text-kicker uppercase text-info">Stretch it further</p>
           <Text size="small" className="mt-1.5">
             {task.stretch}
           </Text>

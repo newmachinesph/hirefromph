@@ -104,7 +104,7 @@ function ProgressRing({ value, max }: { value: number; max: number }) {
           cy="50"
           r={r}
           fill="none"
-          stroke="var(--signal)"
+          stroke="var(--primary)"
           strokeWidth="8"
           strokeLinecap="round"
           strokeDasharray={c}
@@ -237,7 +237,7 @@ export function PlanWizard() {
               aria-label={`Question ${step + 1} of ${QUESTIONS.length}`}
             >
               <div
-                className="h-full rounded-pill bg-signal transition-[width] duration-500 ease-out"
+                className="h-full rounded-pill bg-primary transition-[width] duration-500 ease-out"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
