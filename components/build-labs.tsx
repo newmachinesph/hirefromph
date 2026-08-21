@@ -599,7 +599,7 @@ function BuildRealTab({
       <p className="mt-6 text-xs leading-relaxed text-ink-faint">
         What you copy here is yours, your words, from your situation. Rebuild it in{" "}
         {lab.buildIn.tool} rather than living inside this page; that&rsquo;s the version
-        you&rsquo;ll actually send.
+        you&rsquo;ll send.
       </p>
     </div>
   );
