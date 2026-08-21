@@ -121,7 +121,7 @@ export function RateCalculator() {
           <StatStrip className="mt-2">
             <Stat
               value={`$${effHourlyUsd.toFixed(2)} / hr`}
-              label={`About ${peso(effHourlyPhp)} an hour, take-home, across every hour you actually work.`}
+              label={`About ${peso(effHourlyPhp)} an hour, take-home, across every hour you work.`}
             />
           </StatStrip>
           {shrink > 0 && (

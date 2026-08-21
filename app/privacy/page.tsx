@@ -45,7 +45,7 @@ export default function PrivacyPage() {
             Hire From PH has no accounts, no login, no shopping cart, and no sales team.
             There is no database of you here to protect, because we never build
             one. This page says exactly what happens when you visit, in words you
-            can actually check.
+            can check.
           </>
         }
       >

@@ -71,7 +71,7 @@ export function IntegrityOath() {
   return (
     <div className="flex flex-col">
       {/* ---------------------------------------------------------- CLAUSES */}
-      <Field as="group" label="Step 1 · Read each one. Tick only what you can actually keep.">
+      <Field as="group" label="Step 1 · Read each one. Tick only what you can keep.">
         <ul className="mt-5 flex flex-col gap-2">
           {oath.clauses.map((c, idx) => {
             const on = !!clauses[c.id];
@@ -216,9 +216,9 @@ export function IntegrityOath() {
             {!canSign && (
               <p className="mt-3 text-xs text-ink-faint" aria-live="polite">
                 {!allAccepted
-                  ? "Accept every clause you can genuinely keep, all ten, before signing."
+                  ? "Accept every clause you can keep, all ten, before signing."
                   : !commitmentLongEnough
-                    ? "Write your commitment in step 2 first. This is the part that actually holds."
+                    ? "Write your commitment in step 2 first. This is the part that holds."
                     : "Add your name to sign."}
               </p>
             )}

@@ -130,7 +130,7 @@ export function RateWorksheet() {
       <Text size="small" className="mt-4 max-w-2xl leading-relaxed">
         Paste in real listings you found for your role, each normalized to ₱/month
         at full-time hours. Five posts beat any salary guide, because they are what
-        clients are actually paying right now.
+        clients are paying right now.
       </Text>
 
       {/* rows */}

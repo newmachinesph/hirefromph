@@ -85,7 +85,7 @@ export function NicheScorer() {
           type="text"
           value={nicheName}
           onChange={(e) => setNicheName(e.target.value)}
-          placeholder="e.g. AI prompt QA, pet content editing, whatever you're actually considering"
+          placeholder="e.g. AI prompt QA, pet content editing, whatever you're considering"
         />
       </Field>
 
