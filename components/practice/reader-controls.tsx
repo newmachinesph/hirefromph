@@ -51,7 +51,7 @@ export function ReaderControls({ layout = "stack" }: { layout?: "row" | "stack" 
             <label
               key={size.value}
               className={cn(
-                "cursor-pointer rounded-pill border px-4 py-2 text-small transition-colors duration-150 ease-out",
+                "inline-flex min-h-11 cursor-pointer items-center rounded-pill border px-4 py-2 text-small transition-colors duration-150 ease-out",
                 prefs.size === size.value
                   ? "border-primary bg-primary-tint text-primary-deep"
                   : "border-line-strong text-ink-soft hover:border-ink hover:text-ink",
