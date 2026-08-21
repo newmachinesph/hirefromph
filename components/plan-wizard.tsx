@@ -1,15 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
 import { AnimatePresence, MotionConfig, motion, type Variants } from "motion/react";
-import { Check, ChevronLeft, RotateCcw } from "lucide-react";
 import plan from "@/data/plan.json";
 import tracksData from "@/data/tracks.json";
 import site from "@/data/site.json";
 import { usePath } from "@/lib/path-context";
-import { Icon } from "@/components/icon";
-import { Pill } from "@/components/ui";
+import {
+  Badge,
+  Button,
+  Card,
+  Checkbox,
+  ChoiceCard,
+  Field,
+  Heading,
+  Icon,
+  Kicker,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -63,20 +72,6 @@ const NAV_LABEL: Record<string, string> = {
   ...Object.fromEntries(
     site.navGroups.flatMap((g) => g.links).map((n) => [n.href, n.label]),
   ),
-};
-
-const accentSelected: Record<string, string> = {
-  signal: "aria-pressed:border-signal aria-pressed:bg-signal-tint",
-  verified: "aria-pressed:border-verified aria-pressed:bg-verified-tint",
-  caution: "aria-pressed:border-caution aria-pressed:bg-caution-tint",
-  info: "aria-pressed:border-info aria-pressed:bg-info-tint",
-  neutral: "aria-pressed:border-ink aria-pressed:bg-paper-3",
-};
-const iconTone: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep",
-  verified: "bg-verified-tint text-verified",
-  caution: "bg-caution-tint text-caution-text",
-  info: "bg-info-tint text-info",
 };
 
 const stepVariants: Variants = {
@@ -157,13 +152,13 @@ export function PlanWizard() {
     return (
       <div
         aria-hidden
-        className="animate-pulse rounded-[var(--radius-lg)] border border-line bg-paper-2 p-8 lg:p-12"
+        className="animate-pulse rounded-lg border border-line bg-paper p-8 lg:p-12"
       >
-        <div className="mx-auto h-1.5 w-full max-w-2xl rounded-full bg-line" />
+        <div className="mx-auto h-1.5 w-full max-w-2xl rounded-pill bg-line" />
         <div className="mx-auto mt-8 h-8 w-2/3 max-w-2xl rounded bg-line" />
         <div className="mx-auto mt-6 grid max-w-2xl gap-3 sm:grid-cols-2">
-          <div className="h-24 rounded-2xl bg-line/60" />
-          <div className="h-24 rounded-2xl bg-line/60" />
+          <div className="h-24 rounded-md bg-line/60" />
+          <div className="h-24 rounded-md bg-line/60" />
         </div>
       </div>
     );
@@ -215,18 +210,18 @@ export function PlanWizard() {
   const experienceLabel = findLabel("experience", answers.experience);
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 shadow-[var(--shadow-md)] sm:p-10 lg:p-14">
+    <div className="rounded-lg border border-line bg-paper p-6 sm:p-10 lg:p-14">
       <MotionConfig reducedMotion="user">
         {!isResults && (
           <div className="mx-auto max-w-2xl">
             <div className="flex items-center justify-between">
-              <p className="kicker">
+              <Kicker>
                 Question {step + 1} of {QUESTIONS.length}
-              </p>
-              <p className="kicker">{progressPct}%</p>
+              </Kicker>
+              <Kicker>{progressPct}%</Kicker>
             </div>
             <div
-              className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-line"
+              className="mt-3 h-1.5 w-full overflow-hidden rounded-pill bg-line"
               role="progressbar"
               aria-valuenow={step + 1}
               aria-valuemin={1}
@@ -234,7 +229,7 @@ export function PlanWizard() {
               aria-label={`Question ${step + 1} of ${QUESTIONS.length}`}
             >
               <div
-                className="h-full rounded-full bg-signal transition-[width] duration-500 ease-out"
+                className="h-full rounded-pill bg-signal transition-[width] duration-500 ease-out"
                 style={{ width: `${progressPct}%` }}
               />
             </div>
@@ -254,16 +249,16 @@ export function PlanWizard() {
             >
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="kicker">Your personalized plan</p>
-                  <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
-                    30 days for {trackLabel ?? "your online career"}, {" "}
-                    <span className="text-signal">{hoursLabel} a day.</span>
-                  </h3>
+                  <Kicker>Your personalized plan</Kicker>
+                  <Heading level={3} size="h3" balance className="mt-2">
+                    30 days for {trackLabel ?? "your online career"},{" "}
+                    <span className="text-primary">{hoursLabel} a day.</span>
+                  </Heading>
                   {experienceLabel && (
-                    <p className="mt-2 text-sm text-ink-soft">
+                    <Text size="small" className="mt-2">
                       Starting point: <span className="font-semibold text-ink">{experienceLabel}</span>.
                       Check off each day as you go, your progress saves automatically.
-                    </p>
+                    </Text>
                   )}
                 </div>
                 <ProgressRing value={doneCount} max={TOTAL_DAYS} />
@@ -273,77 +268,71 @@ export function PlanWizard() {
                 {plan.weeks.map((week) => {
                   const doneInWeek = week.days.filter((d) => state.planDays[d.day]).length;
                   return (
-                    <div
-                      key={week.week}
-                      className="rounded-2xl border border-line bg-paper p-5 sm:p-6"
-                    >
+                    <Card key={week.week} padding="md">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div>
-                          <p className="kicker">Week {week.week}</p>
-                          <h4 className="mt-1 font-display text-xl leading-tight">
+                          <Kicker>Week {week.week}</Kicker>
+                          <Heading level={4} size="h5" className="mt-1">
                             {week.title}
-                          </h4>
-                          <p className="mt-1 text-sm text-ink-soft">{week.focus}</p>
+                          </Heading>
+                          <Text size="small" className="mt-1">
+                            {week.focus}
+                          </Text>
                         </div>
-                        <Pill tone={doneInWeek === week.days.length ? "verified" : "neutral"}>
+                        <Badge tone={doneInWeek === week.days.length ? "verified" : "neutral"}>
                           {doneInWeek}/{week.days.length} done
-                        </Pill>
+                        </Badge>
                       </div>
                       <ul className="mt-4 divide-y divide-line">
                         {week.days.map((day) => {
                           const checked = !!state.planDays[day.day];
                           return (
                             <li key={day.day} className="flex items-start gap-3 py-3">
-                              <input
-                                type="checkbox"
+                              <Checkbox
                                 id={`plan-day-${day.day}`}
                                 checked={checked}
                                 onChange={() => togglePlanDay(day.day)}
                                 aria-label={`Mark day ${day.day} complete: ${day.task}`}
-                                className="mt-1 h-4 w-4 shrink-0 cursor-pointer accent-signal"
+                                className="flex-1"
+                                label={
+                                  <span
+                                    className={cn(
+                                      "text-small leading-relaxed",
+                                      checked ? "text-ink-faint line-through" : "text-ink",
+                                    )}
+                                  >
+                                    <span className="font-semibold">Day {day.day}.</span> {day.task}
+                                  </span>
+                                }
                               />
-                              <label
-                                htmlFor={`plan-day-${day.day}`}
-                                className={cn(
-                                  "flex-1 cursor-pointer text-sm leading-relaxed",
-                                  checked ? "text-ink-faint line-through" : "text-ink",
-                                )}
-                              >
-                                <span className="font-semibold">Day {day.day}.</span>{" "}
-                                {day.task}
-                              </label>
-                              <Link
+                              <Button
                                 href={day.tool}
-                                className="inline-flex shrink-0 items-center gap-1 rounded-full border border-line-strong bg-paper-2 px-3 py-1.5 text-xs font-semibold text-ink-soft transition-colors hover:border-ink hover:text-ink"
+                                size="sm"
+                                variant="outline"
+                                icon={<Icon name="arrow-up-right" size={12} />}
                               >
-                                <Icon name="arrow-up-right" size={12} />
                                 {NAV_LABEL[day.tool] ?? day.tool}
-                              </Link>
+                              </Button>
                             </li>
                           );
                         })}
                       </ul>
-                    </div>
+                    </Card>
                   );
                 })}
               </div>
 
               <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-line pt-8">
-                <button
-                  type="button"
-                  onClick={changePath}
-                  className="group inline-flex items-center gap-2 rounded-full border border-line-strong bg-paper-2 px-6 py-3 text-sm font-semibold text-ink transition-all duration-300 hover:-translate-y-0.5 hover:border-ink"
-                >
+                <Button variant="outline" onClick={changePath}>
                   Change my path
-                </button>
-                <button
-                  type="button"
+                </Button>
+                <Button
+                  variant="ghost"
                   onClick={startOver}
-                  className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-signal"
+                  icon={<Icon name="rotate-ccw" size={14} />}
                 >
-                  <RotateCcw size={14} />
                   Start over
-                </button>
+                </Button>
               </div>
             </motion.div>
           ) : (
@@ -357,69 +346,46 @@ export function PlanWizard() {
               transition={{ duration: 0.35, ease: EASE }}
               className="mx-auto mt-8 max-w-2xl"
             >
-              <h3 className="font-display text-2xl leading-tight text-balance sm:text-3xl">
+              <Heading level={3} size="h3" balance>
                 {question.q}
-              </h3>
-              <div
-                className={cn(
-                  "mt-6 grid gap-3",
-                  question.options.length > 4
-                    ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-                    : "grid-cols-1 sm:grid-cols-2",
-                )}
-              >
-                {question.options.map((opt) => {
-                  const selected = answers[question.id] === opt.value;
-                  return (
-                    <button
-                      type="button"
-                      key={opt.value}
-                      onClick={() => selectOption(question.id, opt.value)}
-                      aria-pressed={selected}
-                      className={cn(
-                        "group relative flex flex-col gap-3 rounded-2xl border border-line bg-paper p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)]",
-                        accentSelected[opt.accent ?? "neutral"],
-                      )}
-                    >
-                      {opt.icon && (
-                        <span
-                          className={cn(
-                            "grid h-10 w-10 place-items-center rounded-xl",
-                            iconTone[opt.accent ?? "neutral"] ?? "bg-paper-3 text-ink-soft",
-                          )}
-                        >
-                          <Icon name={opt.icon} size={18} />
-                        </span>
-                      )}
-                      <span className="pr-6">
-                        <span className="block font-display text-lg leading-tight">
-                          {opt.label}
-                        </span>
-                        <span className="mt-1 block text-sm leading-snug text-ink-soft">
-                          {opt.desc}
-                        </span>
-                      </span>
-                      <span
-                        className={cn(
-                          "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-verified text-white opacity-0 transition-opacity",
-                          selected && "opacity-100",
-                        )}
-                      >
-                        <Check size={14} />
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-              {step > 0 && (
-                <button
-                  type="button"
-                  onClick={goBack}
-                  className="mt-8 inline-flex items-center gap-1 text-sm font-medium text-ink-faint transition-colors hover:text-ink"
+              </Heading>
+              <Field as="group" label={question.q} hideLabel>
+                <div
+                  className={cn(
+                    "mt-6 grid gap-3",
+                    question.options.length > 4
+                      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+                      : "grid-cols-1 sm:grid-cols-2",
+                  )}
                 >
-                  <ChevronLeft size={14} />
-                  Back
-                </button>
+                  {question.options.map((opt) => (
+                    <ChoiceCard
+                      key={opt.value}
+                      name={question.id}
+                      value={opt.value}
+                      label={opt.label}
+                      description={opt.desc}
+                      icon={
+                        opt.icon ? (
+                          <Icon name={opt.icon} size={18} className={accent(opt.accent).text} />
+                        ) : undefined
+                      }
+                      checked={answers[question.id] === opt.value}
+                      onChange={(value) => selectOption(question.id, value)}
+                    />
+                  ))}
+                </div>
+              </Field>
+              {step > 0 && (
+                <div className="mt-8">
+                  <Button
+                    variant="link"
+                    onClick={goBack}
+                    icon={<Icon name="chevron-left" size={14} />}
+                  >
+                    Back
+                  </Button>
+                </div>
               )}
             </motion.div>
           )}
