@@ -273,7 +273,7 @@ export default function MethodPage() {
           align="center"
           kicker="The method, applied"
           title="Now build something from a blank page."
-          lead="Reading the method changes nothing by itself. The labs are where you actually use it."
+          lead="Reading the method changes nothing by itself. The labs are where you use it."
         />
         <div className="mt-9 flex flex-wrap justify-center gap-3">
           <Button href="/build">Open the build labs</Button>

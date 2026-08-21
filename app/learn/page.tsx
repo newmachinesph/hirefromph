@@ -160,11 +160,11 @@ export default function LearnPage() {
               <SourceList sources={learning.forgettingCurve.sources} className="mt-4" />
             </section>
 
-            {/* ---------------------------------------- WHAT ACTUALLY WORKS */}
+            {/* ---------------------------------------- WHAT REALLY WORKS */}
             <section id="works">
               <SectionHeading
                 kicker="The curriculum"
-                title="What actually works"
+                title="What works"
                 lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
               />
 
