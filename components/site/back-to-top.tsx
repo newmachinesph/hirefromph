@@ -31,7 +31,7 @@ export function BackToTop() {
       tabIndex={visible ? 0 : -1}
       className={cn(
         "fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-pill",
-        "border border-line bg-ink text-on-navy shadow-[var(--shadow-md)]",
+        "border border-line bg-ink text-on-navy",
         "transition-colors duration-150 hover:bg-primary",
         visible ? "opacity-100" : "pointer-events-none opacity-0",
       )}
