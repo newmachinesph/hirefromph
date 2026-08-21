@@ -1,132 +1,103 @@
-import { ExternalLink, TriangleAlert } from "lucide-react";
+import type { Metadata } from "next";
 import sim from "@/data/simulator.json";
 import { CareerSimulator } from "@/components/career-simulator";
-import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
+import {
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+} from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  SourceList,
+  Text,
+} from "@/components/ui";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 
-export const metadata = pageMeta({
-  path: "/simulator",
+const HREF = "/simulator";
+
+export const metadata: Metadata = pageMeta({
+  path: HREF,
   title: "Career Simulator",
   description:
     "Time does not raise your rate. Set your craft, your AI, and what you sell, then watch 36 months of a generic task-taker and 36 months of a specialist diverge. A model, not a prediction, with every assumption tagged.",
 });
 
-function Source({ label, url }: { label: string; url: string }) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
-    >
-      Source: {label}
-      <ExternalLink size={11} aria-hidden className="opacity-60" />
-    </a>
-  );
-}
-
 export default function SimulatorPage() {
   return (
     <>
-      {/* ------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker={sim.hero.kicker}
-        titleWidth="max-w-4xl"
-        title={
-          <>
-            {sim.hero.titleLine1}
-            <br />
-            {sim.hero.titleLine2}
-          </>
-        }
+        title={sim.hero.titleLine1}
+        accent={sim.hero.titleLine2}
         lead={sim.hero.lead}
       >
-        <Reveal i={3}>
-          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-ink-soft">
-            {sim.intro}
-          </p>
-        </Reveal>
+        <Text size="small" className="max-w-2xl">
+          {sim.intro}
+        </Text>
       </PageHero>
 
-      {/* ----------------------------------------------------- MODEL BANNER */}
-      <section className="container-x pb-10">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border-2 border-caution bg-caution-tint p-6 lg:p-8">
-            <div className="flex items-start gap-3">
-              <TriangleAlert
-                size={20}
-                aria-hidden
-                className="mt-0.5 shrink-0 text-caution-text"
-              />
-              <div className="min-w-0">
-                <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
-                  {sim.banner.title}
-                </h2>
-                <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">
-                  {sim.banner.body}
-                </p>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+      {/* ------------------------------------------------------- MODEL BANNER */}
+      <Section spacing="none" className="pb-10">
+        <Callout tone="caution" icon="alert-triangle" title={sim.banner.title}>
+          <Text size="small" className="max-w-3xl">
+            {sim.banner.body}
+          </Text>
+        </Callout>
+      </Section>
 
-      {/* -------------------------------------------------- DATA HONESTY */}
-      <section className="container-x pb-14">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-8 lg:p-10">
-            <Pill tone="neutral">Vendor-grade, not survey-grade</Pill>
-            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h3)] leading-snug text-balance">
-              {sim.dataHonesty.title}
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {sim.dataHonesty.body}
-            </p>
-            <p className="mt-4 max-w-3xl border-l-2 border-signal pl-5 text-sm leading-relaxed text-ink">
-              {sim.dataHonesty.disagreement}
-            </p>
-            <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
-              {sim.dataHonesty.sources.map((s) => (
-                <Source key={s.url} label={s.label} url={s.url} />
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
+      {/* -------------------------------------------------------- DATA HONESTY */}
+      <Section spacing="none" className="pb-14">
+        <Card padding="lg">
+          <Badge>Vendor-grade, not survey-grade</Badge>
+          <Heading level={2} size="h3" className="mt-5 max-w-3xl" balance>
+            {sim.dataHonesty.title}
+          </Heading>
+          <Text size="small" className="mt-4 max-w-3xl">
+            {sim.dataHonesty.body}
+          </Text>
+          <Callout tone="signal" className="mt-4 max-w-3xl">
+            {sim.dataHonesty.disagreement}
+          </Callout>
+          <SourceList sources={sim.dataHonesty.sources} className="mt-5" />
+        </Card>
+      </Section>
 
-      {/* -------------------------------------------------------- SIMULATOR */}
-      <section className="container-x pb-20 lg:pb-24">
-        <Reveal>
+      {/* ----------------------------------------------------------- SIMULATOR */}
+      <Section spacing="none" className="pb-20 lg:pb-24">
+        <Card padding="lg">
           <CareerSimulator />
-        </Reveal>
-      </section>
+        </Card>
+      </Section>
 
-      {/* ------------------------------------------------------------ OUTRO */}
-      <section className="bg-ink py-20 text-paper-2 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="Where this goes next"
-              title={sim.outro.title}
-              className="[&_h2]:text-paper-2"
-            />
-          </Reveal>
-          <Reveal i={1}>
-            <p className="mt-5 max-w-2xl text-paper-2/70">{sim.outro.body}</p>
-          </Reveal>
-          <Reveal i={2}>
-            <div className="mt-9 flex flex-wrap items-center gap-4">
-              <ButtonLink href="/reality" variant="outline" className="border-paper-2/30 bg-transparent text-paper-2 hover:border-paper-2">
-                {sim.outro.realityLabel}
-              </ButtonLink>
-              <ArrowLink href="/niches" className="text-paper-2 hover:text-signal">
-                {sim.outro.nichesLabel}
-              </ArrowLink>
-            </div>
-          </Reveal>
+      {/* --------------------------------------------------------------- OUTRO */}
+      <Section band="tint">
+        <SectionHeading kicker="Where this goes next" title={sim.outro.title} lead={sim.outro.body} />
+        <div className="mt-9 flex flex-wrap items-center gap-4">
+          <Button href="/reality" variant="outline">
+            {sim.outro.realityLabel}
+          </Button>
+          <Button
+            href="/niches"
+            variant="link"
+            iconEnd={<Icon name="arrow-up-right" size={16} />}
+          >
+            {sim.outro.nichesLabel}
+          </Button>
         </div>
-      </section>
+      </Section>
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }

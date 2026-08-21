@@ -1,10 +1,24 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
-import Link from "next/link";
-import { AlertTriangle, ExternalLink, TriangleAlert } from "lucide-react";
 import sim from "@/data/simulator.json";
-import { Pill } from "@/components/ui";
+import { Legend, Line } from "@/components/diagrams/charts";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  ChoiceCard,
+  DiagramFrame,
+  Field,
+  Heading,
+  Icon,
+  Input,
+  Source,
+  Stat,
+  StatStrip,
+  Text,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 import {
   BASE,
@@ -55,20 +69,6 @@ const ITEMS = sim.multipliers.items as Record<
 const SOURCES = sim.multipliers.sources as Record<string, SourceRef>;
 const MILESTONES = [6, 12, 24, 36] as const;
 
-function Source({ label, url }: SourceRef) {
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-center gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
-    >
-      Source: {label}
-      <ExternalLink size={11} aria-hidden className="opacity-60" />
-    </a>
-  );
-}
-
 /* ------------------------------------------------------------------ */
 /*  Controls                                                           */
 /* ------------------------------------------------------------------ */
@@ -93,61 +93,23 @@ function ChoiceGroup({
   compact?: boolean;
 }) {
   return (
-    <fieldset className="rounded-2xl border border-line bg-paper p-5">
-      <legend className="kicker px-1">{legend}</legend>
-      <p className="mt-1 text-xs leading-relaxed text-ink-faint">{help}</p>
-      <div
-        className={cn(
-          "mt-4 grid gap-2",
-          compact && "grid-cols-1 sm:grid-cols-3",
-        )}
-      >
-        {options.map((o) => {
-          const id = `${name}-${o.id}`;
-          const active = value === o.id;
-          return (
-            <div key={o.id}>
-              <input
-                type="radio"
-                id={id}
-                name={name}
-                value={o.id}
-                checked={active}
-                onChange={() => onChange(o.id)}
-                className="peer sr-only"
-              />
-              <label
-                htmlFor={id}
-                className={cn(
-                  "flex h-full cursor-pointer gap-3 rounded-xl border p-3 transition-colors peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-signal",
-                  active
-                    ? "border-ink bg-paper-3"
-                    : "border-line bg-paper-2 hover:border-line-strong",
-                )}
-              >
-                <span
-                  aria-hidden
-                  className={cn(
-                    "is-circle mt-0.5 grid h-4 w-4 shrink-0 place-items-center rounded-full border transition-colors",
-                    active ? "border-ink" : "border-line-strong",
-                  )}
-                >
-                  {active && <span className="is-circle h-2 w-2 rounded-full bg-signal" />}
-                </span>
-                <span className="min-w-0">
-                  <span className="block text-sm font-semibold leading-snug text-ink">
-                    {o.label}
-                  </span>
-                  <span className="mt-1 block text-xs leading-relaxed text-ink-soft">
-                    {o.desc}
-                  </span>
-                </span>
-              </label>
-            </div>
-          );
-        })}
-      </div>
-    </fieldset>
+    <Card padding="sm">
+      <Field as="group" label={legend} hint={help}>
+        <div className={cn("mt-2 grid gap-2", compact && "grid-cols-1 sm:grid-cols-3")}>
+          {options.map((o) => (
+            <ChoiceCard
+              key={o.id}
+              name={name}
+              value={o.id}
+              label={o.label}
+              description={o.desc}
+              checked={value === o.id}
+              onChange={onChange}
+            />
+          ))}
+        </div>
+      </Field>
+    </Card>
   );
 }
 
@@ -155,106 +117,38 @@ function ChoiceGroup({
 /*  Chart, pure inline SVG. No library, no dependency.                */
 /* ------------------------------------------------------------------ */
 
-const W = 780;
-const H = 320;
-const PAD = { l: 56, r: 18, t: 18, b: 34 };
-const IW = W - PAD.l - PAD.r;
-const IH = H - PAD.t - PAD.b;
-
 function TrajectoryChart({
   rows,
   yMax,
-  ariaLabel,
 }: {
   rows: { m: number; base: number; path: number }[];
   yMax: number;
-  ariaLabel: string;
 }) {
-  const x = (m: number) => PAD.l + (m / MONTHS) * IW;
-  const y = (v: number) => PAD.t + IH - (v / yMax) * IH;
-
-  const line = (key: "base" | "path") =>
-    rows.map((r, i) => `${i === 0 ? "M" : "L"}${x(r.m)},${y(r[key])}`).join(" ");
-
-  // Risk band: from the path line down to (1 - 31%) of it. A warning, not a projection.
-  const band = [
-    ...rows.map((r, i) => `${i === 0 ? "M" : "L"}${x(r.m)},${y(r.path)}`),
-    ...[...rows]
-      .reverse()
-      .map((r) => `L${x(r.m)},${y(r.path * (1 - NON_PAYMENT_RISK))}`),
-    "Z",
-  ].join(" ");
-
-  const yTicks = [0, 0.25, 0.5, 0.75, 1].map((f) => f * yMax);
-  const xTicks = [0, 6, 12, 18, 24, 30, 36];
-  const last = rows[rows.length - 1];
-
   return (
-    <svg
-      viewBox={`0 0 ${W} ${H}`}
-      role="img"
-      aria-label={ariaLabel}
-      className="h-auto w-full"
-    >
-      {yTicks.map((v) => (
-        <g key={v}>
-          <line
-            x1={PAD.l}
-            x2={W - PAD.r}
-            y1={y(v)}
-            y2={y(v)}
-            stroke="var(--line)"
-            strokeWidth={1}
-          />
-          <text
-            x={PAD.l - 10}
-            y={y(v) + 4}
-            textAnchor="end"
-            fill="var(--ink-faint)"
-            fontSize={11}
-            fontFamily="var(--font-mono), monospace"
-          >
-            {usd(v)}
-          </text>
-        </g>
-      ))}
-
-      {xTicks.map((m) => (
-        <text
-          key={m}
-          x={x(m)}
-          y={H - 10}
-          textAnchor="middle"
-          fill="var(--ink-faint)"
-          fontSize={11}
-          fontFamily="var(--font-mono), monospace"
-        >
-          {m}
-        </text>
-      ))}
-
-      <path d={band} fill="var(--signal)" opacity={0.1} />
-
-      <path
-        d={line("base")}
-        fill="none"
-        stroke="var(--ink-faint)"
-        strokeWidth={2}
-        strokeDasharray="7 4"
-        strokeLinecap="round"
-      />
-      <path
-        d={line("path")}
-        fill="none"
-        stroke="var(--signal)"
-        strokeWidth={3}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-
-      <circle cx={x(36)} cy={y(last.base)} r={4} fill="var(--ink-faint)" />
-      <circle cx={x(36)} cy={y(last.path)} r={5} fill="var(--signal)" />
-    </svg>
+    <Line
+      xDomain={[0, MONTHS]}
+      yDomain={[0, yMax]}
+      xTickCount={6}
+      yTickCount={4}
+      formatX={(m) => String(m)}
+      formatY={(v) => usd(v)}
+      xTitle="Months from today"
+      band={{ seriesId: "path", drop: NON_PAYMENT_RISK }}
+      series={[
+        {
+          id: "base",
+          label: sim.chart.baselineLabel,
+          dashed: true,
+          points: rows.map((r) => ({ x: r.m, y: r.base })),
+        },
+        {
+          id: "path",
+          label: sim.chart.pathLabel,
+          focal: true,
+          points: rows.map((r) => ({ x: r.m, y: r.path })),
+        },
+      ]}
+    />
   );
 }
 
@@ -438,47 +332,42 @@ export function CareerSimulator() {
           onChange={(v) => setClients(v as Clients)}
         />
 
-        <div className="rounded-2xl border border-line bg-paper p-5">
-          <label htmlFor={`${uid}-fx`} className="kicker">
-            {sim.fx.label}
-          </label>
-          <div className="mt-3 flex items-center gap-3">
-            <input
-              id={`${uid}-fx`}
-              type="number"
-              min={30}
-              max={120}
-              step={0.5}
-              value={fxText}
-              onChange={(e) => setFxText(e.target.value)}
-              onBlur={() => {
-                if (!(Number.isFinite(fxNum) && fxNum > 0))
-                  setFxText(String(DEFAULT_FX));
-              }}
-              className="w-28 rounded-xl border border-line-strong bg-paper-2 px-4 py-2.5 text-sm font-semibold text-ink outline-none focus-visible:border-ink"
-            />
-            <span className="text-sm text-ink-soft">{sim.fx.suffix}</span>
-          </div>
-          <p className="mt-3 text-xs leading-relaxed text-ink-faint">
-            {sim.fx.note}
-          </p>
-        </div>
+        <Card padding="sm">
+          <Field label={sim.fx.label} hint={sim.fx.note}>
+            <div className="flex items-center gap-3">
+              <Input
+                id={`${uid}-fx`}
+                type="number"
+                min={30}
+                max={120}
+                step={0.5}
+                value={fxText}
+                onChange={(e) => setFxText(e.target.value)}
+                onBlur={() => {
+                  if (!(Number.isFinite(fxNum) && fxNum > 0)) setFxText(String(DEFAULT_FX));
+                }}
+                className="w-28"
+              />
+              <Text size="small" as="span">
+                {sim.fx.suffix}
+              </Text>
+            </div>
+          </Field>
+        </Card>
       </div>
 
       {/* -------------------------------------------------------- RESULTS */}
       <div className="flex flex-col gap-6">
         {/* Summary, announced on every change */}
-        <div
-          className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-md)] lg:p-8"
-        >
+        <Card padding="lg">
           <div className="flex flex-wrap items-center justify-between gap-3">
-            <h2 className="font-display text-[length:var(--text-h3)] leading-snug text-ink">
+            <Heading level={2} size="h3">
               {sim.results.title}
-            </h2>
-            <Pill tone="caution">
-              <TriangleAlert size={12} aria-hidden />
+            </Heading>
+            <Badge tone="caution">
+              <Icon name="alert-triangle" size={12} />
               {sim.results.modelPill}
-            </Pill>
+            </Badge>
           </div>
 
           <p
@@ -497,23 +386,18 @@ export function CareerSimulator() {
           <p className="kicker mt-8">{sim.results.milestoneLabel}</p>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
             {MILESTONES.map((m) => (
-              <div
-                key={m}
-                className="rounded-2xl border border-line bg-paper p-4"
-              >
-                <p className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+              <Card key={m} padding="sm">
+                <Text size="caption" tone="faint" className="tabular-nums uppercase tracking-wider">
                   Month {m}
-                </p>
-                <p className="mt-2 font-display text-2xl leading-none text-ink">
-                  {usd(monthlyEffective(config, m))}
-                </p>
-                <p className="mt-1.5 text-sm font-semibold text-verified">
-                  {peso(monthlyEffective(config, m), fx)}
-                </p>
-                <p className="mt-2 text-[11px] leading-snug text-ink-faint">
-                  {usd(monthlyBilled(config, m))} {sim.results.billedNote}
-                </p>
-              </div>
+                </Text>
+                <StatStrip className="mt-2">
+                  <Stat
+                    value={usd(monthlyEffective(config, m))}
+                    label={peso(monthlyEffective(config, m), fx)}
+                    sub={`${usd(monthlyBilled(config, m))} ${sim.results.billedNote}`}
+                  />
+                </StatStrip>
+              </Card>
             ))}
           </div>
 
@@ -531,21 +415,12 @@ export function CareerSimulator() {
               ${rangeLow}–${rangeHigh}/hr
             </span>
           </div>
-        </div>
+        </Card>
 
         {/* AI-with-no-craft callout, the heart of the model */}
         {model.noPremium && (
-          <div className="rounded-[var(--radius-lg)] border-2 border-signal bg-signal-tint p-6 lg:p-8">
-            <div className="flex items-start gap-3">
-              <AlertTriangle
-                size={20}
-                aria-hidden
-                className="mt-1 shrink-0 text-signal-deep"
-              />
-              <div className="min-w-0">
-                <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
-                  {sim.aiCallout.title}
-                </h3>
+          <Callout tone="signal" icon="alert-triangle" title={sim.aiCallout.title}>
+            <div className="min-w-0">
                 <p className="mt-3 text-sm leading-relaxed text-ink-soft">
                   {sim.aiCallout.body}
                 </p>
@@ -564,82 +439,35 @@ export function CareerSimulator() {
                   <Source {...SOURCES["upwork-skills"]} />
                   <Source {...SOURCES["axios-ai"]} />
                 </div>
-                <Link
-                  href="/niches"
-                  className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper-2 transition-colors hover:bg-signal-deep"
-                >
-                  {sim.aiCallout.cta}
-                </Link>
-              </div>
+                <div className="mt-5">
+                  <Button href="/niches">{sim.aiCallout.cta}</Button>
+                </div>
             </div>
-          </div>
+          </Callout>
         )}
 
         {/* Chart */}
-        <figure className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-          <figcaption>
-            <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-ink">
-              {sim.chart.title}
-            </h3>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
-              {sim.chart.lead}
-            </p>
-          </figcaption>
+        <Card padding="lg" as="section">
+          <Legend
+            className="mb-5"
+            items={[
+              { id: "base", label: sim.chart.baselineLabel, kind: "dashed" },
+              { id: "path", label: sim.chart.pathLabel, kind: "line", focal: true },
+              { id: "risk", label: sim.chart.riskBandLabel, kind: "band" },
+            ]}
+          />
 
-          {/* Legend, shape + text, never colour alone */}
-          <ul className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-xs text-ink-soft">
-            <li className="flex items-center gap-2">
-              <svg width="26" height="8" aria-hidden className="shrink-0">
-                <line
-                  x1="0"
-                  y1="4"
-                  x2="26"
-                  y2="4"
-                  stroke="var(--ink-faint)"
-                  strokeWidth="2"
-                  strokeDasharray="7 4"
-                />
-              </svg>
-              {sim.chart.baselineLabel}
-            </li>
-            <li className="flex items-center gap-2">
-              <svg width="26" height="8" aria-hidden className="shrink-0">
-                <line
-                  x1="0"
-                  y1="4"
-                  x2="26"
-                  y2="4"
-                  stroke="var(--signal)"
-                  strokeWidth="3"
-                />
-              </svg>
-              <span className="font-semibold text-ink">
-                {sim.chart.pathLabel}
-              </span>
-            </li>
-            <li className="flex items-center gap-2">
-              <span
-                aria-hidden
-                className="h-3 w-6 shrink-0 rounded-sm bg-signal/10"
-              />
-              {sim.chart.riskBandLabel}
-            </li>
-          </ul>
+          {/* The generated sentence is richer than the frame's title, so it is kept
+              for screen readers; the data table below is the full fallback. */}
+          <p className="sr-only">{model.ariaLabel}</p>
 
-          <div className="mt-4">
-            <TrajectoryChart
-              rows={model.rows}
-              yMax={model.yMax}
-              ariaLabel={model.ariaLabel}
-            />
-          </div>
-          <p className="mt-1 text-center font-mono text-[11px] uppercase tracking-wider text-ink-faint">
-            Months from today
-          </p>
+          <DiagramFrame title={sim.chart.title} caption={sim.chart.lead}>
+            <TrajectoryChart rows={model.rows} yMax={model.yMax} />
+          </DiagramFrame>
 
-          <p className="mt-5 rounded-2xl border border-signal/25 bg-signal-tint p-4 text-xs leading-relaxed text-ink-soft">
-            {sim.chart.riskBandNote}
-          </p>
+          <Callout tone="signal" className="mt-5">
+            <Text size="caption">{sim.chart.riskBandNote}</Text>
+          </Callout>
 
           {/* Data table, the chart must never be the only way to read this */}
           <div className="mt-6 overflow-x-auto">
@@ -649,13 +477,13 @@ export function CareerSimulator() {
               </caption>
               <thead>
                 <tr className="border-b border-line-strong">
-                  <th scope="col" className="py-2 pr-3 font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+                  <th scope="col" className="py-2 pr-3 text-caption uppercase tracking-wider text-ink-faint tabular-nums">
                     {sim.chart.colMonth}
                   </th>
-                  <th scope="col" className="py-2 pr-3 font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+                  <th scope="col" className="py-2 pr-3 text-caption uppercase tracking-wider text-ink-faint tabular-nums">
                     {sim.chart.colBaseline}
                   </th>
-                  <th scope="col" className="py-2 font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+                  <th scope="col" className="py-2 text-caption uppercase tracking-wider text-ink-faint tabular-nums">
                     {sim.chart.colPath}
                   </th>
                 </tr>
@@ -665,7 +493,7 @@ export function CareerSimulator() {
                   <tr key={m} className="border-b border-line">
                     <th
                       scope="row"
-                      className="py-2 pr-3 font-mono text-xs font-normal text-ink-faint"
+                      className="py-2 pr-3 text-caption tabular-nums text-ink-faint"
                     >
                       {m}
                     </th>
@@ -680,30 +508,30 @@ export function CareerSimulator() {
               </tbody>
             </table>
           </div>
-        </figure>
+        </Card>
 
         {/* Multiplier breakdown */}
-        <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 lg:p-8">
-          <h3 className="font-display text-[length:var(--text-h3)] leading-snug text-ink">
+        <Card padding="lg">
+          <Heading level={3} size="h3">
             {sim.multipliers.title}
-          </h3>
+          </Heading>
           <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
             {sim.multipliers.lead}
           </p>
 
           <ul className="mt-6 flex flex-col gap-3">
-            <li className="rounded-2xl border border-line-strong bg-paper p-4">
+            <Card as="li" padding="sm" onBand>
               <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                 <p className="text-sm font-semibold text-ink">
                   {sim.multipliers.baseLabel}
                 </p>
-                <p className="font-display text-lg text-ink">
+                <Text size="lead" tone="ink" as="span" className="font-display">
                   ${BASE[craft]}/hr
-                </p>
+                </Text>
               </div>
               <div className="mt-2 flex flex-wrap items-center gap-2">
-                <Pill tone="caution">{sim.multipliers.tagAssumption}</Pill>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-ink-faint">
+                <Badge tone="caution">{sim.multipliers.tagAssumption}</Badge>
+                <span className="text-caption uppercase tracking-wider text-ink-faint tabular-nums">
                   Vendor-grade · directional · range ${rangeLow}&ndash;$
                   {rangeHigh}
                 </span>
@@ -711,40 +539,37 @@ export function CareerSimulator() {
               <p className="mt-2 text-xs leading-relaxed text-ink-soft">
                 {sim.multipliers.baseNote}
               </p>
-            </li>
+            </Card>
 
             {model.multipliers.map((row) => {
               const item = ITEMS[row.key];
               const neutral = row.value === 1;
               return (
-                <li
-                  key={row.key}
-                  className={cn(
-                    "rounded-2xl border p-4",
-                    neutral ? "border-line bg-paper" : "border-line-strong bg-paper",
-                  )}
-                >
+                <Card key={row.key} as="li" padding="sm" onBand={!neutral}>
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <p className="text-sm font-semibold text-ink">
                       {item.label}
                     </p>
-                    <p
+                    <Text
+                      size="lead"
+                      tone="inherit"
+                      as="span"
                       className={cn(
-                        "font-display text-lg",
+                        "font-display",
                         row.value > 1 && "text-verified",
                         row.value < 1 && "text-signal-deep",
                         neutral && "text-ink-faint",
                       )}
                     >
                       &times;{row.value.toFixed(2)}
-                    </p>
+                    </Text>
                   </div>
                   <div className="mt-2">
-                    <Pill tone={row.sourced ? "verified" : "caution"}>
+                    <Badge tone={row.sourced ? "verified" : "caution"}>
                       {row.sourced
                         ? sim.multipliers.tagSourced
                         : sim.multipliers.tagAssumption}
-                    </Pill>
+                    </Badge>
                   </div>
                   <p className="mt-2 text-xs leading-relaxed text-ink-soft">
                     {item.note}
@@ -756,15 +581,15 @@ export function CareerSimulator() {
                       ))}
                     </div>
                   )}
-                </li>
+                </Card>
               );
             })}
           </ul>
-        </div>
+        </Card>
 
         {/* Reality tax, never hidden, never optional */}
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-6">
+          <Card padding="md">
             <h3 className="font-display text-lg leading-snug text-ink">
               {sim.realityTax.unpaid.title}
             </h3>
@@ -774,18 +599,15 @@ export function CareerSimulator() {
             <div className="mt-4">
               <Source {...sim.realityTax.unpaid.source} />
             </div>
-          </div>
-          <div className="rounded-[var(--radius-lg)] border border-signal/30 bg-signal-tint p-6">
-            <h3 className="font-display text-lg leading-snug text-ink">
-              {sim.realityTax.nonPayment.title}
-            </h3>
+          </Card>
+          <Callout tone="signal" title={sim.realityTax.nonPayment.title}>
             <p className="mt-3 text-sm leading-relaxed text-ink-soft">
               {sim.realityTax.nonPayment.body}
             </p>
             <div className="mt-4">
               <Source {...sim.realityTax.nonPayment.source} />
             </div>
-          </div>
+          </Callout>
         </div>
       </div>
     </div>
