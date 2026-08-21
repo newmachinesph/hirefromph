@@ -41,8 +41,8 @@ const verdictCopy: Record<
   }
 > = {
   clear: {
-    title: "No red flags checked, still verify independently.",
-    body: "A clean checklist isn't proof by itself. Run the research steps below before you commit to anything.",
+    title: "No red flags checked. Verify the lead anyway.",
+    body: "A clean checklist is not proof. Run the research steps below before you send anything or sign anything.",
     tone: "verified",
     icon: "shield-check",
   },
@@ -126,7 +126,7 @@ export function VettingTool() {
       </Field>
 
       <aside className="rounded-md border border-line bg-paper p-6 lg:sticky lg:top-24">
-        <p className="kicker">Live verdict</p>
+        <p className="text-kicker uppercase text-ink-faint">Live verdict</p>
         <div role="status" aria-live="polite" className="mt-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -297,7 +297,7 @@ function EntryCard({ entry }: { entry: Entry }) {
         href={entry.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-signal"
+        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-primary"
       >
         Visit
         <Icon

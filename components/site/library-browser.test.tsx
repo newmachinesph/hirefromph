@@ -66,7 +66,7 @@ describe("LibraryBrowser", () => {
     const user = userEvent.setup();
     render(<LibraryBrowser />);
 
-    await user.type(screen.getByRole("searchbox", { name: /search the library/i }), "japanese");
+    await user.type(screen.getByRole("searchbox", { name: /search the library/i }), "thins");
 
     expect(screen.getAllByRole("link")).toHaveLength(1);
     expect(screen.getByRole("link", { name: /Languages/ })).toBeInTheDocument();

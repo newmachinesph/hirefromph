@@ -241,7 +241,7 @@ export function ApplicationTracker() {
             <Icon name="alert-triangle" size={18} />
           </span>
           <div>
-            <p className="kicker">Follow-up radar</p>
+            <p className="text-kicker uppercase text-ink-faint">Follow-up radar</p>
             <p
               aria-live="polite"
               className={cn(
@@ -250,7 +250,7 @@ export function ApplicationTracker() {
               )}
             >
               {overdue.length === 0
-                ? "Nothing overdue, you're on top of it."
+                ? "No follow-up is overdue right now."
                 : `${overdue.length} application${overdue.length === 1 ? "" : "s"} need${overdue.length === 1 ? "s" : ""} a follow-up now.`}
             </p>
           </div>
@@ -343,7 +343,7 @@ export function ApplicationTracker() {
         onSubmit={handleSubmit}
         className="rounded-lg border border-line bg-paper p-6"
       >
-        <p className="kicker">Log an application</p>
+        <p className="text-kicker uppercase text-ink-faint">Log an application</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <Field label="Company">
             <Input name="company" type="text" required placeholder="Acme Co" />
@@ -406,7 +406,7 @@ export function ApplicationTracker() {
       {/* PIPELINE */}
       <div>
         <div className="flex flex-wrap items-center justify-between gap-3">
-          <p className="kicker">The pipeline, {applications.length} total</p>
+          <p className="text-kicker uppercase text-ink-faint">The pipeline, {applications.length} total</p>
           {applications.length > 0 && (
             <div className="flex flex-wrap items-center gap-2">
               <CopyButton value={tsv} label="Copy pipeline as TSV" />
@@ -423,8 +423,8 @@ export function ApplicationTracker() {
         {applications.length === 0 ? (
           <EmptyState
             icon="inbox"
-            title="Nothing logged yet"
-            body="Add your first application above. The follow-up date is the column that turns this log into a tool."
+            title="No applications logged yet"
+            body="Give every application a row and every “applied” a follow-up date. Log the first one above and the radar starts watching it."
             className="mt-4"
           />
         ) : (

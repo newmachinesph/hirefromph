@@ -2,6 +2,7 @@
 
 import { JourneyStepper, PathChooser } from "@/components/journey";
 import { CardGrid, Section, SectionHeading } from "@/components/layout";
+import { Journal, Streak } from "@/components/practice";
 import {
   Badge,
   Button,
@@ -174,6 +175,10 @@ export default function PathPage() {
         </CardGrid>
 
         <JourneyStepper current={state.stage} className="mt-10" />
+
+        <div className="mt-8">
+          <Streak />
+        </div>
       </Section>
 
       {/* CURRENT STAGE */}
@@ -368,8 +373,8 @@ function NoPathState() {
   return (
     <Section spacing="hero">
       <EmptyState
-        title="You have not chosen a path yet"
-        body="Pick a lane and this page becomes your hub: progress, next moves, and the toolkit for that niche."
+        title="Pick a lane to start this page"
+        body="Choose your niche and this page becomes your hub, with your progress and the next move on it."
         media={
           <Figure
             id="path-dashboard"

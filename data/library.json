@@ -13,7 +13,7 @@
       "href": "/get-hired",
       "group": "path",
       "type": "guide",
-      "desc": "Stage two. Source your own leads, track applications, and close the offer."
+      "desc": "Stage two. Source your own leads and close the first offer."
     },
     {
       "label": "Deliver",
@@ -73,7 +73,7 @@
       "group": "learn",
       "type": "workshop",
       "stage": 1,
-      "desc": "Learn the anatomy of a resume, an SOP, or a tracker, then write yours."
+      "desc": "Learn how a resume and an SOP are built, then write your own."
     },
     {
       "label": "Learn Any Tool",
@@ -111,7 +111,7 @@
       "group": "learn",
       "type": "tool",
       "stage": 1,
-      "desc": "Explore the lanes with pay bands, demand, skills, and how AI changes each."
+      "desc": "Compare the lanes on cited pay bands and what AI has changed."
     },
     {
       "label": "Languages",
@@ -119,7 +119,7 @@
       "group": "learn",
       "type": "guide",
       "stage": 4,
-      "desc": "Japanese, Korean, or Mandarin thins the candidate pool. Where to learn free."
+      "desc": "A second language thins the candidate pool, and PH has free places to learn one."
     },
     {
       "label": "Reality Check",
@@ -155,7 +155,7 @@
       "href": "/simulator",
       "group": "work",
       "type": "data",
-      "desc": "Model 36 months of a task-taker against a specialist. Every assumption tagged."
+      "desc": "Model 36 months of a task-taker against a specialist, with every assumption tagged."
     },
     {
       "label": "Find Work",
@@ -186,7 +186,7 @@
       "group": "work",
       "type": "guide",
       "stage": 5,
-      "desc": "BIR registration, the 8% option, SSS and PhilHealth, and payment rails."
+      "desc": "BIR registration, the 8% option, and the payment rail that protects your rate."
     },
     {
       "label": "Salary Guide",

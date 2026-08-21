@@ -82,8 +82,8 @@ export function NicheExplorer() {
         <EmptyState
           className="mt-6"
           icon="binoculars"
-          title="No niches match this filter yet"
-          body="Clear the filter to see all twenty-two lanes."
+          title="No niches match those filters."
+          body="Clear one and try again."
           action={
             <Button variant="outline" onClick={() => setFilter(null)}>
               Clear filter
@@ -196,7 +196,7 @@ function DetailCard({
           <Icon name={track.icon} size={26} />
         </span>
         <div>
-          <p className={cn("kicker", accent(track.accent).text)}>{track.tagline}</p>
+          <p className={cn("text-kicker uppercase", accent(track.accent).text)}>{track.tagline}</p>
           <h3
             ref={headingRef}
             tabIndex={-1}
@@ -218,14 +218,14 @@ function DetailCard({
       {track.ai && (
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
           <div className="rounded-md border border-line bg-band p-5">
-            <h4 className="kicker flex items-center gap-2">
+            <h4 className="text-kicker uppercase text-ink-faint flex items-center gap-2">
               <Icon name="cpu" size={14} weight="bold" />
               How AI is changing this niche
             </h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{track.ai.change}</p>
           </div>
           <div className="rounded-md border border-verified/30 bg-verified-tint p-5">
-            <h4 className="kicker text-verified">Why you are still needed</h4>
+            <h4 className="text-kicker uppercase text-verified">Why you are still needed</h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink">{track.ai.human}</p>
           </div>
         </div>
@@ -233,7 +233,7 @@ function DetailCard({
 
       <div className="mt-8 grid gap-8 lg:grid-cols-2">
         <div>
-          <h4 className="kicker">Skills you&rsquo;ll build</h4>
+          <h4 className="text-kicker uppercase text-ink-faint">Skills you&rsquo;ll build</h4>
           <div className="mt-3 flex flex-wrap gap-2">
             {track.skills.map((s) => (
               <span
@@ -246,7 +246,7 @@ function DetailCard({
           </div>
         </div>
         <div>
-          <h4 className="kicker">Tools you&rsquo;ll use</h4>
+          <h4 className="text-kicker uppercase text-ink-faint">Tools you&rsquo;ll use</h4>
           <div className="mt-3 flex flex-wrap gap-2">
             {track.tools.map((tool) => (
               <span
@@ -261,14 +261,14 @@ function DetailCard({
       </div>
 
       <div className="mt-8">
-        <h4 className="kicker">Where to learn it</h4>
+        <h4 className="text-kicker uppercase text-ink-faint">Where to learn it</h4>
         <ul className="mt-3 grid gap-2 sm:grid-cols-2">
           {track.learn.map((item) => (
             <li
               key={item.title}
               className="flex items-start gap-3 rounded-sm border border-line bg-band px-4 py-3"
             >
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-sm bg-ink text-paper-2">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-sm bg-ink text-paper">
                 <Icon name={learnIcon[item.type] ?? "sparkles"} size={15} />
               </span>
               <span>
@@ -286,7 +286,7 @@ function DetailCard({
 
       <div className="mt-8 grid gap-6 sm:grid-cols-2">
         <div>
-          <h4 className="kicker">Certifications that help</h4>
+          <h4 className="text-kicker uppercase text-ink-faint">Certifications that help</h4>
           <ul className="mt-3 flex flex-wrap gap-2">
             {track.certs.map((c) => (
               <li key={c}>
@@ -299,7 +299,7 @@ function DetailCard({
           </ul>
         </div>
         <div>
-          <h4 className="kicker">Who hires this</h4>
+          <h4 className="text-kicker uppercase text-ink-faint">Who hires this</h4>
           <p className="mt-3 text-sm leading-relaxed text-ink-soft">{track.clients}</p>
         </div>
       </div>
@@ -327,7 +327,7 @@ type Regions = NonNullable<Extract<Track, { regions: unknown }>["regions"]>;
 function RegionGuide({ regions }: { regions: Regions }) {
   return (
     <section className="mt-10 border-t border-line pt-8">
-      <h4 className="kicker">{regions.kicker}</h4>
+      <h4 className="text-kicker uppercase text-ink-faint">{regions.kicker}</h4>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{regions.lead}</p>
 
       <p className="mt-4 max-w-3xl border-l-2 border-line-strong bg-band px-4 py-3 text-sm leading-relaxed text-ink">
@@ -349,7 +349,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
             </h5>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft">{r.different}</p>
 
-            <h6 className="kicker mt-5">What to learn, in order</h6>
+            <h6 className="text-kicker uppercase text-ink-faint mt-5">What to learn, in order</h6>
             <ol className="mt-2 grid gap-1.5">
               {r.learn.map((step, i) => (
                 <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
@@ -361,7 +361,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
               ))}
             </ol>
 
-            <h6 className="kicker mt-5">Read it from the source</h6>
+            <h6 className="text-kicker uppercase text-ink-faint mt-5">Read it from the source</h6>
             <ul className="mt-2 flex flex-wrap gap-2">
               {r.sources.map((s) => (
                 <li key={s.url}>
@@ -390,7 +390,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
         ))}
       </div>
 
-      <h4 className="kicker mt-8">How to actually start</h4>
+      <h4 className="text-kicker uppercase text-ink-faint mt-8">How to actually start</h4>
       <ol className="mt-3 grid gap-2">
         {regions.howToStart.map((step, i) => (
           <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
