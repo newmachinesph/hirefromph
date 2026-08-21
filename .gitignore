@@ -46,3 +46,6 @@ next-env.d.ts
 .claude
 # SDD scratch
 .superpowers/
+
+# generated photoreal sources (regenerable, large)
+design/images/raw/

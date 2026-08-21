@@ -1,0 +1,101 @@
+[
+  {
+    "id": "home-hero",
+    "where": "/ hero",
+    "ratio": "4:5",
+    "size": "1024x1536",
+    "alt": "A woman at a corner desk in a small apartment reviews a spreadsheet on a second monitor, a headset resting beside her laptop.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipina in her late twenties at a corner desk in a small apartment, reviewing a spreadsheet on a second monitor; her laptop sits open beside it and a wired headset rests on the desk next to a mug. She leans slightly toward the monitor, one hand on the mouse, expression focused and neutral. Composition: vertical 4:5 frame; the subject and desk occupy the right two-thirds, while the left third is a plain, softly lit wall in a pale neutral tone with no objects, kept completely clean for headline text. The monitor shows only a blurred grid of soft cells, nothing legible. Lens and light: 50mm at f/2.8, soft daylight from a window camera-left raking across the desk, gentle falloff into the room, muted green of a small plant and warm wood of the desk for colour. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "home-standard",
+    "where": "/ standard section",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "Hands annotate printed notes with a pen beside an open laptop.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A real Philippine home setting, tidy but lived-in; the person is working, not posing, and their face is outside the frame. Scene: a close, slightly overhead view of a pair of Filipino hands annotating printed notes with a pen beside an open laptop. The laptop shows a source document rendered as soft blurred paragraphs, not legible. The printed pages carry only faint out-of-focus lines and a few pen marks, no readable words. A highlighter and a folded pair of reading glasses sit nearby on a plain wooden table. Composition: horizontal 3:2 frame, hands and paper in the lower-left, the laptop edge entering from the upper-right on a slight diagonal, a little breathing room at the top. Lens and light: 35mm at f/2.5 from about 45 degrees above, soft daylight from a jalousie window to the right, warm paper tones against a cooler table surface, honest skin texture on the hands. Negatives: no lens flare, no neon, no screen-glow, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "stage-start",
+    "where": "/start",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A young man sets up a second-hand monitor and tests a headset in a small bedroom office with jalousie windows.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipino man in his early twenties in a small bedroom office, plugging a cable into a second-hand monitor on a compact plywood desk while holding one ear cup of a headset to his head to test it. Cable ties, a screwdriver, and the monitor's cardboard box sit on the floor; a single bed with a folded blanket is partly visible behind him. Jalousie windows let in daylight. Composition: horizontal 3:2 frame, subject slightly right of centre in three-quarter profile, the monitor's dark blank screen between him and the camera, modest headroom, a little clear wall on the left. Lens and light: 35mm at f/2.8, mid-morning daylight through the jalousies camera-left with faint slat shadows on the wall, off-white paint and plywood giving a warm neutral palette. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens, boxes, and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "stage-get-hired",
+    "where": "/get-hired",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A person sits upright at a desk in front of a plain wall during a video call on a laptop, an open notebook beside them.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipino person in their thirties seated at a plain desk in front of a neutral, uncluttered wall, in the middle of a video interview on a laptop. They wear a simple collared shirt, sit upright with calm posture, hands loosely folded, listening attentively. An open notebook with a pen lies beside the laptop; its pages show only faint indistinct handwriting. The laptop screen, seen at an angle, displays a blurred video-call layout of soft rectangles, nothing legible. Composition: horizontal 3:2 frame, subject centred to slightly left, photographed from beside the laptop so we see their profile and the screen edge, generous plain wall on the right. Lens and light: 50mm at f/2.8, soft daylight from a window to the front-left, no ring light, no catchlight ring in the eyes, neutral-warm skin tones. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "stage-deliver",
+    "where": "/deliver",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A person updates a tracker on a laptop at a home desk, sticky notes on the wall and a cup of coffee nearby.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipino person in their late twenties at a home desk updating a tracker on a laptop, the screen showing only blurred rows and columns of soft colour blocks. On the wall beside them a loose cluster of plain pastel sticky notes, blank or with indistinct scribbles, none legible. A ceramic cup of coffee steams gently near the trackpad; a small desk lamp is switched off. Composition: horizontal 3:2 frame, subject on the left third in three-quarter view typing, the sticky-note wall filling the right half at a slight angle, the laptop screen turned partly away from the camera. Lens and light: 35mm at f/2.8, late-afternoon window light from camera-right, warm off-white wall, honest shadows under the desk, no artificial light. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens, sticky notes, and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "stage-level-up",
+    "where": "/level-up",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A person studies handwritten flashcards beside a laptop showing a workflow canvas, a capiz window behind them.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipino person in their thirties at a dining-table workspace in a provincial home, a small stack of handwritten index-card flashcards fanned beside one hand, a single card held up for study; any characters on the cards stay soft and illegible brush-like marks. A laptop in front of them shows an automation workflow canvas rendered as an abstract arrangement of connected rounded nodes and thin lines, with no readable labels. A capiz-shell window behind them diffuses the light. Composition: horizontal 3:2 frame, subject slightly right of centre, laptop lower-left, the capiz window as a bright soft backdrop, a little clear table surface in the foreground. Lens and light: 50mm at f/2.5, diffused daylight through the capiz panes, pale amber highlights on old wood, neutral skin tones. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens and cards show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "stage-own",
+    "where": "/own",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A person in a co-working space reads a document on a tablet at a shared table.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipino person in their late thirties at a shared table in a bright Cebu co-working space, reading an invoice on a tablet held at a slight angle. The tablet displays only an abstract document layout of soft grey blocks and one faint accent bar, with no readable figures, names, or totals, so it could not be mistaken for a real document. A closed laptop, a glass of water, and a notebook sit nearby; blurred co-workers and potted plants fill the background. Composition: horizontal 3:2 frame, subject centred-right in three-quarter view, the tablet in the lower half of frame, airy depth behind them, clear space on the left. Lens and light: 35mm at f/2.8, large daylight windows camera-left, white walls, pale wood tables, calm neutral grade. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "cta-band",
+    "where": "/ CTA background",
+    "ratio": "21:9",
+    "size": "1536x1024",
+    "alt": "A quiet provincial street at dusk with warm light in the windows of low houses.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm prime lens, available light only, moderate depth of field, honest texture in concrete, wood, and foliage, neutral-warm colour grade with documentary restraint. A real provincial Philippine setting, tidy but lived-in. Scene: a quiet provincial street at dusk, low one- and two-storey houses with warm incandescent light in the windows, a small sari-sari store awning at the far left, a couple of tricycles parked and still, the pavement faintly catching the sky. No prominent people; at most one or two small distant figures walking away from the camera. Composition: calm horizontal frame, the horizon and the line of rooftops sitting in the middle band of the image, power lines and trees kept toward the edges, the centre uncluttered and restful because the image will be cropped to a wide 21:9 strip and shown under a dark blue overlay. Lens and light: 35mm at f/4, blue-hour ambient light balancing the warm house windows, gentle tonal range, soft highlights, no harsh light sources pointed at the camera. Negatives: no lens flare, no neon, no signage, no readable text anywhere, no watermarks, no logos, no flags, no stock-photo gloss, no HDR look, no extra limbs on any distant figure."
+  },
+  {
+    "id": "library-hero",
+    "where": "/library",
+    "ratio": "3:1",
+    "size": "1536x1024",
+    "alt": "Overhead view of a desk with an open notebook, a laptop, a phone, a printed checklist, and a cup of coffee.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm prime lens, natural window light only, moderate depth of field, honest texture in paper, wood, and ceramic, neutral-warm colour grade with documentary restraint. A real Philippine home desk, tidy but lived-in, with no people in frame. Scene: a straight-down overhead view of a wooden desk holding an open notebook with a pen, a laptop whose screen shows only a soft blurred interface, a phone lying face-down, a printed checklist whose tick boxes and lines stay out of focus and illegible, and a small cup of coffee on a saucer. Composition: horizontal frame with the objects arranged in a loose horizontal band across the middle third, leaving the top and bottom as plain desk surface, because the image will be cropped to a wide 3:1 strip; nothing important near the top or bottom edges. Lens and light: 35mm at f/4 directly overhead, soft morning daylight from one side producing gentle long shadows, paper white against warm mid-tone wood, slight grain. Negatives: no lens flare, no neon, no screen-glow, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no hands or people."
+  },
+  {
+    "id": "og-default",
+    "where": "Open Graph default image",
+    "ratio": "1200x630",
+    "size": "1536x1024",
+    "alt": "A woman at a corner desk reviews a spreadsheet on a second monitor, a headset resting beside her laptop.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 35mm or 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest skin and fabric texture, neutral-warm colour grade with documentary restraint. A Filipino subject in a real Philippine setting, tidy but lived-in. The subject is working, not posing, and never looks at the camera. Scene: a Filipina in her late twenties at a corner desk in a small apartment, reviewing a spreadsheet on a second monitor, her laptop open beside it and a wired headset resting on the desk next to a mug, one hand on the mouse, expression focused and neutral. Composition: horizontal frame, subject and desk confined to the right half, the left half a plain softly lit pale wall with no objects, kept completely clean because a wordmark will be placed there later; keep all key content inside the central vertical band so a 1.9:1 crop loses nothing at the top or bottom. The monitor shows only a blurred grid of soft cells. Lens and light: 50mm at f/2.8, window light from camera-left, warm wood desk, a small plant, neutral-warm grade. Negatives: no lens flare, no neon, no screen-glow on faces, no one smiling at the camera, no watermarks, no readable text anywhere (screens and paper show only blurred or abstract shapes), no logos, no flags, no stock-photo gloss, no extra fingers or limbs, no distorted hands."
+  },
+  {
+    "id": "path-dashboard",
+    "where": "/path empty state",
+    "ratio": "3:2",
+    "size": "1536x1024",
+    "alt": "A blank notebook and pen beside a closed laptop on a wooden desk in morning light.",
+    "caption": "Illustrative image",
+    "prompt": "Photoreal editorial photography, shot on a 50mm prime lens, natural window light only, shallow but not creamy depth of field, honest texture in paper, wood, and brushed metal, neutral-warm colour grade with documentary restraint. A real Philippine home, tidy but lived-in, with no people in frame. Scene: a blank open notebook with clean unlined pages and a simple pen resting across it, placed beside a closed laptop on a plain wooden desk, morning light coming through a nearby window. A glass of water and the edge of a woven abaca placemat add quiet texture. Nothing is written anywhere; the pages are empty. Composition: horizontal 3:2 frame at a gentle three-quarter angle, notebook in the foreground left-of-centre, the closed laptop behind and to the right, uncluttered negative space above for a short heading. Lens and light: 50mm at f/2.8, soft low-angle morning daylight from camera-right casting long gentle shadows across the desk, cool window light against warm wood. Negatives: no lens flare, no neon, no watermarks, no readable text anywhere, no logos, no flags, no stock-photo gloss, no hands or people, no open screens."
+  }
+]
