@@ -10,8 +10,8 @@ export default function manifest(): MetadataRoute.Manifest {
       "Open learning for Filipino online professionals. Build the online career you actually own.",
     start_url: "/",
     display: "standalone",
-    background_color: "#F6F7F9",
-    theme_color: "#3A35D6",
+    background_color: "#FFFFFF",
+    theme_color: "#4B4EF6",
     icons: [
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "any" },
       { src: "/icon.svg", sizes: "any", type: "image/svg+xml", purpose: "maskable" },
