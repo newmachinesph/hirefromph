@@ -23,6 +23,7 @@ import {
 } from "@/components/ui";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 
 const HREF = "/resources";
 
@@ -98,7 +99,7 @@ export default function ResourcesPage() {
           {hero.creed}
         </Callout>
         <FreshnessNote date={resources.lastVerified} />
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/resources" /></Section> */}
+        <Section spacing="none"><Tldr route="/resources" /></Section>
       </PageHero>
 
       {/* -------------------------------------------------------------- JUDGE */}
@@ -221,7 +222,7 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/resources" /> */}
+      <PracticeFooter route="/resources" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

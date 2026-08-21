@@ -30,6 +30,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/salary";
@@ -69,7 +70,7 @@ export default function SalaryPage() {
           {hero.creed}
         </Callout>
         <FreshnessNote date={salary.lastVerified} />
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/salary" /></Section> */}
+        <Section spacing="none"><Tldr route="/salary" /></Section>
       </PageHero>
 
       <Section>
@@ -330,7 +331,7 @@ export default function SalaryPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/salary" /> */}
+      <PracticeFooter route="/salary" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

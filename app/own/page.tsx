@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { StagePage } from "@/components/journey";
 import { pageMeta } from "@/lib/meta";
+import { Section } from "@/components/layout";
+import { PracticeFooter, Tldr } from "@/components/practice";
 
 export const metadata: Metadata = pageMeta({
   path: "/own",
@@ -12,9 +14,9 @@ export const metadata: Metadata = pageMeta({
 export default function Page() {
   return (
     <>
-      {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/own" /></Section> */}
+      <Section spacing="none"><Tldr route="/own" /></Section>
       <StagePage id="own" />
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/own" /> */}
+      <PracticeFooter route="/own" />
     </>
   );
 }

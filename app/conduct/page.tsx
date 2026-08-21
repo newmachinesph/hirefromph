@@ -21,6 +21,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/conduct";
@@ -49,7 +50,7 @@ export default function ConductPage() {
         <Text size="small" className="max-w-2xl">
           {conduct.whyItMatters}
         </Text>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/conduct" /></Section> */}
+        <Section spacing="none"><Tldr route="/conduct" /></Section>
       </PageHero>
 
       {/* --------------------------------------------------------- PRINCIPLES */}
@@ -235,7 +236,7 @@ export default function ConductPage() {
         </Callout>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/conduct" /> */}
+      <PracticeFooter route="/conduct" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

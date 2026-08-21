@@ -21,6 +21,7 @@ import {
 } from "@/components/ui";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 
 const HREF = "/legit";
 
@@ -47,7 +48,7 @@ export default function LegitPage() {
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
         </Callout>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/legit" /></Section> */}
+        <Section spacing="none"><Tldr route="/legit" /></Section>
       </PageHero>
 
       {/* ---------------------------------------------------------------- WHY */}
@@ -172,7 +173,7 @@ export default function LegitPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/legit" /> */}
+      <PracticeFooter route="/legit" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

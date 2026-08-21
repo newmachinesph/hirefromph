@@ -25,6 +25,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/learn";
@@ -88,7 +89,7 @@ export default function LearnPage() {
         <Callout tone="signal" className="max-w-2xl">
           {learning.creed}
         </Callout>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/learn" /></Section> */}
+        <Section spacing="none"><Tldr route="/learn" /></Section>
       </PageHero>
 
       <Section>
@@ -356,7 +357,7 @@ export default function LearnPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/learn" /> */}
+      <PracticeFooter route="/learn" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

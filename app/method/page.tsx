@@ -24,6 +24,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/method";
@@ -72,7 +73,7 @@ export default function MethodPage() {
         accent={titleMain}
         lead={doctrine.creed}
       >
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/method" /></Section> */}
+        <Section spacing="none"><Tldr route="/method" /></Section>
       </PageHero>
 
       <Section>
@@ -283,7 +284,7 @@ export default function MethodPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/method" /> */}
+      <PracticeFooter route="/method" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

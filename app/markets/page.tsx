@@ -22,6 +22,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr, TimezoneOverlap } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/markets";
@@ -61,7 +62,7 @@ export default function MarketsPage() {
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
         </Callout>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/markets" /></Section> */}
+        <Section spacing="none"><Tldr route="/markets" /></Section>
       </PageHero>
 
       {/* ------------------------------------------------------------ OVERLAP */}
@@ -70,7 +71,7 @@ export default function MarketsPage() {
         <Callout tone="verified" className="mt-8 max-w-3xl">
           {overlap.note}
         </Callout>
-        {/* practice: TimezoneOverlap — Phase 6 mounts <TimezoneOverlap regions={regions.items} /> here */}
+        <TimezoneOverlap />
       </Section>
 
       {/* ------------------------------------------------------------ REGIONS */}
@@ -228,7 +229,7 @@ export default function MarketsPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/markets" /> */}
+      <PracticeFooter route="/markets" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />
