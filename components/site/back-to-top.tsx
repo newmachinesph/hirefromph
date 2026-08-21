@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
+import { Icon } from "@/components/ui";
 import { cn } from "@/lib/utils";
 
-/** Pixels scrolled before the button fades in. */
+/** Pixels scrolled before the button appears. */
 const SHOW_AFTER = 600;
 
 export function BackToTop() {
@@ -18,9 +18,7 @@ export function BackToTop() {
   }, []);
 
   function toTop() {
-    const reduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
   }
 
@@ -32,15 +30,13 @@ export function BackToTop() {
       aria-hidden={!visible}
       tabIndex={visible ? 0 : -1}
       className={cn(
-        "fixed bottom-6 right-6 z-40 grid h-11 w-11 place-items-center rounded-full",
-        "border border-line-strong bg-ink text-paper-2 shadow-lg",
-        "transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]",
-        visible
-          ? "opacity-100"
-          : "pointer-events-none translate-y-2 opacity-0",
+        "fixed bottom-6 right-6 z-40 grid h-12 w-12 place-items-center rounded-pill",
+        "border border-line bg-ink text-on-navy shadow-[var(--shadow-md)]",
+        "transition-colors duration-150 hover:bg-primary",
+        visible ? "opacity-100" : "pointer-events-none opacity-0",
       )}
     >
-      <ArrowUp size={18} />
+      <Icon name="arrow-up" size={18} />
     </button>
   );
 }
