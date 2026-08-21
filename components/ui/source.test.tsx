@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Source, SourceList } from "@/components/ui/source";
+import { Stat, StatStrip } from "@/components/ui/stat";
 
 describe("Source", () => {
   it("renders the label as a safe external link", () => {
@@ -39,5 +40,22 @@ describe("Source", () => {
       />,
     );
     expect(screen.getAllByRole("listitem")).toHaveLength(2);
+  });
+});
+
+describe("Stat", () => {
+  it("renders inside its own dl when used standalone", () => {
+    const { container } = render(<Stat value="5" label="stages" />);
+    expect(container.querySelector("dl > div > dt")).not.toBeNull();
+  });
+
+  it("StatStrip renders exactly one dl for multiple Stats", () => {
+    const { container } = render(
+      <StatStrip>
+        <Stat value="5" label="stages" />
+        <Stat value="12" label="days" />
+      </StatStrip>,
+    );
+    expect(container.querySelectorAll("dl")).toHaveLength(1);
   });
 });
