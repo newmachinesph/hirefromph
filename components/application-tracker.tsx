@@ -422,6 +422,7 @@ export function ApplicationTracker() {
 
         {applications.length === 0 ? (
           <EmptyState
+            level={2}
             icon="inbox"
             title="No applications logged yet"
             body="Give every application a row and every “applied” a follow-up date. Log the first one above and the radar starts watching it."

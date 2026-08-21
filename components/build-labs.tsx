@@ -199,7 +199,7 @@ export function BuildLabs() {
                         {lab.difficulty}
                       </Badge>
                     </div>
-                    <h3 className="mt-5 font-display text-xl leading-tight">{lab.name}</h3>
+                    <h2 className="mt-5 font-display text-xl leading-tight">{lab.name}</h2>
                     <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
                       {lab.outcome}
                     </p>

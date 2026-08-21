@@ -385,6 +385,7 @@ function NoPathState() {
   return (
     <Section spacing="hero">
       <EmptyState
+        level={1}
         title="Pick a lane to start this page"
         body="Choose your niche and this page becomes your hub, with your progress and the next move on it."
         media={

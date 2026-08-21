@@ -23,7 +23,7 @@ export function Stat({ value, label, sub, source, className }: StatProps) {
       {/* dt precedes dd in the DOM (valid dl); flex order keeps the value on top. */}
       <dt className="order-2 text-small font-medium text-ink-soft">{label}</dt>
       <dd className="order-1 font-display text-h3 tabular-nums text-ink">{value}</dd>
-      {sub && <dd className="order-3 text-caption text-ink-faint">{sub}</dd>}
+      {sub && <dd className="order-3 text-caption text-ink-soft">{sub}</dd>}
       {source && (
         <dd className="order-4">
           <Source {...source} />
@@ -31,8 +31,10 @@ export function Stat({ value, label, sub, source, className }: StatProps) {
       )}
     </div>
   );
-  // Outside a StatStrip, dt/dd need their own dl ancestor to stay valid HTML.
-  return inStrip ? body : <dl className="m-0">{body}</dl>;
+  // Every Stat owns its dl so wrappers (Card, grid items) can never break the
+  // dl > dt/dd contract; the strip just lays the dls out.
+  void inStrip;
+  return <dl className="m-0">{body}</dl>;
 }
 
 /** A quiet inline row of structural facts. No cute labels, no invented counts. */
@@ -44,8 +46,8 @@ export function StatStrip({
   className?: string;
 }) {
   return (
-    <dl className={cn("grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-flow-col lg:auto-cols-fr", className)}>
+    <div className={cn("grid grid-cols-2 gap-x-8 gap-y-6 lg:grid-flow-col lg:auto-cols-fr", className)}>
       <StatStripContext.Provider value={true}>{children}</StatStripContext.Provider>
-    </dl>
+    </div>
   );
 }

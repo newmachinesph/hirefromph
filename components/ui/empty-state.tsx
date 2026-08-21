@@ -1,11 +1,13 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { Heading } from "./heading";
+import { Heading, type HeadingLevel } from "./heading";
 import { Icon } from "./icon";
 import { Text } from "./text";
 
 export type EmptyStateProps = {
   title: string;
+  /** Heading level — pass 1 when the empty state is the page's main heading. */
+  level?: HeadingLevel;
   body?: ReactNode;
   /** Kebab name from ICON_NAMES. */
   icon?: string;
@@ -17,6 +19,7 @@ export type EmptyStateProps = {
 
 export function EmptyState({
   title,
+  level = 3,
   body,
   icon,
   action,
@@ -36,7 +39,7 @@ export function EmptyState({
           <Icon name={icon} size={24} weight="duotone" />
         </span>
       )}
-      <Heading level={3} size="h5">
+      <Heading level={level} size="h5">
         {title}
       </Heading>
       {body && (
