@@ -1,15 +1,6 @@
 "use client";
 
-import { useMemo, useState, type FormEvent, type ReactNode } from "react";
-import Link from "next/link";
-import {
-  AlertTriangle,
-  ArrowUpRight,
-  Inbox,
-  Plus,
-  Trash2,
-  TrendingDown,
-} from "lucide-react";
+import { useMemo, useState, type FormEvent } from "react";
 import {
   APP_STATUSES,
   type AppStatus,
@@ -17,7 +8,20 @@ import {
   usePath,
 } from "@/lib/path-context";
 import { CopyButton } from "@/components/copy-button";
-import { Pill } from "@/components/ui";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  EmptyState,
+  Field,
+  Heading,
+  Icon,
+  Input,
+  Select,
+  Text,
+  Textarea,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 const STATUS_LABEL: Record<AppStatus, string> = {
@@ -42,9 +46,6 @@ const STATUS_TONE: Record<
 const FOLLOW_UP_DEFAULT_DAYS = 4;
 const LOW_REPLY_RATE_SAMPLE = 20;
 const LOW_REPLY_RATE_THRESHOLD = 0.1;
-
-const inputCls =
-  "w-full rounded-xl border border-line-strong bg-paper px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-faint focus:border-ink";
 
 /** Local calendar date, matches what <input type="date"> shows and returns. */
 function todayISO(): string {
@@ -150,14 +151,14 @@ export function ApplicationTracker() {
   if (!hydrated) {
     return (
       <div aria-hidden className="animate-pulse space-y-6">
-        <div className="h-28 rounded-2xl bg-line/60" />
+        <div className="h-28 rounded-lg bg-line/60" />
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
           {Array.from({ length: 6 }).map((_, i) => (
-            <div key={i} className="h-20 rounded-2xl bg-line/60" />
+            <div key={i} className="h-20 rounded-lg bg-line/60" />
           ))}
         </div>
-        <div className="h-64 rounded-2xl bg-line/60" />
-        <div className="h-48 rounded-2xl bg-line/60" />
+        <div className="h-64 rounded-lg bg-line/60" />
+        <div className="h-48 rounded-lg bg-line/60" />
       </div>
     );
   }
@@ -202,22 +203,22 @@ export function ApplicationTracker() {
       {/* FOLLOW-UP RADAR */}
       <div
         className={cn(
-          "rounded-2xl border p-6",
+          "rounded-lg border p-6",
           overdue.length > 0
-            ? "border-signal/30 bg-signal-tint"
-            : "border-line bg-paper-2",
+            ? "border-primary/30 bg-primary-tint"
+            : "border-line bg-paper",
         )}
       >
         <div className="flex items-center gap-3">
           <span
             className={cn(
-              "grid h-10 w-10 shrink-0 place-items-center rounded-full",
+              "grid h-10 w-10 shrink-0 place-items-center rounded-pill",
               overdue.length > 0
-                ? "bg-signal text-white"
+                ? "bg-primary text-white"
                 : "bg-verified-tint text-verified",
             )}
           >
-            <AlertTriangle size={18} aria-hidden />
+            <Icon name="alert-triangle" size={18} />
           </span>
           <div>
             <p className="kicker">Follow-up radar</p>
@@ -225,7 +226,7 @@ export function ApplicationTracker() {
               aria-live="polite"
               className={cn(
                 "mt-0.5 font-display text-lg leading-tight",
-                overdue.length > 0 ? "text-signal-deep" : "text-ink",
+                overdue.length > 0 ? "text-primary-deep" : "text-ink",
               )}
             >
               {overdue.length === 0
@@ -242,7 +243,7 @@ export function ApplicationTracker() {
               return (
                 <li
                   key={a.id}
-                  className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-signal/25 bg-paper-2 px-4 py-3"
+                  className="flex flex-wrap items-center justify-between gap-3 rounded-md border border-primary/25 bg-paper px-4 py-3"
                 >
                   <div>
                     <p className="text-sm font-semibold text-ink">
@@ -254,7 +255,7 @@ export function ApplicationTracker() {
                         : `${diff} day${diff === 1 ? "" : "s"} overdue`}
                     </p>
                   </div>
-                  <select
+                  <Select
                     aria-label={`Update status for ${a.company}, ${a.role}`}
                     value={a.status}
                     onChange={(e) =>
@@ -262,14 +263,14 @@ export function ApplicationTracker() {
                         status: e.target.value as AppStatus,
                       })
                     }
-                    className="rounded-full border border-line-strong bg-paper px-3 py-1.5 text-xs font-semibold text-ink"
+                    className="max-w-[10rem]"
                   >
                     {APP_STATUSES.map((s) => (
                       <option key={s} value={s}>
                         {STATUS_LABEL[s]}
                       </option>
                     ))}
-                  </select>
+                  </Select>
                 </li>
               );
             })}
@@ -279,7 +280,7 @@ export function ApplicationTracker() {
 
       {/* LIVE STATS */}
       <div>
-        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3 lg:grid-cols-6">
+        <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-line bg-line sm:grid-cols-3 lg:grid-cols-6">
           {[
             { label: "Applied", value: String(stats.total) },
             { label: "Replies", value: String(stats.replied) },
@@ -291,7 +292,7 @@ export function ApplicationTracker() {
               value: `${Math.round(stats.interviewRate * 100)}%`,
             },
           ].map((s) => (
-            <div key={s.label} className="bg-paper-2 p-4">
+            <div key={s.label} className="bg-paper p-4">
               <dt className="text-xs font-medium text-ink-faint">{s.label}</dt>
               <dd className="mt-1 font-display text-2xl text-ink">{s.value}</dd>
             </div>
@@ -299,139 +300,87 @@ export function ApplicationTracker() {
         </dl>
 
         {showDiagnostic && (
-          <div className="mt-4 flex items-start gap-3 rounded-2xl border border-caution/30 bg-caution-tint px-5 py-4">
-            <TrendingDown
-              size={18}
-              className="mt-0.5 shrink-0 text-caution-text"
-              aria-hidden
-            />
-            <p className="text-sm leading-relaxed text-[#6b4d00]">
+          <Callout tone="caution" icon="trending-down" className="mt-4">
+            <p>
               Reply rate is under 10% over {stats.total} applications, at this
               sample size that&rsquo;s not bad luck, it&rsquo;s a signal. The
               problem is probably the application, not the volume.{" "}
-              <Link
-                href="/build"
-                className="font-semibold underline underline-offset-2"
-              >
+              <Button href="/build" variant="link">
                 Sharpen your resume
-              </Link>{" "}
+              </Button>{" "}
               or{" "}
-              <Link
-                href="/prompts"
-                className="font-semibold underline underline-offset-2"
-              >
+              <Button href="/prompts" variant="link">
                 write a sharper outreach message
-              </Link>
+              </Button>
               .
             </p>
-          </div>
+          </Callout>
         )}
       </div>
 
       {/* ADD APPLICATION */}
       <form
         onSubmit={handleSubmit}
-        className="rounded-2xl border border-line bg-paper-2 p-6"
+        className="rounded-lg border border-line bg-paper p-6"
       >
         <p className="kicker">Log an application</p>
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <Field label="Company" htmlFor="company">
-            <input
-              id="company"
-              name="company"
-              type="text"
-              required
-              className={inputCls}
-              placeholder="Acme Co"
-            />
+          <Field label="Company">
+            <Input name="company" type="text" required placeholder="Acme Co" />
           </Field>
-          <Field label="Role" htmlFor="role">
-            <input
-              id="role"
+          <Field label="Role">
+            <Input
               name="role"
               type="text"
               required
-              className={inputCls}
               placeholder="Executive Operations Professional"
             />
           </Field>
-          <Field label="Source" htmlFor="source">
-            <input
-              id="source"
-              name="source"
-              type="text"
-              className={inputCls}
-              placeholder="LinkedIn, referral, direct…"
-            />
+          <Field label="Source">
+            <Input name="source" type="text" placeholder="LinkedIn, referral, direct…" />
           </Field>
-          <Field label="Link" htmlFor="link">
-            <input
-              id="link"
-              name="link"
-              type="url"
-              className={inputCls}
-              placeholder="https://…"
-            />
+          <Field label="Link">
+            <Input name="link" type="url" placeholder="https://…" />
           </Field>
-          <Field label="Status" htmlFor="status">
-            <select
-              id="status"
-              name="status"
-              defaultValue="applied"
-              className={inputCls}
-            >
+          <Field label="Status">
+            <Select name="status" defaultValue="applied">
               {APP_STATUSES.map((s) => (
                 <option key={s} value={s}>
                   {STATUS_LABEL[s]}
                 </option>
               ))}
-            </select>
+            </Select>
           </Field>
-          <Field label="Applied on" htmlFor="appliedAt">
-            <input
-              id="appliedAt"
-              name="appliedAt"
-              type="date"
-              defaultValue={today}
-              className={inputCls}
-            />
+          <Field label="Applied on">
+            <Input name="appliedAt" type="date" defaultValue={today} />
           </Field>
-          <Field label="Follow up on" htmlFor="followUpAt">
-            <input
-              id="followUpAt"
+          <Field label="Follow up on">
+            <Input
               name="followUpAt"
               type="date"
               defaultValue={defaultFollowUp}
-              className={inputCls}
             />
           </Field>
-          <Field
-            label="Notes"
-            htmlFor="notes"
-            className="sm:col-span-2 lg:col-span-3"
-          >
-            <textarea
-              id="notes"
+          <Field label="Notes" className="sm:col-span-2 lg:col-span-3">
+            <Textarea
               name="notes"
               rows={2}
-              className={inputCls}
               placeholder="Contact name, referral, anything worth remembering…"
             />
           </Field>
         </div>
 
         {formError && (
-          <p role="alert" className="mt-3 text-sm font-medium text-signal-deep">
-            {formError}
-          </p>
+          <Callout tone="coral" className="mt-3">
+            <span role="alert">{formError}</span>
+          </Callout>
         )}
 
-        <button
-          type="submit"
-          className="mt-5 inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal"
-        >
-          <Plus size={16} /> Add application
-        </button>
+        <div className="mt-5">
+          <Button type="submit" icon={<Icon name="plus" size={16} />}>
+            Add application
+          </Button>
+        </div>
       </form>
 
       {/* PIPELINE */}
@@ -444,15 +393,12 @@ export function ApplicationTracker() {
         </div>
 
         {applications.length === 0 ? (
-          <div className="mt-4 flex flex-col items-center gap-3 rounded-2xl border border-dashed border-line-strong bg-paper-2 px-6 py-14 text-center">
-            <Inbox size={28} className="text-ink-faint" aria-hidden />
-            <p className="max-w-md text-sm leading-relaxed text-ink-soft">
-              Nothing logged yet. The discipline is simple: every application
-              gets a row, and every &ldquo;applied&rdquo; gets a follow-up
-              date. Log your first one above, future you will thank you in
-              four days.
-            </p>
-          </div>
+          <EmptyState
+            icon="inbox"
+            title="Nothing logged yet"
+            body="Add your first application above. The follow-up date is the column that turns this log into a tool."
+            className="mt-4"
+          />
         ) : (
           <ul className="mt-4 flex flex-col gap-3">
             {applications.map((a) => (
@@ -469,27 +415,6 @@ export function ApplicationTracker() {
   );
 }
 
-function Field({
-  label,
-  htmlFor,
-  children,
-  className,
-}: {
-  label: string;
-  htmlFor: string;
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <div className={cn("flex flex-col gap-1.5", className)}>
-      <label htmlFor={htmlFor} className="text-xs font-semibold text-ink-soft">
-        {label}
-      </label>
-      {children}
-    </div>
-  );
-}
-
 function ApplicationRow({
   app,
   onDelete,
@@ -500,28 +425,30 @@ function ApplicationRow({
   const { updateApplication } = usePath();
 
   return (
-    <li className="rounded-2xl border border-line bg-paper-2 p-5">
+    <Card as="li">
       <div className="flex flex-wrap items-start justify-between gap-4">
         <div>
-          <p className="font-display text-lg leading-tight">{app.company}</p>
-          <p className="text-sm text-ink-soft">{app.role}</p>
+          <Heading level={3} size="h5">
+            {app.company}
+          </Heading>
+          <Text size="small">{app.role}</Text>
         </div>
         <div className="flex items-center gap-2">
-          <Pill tone={STATUS_TONE[app.status]}>{STATUS_LABEL[app.status]}</Pill>
-          <select
+          <Badge tone={STATUS_TONE[app.status]}>{STATUS_LABEL[app.status]}</Badge>
+          <Select
             aria-label={`Change status for ${app.company}, ${app.role}`}
             value={app.status}
             onChange={(e) =>
               updateApplication(app.id, { status: e.target.value as AppStatus })
             }
-            className="rounded-full border border-line-strong bg-paper px-3 py-1.5 text-xs font-semibold text-ink"
+            className="max-w-[10rem]"
           >
             {APP_STATUSES.map((s) => (
               <option key={s} value={s}>
                 {STATUS_LABEL[s]}
               </option>
             ))}
-          </select>
+          </Select>
         </div>
       </div>
 
@@ -541,45 +468,40 @@ function ApplicationRow({
         <div>
           <span className="block font-semibold text-ink-soft">Link</span>
           {app.link ? (
-            <a
+            <Button
               href={app.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-ink hover:text-signal"
+              external
+              variant="link"
+              iconEnd={<Icon name="arrow-up-right" size={11} />}
             >
-              Open <ArrowUpRight size={11} />
-            </a>
+              Open
+            </Button>
           ) : (
             "—"
           )}
         </div>
       </div>
 
-      <div className="mt-4 flex flex-col gap-1.5">
-        <label
-          htmlFor={`notes-${app.id}`}
-          className="text-xs font-semibold text-ink-soft"
-        >
-          Notes
-        </label>
-        <textarea
-          id={`notes-${app.id}`}
-          defaultValue={app.notes}
-          onBlur={(e) => updateApplication(app.id, { notes: e.target.value })}
-          rows={2}
-          className={inputCls}
-        />
+      <div className="mt-4">
+        <Field label="Notes" hideLabel>
+          <Textarea
+            defaultValue={app.notes}
+            onBlur={(e) => updateApplication(app.id, { notes: e.target.value })}
+            rows={2}
+          />
+        </Field>
       </div>
 
       <div className="mt-4 flex justify-end border-t border-line pt-3">
-        <button
-          type="button"
+        <Button
+          variant="ghost"
+          size="sm"
           onClick={onDelete}
-          className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold text-ink-faint transition-colors hover:text-signal"
+          icon={<Icon name="trash" size={13} />}
         >
-          <Trash2 size={13} /> Delete
-        </button>
+          Delete
+        </Button>
       </div>
-    </li>
+    </Card>
   );
 }
