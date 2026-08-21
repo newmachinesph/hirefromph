@@ -2,11 +2,10 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
-import { ArrowUpRight, Award, Check, Sparkles, X } from "lucide-react";
 import tracksData from "@/data/tracks.json";
 import { usePath } from "@/lib/path-context";
-import { Icon } from "@/components/icon";
-import { Pill } from "@/components/ui";
+import { Badge, Button, Card, EmptyState, Icon } from "@/components/ui";
+import { accent } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 type Track = (typeof tracksData.tracks)[number];
@@ -17,26 +16,6 @@ const difficultyTone: Record<string, "verified" | "caution" | "signal"> = {
   "Beginner-friendly": "verified",
   Intermediate: "caution",
   Advanced: "signal",
-};
-
-// Reused from components/path-chooser.tsx, same accent system, same look.
-const accentRing: Record<string, string> = {
-  signal: "hover:border-signal/60 data-[active=true]:border-signal data-[active=true]:bg-signal-tint",
-  verified: "hover:border-verified/60 data-[active=true]:border-verified data-[active=true]:bg-verified-tint",
-  caution: "hover:border-caution/60 data-[active=true]:border-caution data-[active=true]:bg-caution-tint",
-  info: "hover:border-info/60 data-[active=true]:border-info data-[active=true]:bg-info-tint",
-};
-const iconTone: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep",
-  verified: "bg-verified-tint text-verified",
-  caution: "bg-caution-tint text-caution-text",
-  info: "bg-info-tint text-info",
-};
-const accentText: Record<string, string> = {
-  signal: "text-signal",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
 };
 
 const learnIcon: Record<string, string> = {
@@ -78,16 +57,39 @@ export function NicheExplorer() {
         aria-label="Filter niches by difficulty"
         className="flex flex-wrap gap-2"
       >
-        <FilterChip label="All niches" active={filter === null} onClick={() => setFilter(null)} />
+        <Button
+          size="sm"
+          variant={filter === null ? "primary" : "outline"}
+          onClick={() => setFilter(null)}
+          aria-pressed={filter === null}
+        >
+          All niches
+        </Button>
         {DIFFICULTY_FILTERS.map((d) => (
-          <FilterChip key={d} label={d} active={filter === d} onClick={() => setFilter(d)} />
+          <Button
+            key={d}
+            size="sm"
+            variant={filter === d ? "primary" : "outline"}
+            onClick={() => setFilter(d)}
+            aria-pressed={filter === d}
+          >
+            {d}
+          </Button>
         ))}
       </div>
 
       {tracks.length === 0 && (
-        <p className="mt-6 rounded-2xl border border-line bg-paper-2 p-6 text-sm text-ink-soft">
-          No niches match this filter yet.
-        </p>
+        <EmptyState
+          className="mt-6"
+          icon="binoculars"
+          title="No niches match this filter yet"
+          body="Clear the filter to see all twenty-two lanes."
+          action={
+            <Button variant="outline" onClick={() => setFilter(null)}>
+              Clear filter
+            </Button>
+          }
+        />
       )}
       <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {tracks.map((t) => {
@@ -103,17 +105,18 @@ export function NicheExplorer() {
               aria-controls={panelId}
               data-active={active}
               className={cn(
-                "group relative flex h-full flex-col gap-3 rounded-2xl border border-line bg-paper-2 p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]",
-                accentRing[t.accent],
+                "group relative flex h-full flex-col gap-3 rounded-md border border-line bg-paper p-6 text-left transition-colors duration-150 ease-out",
+                "hover:border-ink hover:bg-band",
+                active && "border-ink bg-band",
               )}
             >
               <div className="flex items-start justify-between">
-                <span className={cn("grid h-11 w-11 place-items-center rounded-xl", iconTone[t.accent])}>
+                <span className={cn("grid h-11 w-11 place-items-center rounded-md", accent(t.accent).soft)}>
                   <Icon name={t.icon} size={20} />
                 </span>
                 {isChosen && (
-                  <span className="grid h-6 w-6 place-items-center rounded-full bg-verified text-white">
-                    <Check size={14} />
+                  <span className="grid h-6 w-6 place-items-center rounded-pill bg-verified text-white">
+                    <Icon name="check" size={14} />
                   </span>
                 )}
               </div>
@@ -123,11 +126,11 @@ export function NicheExplorer() {
               </div>
               <div className="mt-auto flex items-center justify-between pt-1">
                 <span className="text-sm font-semibold text-ink">{t.pay}</span>
-                <Pill tone={t.accent as "signal"}>{t.demandLabel}</Pill>
+                <Badge tone={t.accent as "signal"}>{t.demandLabel}</Badge>
               </div>
-              <Pill tone={difficultyTone[t.difficulty] ?? "neutral"} className="w-fit">
+              <Badge tone={difficultyTone[t.difficulty] ?? "neutral"} className="w-fit">
                 {t.difficulty}
-              </Pill>
+              </Badge>
             </button>
           );
         })}
@@ -162,32 +165,6 @@ export function NicheExplorer() {
   );
 }
 
-function FilterChip({
-  label,
-  active,
-  onClick,
-}: {
-  label: string;
-  active: boolean;
-  onClick: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={cn(
-        "rounded-full border px-4 py-2 text-sm font-medium transition-all duration-300",
-        active
-          ? "border-ink bg-ink text-paper-2"
-          : "border-line-strong bg-paper-2 text-ink-soft hover:border-ink hover:text-ink",
-      )}
-    >
-      {label}
-    </button>
-  );
-}
-
 function DetailCard({
   track,
   isChosen,
@@ -202,22 +179,24 @@ function DetailCard({
   headingRef: React.RefObject<HTMLHeadingElement | null>;
 }) {
   return (
-    <div className="relative rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 shadow-[var(--shadow-lg)] lg:p-10">
-      <button
-        type="button"
+    <Card padding="lg" className="relative">
+      <Button
+        variant="ghost"
+        size="sm"
         onClick={onClose}
         aria-label="Close niche details"
-        className="absolute right-6 top-6 grid h-9 w-9 place-items-center rounded-full border border-line text-ink-soft transition-colors hover:border-ink hover:text-ink"
+        className="absolute right-6 top-6"
+        icon={<Icon name="x" size={16} />}
       >
-        <X size={16} />
-      </button>
+        <span className="sr-only">Close</span>
+      </Button>
 
       <div className="flex flex-wrap items-start gap-4 pr-12">
-        <span className={cn("grid h-14 w-14 shrink-0 place-items-center rounded-2xl", iconTone[track.accent])}>
+        <span className={cn("grid h-14 w-14 shrink-0 place-items-center rounded-md", accent(track.accent).soft)}>
           <Icon name={track.icon} size={26} />
         </span>
         <div>
-          <p className={cn("kicker", accentText[track.accent])}>{track.tagline}</p>
+          <p className={cn("kicker", accent(track.accent).text)}>{track.tagline}</p>
           <h3
             ref={headingRef}
             tabIndex={-1}
@@ -227,8 +206,8 @@ function DetailCard({
           </h3>
         </div>
         <div className="ml-auto flex items-center gap-2">
-          <Pill tone={track.accent as "signal"}>{track.demandLabel} demand</Pill>
-          <Pill tone={difficultyTone[track.difficulty] ?? "neutral"}>{track.difficulty}</Pill>
+          <Badge tone={track.accent as "signal"}>{track.demandLabel} demand</Badge>
+          <Badge tone={difficultyTone[track.difficulty] ?? "neutral"}>{track.difficulty}</Badge>
         </div>
       </div>
 
@@ -238,14 +217,14 @@ function DetailCard({
 
       {track.ai && (
         <div className="mt-8 grid gap-4 lg:grid-cols-2">
-          <div className="rounded-2xl border border-line bg-paper-3/60 p-5">
+          <div className="rounded-md border border-line bg-band p-5">
             <h4 className="kicker flex items-center gap-2">
               <Icon name="cpu" size={14} weight="bold" />
               How AI is changing this niche
             </h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">{track.ai.change}</p>
           </div>
-          <div className="rounded-2xl border border-verified/30 bg-verified-tint p-5">
+          <div className="rounded-md border border-verified/30 bg-verified-tint p-5">
             <h4 className="kicker text-verified">Why you are still needed</h4>
             <p className="mt-2.5 text-sm leading-relaxed text-ink">{track.ai.human}</p>
           </div>
@@ -259,7 +238,7 @@ function DetailCard({
             {track.skills.map((s) => (
               <span
                 key={s}
-                className="rounded-full border border-line bg-paper-3 px-3 py-1 text-xs font-medium text-ink-soft"
+                className="rounded-pill border border-line bg-band px-3 py-1 text-xs font-medium text-ink-soft"
               >
                 {s}
               </span>
@@ -272,7 +251,7 @@ function DetailCard({
             {track.tools.map((tool) => (
               <span
                 key={tool}
-                className="rounded-full border border-line bg-paper-3 px-3 py-1 text-xs font-medium text-ink-soft"
+                className="rounded-pill border border-line bg-band px-3 py-1 text-xs font-medium text-ink-soft"
               >
                 {tool}
               </span>
@@ -287,9 +266,9 @@ function DetailCard({
           {track.learn.map((item) => (
             <li
               key={item.title}
-              className="flex items-start gap-3 rounded-xl border border-line bg-paper-3/60 px-4 py-3"
+              className="flex items-start gap-3 rounded-sm border border-line bg-band px-4 py-3"
             >
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-ink text-paper-2">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-sm bg-ink text-paper-2">
                 <Icon name={learnIcon[item.type] ?? "sparkles"} size={15} />
               </span>
               <span>
@@ -311,8 +290,8 @@ function DetailCard({
           <ul className="mt-3 flex flex-wrap gap-2">
             {track.certs.map((c) => (
               <li key={c}>
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper px-3 py-1 text-xs font-medium text-ink">
-                  <Award size={12} className={accentText[track.accent]} />
+                <span className="inline-flex items-center gap-1.5 rounded-pill border border-line-strong bg-paper px-3 py-1 text-xs font-medium text-ink">
+                  <Icon name="award" size={12} className={accent(track.accent).text} />
                   {c}
                 </span>
               </li>
@@ -330,32 +309,18 @@ function DetailCard({
           Typical pay: <span className="font-semibold text-ink">{track.pay}</span>
         </p>
         {isChosen ? (
-          <span className="inline-flex items-center gap-2 rounded-full bg-verified-tint px-6 py-3 text-sm font-semibold text-verified">
-            <Check size={16} /> This is your path
-          </span>
+          <Badge tone="verified">
+            <Icon name="check" size={16} /> This is your path
+          </Badge>
         ) : (
-          <button
-            type="button"
-            onClick={onChoose}
-            className="group inline-flex items-center gap-2 rounded-full bg-ink px-6 py-3 text-sm font-semibold text-paper-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-signal hover:shadow-[var(--shadow-signal)]"
-          >
-            <Sparkles size={16} />
-            Choose this as my path
-          </button>
+          <Button onClick={onChoose}>Choose this as my path</Button>
         )}
       </div>
-    </div>
+    </Card>
   );
 }
 
 type Regions = NonNullable<Extract<Track, { regions: unknown }>["regions"]>;
-
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  verified: "bg-verified",
-  caution: "bg-caution",
-  info: "bg-info",
-};
 
 /** Per-market compliance guide. Only tracks whose rules change by country carry
  *  a `regions` block, so this renders for those and stays out of the way otherwise. */
@@ -365,16 +330,16 @@ function RegionGuide({ regions }: { regions: Regions }) {
       <h4 className="kicker">{regions.kicker}</h4>
       <p className="mt-3 max-w-3xl text-sm leading-relaxed text-ink-soft">{regions.lead}</p>
 
-      <p className="mt-4 max-w-3xl border-l-2 border-line-strong bg-paper-3/60 px-4 py-3 text-sm leading-relaxed text-ink">
+      <p className="mt-4 max-w-3xl border-l-2 border-line-strong bg-band px-4 py-3 text-sm leading-relaxed text-ink">
         {regions.boundary}
       </p>
 
       <div className="mt-6 grid gap-4">
         {regions.items.map((r) => (
-          <article key={r.market} className="relative border border-line bg-paper-2 p-5 pl-6">
+          <article key={r.market} className="relative border border-line bg-paper p-5 pl-6">
             <span
               aria-hidden
-              className={cn("absolute top-0 bottom-0 left-0 w-1", accentBar[r.accent] ?? "bg-ink")}
+              className={cn("absolute top-0 bottom-0 left-0 w-1", accent(r.accent).fill)}
             />
             <h5 className="font-display text-lg text-ink">
               <span aria-hidden className="mr-2">
@@ -388,7 +353,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
             <ol className="mt-2 grid gap-1.5">
               {r.learn.map((step, i) => (
                 <li key={step} className="flex gap-3 text-sm leading-relaxed text-ink-soft">
-                  <span className={cn("font-mono text-xs font-semibold", accentText[r.accent])}>
+                  <span className={cn("font-mono text-xs font-semibold", accent(r.accent).text)}>
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {step}
@@ -407,7 +372,7 @@ function RegionGuide({ regions }: { regions: Regions }) {
                     className="inline-flex items-center gap-1.5 border border-line-strong bg-paper px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-ink"
                   >
                     {s.label}
-                    <ArrowUpRight size={12} aria-hidden />
+                    <Icon name="arrow-up-right" size={12} aria-hidden />
                   </a>
                 </li>
               ))}

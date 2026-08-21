@@ -1,22 +1,23 @@
 "use client";
 
 import { useId, useMemo, useState } from "react";
-import { AlertTriangle, Sparkles } from "lucide-react";
 import frameworks from "@/data/frameworks.json";
-import { Icon } from "@/components/icon";
+import {
+  Callout,
+  Field,
+  Icon,
+  Input,
+  ProgressBar,
+  Radio,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 type Criterion = (typeof frameworks.niche.criteria)[number];
 
 const SCORE_VALUES = [1, 2, 3, 4, 5] as const;
 const DEFAULT_SCORE = 3;
-
-const ICON_TONE: Record<number, string> = {
-  0: "bg-signal-tint text-signal-deep",
-  1: "bg-verified-tint text-verified",
-  2: "bg-caution-tint text-caution-text",
-  3: "bg-info-tint text-info",
-};
 
 const VERDICT_TIERS = [
   {
@@ -77,27 +78,16 @@ export function NicheScorer() {
     setScores((prev) => ({ ...prev, [id]: value }));
   }
 
-  const tierRing: Record<string, string> = {
-    verified: "var(--verified)",
-    caution: "var(--caution)",
-    signal: "var(--signal)",
-  };
-
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-8">
-      <div className="flex flex-col gap-1">
-        <label htmlFor={`${uid}-niche`} className="kicker">
-          What niche are you evaluating?
-        </label>
-        <input
-          id={`${uid}-niche`}
+    <div className="flex flex-col">
+      <Field label="What niche are you evaluating?">
+        <Input
           type="text"
           value={nicheName}
           onChange={(e) => setNicheName(e.target.value)}
           placeholder="e.g. AI prompt QA, pet content editing, whatever you're actually considering"
-          className="mt-2 w-full rounded-xl border border-line-strong bg-paper px-4 py-3 text-sm text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink"
         />
-      </div>
+      </Field>
 
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_300px] lg:items-start">
         <div className="grid gap-4">
@@ -112,15 +102,15 @@ export function NicheScorer() {
                 role="group"
                 aria-labelledby={labelId}
                 className={cn(
-                  "rounded-2xl border p-4 transition-colors",
+                  "rounded-md border p-4 transition-colors",
                   low ? "border-signal/40 bg-signal-tint/40" : "border-line bg-paper",
                 )}
               >
                 <div className="flex items-start gap-3">
                   <span
                     className={cn(
-                      "grid h-9 w-9 shrink-0 place-items-center rounded-lg",
-                      ICON_TONE[idx % 4],
+                      "grid h-9 w-9 shrink-0 place-items-center rounded-sm",
+                      accent(["signal", "verified", "caution", "info"][idx % 4]).soft,
                     )}
                   >
                     <Icon name={c.icon} size={16} />
@@ -144,27 +134,20 @@ export function NicheScorer() {
                 </div>
 
                 <div className="mt-3 flex items-center gap-1.5 pl-12">
-                  {SCORE_VALUES.map((n) => {
-                    const id = `${groupId}-${n}`;
-                    return (
-                      <div key={n}>
-                        <input
-                          type="radio"
-                          id={id}
+                  <Field as="group" label={`${c.name}: ${c.question}`} hideLabel>
+                    <div className="flex items-center gap-1.5">
+                      {SCORE_VALUES.map((n) => (
+                        <Radio
+                          key={n}
+                          id={`${groupId}-${n}`}
                           name={groupId}
                           checked={value === n}
                           onChange={() => setScore(c.id, n)}
-                          className="peer sr-only"
+                          label={String(n)}
                         />
-                        <label
-                          htmlFor={id}
-                          className="grid h-9 w-9 cursor-pointer place-items-center rounded-full border border-line-strong text-sm font-semibold text-ink-soft transition-colors hover:border-ink hover:text-ink peer-checked:border-ink peer-checked:bg-ink peer-checked:text-paper-2"
-                        >
-                          {n}
-                        </label>
-                      </div>
-                    );
-                  })}
+                      ))}
+                    </div>
+                  </Field>
                   <span className="ml-2 text-xs text-ink-faint">
                     1 = weak · 5 = strong
                   </span>
@@ -174,20 +157,15 @@ export function NicheScorer() {
           })}
         </div>
 
-        <aside className="flex flex-col gap-6 rounded-2xl border border-line bg-paper p-6 lg:sticky lg:top-24">
+        <aside className="flex flex-col gap-6 rounded-md border border-line bg-paper p-6 lg:sticky lg:top-24">
           <div className="flex flex-col items-center text-center" aria-live="polite">
-            <div
-              role="img"
-              aria-label={`${pct} percent score`}
-              className="is-circle grid h-24 w-24 place-items-center rounded-full transition-[background] duration-500"
-              style={{
-                background: `conic-gradient(${tierRing[tier.tone]} ${pct}%, var(--line) ${pct}% 100%)`,
-              }}
-            >
-              <div className="is-circle grid h-[72px] w-[72px] place-items-center rounded-full bg-paper">
-                <span className="font-display text-xl text-ink">{pct}%</span>
-              </div>
-            </div>
+            <ProgressBar
+              value={pct}
+              max={100}
+              label={`${nicheName.trim() || "This niche"} scores ${pct} percent`}
+              showValue
+              tone={tier.tone}
+            />
             <p className="mt-4 font-display text-lg leading-snug text-balance text-ink">
               {nicheName.trim() ? nicheName.trim() : "This niche"}
             </p>
@@ -208,7 +186,7 @@ export function NicheScorer() {
             {weakSpots.length > 0 ? (
               <>
                 <p className="kicker flex items-center gap-1.5 text-signal-deep">
-                  <AlertTriangle size={13} /> Watch out for
+                  <Icon name="alert-triangle" size={13} /> Watch out for
                 </p>
                 <ul className="mt-3 flex flex-col gap-2">
                   {weakSpots.map((c) => (
@@ -220,10 +198,11 @@ export function NicheScorer() {
                 </ul>
               </>
             ) : (
-              <p className="flex items-center gap-1.5 text-xs leading-relaxed text-ink-soft">
-                <Sparkles size={13} className="text-verified" /> No weak spots scored
-                below a 3, nothing glaring to flag.
-              </p>
+              <Callout tone="verified">
+                <Text size="caption">
+                  No weak spots scored below a 3, nothing glaring to flag.
+                </Text>
+              </Callout>
             )}
           </div>
         </aside>
