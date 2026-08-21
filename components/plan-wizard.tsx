@@ -61,10 +61,7 @@ const NAV_LABEL: Record<string, string> = {
   // /path is in no navGroup but plan.json day tools link to it.
   "/path": "Your path",
   ...Object.fromEntries(
-    [...site.navGroups.flatMap((g) => g.links), ...site.primaryNav].map((n) => [
-      n.href,
-      n.label,
-    ]),
+    site.navGroups.flatMap((g) => g.links).map((n) => [n.href, n.label]),
   ),
 };
 
