@@ -126,7 +126,7 @@ All pairs below were checked against WCAG 2.x; ratios are listed.
 | `ink-faint` | `#6B7087` | captions, metadata | 4.9:1 paper · 4.5:1 band |
 | `line` | `#E4E4EA` | hairlines, card borders | decorative |
 | `line-strong` | `#CFCFD8` | dividers on band | decorative |
-| `control` | `#8A8FA3` | input/checkbox borders | 3.2:1 (UI minimum) |
+| `control` | `#858A9E` | input/checkbox borders | 3.43:1 paper · 3.20:1 band (UI minimum) |
 | `primary` | `#4B4EF6` | buttons, links, focus ring, focal accents | 5.65:1 on paper · white text 5.65:1 |
 | `primary-deep` | `#3634D8` | hover, text on tint | 8.0:1 · 6.9:1 on tint |
 | `primary-tint` | `#EEEDFF` | = `tint` | — |
@@ -135,6 +135,8 @@ All pairs below were checked against WCAG 2.x; ratios are listed.
 | `info` / `-text` / `-tint` | `#0BA5EC` / `#026AA2` / `#E0F2FE` | notes, stage 4 | text-on-tint 5.1:1 |
 | `coral` / `-text` / `-tint` | `#FF5A5F` / `#B42318` / `#FFECEB` | red flags, scams, errors | text-on-tint 5.8:1 |
 | `on-navy` | `#F7F6FF` | text on `ink` band | 16.9:1 |
+
+**Shipped naming (Phase 0):** the bare semantic token (`--verified`, `--caution`, `--info`, `--coral`) carries the *text/deep* value listed in the `-text` column so legacy `text-verified` usages stay AA; the vibrant value is `--verified-fill` etc. `control` shipped as `#858A9E` to clear 3:1 on both paper and band.
 
 Rules:
 - **Fills carry ink text.** White text sits only on `primary`, `primary-deep`, and `ink`. Amber, mint, sky, and coral fills (3.0:1 or worse with white) take `ink` text or are used as icon chips only.

@@ -9,7 +9,7 @@ export default defineConfig({
     globals: false,
     setupFiles: ["./vitest.setup.ts"],
     include: ["**/*.test.{ts,tsx}"],
-    exclude: ["node_modules", ".next", "**/*.test.mjs"],
+    exclude: ["**/node_modules/**", "**/.next/**", "**/*.test.mjs"],
   },
   resolve: {
     alias: { "@": fileURLToPath(new URL("./", import.meta.url)) },

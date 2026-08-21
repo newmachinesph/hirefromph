@@ -39,7 +39,7 @@ We ask users to sign an integrity oath. We therefore hold ourselves to it — a 
 - Audience: Filipinos building a remote career. Warm, direct, encouraging. Light Taglish is welcome ("walang bayad, walang catch", "sabi sa'yo eh").
 - **Never** say "virtual assistant" or "assistant". Always **"online professional" / "remote professional"**.
 - Free, path-based, not overwhelming. Depth reveals as the user goes.
-- No external images. Build visuals with CSS/SVG/gradients/`dotgrid`. Emoji flags OK.
+- No hotlinked or third-party images. First-party assets in `public/images/` (manifest `data/visuals.json`) render through the `Figure` primitive; every generated asset is captioned as illustrative (spec §7.1). Emoji flags OK.
 - All content comes from `data/*.json`. Do not hardcode copy that exists in JSON.
 
 ## Design tokens (Tailwind utilities already wired)
@@ -49,6 +49,7 @@ Surfaces: `paper` (white), `band` (lavender section band), `tint`, `card`. Ink: 
 Primary: `primary`, `primary-deep`, `primary-tint`, `primary-soft`.
 Semantic accents — the bare name is the **text/deep** value (AA on paper and on its tint); `*-fill` is the vibrant shape colour and takes **ink text only**; `*-tint` is the pale surface: `verified`, `caution`, `info`, `coral` (red flags). Stage ids in JSON (`signal|caution|verified|info`) resolve through `lib/accent.ts` — **never re-declare accent maps in a page.**
 White text is allowed only on `primary`, `primary-deep`, `ink`, and the deep semantic values.
+`ink-faint` is for paper/band backgrounds only; on `*-tint` surfaces use `ink-soft` (AA).
 
 Fonts: `font-display` (Cabinet Grotesk — headings, buttons, wordmark), `font-sans` (Inter — everything else). No mono family.
 Type: `text-hero` `text-display` `text-h2` `text-h3` `text-h4` `text-h5` `text-lead` `text-body` `text-small` `text-caption` `text-kicker` — each utility already carries its line-height, weight, and tracking; do not pair with `leading-*`.
@@ -58,7 +59,7 @@ Helpers (globals.css): `.container-x`, `.skip-link`. Legacy helpers `.kicker`, `
 ## Shared components (import and REUSE — do not re-invent)
 - `@/components/ui` → `Kicker`, `Pill` (tone: neutral|coral|emerald|amber|indigo), `ButtonLink` (variant: primary|outline|ghost; `external`), `ArrowLink`, `SectionHeading` ({kicker,title,lead,align}), `Marquee`.
 - `@/components/reveal` → `Reveal` ({i?: staggerIndex, as?, className}) — scroll-reveal wrapper (client). Wrap sections/cards.
-- `@/components/icon` → `Icon` ({name}) — resolves kebab icon names from JSON to Lucide. Use for any icon name stored in JSON.
+- `@/components/icon` → `Icon` ({name}) — resolves kebab icon names from JSON to Phosphor. Use for any icon name stored in JSON.
 - `@/components/copy-button` → `CopyButton` ({value, label}).
 - `@/components/path-chooser` → `PathChooser` ({compact?, redirectTo?, onChosen?}).
 - `@/components/path-gate` → `PathGate` ({children, teaser?, unlocks?}) — wrap DEEP content; before the user picks a path it shows a locked invitation + inline chooser, after it reveals children. Use it to gate the heaviest lists (apply directory, full niche detail, full prompt library).

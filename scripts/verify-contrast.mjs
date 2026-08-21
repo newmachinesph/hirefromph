@@ -34,12 +34,21 @@ const WHITE_ON = ["primary", "primary-deep", "ink", "verified", "caution", "info
 // Ink text on the vibrant fills must pass 4.5:1.
 const INK_ON = ["verified-fill", "caution-fill", "info-fill", "coral-fill"];
 // Non-text UI boundaries need 3:1.
-const UI = [["control", "paper", 3]];
+const UI = [
+  ["control", "paper", 3],
+  ["control", "band", 3],
+];
 
 const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
+// Anchor lookups to the :root block first (where every colour token lives);
+// fall back to the whole file for names not found there.
+const rootMatch = css.match(/:root\s*\{([\s\S]*?)\}/);
+const rootCss = rootMatch ? rootMatch[1] : css;
+
 function token(name, depth = 0) {
-  const m = css.match(new RegExp(`--${name}:\\s*([^;]+);`));
+  const re = new RegExp(`--${name}:\\s*([^;]+);`);
+  const m = rootCss.match(re) ?? css.match(re);
   if (!m) throw new Error(`token --${name} not found in globals.css`);
   const v = m[1].trim();
   const hex = v.match(/^#[0-9a-fA-F]{6}$/);

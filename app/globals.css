@@ -22,7 +22,7 @@
   /* Lines */
   --line: #E4E4EA;
   --line-strong: #CFCFD8;
-  --control: #8A8FA3;
+  --control: #858A9E;
 
   /* Primary */
   --primary: #4B4EF6;
@@ -45,27 +45,29 @@
   --coral-fill: #FF5A5F;
   --coral-tint: #FFECEB;
 
-  /* Legacy aliases — consumed by pre-overhaul pages. Removed in Phase 5. */
-  --paper-2: #FFFFFF;
-  --paper-3: #F7F6FF;
-  --signal: #4B4EF6;
-  --signal-deep: #3634D8;
-  --signal-tint: #EEEDFF;
+  /* LEGACY:P5 — consumed by pre-overhaul pages. Removed in Phase 5. */
+  --paper-2: var(--paper);
+  --paper-3: var(--band);
+  --signal: var(--primary);
+  --signal-deep: var(--primary-deep);
+  --signal-tint: var(--primary-tint);
   --signal-light: #8D8BFF;
-  --caution-text: #9A5B00;
+  --caution-text: var(--caution);
 
   /* Shape */
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-pill: 999px;
-  --radius: 12px; /* legacy */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  /* LEGACY:P5 */
+  --radius: 12px;
 
   /* Depth — borders carry hierarchy; shadows are for floating layers only */
   --shadow-sm: 0 1px 2px rgb(14 18 48 / 0.06);
   --shadow-md: 0 8px 24px rgb(14 18 48 / 0.08);
-  --shadow-lg: 0 8px 24px rgb(14 18 48 / 0.08); /* legacy alias */
-  --shadow-signal: none; /* legacy; hover lifts are gone */
+  /* LEGACY:P5 */
+  --shadow-lg: 0 8px 24px rgb(14 18 48 / 0.08);
+  --shadow-signal: none;
 
   /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -108,7 +110,7 @@
   --color-coral-fill: var(--coral-fill);
   --color-coral-tint: var(--coral-tint);
 
-  /* Legacy colour utilities (Phase 5 removes) */
+  /* LEGACY:P5 — colour utilities (Phase 5 removes) */
   --color-paper-2: var(--paper-2);
   --color-paper-3: var(--paper-3);
   --color-signal: var(--signal);
@@ -121,10 +123,10 @@
   --font-display: var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --radius-sm: var(--radius-sm);
-  --radius-md: var(--radius-md);
-  --radius-lg: var(--radius-lg);
-  --radius-pill: var(--radius-pill);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-pill: var(--r-pill);
 
   /* Type scale — Learnora's desktop values (78/60/40/32/24/20/18/16/15/13) made fluid */
   --text-hero: clamp(2.75rem, 1.6rem + 4.2vw, 4.875rem);
@@ -206,7 +208,7 @@ body {
   padding: 0.75rem 1rem;
   background: var(--ink);
   color: var(--on-navy);
-  border-radius: var(--radius-sm);
+  border-radius: var(--r-sm);
   font-weight: 600;
 }
 .skip-link:focus {
@@ -226,13 +228,14 @@ body {
 /*  Phase 5 deletes these.                                             */
 /* ------------------------------------------------------------------ */
 
-.font-display {
-  font-family: var(--font-display);
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
 @layer base {
+  /* LEGACY:P5 */
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
   .kicker {
     font-family: var(--font-sans);
     font-size: var(--text-kicker);
@@ -241,20 +244,20 @@ body {
     text-transform: uppercase;
     color: var(--ink-faint);
   }
-}
 
-.font-mono {
-  font-variant-numeric: tabular-nums;
-}
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
 
-.link-sweep {
-  text-decoration: underline;
-  text-decoration-color: transparent;
-  text-underline-offset: 0.2em;
-  transition: text-decoration-color var(--dur) var(--ease-out);
-}
-.link-sweep:hover {
-  text-decoration-color: currentColor;
+  .link-sweep {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color var(--dur) var(--ease-out);
+  }
+  .link-sweep:hover {
+    text-decoration-color: currentColor;
+  }
 }
 
 /* Legacy marquee + dot grid — still rendered by pre-overhaul pages. Phase 5 deletes both. */
@@ -283,6 +286,7 @@ body {
   html {
     scroll-behavior: auto;
   }
+  /* LEGACY:P5 */
   .marquee-track {
     animation: none;
   }

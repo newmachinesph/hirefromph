@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test lib/*.test.mjs && vitest run",
+    "test": "node --test \"**/*.test.mjs\" && vitest run",
     "test:unit": "vitest run",
     "test:watch": "vitest",
     "verify:claims": "node scripts/verify-claims.mjs",

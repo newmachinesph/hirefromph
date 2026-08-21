@@ -5,7 +5,7 @@
  *
  * Class strings are literal so Tailwind v4's scanner sees them.
  */
-export const ACCENTS = ["signal", "caution", "verified", "info", "coral"] as const;
+export const ACCENTS = ["neutral", "signal", "caution", "verified", "info", "coral"] as const;
 export type Accent = (typeof ACCENTS)[number];
 
 export type AccentClasses = {
@@ -24,6 +24,14 @@ export type AccentClasses = {
 };
 
 export const ACCENT: Record<Accent, AccentClasses> = {
+  neutral: {
+    text: "text-ink-soft",
+    fill: "bg-band text-ink",
+    tint: "bg-band",
+    border: "border-line-strong",
+    ring: "ring-line-strong",
+    soft: "bg-band text-ink-soft border-line-strong",
+  },
   signal: {
     text: "text-primary",
     fill: "bg-primary text-white",

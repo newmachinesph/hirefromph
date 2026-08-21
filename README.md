@@ -46,7 +46,7 @@ set PORT=3000 && npx next start      # serve the build (Windows: PORT env, not -
 
 ## Content
 
-All copy and data are in `data/`. Swap the JSON to change the site — no code edits needed. Nav and footer both read from `site.json` → `navGroups`, so adding a route to that array is all it takes to surface it in both. Images are CSS/SVG placeholders (no external assets).
+All copy and data are in `data/`. Swap the JSON to change the site — no code edits needed. Nav and footer both read from `site.json` → `navGroups`, so adding a route to that array is all it takes to surface it in both. Images are first-party generated assets in `public/images/` (see `design/images/README.md`); diagrams are SVG components in `components/diagrams/`.
 
 ## Design
 
