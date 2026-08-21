@@ -51,7 +51,7 @@
         "offset": "About 2 to 5 hours ahead of PH",
         "overlap": "Almost a full workday overlap. Your morning is their late morning.",
         "pay": "Solid, and rising as more AU businesses hire Filipino talent.",
-        "style": "Relaxed but direct. Work-life balance is genuinely part of the culture.",
+        "style": "Relaxed but direct. Work-life balance is part of the culture.",
         "industries": "Real estate, construction and trades admin, health, e-commerce, bookkeeping.",
         "verdict": "The best time-zone fit there is. Great pay with a normal, daytime life."
       },
@@ -95,7 +95,7 @@
   },
 
   "strategies": {
-    "kicker": "How you actually work the hours",
+    "kicker": "How you work the hours",
     "title": "Three ways to handle the time gap.",
     "lead": "Once you know the overlap, you pick a working style. Be honest with yourself about which one you can sustain, and say it out loud to the client before you start.",
     "items": [
@@ -168,7 +168,7 @@
   "closing": {
     "kicker": "The honest bottom line",
     "title": "Pick the market you can win in for years, not for a month.",
-    "body": "The highest rate in the worst time zone is not the best job. It is the job you burn out of. The best market is the one where the pay, the hours, and the work all fit a life you can actually keep. For many Filipinos that is Australia or Europe for the schedule, or the US when the pay is worth the nights. There is no single right answer. There is only the one that is right for you, chosen on purpose.",
+    "body": "The highest rate in the worst time zone is not the best job. It is the job you burn out of. The best market is the one where the pay, the hours, and the work all fit a life you can keep. For many Filipinos that is Australia or Europe for the schedule, or the US when the pay is worth the nights. There is no single right answer. There is only the one that is right for you, chosen on purpose.",
     "point": "Line this up with the rest of your plan.",
     "links": [
       { "href": "/salary", "label": "What each market pays", "desc": "The honest ranges, why the guides disagree, and how to price yourself." },

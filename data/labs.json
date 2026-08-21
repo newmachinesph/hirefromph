@@ -1,6 +1,6 @@
 {
   "intro": "Every lab below teaches you to build one real deliverable from a blank page. There is no file to download, only a method you will use for the rest of your career. Study the anatomy, make the judgment calls, then write it yourself in the workshop. What comes out is yours.",
-  "creed": "We hand out zero templates. Every artifact on this page is built by you, in your own words, from your own situation, because a downloaded file expires the moment your situation doesn't match it, and a method you actually understand never does.",
+  "creed": "We hand out zero templates. Every artifact on this page is built by you, in your own words, from your own situation, because a downloaded file expires the moment your situation doesn't match it, and a method you understand never does.",
   "categories": [
     { "id": "apply", "label": "Get Hired" },
     { "id": "presence", "label": "Your Presence" },
@@ -18,15 +18,15 @@
       "outcome": "A one-page resume, in your own words, that you can defend line by line in an interview.",
       "whyBuild": "A downloaded resume template makes you look like every other applicant who found the same Google Doc, recruiters who screen 200 resumes a week can spot the template shape instantly, and it never quite fits your actual experience, so you end up with awkward gaps or leftover bracket placeholders. Worse: the moment you apply to a slightly different role, the template can't flex, because you never learned why each section exists in the first place. Build it once, understand every rule, and you can produce a tailored version for any role in fifteen minutes for the rest of your career.",
       "studyFirst": {
-        "what": "Find 5 resumes from Filipinos who actually got hired for the kind of remote role you're aiming for, real documents, not templates, not resume-builder exports.",
+        "what": "Find 5 resumes from Filipinos who got hired for the kind of remote role you're aiming for, real documents, not templates, not resume-builder exports.",
         "how": "Search site:linkedin.com \"open to work\" plus your niche and open a few profiles' featured sections. Search your niche + 'resume reddit' on r/WorkOnline or r/overemployed. Ask in a Filipino online-professional Facebook group for a redacted example, most people share happily. Check if any target companies' 'hired' case studies link a resume PDF."
       },
       "anatomy": [
         { "part": "Header", "purpose": "Identifies you and gives one way to reach you and one way to see more of your work.", "rule": "Name, city, one email, one phone number, one link (portfolio or LinkedIn). No home address, no unprofessional email handle, no photo unless the region or role expects it." },
-        { "part": "Professional Summary (2–3 lines)", "purpose": "Answers 'why you, for this role' in the 6 seconds a recruiter actually spends before deciding to keep reading.", "rule": "Names the target role, the tools you're trained in, and one proof point, never generic adjectives like 'hardworking' or 'passionate' with nothing behind them." },
+        { "part": "Professional Summary (2–3 lines)", "purpose": "Answers 'why you, for this role' in the 6 seconds a recruiter spends before deciding to keep reading.", "rule": "Names the target role, the tools you're trained in, and one proof point, never generic adjectives like 'hardworking' or 'passionate' with nothing behind them." },
         { "part": "Core Skills", "purpose": "Feeds the ATS keyword scan and gives a human scanner a fast checklist match.", "rule": "Every skill listed must survive a 30-second follow-up question in an interview. If you can't defend it, it doesn't belong here." },
         { "part": "Experience or Projects", "purpose": "The actual evidence that you produce outcomes, not just that you showed up.", "rule": "Every bullet contains a measurable result, a number, a percentage, a time saved, a volume handled. A bullet with no number is an unfinished bullet." },
-        { "part": "Certifications & Training", "purpose": "Signals initiative, that you invested in yourself before anyone required it.", "rule": "List only what you can explain in one sentence if asked what you actually learned." },
+        { "part": "Certifications & Training", "purpose": "Signals initiative, that you invested in yourself before anyone required it.", "rule": "List only what you can explain in one sentence if asked what you learned." },
         { "part": "Languages", "purpose": "A quiet pay lever, bilingual professionals often earn a real premium.", "rule": "State fluency level honestly (professional / conversational). An inflated claim collapses in the first client call and costs you the placement." }
       ],
       "principles": [
@@ -70,7 +70,7 @@
         "Copy-pasting a template's bracketed placeholder and forgetting to replace it, recruiters notice instantly.",
         "Inconsistent formatting, mixed fonts, uneven spacing, bullets that don't align."
       ],
-      "buildIn": { "tool": "Google Docs", "how": "Open a blank Doc, set margins to 0.5\", pick one font (Arial or Calibri, 10.5–11pt body / 14pt name), and rebuild the sections above using your workshop answers as source text, retype it so the structure is truly yours. Export as PDF before sending; never share the live Doc link." }
+      "buildIn": { "tool": "Google Docs", "how": "Open a blank Doc, set margins to 0.5\", pick one font (Arial or Calibri, 10.5–11pt body / 14pt name), and rebuild the sections above using your workshop answers as source text, retype it so the structure is yours. Export as PDF before sending; never share the live Doc link." }
     },
     {
       "id": "application-message",
@@ -80,14 +80,14 @@
       "difficulty": "Beginner",
       "time": "20–30 min",
       "outcome": "A short, specific application message you can adapt to any job post in under 5 minutes.",
-      "whyBuild": "A copy-pasted cover letter is the fastest way to get ignored, clients who post a role read the first two lines and can tell instantly if you actually read their post or blasted the same paragraph to fifty listings. The message isn't decoration, it's the first proof of the exact skill you're selling: reading carefully and responding specifically. Learn the four-part shape once and you can write a sharp, tailored message for any post, cold email, or platform proposal in minutes.",
+      "whyBuild": "A copy-pasted cover letter is the fastest way to get ignored, clients who post a role read the first two lines and can tell instantly if you read their post or blasted the same paragraph to fifty listings. The message isn't decoration, it's the first proof of the exact skill you're selling: reading carefully and responding specifically. Learn the four-part shape once and you can write a sharp, tailored message for any post, cold email, or platform proposal in minutes.",
       "studyFirst": {
-        "what": "Find 5 short application or cold-outreach messages that actually landed a reply or a hire, from freelancing platforms, subreddits, or people who've shared their winning proposal.",
+        "what": "Find 5 short application or cold-outreach messages that landed a reply or a hire, from freelancing platforms, subreddits, or people who've shared their winning proposal.",
         "how": "Search 'Upwork proposal that got hired' or 'cold email that landed a client' on Reddit and Twitter threads. Ask in a Filipino online-professional group for an example someone will share. Look at 'proposal breakdown' YouTube videos where freelancers walk through a real message they sent."
       },
       "anatomy": [
-        { "part": "Specific opener", "purpose": "Proves in the first line that you actually read their post, not a template.", "rule": "Quote or reference one exact detail from their listing, a phrase, a problem they mentioned, a tool they named." },
-        { "part": "The bridge", "purpose": "Connects their stated need to what you actually do, in plain language.", "rule": "One sentence, no jargon, states the outcome you deliver, not a list of your skills." },
+        { "part": "Specific opener", "purpose": "Proves in the first line that you read their post, not a template.", "rule": "Quote or reference one exact detail from their listing, a phrase, a problem they mentioned, a tool they named." },
+        { "part": "The bridge", "purpose": "Connects their stated need to what you do, in plain language.", "rule": "One sentence, no jargon, states the outcome you deliver, not a list of your skills." },
         { "part": "Proof point", "purpose": "Backs the claim with something concrete instead of asking them to trust you.", "rule": "One real result, practice project, or specific number, never 'I'm a fast learner' alone." },
         { "part": "Low-friction close", "purpose": "Makes saying yes easy and specific instead of vague.", "rule": "Propose one concrete next step (a short call, a small paid trial task), don't just say 'let me know if interested'." }
       ],
@@ -136,7 +136,7 @@
       "difficulty": "Intermediate",
       "time": "2–3 hours",
       "outcome": "A live portfolio (deck, page, or Notion site) that shows your work instead of describing it.",
-      "whyBuild": "A resume tells a client what you claim you can do; a portfolio shows them. Clients hiring remotely can't watch you work, so the portfolio is the closest substitute for a trial, and a downloaded portfolio template with someone else's project screenshots is worse than no portfolio at all, because it signals you've never actually shipped anything. The moment you understand what job each section does, you can rebuild your portfolio around any 2–3 pieces of real work you produce next, for the rest of your career.",
+      "whyBuild": "A resume tells a client what you claim you can do; a portfolio shows them. Clients hiring remotely can't watch you work, so the portfolio is the closest substitute for a trial, and a downloaded portfolio template with someone else's project screenshots is worse than no portfolio at all, because it signals you've never shipped anything. The moment you understand what job each section does, you can rebuild your portfolio around any 2–3 pieces of real work you produce next, for the rest of your career.",
       "studyFirst": {
         "what": "Find 5 real portfolios from online professionals in your specific niche, not agency template galleries, individual people's actual sites or decks.",
         "how": "Search '[your niche] portfolio site:notion.site' or 'site:framer.website'. Browse Behance or Dribbble collections tagged to your niche for individuals, not agencies. Check personal portfolio links in the LinkedIn 'Featured' section of people hired in roles like yours."
@@ -144,9 +144,9 @@
       "anatomy": [
         { "part": "Cover / opening", "purpose": "States who you are and the one outcome you deliver, in a single glance.", "rule": "One sentence promise, not a job title alone, 'I keep founders' inboxes at zero' beats 'Executive Operations'." },
         { "part": "About", "purpose": "Gives the human context that makes a client trust working with you specifically.", "rule": "Short. Focused on how you work and who you help, not a full life story." },
-        { "part": "Services / focus", "purpose": "Removes ambiguity about what a client can actually hire you for.", "rule": "3 clear offers max, more than that reads as unfocused, not versatile." },
+        { "part": "Services / focus", "purpose": "Removes ambiguity about what a client can hire you for.", "rule": "3 clear offers max, more than that reads as unfocused, not versatile." },
         { "part": "Work samples (2–3 pieces)", "purpose": "The actual proof, this is the section that gets you hired.", "rule": "Every piece shows a before/after or a measurable result, not just a finished deliverable with no context." },
-        { "part": "Process", "purpose": "Reduces a client's fear of the unknown by showing how working with you actually feels.", "rule": "3–5 steps, plain language, focused on communication and turnaround, not jargon." },
+        { "part": "Process", "purpose": "Reduces a client's fear of the unknown by showing how working with you feels.", "rule": "3–5 steps, plain language, focused on communication and turnaround, not jargon." },
         { "part": "Contact", "purpose": "The easiest possible next step, friction here loses warm leads.", "rule": "One primary channel, one clear call to action. Not five different ways to reach you." }
       ],
       "principles": [
@@ -169,7 +169,7 @@
           { "id": "services", "label": "Services (max 3)", "hint": "List your clearest offers.", "placeholder": "1. [Clear offer]\n2. [Clear offer]\n3. [Clear offer]", "rule": "Three max." },
           { "id": "sample1", "label": "Work sample #1, context, action, result", "hint": "Problem → what you did → measurable result.", "placeholder": "Problem: [the client's situation before you]\nWhat I did: [the action you took + tools used]\nResult: [before/after or a number]", "rule": "Must include a before/after or a number." },
           { "id": "sample2", "label": "Work sample #2, context, action, result", "hint": "Same structure, second piece, pick something that shows range.", "placeholder": "Problem: ...\nWhat I did: ...\nResult: ...", "rule": "Must be a different type of work than sample #1 to show range." },
-          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you actually looks like.", "placeholder": "1. [First step, e.g. a discovery call]\n2. [What you do next]\n3. [How and how often you communicate]\n4. [Reporting / review cadence]", "rule": "Plain language, focused on communication and turnaround." },
+          { "id": "process", "label": "Process (3–5 steps)", "hint": "What working with you looks like.", "placeholder": "1. [First step, e.g. a discovery call]\n2. [What you do next]\n3. [How and how often you communicate]\n4. [Reporting / review cadence]", "rule": "Plain language, focused on communication and turnaround." },
           { "id": "contact", "label": "Contact / call to action", "hint": "One channel, one clear ask.", "placeholder": "[Your one call to action, e.g. book a discovery call]: [your link]", "rule": "One channel only." }
         ]
       },
@@ -199,14 +199,14 @@
       "outcome": "A working spreadsheet tracker built from a schema you understand, reusable for any tracking need, not just this one.",
       "whyBuild": "A downloaded tracker template looks done on day one and breaks by week two, because you don't know why each column exists, so you can't adapt it when your actual workflow doesn't match the template's assumptions. Every tracker, job applications, invoices, content calendars, client deliverables, is the same underlying pattern: a row per item, a status column, a date-driven trigger, and a place for notes. Learn that pattern once and you can build a working tracker for anything in fifteen minutes, in any spreadsheet tool.",
       "studyFirst": {
-        "what": "Find how 3 different tracking problems are actually solved in spreadsheets, an application tracker, a content calendar, and a financial tracker (AR or AP), to see the shared pattern underneath different subjects.",
+        "what": "Find how 3 different tracking problems are solved in spreadsheets, an application tracker, a content calendar, and a financial tracker (AR or AP), to see the shared pattern underneath different subjects.",
         "how": "Search 'job application tracker spreadsheet reddit' for real shared examples. Search 'content calendar template' on YouTube and watch someone walk through their actual columns and formulas. Ask in an online-professional group what tracker a working bookkeeper or social media manager uses day to day."
       },
       "anatomy": [
         { "part": "Unique identifier column", "purpose": "Gives every row a stable reference so nothing gets confused or duplicated.", "rule": "One column that's always unique, an ID number, an invoice number, a date+name combo. Never rely on row position alone." },
         { "part": "Status column with a fixed list", "purpose": "Turns a wall of data into an instant 'what needs my attention' view.", "rule": "Use Data Validation to restrict status to a fixed dropdown list (e.g. Applied / Replied / Interview / Offer / Rejected), free-text status columns drift within a week because people type variations." },
         { "part": "Date-driven trigger column", "purpose": "Tells you when to act, not just what happened.", "rule": "At least one date column drives a follow-up or deadline, 'Date Applied' alone is a log; 'Follow-up Date' is a tool." },
-        { "part": "Owner/category column", "purpose": "Lets you filter and group when the list grows past what you can scan.", "rule": "One column to slice by, platform, client, category, matched to how you'll actually filter later." },
+        { "part": "Owner/category column", "purpose": "Lets you filter and group when the list grows past what you can scan.", "rule": "One column to slice by, platform, client, category, matched to how you'll filter later." },
         { "part": "Notes column", "purpose": "Captures the context a rigid schema can't predict.", "rule": "Free text, but keep it short, a notes column that becomes a novel means you need another actual column instead." }
       ],
       "principles": [
@@ -217,18 +217,18 @@
         "Review and clear the tracker on a fixed cadence (daily or weekly), an unreviewed tracker is worse than no tracker, because it creates false confidence that things are handled."
       ],
       "decisions": [
-        { "q": "How many columns is too many?", "guide": "If you can't remember what a column means without re-reading the header, it's too many. Most working trackers run 6–9 columns. Add a column only when you've actually needed to filter or sort by that thing more than once." },
+        { "q": "How many columns is too many?", "guide": "If you can't remember what a column means without re-reading the header, it's too many. Most working trackers run 6–9 columns. Add a column only when you've needed to filter or sort by that thing more than once." },
         { "q": "Should I build one big tracker or separate ones per purpose?", "guide": "Separate by purpose (applications vs. invoices vs. content), a single mega-tracker with a 'type' column sounds efficient but makes filters and formulas fight each other. One sheet per clear purpose, linked by a shared client/date convention if needed." },
         { "q": "What formula turns this from a log into an active tool?", "guide": "A simple conditional formula flagging anything overdue: in Google Sheets, a conditional formatting rule 'Date is before today AND Status is not Done' colored red. That one rule is what makes a tracker self-monitoring instead of something you have to remember to check." }
       ],
       "builder": {
-        "intro": "Design your own tracker's schema by answering what you're actually tracking. The preview assembles a column-by-column spec plus the setup rule for each, rebuild it as real columns in Sheets.",
+        "intro": "Design your own tracker's schema by answering what you're tracking. The preview assembles a column-by-column spec plus the setup rule for each, rebuild it as real columns in Sheets.",
         "steps": [
           { "id": "purpose", "label": "What are you tracking, and why?", "hint": "Name the real thing and the decision this tracker helps you make.", "placeholder": "[What you're tracking], so I can [the decision or action this tracker drives].", "rule": "Name the decision it drives, not just the data it holds." },
           { "id": "idcolumn", "label": "Unique identifier column", "hint": "What makes each row unmistakably distinct?", "placeholder": "[What makes each row unique, e.g. an ID number, or Company + Role]", "rule": "Must be unique per row." },
-          { "id": "statusvalues", "label": "Status column, fixed dropdown values", "hint": "List every status value, in the order things actually move through them.", "placeholder": "[First status], [next], [next], … [final], in the order items move through", "rule": "Fixed list only, no free text status." },
+          { "id": "statusvalues", "label": "Status column, fixed dropdown values", "hint": "List every status value, in the order things move through them.", "placeholder": "[First status], [next], [next], … [final], in the order items move through", "rule": "Fixed list only, no free text status." },
           { "id": "datecolumn", "label": "Date-driven trigger column", "hint": "What date should prompt you to act?", "placeholder": "[Date that should prompt action, e.g. Follow-up Date, N days after another date]", "rule": "Must drive an action, not just record history." },
-          { "id": "filtercolumn", "label": "Owner/category column", "hint": "What will you filter or group by once this list gets long?", "placeholder": "[What you'll filter or group by, e.g. Platform, Client, Category]", "rule": "Match to how you'll actually filter later." },
+          { "id": "filtercolumn", "label": "Owner/category column", "hint": "What will you filter or group by once this list gets long?", "placeholder": "[What you'll filter or group by, e.g. Platform, Client, Category]", "rule": "Match to how you'll filter later." },
           { "id": "rule", "label": "The one rule that keeps this tracker alive", "hint": "When will you review it, and what happens if a row goes stale?", "placeholder": "[Your review cadence: when you check it, and what triggers action on a stale row].", "rule": "A tracker without a review cadence goes stale within two weeks." }
         ]
       },
@@ -258,16 +258,16 @@
       "outcome": "A written SOP for one real process you do, so you never have to re-explain it, and a client can hand it to anyone.",
       "whyBuild": "The whole point of hiring an online professional is that a process stops living only in your head. A downloaded SOP template full of generic placeholder steps ('Step 1: Do the thing') proves nothing, the actual skill clients pay for is the ability to observe your own repeatable work clearly enough to document it so someone else could follow it. Learn to write one real SOP well, and you can document any process a client hands you for the rest of your career, exactly the trait that gets you promoted from task-doer to trusted operator.",
       "studyFirst": {
-        "what": "Find 3 real SOPs used inside actual companies, not blank templates, documents someone actually follows to do a real job.",
-        "how": "Search 'SOP example [your niche] site:notion.site' or check public Notion template galleries built by real operators. Search a specific tool's help center for their own 'how we do X internally' style docs (many SaaS companies publish these as marketing). Ask someone in your niche's community to share a redacted SOP they actually use."
+        "what": "Find 3 real SOPs used inside actual companies, not blank templates, documents someone follows to do a real job.",
+        "how": "Search 'SOP example [your niche] site:notion.site' or check public Notion template galleries built by real operators. Search a specific tool's help center for their own 'how we do X internally' style docs (many SaaS companies publish these as marketing). Ask someone in your niche's community to share a redacted SOP they use."
       },
       "anatomy": [
         { "part": "Purpose", "purpose": "States why this process exists at all, so anyone following it understands the goal, not just the motions.", "rule": "One sentence. If you can't state the purpose in one sentence, you don't understand the process well enough yet to document it." },
         { "part": "Tools needed", "purpose": "Removes the setup friction for whoever follows this next.", "rule": "List exact tool names and access needed, not 'the CRM', but 'HubSpot, Marketing view'." },
         { "part": "Frequency / trigger", "purpose": "Tells the reader when this process runs, so it doesn't get run at the wrong time or forgotten.", "rule": "Name the actual trigger, a schedule ('every Monday 9am') or an event ('when a new lead fills the form')." },
         { "part": "Numbered steps", "purpose": "The core of the SOP, the actual sequence someone follows.", "rule": "Each step is one action, written as an imperative verb. If a step contains 'and' joining two actions, split it into two steps." },
-        { "part": "Common mistakes", "purpose": "Passes on the hard-won knowledge of what goes wrong, so the next person skips your learning curve.", "rule": "Real mistakes you or someone actually made, not hypothetical ones." },
-        { "part": "Definition of done", "purpose": "Removes ambiguity about when the process is actually complete.", "rule": "A concrete, checkable condition, not a feeling. 'The report is sent and the client has replied' beats 'it looks good'." }
+        { "part": "Common mistakes", "purpose": "Passes on the hard-won knowledge of what goes wrong, so the next person skips your learning curve.", "rule": "Real mistakes you or someone made, not hypothetical ones." },
+        { "part": "Definition of done", "purpose": "Removes ambiguity about when the process is complete.", "rule": "A concrete, checkable condition, not a feeling. 'The report is sent and the client has replied' beats 'it looks good'." }
       ],
       "principles": [
         "Write it for someone who has never done this task before, that's the actual test of a real SOP.",
@@ -282,14 +282,14 @@
         { "q": "Who is the audience, a specific person or 'anyone'?", "guide": "Write for the least-experienced realistic reader (a new hire, an online professional taking over from you), not for yourself. If you're the only one who'll ever read it, you probably don't need a formal SOP yet, a checklist will do." }
       ],
       "builder": {
-        "intro": "Pick one real process you actually do, something repeatable, even small. Document it honestly, step by step.",
+        "intro": "Pick one real process you do, something repeatable, even small. Document it honestly, step by step.",
         "steps": [
           { "id": "name", "label": "Process name", "hint": "Name it the way you'd search for it later.", "placeholder": "[Process name: specific enough to find in a list of 20 SOPs]", "rule": "Specific enough to find in a list of 20 SOPs." },
           { "id": "purpose", "label": "Purpose", "hint": "Why does this process exist, one sentence.", "placeholder": "[One sentence: why this process exists / what it produces].", "rule": "One sentence." },
           { "id": "tools", "label": "Tools needed", "hint": "Exact tool names and access level.", "placeholder": "[Tool] ([access level]), [Tool] ([access level]), …", "rule": "Exact names, not categories." },
           { "id": "frequency", "label": "Frequency / trigger", "hint": "When does this run?", "placeholder": "[The trigger, a schedule like 'every Friday 3pm', or an event like 'when X happens'].", "rule": "Name the actual trigger." },
           { "id": "steps", "label": "Numbered steps", "hint": "One action per line. Write it for someone who's never done this before.", "placeholder": "1. [One action, imperative verb]\n2. [Next single action]\n3. [Next single action]\n… [end with the final action]", "rule": "One action per step, split any step containing 'and'." },
-          { "id": "mistakes", "label": "Common mistakes", "hint": "Real mistakes you or someone actually made doing this.", "placeholder": "[A real mistake you or someone made here]: [what it causes].", "rule": "Must be a real mistake, not hypothetical." },
+          { "id": "mistakes", "label": "Common mistakes", "hint": "Real mistakes you or someone made doing this.", "placeholder": "[A real mistake you or someone made here]: [what it causes].", "rule": "Must be a real mistake, not hypothetical." },
           { "id": "done", "label": "Definition of done", "hint": "A concrete, checkable condition.", "placeholder": "[A concrete, checkable condition that means it's complete].", "rule": "Checkable, not a feeling." }
         ]
       },
@@ -305,7 +305,7 @@
         "Vague verbs ('handle', 'manage', 'deal with') instead of specific ones ('reconcile', 'export', 'send').",
         "No Definition of Done, so completion is subjective and inconsistent between people.",
         "Writing it once and letting it go stale as the real process evolves.",
-        "Documenting an imaginary ideal process instead of the one you actually run."
+        "Documenting an imaginary ideal process instead of the one you run."
       ],
       "buildIn": { "tool": "Notion or Google Docs", "how": "Create a page per SOP using the sections above as headers, embed screenshots for any UI-heavy step (Notion supports inline images easily), and store all your SOPs in one shared index page so a client or teammate can find any process in seconds." }
     },
@@ -317,16 +317,16 @@
       "difficulty": "Intermediate",
       "time": "45 min",
       "outcome": "A fair contract and a professional invoice built around your actual work terms, not a legal template you don't understand.",
-      "whyBuild": "A copy-pasted contract you don't understand protects nobody, if a dispute ever comes up, you need to know what every clause actually means and why it's there, not just that a template said so. And an invoice is often the very first 'official document' a client receives from you; a sloppy one quietly signals that the rest of your work might be sloppy too. Learn the handful of clauses that actually matter and the handful of fields an invoice needs, and you can produce a fair agreement and a clean invoice for any client relationship, in any country, for the rest of your career.",
+      "whyBuild": "A copy-pasted contract you don't understand protects nobody, if a dispute ever comes up, you need to know what every clause means and why it's there, not just that a template said so. And an invoice is often the very first 'official document' a client receives from you; a sloppy one quietly signals that the rest of your work might be sloppy too. Learn the handful of clauses that matter and the handful of fields an invoice needs, and you can produce a fair agreement and a clean invoice for any client relationship, in any country, for the rest of your career.",
       "studyFirst": {
         "what": "Find 3 real freelance contracts and 3 real invoices used by working Filipino freelancers or online professionals, not law-firm boilerplate, actual documents people use with real clients.",
-        "how": "Search 'simple freelance contract template reddit freelance' for what independent contractors actually use, not agency contracts written for a different scale. Ask in an online-professional or freelance Facebook group for a redacted contract/invoice example. Check invoicing tools (Wise, PayPal, Payoneer) for their own sample invoice formats, those match what Filipino freelancers commonly get paid through."
+        "how": "Search 'simple freelance contract template reddit freelance' for what independent contractors use, not agency contracts written for a different scale. Ask in an online-professional or freelance Facebook group for a redacted contract/invoice example. Check invoicing tools (Wise, PayPal, Payoneer) for their own sample invoice formats, those match what Filipino freelancers commonly get paid through."
       },
       "anatomy": [
         { "part": "Scope of work", "purpose": "Defines exactly what you're being paid to do, the single biggest source of freelance disputes is vague scope.", "rule": "Specific enough that both sides could independently judge whether a deliverable is 'in scope' or not, vague language like 'general support' invites scope creep." },
         { "part": "Rate and payment terms", "purpose": "Removes ambiguity about how much, how often, and what happens if payment is late.", "rule": "State the exact amount, the billing frequency, the due date relative to invoice date, and a concrete consequence for late payment (e.g. work pauses after N days unpaid)." },
         { "part": "Communication expectations", "purpose": "Prevents the common friction of mismatched response-time assumptions.", "rule": "Name the primary channel and a realistic response-time window, this single clause prevents most 'why haven't you replied' conflicts." },
-        { "part": "Confidentiality", "purpose": "Protects both sides' sensitive information without needing a full NDA for small engagements.", "rule": "Simple mutual language is enough for most freelance work, reserve a full NDA for genuinely sensitive IP or financial access." },
+        { "part": "Confidentiality", "purpose": "Protects both sides' sensitive information without needing a full NDA for small engagements.", "rule": "Simple mutual language is enough for most freelance work, reserve a full NDA for sensitive IP or financial access." },
         { "part": "Termination", "purpose": "Defines how either side exits cleanly, which protects you as much as the client.", "rule": "State a notice period and confirm that delivered work is always paid, this protects you from doing unpaid work if a client vanishes." },
         { "part": "Invoice: identifying details", "purpose": "Makes the invoice traceable and professional.", "rule": "Sequential invoice number, your name/business, the client's name, issue date, due date, every field, every time, no exceptions." },
         { "part": "Invoice: line items", "purpose": "Shows exactly what's being charged for, avoiding 'what is this for' questions that delay payment.", "rule": "Each line names the specific service and period covered, not just 'services rendered'." }
@@ -340,7 +340,7 @@
       ],
       "decisions": [
         { "q": "Do I need a lawyer to write my first contract?", "guide": "Not for a simple, low-stakes freelance engagement, a clear plain-language agreement covering scope, rate, timeline, and termination covers most real disputes. Get real legal review once contract value or risk rises significantly (large retainers, access to sensitive systems, work in a regulated industry)." },
-        { "q": "What payment terms should I actually set?", "guide": "Net 7 or Net 14 is standard and fair for freelance work; anything longer than Net 30 creates real cash flow risk for you. For new clients with no track record, consider 50% upfront or a smaller first-milestone payment before continuing." },
+        { "q": "What payment terms should I set?", "guide": "Net 7 or Net 14 is standard and fair for freelance work; anything longer than Net 30 creates real cash flow risk for you. For new clients with no track record, consider 50% upfront or a smaller first-milestone payment before continuing." },
         { "q": "How do I price a project I've never done before?", "guide": "Estimate your hours honestly, multiply by your target hourly rate, add a 15–20% buffer for the unknowns of a new process, and quote that as a project rate, then track your actual hours so your next similar quote is sharper." }
       ],
       "builder": {
@@ -379,14 +379,14 @@
       "difficulty": "Intermediate",
       "time": "45 min",
       "outcome": "A repeatable onboarding process that makes you look organized and capable in the first 48 hours of any new client relationship.",
-      "whyBuild": "The first week with a new client is when they decide, mostly unconsciously, whether hiring you was a good call, and a scattered, ask-as-you-go onboarding makes even a skilled professional look disorganized. A generic onboarding checklist you didn't build yourself misses the specific access, questions, and priorities that actually matter for your niche. Build your own onboarding system once, understand why each piece exists, and every new client relationship starts from a position of obvious competence instead of scrambling.",
+      "whyBuild": "The first week with a new client is when they decide, mostly unconsciously, whether hiring you was a good call, and a scattered, ask-as-you-go onboarding makes even a skilled professional look disorganized. A generic onboarding checklist you didn't build yourself misses the specific access, questions, and priorities that matter for your niche. Build your own onboarding system once, understand why each piece exists, and every new client relationship starts from a position of obvious competence instead of scrambling.",
       "studyFirst": {
         "what": "Find 3 real client-onboarding processes or 'welcome packets' from working professionals in your niche.",
-        "how": "Search '[your niche] client onboarding checklist' or 'new client questionnaire', many agencies publish these as lead magnets. Look at how SaaS tools onboard new users (their in-app checklists) for the underlying pattern of access → goals → priorities → cadence. Ask a working professional in your niche's community what they actually send a new client in week one."
+        "how": "Search '[your niche] client onboarding checklist' or 'new client questionnaire', many agencies publish these as lead magnets. Look at how SaaS tools onboard new users (their in-app checklists) for the underlying pattern of access → goals → priorities → cadence. Ask a working professional in your niche's community what they send a new client in week one."
       },
       "anatomy": [
         { "part": "Access checklist", "purpose": "Gets you functional on day one instead of blocked waiting for logins.", "rule": "List every specific tool and access level needed, routed through a password manager, never plain-text passwords over email or chat." },
-        { "part": "Goals question", "purpose": "Aligns your work to what actually matters to the client, not just to busywork.", "rule": "Ask for a specific, time-bound definition of success (30/60/90 days), a vague 'help me out' goal produces vague, unmeasurable work." },
+        { "part": "Goals question", "purpose": "Aligns your work to what matters to the client, not just to busywork.", "rule": "Ask for a specific, time-bound definition of success (30/60/90 days), a vague 'help me out' goal produces vague, unmeasurable work." },
         { "part": "Communication preferences", "purpose": "Prevents the single most common early friction, mismatched expectations on channel and response time.", "rule": "Capture channel, expected response time, and preferred tone in writing before work starts, not after the first miscommunication." },
         { "part": "Priority triage", "purpose": "Tells you exactly what to tackle first when everything feels urgent.", "rule": "Force a ranked top 3, not an open-ended list, ranking is where the real signal is." },
         { "part": "Recurring task inventory", "purpose": "Captures the invisible repeat work that never gets mentioned explicitly but eats the most time.", "rule": "List each recurring task with its frequency and where it currently lives, this becomes your first few SOPs." },
@@ -402,10 +402,10 @@
       "decisions": [
         { "q": "What if the client is too busy to fill out a detailed questionnaire?", "guide": "Offer a short async form (5–7 questions max) plus a 20-minute call as the alternative, some clients answer better out loud than in writing. Never skip the goals and communication-preference questions even under time pressure; those two matter most." },
         { "q": "How much should I formalize this for a very small or casual engagement?", "guide": "Scale it down but don't skip it, even a 5-question async message covering access, top priority, and communication channel beats zero structure. The format should match the size of the engagement, not the existence of onboarding itself." },
-        { "q": "What do I do if the client's stated goals conflict with what they're actually asking me to do day to day?", "guide": "Flag it directly and early, in writing, a client who says 'grow revenue' but only asks for admin tasks needs a short, respectful conversation about priorities, not silent compliance. Catching this in week one saves months of misalignment." }
+        { "q": "What do I do if the client's stated goals conflict with what they're asking me to do day to day?", "guide": "Flag it directly and early, in writing, a client who says 'grow revenue' but only asks for admin tasks needs a short, respectful conversation about priorities, not silent compliance. Catching this in week one saves months of misalignment." }
       ],
       "builder": {
-        "intro": "Design the onboarding document you'll actually send a new client. Fill in your own questions and structure based on your niche.",
+        "intro": "Design the onboarding document you'll send a new client. Fill in your own questions and structure based on your niche.",
         "steps": [
           { "id": "access", "label": "Access checklist", "hint": "Every specific tool and access level you need.", "placeholder": "[Tool] ([access level]), [Tool] ([access level]), …, via a shared password-manager vault", "rule": "Specific tools and access levels, routed through a password manager." },
           { "id": "goals", "label": "Goals question", "hint": "How you'll ask for a time-bound definition of success.", "placeholder": "What does 'this is working' look like in 30 / 60 / 90 days? Be as specific as you can, a number, a milestone, a feeling of relief about a specific thing.", "rule": "Must prompt a time-bound, specific answer." },
@@ -439,10 +439,10 @@
       "difficulty": "Beginner",
       "time": "30 min",
       "outcome": "A clear plan (and optional short presentation) for your first week with a new client that turns early uncertainty into visible momentum.",
-      "whyBuild": "New clients judge you disproportionately on the first week, not because it's fair, but because it's the only data they have. Winging it or copying a generic 'first 90 days' template built for corporate employees misses what actually matters for a remote freelance relationship: fast small wins and clear, proactive communication. Build your own first-week plan around your actual working style and niche, and you turn the anxious first week, for both of you, into the moment that earns trust for the whole engagement.",
+      "whyBuild": "New clients judge you disproportionately on the first week, not because it's fair, but because it's the only data they have. Winging it or copying a generic 'first 90 days' template built for corporate employees misses what matters for a remote freelance relationship: fast small wins and clear, proactive communication. Build your own first-week plan around your actual working style and niche, and you turn the anxious first week, for both of you, into the moment that earns trust for the whole engagement.",
       "studyFirst": {
         "what": "Find 3 examples of how working freelancers or new hires structure and communicate their first week on a new engagement.",
-        "how": "Search '30-60-90 day plan template' and adapt the corporate pattern down to freelance scale and speed. Look at 'first week as a new freelancer' YouTube videos or blog posts from people describing what they actually did. Ask in an online-professional community what a first-week update from a great new hire actually looked like to them as a client."
+        "how": "Search '30-60-90 day plan template' and adapt the corporate pattern down to freelance scale and speed. Look at 'first week as a new freelancer' YouTube videos or blog posts from people describing what they did. Ask in an online-professional community what a first-week update from a great new hire looked like to them as a client."
       },
       "anatomy": [
         { "part": "Understanding recap", "purpose": "Proves you listened and confirms alignment before you've spent a week doing possibly-wrong work.", "rule": "Restate the client's goals and priorities in your own words, if you got something wrong, this is where it surfaces, on day one instead of day thirty." },
@@ -460,7 +460,7 @@
       ],
       "decisions": [
         { "q": "Email, doc, or slide deck?", "guide": "Default to a concise email or one-page doc, it's faster to produce and matches most freelance relationships' informality. Use a short slide deck only for larger, more formal clients or teams where a presentation is the expected communication style." },
-        { "q": "What if I genuinely don't have any 'early wins' yet by end of week one?", "guide": "Reframe: infrastructure work (a tracker built, an SOP drafted, access fully configured) is a legitimate early win if there's truly no task-level output possible yet, but if that's still true in week two, that's a signal to escalate and ask for smaller, completable starter tasks explicitly." },
+        { "q": "What if I don't have any 'early wins' yet by end of week one?", "guide": "Reframe: infrastructure work (a tracker built, an SOP drafted, access fully configured) is a legitimate early win if there's no task-level output possible yet, but if that's still true in week two, that's a signal to escalate and ask for smaller, completable starter tasks explicitly." },
         { "q": "How honest should I be about early confusion or mistakes?", "guide": "Fully honest, framed with the fix, 'I mis-set up X, caught it, and corrected it' builds more trust than hiding it, because it proves you self-check your own work rather than needing to be caught by the client." }
       ],
       "builder": {
@@ -468,21 +468,21 @@
         "steps": [
           { "id": "recap", "label": "Understanding recap", "hint": "Restate their goals and priorities in your own words.", "placeholder": "My understanding: your top priority is [restate their #1 goal in your own words], with [the supporting foundation] underneath it.", "rule": "Must be your own words, not a copy of their brief." },
           { "id": "setup", "label": "Quick setup summary", "hint": "What infrastructure is already in place.", "placeholder": "Set up: [infrastructure you've stood up, e.g. tracker built, SOP drafted, access confirmed].", "rule": "List concrete things, not vague 'getting settled in'." },
-          { "id": "wins", "label": "Early wins (1–3)", "hint": "Small, genuinely completed things.", "placeholder": "[A genuinely finished small task]; [a second finished win, with a number if there is one].", "rule": "Must be genuinely finished, not in-progress." },
+          { "id": "wins", "label": "Early wins (1–3)", "hint": "Small, completed things.", "placeholder": "[A finished small task]; [a second finished win, with a number if there is one].", "rule": "Must be finished, not in-progress." },
           { "id": "needs", "label": "What you need from them", "hint": "Specific access, decisions, or answers you're waiting on.", "placeholder": "Need: [specific access, decision, or answer you're waiting on].", "rule": "Specific, not a vague 'let me know if you have questions'." },
           { "id": "nextplan", "label": "Plan for weeks 2–4", "hint": "High-level themes, not rigid dates.", "placeholder": "Week 2: [theme]. Week 3: [theme]. Week 4: [theme].", "rule": "2–3 themes per week, not over-committed exact dates." }
         ]
       },
       "critique": [
         "Did I restate their goals in my own words, not just echo their original message back?",
-        "Is at least one item in my early wins genuinely finished, not still in progress?",
+        "Is at least one item in my early wins finished, not still in progress?",
         "Are my asks specific enough that the client knows exactly what to provide?",
         "Did I send this proactively, without being asked for a status update?",
         "Does this end with a clear sense of what happens next and when?"
       ],
       "mistakes": [
         "Waiting to be asked for a status update instead of sending one proactively.",
-        "Listing only in-progress work with nothing genuinely finished to show.",
+        "Listing only in-progress work with nothing finished to show.",
         "Vague blocker language ('waiting on some stuff from you') instead of naming exactly what's needed.",
         "Over-promising specific dates for weeks 2–4 that you can't realistically guarantee yet.",
         "Skipping the recap step and assuming alignment instead of confirming it."

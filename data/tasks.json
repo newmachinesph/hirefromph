@@ -259,7 +259,7 @@
       "icon": "banknote",
       "difficulty": "Intermediate",
       "time": "2–3 hours",
-      "proves": "You can turn a wall of overdue invoices into a prioritized collection plan, the difference between a bookkeeper and a bookkeeper who actually protects cash flow.",
+      "proves": "You can turn a wall of overdue invoices into a prioritized collection plan, the difference between a bookkeeper and a bookkeeper who protects cash flow.",
       "prerequisites": [
         {
           "skill": "Accounts receivable basics (invoice, aging buckets, days sales outstanding)",
@@ -371,7 +371,7 @@
         }
       ],
       "brief": {
-        "scenario": "Loopline (a fictional 12-person B2B SaaS startup) is burning faster than expected. The founder exports a year of expense data and asks: 'Where is this actually going, and what can we cut without hurting the team?'",
+        "scenario": "Loopline (a fictional 12-person B2B SaaS startup) is burning faster than expected. The founder exports a year of expense data and asks: 'Where is this going, and what can we cut without hurting the team?'",
         "deliverable": "A 12-month expense audit (build ~80 realistic line items yourself: software subscriptions, contractor payments, ads, travel) grouped by category, with the top 10 waste candidates flagged and a specific dollar-amount savings recommendation for each.",
         "constraints": [
           "Every flagged item needs a stated reason (duplicate tool, unused seats, better alternative, wrong plan tier).",
@@ -440,7 +440,7 @@
         {
           "name": "Canva Design Essentials",
           "type": "Course",
-          "what": "You'll need this to actually design the 3 finished posts for the deliverable.",
+          "what": "You'll need this to design the 3 finished posts for the deliverable.",
           "free": true,
           "url": "https://www.canva.com/designschool/"
         }
@@ -634,7 +634,7 @@
       "icon": "kanban",
       "difficulty": "Intermediate",
       "time": "2–3 hours",
-      "proves": "You can take an unmanaged task list and turn it into a board that actually tells the team what to do next, the core job of a PM.",
+      "proves": "You can take an unmanaged task list and turn it into a board that tells the team what to do next, the core job of a PM.",
       "prerequisites": [
         {
           "skill": "Kanban/sprint basics (backlog, in-progress, review, done; WIP limits)",
@@ -832,7 +832,7 @@
           "Research a real SaaS product's public help docs to identify realistic recurring question types.",
           "List the 15 most common ticket types across the 4 categories.",
           "Draft each macro with merge fields, staying under 120 words and matching a warm-but-efficient tone.",
-          "Write 3 'hard mode' macros for genuinely difficult scenarios (angry customer, denied refund, no ETA).",
+          "Write 3 'hard mode' macros for difficult scenarios (angry customer, denied refund, no ETA).",
           "Write the usage guide: when to send as-is vs. when to personalize further, and a rule against pasting into an emotionally escalated conversation without editing."
         ]
       },
@@ -845,7 +845,7 @@
       "selfCritique": [
         "If I received this reply as a frustrated customer, would it feel human or robotic?",
         "Does the refund-denial macro de-escalate, or does it sound defensive?",
-        "Are the merge fields realistic, data a support agent would actually have on hand?"
+        "Are the merge fields realistic, data a support agent would have on hand?"
       ],
       "presentIt": "Present the library as a formatted doc with categories clearly labeled. Lead with the practical value: '15 macros covering 80% of recurring tickets, cutting average reply-drafting time from 5 minutes to 30 seconds.'",
       "stretch": "Add a tiered escalation macro set, first reply, follow-up after 48 hours of silence, and final notice, for tickets that go quiet mid-conversation."
@@ -858,7 +858,7 @@
       "icon": "book-open",
       "difficulty": "Intermediate",
       "time": "3 hours",
-      "proves": "You can turn a genuinely confusing product feature into documentation that actually reduces support tickets, proof you can think like both a user and a product person.",
+      "proves": "You can turn a confusing product feature into documentation that reduces support tickets, proof you can think like both a user and a product person.",
       "prerequisites": [
         {
           "skill": "Technical/how-to writing (numbered steps, one action per step, screenshots where needed)",
@@ -873,7 +873,7 @@
       ],
       "resources": [
         {
-          "name": "A real no-cost-tier SaaS tool with a genuinely confusing feature (your choice)",
+          "name": "A real no-cost-tier SaaS tool with a confusing feature (your choice)",
           "type": "Tool",
           "what": "Your actual subject, use the no-cost tier, find the confusing flow firsthand.",
           "free": true,
@@ -895,7 +895,7 @@
         }
       ],
       "brief": {
-        "scenario": "Pick one real, no-cost-tier SaaS tool with a feature you (or people in its public community/support forums) find genuinely confusing, e.g. a permissions system, an export/import flow, a pricing-tier limit that's unclear. This is real friction, not invented.",
+        "scenario": "Pick one real, no-cost-tier SaaS tool with a feature you (or people in its public community/support forums) find confusing, e.g. a permissions system, an export/import flow, a pricing-tier limit that's unclear. This is real friction, not invented.",
         "deliverable": "A 3-article knowledge-base set (a getting-started article, a troubleshooting/FAQ article, and an advanced-use-case article) covering that one confusing feature end to end, with annotated screenshots, written in the tool's actual voice/terminology.",
         "constraints": [
           "All 3 articles must reference the actual current UI of the tool (test it live, don't guess from memory).",
@@ -923,7 +923,7 @@
         "Would the tool's own support team find this useful enough to publish?"
       ],
       "presentIt": "Present as a labeled case study: the tool, the specific feature, the friction point, and the 3 articles (link to the published Notion pages). Note explicitly this was unsolicited practice work, not commissioned by the company.",
-      "stretch": "Send the article set as a genuinely helpful, no-strings message to the tool's support or community team, some companies do publish community-contributed docs."
+      "stretch": "Send the article set as a helpful, no-strings message to the tool's support or community team, some companies do publish community-contributed docs."
     },
     {
       "id": "listing-feedback-tracker",
@@ -1198,7 +1198,7 @@
         "scenario": "Solstice Design Co (a fictional 3-person freelance design collective) tracks clients, projects, and invoices across 3 disconnected spreadsheets that constantly go out of sync, a client's name gets updated in one and not the other two.",
         "deliverable": "A working Airtable base with 3 linked tables (Contacts, Projects, Invoices), each project linked to a contact and each invoice linked to a project, with at least 2 views (a pipeline/kanban view by project status and a table view filtered to overdue invoices), plus 1 built-in automation (e.g. auto-notify when a project status changes to 'Delivered').",
         "constraints": [
-          "Tables must be genuinely linked (Airtable link fields), not just similarly-named columns across separate flat tables.",
+          "Tables must be linked (Airtable link fields), not just similarly-named columns across separate flat tables.",
           "At least one rollup or lookup field must pull data across the link (e.g. a project showing its contact's company name automatically).",
           "The automation must be real and tested, not just described."
         ],
@@ -1220,7 +1220,7 @@
       "selfCritique": [
         "If I updated a contact's name once, does it correctly reflect everywhere it's referenced?",
         "Would a real freelancer replace their 3 spreadsheets with this, or is something missing?",
-        "Is my schema over-built with fields nobody would use, or genuinely lean?"
+        "Is my schema over-built with fields nobody would use, or lean?"
       ],
       "presentIt": "Show the linked-table structure (a quick schema diagram) plus screenshots of both views and the working automation log. Lead with the consolidation story: '3 disconnected spreadsheets → 1 linked CRM with automated status notifications.'",
       "stretch": "Add a client-facing shared view (Airtable's share-view feature) so Solstice's clients can see their own project status without back-and-forth email updates."
@@ -1278,7 +1278,7 @@
           "You must test against 15 sample tickets and report the actual accuracy, including any misclassifications."
         ],
         "steps": [
-          "Write 15 realistic support tickets covering all 4 categories, including a couple of genuinely ambiguous ones.",
+          "Write 15 realistic support tickets covering all 4 categories, including a couple of ambiguous ones.",
           "Write and iterate a classification prompt that returns a fixed-category output reliably.",
           "Build the automation: form/trigger → AI classification step → routing action into a tracker.",
           "Run all 15 test tickets through the live automation.",
@@ -1317,7 +1317,7 @@
         },
         {
           "skill": "Canva or Figma fundamentals (layers, components, brand kit features)",
-          "why": "You're producing real, usable assets, you need to actually operate the tool.",
+          "why": "You're producing real, usable assets, you need to operate the tool.",
           "ifYouDont": "Canva Design Essentials or Figma for Beginners (both no-cost)."
         }
       ],
@@ -1420,7 +1420,7 @@
         }
       ],
       "brief": {
-        "scenario": "Pick one real, public video (yours if you have one, or a real public video you'd redesign as a practice exercise, never claim you made the actual video) and design 3 genuinely different thumbnail concepts testing 3 different psychological hooks (curiosity gap, big-number/stat callout, emotional face reaction).",
+        "scenario": "Pick one real, public video (yours if you have one, or a real public video you'd redesign as a practice exercise, never claim you made the actual video) and design 3 different thumbnail concepts testing 3 different psychological hooks (curiosity gap, big-number/stat callout, emotional face reaction).",
         "deliverable": "3 finished, export-ready thumbnail designs (1280x720) for the same video, each built around a distinct hook strategy, plus a written A/B test hypothesis for each ('I expect Concept B to outperform because...') and a small-size readability check screenshot for all 3.",
         "constraints": [
           "All 3 thumbnails must be for the exact same video/topic, variation must come from strategy, not from designing 3 different videos.",
@@ -1431,20 +1431,20 @@
           "Choose a real public video/topic to redesign as practice.",
           "Define 3 distinct hook strategies (curiosity gap, stat/number callout, emotional reaction).",
           "Design thumbnail concept 1 at full 1280x720 resolution.",
-          "Design thumbnail concept 2 and concept 3, each genuinely different in composition, not just recolored.",
+          "Design thumbnail concept 2 and concept 3, each different in composition, not just recolored.",
           "Shrink all 3 down to simulate a mobile feed and screenshot the readability test.",
           "Write a one-line testable hypothesis for each concept explaining why it might win."
         ]
       },
       "definitionOfDone": [
         "All 3 thumbnails are exported at correct 1280x720 resolution.",
-        "Each uses a genuinely different composition/hook, not a palette-swap of the same layout.",
+        "Each uses a different composition/hook, not a palette-swap of the same layout.",
         "Text is 5 words or fewer on every thumbnail.",
         "All 3 pass the small-size readability check (legible and clear at simulated mobile size)."
       ],
       "selfCritique": [
         "If I saw all 3 in a crowded YouTube feed at actual size, could I read the text and understand the hook in under 1 second?",
-        "Are the 3 concepts testing genuinely different hooks, or minor variations of the same idea?",
+        "Are the 3 concepts testing different hooks, or minor variations of the same idea?",
         "Would my hypothesis for the 'winning' concept be falsifiable by real click-through data?"
       ],
       "presentIt": "Present all 3 side by side at both full size and simulated small size, with the hypothesis for each labeled clearly. Frame it as an A/B test plan, not just 'here are 3 thumbnails', the testing methodology is the actual skill being proven.",
@@ -1495,7 +1495,7 @@
         }
       ],
       "brief": {
-        "scenario": "Pick one real, no-cost-tier SaaS or app tool you genuinely use or can access (a note app, a no-cost design tool, a habit tracker) and treat it as a client who needs a 60-second 'what is this and why should I care' explainer for their landing page.",
+        "scenario": "Pick one real, no-cost-tier SaaS or app tool you use or can access (a note app, a no-cost design tool, a habit tracker) and treat it as a client who needs a 60-second 'what is this and why should I care' explainer for their landing page.",
         "deliverable": "A finished 60-second explainer video: raw screen recording of the tool's core feature, edited with a clear 3-act structure (problem → solution demo → CTA), text overlays for key points, licensed background music, and a written voiceover script (recorded yourself, or as on-screen text if you're not comfortable on mic).",
         "constraints": [
           "Must be 60 seconds or under, explainer videos live or die on tightness, not completeness.",
@@ -1594,7 +1594,7 @@
       ],
       "selfCritique": [
         "Could Jio go live tonight using only my checklist, without messaging me once?",
-        "Does the audio actually sound clean on a test recording, or did I just assume the filter worked?",
+        "Does the audio sound clean on a test recording, or did I just assume the filter worked?",
         "Do my three overlays look like one brand, or three free templates stuck together?"
       ],
       "presentIt": "Present as a short before/after screen recording: a blank OBS window becomes a full scene collection switching cleanly between Starting Soon, Live, and BRB. Lead with the outcome: 'A streamer who couldn't get online is now one click from live.'",
@@ -1612,7 +1612,7 @@
       "prerequisites": [
         {
           "skill": "Short-form vertical editing in CapCut (cuts, captions, hooks)",
-          "why": "The clips are real finished vertical videos, not timestamps, you need to actually cut and caption them.",
+          "why": "The clips are real finished vertical videos, not timestamps, you need to cut and caption them.",
           "ifYouDont": "CapCut's own no-cost tutorials cover vertical cuts, captions, and pacing."
         },
         {
@@ -1670,7 +1670,7 @@
       "selfCritique": [
         "Would I stop scrolling for each of these in my own feed, or only the best one or two?",
         "Do the captions match the audio exactly, or did I let auto-captions ship with errors?",
-        "Did I pick 5 genuinely different moments, or 5 versions of the same beat?"
+        "Did I pick 5 different moments, or 5 versions of the same beat?"
       ],
       "presentIt": "Present the 5 clips as a grid alongside the clip log. Lead with the leverage: 'One 3-hour stream became 5 ready-to-post vertical clips in an afternoon.' The clip log proves you have a repeatable process, not a lucky edit.",
       "stretch": "Post the clips on a real account across a week and track which hook type got the most watch-through, then write one line on what you'd cut more of next time."
@@ -1762,7 +1762,7 @@
       "prerequisites": [
         {
           "skill": "Audio editing in Descript or a no-cost DAW (cuts, filler removal, leveling)",
-          "why": "The whole job is hands-on editing, you need to actually cut, not just know the theory.",
+          "why": "The whole job is hands-on editing, you need to cut, not just know the theory.",
           "ifYouDont": "Descript's no-cost tutorials and help center walk through filler removal and leveling."
         },
         {
@@ -1819,7 +1819,7 @@
       ],
       "selfCritique": [
         "Does the edit sound natural, or can you hear every cut?",
-        "Would the host notice the guest was originally half the volume, or is it seamless now?",
+        "Would the host notice the guest was originally half the volume, or does it sound smooth now?",
         "Did I cut for the listener's time, or leave in a tangent because cutting felt risky?"
       ],
       "presentIt": "Present a 60-second before/after: 30 seconds of raw audio, 30 seconds of your edit, plus the edit log. Lead with the transformation: '25 minutes of raw phone audio became an 18-minute episode ready to publish.' The before/after clip is the whole proof.",
@@ -1864,7 +1864,7 @@
         {
           "name": "Buzzsprout's podcast show-notes guides",
           "type": "Docs",
-          "what": "Real-world examples of show-notes structure and what listeners actually click.",
+          "what": "Real-world examples of show-notes structure and what listeners click.",
           "free": true,
           "url": "https://www.buzzsprout.com/blog"
         }
@@ -1874,7 +1874,7 @@
         "deliverable": "A complete repurposing pack for one episode: full show notes (a 2–3 sentence summary, 5–7 timestamped chapters, 3 key takeaways, and any links mentioned), 3 title/subject-line options, 2 designed quote cards, and a 3-clip pick list (timestamps plus suggested captions) ready for an editor to cut.",
         "constraints": [
           "Timestamps must be real and accurate to the actual episode, not invented.",
-          "The 3 title options must be genuinely different angles, not one title reworded three ways.",
+          "The 3 title options must be different angles, not one title reworded three ways.",
           "The 2 quote cards must pull real, verbatim quotes from the episode and share one consistent visual style."
         ],
         "steps": [
@@ -1932,7 +1932,7 @@
         {
           "name": "Planning Center University",
           "type": "Course",
-          "what": "No-cost training on how churches actually run services and volunteer teams.",
+          "what": "No-cost training on how churches run services and volunteer teams.",
           "free": true,
           "url": "https://www.planningcenter.com/university"
         },
@@ -2045,7 +2045,7 @@
       "selfCritique": [
         "If I handed this to the coach, could they send issue 5 next week without me?",
         "Do all 4 issues feel like one voice, or four different writers?",
-        "Is the devotional section genuinely reflective, or does it read like a marketing email in disguise?"
+        "Is the devotional section reflective, or does it read like a marketing email in disguise?"
       ],
       "presentIt": "Present the template plus the 4 issues as a set, with the style guide up front. Lead with the consistency win: 'A newsletter system that turns an occasional, whenever-someone-remembers send into a dependable weekly rhythm.' Show the template structure as the hero, the system is the value, not any single issue.",
       "stretch": "Add a 3-email welcome sequence for new subscribers so people who join mid-month get a warm on-ramp before the weekly rhythm picks them up."
@@ -2343,7 +2343,7 @@
         },
         {
           "skill": "Basic keyword research",
-          "why": "A listing rewrite that isn't driven by what buyers actually search is just prettier guessing.",
+          "why": "A listing rewrite that isn't driven by what buyers search is just prettier guessing.",
           "ifYouDont": "Helium 10's free tier lets you pull real search terms for any product; their free tutorials show how."
         }
       ],
@@ -2380,7 +2380,7 @@
         ],
         "steps": [
           "Pick one real, weak public listing and screenshot the original as your 'before'.",
-          "Pull the top search terms buyers actually use for that product (Helium 10 free tier).",
+          "Pull the top search terms buyers use for that product (Helium 10 free tier).",
           "Rewrite the title and five bullets around those terms: benefit first, keyword woven in.",
           "Draft a scannable description and a shot list for the images and A+ content.",
           "Lay your version beside the original and write two lines on why each change lifts rank or conversion."
@@ -2432,7 +2432,7 @@
         {
           "name": "Chatbot escalation guide",
           "type": "Docs",
-          "what": "What good escalation actually looks like: triggers, sentiment signals, and why a handoff must carry the full conversation history.",
+          "what": "What good escalation looks like: triggers, sentiment signals, and why a handoff must carry the full conversation history.",
           "free": true,
           "url": "https://www.eesel.ai/blog/chatbot-escalation"
         },
@@ -2524,7 +2524,7 @@
         "constraints": [
           "Every claim gets a verdict: verified with a link, unverifiable, or wrong with the correction. No claim left unexamined.",
           "Classify errors with the standard vocabulary: factuality (wrong about the world) vs faithfulness (wrong about the source).",
-          "Pick a topic you genuinely know, so your judgment, not a search engine, is the first filter."
+          "Pick a topic you know, so your judgment, not a search engine, is the first filter."
         ],
         "steps": [
           "Prompt ChatGPT for a 600-word article with statistics and cited sources on a topic you know deeply.",
@@ -2556,7 +2556,7 @@
       "icon": "puzzle",
       "difficulty": "Intermediate",
       "time": "4–5 hours",
-      "proves": "You can turn a messy small-business process into a data model and a working, permissioned app, which is the part clients actually pay for. A portal with real logins beats any tutorial demo.",
+      "proves": "You can turn a messy small-business process into a data model and a working, permissioned app, which is the part clients pay for. A portal with real logins beats any tutorial demo.",
       "prerequisites": [
         {
           "skill": "Basic data modeling",
@@ -2704,7 +2704,7 @@
       "icon": "pie-chart",
       "difficulty": "Starter",
       "time": "3–4 hours",
-      "proves": "You can take messy sales data, clean it with a documented log, build a live dashboard, and write the plain-English summary a non-technical owner actually reads. Clean, chart, explain: that is the whole junior data job.",
+      "proves": "You can take messy sales data, clean it with a documented log, build a live dashboard, and write the plain-English summary a non-technical owner reads. Clean, chart, explain: that is the whole junior data job.",
       "prerequisites": [
         {
           "skill": "Google Sheets fundamentals",
@@ -2767,7 +2767,7 @@
         "Does every chart on the dashboard answer an owner question, or did I chart what was easy?",
         "Did I verify the dates survived the locale, or do my months just look plausible?"
       ],
-      "presentIt": "Present all three layers together: 'Found and fixed 41 data problems (logged), built the live dashboard (link), and here is the summary the owner actually reads.' The cleaning log is what separates you from every chart-only portfolio.",
+      "presentIt": "Present all three layers together: 'Found and fixed 41 data problems (logged), built the live dashboard (link), and here is the summary the owner reads.' The cleaning log is what separates you from every chart-only portfolio.",
       "stretch": "Automate the refresh: new rows appended to the Sheet flow into the dashboard, and draft the email template so week two takes twenty minutes. Analysts who productize their own report become the retainer."
     },
     {
@@ -2852,7 +2852,7 @@
       "icon": "truck",
       "difficulty": "Starter",
       "time": "3–4 hours",
-      "proves": "You can keep shipments visible, vet a carrier from public records, and audit a detention invoice: the three artifacts of freight ops, built without any TMS access, from the same public sources brokers actually use.",
+      "proves": "You can keep shipments visible, vet a carrier from public records, and audit a detention invoice: the three artifacts of freight ops, built without any TMS access, from the same public sources brokers use.",
       "prerequisites": [
         {
           "skill": "Freight vocabulary",
@@ -2869,7 +2869,7 @@
         {
           "name": "DAT load board guide",
           "type": "Docs",
-          "what": "The official free PDF: how loads, rates, and carrier vetting actually work on the board US brokers use.",
+          "what": "The official free PDF: how loads, rates, and carrier vetting work on the board US brokers use.",
           "free": true,
           "url": "https://www.dat.com/resources/wp-content/uploads/resource-assets/whitepaper/complete-guide-to-using-the-dat-load-board.pdf"
         },

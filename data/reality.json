@@ -4,7 +4,7 @@
     "line1": "The numbers nobody",
     "line2": "shows you first."
   },
-  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays far less than promised and calls it a career. So here is the replacement: what the evidence actually says about remote and online work in 2026, heading into 2027, the ugly parts and the genuinely hopeful parts, every number with its source one click away.",
+  "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays far less than promised and calls it a career. So here is the replacement: what the evidence says about remote and online work in 2026, heading into 2027, the ugly parts and the hopeful parts, every number with its source one click away.",
   "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful, and, as it turns out, more hopeful.",
   "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
@@ -50,7 +50,7 @@
       "myth": "\"Freelancing pays way more than a local job.\"",
       "headline": "About a quarter of your working time will not be paid at all.",
       "body": "The ILO's global study of digital labour platforms found online workers spend roughly 20 unpaid minutes for every paid hour, searching for tasks, taking unpaid tests, vetting clients, rewriting proposals nobody answers. That's about one quarter of working time, invisible and unpaid. Once you count it, average earnings land at $2.22 in Asia-Pacific ($4.70 in North America, $1.33 in Africa). Those numbers come from a 2015-17 ILO survey, the most recent survey of its kind, so treat them as dated, not current, evidence of a real pattern.",
-      "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the eighty minutes it actually took to earn.",
+      "sting": "Your \"$5 an hour\" gig is not $5 an hour. It is $5 for the hour that got billed, spread across the eighty minutes it took to earn.",
       "lesson": "Never compare a freelance rate to a local salary without the unpaid quarter, the platform fee, and your own electricity and internet already subtracted. Do that arithmetic before you resign from anything.",
       "source": {
         "label": "ILO, Digital labour platforms and the future of work (2018), surveys 2015–2017",
@@ -83,7 +83,7 @@
       "headline": "31% had been paid nothing. 38% had been paid late.",
       "body": "Fairwork (Oxford Internet Institute) surveyed 750+ cloudwork workers across 100 countries for its 2025 Cloudwork Ratings. 31% had experienced outright non-payment; 38% had experienced late payment. Of the 16 platforms scored, only 4 could show that their workers consistently earn at least their local minimum wage after work-related costs. Only 6 of 16 had contracts that fairly reflected the work being done.",
       "sting": "The fee buys you a marketplace and a dispute form. It does not buy you a guarantee, and the numbers say roughly one in three of us finds that out the hard way.",
-      "lesson": "Milestones, escrow, and written scope are not paranoia, they're the only protection that actually held up in the data. Use the platform's tracker, never work off-platform \"to save the fee\", and treat every unfunded milestone as unpaid work.",
+      "lesson": "Milestones, escrow, and written scope are not paranoia, they're the only protection that held up in the data. Use the platform's tracker, never work off-platform \"to save the fee\", and treat every unfunded milestone as unpaid work.",
       "source": {
         "label": "Fairwork Cloudwork Ratings 2025 (Oxford Internet Institute)",
         "url": "https://fair.work/en/fw/publications/cloudwork-report-2025/"
@@ -97,8 +97,8 @@
       "tag": "The English myth",
       "myth": "\"Magaling ako mag-English, that's my edge.\"",
       "headline": "It's your entry ticket. It has never been your differentiator.",
-      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries, scoring 569 out of 800, second in Asia. Genuinely something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
-      "sting": "A client choosing between forty Filipino applicants cannot use English to choose. They will use the thing you can actually prove, the work.",
+      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries, scoring 569 out of 800, second in Asia. Something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
+      "sting": "A client choosing between forty Filipino applicants cannot use English to choose. They will use the thing you can prove, the work.",
       "lesson": "English gets you into the room. Craft gets you paid. If \"good English\" is the strongest line in your pitch, you have not yet given the client a reason to pick you.",
       "source": {
         "label": "EF English Proficiency Index 2025, Philippines",
@@ -161,7 +161,7 @@
   ],
 
   "ai": {
-    "kicker": "What AI is actually doing · 2023 → today",
+    "kicker": "What AI is doing · 2023 → today",
     "title": "The floor got cut. The ceiling went up.",
     "lead": "This is the part everyone gets wrong in both directions. \"AI will replace freelancers\" is false. \"AI changes nothing\" is also false. What the posting data shows is narrower and more actionable: work that could be described as a generic task collapsed in price, while work where a human owns an outcome grew.",
     "framing": "Read every chart below against its baseline, not against zero. This is that fourth question from the top of the page, in action.",
@@ -187,7 +187,7 @@
       {
         "id": "bloomberry-180m",
         "title": "180 million job postings, 2023 → October 2025",
-        "note": "Now the baseline matters. ALL job postings fell 8% in 2025, the whole market cooled. So the dashed line is the real zero. Writers at −28% are genuinely down against it. But customer service reps at −4% are actually doing BETTER than the market average, a fact the panic usually leaves out.",
+        "note": "Now the baseline matters. ALL job postings fell 8% in 2025, the whole market cooled. So the dashed line is the real zero. Writers at −28% are down against it. But customer service reps at −4% are doing BETTER than the market average, a fact the panic usually leaves out.",
         "baseline": { "value": -8, "label": "All postings, 2025: −8%" },
         "source": {
           "label": "Bloomberry, I analyzed 180M jobs",
@@ -233,7 +233,7 @@
   },
 
   "growth": {
-    "kicker": "The map · where demand is actually rising",
+    "kicker": "The map · where demand is rising",
     "title": "Now the hopeful half, and it's bigger than the scary half.",
     "lead": "Everything above was the floor. Here is the ceiling. These are year-on-year increases in what clients are actively searching and hiring for, from the two largest freelance marketplaces on Earth. You do not need to be able to do all of these. You need to pick one and go deep.",
     "groups": [
@@ -319,7 +319,7 @@
     },
     "nuance": {
       "title": "But here is the sentence that usually gets left out.",
-      "body": "Kelly Monahan, Managing Director of the Upwork Research Institute, explained where that premium actually lands, and it is not on people who just learned to prompt. It lands on people who already had deep domain expertise and then layered AI on top of it:",
+      "body": "Kelly Monahan, Managing Director of the Upwork Research Institute, explained where that premium lands, and it is not on people who just learned to prompt. It lands on people who already had deep domain expertise and then layered AI on top of it:",
       "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
       "attribution": "Kelly Monahan, MD, Upwork Research Institute",
       "source": {
@@ -327,9 +327,9 @@
         "url": "https://www.axios.com/2025/06/30/ai-job-vibe-coding-upwork"
       }
     },
-    "conclusion": "AI skills alone, with no craft underneath them, do not produce the premium. The multiplier needs something to multiply. A prompt engineer with no domain is a person holding a very fast lever with nothing on the other end of it, and there are already ten thousand of them, competing on price, on the floor we just showed you. Pick a craft. Get genuinely good at the thing itself. THEN put AI under it and watch what your hour is worth.",
+    "conclusion": "AI skills alone, with no craft underneath them, do not produce the premium. The multiplier needs something to multiply. A prompt engineer with no domain is a person holding a very fast lever with nothing on the other end of it, and there are already ten thousand of them, competing on price, on the floor we just showed you. Pick a craft. Get good at the thing itself. THEN put AI under it and watch what your hour is worth.",
     "proof": {
-      "title": "And you are better positioned for this than a full-time employee. Genuinely.",
+      "title": "And you are better positioned for this than a full-time employee.",
       "body": "Upwork's Future Workforce Index 2025 compared freelancers with full-time employees. Freelancers already out-index employees on AI, and, quietly, on exactly the human skills that LinkedIn says are rising. You are not behind. You are, on the evidence, ahead.",
       "rows": [
         { "label": "Advanced AI proficiency", "freelancer": 54, "employee": 38 },
@@ -347,7 +347,7 @@
 
   "pay": {
     "kicker": "Pay · read the warning label first",
-    "title": "What this actually pays, and why you should distrust this section",
+    "title": "What this pays, and why you should distrust this section",
     "warning": {
       "title": "This is the weakest data on the page. We're showing you the weakness on purpose.",
       "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology, and each has a commercial stake in where the number lands: a firm that places workers benefits when the rate looks low to clients, a firm that sells training benefits when it looks high. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
@@ -400,7 +400,7 @@
 
   "unknown": {
     "kicker": "The honest gaps",
-    "title": "What nobody actually knows",
+    "title": "What nobody knows",
     "lead": "These claims circulate constantly. Every one of them is stated with total confidence, and not one of them has a primary source behind it. We are listing them so the pattern becomes familiar before it meets you in a coaching ad.",
     "items": [
       {
@@ -440,7 +440,7 @@
   "reading": {
     "kicker": "Read the primary source, not the summary",
     "title": "The reading list",
-    "lead": "Everything cited on this page, plus the no-cost material that actually moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year, and those three things are where the truth lives.",
+    "lead": "Everything cited on this page, plus the no-cost material that moves the needle. One rule: open the primary report, not the article summarising the report. Summaries drop the baseline, drop the sample size, and drop the year, and those three things are where the truth lives.",
     "groups": [
       {
         "id": "market",
@@ -491,7 +491,7 @@
             "why": "The clearest before/after of ChatGPT on the freelance market. Notice the method is described openly, that's what makes it trustworthy."
           },
           {
-            "title": "I analyzed 180M jobs to see what AI is actually replacing today",
+            "title": "I analyzed 180M jobs to see what AI is replacing today",
             "org": "Bloomberry",
             "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/",
             "why": "The follow-up, with the −8% market baseline included. This is what honest data journalism looks like, steal the technique."
@@ -528,7 +528,7 @@
   "closing": {
     "kicker": "The honest bottom line",
     "title": "The floor is collapsing. The ceiling is rising. Your job is to get off the floor.",
-    "body": "That is the whole page in one line, and it is not despair, it's a direction. Generic, undifferentiated task work is being commoditized toward zero, and no amount of hustle, positivity, or working faster reverses that; the price is falling for structural reasons that have nothing to do with how hard you try. But work where a human OWNS an AI-assisted outcome end to end is growing fast and paying more, and that door is wide open right now, in a way it will not stay open forever.",
+    "body": "That is the whole page in one line, and it is not despair, it's a direction. Generic, undifferentiated task work is being commoditized toward zero, and no amount of hustle, positivity, or working faster reverses that; the price is falling for structural reasons that have nothing to do with how hard you try. But work where a human OWNS an AI-assisted outcome end to end is growing fast and paying more, and that door is wide open right now, in a way it will not stay open indefinitely.",
     "point": "You are not late. You are early, but only if you move while the premium still exists. Nobody is coming to move you. Start here:",
     "links": [
       {

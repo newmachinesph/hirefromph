@@ -1,6 +1,6 @@
 {
   "niche": {
-    "intro": "The niches below are listed because they work for Filipino online professionals right now, as of 2026. But \"right now\" always changes. New niches emerge, old ones saturate, AI reshapes what actually pays. The list below will eventually go stale. The rubric that produced it won't.",
+    "intro": "The niches below are listed because they work for Filipino online professionals right now, as of 2026. But \"right now\" always changes. New niches emerge, old ones saturate, AI reshapes what pays. The list below will eventually go stale. The rubric that produced it won't.",
     "creed": "A list of niches is a snapshot. The ability to evaluate any niche is permanent.",
     "examplesNote": "The niches below are worked examples of this rubric, already scored against real 2026 demand. Study *why* each one lands where it does, then run the same seven questions on a niche we never listed. That's the actual skill.",
     "criteria": [
@@ -15,7 +15,7 @@
       {
         "id": "payCeiling",
         "name": "Pay ceiling",
-        "question": "What do the top people in this niche actually earn?",
+        "question": "What do the top people in this niche earn?",
         "why": "Starting pay tells you what's true today. The ceiling tells you if it's worth three years of your life, some niches top out fast, others keep paying more the longer you're in them.",
         "weight": 3,
         "icon": "trending-up"
@@ -40,7 +40,7 @@
         "id": "fit",
         "name": "Fit",
         "question": "Would I still choose this on a bad day?",
-        "why": "Pay and demand get you hired. Fit gets you to year two. The niches that burn people out are usually the ones picked for the pay band alone, not because the daily work actually suited them.",
+        "why": "Pay and demand get you hired. Fit gets you to year two. The niches that burn people out are usually the ones picked for the pay band alone, not because the daily work suited them.",
         "weight": 4,
         "icon": "heart"
       },
@@ -100,7 +100,7 @@
     ]
   },
   "equipment": {
-    "intro": "The budget ranges on this page are rough planning allowances, not quotes or proof that a specific item will suit your work. Prices change with location, condition, seller, and promos. Check current listings and the requirements for the tools you actually use; the useful skill is knowing which specs and failure points to test.",
+    "intro": "The budget ranges on this page are rough planning allowances, not quotes or proof that a specific item will suit your work. Prices change with location, condition, seller, and promos. Check current listings and the requirements for the tools you use; the useful skill is knowing which specs and failure points to test.",
     "creed": "Don't buy what a list tells you. Check your workload, test the weak points, then buy the least expensive option that meets those needs.",
     "referenceNote": "These builds are budget examples, not shopping lists. Confirm current prices, warranty terms, battery condition, and the requirements of your own software before paying.",
     "whatMatters": [
@@ -168,7 +168,7 @@
     "buyingSmart": [
       {
         "title": "Buy secondhand from the right places",
-        "desc": "Facebook Marketplace groups (search \"laptop for sale [your city]\"), Carousell, and local computer shops with a physical storefront and warranty are safer than a random online stranger. Meet in a public place with wifi so you can actually test the unit before paying, a mall, a coworking space, any Jollibee with wifi all work.",
+        "desc": "Facebook Marketplace groups (search \"laptop for sale [your city]\"), Carousell, and local computer shops with a physical storefront and warranty are safer than a random online stranger. Meet in a public place with wifi so you can test the unit before paying, a mall, a coworking space, any Jollibee with wifi all work.",
         "icon": "map-pin"
       },
       {
@@ -183,11 +183,11 @@
       },
       {
         "title": "Decide upgrade-now vs. upgrade-later with one question",
-        "desc": "Would I lose a client, or fail to apply, without this? If yes, it's now. If the honest answer is \"it would just be nicer,\" it's later, buy it once a real client need proves you actually require it, not because a list said so.",
+        "desc": "Would I lose a client, or fail to apply, without this? If yes, it's now. If the honest answer is \"it would just be nicer,\" it's later, buy it once a real client need proves you require it, not because a list said so.",
         "icon": "git-branch"
       },
       {
-        "title": "The rule that saves you money forever",
+        "title": "The rule that saves you money",
         "desc": "Buy the cheapest thing that clears the bar for the work you're doing today. Don't buy for the job you hope to have in a year, you can always upgrade with your first month's pay. Overbuying upfront is money you can't use to survive the gap before your first client.",
         "icon": "piggy-bank"
       }

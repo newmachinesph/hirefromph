@@ -3,8 +3,8 @@
   "hero": {
     "kicker": "Open · real · sourced",
     "line1": "The shelf.",
-    "line2": "Everything that actually moves the needle.",
-    "intro": "You do not need to pay for the knowledge to start an online career. Almost everything worth learning is already no-cost: from the world's best universities, from the companies whose tools you will use, from your own government, and from a few genuinely great teachers on YouTube. The hard part was never access. It is knowing which no-cost thing is worth your week, and how to turn it into proof instead of a pile of half-finished tabs. That is what this page is for.",
+    "line2": "Everything that moves the needle.",
+    "intro": "You do not need to pay for the knowledge to start an online career. Almost everything worth learning is already no-cost: from the world's best universities, from the companies whose tools you will use, from your own government, and from a few great teachers on YouTube. The hard part was never access. It is knowing which no-cost thing is worth your week, and how to turn it into proof instead of a pile of half-finished tabs. That is what this page is for.",
     "creed": "It is only worth the tab if it does not cost you a month you cannot get back. The skill is not finding a course. It is judging one before it takes your time, and finishing it with something to show."
   },
   "judge": {
@@ -29,7 +29,7 @@
       },
       {
         "q": "Open to audit, or gated by a paywall?",
-        "why": "Plenty of open courses gate the certificate, the exam, or the real lessons behind a trial that wants a card. Read the fine print for ninety seconds before you commit an afternoon, so the open part is actually the part you need.",
+        "why": "Plenty of open courses gate the certificate, the exam, or the real lessons behind a trial that wants a card. Read the fine print for ninety seconds before you commit an afternoon, so the open part is the part you need.",
         "icon": "wallet"
       },
       {
@@ -42,7 +42,7 @@
   },
   "shelf": {
     "kicker": "The shelf · go to the source",
-    "title": "The resources we actually point people to.",
+    "title": "The resources we point people to.",
     "lead": "Curated, not endless: a shelf, not a warehouse. Each one is no-cost or open-to-audit, from the source, and chosen because it ends in something you can use. Open the ones that fit your lane, ignore the rest. We link the primary site every time, so you always land on the real, current version.",
     "groups": [
       {
@@ -69,7 +69,7 @@
       {
         "id": "gov",
         "title": "Philippine government & public, open by right",
-        "note": "Your taxes already paid for these. No-cost digital-skills training and certificates from Philippine public programs. It is yours by right, so take the certificate, then go build the proof that actually gets you hired.",
+        "note": "Your taxes already paid for these. No-cost digital-skills training and certificates from Philippine public programs. It is yours by right, so take the certificate, then go build the proof that gets you hired.",
         "items": [
           {
             "org": "TESDA · PH government",
@@ -103,7 +103,7 @@
             "org": "Harvard · edX",
             "title": "CS50: Intro to Computer Science",
             "url": "https://cs50.harvard.edu/x/",
-            "why": "Harvard's famous intro to computer science, open to audit. The best single foundation if you want to truly understand how software works. Optional paid certificate.",
+            "why": "Harvard's famous intro to computer science, open to audit. The best single foundation if you want to understand how software works. Optional paid certificate.",
             "cost": "free"
           },
           {
@@ -117,7 +117,7 @@
             "org": "Google Skillshop",
             "title": "Google Skillshop",
             "url": "https://skillshop.withgoogle.com/",
-            "why": "Google's no-cost certifications in Google Ads and Analytics, the credentials clients actually recognise for marketing and data work.",
+            "why": "Google's no-cost certifications in Google Ads and Analytics, the credentials clients recognise for marketing and data work.",
             "cost": "free"
           },
           {
@@ -146,7 +146,7 @@
       {
         "id": "opensource",
         "title": "Free & open-source, skip the subscription",
-        "note": "Paid subscriptions add up fast on a new freelancer's rate. These tools cover the same jobs, design, video, docs, PDF, screen recording, notes, so you can deliver client work without a stack of monthly bills. The open-source ones you can self-host and keep forever; the freemium ones have a real no-cost tier, not just a trial.",
+        "note": "Paid subscriptions add up fast on a new freelancer's rate. These tools cover the same jobs, design, video, docs, PDF, screen recording, notes, so you can deliver client work without a stack of monthly bills. The open-source ones you can self-host and keep; the freemium ones have a real no-cost tier, not just a trial.",
         "items": [
           {
             "org": "Penpot · open",
@@ -309,7 +309,7 @@
       {
         "id": "youtube",
         "title": "YouTube, teachers worth your time",
-        "note": "The best of YouTube rivals any paid course. These channels are durable and genuinely teach a craft. Watch to build, not to binge.",
+        "note": "The best of YouTube rivals any paid course. These channels are durable and teach a craft. Watch to build, not to binge.",
         "items": [
           {
             "org": "YouTube · freeCodeCamp",
@@ -403,7 +403,7 @@
       {
         "n": 3,
         "title": "Build as you go, not after",
-        "desc": "Pause the video and do the thing on your own file. Passive watching is the illusion of learning. The part where you are stuck is the part where it is actually happening."
+        "desc": "Pause the video and do the thing on your own file. Passive watching is the illusion of learning. The part where you are stuck is the part where it is happening."
       },
       {
         "n": 4,
@@ -419,7 +419,7 @@
     "crossrefs": [
       {
         "href": "/learn",
-        "label": "How to actually learn (the evidence)"
+        "label": "How to learn (the evidence)"
       },
       {
         "href": "/tasks",
@@ -445,7 +445,7 @@
       {
         "href": "/learn",
         "label": "How to learn",
-        "desc": "What the evidence on studying actually supports, and why the popular habits quietly fail you."
+        "desc": "What the evidence on studying supports, and why the popular habits quietly fail you."
       },
       {
         "href": "/tasks",

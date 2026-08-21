@@ -1,8 +1,8 @@
 {
   "kicker": "The deep LEARN method",
   "headline": "You were taught what to memorise. Nobody taught you how to learn.",
-  "intro": "Every other page here teaches you a skill. This one teaches you how your brain actually keeps anything at all, the real difference between techniques that build durable knowledge and techniques that just make you feel productive. Confusing the two is the single biggest reason smart, hardworking people study for hours and still forget everything by the exam, the interview, or the client call.",
-  "creed": "The techniques that feel most productive are usually the least effective. Here is what the evidence actually supports.",
+  "intro": "Every other page here teaches you a skill. This one teaches you how your brain keeps anything at all, the real difference between techniques that build durable knowledge and techniques that just make you feel productive. Confusing the two is the single biggest reason smart, hardworking people study for hours and still forget everything by the exam, the interview, or the client call.",
+  "creed": "The techniques that feel most productive are usually the least effective. Here is what the evidence supports.",
   "forgettingCurve": {
     "title": "What review does to what you remember",
     "caption": "Both lines start with everything. Only the reviewed one is still near the top a month later.",
@@ -25,9 +25,9 @@
   },
   "myth": {
     "claim": "\"I'm a visual learner\" (or auditory, or kinesthetic), and I learn best when material is taught to match my personal style.",
-    "whyPeopleBelieveIt": "It's intuitive, everyone genuinely prefers certain formats over others, and \"I prefer this\" quietly turns into \"this is what works for me.\" It's also everywhere: online quizzes, some teacher training, and an entire industry of learning-style assessments, tailored courses, and certifications built on top of it. Popular, confident, and personal, the exact combination that makes a claim feel true without ever being checked.",
+    "whyPeopleBelieveIt": "It's intuitive, everyone prefers certain formats over others, and \"I prefer this\" quietly turns into \"this is what works for me.\" It's also everywhere: online quizzes, some teacher training, and an entire industry of learning-style assessments, tailored courses, and certifications built on top of it. Popular, confident, and personal, the exact combination that makes a claim feel true without ever being checked.",
     "whatTheEvidenceSays": "A widely cited review of the evidence (Pashler et al., 2008, Psychological Science in the Public Interest) tested the actual claim, not \"do people have preferences\" (yes, obviously), but \"does matching instruction to someone's claimed style improve what they learn.\" It doesn't. The review found no controlled study showing a real benefit. What does matter is matching the format to the material, not to the person: a process gets a diagram because the process itself has structure, not because you're \"a visual learner.\" A list of dates gets retrieval practice no matter who's studying it. The material decides the format. The learner's \"style\" is not a variable that changes the outcome.",
-    "whatToDoInstead": "Stop asking \"what's my learning style?\" Start asking \"what does this material actually look like?\" Steps, hierarchies, and systems get a diagram (dual coding). Isolated facts get retrieval practice. Concepts get elaboration and a concrete example. Choose the technique for what you're learning, never for who you think you are.",
+    "whatToDoInstead": "Stop asking \"what's my learning style?\" Start asking \"what does this material look like?\" Steps, hierarchies, and systems get a diagram (dual coding). Isolated facts get retrieval practice. Concepts get elaboration and a concrete example. Choose the technique for what you're learning, never for who you think you are.",
     "vetLesson": "Run this through the VET method: who profits if you believe this? A quiz that sorts you into a \"type\" is easy to sell, it flatters you, it feels personal, and it justifies an entire catalogue of \"visual learner\" products behind it. A claim that feels validating and has a product sitting right behind it is exactly the combination VET tells you to slow down on. Evidence, not vibes, and on this one, the evidence says no."
   },
   "works": [
@@ -36,7 +36,7 @@
       "name": "Retrieval Practice",
       "what": "Testing yourself on material, closed book, from memory, instead of looking it up or reading it again.",
       "why": "Every time you force your brain to pull an answer out of memory, you strengthen the path to it. Rereading strengthens nothing new; it just makes the material feel familiar, and your brain mistakes familiar for known. This effect, known as the testing effect, is one of the most well-replicated findings in learning science: self-testing beats rereading and highlighting, consistently, across subjects.",
-      "how": "Close the notes. Write or say everything you remember about the topic before checking anything. Answer practice questions cold, then check. Flashcards only work if you genuinely try to answer before flipping, flipping first is just rereading with extra steps.",
+      "how": "Close the notes. Write or say everything you remember about the topic before checking anything. Answer practice questions cold, then check. Flashcards only work if you try to answer before flipping, flipping first is just rereading with extra steps.",
       "effort": "Medium, it's uncomfortable, and that's the point",
       "payoff": "Highest of any technique studied",
       "icon": "brain",
@@ -80,7 +80,7 @@
       "name": "Concrete Examples",
       "what": "Anchoring an abstract rule or principle to one specific, real example before trying to generalise it.",
       "why": "Abstract rules are hard to hold in memory and even harder to recognise later in a different context. A specific example gives your brain a concrete handle to grip, and one clear example beats three vague ones every time.",
-      "how": "For every abstract idea, find or build one real, specific case of it. Then ask directly: what made this example an instance of the rule? That question is what actually generalises it back out.",
+      "how": "For every abstract idea, find or build one real, specific case of it. Then ask directly: what made this example an instance of the rule? That question is what generalises it back out.",
       "effort": "Low",
       "payoff": "Faster, sturdier grasp of abstract ideas",
       "icon": "image",
@@ -93,7 +93,7 @@
       "why": "This works because of the material, not the person. A process with steps, a system with parts, a hierarchy with levels, these have actual shape, and a diagram captures that shape in a way a paragraph can't. A phone number or a name has no shape; drawing it teaches you nothing extra.",
       "how": "Before writing notes, ask: does this have structure, steps, parts, a hierarchy, a flow? If yes, sketch it first, then write the words around it. If it's just a fact or a name, skip the diagram entirely and use retrieval practice instead.",
       "effort": "Low to medium",
-      "payoff": "Stronger recall, but only for material that is genuinely structured",
+      "payoff": "Stronger recall, but only for material that is structured",
       "icon": "layers",
       "accent": "info"
     },
@@ -112,7 +112,7 @@
       "id": "teach-back",
       "name": "Teach It Back (Feynman)",
       "what": "Explaining what you just learned in plain language, out loud or in writing, as if teaching a total beginner with no shortcuts allowed.",
-      "why": "Explaining forces retrieval, elaboration, and simplification all at once. The exact moment you stumble, or reach for jargon to paper over a gap, is the exact spot you don't actually understand yet.",
+      "why": "Explaining forces retrieval, elaboration, and simplification all at once. The exact moment you stumble, or reach for jargon to paper over a gap, is the exact spot you don't understand yet.",
       "how": "Explain the topic out loud to an empty room, a friend, or an AI, no notes, no jargon allowed. Every place you hesitate or use a term you can't define simply, go back and relearn that specific piece before moving on.",
       "effort": "Low",
       "payoff": "Instantly reveals hidden gaps",
@@ -139,7 +139,7 @@
       "id": "tutorial-hell",
       "habit": "Watching tutorial after tutorial without building anything",
       "whyItFeelsGood": "Understanding while someone else explains feels like competence, with zero risk of being wrong.",
-      "whyItFails": "Watching is passive. You're following someone else's hands, not exercising your own judgment, the gaps in what you actually know only show up the moment you try to act alone, and by then you've spent hours not finding them.",
+      "whyItFails": "Watching is passive. You're following someone else's hands, not exercising your own judgment, the gaps in what you know only show up the moment you try to act alone, and by then you've spent hours not finding them.",
       "doInstead": "Cap input at 20 minutes, then build something real and probably broken. The broken parts are your actual syllabus."
     },
     {
@@ -177,7 +177,7 @@
       "what": "Assigning a hard time limit to a task in advance, on your calendar, regardless of whether it \"feels done\" when the time is up.",
       "howTo": "Before you start, decide how long a task gets, 20 minutes, an hour, and put it on the calendar. When the time's up, stop or consciously choose to extend. Don't just drift past it.",
       "bestFor": "Tasks with no natural end point, research, editing, general \"studying\", that would otherwise expand to fill your whole day.",
-      "watchOut": "A box that's too short teaches you to rush and skip the retrieval step that actually builds memory. Size the box to the task, not the task to the box."
+      "watchOut": "A box that's too short teaches you to rush and skip the retrieval step that builds memory. Size the box to the task, not the task to the box."
     },
     {
       "name": "Deep Work Blocks",
@@ -198,15 +198,15 @@
       "what": "Beating procrastination by committing to only the first two minutes of a task, not the whole thing.",
       "howTo": "When you're avoiding starting, tell yourself you only have to do 2 minutes, then you're allowed to stop. Open the document. Write one sentence. Do one problem. Usually that's enough momentum to keep going.",
       "bestFor": "The moment right before you start anything you're dreading, the real barrier is almost always starting, not finishing.",
-      "watchOut": "It's a starting trick, not a study method, once you're in, switch to retrieval practice or whatever technique actually fits the material. Don't stop at 2 minutes and call it studying."
+      "watchOut": "It's a starting trick, not a study method, once you're in, switch to retrieval practice or whatever technique fits the material. Don't stop at 2 minutes and call it studying."
     }
   ],
   "protocol": {
-    "intro": "Six questions about your real constraints, never about a \"style.\" Answer honestly and we'll assemble a study protocol built for the time, energy, and feedback you actually have, not the ideal student you wish you were.",
+    "intro": "Six questions about your real constraints, never about a \"style.\" Answer honestly and we'll assemble a study protocol built for the time, energy, and feedback you have, not the ideal student you wish you were.",
     "questions": [
       {
         "id": "time",
-        "q": "How much focused time do you actually have per day?",
+        "q": "How much focused time do you have per day?",
         "help": "Be honest about a normal day, not your best day.",
         "options": [
           { "value": "under30", "label": "Under 30 minutes", "desc": "Squeezed between other things" },
@@ -217,7 +217,7 @@
       },
       {
         "id": "energy",
-        "q": "When is your mind actually sharpest?",
+        "q": "When is your mind sharpest?",
         "help": "Not when you think you should study, when you notice you focus best.",
         "options": [
           { "value": "earlyMorning", "label": "Early morning", "desc": "Before the day gets noisy" },
@@ -239,7 +239,7 @@
       {
         "id": "attention",
         "q": "How long before your focus starts to drift?",
-        "help": "Not how long you wish you could focus, how long before your mind actually wanders.",
+        "help": "Not how long you wish you could focus, how long before your mind wanders.",
         "options": [
           { "value": "short", "label": "5–10 minutes", "desc": "I drift fast" },
           { "value": "medium", "label": "~25 minutes", "desc": "A standard sprint feels right" },
@@ -249,7 +249,7 @@
       {
         "id": "feedback",
         "q": "Do you have anyone or anything to check your work?",
-        "help": "This closes the loop, without it you can't tell what you actually don't know yet.",
+        "help": "This closes the loop, without it you can't tell what you don't know yet.",
         "options": [
           { "value": "person", "label": "A person", "desc": "A mentor, teacher, or peer who'll be honest" },
           { "value": "aiTests", "label": "AI or tests", "desc": "AI critique, quizzes, or automated checks" },
@@ -286,7 +286,7 @@
         "label": "Deep work blocks",
         "pattern": "50 min focus / 10 min break",
         "perDay": "1–2 blocks",
-        "desc": "You can sustain real focus, so use it. A 50-minute block gives you enough runway to actually build a mental model of hard material, not just skim the surface of it."
+        "desc": "You can sustain real focus, so use it. A 50-minute block gives you enough runway to build a mental model of hard material, not just skim the surface of it."
       }
     },
     "time": {
@@ -296,7 +296,7 @@
       "2h+": "Split this into two separate sessions instead of one long one, a build session and a separate retrieval or review session, ideally hours apart, not back to back."
     },
     "energy": {
-      "earlyMorning": "Protect your first block of the day for your hardest technique, deliberate practice or genuinely new material. Save any leftover energy later for review only.",
+      "earlyMorning": "Protect your first block of the day for your hardest technique, deliberate practice or new material. Save any leftover energy later for review only.",
       "midday": "Your peak sits mid-day, schedule the hardest new material then, and push review or admin to the morning and evening edges.",
       "evening": "Front-load your day with light review, and save your evening block for the actual hard building: new material, deliberate practice, teach-back.",
       "lateNight": "Use the quiet for deep, undistracted work, but queue a spaced-repetition review for the next morning while it's still fresh. Don't let the late-night session be the only touchpoint it gets."
@@ -314,7 +314,7 @@
     "goal": {
       "job": {
         "techniques": ["deliberate-practice", "retrieval-practice", "teach-back"],
-        "note": "A job needs performance under real conditions. Drill your weakest sub-skill deliberately, retrieval-test yourself the way the job will actually test you, then teach it back to confirm you can perform it, not just recognise it."
+        "note": "A job needs performance under real conditions. Drill your weakest sub-skill deliberately, retrieval-test yourself the way the job will test you, then teach it back to confirm you can perform it, not just recognise it."
       },
       "cert": {
         "techniques": ["spaced-repetition", "retrieval-practice", "interleaving"],
@@ -322,7 +322,7 @@
       },
       "general": {
         "techniques": ["elaboration", "concrete-examples", "dual-coding"],
-        "note": "With no deadline, optimise for depth and connection. Elaborate on why things are true, anchor every abstraction to a real example, and diagram anything that actually has structure."
+        "note": "With no deadline, optimise for depth and connection. Elaborate on why things are true, anchor every abstraction to a real example, and diagram anything that has structure."
       }
     },
     "stopDoing": {

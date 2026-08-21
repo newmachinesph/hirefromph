@@ -62,7 +62,7 @@
       "icon": "workflow",
       "accent": "signal",
       "how": "One good search is a lucky find. A pipeline is a system: a short list of sources you check on a fixed day every week, logged somewhere so you never re-check the same dead end twice. This is the habit that eventually replaces needing a directory like the one below at all.",
-      "why": "A tracker turns \"looking for work\" from a mood you wait for into a routine you run. Ten minutes, five sources, the same day every week, and you stop depending on luck, or on any single site staying good forever.",
+      "why": "A tracker turns \"looking for work\" from a mood you wait for into a routine you run. Ten minutes, five sources, the same day every week, and you stop depending on luck, or on any single site staying good.",
       "example": [
         "Source | Last checked | New leads found | Action taken | Follow-up date"
       ]
@@ -109,7 +109,7 @@
       },
       {
         "id": "unpaid-test",
-        "flag": "A \"test task\" that's actually the real deliverable, unpaid",
+        "flag": "A \"test task\" that's the real deliverable, unpaid",
         "why": "A short skills check is normal. A full deliverable, a finished design, a working script, a week of \"trial\" work, done at no cost is not a test. It's unpaid labor.",
         "weight": 2
       },
@@ -166,7 +166,7 @@
       },
       {
         "title": "Prune what stops working",
-        "desc": "If a source hasn't produced a real lead in two months, cut it. A short list you actually check beats a long one you ignore."
+        "desc": "If a source hasn't produced a real lead in two months, cut it. A short list you check beats a long one you ignore."
       },
       {
         "title": "Keep it wherever you already work",

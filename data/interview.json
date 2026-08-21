@@ -10,7 +10,7 @@
   "star": {
     "kicker": "The framework · STAR",
     "title": "Every strong behavioral answer has the same four parts.",
-    "lead": "\"Tell me about a time you…\" questions are the heart of most interviews. STAR is the structure that keeps your answer clear, specific, and short. Learn the four parts, then build your own stories around them: the structure is reusable forever, the stories are yours.",
+    "lead": "\"Tell me about a time you…\" questions are the heart of most interviews. STAR is the structure that keeps your answer clear, specific, and short. Learn the four parts, then build your own stories around them: the structure is reusable, the stories are yours.",
     "parts": [
       {
         "letter": "S",
@@ -25,14 +25,14 @@
         "name": "Task",
         "icon": "target",
         "desc": "What was your specific responsibility or goal? Name the problem you personally had to solve, not what the whole team did.",
-        "example": "\"My job was to design a triage system so the founder only saw the 10% of emails that actually needed them.\"",
+        "example": "\"My job was to design a triage system so the founder only saw the 10% of emails that needed them.\"",
         "watch": "Use \"I\", not \"we\". The interviewer is hiring you, not your old team."
       },
       {
         "letter": "A",
         "name": "Action",
         "icon": "workflow",
-        "desc": "The heart of the answer. What did you actually do, step by step? This is where your thinking and skill show. Spend most of your time here.",
+        "desc": "The heart of the answer. What did you do, step by step? This is where your thinking and skill show. Spend most of your time here.",
         "example": "\"I built a six-label taxonomy, wrote a one-line rule for each, and set Gmail filters to auto-route everything on arrival.\"",
         "watch": "Show the judgment, not just the buttons. Why you chose that approach matters more than the tool."
       },

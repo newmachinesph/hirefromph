@@ -4,7 +4,7 @@
     "kicker": "Career simulator · 36 months · a model, not a promise",
     "titleLine1": "Three years of experience",
     "titleLine2": "is not three years of leverage.",
-    "lead": "Set your craft, your AI, and what you actually sell. The simulator draws two lines over 36 months: the generic task-taker, and you. The gap between them is the entire lesson, and if there is no gap, that is the lesson too."
+    "lead": "Set your craft, your AI, and what you sell. The simulator draws two lines over 36 months: the generic task-taker, and you. The gap between them is the entire lesson, and if there is no gap, that is the lesson too."
   },
   "banner": {
     "title": "Read this before you read a single number.",
@@ -44,7 +44,7 @@
         },
         {
           "id": "deep",
-          "label": "Genuinely specialised",
+          "label": "Specialised",
           "desc": "Bookkeeping, ecommerce ops, automation, medical ops, paid media, dev. You are the person they call when it breaks."
         }
       ]
@@ -71,7 +71,7 @@
       ]
     },
     "ownership": {
-      "legend": "3 · What you actually sell",
+      "legend": "3 · What you sell",
       "help": "Hours have a ceiling: there are only so many of them, and everyone's are the same length.",
       "options": [
         {
@@ -88,7 +88,7 @@
     },
     "hours": {
       "legend": "4 · Billable hours per week",
-      "help": "Hours actually billed, not hours sat at the desk. The two are famously not the same number.",
+      "help": "Hours billed, not hours sat at the desk. The two are famously not the same number.",
       "options": [
         {
           "id": "10",
@@ -119,7 +119,7 @@
         {
           "id": "second",
           "label": "English + Japanese / Korean / Mandarin",
-          "desc": "A genuinely thinner pool of competitors, which is the only reason a rate moves."
+          "desc": "A thinner pool of competitors, which is the only reason a rate moves."
         }
       ]
     },
@@ -163,7 +163,7 @@
   "fx": {
     "label": "Assumed exchange rate",
     "suffix": "₱ per $1",
-    "note": "This is an assumption, and FX moves. Change it to whatever today's rate actually is, the peso figures update live. We default to ₱61.5, the BSP rate sampled in mid-July 2026, so check it against today's number before you trust it."
+    "note": "This is an assumption, and FX moves. Change it to whatever today's rate is, the peso figures update live. We default to ₱61.5, the BSP rate sampled in mid-July 2026, so check it against today's number before you trust it."
   },
   "multipliers": {
     "title": "Every multiplier, and where it came from",
@@ -183,7 +183,7 @@
       },
       "ai-augmented-deep": {
         "label": "AI, built into a deep craft",
-        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, a vendor-reported figure, not an independently audited one, but the nuance matters more than the headline: the callout below shows where that premium actually lands."
+        "note": "This is the one number on the page with real research behind it. Upwork reports freelancers doing AI work earn 34% more per hour, a vendor-reported figure, not an independently audited one, but the nuance matters more than the headline: the callout below shows where that premium lands."
       },
       "ai-augmented-building": {
         "label": "AI, built into a craft you're still learning",
@@ -242,7 +242,7 @@
     "body": "You selected \"I build AI into the delivery\" with no craft underneath it, and your AI multiplier came out at ×1.0, no premium at all. That is deliberate, and it is the most important line of code on this page. The AI premium is real and it is sourced. It just does not belong to you yet.",
     "quote": "If you were a traditional machine learning expert, and now you're augmenting that work with generative AI, you're seeing such a great premium.",
     "attribution": "Kelly Monahan, Managing Director, Upwork Research Institute",
-    "closer": "Read that again slowly. The premium accrues to the person who already had the expertise. AI is a multiplier, and a multiplier needs something to multiply. Go pick a craft, get genuinely good at it, and then come back and set this to \"deep\", the same AI skill you already have will be worth a great deal more.",
+    "closer": "Read that again slowly. The premium accrues to the person who already had the expertise. AI is a multiplier, and a multiplier needs something to multiply. Go pick a craft, get good at it, and then come back and set this to \"deep\", the same AI skill you already have will be worth a great deal more.",
     "cta": "Go pick a craft"
   },
   "realityTax": {
