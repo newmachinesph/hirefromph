@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import tasksData from "@/data/tasks.json";
 import { MicroTasks } from "@/components/micro-tasks";
 import { JsonLd } from "@/components/json-ld";
@@ -45,17 +46,23 @@ export default function TasksPage() {
     <>
       <JsonLd data={itemListLd} />
 
+      {/* The tool sits directly under the hero; the brief shape and the creed
+          follow it, so the filters land on the first screen instead of the fourth. */}
       <PageHero
         compact
         breadcrumb={getBreadcrumb(HREF)}
         kicker={tasksData.kicker}
         title={tasksData.headline}
         lead={tasksData.intro}
-      >
-        <Callout title="The creed" className="max-w-2xl">
-          {tasksData.creed}
-        </Callout>
-      </PageHero>
+      />
+
+      <Section spacing="none" className="pb-24 lg:pb-32">
+        <Card padding="lg">
+          <Suspense fallback={null}>
+            <MicroTasks />
+          </Suspense>
+        </Card>
+      </Section>
 
       <Section>
         <SectionHeading
@@ -81,12 +88,9 @@ export default function TasksPage() {
             </Card>
           ))}
         </CardGrid>
-      </Section>
-
-      <Section spacing="none" className="pb-24 lg:pb-32">
-        <Card padding="lg">
-          <MicroTasks />
-        </Card>
+        <Callout title="The creed" className="mt-12 max-w-2xl">
+          {tasksData.creed}
+        </Callout>
       </Section>
 
       <Section band="tint">

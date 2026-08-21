@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
 import learning from "@/data/learning.json";
 import { CopyButton } from "@/components/copy-button";
@@ -20,6 +20,15 @@ import {
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 const ADVANCE_DELAY_MS = 260;
+
+/** Anchor ids the page gives each technique card, so the result can point at
+    the one full explanation instead of repeating it. */
+export const techniqueAnchor = (id: string) => `technique-${id}`;
+
+/** Session shapes manage the clock; the techniques build the memory. The wizard
+    decides the shape, so this one line replaces the old focus-systems section. */
+const SHAPE_IS_A_FOCUS_TOOL =
+  "A session shape is a focus tool, not a learning technique: it manages your clock and your attention. The three techniques below are what build the memory inside each block.";
 
 type Option = { value: string; label: string; desc: string };
 type Question = { id: string; q: string; help: string; options: Option[] };
@@ -76,7 +85,7 @@ type ProtocolSummary = {
   text: string;
 };
 
-function buildProtocol(answers: Record<string, string>): ProtocolSummary | null {
+export function buildProtocol(answers: Record<string, string>): ProtocolSummary | null {
   const sessionShape = RULES.sessionShapes[answers.attention];
   const goalRule = RULES.goal[answers.goal];
   if (!sessionShape || !goalRule) return null;
@@ -125,7 +134,12 @@ function buildProtocol(answers: Record<string, string>): ProtocolSummary | null 
   };
 }
 
-export function StudyProtocol() {
+export function StudyProtocol({
+  afterResult,
+}: {
+  /** Rendered under the finished protocol only, e.g. the session timer. */
+  afterResult?: ReactNode;
+}) {
   const [step, setStep] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -187,7 +201,7 @@ export function StudyProtocol() {
             exit="exit"
             aria-live="polite"
           >
-            <ProtocolResult summary={summary} onRestart={restart} />
+            <ProtocolResult summary={summary} onRestart={restart} after={afterResult} />
           </motion.div>
         ) : (
           <motion.div
@@ -236,12 +250,15 @@ export function StudyProtocol() {
   );
 }
 
-function ProtocolResult({
+export function ProtocolResult({
   summary,
   onRestart,
+  after,
 }: {
   summary: ProtocolSummary;
   onRestart: () => void;
+  /** Rendered under the finished protocol only, e.g. the session timer. */
+  after?: ReactNode;
 }) {
   return (
     <div>
@@ -252,16 +269,17 @@ function ProtocolResult({
             {summary.sessionShape.label},{" "}
             <span className="text-primary">{summary.sessionShape.pattern}</span>
           </Heading>
-          <Text size="small" className="mt-2 max-w-xl">
-            {summary.sessionShape.desc}
-          </Text>
         </div>
         <Badge tone="verified" className="shrink-0">
           {summary.sessionShape.perDay}
         </Badge>
       </div>
 
-      <Card padding="md" onBand className="mt-8">
+      <Callout tone="info" title="Why this shape" className="mt-6">
+        {summary.sessionShape.desc} {SHAPE_IS_A_FOCUS_TOOL}
+      </Callout>
+
+      <Card padding="md" onBand className="mt-6">
         <Text tone="ink" size="small">
           <span className="font-semibold">Fit to your day: </span>
           {summary.timeNote} {summary.energyNote} {summary.environmentNote}
@@ -271,21 +289,31 @@ function ProtocolResult({
       <div className="mt-8">
         <Kicker>Your 3 techniques</Kicker>
         <Text size="small" className="mt-2 max-w-2xl">
-          {summary.goalNote}
+          {summary.goalNote} Each one is explained once, in the reference below
+          this builder; the copy button carries the how-to with you.
         </Text>
         <div className="mt-4 grid gap-3">
           {summary.techniques.map((t, i) => (
             <Card key={t.id} padding="md">
-              <div className="flex items-center gap-3">
+              <div className="flex flex-wrap items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink font-display text-sm text-paper">
                   {i + 1}
                 </span>
                 <span className="font-display text-lg leading-tight">
                   {t.name}
                 </span>
+                <Button
+                  href={`#${techniqueAnchor(t.id)}`}
+                  variant="link"
+                  size="sm"
+                  className="ml-auto"
+                  iconEnd={<Icon name="arrow-down" size={14} />}
+                >
+                  How to run it
+                </Button>
               </div>
-              <Text size="small" className="mt-2.5">
-                {t.how}
+              <Text size="caption" tone="faint" className="mt-2">
+                Payoff: {t.payoff}
               </Text>
             </Card>
           ))}
@@ -324,6 +352,8 @@ function ProtocolResult({
           Start over
         </Button>
       </div>
+
+      {after && <div className="mt-8">{after}</div>}
     </div>
   );
 }

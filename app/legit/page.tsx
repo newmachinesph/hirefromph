@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import legit from "@/data/legit.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import {
   CardGrid,
   PageFooterNav,
@@ -44,6 +45,7 @@ export default function LegitPage() {
         title={hero.line1}
         accent={hero.line2}
         lead={hero.intro}
+        actions={<Button href="#bir">Start with the BIR steps</Button>}
       >
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
@@ -72,8 +74,11 @@ export default function LegitPage() {
       </Section>
 
       {/* ---------------------------------------------------------------- BIR */}
-      <Section>
+      <Section id="bir" className="scroll-mt-24">
         <SectionHeading kicker={bir.kicker} title={bir.title} lead={bir.lead} />
+        <div className="mt-4">
+          <FreshnessNote date={legit.lastVerified} />
+        </div>
 
         <StepList className="mt-12">
           {bir.steps.map((s) => (

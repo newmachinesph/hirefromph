@@ -1,9 +1,24 @@
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import labsData from "@/data/labs.json";
 import { BuildLabs } from "@/components/build-labs";
+import { LAB_IDS } from "@/lib/labs";
 
 describe("BuildLabs", () => {
+  it("preselects the lab named by the ?lab= deep link", () => {
+    const second = labsData.labs[1];
+    render(<BuildLabs initialLabId={LAB_IDS[1]} />);
+    expect(screen.getByRole("tablist")).toBeInTheDocument();
+    expect(screen.getByRole("heading", { level: 2, name: second.name })).toBeInTheDocument();
+  });
+
+  it("falls back to the gallery for an unknown lab id", () => {
+    render(<BuildLabs initialLabId="not-a-lab" />);
+    expect(screen.queryByRole("tablist")).toBeNull();
+    expect(screen.getAllByRole("button").length).toBeGreaterThan(0);
+  });
+
   it("renders the lab gallery", () => {
     render(<BuildLabs />);
     expect(screen.getAllByRole("button").length).toBeGreaterThan(0);

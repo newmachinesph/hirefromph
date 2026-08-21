@@ -1,6 +1,13 @@
 {
+  "lastVerified": "2026-08",
   "intro": "English gets you hired. A second language gets you paid more: bilingual roles draw from a far thinner pool of candidates, and thinner competition is the only thing that reliably moves a rate. Nobody publishes trustworthy bilingual pay data, so we won't quote a number; read live bilingual job posts and see the premium yourself. Here's what to learn and where, at no cost.",
-  "premiumNote": "Ranked by our read of live job postings for bilingual Filipino online professionals, as of 2026. Sample current listings yourself before you commit to one language.",
+  "premiumNote": "Ranked by our read of live job postings for bilingual Filipino online professionals, as of August 2026. Sample current listings yourself before you commit to one language.",
+  "startFree": {
+    "title": "Start here at no cost",
+    "body": "TESDA's Language Skills Institute runs no-cost Japanese, Korean, Mandarin, and Spanish programs (Basic Japanese Language & Culture is about 150 hours). Slots are limited and first-come, first-served via online registration.",
+    "label": "TESDA Language Skills Institute",
+    "url": "https://www.tesda.gov.ph/about/tesda/39"
+  },
   "languages": [
     {
       "id": "japanese",
@@ -13,7 +20,6 @@
       "roles": ["Bilingual support", "Interpretation", "Back-office", "Localization"],
       "effort": "12–24 months to business level",
       "learn": [
-        { "name": "TESDA Language Skills Institute", "type": "Government", "detail": "Basic Japanese Language & Culture, ~150 hrs. First-come, first-served slots via online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "Japan Foundation, Manila", "type": "Courses + events", "detail": "The authority on Japanese-language education in the Philippines. Courses, JLPT prep, resources.", "url": "https://jfmo.org.ph/japanese-language-education/" },
         { "name": "QC Public Library × Jellyfish Education", "type": "Online", "detail": "No-cost online Basic Japanese, nationwide, 18+. Needs a device, internet, and Zoom. The link below goes to the QC government homepage; search there for the current program page.", "url": "https://quezoncity.gov.ph/" },
         { "name": "Nihongo Center Foundation", "type": "Paid", "detail": "One of the longest-established Japanese institutions in the country.", "url": "https://nihongocenter.com.ph" }
@@ -30,7 +36,6 @@
       "roles": ["Bilingual support", "Community management", "Coordination", "Content moderation"],
       "effort": "10–18 months to conversational-plus",
       "learn": [
-        { "name": "TESDA Language Skills Institute", "type": "Government", "detail": "Korean among the no-cost foreign-language programs. Limited slots, online registration.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "Korean Cultural Center PH", "type": "Paid", "detail": "Basic, Elementary, and Intermediate Korean, speak, write, read, comprehend. Modest fees (check current schedule).", "url": "https://phil.korean-culture.org" },
         { "name": "King Sejong Institute", "type": "Low-cost", "detail": "Official Korean-government language program with PH branches.", "url": "https://www.ksif.or.kr" }
       ]
@@ -46,7 +51,6 @@
       "roles": ["Bilingual sales", "Support", "Sourcing coordination", "Translation"],
       "effort": "12–24 months (tones take practice)",
       "learn": [
-        { "name": "TESDA Language Skills Institute", "type": "Government", "detail": "Mandarin included in TESDA's no-cost foreign-language track.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "CKS College Language Center", "type": "Paid", "detail": "Teaching Mandarin since 1990, short courses for practical business use.", "url": "https://www.cksc.edu.ph" },
         { "name": "Confucius Institute (PH campuses)", "type": "Low-cost", "detail": "HSK exam prep and structured Mandarin at partner universities.", "url": "https://www.ci.cn" }
       ]
@@ -62,7 +66,6 @@
       "roles": ["Bilingual support", "Sales", "Content", "Community"],
       "effort": "6–12 months to conversational",
       "learn": [
-        { "name": "TESDA Language Skills Institute", "type": "Government", "detail": "Spanish among TESDA's no-cost foreign-language offerings.", "url": "https://www.tesda.gov.ph/about/tesda/39" },
         { "name": "Instituto Cervantes de Manila", "type": "Paid", "detail": "The official Spanish-government cultural institute, structured levels and DELE prep.", "url": "https://manila.cervantes.es" },
         { "name": "Duolingo + immersion", "type": "Open", "detail": "Daily practice at no cost to build a base before formal classes.", "url": "https://www.duolingo.com" }
       ]

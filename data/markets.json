@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-08",
   "hero": {
     "kicker": "Client markets · time zones · overlap",
     "line1": "Where your clients are",
@@ -41,7 +42,8 @@
         "pay": "Strong. A second language (German, French, Dutch, Spanish) can pay a real premium.",
         "style": "More formal and process-driven. Values reliability, clarity, and good written English.",
         "industries": "Agencies, fintech, SaaS, e-commerce, professional and creative services.",
-        "verdict": "Underrated. Sane hours plus a language edge if you have one. See the Languages page."
+        "verdict": "Underrated. Sane hours plus a language edge if you have one.",
+        "link": "/languages"
       },
       {
         "name": "Australia & New Zealand",
@@ -171,9 +173,9 @@
     "body": "The highest rate in the worst time zone is not the best job. It is the job you burn out of. The best market is the one where the pay, the hours, and the work all fit a life you can keep. For many Filipinos that is Australia or Europe for the schedule, or the US when the pay is worth the nights. There is no single right answer. There is only the one that is right for you, chosen on purpose.",
     "point": "Line this up with the rest of your plan.",
     "links": [
-      { "href": "/salary", "label": "What each market pays", "desc": "The honest ranges, why the guides disagree, and how to price yourself." },
+      { "href": "/salary", "label": "Price yourself from live listings", "desc": "The honest ranges, why the guides disagree, and how to price yourself." },
       { "href": "/clients", "label": "Own the relationship", "desc": "How to land direct clients in any market, without an agency in the middle." },
-      { "href": "/languages", "label": "The language edge", "desc": "A second language opens Europe, Japan, and Korea, and often doubles your rate." },
+      { "href": "/languages", "label": "The language edge", "desc": "A second language opens Europe, Japan, and Korea." },
       { "href": "/equipment", "label": "Set up for the shift", "desc": "The internet, backup power, and gear that keep a night shift from falling apart." }
     ]
   }

@@ -46,10 +46,16 @@ export function IntegrityOath() {
 
   const { clauses, commitment, name, signedAt } = state.oath;
 
-  const accepted = oath.clauses.filter((c) => clauses[c.id]).length;
+  // The clauses the visitor ticked, in oath order. This is the record the
+  // signature stands behind: "I can keep these N", not "I can keep all ten".
+  const kept = oath.clauses
+    .map((c, idx) => ({ ...c, n: idx + 1 }))
+    .filter((c) => clauses[c.id]);
+  const accepted = kept.length;
   const allAccepted = accepted === oath.clauses.length;
   const commitmentLongEnough = commitment.trim().length >= MIN_COMMITMENT;
-  const canSign = allAccepted && commitmentLongEnough && name.trim().length > 1;
+  const canSign = accepted >= 1 && commitmentLongEnough && name.trim().length > 1;
+  const signed = signedAt !== null;
 
   function sign() {
     if (!canSign) return;
@@ -71,7 +77,11 @@ export function IntegrityOath() {
   return (
     <div className="flex flex-col">
       {/* ---------------------------------------------------------- CLAUSES */}
-      <Field as="group" label="Step 1 · Read each one. Tick only what you can keep.">
+      <Field
+        as="group"
+        label="Step 1 · Read each one. Tick only what you can keep."
+        hint={signed ? "Signed. Press “Revise it” below to change what you ticked." : undefined}
+      >
         <ul className="mt-5 flex flex-col gap-2">
           {oath.clauses.map((c, idx) => {
             const on = !!clauses[c.id];
@@ -84,6 +94,7 @@ export function IntegrityOath() {
                   <Checkbox
                     id={`${uid}-${c.id}`}
                     checked={on}
+                    disabled={signed}
                     onChange={() => toggleOathClause(c.id)}
                     label={
                       <span className="flex flex-col gap-1">
@@ -151,46 +162,72 @@ export function IntegrityOath() {
 
       {/* ------------------------------------------------------------- SIGN */}
       <div className="mt-10 border-t border-line pt-8">
-        {signedAt ? (
-          <Callout
-            tone="verified"
-            className="flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between"
-          >
-            <div className="flex items-start gap-4">
-              <Icon name="shield-check" size={20} />
-              <div>
-                <p className="font-display text-xl leading-tight text-ink">
-                  Signed by {name.trim()}
-                </p>
-                <p className="mt-1 text-sm text-ink-soft" suppressHydrationWarning>
-                  {signedDate} · {oath.signedNote}
-                </p>
+        {signed ? (
+          <Callout tone="verified" className="flex-col items-stretch gap-5">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+              <div className="flex items-start gap-4">
+                <Icon name="shield-check" size={20} />
+                <div>
+                  <p className="font-display text-xl leading-tight text-ink">
+                    Signed by {name.trim()}
+                  </p>
+                  <p className="mt-1 text-sm text-ink-soft" suppressHydrationWarning>
+                    {signedDate} · {oath.signedNote}
+                  </p>
+                  <p className="mt-2 text-sm text-ink-soft" data-testid="oath-kept">
+                    Kept {accepted} of {oath.clauses.length}:{" "}
+                    <span className="tabular-nums">
+                      {kept.map((c) => String(c.n).padStart(2, "0")).join(", ")}
+                    </span>
+                    {!allAccepted && ". The unticked ones are the honest part."}
+                  </p>
+                </div>
+              </div>
+              <div className="flex shrink-0 flex-wrap items-center gap-2">
+                <ExportButton
+                  title="my integrity oath"
+                  kind="markdown"
+                  filename="my-integrity-oath.md"
+                  label="Save what I wrote"
+                  build={() =>
+                    labToMarkdown("My integrity oath", [
+                      { label: "My commitment", body: commitment.trim() },
+                      { label: "Signed", body: `${name.trim()} · ${signedDate}` },
+                      {
+                        label: "Clauses I can keep",
+                        body: `${accepted} of ${oath.clauses.length}: ${kept
+                          .map((c) => `${String(c.n).padStart(2, "0")} ${c.id}`)
+                          .join(", ")}`,
+                      },
+                    ])
+                  }
+                />
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={unsign}
+                  icon={<Icon name="rotate-ccw" size={14} />}
+                >
+                  Revise it
+                </Button>
               </div>
             </div>
-            <div className="flex shrink-0 flex-wrap items-center gap-2">
-              <ExportButton
-                title="my integrity oath"
-                kind="markdown"
-                filename="my-integrity-oath.md"
-                label="Save what I wrote"
-                build={() =>
-                  labToMarkdown("My integrity oath", [
-                    { label: "My commitment", body: commitment.trim() },
-                    { label: "Signed", body: `${name.trim()} · ${signedDate}` },
-                    {
-                      label: "Clauses accepted",
-                      body: `${accepted} of ${oath.clauses.length}`,
-                    },
-                  ])
-                }
-              />
+
+            <div className="flex flex-wrap items-center gap-x-6 gap-y-1 border-t border-verified/30 pt-4">
+              <span className="text-sm font-medium text-ink">Next:</span>
               <Button
-                variant="outline"
-                size="sm"
-                onClick={unsign}
-                icon={<Icon name="rotate-ccw" size={14} />}
+                href="/legit"
+                variant="link"
+                iconEnd={<Icon name="arrow-right" size={15} />}
               >
-                Revise it
+                Get your contracts right
+              </Button>
+              <Button
+                href="/get-hired"
+                variant="link"
+                iconEnd={<Icon name="arrow-right" size={15} />}
+              >
+                Go get hired
               </Button>
             </div>
           </Callout>
@@ -215,8 +252,8 @@ export function IntegrityOath() {
             </div>
             {!canSign && (
               <p className="mt-3 text-xs text-ink-faint" aria-live="polite">
-                {!allAccepted
-                  ? "Accept every clause you can keep, all ten, before signing."
+                {accepted === 0
+                  ? "Tick at least one clause you can keep. You don't have to tick all ten."
                   : !commitmentLongEnough
                     ? "Write your commitment in step 2 first. This is the part that holds."
                     : "Add your name to sign."}

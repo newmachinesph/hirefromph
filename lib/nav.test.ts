@@ -72,12 +72,31 @@ describe("getBreadcrumb", () => {
     ]);
   });
 
-  it("falls back to the nav bucket for routes outside the library", () => {
+  it("links the dashboard crumb through the library now that /path is listed there", () => {
     expect(getBreadcrumb("/path")).toEqual([
       { label: "Home", href: "/" },
-      { label: "The path" },
+      { label: "The path", href: "/library?group=path" },
       { label: "Your dashboard" },
     ]);
+  });
+
+  it("falls back to the nav bucket for routes outside the library", () => {
+    expect(getBreadcrumb("/privacy")).toEqual([
+      { label: "Home", href: "/" },
+      { label: "More" },
+      { label: "Privacy" },
+    ]);
+  });
+
+  it("names the same bucket as the footer 'up' link for every library entry", () => {
+    // The breadcrumb reads the library group; PageFooterNav reads navGroups.
+    // They only agree if every entry's group is its navGroups bucket.
+    const bucket: Record<string, string> = { "The path": "path", Learn: "learn", Work: "work", More: "more" };
+    const mismatched = LIBRARY.filter((entry) => {
+      const group = NAV_GROUPS.find((g) => g.links.some((l) => l.href === entry.href));
+      return !group || bucket[group.title] !== entry.group;
+    });
+    expect(mismatched.map((entry) => `${entry.href}: ${entry.group}`)).toEqual([]);
   });
 
   it("returns a single unlinked crumb for the homepage", () => {
@@ -130,6 +149,11 @@ describe("SEARCH_INDEX", () => {
   it("indexes nav routes that the library does not list", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/privacy")).toBe(true);
     expect(SEARCH_INDEX.some((i) => i.href === "/library")).toBe(true);
+  });
+
+  it("lists the dashboard in the library, under The path", () => {
+    const path = LIBRARY.find((entry) => entry.href === "/path");
+    expect(path).toMatchObject({ label: "Your dashboard", group: "path", type: "tool" });
   });
 
   it("indexes every niche by name so it is findable from the palette", () => {

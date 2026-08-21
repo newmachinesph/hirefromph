@@ -6,42 +6,15 @@
   },
   "intro": "This page used to be a wall of success stories. We deleted it. Not one of them was real, and a page of invented wins is the exact thing that gets Filipinos into work that pays far less than promised and calls it a career. So here is the replacement: what the evidence says about remote and online work in 2026, heading into 2027, the ugly parts and the hopeful parts, every number with its source one click away.",
   "creed": "Encouragement built on a number nobody can stand behind isn't encouragement. The truth is more useful, and, as it turns out, more hopeful.",
-  "whyItMatters": "Read this once, slowly. Then read it a second time asking a different question: not \"is this good news or bad news for me?\" but \"how would I have checked this myself?\" That second question is the skill. Every number below has a source link precisely so you can practise it, click one, and see if the page says what we said it says.",
 
-  "readANumber": {
+  "method": {
     "kicker": "Before the numbers · the method",
-    "title": "How to read any claim about this career",
-    "lead": "You will meet a hundred numbers about freelancing this year, on Facebook, on TikTok, in a coaching ad. Almost none will survive these four questions. They apply to this page as much as anywhere else.",
-    "tests": [
-      {
-        "id": "who",
-        "icon": "user-search",
-        "q": "Who counted, and what do they sell?",
-        "why": "A staffing agency publishing a \"2026 salary guide\" is quoting the price it wants you to accept. A university, a labour body, or a government think-tank has no rate to protect. Same number, different weight."
-      },
-      {
-        "id": "n",
-        "icon": "hash",
-        "q": "How many people, and which people?",
-        "why": "\"Freelancers earn $X\", from how many? Recruited how? A survey of a platform's own top earners will never look like the people trying to get their first contract. Missing sample size is missing on purpose."
-      },
-      {
-        "id": "when",
-        "icon": "calendar-clock",
-        "q": "What year is the data from, not the article?",
-        "why": "A 2026 blog post can be quoting a 2020 survey. The date on the page is not the date of the fact. Chase the citation until you find the primary source, or find that there isn't one."
-      },
-      {
-        "id": "baseline",
-        "icon": "git-compare",
-        "q": "Compared to what?",
-        "why": "\"Writing jobs fell 28%\" sounds like a death sentence, until you learn that ALL job postings fell 8% that year. Half of the panic on the internet is a number with its baseline quietly removed."
-      }
-    ],
-    "note": "If a claim can't survive all four, treat it as unverified."
+    "title": "Four questions every claim on this page has to survive",
+    "body": "Every number below has a source link so you can check it yourself. Before you trust any claim about this career, here or anywhere, ask: who counted, and what do they sell? How many people, and which people? What year is the data from, not the article? And compared to what? If a claim can't survive all four, treat it as unverified.",
+    "link": { "label": "The full vetting method, with a drill", "href": "/method#methods" }
   },
 
-  "mythsIntro": "Each of these is something you have probably already been told. On the left is the promise. On the right is what the evidence says. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
+  "mythsIntro": "Each of these is something you have probably already been told. The promise is struck through; under it is the sting. Open any one for what the evidence says and where it comes from. Notice that the honest version is not \"don't do this\". It's \"do this with your eyes open\".",
   "myths": [
     {
       "id": "pay",
@@ -97,7 +70,7 @@
       "tag": "The English myth",
       "myth": "\"Magaling ako mag-English, that's my edge.\"",
       "headline": "It's your entry ticket. It has never been your differentiator.",
-      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries, scoring 569 out of 800, second in Asia. Something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
+      "body": "EF's 2025 English Proficiency Index puts the Philippines 28th of 123 countries with an overall score of 569 out of 800 (the writing sub-score alone is 603), second in Asia. Something to be proud of. But it also means good English is the national baseline: every other Filipino applying for that same role has it. And the 2025 index has us falling six places from the previous year.",
       "sting": "A client choosing between forty Filipino applicants cannot use English to choose. They will use the thing you can prove, the work.",
       "lesson": "English gets you into the room. Craft gets you paid. If \"good English\" is the strongest line in your pitch, you have not yet given the client a reason to pick you.",
       "source": {
@@ -115,7 +88,7 @@
       "headline": "We are the 3rd largest online-work market on Earth.",
       "body": "PIDS, the Philippine government's own policy think-tank, put the Philippines third globally in online work in its 2022 discussion paper, behind only the United States and India. That is not a trophy; it is a description of the supply side of your market, and the underlying data is now several years old. PIDS names the consequences without flinching: oversupply of online workers, employment insecurity, unpaid labour, and \"race to the bottom\" wage rates.",
       "sting": "When your own government's researchers use the phrase \"race to the bottom\" about your industry, the competitive pressure you feel isn't self-doubt. It's real, and it's measured.",
-      "lesson": "You cannot win a race to the bottom, the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what /niches and /tasks are for.",
+      "lesson": "You cannot win a race to the bottom, the prize is the bottom. The only exit is to stop competing on price and start competing on a specific, provable outcome. That is what the Niches and Tasks pages are for.",
       "source": {
         "label": "PIDS, Online Workers in the Philippines (Discussion Paper 2022-01)",
         "url": "https://pidswebs.pids.gov.ph/CDN/PUBLICATIONS/pidsdps2201.pdf"
@@ -130,7 +103,7 @@
       "myth": "\"If a client cheats me, I have legal protection.\"",
       "headline": "The Freelance Workers Protection Act is still not law.",
       "body": "It would have required a written contract for every engagement, at least 30% payment upfront, and penalties of ₱50,000 to ₱500,000 for clients who don't pay. It passed the House of Representatives on 6 February 2023, and then it stopped. It has not been enacted. It has been refiled in the 20th Congress. As of now, a Filipino freelancer stiffed by a foreign client in 2026 has no dedicated statutory remedy to reach for.",
-      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed, passed one chcaution, three years ago.",
+      "sting": "Not \"weak protection\". No dedicated protection. The bill you may have heard passed, passed one chamber, three years ago.",
       "lesson": "Your contract IS your protection, because nothing else is. Written scope, milestones, escrow, upfront deposit. Build that habit now, while the stakes are small.",
       "source": {
         "label": "BusinessMirror, Bill seeks protection, benefits for freelancers, gig workers",
@@ -331,71 +304,11 @@
     "proof": {
       "title": "And you are better positioned for this than a full-time employee.",
       "body": "Upwork's Future Workforce Index 2025 compared freelancers with full-time employees. Freelancers already out-index employees on AI, and, quietly, on exactly the human skills that LinkedIn says are rising. You are not behind. You are, on the evidence, ahead.",
-      "rows": [
-        { "label": "Advanced AI proficiency", "freelancer": 54, "employee": 38 },
-        { "label": "Problem-solving", "freelancer": 49, "employee": 44 },
-        { "label": "Communication", "freelancer": 47, "employee": 40 },
-        { "label": "Critical thinking", "freelancer": 43, "employee": 38 }
-      ],
-      "legend": { "freelancer": "Freelancers", "employee": "Full-time employees" },
       "source": {
         "label": "Upwork, Future Workforce Index 2025",
         "url": "https://www.upwork.com/research/future-workforce-index-2025"
       }
     }
-  },
-
-  "pay": {
-    "kicker": "Pay · read the warning label first",
-    "title": "What this pays, and why you should distrust this section",
-    "warning": {
-      "title": "This is the weakest data on the page. We're showing you the weakness on purpose.",
-      "body": "There is NO authoritative public dataset of Philippine online-professional rates by seniority. It does not exist. Every \"2026 salary guide\" you will find is published by a staffing company or a training company. None disclose a methodology, and each has a commercial stake in where the number lands: a firm that places workers benefits when the rate looks low to clients, a firm that sells training benefits when it looks high. So treat everything below as directional only. Vendor-grade. A shape, not a fact."
-    },
-    "tiersNote": "The convergent range across several vendor pages, useful for orienting yourself, useless for negotiating from. Figures are in USD because that's how the source pages quote them; convert at roughly ₱61.5 to $1 (July 2026) to see them in pesos.",
-    "tiers": [
-      {
-        "id": "entry",
-        "level": "Entry",
-        "accent": "signal",
-        "hourly": "$3–6 / hr",
-        "monthly": "≈ $300–1,100 / mo",
-        "what": "Generic, undifferentiated task work. This is the floor described at the top of this page, the one that is actively collapsing. Do not plan to stay here."
-      },
-      {
-        "id": "mid",
-        "level": "Mid",
-        "accent": "caution",
-        "hourly": "$7–15 / hr",
-        "monthly": "≈ $600–2,400 / mo",
-        "what": "You own a process, not a task. The client stops telling you the steps and starts telling you the outcome."
-      },
-      {
-        "id": "senior",
-        "level": "Senior / specialist",
-        "accent": "verified",
-        "hourly": "$18–35+ / hr",
-        "monthly": "≈ $1,000–4,800+ / mo",
-        "what": "A named, provable specialisation, and this is where the AI premium lands on top of the craft, not instead of it."
-      }
-    ],
-    "disagreement": {
-      "title": "Here's the proof that the data is soft, and how to see it for yourself.",
-      "body": "Take one single role: bookkeeping. One vendor page says an entry-level Filipino bookkeeper earns $5–6/hr. Another says entry-level bookkeeping is $10–12/hr. Same role. Same country. Same year. A 2× disagreement, and neither page shows its working.",
-      "a": { "label": "Vendor A · entry bookkeeping", "value": "$5–6 / hr" },
-      "b": { "label": "Vendor B · entry bookkeeping", "value": "$10–12 / hr" },
-      "lesson": "At least one of them is wrong, and you cannot tell which. That is what a number with no methodology looks like from the outside. Never take a rate from a single salary guide, triangulate across at least three, then go look at what actual live job posts in your niche are offering this week. Live posts are data. Guides are opinion with a chart on it."
-    },
-    "sources": [
-      {
-        "label": "OnlineJobs.ph, guide to salaries in the Philippines",
-        "url": "https://blog.onlinejobs.ph/comprehensive-guide-to-virtual-assistant-salaries-in-the-philippines/"
-      },
-      {
-        "label": "VA Masters, what it costs to hire in the Philippines",
-        "url": "https://vamasters.com/hiring-a-virtual-assistant-in-the-philippines-heres-what-it-costs/"
-      }
-    ]
   },
 
   "unknown": {
@@ -503,10 +416,10 @@
             "why": "Platform-by-platform scores on pay, contracts, and conditions. Look up your platform before you commit years to it."
           },
           {
-            "title": "Digital labour platforms and the future of work (2021)",
+            "title": "Digital labour platforms and the future of work (2018)",
             "org": "International Labour Organization",
-            "url": "https://www.ilo.org/media/387316/download",
-            "why": "The unpaid-time finding. Long, and worth it, this is the study that changes how you calculate your own rate."
+            "url": "https://www.ilo.org/media/414716/download",
+            "why": "The unpaid-time finding, from 2015–2017 surveys: the same report the pay myth above cites. Long, and worth it, this is the study that changes how you calculate your own rate."
           },
           {
             "title": "Online Workers in the Philippines",
@@ -540,6 +453,11 @@
         "href": "/niches",
         "label": "Pick a lane",
         "desc": "The craft that the AI multiplier will multiply. Choose deliberately, using the framework, not by copying whoever is loudest."
+      },
+      {
+        "href": "/salary",
+        "label": "Open the Salary Guide",
+        "desc": "The pay ranges with their warning label, and two tools that price you from live job posts instead of a guide."
       },
       {
         "href": "/english",

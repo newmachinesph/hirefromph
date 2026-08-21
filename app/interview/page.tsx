@@ -1,12 +1,39 @@
 import type { Metadata } from "next";
 import interview from "@/data/interview.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import { JsonLd } from "@/components/json-ld";
+import { StarWriter } from "@/components/star-writer";
 import { CardGrid, PageFooterNav, PageHero, Section, SectionHeading } from "@/components/layout";
 import { Button, Callout, Card, Heading, Icon, Kicker, Source, Text } from "@/components/ui";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 
 const HREF = "/interview";
+
+type PageLink = { label: string; href: string };
+
+/** Page references live in the JSON as `{label, href}`; items without any get none. */
+function linksOf(item: object): PageLink[] {
+  return "links" in item && Array.isArray(item.links) ? (item.links as PageLink[]) : [];
+}
+
+function LinkRow({ links }: { links: PageLink[] }) {
+  if (links.length === 0) return null;
+  return (
+    <div className="mt-3 flex flex-wrap items-center gap-x-5">
+      {links.map((l) => (
+        <Button
+          key={l.href}
+          href={l.href}
+          variant="link"
+          iconEnd={<Icon name="arrow-up-right" size={15} />}
+        >
+          {l.label}
+        </Button>
+      ))}
+    </div>
+  );
+}
 
 // FAQPage from the genuine question -> approach pairs in `questions.items`.
 // These are real Q&A: the interview question and how to answer it.
@@ -41,12 +68,18 @@ export default function InterviewPage() {
         title={hero.line1}
         accent={hero.line2}
         lead={hero.intro}
+        actions={
+          <Button href="#workshop" icon={<Icon name="pen-line" size={15} />}>
+            Write your STAR stories
+          </Button>
+        }
       >
         <blockquote className="max-w-2xl border-l-2 border-primary pl-5">
           <Text size="lead" tone="ink" className="font-display">
             {hero.creed}
           </Text>
         </blockquote>
+        <FreshnessNote date={interview.lastVerified} />
       </PageHero>
 
       {/* --------------------------------------------------------------- STAR */}
@@ -87,7 +120,7 @@ export default function InterviewPage() {
       </Section>
 
       {/* ------------------------------------------------------------ WORKSHOP */}
-      <Section>
+      <Section id="workshop" className="scroll-mt-20">
         <SectionHeading kicker={workshop.kicker} title={workshop.title} lead={workshop.lead} />
 
         <CardGrid cols={4} className="mt-12">
@@ -106,19 +139,9 @@ export default function InterviewPage() {
           ))}
         </CardGrid>
 
-        <CardGrid cols={4} className="mt-10">
-          {workshop.steps.map((s) => (
-            <Card key={s.n} as="article">
-              <span className="font-display text-3xl text-line-strong">0{s.n}</span>
-              <Heading level={3} size="h5" className="mt-3">
-                {s.title}
-              </Heading>
-              <Text size="small" className="mt-2 flex-1">
-                {s.desc}
-              </Text>
-            </Card>
-          ))}
-        </CardGrid>
+        <Card padding="lg" className="mt-10">
+          <StarWriter themes={workshop.themes} steps={workshop.steps} />
+        </Card>
 
         <div className="mt-8">
           <Button
@@ -149,6 +172,7 @@ export default function InterviewPage() {
                   <Text size="small" className="mt-2">
                     {q.approach}
                   </Text>
+                  <LinkRow links={linksOf(q)} />
                 </div>
               </div>
             </Card>
@@ -199,6 +223,7 @@ export default function InterviewPage() {
                   <Text size="small" className="mt-2">
                     {f.desc}
                   </Text>
+                  <LinkRow links={linksOf(f)} />
                 </div>
               </div>
             </Card>
@@ -229,6 +254,15 @@ export default function InterviewPage() {
           ))}
         </CardGrid>
         <Source label={redFlags.source.label} url={redFlags.source.url} className="mt-6" />
+        <div className="mt-4">
+          <Button
+            href={redFlags.crossref.href}
+            variant="link"
+            iconEnd={<Icon name="arrow-up-right" size={16} />}
+          >
+            {redFlags.crossref.label}
+          </Button>
+        </div>
       </Section>
 
       {/* ------------------------------------------------------------ CLOSING */}

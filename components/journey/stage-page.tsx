@@ -1,11 +1,7 @@
+import type { ReactNode } from "react";
 import { DIAGRAMS, type DiagramId } from "@/components/diagrams";
-import {
-  CardGrid,
-  PageFooterNav,
-  PageHero,
-  Section,
-  SectionHeading,
-} from "@/components/layout";
+import { PageFooterNav, PageHero, Section, SectionHeading } from "@/components/layout";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import {
   Button,
   Card,
@@ -19,7 +15,6 @@ import {
 } from "@/components/ui";
 import { isAccent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
-import { routeDesc } from "@/lib/routes";
 import { STAGES, TOTAL_STAGES, getStage, type Stage } from "@/lib/stages";
 import { JourneyStepper } from "./journey-stepper";
 
@@ -67,7 +62,24 @@ function isDiagramId(value: string | undefined): value is DiagramId {
   return value !== undefined && value in DIAGRAMS;
 }
 
-export function StagePage({ id }: { id: string }) {
+export type StagePageProps = {
+  id: string;
+  /**
+   * Stage-specific content, rendered after the step list (and the diagram,
+   * where the stage has one) and before the closing. The shared frame owns
+   * everything else: hero, TL;DR, stepper, steps, quiz, footer nav.
+   */
+  children?: ReactNode;
+};
+
+/**
+ * The one frame every stage page renders. Order, top to bottom: hero (with the
+ * Tagalog TL;DR folded under the lead, like /learn), the five-stage stepper,
+ * "Do these first", the stage diagram if any, `children`, the closing, the
+ * quiz, then prev / up / next. The quiz sits above the footer nav because
+ * PracticeFooter's contract (spec §5.2b) is "directly above PageFooterNav".
+ */
+export function StagePage({ id, children }: StagePageProps) {
   const stage: Stage | undefined = getStage(id);
   if (!stage) throw new Error(`StagePage: unknown stage id "${id}"`);
 
@@ -83,7 +95,7 @@ export function StagePage({ id }: { id: string }) {
       <PageHero
         compact
         breadcrumb={getBreadcrumb(stage.href)}
-        kicker={`Stage ${stage.num} of ${TOTAL_STAGES} · ${stage.steps}`}
+        kicker={`Stage ${stage.num} of ${TOTAL_STAGES}`}
         kickerTone={tone(stage.accent)}
         title={stage.title}
         lead={stage.summary}
@@ -104,6 +116,9 @@ export function StagePage({ id }: { id: string }) {
         <Text size="small" tone="faint">
           {stage.role}
         </Text>
+        <Section spacing="none">
+          <Tldr route={stage.href} />
+        </Section>
       </PageHero>
 
       {/* 2 — WHERE YOU ARE */}
@@ -137,6 +152,27 @@ export function StagePage({ id }: { id: string }) {
             </Step>
           ))}
         </StepList>
+
+        {/* Pages that belong to this stage but are not one of the steps above.
+            Stages whose every tool is already a step carry an empty list, so
+            nothing repeats (lib/stages.test.ts holds that line). */}
+        {stage.tools.length > 0 && (
+          <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-2">
+            <Text size="small" tone="soft" as="span">
+              Also useful at this stage:
+            </Text>
+            {stage.tools.map((tool) => (
+              <Button
+                key={`${tool.href}-${tool.label}`}
+                href={tool.href}
+                variant="link"
+                iconEnd={<Icon name="arrow-right" size={15} />}
+              >
+                {tool.label}
+              </Button>
+            ))}
+          </div>
+        )}
       </Section>
 
       {/* 4 — THE STAGE DIAGRAM (only where a picture beats a paragraph) */}
@@ -148,32 +184,8 @@ export function StagePage({ id }: { id: string }) {
         </Section>
       )}
 
-      {/* 5 — TOOLS FOR THIS STAGE */}
-      <Section>
-        <SectionHeading
-          kicker="Tools for this stage"
-          title="The only pages you need right now"
-          lead="Work these four before moving on. Everything else keeps."
-        />
-        <CardGrid cols={4} as="ul" className="mt-10">
-          {stage.tools.map((tool) => (
-            <li key={`${tool.href}-${tool.label}`} className="flex">
-              <Card href={tool.href} className="w-full">
-                <Heading level={3} size="h5">
-                  {tool.label}
-                </Heading>
-                <Text size="small" className="mt-2">
-                  {routeDesc(tool.href) ?? "Open this page."}
-                </Text>
-                <span className="mt-4 inline-flex items-center gap-1 text-small font-medium text-primary">
-                  Open
-                  <Icon name="arrow-right" size={14} />
-                </span>
-              </Card>
-            </li>
-          ))}
-        </CardGrid>
-      </Section>
+      {/* 5 — STAGE-SPECIFIC CONTENT */}
+      {children}
 
       {/* 6 — CLOSING */}
       <Section band="tint">
@@ -206,7 +218,10 @@ export function StagePage({ id }: { id: string }) {
         </div>
       </Section>
 
-      {/* 7 — WAYFINDING */}
+      {/* 7 — CHECK YOURSELF */}
+      <PracticeFooter route={stage.href} />
+
+      {/* 8 — WAYFINDING */}
       <Section>
         <PageFooterNav prev={neighbours.prev} next={neighbours.next} up={neighbours.up} />
       </Section>

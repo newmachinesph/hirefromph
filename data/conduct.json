@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-08",
   "intro": "Skill gets you hired. Conduct is what keeps you hired, and what quietly ends careers when it fails. This page is not a lecture on being nice. It is the specific, documented behaviour that gets remote professionals fired, sued, delisted, or criminally charged, and the standard that keeps you out of all of it.",
   "creed": "Your reputation is the only asset a client can't take from you, and the only one you can destroy by yourself, in a single afternoon.",
   "whyItMatters": "You will be judged on trust long before you are judged on talent. A client who cannot verify your work, your identity, or your hours will not hire you, and after 2024, they are checking. The good news: every single rule below is easy to keep. Almost nobody breaks them by accident. They break them by drifting.",
@@ -112,7 +113,7 @@
       "accent": "caution",
       "title": "Abandoning a contract permanently marks your score",
       "when": "Ongoing · Upwork",
-      "what": "Upwork's Job Success Score factors in the reasons past contracts ended. As of this writing, below 79% you start struggling to win work at all; top freelancers sit above 90%. Feedback manipulation, trading reviews, hiring yourself, bribing a client, or threatening bad feedback (Upwork names these 'bribery and extortion'), can permanently block your account. If you're suspended for it, you must wait six months before you can even appeal.",
+      "what": "Upwork's Job Success Score factors in the reasons past contracts ended. As of Aug 2026, below 79% you start struggling to win work at all; top freelancers sit above 90%. Feedback manipulation, trading reviews, hiring yourself, bribing a client, or threatening bad feedback (Upwork names these 'bribery and extortion'), can permanently block your account. If you're suspended for it, you must wait six months before you can even appeal.",
       "sting": "Disappearing when a job gets hard feels like escape. It is recorded, it is scored, and it follows you to every future proposal.",
       "lesson": "You are allowed to end a contract. You are not allowed to vanish from one. Say the hard sentence, hand over the work, take the ending professionally.",
       "source": { "label": "Upwork, Job Success Score", "url": "https://support.upwork.com/hc/en-us/articles/211068358-Job-Success-Score" }

@@ -12,8 +12,31 @@ vi.mock("next/link", () => ({
 }));
 
 import { CareerSimulator } from "@/components/career-simulator";
+import { DEFAULT_FX, DEFAULT_FX_SAMPLED } from "@/lib/simulator-math";
 
 describe("CareerSimulator", () => {
+  it("quotes the FX default and its sample date from the math module", () => {
+    render(<CareerSimulator />);
+    const note = screen.getByText(/We default to/);
+    expect(note.textContent).toContain(`₱${DEFAULT_FX}`);
+    expect(note.textContent).toContain(DEFAULT_FX_SAMPLED);
+    expect(note.textContent).not.toMatch(/\{fx\}|\{sampled\}/);
+  });
+
+  it("tags only the deep-craft AI premium as sourced", async () => {
+    const user = userEvent.setup();
+    render(<CareerSimulator />);
+    // Default: no craft, AI built in -> the ×1.0 row must read ASSUMPTION.
+    await user.click(screen.getByRole("radio", { name: /I build AI into the delivery/ }));
+    expect(screen.getByText(/AI, built on top of no craft/).closest("li")?.textContent).toContain("ASSUMPTION");
+    expect(screen.queryByText("SOURCED")).not.toBeInTheDocument();
+    // Deep craft: the row becomes the one sourced multiplier, at ×1.34.
+    await user.click(screen.getByRole("radio", { name: /Specialised/ }));
+    const deep = screen.getByText(/AI, built into a deep craft/).closest("li");
+    expect(deep?.textContent).toContain("SOURCED");
+    expect(deep?.textContent).toContain("×1.34");
+  });
+
   it("renders the controls, the chart and the data table", () => {
     render(<CareerSimulator />);
     expect(screen.getByRole("group", { name: /craft/i })).toBeInTheDocument();

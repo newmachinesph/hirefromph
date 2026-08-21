@@ -1,6 +1,7 @@
 "use client";
 
 import { useId } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
   Badge,
@@ -91,9 +92,17 @@ export function PathChooser({
         </div>
       </Field>
 
-      {shown.length === 0 && (
+      {shown.length === 0 ? (
         <Text size="small" tone="faint">
           No lanes to show.
+        </Text>
+      ) : (
+        <Text size="caption" tone="faint">
+          Pay bands are vendor estimates. See the{" "}
+          <Link href="/salary" className="text-primary underline underline-offset-2">
+            Salary Guide
+          </Link>{" "}
+          for sources.
         </Text>
       )}
 

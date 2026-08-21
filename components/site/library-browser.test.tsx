@@ -47,8 +47,10 @@ describe("LibraryBrowser", () => {
 
     await user.click(screen.getByRole("button", { name: "The path" }));
 
+    // Five stages, the dashboard, and the 30-day plan.
     const after = screen.getAllByRole("link").length;
-    expect(after).toBe(5);
+    expect(after).toBe(LIVE_LIBRARY.filter((entry) => entry.group === "path").length);
+    expect(after).toBe(7);
     expect(after).toBeLessThan(before);
     expect(replace).toHaveBeenCalledWith("/library?group=path", { scroll: false });
   });

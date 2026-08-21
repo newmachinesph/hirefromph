@@ -4,7 +4,9 @@ import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import apply from "@/data/apply.json";
 import findwork from "@/data/findwork.json";
+import trackNames from "@/data/track-names.json";
 import { PathGate } from "@/components/journey";
+import { usePath } from "@/lib/path-context";
 import {
   Badge,
   Button,
@@ -28,6 +30,8 @@ const STOP_SCORE_THRESHOLD = 4;
 const INSTANT_STOP_WEIGHT = 3;
 
 type Entry = (typeof apply.entries)[number];
+/** How an entry relates to the visitor's chosen niche. */
+type NicheFit = "tagged" | "general" | "other";
 type RedFlag = (typeof findwork.vetting.redFlags)[number];
 type Verdict = "clear" | "caution" | "stop";
 
@@ -125,7 +129,7 @@ export function VettingTool() {
         </div>
       </Field>
 
-      <aside className="rounded-md border border-line bg-paper p-6 lg:sticky lg:top-24">
+      <aside className="order-first rounded-md border border-line bg-paper p-6 lg:order-none lg:sticky lg:top-24">
         <p className="text-kicker uppercase text-ink-faint">Live verdict</p>
         <div role="status" aria-live="polite" className="mt-4">
           <AnimatePresence mode="wait">
@@ -155,26 +159,54 @@ export function VettingTool() {
   );
 }
 
+const FIT_ORDER: Record<NicheFit, number> = { tagged: 0, general: 1, other: 2 };
+
+/** "tagged" when the entry names the track, "general" when it hires every niche. */
+function nicheFit(entry: Entry, track: string | null): NicheFit {
+  if (track && entry.niches.includes(track)) return "tagged";
+  if (entry.niches.includes("all")) return "general";
+  return "other";
+}
+
 /**
  * The apply.json directory, reframed as study material: filter + search the
- * same 150+ real entries, gated behind a chosen path like before. This is a
- * seed list to study and extract patterns from, not the point of the page.
+ * real entries, with the tail gated behind a chosen path. Once a path is
+ * chosen, entries tagged for that niche sort first and the rest can be hidden.
+ * This is a seed list to study and extract patterns from, not the point of
+ * the page.
  */
 export function FindWorkDirectory() {
+  const { state, hydrated } = usePath();
   const [category, setCategory] = useState("all");
   const [query, setQuery] = useState("");
+  const [nicheOnly, setNicheOnly] = useState(false);
+
+  const track = hydrated ? state.track : null;
+  const nicheName = track
+    ? ((trackNames as Record<string, string>)[track] ?? null)
+    : null;
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return apply.entries.filter((entry) => {
+    const matches = apply.entries.filter((entry) => {
       if (category !== "all" && entry.category !== category) return false;
+      if (track && nicheOnly && nicheFit(entry, track) === "other") return false;
       if (!q) return true;
       const haystack = [entry.name, entry.blurb, ...entry.tags]
         .join(" ")
         .toLowerCase();
       return haystack.includes(q);
     });
-  }, [category, query]);
+    if (!track) return matches;
+    // Stable sort: tagged first, general boards next, the rest after.
+    return [...matches].sort(
+      (a, b) => FIT_ORDER[nicheFit(a, track)] - FIT_ORDER[nicheFit(b, track)],
+    );
+  }, [category, query, track, nicheOnly]);
+
+  const taggedCount = track
+    ? apply.entries.filter((e) => nicheFit(e, track) === "tagged").length
+    : 0;
 
   const taste = filtered.slice(0, TASTE_COUNT);
   const rest = filtered.slice(TASTE_COUNT);
@@ -218,29 +250,55 @@ export function FindWorkDirectory() {
           </Field>
         </div>
 
-        <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
-          Studying <span className="font-semibold text-ink">{taste.length}</span>{" "}
-          of {apply.entries.length}, extract the pattern, don&rsquo;t just click
-        </p>
+        {track && nicheName ? (
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm text-ink-faint" aria-live="polite">
+              <span className="font-semibold text-ink">{apply.entries.length}</span> places,{" "}
+              <span className="font-semibold text-ink">{taggedCount}</span> tagged for{" "}
+              {nicheName}, shown first
+            </p>
+            <Checkbox
+              id="directory-niche-only"
+              checked={nicheOnly}
+              onChange={() => setNicheOnly((v) => !v)}
+              label="Hide places that don&rsquo;t fit my niche"
+            />
+          </div>
+        ) : (
+          <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
+            Studying <span className="font-semibold text-ink">{taste.length}</span>{" "}
+            of {apply.entries.length}, extract the pattern, don&rsquo;t just click
+          </p>
+        )}
 
         <motion.div layout className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {taste.map((entry) => (
-              <EntryCard key={entry.name} entry={entry} />
+              <EntryCard
+                key={entry.name}
+                entry={entry}
+                tagged={nicheFit(entry, track) === "tagged"}
+              />
             ))}
           </AnimatePresence>
         </motion.div>
 
         {rest.length > 0 && (
           <div className="mt-5">
-            <PathGate unlocks="the full study set of vetted places matched to your niche">
+            <PathGate
+              unlocks={`The remaining ${rest.length} of ${apply.entries.length} places, sorted so the ones tagged for your niche come first, with a switch to hide the ones that don't fit.`}
+            >
               <motion.div
                 layout
                 className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
               >
                 <AnimatePresence mode="popLayout">
                   {rest.map((entry) => (
-                    <EntryCard key={entry.name} entry={entry} />
+                    <EntryCard
+                      key={entry.name}
+                      entry={entry}
+                      tagged={nicheFit(entry, track) === "tagged"}
+                    />
                   ))}
                 </AnimatePresence>
               </motion.div>
@@ -261,7 +319,7 @@ export function FindWorkDirectory() {
   );
 }
 
-function EntryCard({ entry }: { entry: Entry }) {
+function EntryCard({ entry, tagged }: { entry: Entry; tagged: boolean }) {
   return (
     <motion.div
       layout
@@ -277,6 +335,11 @@ function EntryCard({ entry }: { entry: Entry }) {
           {entry.type}
         </Badge>
       </div>
+      {tagged && (
+        <Badge tone="verified" className="mt-2 w-fit">
+          Fits your niche
+        </Badge>
+      )}
       <p className="mt-1.5 flex items-center gap-1 text-xs font-medium text-ink-faint">
         <Icon name="map-pin" size={12} /> {entry.region}
       </p>

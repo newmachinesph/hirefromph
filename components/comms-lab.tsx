@@ -4,6 +4,7 @@ import { useEffect, useId, useMemo, useState } from "react";
 import english from "@/data/english.json";
 import {
   Badge,
+  Button,
   Callout,
   Card,
   Checkbox,
@@ -32,8 +33,15 @@ const PATTERNS: Record<string, RegExp> = {
     /\b(?:i just wanted to|i hope this (?:email )?finds you well|i hope you(?:['’]re| are) doing well|reach out|touch base|circle back|wanted to check in|let me know when you can)\b|thoughts\?/gi,
 };
 
+/* Longer stock phrases are claimed first and masked out, so "I just wanted to
+   reach out" is two filler flags, not filler plus a hedge on "just", and
+   "kindly revert" is one dated phrase, not dated plus deference. */
+const SCAN_ORDER = ["filler", "dated", "apology", "deference", "hedges"] as const;
+
 const CATEGORIES = english.banlist.categories;
 const MAX_PHRASES_SHOWN = 6;
+/** Below this, a clean scan says nothing about directness. */
+export const MIN_WORDS_FOR_VERDICT = 20;
 
 /** Debounce a value so screen-reader announcements fire after typing pauses,
     not on every keystroke. */
@@ -60,30 +68,41 @@ type CategoryHit = {
 };
 type ScanResult = { total: number; words: number; groups: CategoryHit[] };
 
-function scan(text: string): ScanResult {
+/** Blank out a matched span, same length, so later passes cannot re-match it. */
+function mask(text: string, index: number, length: number): string {
+  return text.slice(0, index) + " ".repeat(length) + text.slice(index + length);
+}
+
+export function scan(text: string): ScanResult {
   const trimmed = text.trim();
   const words = trimmed ? trimmed.split(/\s+/).length : 0;
 
-  let total = 0;
-  const groups: CategoryHit[] = [];
-
-  for (const cat of CATEGORIES) {
-    const pattern = PATTERNS[cat.id];
-    if (!pattern) continue;
-
+  // Pass 1: claim matches in priority order on a progressively masked copy.
+  let remaining = text;
+  const countsByCategory = new Map<string, Map<string, number>>();
+  for (const id of SCAN_ORDER) {
+    const pattern = PATTERNS[id];
     const counts = new Map<string, number>();
-    let catTotal = 0;
     // matchAll clones the regex, so the module-level /g lastIndex is never mutated.
-    for (const match of text.matchAll(pattern)) {
+    for (const match of remaining.matchAll(pattern)) {
       const phrase = match[0].toLowerCase().replace(/\s+/g, " ");
       counts.set(phrase, (counts.get(phrase) ?? 0) + 1);
-      catTotal += 1;
+      remaining = mask(remaining, match.index ?? 0, match[0].length);
     }
-    if (catTotal === 0) continue;
+    if (counts.size > 0) countsByCategory.set(id, counts);
+  }
+
+  // Pass 2: report in the banlist's own order, the one the page teaches.
+  let total = 0;
+  const groups: CategoryHit[] = [];
+  for (const cat of CATEGORIES) {
+    const counts = countsByCategory.get(cat.id);
+    if (!counts) continue;
 
     const ranked = Array.from(counts, ([phrase, count]) => ({ phrase, count })).sort(
       (a, b) => b.count - a.count || a.phrase.localeCompare(b.phrase),
     );
+    const catTotal = ranked.reduce((sum, p) => sum + p.count, 0);
 
     total += catTotal;
     groups.push({
@@ -102,11 +121,17 @@ function scan(text: string): ScanResult {
 
 type Verdict = { label: string; note: string; tone: Tone };
 
-function readDirectness({ total, words }: ScanResult): Verdict {
+export function readDirectness({ total, words }: ScanResult): Verdict {
   if (words === 0)
     return {
       label: "Waiting",
       note: "Paste something in and the scan runs as you type.",
+      tone: "neutral",
+    };
+  if (total === 0 && words < MIN_WORDS_FOR_VERDICT)
+    return {
+      label: "Too short",
+      note: `Nothing flagged, but under ${MIN_WORDS_FOR_VERDICT} words says nothing yet. Paste a full message.`,
       tone: "neutral",
     };
   if (total === 0)
@@ -189,7 +214,9 @@ function Results({
             {english.lab.cleanTitle}
           </p>
           <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">
-            {english.lab.cleanBody}
+            {result.words >= MIN_WORDS_FOR_VERDICT
+              ? english.lab.cleanBody
+              : english.lab.cleanShortBody}
           </p>
         </Callout>
       ) : (
@@ -271,15 +298,27 @@ export function CommsLab() {
 
       {/* ------------------------------------------------------ PASS 1 */}
       <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-        <Field label="Paste a real message you sent a client">
-          <Textarea
-            value={original}
-            onChange={(e) => setOriginal(e.target.value)}
-            rows={10}
-            spellCheck={false}
-            placeholder={english.lab.placeholder}
-          />
-        </Field>
+        <div className="flex flex-col gap-3">
+          <Field label="Paste a real message you sent a client">
+            <Textarea
+              value={original}
+              onChange={(e) => setOriginal(e.target.value)}
+              rows={10}
+              spellCheck={false}
+              placeholder={english.lab.placeholder}
+            />
+          </Field>
+          <div>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setOriginal(english.lab.sample)}
+              icon={<Icon name="clipboard-paste" size={14} />}
+            >
+              {english.lab.sampleLabel}
+            </Button>
+          </div>
+        </div>
 
         <Results result={originalResult} labelledBy={`${uid}-r1`} />
       </div>

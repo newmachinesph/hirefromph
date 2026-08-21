@@ -86,7 +86,7 @@
       {
         "id": "durability-check",
         "title": "Stress-test it against AI",
-        "desc": "Search \"[niche] AI replace 2026\" and deliberately read sources that disagree with each other, not three that agree with you. If the job is \"do a task a model can now do in one prompt,\" the ceiling is falling. If it's \"judge, decide, or represent a business,\" it holds up longer.",
+        "desc": "Search \"[niche] AI replace\" and deliberately read sources that disagree with each other, not three that agree with you. If the job is \"do a task a model can now do in one prompt,\" the ceiling is falling. If it's \"judge, decide, or represent a business,\" it holds up longer.",
         "answers": ["durability"],
         "icon": "shield-alert"
       },
@@ -100,9 +100,8 @@
     ]
   },
   "equipment": {
-    "intro": "The budget ranges on this page are rough planning allowances, not quotes or proof that a specific item will suit your work. Prices change with location, condition, seller, and promos. Check current listings and the requirements for the tools you use; the useful skill is knowing which specs and failure points to test.",
-    "creed": "Don't buy what a list tells you. Check your workload, test the weak points, then buy the least expensive option that meets those needs.",
-    "referenceNote": "These builds are budget examples, not shopping lists. Confirm current prices, warranty terms, battery condition, and the requirements of your own software before paying.",
+    "intro": "The useful skill is knowing which specs and failure points to test. Check the requirements for the tools you use before you compare prices.",
+    "referenceNote": "Three example builds to measure your own list against.",
     "whatMatters": [
       {
         "spec": "RAM and storage, before CPU badges",
@@ -180,11 +179,6 @@
         "title": "Red flags to walk away from",
         "desc": "The seller won't let you test before paying. The price is far below every other listing for the same specs. They push GCash-only payment before you've seen the item in person. The serial number is scratched off or missing. Any one of these is a reason to walk, not negotiate.",
         "icon": "flag"
-      },
-      {
-        "title": "Decide upgrade-now vs. upgrade-later with one question",
-        "desc": "Would I lose a client, or fail to apply, without this? If yes, it's now. If the honest answer is \"it would just be nicer,\" it's later, buy it once a real client need proves you require it, not because a list said so.",
-        "icon": "git-branch"
       },
       {
         "title": "The rule that saves you money",

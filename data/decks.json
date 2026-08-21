@@ -122,7 +122,8 @@
           "front": "The entire \"interview\" happens over WhatsApp or Telegram chat.",
           "back": "Stop. Real hiring uses email, a real call, or the platform. A rushed chat-only process that skips a proper conversation is a documented scam pattern.",
           "source": {
-            "label": "PH 2nd most attacked by job scams (Manila Bulletin / SEEK, Nov 2025). Re-verify this ranking going into 2027.",
+            "label": "PH 2nd most attacked by job scams (Manila Bulletin / SEEK, Nov 2025)",
+            "_note": "Re-verify this ranking going into 2027.",
             "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport"
           }
         }

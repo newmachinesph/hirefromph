@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import indispensable from "@/data/indispensable.json";
-import { Bars } from "@/components/diagrams/charts";
+import { FreshnessNote } from "@/components/freshness-note";
+import { IntelligencePicker } from "@/components/intelligence-picker";
 import {
   CardGrid,
   PageFooterNav,
@@ -12,11 +13,12 @@ import {
   Button,
   Callout,
   Card,
-  DiagramFrame,
   Heading,
   Icon,
   Kicker,
   Source,
+  Stat,
+  StatStrip,
   Text,
 } from "@/components/ui";
 import { accent } from "@/lib/accent";
@@ -50,6 +52,7 @@ export default function IndispensablePage() {
         <Callout tone="signal" className="max-w-2xl">
           {hero.creed}
         </Callout>
+        <FreshnessNote date={indispensable.lastVerified} />
         <Section spacing="none"><Tldr route="/indispensable" /></Section>
       </PageHero>
 
@@ -98,6 +101,16 @@ export default function IndispensablePage() {
                   <Text size="small" tone="ink" className="mt-1 font-medium">
                     {it.build}
                   </Text>
+                  {it.link && (
+                    <Button
+                      href={it.link.href}
+                      variant="link"
+                      className="mt-1 text-small"
+                      iconEnd={<Icon name="arrow-up-right" size={14} />}
+                    >
+                      {it.link.label}
+                    </Button>
+                  )}
                 </div>
               </Card>
             );
@@ -107,6 +120,14 @@ export default function IndispensablePage() {
         <Callout tone="signal" className="mt-8 max-w-3xl">
           {intelligences.note}
         </Callout>
+
+        <Card padding="lg" className="mt-6 max-w-3xl">
+          <IntelligencePicker
+            items={intelligences.items}
+            title={intelligences.picker.title}
+            hint={intelligences.picker.hint}
+          />
+        </Card>
       </Section>
 
       {/* ------------------------------------------------------ SOUGHT AFTER */}
@@ -137,27 +158,34 @@ export default function IndispensablePage() {
       <Section>
         <SectionHeading kicker={proof.kicker} title={proof.title} lead={proof.body} />
 
-        <DiagramFrame
-          title="Freelancers and employees, side by side"
-          caption="Read one row at a time: the solid bar is the freelancer share, the dashed bar the employee share. The gap, not the height, is the finding."
-          className="mt-12"
-        >
-          <Bars
-            data={proof.rows.map((r) => ({
-              id: r.label,
-              label: r.label,
-              value: r.freelancer,
-              compare: r.employee,
-            }))}
-            max={100}
-            format={(v) => `${v}%`}
-            seriesLabel={proof.legend.freelancer}
-            compareLabel={proof.legend.employee}
-            labelWidth={260}
-          />
-        </DiagramFrame>
+        {/* Four pairs, no chart: this fits a phone without panning, and the
+            gap is the finding, not the bar height. */}
+        <StatStrip className="mt-10">
+          {proof.rows.map((r) => (
+            <Stat
+              key={r.label}
+              value={
+                <>
+                  {r.freelancer}%{" "}
+                  <span className="text-h5 text-ink-faint">vs {r.employee}%</span>
+                </>
+              }
+              label={r.label}
+              sub={`${proof.legend.freelancer} vs ${proof.legend.employee.toLowerCase()}`}
+            />
+          ))}
+        </StatStrip>
 
-        <Source label={proof.source.label} url={proof.source.url} className="mt-4" />
+        <Source label={proof.source.label} url={proof.source.url} className="mt-6" />
+        <div className="mt-3">
+          <Button
+            href={proof.link.href}
+            variant="link"
+            iconEnd={<Icon name="arrow-up-right" size={16} />}
+          >
+            {proof.link.label}
+          </Button>
+        </div>
       </Section>
 
       {/* ------------------------------------------------------------ CLOSING */}
@@ -179,13 +207,6 @@ export default function IndispensablePage() {
             </Card>
           ))}
         </CardGrid>
-
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <Button href="/ai-first">Multiply with AI</Button>
-          <Button href="/tasks" variant="outline">
-            Build your proof
-          </Button>
-        </div>
       </Section>
 
       <PracticeFooter route="/indispensable" />

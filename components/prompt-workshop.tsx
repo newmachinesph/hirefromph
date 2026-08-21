@@ -2,7 +2,17 @@
 
 import { useState } from "react";
 import { CopyButton } from "@/components/copy-button";
-import { Badge, Card, Field, Kicker, ProgressBar, Text, Textarea } from "@/components/ui";
+import {
+  Badge,
+  Button,
+  Card,
+  Field,
+  Icon,
+  Kicker,
+  ProgressBar,
+  Text,
+  Textarea,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 
 export type BuilderField = {
@@ -43,6 +53,11 @@ function buildPrompt(fields: BuilderField[], values: Record<string, string>): st
     .join("\n\n");
 }
 
+/** Placeholders read "e.g. …"; the sample is whatever follows that prefix. */
+function sampleValue(placeholder: string): string {
+  return placeholder.replace(/^e\.g\.\s*/i, "").trim();
+}
+
 export function PromptWorkshop({ intro, fields, qualityLevels }: Props) {
   const [values, setValues] = useState<Record<string, string>>({});
 
@@ -55,14 +70,42 @@ export function PromptWorkshop({ intro, fields, qualityLevels }: Props) {
     setValues((prev) => ({ ...prev, [id]: value }));
   }
 
+  function loadSample() {
+    setValues(Object.fromEntries(fields.map((f) => [f.id, sampleValue(f.placeholder)])));
+  }
+
+  function clear() {
+    setValues({});
+  }
+
   return (
     <div>
       <Text size="small" className="max-w-2xl">
         {intro}
       </Text>
+      <div className="mt-4 flex flex-wrap gap-3">
+        <Button variant="outline" size="sm" onClick={loadSample}>
+          Use the sample prompt
+        </Button>
+        {filledCount > 0 && (
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={clear}
+            icon={<Icon name="rotate-ccw" size={14} />}
+          >
+            Clear
+          </Button>
+        )}
+      </div>
 
+      {/*
+        Below `lg` the meter and preview render first so the live assembly is
+        on screen before the first field; from `lg` they sit to the right and
+        stick while the reader scrolls the fields.
+      */}
       <div className="mt-8 grid gap-8 lg:grid-cols-[1fr_400px] lg:items-start">
-        <div className="grid gap-5 sm:grid-cols-2">
+        <div className="order-2 grid gap-5 sm:grid-cols-2 lg:order-1">
           {fields.map((f) => (
             <Field
               key={f.id}
@@ -80,7 +123,7 @@ export function PromptWorkshop({ intro, fields, qualityLevels }: Props) {
           ))}
         </div>
 
-        <Card as="section" padding="md" className="lg:sticky lg:top-24">
+        <Card as="section" padding="md" className="order-1 lg:order-2 lg:sticky lg:top-24">
           <div className="flex flex-col gap-5">
             <div>
               <div className="flex items-center justify-between gap-3">
@@ -110,7 +153,7 @@ export function PromptWorkshop({ intro, fields, qualityLevels }: Props) {
             </div>
 
             <pre className="min-h-[200px] overflow-auto whitespace-pre-wrap rounded-sm border border-line-strong bg-band p-4 text-caption leading-relaxed text-ink">
-              {assembled || "Your prompt builds here as you fill in the fields on the left."}
+              {assembled || "Your prompt builds here as you fill in the fields."}
             </pre>
 
             {assembled ? (

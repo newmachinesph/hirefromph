@@ -3,10 +3,11 @@ import labsData from "@/data/labs.json";
 import { BuildLabs } from "@/components/build-labs";
 import { PageFooterNav, PageHero, Section } from "@/components/layout";
 import { Badge, Callout, Card, Icon } from "@/components/ui";
+import { BUILD_HREF, labIdFromParam } from "@/lib/labs";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 
-const HREF = "/build";
+const HREF = BUILD_HREF;
 
 export const metadata: Metadata = pageMeta({
   path: HREF,
@@ -14,7 +15,14 @@ export const metadata: Metadata = pageMeta({
   description: labsData.intro,
 });
 
-export default function BuildPage() {
+type BuildPageProps = {
+  /** `?lab=<id>` opens that lab on load (see `labHref` in lib/labs). */
+  searchParams: Promise<{ lab?: string | string[] }>;
+};
+
+export default async function BuildPage({ searchParams }: BuildPageProps) {
+  const initialLabId = labIdFromParam((await searchParams).lab);
+
   return (
     <>
       <PageHero
@@ -35,7 +43,7 @@ export default function BuildPage() {
 
       <Section spacing="none" className="pb-24 lg:pb-32">
         <Card padding="lg">
-          <BuildLabs />
+          <BuildLabs initialLabId={initialLabId} />
         </Card>
       </Section>
 

@@ -7,8 +7,12 @@ import { DIAGRAM_MIN_WIDTH, INTER, type DiagramProps } from "./types";
  * profile `hirefromph`). Content from data/doctrine.json (`methods`); the
  * return arrow's label is UNSTICK step 5, "Time-box, then ask well".
  *
- * Accent budget: one element — GIVE. Every connector stays muted; the return
- * arrow is dashed because it is a return, not a step.
+ * doctrine.json does not order the seven methods, so the design file's
+ * left-to-right connectors are not drawn here: the dashed UNSTICK → ASK
+ * return is the only relationship the text actually states.
+ *
+ * Accent budget: one element — GIVE. The return arrow is dashed because it is
+ * a return, not a step.
  */
 
 type Node = { id: string; name: string; sub: string; x: number; y: number };
@@ -39,16 +43,6 @@ export function MethodLoop({ className }: DiagramProps) {
     >
       <defs>
         <marker
-          id="hfph-method-loop-arrow"
-          markerWidth="8"
-          markerHeight="6"
-          refX="7"
-          refY="3"
-          orient="auto"
-        >
-          <polygon points="0 0, 8 3, 0 6" fill="var(--ink-soft)" />
-        </marker>
-        <marker
           id="hfph-method-loop-arrow-sm"
           markerWidth="6"
           markerHeight="5"
@@ -60,18 +54,7 @@ export function MethodLoop({ className }: DiagramProps) {
         </marker>
       </defs>
 
-      {/* Connectors first, so nodes paint over the line ends. */}
-      <g stroke="var(--ink-soft)" strokeWidth="1" markerEnd="url(#hfph-method-loop-arrow)">
-        <line x1="144" y1="56" x2="204" y2="56" />
-        <line x1="320" y1="56" x2="380" y2="56" />
-        <line x1="496" y1="56" x2="556" y2="56" />
-        {/* VET → ASK: out right, down the outer corridor, back in from the right. */}
-        <path d="M 672,56 H 680 Q 688,56 688,64 V 156 Q 688,164 680,164 H 588" fill="none" />
-        <line x1="472" y1="164" x2="412" y2="164" />
-        <line x1="296" y1="164" x2="236" y2="164" />
-      </g>
-
-      {/* UNSTICK → ASK: the return loop. Dashed, and routed clear of the row. */}
+      {/* UNSTICK → ASK: the return loop, the only connector. Dashed, routed clear of the row. */}
       <path
         d="M 352,188 V 208 Q 352,216 360,216 H 520 Q 528,216 528,208 V 192"
         fill="none"

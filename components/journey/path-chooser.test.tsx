@@ -46,9 +46,12 @@ describe("PathChooser", () => {
     );
   });
 
-  it("renders no more-link by default", () => {
+  it("renders no more-link by default, only the pay-band source caption", () => {
     render(<PathChooser limit={6} />);
-    expect(screen.queryByRole("link")).toBeNull();
+    const links = screen.getAllByRole("link");
+    expect(links).toHaveLength(1);
+    expect(links[0]).toHaveAttribute("href", "/salary");
+    expect(screen.queryByRole("link", { name: /see every lane/i })).toBeNull();
   });
 
   it("names the group for assistive technology", () => {

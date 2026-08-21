@@ -1,4 +1,5 @@
 {
+  "lastVerified": "2026-08",
   "kicker": "Learn any tool",
   "headline": "The tool will change. The way you learn it won't.",
   "intro": "Tools change every year, new CRM, new AI copilot, new dashboard nobody trained you on. Clients don't care which tools you already know. They care whether you can pick up the one they use, fast, without hand-holding. This page does not teach you software. It teaches the method for learning any software, so the next unfamiliar tool is a weekend, not a wall.",
@@ -141,7 +142,7 @@
   "practice": [
     {
       "title": "The 60-minute build",
-      "desc": "Pick one tool from the landscape below. In one hour, produce a real, finished-if-rough artifact, a sheet, an automation, a dashboard. No tutorial past minute twenty.",
+      "desc": "Pick one tool from the landscape above. In one hour, produce a real, finished-if-rough artifact, a sheet, an automation, a dashboard. No tutorial past minute twenty.",
       "icon": "timer"
     },
     {

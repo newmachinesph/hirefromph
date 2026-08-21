@@ -24,6 +24,7 @@ import {
   Textarea,
 } from "@/components/ui";
 import { cn } from "@/lib/utils";
+import { isLabId } from "@/lib/labs";
 import { migrateKey } from "@/lib/storage";
 
 const LABS_KEY = "hfph.labs.v1";
@@ -73,12 +74,22 @@ function buildMarkdown(lab: Lab, labAnswers: Record<string, string>): string {
   );
 }
 
-export function BuildLabs() {
+export type BuildLabsProps = {
+  /**
+   * Lab to open on first render — the `?lab=<id>` deep link, resolved by the
+   * page via `labIdFromParam`. Unknown ids land on the gallery.
+   */
+  initialLabId?: string | null;
+};
+
+export function BuildLabs({ initialLabId = null }: BuildLabsProps) {
   const labs = labsData.labs;
   const categoryChips = [{ id: "all", label: "All" }, ...labsData.categories];
 
   const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedLabId, setSelectedLabId] = useState<string | null>(null);
+  const [selectedLabId, setSelectedLabId] = useState<string | null>(() =>
+    isLabId(initialLabId) ? initialLabId : null,
+  );
   const [activeTab, setActiveTab] = useState<TabId>("why");
   const [answers, setAnswers] = useState<Record<string, Record<string, string>>>({});
   const [checked, setChecked] = useState<Record<string, Record<number, boolean>>>({});

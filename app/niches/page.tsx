@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import tracks from "@/data/tracks.json";
 import frameworks from "@/data/frameworks.json";
 import salary from "@/data/salary.json";
+import { FreshnessNote } from "@/components/freshness-note";
 import { NicheExplorer } from "@/components/niche-explorer";
 import { NicheScorer } from "@/components/niche-scorer";
 import {
@@ -13,7 +14,18 @@ import {
   SectionHeading,
   Toc,
 } from "@/components/layout";
-import { Badge, Button, Callout, Card, Heading, Icon, Kicker, Text } from "@/components/ui";
+import {
+  Accordion,
+  AccordionItem,
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  Kicker,
+  Text,
+} from "@/components/ui";
 import { accent, type Accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
@@ -23,12 +35,14 @@ const HREF = "/niches";
 
 const ACCENT_CYCLE: Accent[] = ["signal", "verified", "caution", "info"];
 
+const NICHE_COUNT = tracks.tracks.length;
+
 const TOC = [
   { id: "method", label: "The method" },
-  { id: "research", label: "How to research" },
-  { id: "score", label: "Score it yourself" },
-  { id: "how-it-works", label: "How it works" },
   { id: "explorer", label: "Niche explorer" },
+  { id: "score", label: "Score it yourself" },
+  { id: "research", label: "How to research" },
+  { id: "how-it-works", label: "How it works" },
   { id: "emerging", label: "Where it leads" },
 ];
 
@@ -43,7 +57,7 @@ const steps = [
   {
     n: "01",
     title: "Pick a niche",
-    desc: "Browse the 22 lanes below and see the pay, demand, and skills for each.",
+    desc: `Browse the ${NICHE_COUNT} lanes above and see the pay, demand, and skills for each.`,
     icon: "compass",
   },
   {
@@ -55,7 +69,7 @@ const steps = [
   {
     n: "03",
     title: "Get certified",
-    desc: "Earn the certs clients look for, most at no cost.",
+    desc: "Earn the certs clients look for.",
     icon: "award",
   },
   {
@@ -76,6 +90,7 @@ export default function NichesPage() {
         kicker="Niche Learning Hub"
         title="Pick your lane. Go deep."
         lead={tracks.intro}
+        actions={<Button href="#explorer">Browse the {NICHE_COUNT} niches</Button>}
       />
 
       <Section>
@@ -124,38 +139,28 @@ export default function NichesPage() {
               </CardGrid>
             </section>
 
-            {/* ----------------------------------------------------- RESEARCH */}
-            <section id="research">
+            {/* -------------------------------------------------------- EXPLORER */}
+            <section id="explorer" className="scroll-mt-24">
               <SectionHeading
-                kicker="Answer it yourself"
-                title="How to research each question"
-                lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer."
+                kicker={`${NICHE_COUNT} worked examples`}
+                title="Tap a niche to see the full breakdown"
+                lead={
+                  <>
+                    {tracks.note} {frameworks.niche.examplesNote}
+                  </>
+                }
               />
-              <CardGrid cols={2} className="mt-8">
-                {frameworks.niche.howToResearch.map((m) => (
-                  <Card key={m.id} as="article">
-                    <div className="flex items-start gap-4">
-                      <span className="grid h-11 w-11 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
-                        <Icon name={m.icon} size={18} />
-                      </span>
-                      <div>
-                        <Heading level={3} size="h5">
-                          {m.title}
-                        </Heading>
-                        <Text size="small" className="mt-2">
-                          {m.desc}
-                        </Text>
-                        <div className="mt-3 flex flex-wrap gap-1.5">
-                          {m.answers.map((a) => {
-                            const crit = frameworks.niche.criteria.find((c) => c.id === a);
-                            return crit ? <Badge key={a}>{crit.name}</Badge> : null;
-                          })}
-                        </div>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </CardGrid>
+              <div className="mt-4">
+                <FreshnessNote date={tracks.lastVerified} />
+              </div>
+              <Callout tone="verified" icon="cpu" className="mt-8 max-w-3xl">
+                <Text size="small" tone="ink" className="font-medium">
+                  {tracks.aiFraming}
+                </Text>
+              </Callout>
+              <Card padding="lg" className="mt-10">
+                <NicheExplorer />
+              </Card>
             </section>
 
             {/* --------------------------------------------------------- SCORE */}
@@ -163,11 +168,44 @@ export default function NichesPage() {
               <SectionHeading
                 kicker="Try it now"
                 title="Score a niche yourself"
-                lead="Any niche, including one we never listed. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
+                lead="Now score one we didn't list. Rate it 1–5 across the seven questions above and get an honest, weighted verdict."
               />
               <Card padding="lg" className="mt-8">
                 <NicheScorer />
               </Card>
+            </section>
+
+            {/* ----------------------------------------------------- RESEARCH */}
+            <section id="research">
+              <SectionHeading
+                kicker="Answer it yourself"
+                title="How to research each question"
+                lead="Not vibes, not a course seller's confidence, five concrete moves that get you a real answer. Open the one you are stuck on."
+              />
+              <Accordion type="multiple" className="mt-8">
+                {frameworks.niche.howToResearch.map((m) => (
+                  <AccordionItem
+                    key={m.id}
+                    id={m.id}
+                    title={
+                      <span className="flex items-center gap-3">
+                        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
+                          <Icon name={m.icon} size={16} />
+                        </span>
+                        {m.title}
+                      </span>
+                    }
+                  >
+                    <Text size="small">{m.desc}</Text>
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {m.answers.map((a) => {
+                        const crit = frameworks.niche.criteria.find((c) => c.id === a);
+                        return crit ? <Badge key={a}>{crit.name}</Badge> : null;
+                      })}
+                    </div>
+                  </AccordionItem>
+                ))}
+              </Accordion>
             </section>
 
             {/* ------------------------------------------------------ HOW IT WORKS */}
@@ -196,27 +234,6 @@ export default function NichesPage() {
                   </Card>
                 ))}
               </CardGrid>
-            </section>
-
-            {/* -------------------------------------------------------- EXPLORER */}
-            <section id="explorer">
-              <SectionHeading
-                kicker={`${tracks.tracks.length} worked examples`}
-                title="Tap a niche to see the full breakdown"
-                lead={
-                  <>
-                    {tracks.note} {frameworks.niche.examplesNote}
-                  </>
-                }
-              />
-              <Callout tone="verified" icon="cpu" className="mt-8 max-w-3xl">
-                <Text size="small" tone="ink" className="font-medium">
-                  {tracks.aiFraming}
-                </Text>
-              </Callout>
-              <Card padding="lg" className="mt-10">
-                <NicheExplorer />
-              </Card>
             </section>
 
             {/* -------------------------------------------------------- EMERGING */}

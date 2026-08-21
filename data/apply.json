@@ -39,6 +39,9 @@
         "Beginner-friendly",
         "Direct clients"
       ],
+      "niches": [
+        "all"
+      ],
       "url": "https://www.onlinejobs.ph"
     },
     {
@@ -50,6 +53,9 @@
       "tags": [
         "Portfolio-based",
         "Global"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.upwork.com"
     },
@@ -63,6 +69,13 @@
         "Productized",
         "Creative"
       ],
+      "niches": [
+        "creative-content",
+        "social-media",
+        "podcast-audio",
+        "design-viz",
+        "localization"
+      ],
       "url": "https://www.fiverr.com"
     },
     {
@@ -74,6 +87,9 @@
       "tags": [
         "Bidding",
         "Broad"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.freelancer.com"
     },
@@ -87,6 +103,14 @@
         "0% commission",
         "Modern"
       ],
+      "niches": [
+        "creative-content",
+        "social-media",
+        "design-viz",
+        "executive-ops",
+        "project-management",
+        "revops"
+      ],
       "url": "https://contra.com"
     },
     {
@@ -98,6 +122,9 @@
       "tags": [
         "Long-term",
         "PH-focused"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.virtualstaff.ph"
     },
@@ -111,6 +138,9 @@
         "Full-time",
         "Vetted"
       ],
+      "niches": [
+        "all"
+      ],
       "url": "https://www.remotestaff.ph"
     },
     {
@@ -122,6 +152,9 @@
       "tags": [
         "PH",
         "Corporate"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.kalibrr.com"
     },
@@ -135,6 +168,16 @@
         "High-tier",
         "Global"
       ],
+      "niches": [
+        "tech-automation",
+        "no-code-apps",
+        "data-analytics",
+        "customer-success",
+        "project-management",
+        "social-media",
+        "revops",
+        "ai-agent-ops"
+      ],
       "url": "https://weworkremotely.com"
     },
     {
@@ -146,6 +189,15 @@
       "tags": [
         "Tech",
         "Aggregator"
+      ],
+      "niches": [
+        "tech-automation",
+        "no-code-apps",
+        "data-analytics",
+        "ai-agent-ops",
+        "ai-content-qa",
+        "customer-success",
+        "project-management"
       ],
       "url": "https://remoteok.com"
     },
@@ -159,6 +211,9 @@
         "Vetted",
         "Remote-first"
       ],
+      "niches": [
+        "all"
+      ],
       "url": "https://dynamitejobs.com"
     },
     {
@@ -170,6 +225,9 @@
       "tags": [
         "Curated",
         "Newsletter"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.workingnomads.com"
     },
@@ -183,6 +241,9 @@
         "High-pay",
         "Full-time"
       ],
+      "niches": [
+        "all"
+      ],
       "url": "https://www.crossover.com"
     },
     {
@@ -194,6 +255,11 @@
       "tags": [
         "US clients",
         "Placement"
+      ],
+      "niches": [
+        "executive-ops",
+        "real-estate",
+        "customer-success"
       ],
       "url": "https://www.myoutdesk.com"
     },
@@ -207,6 +273,11 @@
         "US clients",
         "Executive"
       ],
+      "niches": [
+        "executive-ops",
+        "bookkeeping",
+        "social-media"
+      ],
       "url": "https://belaysolutions.com"
     },
     {
@@ -218,6 +289,10 @@
       "tags": [
         "Home-based",
         "Impact"
+      ],
+      "niches": [
+        "customer-success",
+        "data-analytics"
       ],
       "url": "https://www.boldrimpact.com"
     },
@@ -231,6 +306,10 @@
         "WFH",
         "Bilingual"
       ],
+      "niches": [
+        "customer-success",
+        "ai-content-qa"
+      ],
       "url": "https://www.taskus.com"
     },
     {
@@ -242,6 +321,9 @@
       "tags": [
         "Support",
         "WFH"
+      ],
+      "niches": [
+        "customer-success"
       ],
       "url": "https://www.concentrix.com"
     },
@@ -255,6 +337,11 @@
         "Back-office",
         "WFH"
       ],
+      "niches": [
+        "customer-success",
+        "tech-automation",
+        "executive-ops"
+      ],
       "url": "https://www.sutherlandglobal.com"
     },
     {
@@ -266,6 +353,13 @@
       "tags": [
         "Elite",
         "High-pay"
+      ],
+      "niches": [
+        "tech-automation",
+        "design-viz",
+        "creative-content",
+        "bookkeeping",
+        "data-analytics"
       ],
       "url": "https://www.toptal.com"
     },
@@ -279,6 +373,13 @@
         "Startups",
         "Matching"
       ],
+      "niches": [
+        "social-media",
+        "creative-content",
+        "executive-ops",
+        "project-management",
+        "revops"
+      ],
       "url": "https://paired.so"
     },
     {
@@ -291,6 +392,9 @@
         "US SMB",
         "Recruiter"
       ],
+      "niches": [
+        "all"
+      ],
       "url": "https://www.somewhere.com"
     },
     {
@@ -302,6 +406,9 @@
       "tags": [
         "Networking",
         "Direct"
+      ],
+      "niches": [
+        "all"
       ],
       "url": "https://www.linkedin.com"
     }

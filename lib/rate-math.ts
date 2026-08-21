@@ -66,3 +66,15 @@ export function computeRate({
     shrink,
   };
 }
+
+/**
+ * Turn "share of all working time that is unpaid" (how the ILO reports it:
+ * ~20 unpaid minutes per paid hour, so about a quarter of the time you work)
+ * into the add-on over billed hours that `computeRate` takes. 25% of all time
+ * unpaid means you work 100/75 of your billed hours, i.e. 33⅓% on top.
+ * Shares are clamped to [0, 99] so a slider can never divide by zero.
+ */
+export function unpaidShareToAddon(sharePct: number): number {
+  const share = Math.min(99, Math.max(0, sharePct));
+  return (share / (100 - share)) * 100;
+}

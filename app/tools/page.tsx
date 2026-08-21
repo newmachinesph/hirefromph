@@ -11,13 +11,34 @@ import {
   SectionHeading,
   Toc,
 } from "@/components/layout";
-import { Badge, Button, Callout, Card, Heading, Icon, Text } from "@/components/ui";
+import {
+  Accordion,
+  AccordionItem,
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  Text,
+} from "@/components/ui";
 import { accent, type Accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
 import { cn } from "@/lib/utils";
 
 const HREF = "/tools";
+
+/** The page draws on two data files; the stamp shows whichever was checked longer ago. */
+const LAST_VERIFIED = [tools.lastVerified, learn.lastVerified].sort()[0];
+
+type LandscapeTool = { name: string; skill: string; level: string };
+
+const LEVEL_LEGEND: { level: string; meaning: string }[] = [
+  { level: "Core", meaning: "asked for in most job posts in the lane; learn first" },
+  { level: "Intermediate", meaning: "asked for in some posts; learn when a role needs it" },
+  { level: "Advanced", meaning: "specialist roles; learn on a client's request" },
+];
 
 export const metadata: Metadata = pageMeta({
   path: HREF,
@@ -55,7 +76,7 @@ export default function ToolsPage() {
         <Callout tone="signal" className="max-w-2xl">
           {learn.creed}
         </Callout>
-        <FreshnessNote date={tools.lastVerified} />
+        <FreshnessNote date={LAST_VERIFIED} />
       </PageHero>
 
       <Section>
@@ -192,9 +213,21 @@ export default function ToolsPage() {
                 title="The tools the market asks for"
                 lead="These are not a list to passively work through. They're what real job posts ask for, pick one, run the teardown on it, hit the 60-minute build. The tool is the gym, not the goal."
               />
-              <CardGrid cols={2} className="mt-10">
+              <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2" aria-label="What the level badges mean">
+                {LEVEL_LEGEND.map((l) => (
+                  <li key={l.level} className="flex items-center gap-2">
+                    <Badge tone={LEVEL_TONE[l.level] ?? "neutral"}>{l.level}</Badge>
+                    <Text size="caption" as="span">
+                      {l.meaning}
+                    </Text>
+                  </li>
+                ))}
+              </ul>
+              <CardGrid cols={2} className="mt-8">
                 {tools.categories.map((cat) => {
                   const a = accent(cat.accent);
+                  const core = cat.tools.filter((t) => t.level === "Core");
+                  const later = cat.tools.filter((t) => t.level !== "Core");
                   return (
                     <Card key={cat.id} as="article">
                       <div className="flex items-center justify-between">
@@ -211,26 +244,17 @@ export default function ToolsPage() {
                       <Text size="small" className="mt-4">
                         {cat.blurb}
                       </Text>
-                      <ul className="mt-5 flex flex-1 flex-col gap-1 border-t border-line pt-4">
-                        {cat.tools.map((tool) => (
-                          <li
-                            key={tool.name}
-                            className="flex items-center justify-between gap-3 rounded-sm px-2 py-2 transition-colors hover:bg-band"
+                      <ToolRows tools={core} className="mt-5 border-t border-line pt-4" />
+                      {later.length > 0 && (
+                        <Accordion className="mt-4">
+                          <AccordionItem
+                            id={`${cat.id}-later`}
+                            title={`Intermediate and advanced (${later.length})`}
                           >
-                            <div className="min-w-0">
-                              <Text size="small" tone="ink" className="truncate font-semibold" as="span">
-                                {tool.name}
-                              </Text>
-                              <Text size="caption" tone="faint" className="truncate" as="p">
-                                {tool.skill}
-                              </Text>
-                            </div>
-                            <Badge tone={LEVEL_TONE[tool.level] ?? "neutral"} className="shrink-0">
-                              {tool.level}
-                            </Badge>
-                          </li>
-                        ))}
-                      </ul>
+                            <ToolRows tools={later} />
+                          </AccordionItem>
+                        </Accordion>
+                      )}
                     </Card>
                   );
                 })}
@@ -303,6 +327,11 @@ export default function ToolsPage() {
                   </Card>
                 ))}
               </CardGrid>
+              <div className="mt-8">
+                <Button href="/resources#craft" variant="outline">
+                  The ones we already verified
+                </Button>
+              </div>
             </section>
 
             {/* ----------------------------------------------------------- DRILLS */}
@@ -356,5 +385,40 @@ export default function ToolsPage() {
         <PageFooterNav {...findNavNeighbours(HREF)} />
       </Section>
     </>
+  );
+}
+
+function ToolRows({ tools, className }: { tools: LandscapeTool[]; className?: string }) {
+  return (
+    <ul className={cn("flex flex-col gap-1", className)}>
+      {tools.map((tool) => (
+        <li
+          key={tool.name}
+          className="flex items-start justify-between gap-3 rounded-sm px-2 py-2 transition-colors hover:bg-band"
+        >
+          <div className="min-w-0">
+            <Text size="small" tone="ink" className="font-semibold" as="span">
+              {tool.name}
+            </Text>
+            <Text size="caption" tone="faint" as="p">
+              {tool.skill}
+            </Text>
+            <Button
+              href="#teardown"
+              variant="link"
+              size="sm"
+              className="text-small"
+              aria-label={`Run the teardown on ${tool.name}`}
+              iconEnd={<Icon name="arrow-right" size={13} />}
+            >
+              Run the teardown on this tool
+            </Button>
+          </div>
+          <Badge tone={LEVEL_TONE[tool.level] ?? "neutral"} className="shrink-0">
+            {tool.level}
+          </Badge>
+        </li>
+      ))}
+    </ul>
   );
 }

@@ -1,13 +1,13 @@
 /**
  * The practice layer's localStorage namespace (spec §5.2b, §12).
  *
- * Five independent slots under `hfph.practice.*`. Independent because a quota
+ * Six independent slots under `hfph.practice.*`. Independent because a quota
  * error or a corrupt write in one feature must never cost the visitor their
  * journal.
  *
  * Every parser is total: it keeps the entries it recognises, drops the ones it
  * does not, and returns the empty value rather than throwing. Nothing here
- * reads or writes outside these five keys, and nothing here touches the
+ * reads or writes outside these six keys, and nothing here touches the
  * `hfph.path.v1` key that `lib/path-context.tsx` owns.
  */
 
@@ -20,6 +20,7 @@ export const PRACTICE_KEYS = {
   journal: "hfph.practice.journal.v1",
   planDays: "hfph.practice.plan-days.v1",
   timer: "hfph.practice.timer.v1",
+  portfolio: "hfph.practice.portfolio.v1",
 } as const;
 
 /** `null` means absent, unreadable, or not JSON — all the same to a caller. */
@@ -147,6 +148,24 @@ export function parsePlanDayDates(raw: unknown): PlanDayDates {
     if (!Number.isInteger(n) || n < 1) continue;
     if (!isIsoDate(value)) continue;
     out[n] = value;
+  }
+  return out;
+}
+
+/* ---------------------------------------------------------------- */
+/*  Portfolio ladder rungs                                           */
+/* ---------------------------------------------------------------- */
+
+/** Rungs the visitor has marked done, keyed `${trackId}:${tier}`. */
+export type PortfolioState = Record<string, true>;
+
+export const EMPTY_PORTFOLIO: PortfolioState = {};
+
+export function parsePortfolioState(raw: unknown): PortfolioState {
+  if (!isRecord(raw)) return EMPTY_PORTFOLIO;
+  const out: PortfolioState = {};
+  for (const [rung, value] of Object.entries(raw)) {
+    if (value === true && rung.includes(":")) out[rung] = true;
   }
   return out;
 }

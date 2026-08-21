@@ -1,6 +1,12 @@
 {
-  "intro": "Answer 5 quick questions and get a personalized, day-by-day 30-day plan, specific tasks, the exact portal tools to use, and creators to follow. 100% no-cost. 2–3 hours a day.",
+  "intro": "Answer 5 quick questions and get a 30-day plan with your track and hours filled in: one specific task a day and the exact portal tool for it. 100% no-cost.",
   "commitment": "2–3 hours daily",
+  "shapedBy": "One proven 30-day sequence. Your track fills in the niche days, your hours set the pace note, and your equipment and language answers adjust the days that depend on them.",
+  "paceNotes": {
+    "1-2": "At 1–2 hours a day, do the day's task and stop. Carry anything unfinished to the next day instead of skipping it.",
+    "2-3": "At 2–3 hours a day, one task a day is the pace this plan was written for.",
+    "4+": "At 4+ hours a day, finish the day's task, then spend the rest of the block inside the linked tool. Do not pull tomorrow's task forward."
+  },
   "questions": [
     {
       "id": "experience",
@@ -50,12 +56,12 @@
       "title": "Foundation & Setup",
       "focus": "Get your setup, mindset, and core skills right.",
       "days": [
-        { "day": 1, "task": "Confirm equipment & workspace with the Equipment Checker.", "tool": "/equipment" },
+        { "day": 1, "task": "Confirm equipment & workspace with the Equipment Checker.", "tool": "/equipment", "alt": { "equipment:partial": "Run the Equipment Checker. List the one or two things still missing, with a price next to each.", "equipment:none": "Run the Equipment Checker. List what you still need, with a price next to each, and a date you can afford it." } },
         { "day": 2, "task": "Read the full roadmap end to end. Note which stage you are in today.", "tool": "/start" },
-        { "day": 3, "task": "Learn your first core tool (Google Workspace basics).", "tool": "/tools" },
-        { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches" },
+        { "day": 3, "task": "Run the learn-any-tool method on Google Sheets: one real artifact in the first hour.", "tool": "/tools" },
+        { "day": 4, "task": "Explore niches. Shortlist your top two directions.", "tool": "/niches", "forTrack": "Read the {track} niche page end to end. Note its tools, certifications, and who hires." },
         { "day": 5, "task": "Open Build Labs. Learn the anatomy of a resume, don't write it yet.", "tool": "/build" },
-        { "day": 6, "task": "Practice: complete one small mock task in your chosen niche.", "tool": "/niches" },
+        { "day": 6, "task": "Practice: complete one small micro-task in your chosen niche.", "tool": "/tasks", "forTrack": "Practice: complete one small {track} micro-task." },
         { "day": 7, "task": "Review week 1. Rest. Write down why you started.", "tool": "/start" }
       ]
     },
@@ -64,13 +70,13 @@
       "title": "Build Your Assets",
       "focus": "Create the profile, resume, and portfolio that get replies.",
       "days": [
-        { "day": 8, "task": "Find 5 real resumes for your target role. Extract the rules they share.", "tool": "/build" },
+        { "day": 8, "task": "Find 5 real resumes for your target role. Extract the rules they share.", "tool": "/build", "forTrack": "Find 5 real {track} resumes. Extract the rules they share." },
         { "day": 9, "task": "Write your resume from those rules, on a blank page. It's yours.", "tool": "/build" },
         { "day": 10, "task": "Write your own prompt to critique it, learn the anatomy of a prompt.", "tool": "/prompts" },
-        { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools" },
-        { "day": 12, "task": "Start a no-cost certification for your niche.", "tool": "/niches" },
+        { "day": 11, "task": "Learn your niche's #1 tool to a working level.", "tool": "/tools", "forTrack": "Learn {tool} to a working level. It is the #1 tool on the {track} niche page." },
+        { "day": 12, "task": "Start a no-cost certification for your niche.", "tool": "/niches", "forTrack": "Pick the {track} certification you will start. The niche page lists them; {cert} is first." },
         { "day": 13, "task": "Build your own application tracker, schema and formulas, from scratch.", "tool": "/build" },
-        { "day": 14, "task": "Review your first two weeks on your dashboard. Get feedback in the community group.", "tool": "/path" }
+        { "day": 14, "task": "Review your first two weeks on your dashboard. Write down what you shipped, what you skipped, and why.", "tool": "/path" }
       ]
     },
     {
@@ -80,11 +86,11 @@
       "days": [
         { "day": 15, "task": "Open the Apply directory. Shortlist 20 places to apply.", "tool": "/apply" },
         { "day": 16, "task": "Send 5 tailored applications using a message prompt you wrote in the workshop.", "tool": "/prompts" },
-        { "day": 17, "task": "Send 5 more. Log each in your tracker.", "tool": "/build" },
+        { "day": 17, "task": "Send 5 more. Log each in your tracker.", "tool": "/tracker" },
         { "day": 18, "task": "Run a mock interview against an interviewer prompt you build yourself.", "tool": "/prompts" },
         { "day": 19, "task": "Send 5 more applications. Follow up on day-1 sends.", "tool": "/apply" },
         { "day": 20, "task": "Learn the negotiation basics. Set your target rate.", "tool": "/get-hired" },
-        { "day": 21, "task": "Review pipeline. Adjust your message based on replies.", "tool": "/build" }
+        { "day": 21, "task": "Review pipeline. Adjust your message based on replies.", "tool": "/tracker" }
       ]
     },
     {
@@ -99,7 +105,7 @@
         { "day": 26, "task": "Prep your first-week onboarding kit.", "tool": "/deliver" },
         { "day": 27, "task": "Write the SOPs and build the trackers your new role needs.", "tool": "/build" },
         { "day": 28, "task": "Deliver a proactive first update. Impress early.", "tool": "/deliver" },
-        { "day": 29, "task": "Plan your niche + language path for months 2–3.", "tool": "/level-up" },
+        { "day": 29, "task": "Plan your niche + language path for months 2–3.", "tool": "/level-up", "forTrack": "Plan your {track} + language path for months 2–3.", "alt": { "language:no": "Plan your {track} path for months 2–3. Revisit the language question then." } },
         { "day": 30, "task": "Review the full month on your dashboard. Share what worked, and pull the next person up.", "tool": "/path" }
       ]
     }

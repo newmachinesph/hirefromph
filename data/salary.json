@@ -4,13 +4,23 @@
     "kicker": "Salary guide · read the warning first",
     "line1": "What online work",
     "line2": "really pays right now.",
-    "intro": "Everyone wants a number, and there is no trusted dataset behind any of them: the warning below explains why. So here is what we can honestly give you: the ranges people quote, where they disagree, and how to price from live posts. Use it to get your bearings, not to set your rate.",
+    "intro": "Everyone wants a number, and there is no trusted dataset behind any of them: the warning below explains why. So here is what we can honestly give you: the ranges people quote, where they disagree, and two tools that price you from live posts. Use it to get your bearings, not to set your rate.",
+    "jumpLabel": "Jump to the calculator",
     "creed": "A salary guide with no method behind it is a guess with a chart on it. The real number is the one a real client agrees to pay you this month."
   },
 
   "warning": {
     "title": "This is the softest data on the whole site. We are showing you the softness on purpose.",
-    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. It does not exist. Every salary guide out there is published by someone with a stake in where the number lands, so the figures bend toward whoever publishes them. Treat every figure below as a rough direction only. Vendor-grade. A shape, not a fact. Then go check it against live job posts yourself."
+    "body": "No government agency or trusted study tracks Philippine online-work pay by role and experience. Every salary guide out there is published by someone with a stake in where the number lands. Treat every figure below as vendor-grade: a shape, not a fact. Then check it against live job posts yourself; the worksheet below does exactly that."
+  },
+
+  "roles": {
+    "kicker": "Roles clients post for · July 2026",
+    "title": "Roles clients post for.",
+    "lead": "Two lists, no rates: what clients are hiring for on OnlineJobs.ph right now, and the newer AI-native roles that pay the most. The pay band, demand, and AI risk for each lane live on the Niches page.",
+    "postingTitle": "Posting now",
+    "emergingTitle": "Emerging, and paying the most",
+    "nichesLink": { "label": "Open the Niches page for pay bands, demand, and AI risk per lane", "href": "/niches" }
   },
 
   "inDemand": {
@@ -38,7 +48,7 @@
     "kicker": "The next tier · the new roles",
     "title": "The roles that barely existed three years ago, and pay the most.",
     "lead": "The classic online-work titles are still hiring, but the fastest-rising money is in new, AI-native roles that blend a craft with automation. You do not start here. You grow into one from a lane above by adding the AI layer. This is where the ceiling is going.",
-    "note": "Notice the shape of every one of these. It is a specialist who uses many tools to own a business outcome. That is the professional the market now pays for: not a generalist, and not a narrow technician, but a domain expert who is broad with AI. Tools are now table stakes. Your niche and your judgment are the value.",
+    "note": "Every one of these is a specialist who uses many tools to own a business outcome: a domain expert who is broad with AI. Tools are table stakes. Your niche and your judgment are the value.",
     "roles": [
       { "role": "GTM engineer", "icon": "rocket", "blurb": "A go-to-market engineer builds and automates the systems that bring in leads and revenue, using no-code and AI tools instead of a big sales team. One skilled operator now replaces work that took three or four people." },
       { "role": "AI automation specialist", "icon": "workflow", "blurb": "Builds AI-powered workflows and agents that run a client's repetitive operations and marketing on autopilot, with tools like n8n, Make, and Zapier plus a model doing the thinking." },
@@ -48,9 +58,11 @@
       { "role": "Fractional operator", "icon": "briefcase", "blurb": "A senior operator (COO, CMO, or head of ops) who runs one function part-time for several small companies at once. The top of the independent path, and pure business-of-one." }
     ],
     "note2": "These grow out of the AI-First page.",
+    "note2Href": "/ai-first",
     "source": {
-      "label": "Upwork, In-Demand Skills 2026, as of July 2026 (AI integration up 178% YoY); refresh this when Upwork's 2027 edition ships",
-      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
+      "label": "Upwork, In-Demand Skills 2026, as of July 2026 (AI integration up 178% YoY)",
+      "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai",
+      "_note": "Editor: refresh this when Upwork's 2027 edition ships. Not rendered."
     }
   },
 
@@ -58,6 +70,8 @@
     "kicker": "The ranges · vendor-grade, directional only",
     "title": "The pay ladder, and why you should climb it fast.",
     "monthlyNote": "The monthly ranges that several vendor pages roughly agree on, for full-time work with a foreign client. Useful for orienting yourself. Useless for negotiating from. Your niche, your proof, and your client change all of this.",
+    "labels": { "monthly": "Listed monthly range", "hourly": "Listed hourly rate" },
+    "reconcileNote": "The two figures in each tier come from different vendor pages and do not reconcile with each other: a listed hourly rate at roughly 160 hours a month lands above the listed monthly floor in every tier. That gap is the softness, not a typo.",
     "tiers": [
       { "level": "Entry", "accent": "signal", "monthly": "≈ $300–1,100 / mo", "hourly": "≈ $3–6 / hr", "what": "Generic task work anyone can pick up: basic admin, data entry, simple support. This is the floor, and AI is pushing it down. Do not plan to stay here. The wide range is the sources disagreeing; see the demonstration below." },
       { "level": "Mid", "accent": "caution", "monthly": "≈ $600–2,400 / mo", "hourly": "≈ $7–15 / hr", "what": "You own a whole process, not a task. The client stops giving you steps and starts giving you outcomes. A specific skill lives here." },
@@ -65,7 +79,7 @@
     ],
     "contradiction": {
       "title": "Proof the numbers are soft: watch two 'guides' disagree by 4x.",
-      "body": "Take one entry-level support role. The platform's own data points to roughly ₱18,000 to ₱31,000 a month ($300 to $500, at ≈₱61.5/$1, the July 2026 rate). Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
+      "body": "Take one entry-level support role. The platform's own data points to roughly ₱18,000 to ₱31,000 a month, about $300 to $500. Meanwhile viral blog posts and reels confidently claim ₱90,000 or more for the same entry role. Same job. Same country. Same year. A four-to-five times gap, and the higher number never shows where it came from.",
       "a": { "label": "Platform data · entry level", "value": "≈ ₱18k–31k / mo" },
       "b": { "label": "Viral blog claim · entry level", "value": "₱90k+ / mo" },
       "lesson": "At least one of these is very wrong, and the one with no source is the suspect. Never take a rate from a single guide or a screenshot. Look at ten live job posts in your niche this week. Live posts are data. Guides and reels are opinion with confidence."

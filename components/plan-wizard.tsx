@@ -48,6 +48,47 @@ type RawQuestion = {
   fromTracks?: boolean;
 };
 
+type RawDay = {
+  day: number;
+  task: string;
+  tool: string;
+  /** Wording once a track is chosen; `{track}`, `{tool}`, `{cert}` are filled from tracks.json. */
+  forTrack?: string;
+  /** Wording keyed by `"question:value"`, wins over `forTrack` when that answer was given. */
+  alt?: Record<string, string>;
+};
+
+type PlanDay = { day: number; task: string; tool: string };
+type PlanWeek = { week: number; title: string; focus: string; days: PlanDay[] };
+
+const PACE_NOTES = plan.paceNotes as Record<string, string>;
+
+/**
+ * The 30-day sequence is fixed; the answers fill in the days that depend on
+ * them. A day with no `forTrack`/`alt` reads the same for everyone, on purpose.
+ */
+function personalizeWeeks(answers: Record<string, string>): PlanWeek[] {
+  const track = tracksData.tracks.find((t) => t.id === answers.track);
+  const fill = (text: string) =>
+    track
+      ? text
+          .replaceAll("{track}", track.name)
+          .replaceAll("{tool}", track.tools[0] ?? "its #1 tool")
+          .replaceAll("{cert}", track.certs[0] ?? "the first one")
+      : text;
+  return plan.weeks.map((week) => ({
+    ...week,
+    days: (week.days as RawDay[]).map((day) => {
+      const alt = Object.entries(day.alt ?? {}).find(([key]) => {
+        const [questionId, value] = key.split(":");
+        return answers[questionId] === value;
+      })?.[1];
+      const template = alt ?? (track ? day.forTrack : undefined) ?? day.task;
+      return { day: day.day, tool: day.tool, task: fill(template) };
+    }),
+  }));
+}
+
 // Build the question list once, the "track" question pulls its options from
 // tracks.json so the plan wizard stays wired to the same data as the rest of
 // the site (and calling choosePath() keeps everything else personalized too).
@@ -89,6 +130,22 @@ function findLabel(questionId: string, value: string | undefined): string | unde
   return QUESTIONS.find((q) => q.id === questionId)?.options.find(
     (o) => o.value === value,
   )?.label;
+}
+
+/**
+ * Hero badge for /plan: shows the hours the visitor picked (question 3) once a
+ * plan is saved, and the written-for pace before that. Keeps the hero from
+ * contradicting the answer the visitor just gave.
+ */
+export function PlanHoursBadge() {
+  const { state } = usePath();
+  const label = findLabel("hours", state.planAnswers.hours);
+  return (
+    <Badge tone="caution">
+      <Icon name="clock" size={13} />
+      {label ? `${label} daily, your pick` : plan.commitment}
+    </Badge>
+  );
 }
 
 function ProgressRing({ value, max }: { value: number; max: number }) {
@@ -216,6 +273,9 @@ export function PlanWizard() {
   const trackLabel = findLabel("track", answers.track);
   const hoursLabel = findLabel("hours", answers.hours) ?? plan.commitment;
   const experienceLabel = findLabel("experience", answers.experience);
+  const paceNote = answers.hours ? PACE_NOTES[answers.hours] : undefined;
+  const weeks = isResults ? personalizeWeeks(answers) : [];
+  const isTrackStep = question.id === "track";
 
   return (
     <div className="rounded-lg border border-line bg-paper p-6 sm:p-10 lg:p-14">
@@ -257,7 +317,7 @@ export function PlanWizard() {
             >
               <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <Kicker>Your personalized plan</Kicker>
+                  <Kicker>Your 30-day plan</Kicker>
                   <Heading level={3} size="h3" balance className="mt-2">
                     30 days for {trackLabel ?? "your online career"},{" "}
                     <span className="text-primary">{hoursLabel} a day.</span>
@@ -268,12 +328,17 @@ export function PlanWizard() {
                       Check off each day as you go, your progress saves automatically.
                     </Text>
                   )}
+                  {paceNote && (
+                    <Text size="small" className="mt-2">
+                      {paceNote}
+                    </Text>
+                  )}
                 </div>
                 <ProgressRing value={doneCount} max={TOTAL_DAYS} />
               </div>
 
               <div className="mt-10 space-y-5">
-                {plan.weeks.map((week) => {
+                {weeks.map((week) => {
                   const doneInWeek = week.days.filter((d) => state.planDays[d.day]).length;
                   return (
                     <Card key={week.week} padding="md">
@@ -343,7 +408,7 @@ export function PlanWizard() {
                     planToIcs({
                       title: "My 30-day plan",
                       startDate: todayISO(),
-                      days: plan.weeks
+                      days: weeks
                         .flatMap((week) => week.days)
                         .filter((day) => !state.planDays[day.day])
                         .map((day) => ({
@@ -361,7 +426,7 @@ export function PlanWizard() {
                   build={() =>
                     labToMarkdown(
                       "My 30-day plan",
-                      plan.weeks.map((week) => ({
+                      weeks.map((week) => ({
                         label: `Week ${week.week} — ${week.title}`,
                         body: week.days
                           .map(
@@ -396,13 +461,18 @@ export function PlanWizard() {
               <Heading level={3} size="h3" balance>
                 {question.q}
               </Heading>
+              {isTrackStep && (
+                <Text size="small" className="mt-2">
+                  All {question.options.length} niches. Tap one; the niche page has the detail.
+                </Text>
+              )}
               <Field as="group" label={question.q} hideLabel>
                 <div
                   className={cn(
-                    "mt-6 grid gap-3",
-                    question.options.length > 4
-                      ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
-                      : "grid-cols-1 sm:grid-cols-2",
+                    "mt-6 grid",
+                    // The track step is a two-column name list so all 22 fit on
+                    // one phone screen; the other steps keep their descriptions.
+                    isTrackStep ? "grid-cols-2 gap-2 lg:grid-cols-3" : "gap-3 sm:grid-cols-2",
                   )}
                 >
                   {question.options.map((opt) => (
@@ -410,8 +480,10 @@ export function PlanWizard() {
                       key={opt.value}
                       name={question.id}
                       value={opt.value}
-                      label={opt.label}
-                      description={opt.desc}
+                      label={
+                        isTrackStep ? <span className="text-small leading-snug">{opt.label}</span> : opt.label
+                      }
+                      description={isTrackStep ? undefined : opt.desc}
                       icon={
                         opt.icon ? (
                           <Icon name={opt.icon} size={18} className={accent(opt.accent).text} />
@@ -419,6 +491,7 @@ export function PlanWizard() {
                       }
                       checked={answers[question.id] === opt.value}
                       onChange={(value) => selectOption(question.id, value)}
+                      className={cn(isTrackStep && "items-center p-3")}
                     />
                   ))}
                 </div>

@@ -34,7 +34,7 @@
   "path": {
     "kicker": "The path",
     "title": "Five stages, eleven steps",
-    "lead": "Each stage builds on the one before it, and the map remembers every step you tick off.",
+    "lead": "Each stage builds on the one before it, and your dashboard remembers every step you tick off.",
     "action": { "label": "Open your dashboard", "href": "/path" }
   },
   "lane": {
@@ -67,7 +67,7 @@
     "links": {
       "free": "How your data is stored",
       "va-course": "Read the method",
-      "degree": "Start with a micro-task",
+      "degree": "Pick a micro-task to finish today",
       "ai-jobs": "See the Reality Check",
       "first-client": "See the Reality Check",
       "who-runs-this": "Read the conduct rules"

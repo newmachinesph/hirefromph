@@ -4,17 +4,34 @@ import { useMemo, useState } from "react";
 import { TERMS, filterTerms, groupByLetter } from "@/lib/glossary";
 import { CardGrid } from "@/components/layout";
 import { Button, Card, Field, Heading, Icon, Input, Text } from "@/components/ui";
+import { cn } from "@/lib/utils";
+
+const ALPHABET = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
+
+/** A–Z plus whatever non-letter bucket the data has ("#" for "2307"), in list order. */
+const JUMP_LETTERS = [
+  ...groupByLetter(TERMS)
+    .map((group) => group.letter)
+    .filter((letter) => !ALPHABET.includes(letter)),
+  ...ALPHABET,
+];
+
+const JUMP =
+  "inline-flex h-9 min-w-9 items-center justify-center rounded-sm px-1 text-small font-medium tabular-nums";
 
 /**
  * `/glossary` (spec §7.4.6): every term this site uses, A to Z, with the guide
  * that explains it. The filter matches the term and the definition, so
  * searching "revisions" finds "Scope" even though the word is not in the name.
+ * The A–Z row under the filter jumps to each letter's heading and stays pinned
+ * on desktop, so the bottom of the list is one tap away instead of twelve screens.
  */
 export function GlossaryBrowser() {
   const [query, setQuery] = useState("");
 
   const groups = useMemo(() => groupByLetter(filterTerms(TERMS, query)), [query]);
   const count = useMemo(() => groups.reduce((total, group) => total + group.terms.length, 0), [groups]);
+  const present = useMemo(() => new Set(groups.map((group) => group.letter)), [groups]);
 
   return (
     <div className="flex flex-col gap-10">
@@ -33,6 +50,29 @@ export function GlossaryBrowser() {
         </Text>
       </div>
 
+      {count > 0 && (
+        <nav
+          aria-label="Jump to a letter"
+          className="-mx-1 flex flex-wrap gap-1 border-y border-line bg-paper px-1 py-3 lg:sticky lg:top-24 lg:z-10"
+        >
+          {JUMP_LETTERS.map((letter) =>
+            present.has(letter) ? (
+              <a
+                key={letter}
+                href={`#letter-${letter}`}
+                className={cn(JUMP, "text-primary hover:bg-tint")}
+              >
+                {letter}
+              </a>
+            ) : (
+              <span key={letter} aria-hidden className={cn(JUMP, "text-ink-faint/60")}>
+                {letter}
+              </span>
+            ),
+          )}
+        </nav>
+      )}
+
       {count === 0 && (
         <Text>
           Nothing matches that. Try a shorter word, or browse the whole list by clearing the filter.
@@ -41,7 +81,13 @@ export function GlossaryBrowser() {
 
       {groups.map((group) => (
         <section key={group.letter} className="flex flex-col gap-4">
-          <Heading level={2} size="h3" id={`letter-${group.letter}`}>
+          {/* Clears the sticky header, and the pinned jump row on desktop. */}
+          <Heading
+            level={2}
+            size="h3"
+            id={`letter-${group.letter}`}
+            className="scroll-mt-28 lg:scroll-mt-44"
+          >
             {group.letter}
           </Heading>
           <CardGrid cols={2} as="ul">

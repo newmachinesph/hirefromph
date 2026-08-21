@@ -4,6 +4,7 @@ import { useState } from "react";
 import { usePath } from "@/lib/path-context";
 import {
   Badge,
+  Button,
   Card,
   Checkbox,
   Field,
@@ -29,6 +30,7 @@ type Category = {
 };
 
 const DEFAULT_TIER_INDEX = 1;
+export const COUNT_IN_LABEL = "Count this in my budget";
 
 /** Parse the first amount in a rough range so the checker can show a low-end plan. */
 function parseLowPrice(price: string): number {
@@ -43,6 +45,9 @@ function isMonthly(price: string): boolean {
 export function EquipmentChecker({ categories }: { categories: Category[] }) {
   const { state, hydrated } = usePath();
   const [tierIndex, setTierIndex] = useState<Record<string, number>>({});
+  // Optional categories stay out of the total until the reader opts them in,
+  // so a blank visit shows the essentials-only floor, not every nice-to-have.
+  const [counted, setCounted] = useState<Record<string, boolean>>({});
 
   // Gate on hydration: state.equipment is empty until localStorage loads, so a
   // returning user would otherwise see every item unchecked and the full
@@ -81,8 +86,10 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
       ? "Let's get you prepared, check off what you already have."
       : `${remaining} essential${remaining === 1 ? "" : "s"} left to go.`;
 
+  const isCounted = (cat: Category) => cat.essential || counted[cat.id] === true;
+
   const estimateTotal = categories.reduce((sum, cat) => {
-    if (state.equipment[cat.id]) return sum;
+    if (state.equipment[cat.id] || !isCounted(cat)) return sum;
     const tier = cat.tiers[getTierIndex(cat)] ?? cat.tiers[0];
     if (isMonthly(tier.price)) return sum;
     return sum + parseLowPrice(tier.price);
@@ -90,20 +97,9 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:items-start">
-      <div className="grid gap-5 sm:grid-cols-2">
-        {categories.map((category) => (
-          <CategoryCard
-            key={category.id}
-            category={category}
-            tierIndex={getTierIndex(category)}
-            onTierChange={(i) =>
-              setTierIndex((prev) => ({ ...prev, [category.id]: i }))
-            }
-          />
-        ))}
-      </div>
-
-      <Card as="section" padding="md" className="gap-6 lg:sticky lg:top-24">
+      {/* The summary renders first so the total is in view above the cards on
+          a phone; on lg the grid order puts it in the right-hand column. */}
+      <Card as="section" padding="md" className="gap-6 lg:sticky lg:top-24 lg:order-2">
         <div
           className="flex flex-col items-center text-center"
           aria-live="polite"
@@ -126,6 +122,11 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
           <Kicker tone={allReady ? "verified" : "neutral"} className="mt-1">
             {readyCount} of {totalEssentials} essentials ready
           </Kicker>
+          {allReady && (
+            <Button href="/apply" size="sm" className="mt-4">
+              Where to apply
+            </Button>
+          )}
         </div>
 
         <div className="border-t border-line pt-5">
@@ -133,11 +134,27 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
             <Stat
               value={`₱${estimateTotal.toLocaleString("en-PH")}`}
               label="Low-end planning total"
-              sub="Adds the first amount in each rough one-time range you have not checked off. It is a planning floor, not a quote. Monthly service costs are excluded; check each card for any /mo allowance."
             />
           </StatStrip>
         </div>
       </Card>
+
+      <div className="grid gap-5 sm:grid-cols-2 lg:order-1">
+        {categories.map((category) => (
+          <CategoryCard
+            key={category.id}
+            category={category}
+            tierIndex={getTierIndex(category)}
+            counted={isCounted(category)}
+            onCountedChange={(next) =>
+              setCounted((prev) => ({ ...prev, [category.id]: next }))
+            }
+            onTierChange={(i) =>
+              setTierIndex((prev) => ({ ...prev, [category.id]: i }))
+            }
+          />
+        ))}
+      </div>
     </div>
   );
 }
@@ -145,10 +162,14 @@ export function EquipmentChecker({ categories }: { categories: Category[] }) {
 function CategoryCard({
   category,
   tierIndex,
+  counted,
+  onCountedChange,
   onTierChange,
 }: {
   category: Category;
   tierIndex: number;
+  counted: boolean;
+  onCountedChange: (next: boolean) => void;
   onTierChange: (i: number) => void;
 }) {
   const { state, toggleEquipment } = usePath();
@@ -189,7 +210,7 @@ function CategoryCard({
       </Text>
 
       <Field as="group" label="Pick a tier" className="mt-5">
-        <div className="grid grid-cols-3 gap-2">
+        <div className="flex flex-wrap gap-x-4 gap-y-1">
           {category.tiers.map((t, i) => (
             <Radio
               key={t.tier}
@@ -211,6 +232,14 @@ function CategoryCard({
       </div>
 
       <div className="mt-5 border-t border-line pt-4">
+        {!category.essential && (
+          <Checkbox
+            checked={counted}
+            disabled={owned}
+            onChange={(e) => onCountedChange(e.target.checked)}
+            label={COUNT_IN_LABEL}
+          />
+        )}
         <Checkbox
           checked={owned}
           onChange={() => toggleEquipment(category.id)}
