@@ -14,7 +14,8 @@
     "verify:contrast": "node scripts/verify-contrast.mjs",
     "verify:links": "node scripts/verify-links.mjs",
     "verify:primitives": "node scripts/verify-primitives.mjs",
-    "verify:all": "npm run verify:contrast && npm run verify:links && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives",
+    "verify:kit": "node scripts/verify-kit.mjs",
+    "verify:all": "npm run verify:contrast && npm run verify:links && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives && npm run verify:kit",
     "images:optimize": "node scripts/optimize-images.mjs",
     "kit:build": "node scripts/build-kit-pdf.mjs"
   },
