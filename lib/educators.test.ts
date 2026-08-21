@@ -9,7 +9,6 @@ import {
   KIT_LICENSE,
   QUICK_START,
   SESSIONS,
-  SLIDES,
   getKitFile,
   getSession,
   kitContentHash,
@@ -33,7 +32,7 @@ function appRoutes(dir = join(process.cwd(), "app"), prefix = ""): Set<string> {
 }
 
 describe("educators loader", () => {
-  it("exposes the authored intro, quick start, sessions, slides and licence", () => {
+  it("exposes the authored intro, quick start, sessions and licence", () => {
     expect(EDUCATORS_LAST_VERIFIED).toMatch(/^\d{4}-\d{2}$/);
     expect(EDUCATORS_INTRO.title).toBe(educatorsData.intro.title);
     expect(EDUCATORS_INTRO.whoFor).toHaveLength(4);
@@ -49,23 +48,7 @@ describe("educators loader", () => {
     expect(KIT_LICENSE.url).toBe("https://creativecommons.org/licenses/by/4.0/");
   });
 
-  it("ships exactly sixteen slides, each with a kicker, a title and a body", () => {
-    expect(SLIDES).toHaveLength(16);
-    for (const slide of SLIDES) {
-      expect(slide.id, slide.id).toMatch(/\S/);
-      expect(slide.kicker, slide.id).toMatch(/\S/);
-      expect(slide.title, slide.id).toMatch(/\S/);
-      expect(slide.body, slide.id).toMatch(/\S/);
-    }
-    expect(new Set(SLIDES.map((slide) => slide.id)).size).toBe(SLIDES.length);
-  });
 
-  it("prints a real URL for every slide that carries a source", () => {
-    for (const slide of SLIDES.filter((s) => s.source)) {
-      expect(slide.source?.url, slide.id).toMatch(/^https:\/\//);
-      expect(slide.source?.label, slide.id).toMatch(/\S/);
-    }
-  });
 
   it("finds a session by id and nothing by a wrong one", () => {
     expect(getSession("ask-well")?.title).toBe("Ask a question that gets answered");
@@ -88,9 +71,9 @@ describe("educators loader", () => {
     }
   });
 
-  it("lists seven kit files, one run-sheet per session", () => {
-    expect(KIT_FILES).toHaveLength(7);
-    expect(new Set(KIT_FILES.map((file) => file.slug)).size).toBe(7);
+  it("lists six kit files, one run-sheet per session", () => {
+    expect(KIT_FILES).toHaveLength(6);
+    expect(new Set(KIT_FILES.map((file) => file.slug)).size).toBe(6);
 
     const sessionFiles = KIT_FILES.filter((file) => file.sessionId);
     expect(sessionFiles.map((file) => file.sessionId)).toEqual(SESSIONS.map((s) => s.id));
@@ -99,7 +82,6 @@ describe("educators loader", () => {
       expect(file.route).toBe(`/educators/kit/session/${file.sessionId}`);
     }
 
-    expect(getKitFile("hirefromph-slides")?.pages).toBe(SLIDES.length);
     expect(getKitFile("nope")).toBeUndefined();
   });
 });

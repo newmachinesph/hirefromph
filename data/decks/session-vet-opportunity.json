@@ -1,0 +1,138 @@
+{
+  "id": "session-vet-opportunity",
+  "title": "Vet an opportunity",
+  "subtitle": "A 60-minute session",
+  "minutes": 60,
+  "lastVerified": "2026-08",
+  "slides": [
+    {
+      "id": "title",
+      "type": "title",
+      "kicker": "Hire From PH · For educators",
+      "title": "Vet an opportunity",
+      "body": "A sixty-minute session for a room that can see each other. Everyone brings one real opportunity they are undecided about, and leaves with a verdict on paper.",
+      "media": { "photo": "deck-methods" },
+      "notes": "Open on this slide while people find a seat in the circle or the horseshoe; they need to see each other for the argument and the admission this session runs on. Check that everyone has their opportunity to hand, and pair anyone who forgot with someone who did not. Say plainly that nobody gets shamed in this room, and that everyone here has said yes too quickly at least once."
+    },
+    {
+      "id": "why",
+      "type": "statement",
+      "kicker": "Why this session",
+      "title": "No decision about your money or your weeks without evidence on paper",
+      "body": "By the end, you can run any job post, client message, or paid course through four questions and write a verdict. You can name the hard-stop red flags and act on one without negotiating with yourself.",
+      "notes": "Ask what a bad yes costs: weeks of unpaid work, a fee that never comes back, personal documents sitting in a stranger's inbox. Take three answers and correct none of them. Then read the three objectives and say that the habit, not the checklist, is what they are taking home."
+    },
+    {
+      "id": "method",
+      "type": "method",
+      "kicker": "The method this session drills",
+      "title": "VET: judge before you commit",
+      "body": "Take any opportunity or course you are considering and run it through the four questions in writing. If you cannot produce evidence for it, do not act on it.",
+      "items": [
+        "Ask who benefits if you believe this, and follow the incentive",
+        "Sort evidence from vibes, then ask whether it is still true",
+        "Run the red-flag check; any one hard stop ends it"
+      ],
+      "media": { "icon": "vet" },
+      "notes": "Put the VET card up and read the four questions once, in order. Say that confidence is not accuracy and that advice often arrives with an incentive attached; the room is here to check both. The hard stops are upfront fees, guaranteed income, secrecy, urgency, and vagueness about the actual work, but keep the list itself off the screen until the red-flag pass."
+    },
+    {
+      "id": "clock",
+      "type": "list",
+      "kicker": "The clock",
+      "title": "Sixty minutes, one opportunity each",
+      "items": [
+        "15 min · Frame the cost of a fast yes, then put a real opportunity on the table",
+        "10 min · Who benefits if I believe this?",
+        "10 min · Evidence, or vibes?",
+        "10 min · Is it still true?",
+        "15 min · Run the red-flag pass, then verdict on paper"
+      ],
+      "source": { "label": "Hire From PH educators kit run-sheet", "url": "https://hirefrom.ph/educators" },
+      "notes": "Announce each block as it starts. The frame is short and the read-alouds take the rest of the first block; stop anyone who starts defending their post. Keep the red-flag list closed until its block, and protect the last five minutes for the spoken verdict."
+    },
+    {
+      "id": "brief",
+      "type": "list",
+      "kicker": "The brief",
+      "title": "What you do in this room",
+      "body": "A circle or a horseshoe, one device each, and one real opportunity each, brought in advance. A live post beats any case study anyone could invent.",
+      "items": [
+        "Name one thing you said yes to too quickly, in a single sentence; no shaming, no advice",
+        "Read your opportunity aloud, flat, without defending it: the work, the offer, the pay, the next step",
+        "Copy the four questions down the left of a page and leave room to write beside each one",
+        "If you forgot to bring one, take your partner's post and attack it"
+      ],
+      "notes": "Give each person thirty seconds for the read-aloud and hold them to it. Write the four questions on the board as the working sheet while they copy them. Hold two of your own examples in reserve, one that survives all four questions and one that does not, because a room trained only on scams learns to reject everything, which is its own failure."
+    },
+    {
+      "id": "drill",
+      "type": "drill",
+      "kicker": "The drill",
+      "title": "Four questions, in writing, on your own post",
+      "body": "Each question gets its own block and its own line on the page. Nothing moves to the next question until the answer is written down.",
+      "items": [
+        "Write who profits if you say yes, and what evidence exists independent of that person",
+        "Sort your post's claims into two columns: checkable on one side, confident on the other",
+        "Date every claim you can; mark the undated as unverified, not false, and note where you would date it",
+        "Score the post against the red flags; any hard stop ends it, with no negotiation",
+        "Write a one-line verdict: proceed, pause and verify one thing by a date, or stop"
+      ],
+      "minutes": 10,
+      "notes": "Question one: push past the first answer, because every recommendation has a beneficiary, including a warm one from a relative or a churchmate. Question two: take one participant's post and sort its claims aloud with the room before they do their own. Question three: the moment an argument starts, move the room to when this was true; dates end arguments. Watch for anyone negotiating with a hard stop at the end."
+    },
+    {
+      "id": "debrief",
+      "type": "list",
+      "kicker": "Debrief",
+      "title": "Questions for the room",
+      "items": [
+        "What would you need to see to change your verdict? If nothing would, you are defending, not vetting.",
+        "Who told you this was a good opportunity, and what do they get if you agree?",
+        "Which is more expensive: losing a real chance because you checked, or losing three weeks to one you did not?",
+        "Why does urgency beat every other flag on the list?",
+        "What is the one flag you would still talk yourself past? Say it out loud so the room can hold you to it."
+      ],
+      "notes": "If there is time, add the paid skills test: a client offers a short paid test, so how is that different from the unpaid deliverable on the board? Let the last prompt land on each person, because a flag named in front of witnesses is harder to walk past later. Watch for anyone whose verdict was proceed on a post that carried a hard stop."
+    },
+    {
+      "id": "mistakes",
+      "type": "list",
+      "kicker": "Common mistakes",
+      "title": "What goes wrong, and the fix",
+      "items": [
+        "Turning it into a scam-spotting game → run one legitimate opportunity through the same four questions",
+        "Rescuing a participant whose post fails → let the verdict stand and hand them the sourcing method instead",
+        "Debating a claim instead of dating it → move the room to 'when was this true'; dates end arguments",
+        "Showing the red-flag list first → save it for the pass, or the room pattern-matches and skips the reasoning"
+      ],
+      "notes": "A room that only practises on scams learns to say no to everything, and then applies to nothing. Losing one bad post in a room full of witnesses is far cheaper than losing three weeks alone. Opinions extend an argument until the clock runs out; the only part of this that works on flags nobody has listed yet is the reasoning, so do not let the list replace it."
+    },
+    {
+      "id": "take-home",
+      "type": "statement",
+      "kicker": "Take-home",
+      "title": "One habit: nothing decided about money or time without the four questions in writing",
+      "body": "A verdict on paper with a next action and the date it happens, said aloud to the room. The drill: no decision about money or time without the four questions written down first.",
+      "notes": "Make each person commit aloud, because a spoken verdict is harder to talk yourself out of. Say the drill out loud and have them write it under their verdict. Name when the group meets again; a drill without a next date quietly expires."
+    },
+    {
+      "id": "next",
+      "type": "statement",
+      "kicker": "Next session",
+      "title": "Next: Ask a question that gets answered",
+      "body": "A forty-five-minute session that turns a vague plea into a four-part question a busy professional will answer. Ask everyone to bring a question nobody answered, with the exact wording.",
+      "notes": "Each session asks a different thing of the room: this one needed honesty, ASK needs quiet, DECONSTRUCT needs argument. Choose the one your group can carry next. Ask for the unanswered question days ahead, screenshots welcome, because the exact wording is the material."
+    },
+    {
+      "id": "licence",
+      "type": "close",
+      "kicker": "Licence",
+      "title": "Run it, adapt it, pass it on",
+      "body": "CC BY 4.0, with attribution",
+      "source": { "label": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
+      "media": { "photo": "deck-close" },
+      "notes": "Share and adapt this session, including inside training you are paid to run, as long as you credit Hire From PH (hirefrom.ph) and say what you changed. Run it once as written before you change it, then tell the next facilitator what you improved. Nothing here needs our permission or our presence."
+    }
+  ]
+}

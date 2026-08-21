@@ -5,7 +5,7 @@ import doctrine from "@/data/doctrine.json";
 export const metadata: Metadata = { title: "Kit · Seven methods" };
 
 /** Lower this if a sheet overflows; keep KIT_FILES `pages` in step. */
-const METHODS_PER_SHEET = 4;
+const METHODS_PER_SHEET = 3;
 
 export default function MethodsSheet() {
   const sheets: (typeof doctrine.methods)[] = [];

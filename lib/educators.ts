@@ -40,14 +40,6 @@ export type Session = {
   mistakes: SessionMistake[];
 };
 
-export type KitSlide = {
-  id: string;
-  kicker: string;
-  title: string;
-  body: string;
-  source?: KitSource;
-};
-
 export type EducatorsIntro = {
   title: string;
   lead: string;
@@ -68,7 +60,6 @@ export const EDUCATORS_LAST_VERIFIED: string = educators.lastVerified;
 export const EDUCATORS_INTRO = educators.intro as EducatorsIntro;
 export const QUICK_START = educators.quickStart as QuickStartStep[];
 export const SESSIONS = educators.sessions as Session[];
-export const SLIDES = educators.slides as KitSlide[];
 export const KIT_LICENSE = educators.license as KitLicense;
 
 export function getSession(id: string): Session | undefined {

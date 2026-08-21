@@ -1,0 +1,140 @@
+{
+  "id": "session-deconstruct-resume",
+  "title": "Deconstruct a resume",
+  "subtitle": "A 90-minute session",
+  "minutes": 90,
+  "lastVerified": "2026-08",
+  "slides": [
+    {
+      "id": "title",
+      "type": "title",
+      "kicker": "Hire From PH · For educators",
+      "title": "Deconstruct a resume",
+      "body": "A ninety-minute session for a facilitator with a room, a projector, and no finished files. Participants leave with their own rules and their own draft, not ours.",
+      "media": { "photo": "deck-methods" },
+      "notes": "Open on this slide while the room settles, then say the standard out loud before anything else: we hand out no finished files here. Tell them the session ends on a blank page so they know where it is going. Watch for anyone waiting for a template to appear; it never does, and saying so now saves you from saying it six times later."
+    },
+    {
+      "id": "why",
+      "type": "statement",
+      "kicker": "Why this session",
+      "title": "A template makes you identical. A method makes you able to rebuild.",
+      "body": "By the end, you can say from evidence you gathered yourself what every working resume contains and why each part is there. You leave with a written list of testable rules in your own words, and you can rebuild a resume from a blank page after this room is gone.",
+      "notes": "Read the three objectives plainly; they are the contract for the next ninety minutes. Ask who has downloaded a resume template and how far it got them, take two honest answers, and correct neither. Ask what a downloaded template stops doing the moment the job is slightly different, and let the room answer."
+    },
+    {
+      "id": "method",
+      "type": "method",
+      "kicker": "The method this session drills",
+      "title": "DECONSTRUCT: build what you never built",
+      "body": "Take any deliverable you have never made and find five real ones. Write the rules, then build yours from the rules alone, with the examples closed.",
+      "items": [
+        "Collect five real examples, made by professionals for the real situation",
+        "Extract the skeleton, then name the variables between the examples",
+        "Write the rules, then build from them on a blank page, examples closed"
+      ],
+      "media": { "icon": "deconstruct" },
+      "notes": "Put the DECONSTRUCT card on the screen and read its steps once, slowly. Say that the skeleton is what every example shares and the variables are the judgment calls the writer made for a reason. Ask the room to write the steps at the top of a blank page; that page is their rule sheet for the rest of the session."
+    },
+    {
+      "id": "clock",
+      "type": "list",
+      "kicker": "The clock",
+      "title": "Ninety minutes, run out loud",
+      "items": [
+        "10 min · Frame: why there is no file",
+        "15 min · Hunt five real examples",
+        "25 min · Extract the skeleton, then name the variables",
+        "15 min · Write the rules",
+        "25 min · Blank page, then swap, mark, and take the drill"
+      ],
+      "source": { "label": "Hire From PH educators kit run-sheet", "url": "https://hirefrom.ph/educators" },
+      "notes": "Keep the printed run-sheet face up beside you and announce each block as it starts; saying the clock aloud does more than any slide. The last two blocks are the session, so hold the hunt to its time even when a pair has only three examples. The skeleton and the variables share the wall; the build and the swap share the blank paper."
+    },
+    {
+      "id": "brief",
+      "type": "list",
+      "kicker": "The brief",
+      "title": "What you do in this room",
+      "body": "Tables in fours, one device with internet per pair, paper and pens for the rule sheet. No template opens and no finished resume goes on the screen.",
+      "items": [
+        "Write the DECONSTRUCT steps at the top of a blank page; that is your rule sheet",
+        "In pairs, hunt five real resumes from people hired into the role you are aiming at",
+        "Say out loud what makes each one real: a named person, a specific employer, work that leaves a trail",
+        "Call out what appears in every example, and argue when your pair disagrees",
+        "Write each difference as a decision you will have to make, with the reason attached"
+      ],
+      "notes": "Set the hunt plainly: real documents, not template galleries, not builder exports. Read the search tactics from the resume lab, then circulate and reject anything that came from a template site. If the line dies, have each pair write down from memory the last three resumes they have seen and compare those; the skeleton still appears."
+    },
+    {
+      "id": "drill",
+      "type": "drill",
+      "kicker": "The drill",
+      "title": "Blank page, examples closed",
+      "body": "Every device and every example is closed. Nothing produced in this block will be finished, and finished is not the goal; ownership is.",
+      "items": [
+        "Close every device and every example",
+        "From your rules alone, draft your own resume on blank paper",
+        "No copying and nothing open; whatever you cannot fill, mark it and carry it home",
+        "Swap with your partner and mark their draft against the rule sheet, pass or fail, line by line",
+        "Add any rule the room missed"
+      ],
+      "minutes": 15,
+      "notes": "Hand out blank paper, keep the clock visible, then stay quiet; resist filling the silence. If time runs short, cut the critique and never the build, because the build is the session and everything before it was preparation. Only after the swap put the resume lab's self-critique list on the screen and ask two questions: what did your rules catch that ours did not, and what did ours catch that yours missed?"
+    },
+    {
+      "id": "debrief",
+      "type": "list",
+      "kicker": "Debrief",
+      "title": "Questions for the room",
+      "items": [
+        "What did every example do that none of them explained?",
+        "Which of your rules would break if the role changed from customer support to bookkeeping?",
+        "Who reads this document, and what else are they doing while they read it?",
+        "If a rule cannot fail, is it a rule or a wish?",
+        "If your file disappeared tonight, what would you need to rebuild it tomorrow, better?"
+      ],
+      "notes": "Pick two or three of these, not all of them, and let the silence after each one run longer than feels comfortable. On the rule that breaks when the role changes, push for the follow-up: is that a bad rule, or a rule that needs a condition attached? Watch for the pair who copied without noticing, and ask what that tells them about how one template spreads through a whole batch."
+    },
+    {
+      "id": "mistakes",
+      "type": "list",
+      "kicker": "Common mistakes",
+      "title": "What goes wrong, and the fix",
+      "items": [
+        "Showing a finished example to save time → never put one up; let them find their own five",
+        "Answering 'is this good?' with your opinion → point at their rule sheet and make them answer it",
+        "Letting the hunt overrun → hold the clock; three real examples still produce a workable skeleton",
+        "Accepting vague skeleton entries → push every entry until it names a function or a rule",
+        "Cutting the blank-page build when time is short → cut the critique instead; the build is the session"
+      ],
+      "notes": "Read the first one twice, because it is the one every facilitator is tempted by; the room stops extracting and starts transcribing. Your taste does not travel out of the room, but their rules do. Agreement on a vague entry feels like progress and teaches nothing, so keep refusing entries until they can fail."
+    },
+    {
+      "id": "take-home",
+      "type": "statement",
+      "kicker": "Take-home",
+      "title": "You leave with rules in your own words, and no file of ours",
+      "body": "A rule sheet you wrote, a draft you built from it, and the gaps you marked as homework. The drill: one deliverable you have never made, five real examples, rules written first, build second.",
+      "notes": "Say the drill out loud and have them write it on the rule sheet before anyone stands up. Name when the group meets again; a drill without a next date quietly expires. Remind them that the marked gaps are the homework, not a failure."
+    },
+    {
+      "id": "next",
+      "type": "statement",
+      "kicker": "Next session",
+      "title": "Next: Vet an opportunity",
+      "body": "A sixty-minute session that runs any job post, client message, or paid course through four questions and ends with a written verdict. Ask everyone to bring one real opportunity they are undecided about.",
+      "notes": "Each session asks a different thing of the room: this one needed argument, VET needs honesty, ASK needs quiet. Choose the one your group can carry next. Send the bring-one-opportunity request days ahead, then remind them the morning of."
+    },
+    {
+      "id": "licence",
+      "type": "close",
+      "kicker": "Licence",
+      "title": "Run it, adapt it, pass it on",
+      "body": "CC BY 4.0, with attribution",
+      "source": { "label": "CC BY 4.0", "url": "https://creativecommons.org/licenses/by/4.0/" },
+      "media": { "photo": "deck-close" },
+      "notes": "Share and adapt this session, including inside training you are paid to run, as long as you credit Hire From PH (hirefrom.ph) and say what you changed. Run it once as written before you change it, then tell the next facilitator what you improved. Nothing here needs our permission or our presence."
+    }
+  ]
+}

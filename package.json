@@ -17,7 +17,9 @@
     "verify:kit": "node scripts/verify-kit.mjs",
     "verify:all": "npm run verify:contrast && npm run verify:links && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives",
     "images:optimize": "node scripts/optimize-images.mjs",
-    "kit:build": "node scripts/build-kit-pdf.mjs"
+    "kit:build": "node scripts/build-kit-pdf.mjs",
+    "kit:decks": "node scripts/build-decks.mjs",
+    "kit:icons": "node scripts/deck-icons.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",

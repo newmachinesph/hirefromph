@@ -42,10 +42,16 @@ describe("findNavNeighbours", () => {
     expect(findNavNeighbours("/not-a-route")).toEqual({});
   });
 
-  it("skips links whose route ships in a later phase", () => {
-    // "For educators" is pending, so Privacy is the last live link in More.
-    expect(findNavNeighbours("/privacy").next).toBeUndefined();
+  it("walks to the last live link in More and stops there", () => {
+    // "For educators" shipped, so it is the last live link in More.
+    expect(findNavNeighbours("/privacy").next).toEqual({ label: "For educators", href: "/educators" });
     expect(findNavNeighbours("/privacy").prev).toEqual({ label: "Library", href: "/library" });
+    expect(findNavNeighbours("/educators").next).toBeUndefined();
+  });
+
+  it("skips links whose route ships in a later phase", () => {
+    expect(isLive({ pending: true })).toBe(false);
+    expect(isLive({})).toBe(true);
   });
 });
 
@@ -110,8 +116,8 @@ describe("nav data", () => {
     expect(menuLinks().filter((l) => banned.test(l.desc ?? "")).map((l) => l.href)).toEqual([]);
   });
 
-  it("offers Library and Privacy as secondary links, without the pending ones", () => {
-    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/privacy"]);
+  it("offers Library, Privacy and For educators as secondary links, without the pending ones", () => {
+    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/privacy", "/educators"]);
   });
 });
 
@@ -135,8 +141,8 @@ describe("SEARCH_INDEX", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/glossary")).toBe(true);
   });
 
-  it("never indexes a route that ships in a later phase", () => {
-    expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(false);
+  it("indexes /educators now that it has shipped", () => {
+    expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(true);
   });
 
   it("every SEARCH_INDEX href is live: it never points at a pending library or nav route", () => {

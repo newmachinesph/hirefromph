@@ -245,7 +245,6 @@
       "href": "/educators",
       "group": "tools",
       "type": "guide",
-      "pending": true,
       "desc": "Run a session from this material: run-sheets, slides, and the licence."
     }
   ]

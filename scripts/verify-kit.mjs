@@ -5,7 +5,7 @@
  * Recomputes the content hash from data/{educators,doctrine,stages,roadmap}.json
  * and data/site.json#standard, compares it with the stamp in
  * public/kit/manifest.json, and checks every published file listed in
- * lib/kit.mjs (the slide deck is `published: false` and has no PDF to check).
+ * lib/kit.mjs, then does the same for the decks manifest (public/kit/decks/).
  *
  * Playwright cannot write PDF metadata, so the hash lives in the manifest
  * beside the files rather than inside them. Commit the two together.
@@ -104,4 +104,61 @@ if (problems.length) {
 
 console.log(
   `verify:kit passed: ${PUBLISHED_KIT_FILES.length} PDFs at hash ${expected.slice(0, 12)}… built ${manifest.builtAt}.`,
+);
+
+/* ------------------------------------------------------------------ */
+/*  The decks (public/kit/decks/): same idea, hashed over data/decks/.  */
+/* ------------------------------------------------------------------ */
+const { hashDecks, readDecks } = await import("./build-decks.mjs");
+const DECKS_DIR = join(OUT_DIR, "decks");
+const DECKS_MANIFEST = join(DECKS_DIR, "manifest.json");
+const REBUILD_DECKS = "Run `npm run build && npm run kit:decks`, then commit public/kit/decks/.";
+const deckProblems = [];
+
+if (!existsSync(DECKS_MANIFEST)) {
+  console.error(`verify:kit failed — public/kit/decks/manifest.json is missing. ${REBUILD_DECKS}`);
+  process.exit(1);
+}
+
+const decks = readDecks();
+const decksManifest = JSON.parse(readFileSync(DECKS_MANIFEST, "utf8"));
+const expectedDecks = hashDecks(decks);
+if (decksManifest.hash !== expectedDecks) {
+  deckProblems.push(
+    `decks hash mismatch: manifest has ${String(decksManifest.hash).slice(0, 12)}…, data/decks now hashes to ${expectedDecks.slice(0, 12)}…`,
+  );
+}
+
+for (const deck of decks) {
+  const entry = (decksManifest.decks ?? []).find((candidate) => candidate.id === deck.id);
+  if (!entry) {
+    deckProblems.push(`${deck.id} is not listed in the decks manifest`);
+    continue;
+  }
+  if (entry.slides !== deck.slides.length) {
+    deckProblems.push(`${deck.id}: manifest says ${entry.slides} slide(s), JSON has ${deck.slides.length}`);
+  }
+  for (const [kind, file] of Object.entries(entry.files ?? {})) {
+    const path = join(REPO_ROOT, "public", file);
+    if (!existsSync(path)) deckProblems.push(`${deck.id}: ${kind} file public/${file} is missing`);
+    else if (statSync(path).size === 0) deckProblems.push(`${deck.id}: public/${file} is empty`);
+  }
+  const pdf = join(DECKS_DIR, `${deck.id}.pdf`);
+  if (existsSync(pdf)) {
+    const pages = pdfPageCount(readFileSync(pdf));
+    if (pages !== 0 && pages !== deck.slides.length) {
+      deckProblems.push(`${deck.id}: PDF holds ${pages} page(s), expected ${deck.slides.length}`);
+    }
+  }
+}
+
+if (deckProblems.length) {
+  console.error(`verify:kit failed with ${deckProblems.length} deck problem(s):`);
+  for (const problem of deckProblems) console.error(`- ${problem}`);
+  console.error(REBUILD_DECKS);
+  process.exit(1);
+}
+
+console.log(
+  `verify:kit passed: ${decks.length} decks at hash ${expectedDecks.slice(0, 12)}… built ${decksManifest.builtAt}.`,
 );

@@ -25,6 +25,8 @@ npm run verify:primitives            # fails when a page bypasses components/ui 
 
 npm run images:optimize              # raw PNGs in design/images/raw → public/images/ + visuals.json
 npm run kit:build                    # re-render public/kit/*.pdf from data/educators.json
+npm run kit:decks                    # re-render public/kit/decks/* (PDF + editable PPTX + presenter PPTX) from data/decks/*.json
+npm run kit:icons                    # lift the generated method icons to transparent PNGs in public/images/deck/icons/
 ```
 
 `verify:kit` (checks the kit PDFs are current) exists but is not wired into `verify:all` yet —
@@ -90,7 +92,7 @@ Grouped the way the header groups them (`data/site.json` → `navGroups`).
 | `/reality` | **Reality check** — sourced market data, what AI is doing to this work, and the claims nobody can back up |
 | `/library` | The index — every route, filterable by group and type |
 | `/privacy` | Privacy |
-| `/educators` | For educators. **Pending** — `data/site.json` and `data/library.json` both carry this link with `pending: true`, so it renders nowhere yet; there is no `app/educators/page.tsx`. The kit itself already ships and is reachable by direct URL: `/educators/kit/one-pager`, `/educators/kit/path-map`, `/educators/kit/methods`, `/educators/kit/session/[id]`, `/educators/kit/slides` (the slide deck itself 404s — its `published` flag in `data/educators.json` is `false`). `npm run kit:build` renders these to `public/kit/*.pdf`; `verify:kit` checks the PDFs are current but is not part of `verify:all`. |
+| `/educators` | For educators. Live: the master deck and three session decks (`/educators/deck/<id>` presenter, `/educators/deck/<id>/print` for the PDF), each downloadable as PDF, editable PowerPoint and presenter PowerPoint from `public/kit/decks/`; plus the run-sheets and one-page sheets in `public/kit/`. Deck content lives in `data/decks/*.json` (schema in `lib/deck.ts`; a digit on a slide requires a `source`). `npm run kit:build` and `npm run kit:decks` render the files after a production build; `verify:kit` checks both manifests. |
 | `/dev/ui` | Component gallery. Development only — returns 404 in production, excluded from the sitemap |
 
 ## Content

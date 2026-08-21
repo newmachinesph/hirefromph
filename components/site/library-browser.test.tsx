@@ -30,7 +30,8 @@ describe("LibraryBrowser", () => {
     // Derived from the data itself, not a named route: whichever entries
     // carry `pending: true` in library.json today must never render.
     const pendingEntries = LIBRARY.filter((entry) => !isLive(entry));
-    expect(pendingEntries.length).toBeGreaterThan(0);
+    // Nothing is pending today; the filter itself still has to hold.
+    expect(isLive({ pending: true })).toBe(false);
 
     render(<LibraryBrowser />);
     for (const entry of pendingEntries) {
