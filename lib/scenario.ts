@@ -38,7 +38,6 @@ export type Scenario = {
 };
 
 export const SCENARIOS = scenariosData.scenarios as unknown as Scenario[];
-export const SCENARIOS_LAST_VERIFIED = scenariosData.lastVerified;
 
 export function getScenario(id: string): Scenario | undefined {
   return SCENARIOS.find((scenario) => scenario.id === id);

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "app/**/{page,layout,template,loading,error,global-error,not-found,route,default}.{ts,tsx}",
+    "app/{sitemap,robots,manifest,icon,apple-icon,opengraph-image,twitter-image}.{ts,tsx}",
+    "next.config.ts",
+    "postcss.config.mjs",
+    "eslint.config.mjs",
+    "vitest.config.ts",
+    "vitest.setup.ts",
+    "**/*.test.{ts,tsx}",
+    "**/*.test.mjs"
+  ],
+  "project": [
+    "app/**/*.{ts,tsx}",
+    "components/**/*.{ts,tsx}",
+    "lib/**/*.{ts,tsx}"
+  ],
+  "ignore": [
+    "scripts/**",
+    "design/**",
+    "public/**",
+    ".next/**",
+    "next-env.d.ts"
+  ],
+  "ignoreDependencies": [
+    "sharp",
+    "tailwindcss",
+    "@tailwindcss/postcss",
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "eslint-config-next"
+  ],
+  "ignoreExportsUsedInFile": true,
+  "paths": { "@/*": ["./*"] }
+}

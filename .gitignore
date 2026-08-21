@@ -40,12 +40,18 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local agent/tool state (never committed)
 .firecrawl
 .impeccable
 .claude-flow
 .claude
-# SDD scratch
 .superpowers/
+
+# test and browser artifacts
+/test-results/
+/playwright-report/
+/blob-report/
+/.lighthouseci/
 
 # generated photoreal sources (regenerable, large)
 design/images/raw/

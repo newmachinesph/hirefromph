@@ -43,7 +43,6 @@ export const NAV = siteData.nav as NavItem[];
 export const NAV_GROUPS = siteData.navGroups as NavGroup[];
 export const NAV_CTA = siteData.cta as NavLink;
 export const LIBRARY = libraryData.entries as LibraryEntry[];
-export const LIBRARY_LAST_VERIFIED = libraryData.lastVerified;
 
 export const LIBRARY_GROUPS: LibraryGroup[] = ["path", "learn", "work", "tools"];
 export const LIBRARY_TYPES: LibraryType[] = ["guide", "workshop", "tool", "data"];

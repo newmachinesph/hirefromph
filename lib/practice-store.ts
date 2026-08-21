@@ -48,14 +48,6 @@ export function writeSlot(key: string, value: unknown): void {
   }
 }
 
-export function clearSlot(key: string): void {
-  try {
-    if (typeof localStorage === "undefined") return;
-    localStorage.removeItem(key);
-  } catch {
-    /* storage disabled */
-  }
-}
 
 function isRecord(raw: unknown): raw is Record<string, unknown> {
   return typeof raw === "object" && raw !== null && !Array.isArray(raw);
