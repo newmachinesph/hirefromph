@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Hire From PH — Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
     url: BASE_URL,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire From PH — Build the online career you actually own.",
+    title: "Hire From PH — Build the online career you own.",
     description:
       "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
   },
