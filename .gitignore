@@ -49,3 +49,6 @@ next-env.d.ts
 
 # generated photoreal sources (regenerable, large)
 design/images/raw/
+
+# stale Next build dirs left by concurrent builds
+.next-stale-*/
