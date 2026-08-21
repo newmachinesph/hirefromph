@@ -1,15 +1,36 @@
 import type { Metadata } from "next";
-import { ArrowRight, Check, Sparkles, X } from "lucide-react";
 import learning from "@/data/learning.json";
-import { Reveal } from "@/components/reveal";
-import { Icon } from "@/components/icon";
+import { ForgettingCurve } from "@/components/diagrams/forgetting-curve";
 import { StudyProtocol } from "@/components/study-protocol";
-import { ButtonLink, PageHero, Pill, SectionHeading } from "@/components/ui";
-import { cn } from "@/lib/utils";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+  Toc,
+} from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  DiagramFrame,
+  Heading,
+  Icon,
+  Kicker,
+  SourceList,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
+
+const HREF = "/learn";
 
 export const metadata: Metadata = pageMeta({
-  path: "/learn",
+  path: HREF,
   title: "How to Learn",
   description: learning.intro,
 });
@@ -40,18 +61,14 @@ type FocusItem = {
   watchOut: string;
 };
 
-const accentText: Record<string, string> = {
-  signal: "text-signal",
-  verified: "text-verified",
-  caution: "text-caution-text",
-  info: "text-info",
-};
-const accentSoft: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep",
-  verified: "bg-verified-tint text-verified",
-  caution: "bg-caution-tint text-caution-text",
-  info: "bg-info-tint text-info",
-};
+const TOC = [
+  { id: "myth", label: "The myth" },
+  { id: "curve", label: "The curve" },
+  { id: "works", label: "What works" },
+  { id: "feels-good", label: "Feels productive" },
+  { id: "focus", label: "Focus systems" },
+  { id: "protocol", label: "Your protocol" },
+];
 
 const FEATURED_IDS = ["retrieval-practice", "spaced-repetition"];
 const works = learning.works as Work[];
@@ -61,331 +78,289 @@ const restWorks = works.filter((w) => !FEATURED_IDS.includes(w.id));
 export default function LearnPage() {
   return (
     <>
-      {/* ---------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker={learning.kicker}
         title={learning.headline}
         lead={learning.intro}
-        backdrop={
-          <div aria-hidden className="pointer-events-none absolute -top-40 right-[-10%] h-[480px] w-[480px] rounded-full bg-signal/10 blur-3xl" />
-        }
       >
-        <Reveal i={3}>
-          <div className="mt-8 max-w-2xl rounded-2xl border border-line-strong bg-ink px-6 py-5 text-paper-2">
-            <p className="font-display text-lg leading-snug text-balance">
-              {learning.creed}
-            </p>
-          </div>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {learning.creed}
+        </Callout>
+        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/learn" /></Section> */}
       </PageHero>
 
-      {/* ----------------------------------------------------- MYTH, KILLED FIRST */}
-      <section className="container-x pb-20 lg:pb-28">
-        <Reveal>
-          <SectionHeading
-            kicker="Killed first, on purpose"
-            title="The myth we're not going to let slide"
-            lead="This is the clearest worked example of the VET method on the whole platform: a belief that's popular, intuitive, and wrong. Debunking it up front is what earns the rest of this page its credibility."
-          />
-        </Reveal>
-        <Reveal i={1} className="mt-10">
-          <div className="relative overflow-hidden rounded-[var(--radius-lg)] bg-ink px-7 py-12 text-paper-2 lg:px-14 lg:py-16">
-            <div aria-hidden className="absolute inset-0 dotgrid opacity-[0.06]" />
-            <div className="relative">
-              <Pill tone="signal">
-                <X size={13} /> Myth
-              </Pill>
-              <p className="mt-6 max-w-3xl font-display text-2xl leading-snug text-balance text-paper-2/55 decoration-signal decoration-4 line-through lg:text-3xl">
-                {learning.myth.claim}
-              </p>
+      <Section>
+        <div className="grid gap-12 xl:grid-cols-[200px_minmax(0,1fr)]">
+          <Toc items={TOC} />
 
-              <div className="mt-10 grid gap-8 border-t border-white/10 pt-10 lg:grid-cols-3">
-                <div>
-                  <p className="kicker text-paper-2/45">
-                    Why people believe it
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-paper-2/75">
-                    {learning.myth.whyPeopleBelieveIt}
-                  </p>
+          <div className="flex min-w-0 flex-col gap-20">
+            {/* -------------------------------------------- MYTH, KILLED FIRST */}
+            <section id="myth">
+              <SectionHeading
+                kicker="Killed first, on purpose"
+                title="The myth we're not going to let slide"
+                lead="This is the clearest worked example of the VET method on the whole platform: a belief that's popular, intuitive, and wrong. Debunking it up front is what earns the rest of this page its credibility."
+              />
+
+              <Card padding="lg" className="mt-10">
+                <Badge tone="coral" variant="outline">
+                  <Icon name="x" size={13} /> Myth
+                </Badge>
+                <Heading
+                  level={3}
+                  size="h3"
+                  className="mt-6 max-w-3xl text-ink-faint line-through decoration-coral decoration-2"
+                  balance
+                >
+                  {learning.myth.claim}
+                </Heading>
+
+                <div className="mt-10 grid gap-8 border-t border-line pt-10 lg:grid-cols-3">
+                  <div>
+                    <Kicker>Why people believe it</Kicker>
+                    <Text size="small" className="mt-3">
+                      {learning.myth.whyPeopleBelieveIt}
+                    </Text>
+                  </div>
+                  <div>
+                    <Kicker tone="verified">What the evidence says</Kicker>
+                    <Text size="small" tone="ink" className="mt-3">
+                      {learning.myth.whatTheEvidenceSays}
+                    </Text>
+                  </div>
+                  <div>
+                    <Kicker>Do this instead</Kicker>
+                    <Text size="small" className="mt-3">
+                      {learning.myth.whatToDoInstead}
+                    </Text>
+                  </div>
                 </div>
-                <div>
-                  <p className="kicker text-verified">
-                    What the evidence says
-                  </p>
-                  <p className="mt-3 text-sm leading-relaxed text-paper-2/90">
-                    {learning.myth.whatTheEvidenceSays}
-                  </p>
-                </div>
-                <div>
-                  <p className="kicker text-paper-2/45">Do this instead</p>
-                  <p className="mt-3 text-sm leading-relaxed text-paper-2/75">
-                    {learning.myth.whatToDoInstead}
-                  </p>
-                </div>
+
+                <Callout
+                  tone="signal"
+                  icon="shield-check"
+                  title="VET lesson, who profits?"
+                  className="mt-10"
+                >
+                  {learning.myth.vetLesson}
+                </Callout>
+              </Card>
+            </section>
+
+            {/* ------------------------------------------------------- CURVE */}
+            <section id="curve">
+              <DiagramFrame
+                title={learning.forgettingCurve.title}
+                caption={learning.forgettingCurve.caption}
+              >
+                <ForgettingCurve />
+              </DiagramFrame>
+              <SourceList sources={learning.forgettingCurve.sources} className="mt-4" />
+            </section>
+
+            {/* ---------------------------------------- WHAT ACTUALLY WORKS */}
+            <section id="works">
+              <SectionHeading
+                kicker="The curriculum"
+                title="What actually works"
+                lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
+              />
+
+              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                {featuredWorks.map((w) => {
+                  const a = accent(w.accent);
+                  return (
+                    <Card key={w.id} as="article" padding="lg">
+                      <div className="flex items-center gap-4">
+                        <span
+                          className={cn(
+                            "grid h-14 w-14 shrink-0 place-items-center rounded-md",
+                            a.tint,
+                            a.text,
+                          )}
+                        >
+                          <Icon name={w.icon} size={24} />
+                        </span>
+                        <div>
+                          <span className={cn("text-kicker uppercase", a.text)}>
+                            Strongest evidence
+                          </span>
+                          <Heading level={3} size="h4" className="mt-1">
+                            {w.name}
+                          </Heading>
+                        </div>
+                      </div>
+                      <Text size="small" tone="ink" className="mt-5">
+                        {w.what}
+                      </Text>
+                      <Text size="small" className="mt-3">
+                        {w.why}
+                      </Text>
+                      <Callout tone={w.accent as "signal"} className="mt-5">
+                        <span className="font-semibold">How: </span>
+                        {w.how}
+                      </Callout>
+                      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-5">
+                        <Badge>Effort: {w.effort}</Badge>
+                        <Badge tone={w.accent as "signal"}>Payoff: {w.payoff}</Badge>
+                      </div>
+                    </Card>
+                  );
+                })}
               </div>
 
-              <div className="mt-10 flex items-start gap-4 rounded-2xl border border-signal/30 bg-signal/10 p-6">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-signal text-white">
-                  <Icon name="shield-check" size={18} />
-                </span>
-                <div>
-                  <p className="kicker text-signal">VET lesson, who profits?</p>
-                  <p className="mt-2 text-sm leading-relaxed text-paper-2">
-                    {learning.myth.vetLesson}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* --------------------------------------------------- WHAT ACTUALLY WORKS */}
-      <section className="container-x pb-20 lg:pb-28">
-        <Reveal>
-          <SectionHeading
-            kicker="The curriculum"
-            title="What actually works"
-            lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
-          />
-        </Reveal>
-
-        <div className="mt-10 grid gap-5 lg:grid-cols-2">
-          {featuredWorks.map((w, idx) => (
-            <Reveal key={w.id} i={idx}>
-              <FeaturedWorkCard work={w} />
-            </Reveal>
-          ))}
-        </div>
-
-        <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {restWorks.map((w, idx) => (
-            <Reveal key={w.id} i={idx % 3}>
-              <CompactWorkCard work={w} />
-            </Reveal>
-          ))}
-        </div>
-      </section>
-
-      {/* ------------------------------------------------ FEELS PRODUCTIVE, ISN'T */}
-      <section className="bg-paper-3/60 py-20 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="The self-deception is the point"
-              title="What feels productive but isn't"
-              lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives, it's comfortable, and comfort is not evidence."
-            />
-          </Reveal>
-          <div className="mt-10 flex flex-col gap-4">
-            {(learning.feelsGood as FeelsGoodItem[]).map((item, idx) => (
-              <Reveal key={item.id} i={idx % 4}>
-                <div className="grid overflow-hidden rounded-2xl border border-line lg:grid-cols-2">
-                  <div className="bg-signal-tint p-6">
-                    <div className="flex items-center gap-2">
-                      <X size={16} className="shrink-0 text-signal" />
-                      <p className="font-display text-lg leading-tight text-signal-deep text-balance">
-                        {item.habit}
-                      </p>
-                    </div>
-                    <p className="mt-3 text-sm leading-relaxed text-ink">
-                      <span className="font-semibold">
-                        Feels like progress:{" "}
+              <CardGrid cols={3} className="mt-6">
+                {restWorks.map((w) => {
+                  const a = accent(w.accent);
+                  return (
+                    <Card key={w.id} as="article">
+                      <span
+                        className={cn(
+                          "grid h-11 w-11 place-items-center rounded-sm",
+                          a.tint,
+                          a.text,
+                        )}
+                      >
+                        <Icon name={w.icon} size={19} />
                       </span>
-                      {item.whyItFeelsGood}
-                    </p>
-                    <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                      <span className="font-semibold">Why it fails: </span>
-                      {item.whyItFails}
-                    </p>
-                  </div>
-                  <div className="bg-verified-tint p-6">
-                    <div className="flex items-center gap-2">
-                      <Check size={16} className="shrink-0 text-verified" />
-                      <p className="font-display text-lg leading-tight text-verified">
-                        Do this instead
-                      </p>
+                      <Heading level={3} size="h5" className="mt-4">
+                        {w.name}
+                      </Heading>
+                      <Text size="small" className="mt-2">
+                        {w.what}
+                      </Text>
+                      <Text size="caption" tone="faint" className="mt-3 flex-1">
+                        {w.how}
+                      </Text>
+                      <Text size="caption" tone="faint" className="mt-4 border-t border-line pt-4">
+                        Effort: {w.effort} · Payoff: {w.payoff}
+                      </Text>
+                    </Card>
+                  );
+                })}
+              </CardGrid>
+            </section>
+
+            {/* ----------------------------------- FEELS PRODUCTIVE, ISN'T */}
+            <section id="feels-good">
+              <SectionHeading
+                kicker="The self-deception is the point"
+                title="What feels productive but isn't"
+                lead="Every habit below feels like studying while you're doing it. That feeling is exactly why it survives, it's comfortable, and comfort is not evidence."
+              />
+              <div className="mt-10 flex flex-col gap-4">
+                {(learning.feelsGood as FeelsGoodItem[]).map((item) => (
+                  <Card key={item.id} padding="none">
+                    <div className="grid lg:grid-cols-2">
+                      <div className="bg-coral-tint p-6">
+                        <div className="flex items-center gap-2">
+                          <Icon name="x" size={16} className="shrink-0 text-coral" />
+                          <Heading level={3} size="h5" className="text-coral" balance>
+                            {item.habit}
+                          </Heading>
+                        </div>
+                        <Text size="small" tone="ink" className="mt-3">
+                          <span className="font-semibold">Feels like progress: </span>
+                          {item.whyItFeelsGood}
+                        </Text>
+                        <Text size="small" className="mt-2">
+                          <span className="font-semibold">Why it fails: </span>
+                          {item.whyItFails}
+                        </Text>
+                      </div>
+                      <div className="bg-verified-tint p-6">
+                        <div className="flex items-center gap-2">
+                          <Icon name="check" size={16} className="shrink-0 text-verified" />
+                          <Heading level={3} size="h5" className="text-verified">
+                            Do this instead
+                          </Heading>
+                        </div>
+                        <Text size="small" tone="ink" className="mt-3">
+                          {item.doInstead}
+                        </Text>
+                      </div>
                     </div>
-                    <p className="mt-3 text-sm leading-relaxed text-ink">
-                      {item.doInstead}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --------------------------------------------------------- FOCUS SYSTEMS */}
-      <section className="container-x py-20 lg:py-28">
-        <Reveal>
-          <SectionHeading
-            kicker="A different job entirely"
-            title="Focus systems, not learning methods"
-            lead="Everything above builds knowledge. Everything below manages your attention and your clock. Confusing the two is the most common mistake on this page's topic, pair one system from here with a few techniques from above, and you have a real session."
-          />
-        </Reveal>
-        <div className="mt-10 grid gap-5 lg:grid-cols-2">
-          {(learning.focus as FocusItem[]).map((f, idx) => (
-            <Reveal key={f.name} i={idx % 4}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <h3 className="font-display text-xl leading-tight">
-                  {f.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  {f.what}
-                </p>
-                <div className="mt-4 flex items-start gap-2.5 rounded-xl border border-line-strong bg-paper-3/60 px-4 py-3">
-                  <ArrowRight
-                    size={15}
-                    className="mt-0.5 shrink-0 text-info"
-                  />
-                  <p className="text-sm leading-relaxed text-ink">
-                    <span className="font-semibold">How: </span>
-                    {f.howTo}
-                  </p>
-                </div>
-                <p className="mt-3 text-xs font-medium text-ink-faint">
-                  <span className="text-ink">Best for: </span>
-                  {f.bestFor}
-                </p>
-                <div className="mt-4 flex items-start gap-2 border-t border-line pt-4">
-                  <Icon
-                    name="alert-triangle"
-                    size={14}
-                    className="mt-0.5 shrink-0 text-caution-text"
-                  />
-                  <p className="text-xs leading-relaxed text-ink-soft">
-                    {f.watchOut}
-                  </p>
-                </div>
+                  </Card>
+                ))}
               </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
+            </section>
 
-      {/* ---------------------------------------------------- PROTOCOL BUILDER */}
-      <section className="bg-paper-3/60 py-20 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="Build it yourself, from your own constraints"
-              title="Your study protocol"
-              lead={learning.protocol.intro}
-              align="center"
-              className="mx-auto"
-            />
-          </Reveal>
-          <Reveal i={1} className="mt-12">
-            <StudyProtocol />
-          </Reveal>
-        </div>
-      </section>
+            {/* ----------------------------------------------- FOCUS SYSTEMS */}
+            <section id="focus">
+              <SectionHeading
+                kicker="A different job entirely"
+                title="Focus systems, not learning methods"
+                lead="Everything above builds knowledge. Everything below manages your attention and your clock. Confusing the two is the most common mistake on this page's topic, pair one system from here with a few techniques from above, and you have a real session."
+              />
+              <div className="mt-10 grid gap-6 lg:grid-cols-2">
+                {(learning.focus as FocusItem[]).map((f) => (
+                  <Card key={f.name} as="article">
+                    <Heading level={3} size="h4">
+                      {f.name}
+                    </Heading>
+                    <Text size="small" className="mt-2">
+                      {f.what}
+                    </Text>
+                    <Callout tone="info" className="mt-4">
+                      <span className="font-semibold">How: </span>
+                      {f.howTo}
+                    </Callout>
+                    <Text size="caption" tone="faint" className="mt-3">
+                      <span className="font-medium text-ink">Best for: </span>
+                      {f.bestFor}
+                    </Text>
+                    <div className="mt-4 flex items-start gap-2 border-t border-line pt-4">
+                      <Icon
+                        name="alert-triangle"
+                        size={14}
+                        className="mt-0.5 shrink-0 text-caution"
+                      />
+                      <Text size="caption">{f.watchOut}</Text>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </section>
 
-      {/* ---------------------------------------------------------------- CLOSE */}
-      <section className="container-x py-20 lg:py-28">
-        <Reveal>
-          <div className="flex flex-col items-center rounded-[var(--radius-lg)] border border-line bg-paper-3/70 px-6 py-16 text-center">
-            <Pill tone="signal">
-              <Sparkles size={13} /> Evidence, not vibes
-            </Pill>
-            <h2 className="mt-6 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-              Now go apply it to real work.
-            </h2>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-ink-soft">
-              A technique changes nothing until you run it on something real.
-              The method page covers how to teach yourself any skill, the
-              task board is where you put retrieval, spacing, and feedback to
-              work today.
-            </p>
-            <div className="mt-9 flex flex-wrap justify-center gap-3">
-              <ButtonLink href="/method">See the full method</ButtonLink>
-              <ButtonLink href="/tasks" variant="outline">
-                Try the task board
-              </ButtonLink>
-            </div>
+            {/* -------------------------------------------- PROTOCOL BUILDER */}
+            <section id="protocol">
+              <SectionHeading
+                align="center"
+                kicker="Build it yourself, from your own constraints"
+                title="Your study protocol"
+                lead={learning.protocol.intro}
+              />
+              <Card padding="lg" className="mt-12">
+                <StudyProtocol />
+              </Card>
+            </section>
           </div>
-        </Reveal>
-      </section>
-    </>
-  );
-}
-
-function FeaturedWorkCard({ work }: { work: Work }) {
-  return (
-    <div className="flex h-full flex-col rounded-[var(--radius-lg)] border border-line bg-paper-2 p-7 lg:p-8">
-      <div className="flex items-center gap-4">
-        <span
-          className={cn(
-            "grid h-14 w-14 shrink-0 place-items-center rounded-2xl",
-            accentSoft[work.accent],
-          )}
-        >
-          <Icon name={work.icon} size={24} />
-        </span>
-        <div>
-          <p className={cn("kicker", accentText[work.accent])}>
-            Strongest evidence
-          </p>
-          <h3 className="mt-1 font-display text-2xl leading-tight">
-            {work.name}
-          </h3>
         </div>
-      </div>
-      <p className="mt-5 text-sm leading-relaxed text-ink">{work.what}</p>
-      <p className="mt-3 text-sm leading-relaxed text-ink-soft">{work.why}</p>
-      <div className="mt-5 flex items-start gap-2.5 rounded-xl border border-line-strong bg-paper-3/60 px-4 py-3">
-        <ArrowRight
-          size={15}
-          className={cn("mt-0.5 shrink-0", accentText[work.accent])}
-        />
-        <p className="text-sm leading-relaxed text-ink">
-          <span className="font-semibold">How: </span>
-          {work.how}
-        </p>
-      </div>
-      <div className="mt-5 flex flex-wrap items-center gap-2 border-t border-line pt-5 text-xs font-semibold">
-        <span className="rounded-full border border-line-strong bg-paper-3 px-3 py-1 text-ink-soft">
-          Effort: {work.effort}
-        </span>
-        <span
-          className={cn(
-            "rounded-full border px-3 py-1",
-            accentSoft[work.accent],
-          )}
-        >
-          Payoff: {work.payoff}
-        </span>
-      </div>
-    </div>
-  );
-}
+      </Section>
 
-function CompactWorkCard({ work }: { work: Work }) {
-  return (
-    <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-      <span
-        className={cn(
-          "grid h-11 w-11 place-items-center rounded-xl",
-          accentSoft[work.accent],
-        )}
-      >
-        <Icon name={work.icon} size={19} />
-      </span>
-      <h3 className="mt-4 font-display text-lg leading-tight">{work.name}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-        {work.what}
-      </p>
-      <p className="mt-3 flex-1 text-xs leading-relaxed text-ink-faint">
-        {work.how}
-      </p>
-      <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-line pt-4 text-[0.7rem] font-semibold text-ink-faint">
-        <span>Effort: {work.effort}</span>
-        <span aria-hidden>·</span>
-        <span>Payoff: {work.payoff}</span>
-      </div>
-    </div>
+      {/* ------------------------------------------------------------- CLOSE */}
+      <Section band="tint">
+        <SectionHeading
+          align="center"
+          kicker="Evidence, not vibes"
+          title="Now go apply it to real work."
+          lead="A technique changes nothing until you run it on something real. The method page covers how to teach yourself any skill, the task board is where you put retrieval, spacing, and feedback to work today."
+        />
+        <div className="mt-9 flex flex-wrap justify-center gap-3">
+          <Button href="/method">See the full method</Button>
+          <Button href="/tasks" variant="outline">
+            Try the task board
+          </Button>
+        </div>
+      </Section>
+
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/learn" /> */}
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
+    </>
   );
 }
