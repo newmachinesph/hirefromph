@@ -135,7 +135,7 @@ export function NicheScorer() {
 
                 <div className="mt-3 flex items-center gap-1.5 pl-12">
                   <Field as="group" label={`${c.name}: ${c.question}`} hideLabel>
-                    <div className="flex items-center gap-1.5">
+                    <div className="flex flex-wrap items-center gap-1.5">
                       {SCORE_VALUES.map((n) => (
                         <Radio
                           key={n}
@@ -148,7 +148,7 @@ export function NicheScorer() {
                       ))}
                     </div>
                   </Field>
-                  <span className="ml-2 text-xs text-ink-faint">
+                  <span className="block basis-full text-xs text-ink-faint sm:ml-2 sm:inline sm:basis-auto">
                     1 = weak · 5 = strong
                   </span>
                 </div>
