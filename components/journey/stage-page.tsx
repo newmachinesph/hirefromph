@@ -45,6 +45,18 @@ const DIAGRAM_META: Record<DiagramId, { title: string; caption: string }> = {
     title: "Your first week, day by day",
     caption: "Day one is questions. By Friday the client should see a written system.",
   },
+  "vetting-flow": {
+    title: "Vetting an opportunity, gate by gate",
+    caption: "Read it top to bottom. One yes anywhere sends it to the stop.",
+  },
+  "agency-vs-direct": {
+    title: "Agency or direct: who holds the relationship",
+    caption: "Follow the last column. That is the one step that changes everything before it.",
+  },
+  "forgetting-curve": {
+    title: "What review does to what you remember",
+    caption: "Both lines start with everything. Only the reviewed one is still near the top a month later.",
+  },
 };
 
 function tone(accent: string): BadgeTone {
