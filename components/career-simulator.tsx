@@ -270,7 +270,7 @@ export function CareerSimulator() {
   const [rangeLow, rangeHigh] = BASE_RANGE[craft];
 
   return (
-    <div className="grid gap-6 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-start">
+    <div className="grid min-w-0 grid-cols-1 gap-6 lg:grid-cols-[minmax(0,380px)_minmax(0,1fr)] lg:items-start [&>*]:min-w-0">
       {/* ------------------------------------------------------- CONTROLS */}
       <div className="flex flex-col gap-4">
         <div>

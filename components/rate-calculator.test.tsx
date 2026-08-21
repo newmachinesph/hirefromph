@@ -1,6 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { RateCalculator } from "@/components/rate-calculator";
 
 describe("RateCalculator", () => {
@@ -14,7 +13,8 @@ describe("RateCalculator", () => {
     render(<RateCalculator />);
     const slider = screen.getByLabelText(/your billed rate/i) as HTMLInputElement;
     const before = screen.getByText(/\/ hr$/).textContent;
-    await userEvent.setup().type(slider, "{arrowright}{arrowright}{arrowright}");
+    // jsdom does not step range inputs on arrow keys; set the value directly.
+    fireEvent.change(slider, { target: { value: String(Number(slider.value) + Number(slider.step || 1) * 3) } });
     expect(screen.getByText(/\/ hr$/).textContent).not.toBe(before);
   });
 });
