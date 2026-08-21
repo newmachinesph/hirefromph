@@ -65,7 +65,7 @@ export function NavDesktop() {
             href={item.href}
             aria-current={pathname === item.href ? "page" : undefined}
             className={cn(
-              "relative inline-flex min-h-11 items-center rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
+              "relative inline-flex min-h-11 items-center whitespace-nowrap rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
               pathname === item.href ? "text-primary" : "text-ink-soft hover:text-ink",
             )}
           >
@@ -171,11 +171,10 @@ function NavDropdown({
         type="button"
         aria-expanded={open}
         aria-controls={panelId}
-        aria-haspopup="true"
         onClick={() => onOpenChange(!open)}
         onKeyDown={onTriggerKeyDown}
         className={cn(
-          "relative flex min-h-11 items-center gap-1 rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
+          "relative flex min-h-11 items-center gap-1 whitespace-nowrap rounded-pill px-3.5 py-2 text-base font-medium transition-colors duration-150",
           active || open ? "text-primary" : "text-ink-soft hover:text-ink",
         )}
       >
@@ -213,6 +212,12 @@ function NavDropdown({
                 >
                   {column.title}
                 </p>
+                {column.part > 0 && (
+                  // The heading above is an invisible spacer (keeps row
+                  // alignment with column 0); this gives the continuation
+                  // column its own accessible name for screen readers.
+                  <p className="sr-only">{column.title} (continued)</p>
+                )}
                 <ul className="mt-3 flex flex-col gap-0.5">
                   {column.links.map((link) => (
                     <li key={link.href}>

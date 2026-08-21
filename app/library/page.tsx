@@ -19,6 +19,7 @@ export default function LibraryPage() {
         title="The library"
         lead="Every page on the site, with what it is and where it fits. Filter by group or type, or search by name."
         media={{ figureId: "library-hero" }}
+        mediaRatio="3/1"
         compact
       />
       <Section band="none">

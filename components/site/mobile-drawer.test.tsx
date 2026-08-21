@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MobileDrawer } from "@/components/site/mobile-drawer";
+import { NAV_GROUPS, isLive } from "@/lib/nav";
 
 vi.mock("next/navigation", () => ({ usePathname: () => "/" }));
 vi.mock("next/link", () => ({
@@ -50,8 +51,15 @@ describe("MobileDrawer", () => {
     await openDrawer();
     expect(screen.getByRole("link", { name: "Library" })).toHaveAttribute("href", "/library");
     expect(screen.getByRole("link", { name: "Privacy" })).toHaveAttribute("href", "/privacy");
-    expect(screen.queryByRole("link", { name: /For educators/i })).toBeNull();
-    expect(screen.queryByRole("link", { name: "Glossary" })).toBeNull();
+
+    // Derive the pending roster from the data itself, rather than naming a
+    // route: whichever links carry `pending: true` in navGroups today must
+    // never render, whoever they are.
+    const pendingLinks = NAV_GROUPS.flatMap((group) => group.links).filter((link) => !isLive(link));
+    expect(pendingLinks.length).toBeGreaterThan(0);
+    for (const link of pendingLinks) {
+      expect(screen.queryByRole("link", { name: link.label })).toBeNull();
+    }
   });
 
   it("focuses the CTA as the first focusable element when opened", async () => {

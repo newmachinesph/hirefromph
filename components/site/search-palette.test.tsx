@@ -70,4 +70,29 @@ describe("SearchPalette", () => {
     expect(screen.queryAllByRole("option")).toHaveLength(0);
     expect(screen.getByText(/no pages match/i)).toBeInTheDocument();
   });
+
+  it("scrolls the active option into view as the selection moves", async () => {
+    const scrollIntoView = vi.fn();
+    const original = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = scrollIntoView;
+    try {
+      const { user } = await openPalette();
+      scrollIntoView.mockClear();
+
+      await user.keyboard("{ArrowDown}");
+
+      expect(scrollIntoView).toHaveBeenCalledWith({ block: "nearest" });
+    } finally {
+      Element.prototype.scrollIntoView = original;
+    }
+  });
+
+  it("keeps every option out of the tab order, relying on aria-activedescendant", async () => {
+    const { user, input } = await openPalette();
+    await user.type(input, "stage");
+
+    for (const option of screen.getAllByRole("option")) {
+      expect(option).toHaveAttribute("tabindex", "-1");
+    }
+  });
 });

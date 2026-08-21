@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  LIBRARY,
   LIVE_LIBRARY,
   NAV,
   NAV_CTA,
@@ -8,6 +9,7 @@ import {
   SECONDARY_LINKS,
   findNavNeighbours,
   getBreadcrumb,
+  isLive,
   isMenu,
   type NavLink,
 } from "@/lib/nav";
@@ -116,7 +118,7 @@ describe("nav data", () => {
 describe("SEARCH_INDEX", () => {
   it("indexes the live library", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/method")).toBe(true);
-    expect(LIVE_LIBRARY).toHaveLength(32);
+    expect(LIVE_LIBRARY).toHaveLength(LIBRARY.filter(isLive).length);
   });
 
   it("indexes nav routes that the library does not list", () => {
@@ -135,6 +137,15 @@ describe("SEARCH_INDEX", () => {
 
   it("never indexes a route that ships in a later phase", () => {
     expect(SEARCH_INDEX.some((i) => i.href === "/educators")).toBe(false);
+  });
+
+  it("every SEARCH_INDEX href is live: it never points at a pending library or nav route", () => {
+    const pendingHrefs = new Set(
+      [...LIBRARY, ...NAV_GROUPS.flatMap((group) => group.links)]
+        .filter((link) => !isLive(link))
+        .map((link) => link.href),
+    );
+    expect(SEARCH_INDEX.some((item) => pendingHrefs.has(item.href))).toBe(false);
   });
 
   it("lists each href once", () => {

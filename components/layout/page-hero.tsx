@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Figure, Heading, Kicker, Text, type KickerTone } from "../ui/index";
+import { Figure, Heading, Kicker, Text, type FigureRatio, type KickerTone } from "../ui/index";
 import { cn } from "@/lib/utils";
 import { Breadcrumb, type Crumb } from "./breadcrumb";
 import { Section } from "./section";
@@ -17,6 +17,12 @@ export type PageHeroProps = {
   lead?: ReactNode;
   actions?: ReactNode;
   media?: PageHeroMedia;
+  /**
+   * Overrides the figure's aspect ratio for a `figureId` media (default
+   * `"hero"`, 3:2 -> 4:5 on lg). Set this when the source asset's own ratio
+   * doesn't match `"hero"` — e.g. a wide banner shot at 3:1.
+   */
+  mediaRatio?: FigureRatio;
   /**
    * Guides and workshops pass `compact`: `display` headline, standard section
    * rhythm. The homepage and stage pages use the default: `hero` headline,
@@ -36,6 +42,7 @@ export function PageHero({
   lead,
   actions,
   media,
+  mediaRatio,
   compact = false,
   className,
   children,
@@ -65,7 +72,13 @@ export function PageHero({
 
         {media &&
           ("figureId" in media ? (
-            <Figure id={media.figureId} ratio="hero" radius="lg" priority sizes="(min-width: 1024px) 40vw, 100vw" />
+            <Figure
+              id={media.figureId}
+              ratio={mediaRatio ?? "hero"}
+              radius="lg"
+              priority
+              sizes="(min-width: 1024px) 40vw, 100vw"
+            />
           ) : (
             <div className="min-w-0">{media.node}</div>
           ))}
