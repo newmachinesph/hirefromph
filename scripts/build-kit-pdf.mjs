@@ -30,7 +30,7 @@ import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { createServer } from "node:net";
 import { join } from "node:path";
 import { chromium } from "playwright";
-import { KIT_FILES, REPO_ROOT, hashKitPayload, readKitPayload } from "../lib/kit.mjs";
+import { PUBLISHED_KIT_FILES, REPO_ROOT, hashKitPayload, readKitPayload } from "../lib/kit.mjs";
 
 const OUT_DIR = join(REPO_ROOT, "public", "kit");
 const NEXT_BIN = join(REPO_ROOT, "node_modules", "next", "dist", "bin", "next");
@@ -123,7 +123,7 @@ async function main() {
     mkdirSync(OUT_DIR, { recursive: true });
     const page = await browser.newPage();
 
-    for (const file of KIT_FILES) {
+    for (const file of PUBLISHED_KIT_FILES) {
       const url = `${base}${file.route}`;
       const response = await page.goto(url, { waitUntil: "networkidle" });
       if (!response || !response.ok()) {

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { KitPage, Slide } from "@/components/kit";
 import { JourneyMap, MethodLoop } from "@/components/diagrams";
-import { SLIDES } from "@/lib/educators";
+import { notFound } from "next/navigation";
+import { KIT_FILES, SLIDES } from "@/lib/educators";
 
 export const metadata: Metadata = { title: "Kit · The slides" };
 
@@ -16,6 +17,8 @@ const SLIDE_MEDIA: Record<string, ReactNode> = {
 };
 
 export default function SlidesDeck() {
+  // Postponed by owner ruling: the deck stays in the repo but is not on the site yet.
+  if (KIT_FILES.find((file) => file.slug === "hirefromph-slides")?.published === false) notFound();
   return (
     <>
       {SLIDES.map((slide, index) => (
