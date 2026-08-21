@@ -88,9 +88,14 @@ export function Annotated({ exampleId }: { exampleId: string }) {
                       data-testid="hotspot"
                       aria-label={`Note ${hotspot.n}: ${hotspot.title}`}
                       onClick={() => setOpenNote(hotspot.n)}
-                      className="grid h-8 w-8 place-items-center rounded-pill border border-primary bg-primary-tint text-small font-semibold text-primary-deep transition-colors duration-150 ease-out hover:bg-primary hover:text-white"
+                      className="group grid h-11 w-11 place-items-center rounded-pill"
                     >
-                      {hotspot.n}
+                      <span
+                        aria-hidden
+                        className="grid h-8 w-8 place-items-center rounded-pill border border-primary bg-primary-tint text-small font-semibold text-primary-deep transition-colors duration-150 ease-out group-hover:bg-primary group-hover:text-white"
+                      >
+                        {hotspot.n}
+                      </span>
                     </button>
                   ))}
                 </div>
