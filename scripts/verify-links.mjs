@@ -163,6 +163,33 @@ const pageFiles = walk(APP_DIR)
   .filter((file) => !isDevRoute(file));
 const routes = new Set(pageFiles.map(routeForPage));
 
+/**
+ * A route with a [param] segment matches any single path segment there, and a
+ * [...param] segment matches the rest of the path. Without this, a link to a
+ * concrete dynamic URL (/educators/kit/session/ask-well) would be reported as
+ * missing because the route set only holds the literal `[id]` form.
+ */
+const dynamicRoutes = [...routes]
+  .filter((route) => route.includes("["))
+  .map((route) =>
+    new RegExp(
+      `^${route
+        .split("/")
+        .map((segment) =>
+          /^\[\.\.\..+\]$/.test(segment)
+            ? ".+"
+            : /^\[.+\]$/.test(segment)
+              ? "[^/]+"
+              : segment.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+        )
+        .join("/")}$`,
+    ),
+  );
+
+function routeExists(pathname) {
+  return routes.has(pathname) || dynamicRoutes.some((pattern) => pattern.test(pathname));
+}
+
 const publicAssets = new Set(
   walk(path.join(ROOT, "public")).map((file) => `/${relative(file).replace(/^public\//, "")}`),
 );
@@ -228,7 +255,7 @@ for (const reference of references) {
   }
 
   const pathname = normalizePathname(reference.value);
-  if (!routes.has(pathname) && !publicAssets.has(pathname)) {
+  if (!routeExists(pathname) && !publicAssets.has(pathname)) {
     problems.push({ ...reference, reason: `no page or public asset for ${pathname}` });
   }
 }
