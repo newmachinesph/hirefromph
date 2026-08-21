@@ -21,14 +21,14 @@ export const metadata: Metadata = pageMeta({
   path: "/niches",
   title: "Niche Learning Hub",
   description:
-    "Pick your lane and go deep. Explore 21 online-career niches, including newer lanes like AI agent operations, no-code app building, and logistics and freight support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
+    "Pick your lane and go deep. Explore 22 online-career niches, including newer lanes like AI agent operations, no-code app building, and logistics and freight support, with pay bands, demand, skills, open courses, and how AI is changing each one.",
 });
 
 const steps = [
   {
     n: "01",
     title: "Pick a niche",
-    desc: "Browse the 21 lanes below and see the pay, demand, and skills for each.",
+    desc: "Browse the 22 lanes below and see the pay, demand, and skills for each.",
     icon: "compass",
   },
   {

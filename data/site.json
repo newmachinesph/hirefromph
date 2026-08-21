@@ -27,26 +27,10 @@
     ]
   },
   "stats": [
-    {
-      "value": "0",
-      "label": "templates handed out",
-      "sub": "you build, you own"
-    },
-    {
-      "value": "7",
-      "label": "core methods",
-      "sub": "find, deconstruct, learn, vet, ask, unstick, give"
-    },
-    {
-      "value": "5",
-      "label": "career stages",
-      "sub": "zero to independent"
-    },
-    {
-      "value": "40",
-      "label": "micro-tasks with real deliverables",
-      "sub": "each one a portfolio piece"
-    }
+    { "value": "5", "label": "stages", "sub": "zero to independent" },
+    { "value": "11", "label": "steps", "sub": "one ordered roadmap" },
+    { "value": "22", "label": "niches", "sub": "pay, demand, and AI risk" },
+    { "value": "40", "label": "micro-tasks", "sub": "each ends as portfolio proof" }
   ],
   "cta": {
     "label": "Find your path",
