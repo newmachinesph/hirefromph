@@ -4,6 +4,12 @@ import site from "@/data/site.json";
 export const BASE_URL = "https://hirefrom.ph";
 
 /**
+ * Routes that exist but must never be advertised. `/dev/ui` is the
+ * development-only component gallery — it 404s in production builds.
+ */
+const EXCLUDED = new Set(["/dev/ui"]);
+
+/**
  * Every content route, derived from the nav so a new page can't be forgotten.
  * `/path` is intentionally excluded — it's a personalized, client-rendered app
  * hub that SSRs only an empty skeleton, so it's noindex (see path/layout.tsx).
@@ -14,10 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...site.navGroups.flatMap((g) => g.links.map((l) => l.href)),
   ];
 
-  return Array.from(new Set(routes)).map((href) => ({
-    url: `${BASE_URL}${href === "/" ? "" : href}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly" as const,
-    priority: href === "/" ? 1 : 0.7,
-  }));
+  return Array.from(new Set(routes))
+    .filter((href) => !EXCLUDED.has(href))
+    .map((href) => ({
+      url: `${BASE_URL}${href === "/" ? "" : href}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: href === "/" ? 1 : 0.7,
+    }));
 }
