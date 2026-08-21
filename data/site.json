@@ -27,198 +27,155 @@
     ]
   },
   "stats": [
-    {
-      "value": "0",
-      "label": "templates handed out",
-      "sub": "you build, you own"
-    },
-    {
-      "value": "7",
-      "label": "core methods",
-      "sub": "find, deconstruct, learn, vet, ask, unstick, give"
-    },
-    {
-      "value": "5",
-      "label": "career stages",
-      "sub": "zero to independent"
-    },
-    {
-      "value": "40",
-      "label": "micro-tasks with real deliverables",
-      "sub": "each one a portfolio piece"
-    }
+    { "value": "5", "label": "stages", "sub": "zero to independent" },
+    { "value": "11", "label": "steps", "sub": "one ordered roadmap" },
+    { "value": "22", "label": "niches", "sub": "pay, demand, and AI risk" },
+    { "value": "40", "label": "micro-tasks", "sub": "each ends as portfolio proof" }
   ],
-  "navGroups": [
+  "cta": {
+    "label": "Find your path",
+    "href": "/start"
+  },
+  "nav": [
     {
-      "title": "The journey",
-      "primary": true,
-      "desc": "The one path: five stages, zero to independent. If you read nothing else, read this in order.",
-      "links": [
+      "label": "Path",
+      "groups": [
         {
-          "label": "Start here",
-          "href": "/start"
-        },
-        {
-          "label": "Get Hired",
-          "href": "/get-hired"
-        },
-        {
-          "label": "Deliver",
-          "href": "/deliver"
-        },
-        {
-          "label": "Level Up",
-          "href": "/level-up"
-        },
-        {
-          "label": "Own",
-          "href": "/own"
+          "title": "The path",
+          "links": [
+            { "label": "Start here", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
+            { "label": "Get Hired", "href": "/get-hired", "desc": "Stage 2. Source leads, apply, and close the offer." },
+            { "label": "Deliver", "href": "/deliver", "desc": "Stage 3. Onboard, write SOPs, keep the client." },
+            { "label": "Level Up", "href": "/level-up", "desc": "Stage 4. Specialise, automate, and raise your rate." },
+            { "label": "Own", "href": "/own", "desc": "Stage 5. Go direct, register, and set your terms." },
+            { "label": "Your dashboard", "href": "/path", "desc": "See your saved track and how far you are." },
+            { "label": "Build a 30-day plan", "href": "/plan", "desc": "Answer five questions, get a day-by-day month." }
+          ]
         }
       ]
     },
     {
-      "title": "Learn to build",
-      "desc": "The skills and labs behind the path. Dip in when a stage calls for one, not all at once.",
-      "links": [
+      "label": "Learn",
+      "groups": [
         {
-          "label": "The Method",
-          "href": "/method"
+          "title": "Build skills",
+          "links": [
+            { "label": "The Method", "href": "/method", "desc": "Six principles and seven methods for building anything." },
+            { "label": "AI-First", "href": "/ai-first", "desc": "Coding agents, local models, and four working habits." },
+            { "label": "How to Learn", "href": "/learn", "desc": "How memory works, and a study protocol you write." },
+            { "label": "Micro-Tasks", "href": "/tasks", "desc": "Forty small jobs that each end as portfolio proof." },
+            { "label": "Build Labs", "href": "/build", "desc": "Learn a resume's anatomy, then write your own." },
+            { "label": "Learn Any Tool", "href": "/tools", "desc": "Pick up unfamiliar software in a single weekend." },
+            { "label": "Portfolio Ladder", "href": "/portfolio", "desc": "Each niche's tool ladder, free to paid, rung by rung." },
+            { "label": "AI Leverage", "href": "/prompts", "desc": "Prompt anatomy, so you can write your own." },
+            { "label": "Equipment", "href": "/equipment", "desc": "Check what you own, budget pesos for the rest." }
+          ]
         },
         {
-          "label": "AI-First",
-          "href": "/ai-first"
-        },
-        {
-          "label": "How to Learn",
-          "href": "/learn"
-        },
-        {
-          "label": "Micro-Tasks",
-          "href": "/tasks"
-        },
-        {
-          "label": "Build Labs",
-          "href": "/build"
-        },
-        {
-          "label": "Learn Any Tool",
-          "href": "/tools"
-        },
-        {
-          "label": "Portfolio Ladder",
-          "href": "/portfolio"
-        },
-        {
-          "label": "AI Leverage",
-          "href": "/prompts"
-        },
-        {
-          "label": "Resource Shelf",
-          "href": "/resources"
+          "title": "Work like a professional",
+          "links": [
+            { "label": "Become Indispensable", "href": "/indispensable", "desc": "The judgment that makes you hard to replace." },
+            { "label": "English at Work", "href": "/english", "desc": "Cut hedges, and learn four structures for client messages." },
+            { "label": "Conduct & Integrity", "href": "/conduct", "desc": "What gets people delisted, and an oath you write." },
+            { "label": "Career Simulator", "href": "/simulator", "desc": "Model 36 months of two career paths side by side." },
+            { "label": "Resource Shelf", "href": "/resources", "desc": "Verified free courses, and how to judge one first." }
+          ]
         }
+      ],
+      "footerLinks": [
+        { "label": "Practice", "href": "/practice", "desc": "Flashcards and quizzes on a spacing schedule.", "pending": true },
+        { "label": "Glossary", "href": "/glossary", "desc": "Plain definitions for every term this site uses.", "pending": true }
       ]
     },
     {
-      "title": "Work like a professional",
-      "desc": "How to behave once you're in the work: the gap between kept and quietly dropped.",
-      "links": [
+      "label": "Work",
+      "groups": [
         {
-          "label": "Reality Check",
-          "href": "/reality"
+          "title": "Get hired",
+          "links": [
+            { "label": "Find Work", "href": "/apply", "desc": "Search operators, reverse-sourcing, and a red-flag scorer." },
+            { "label": "Interview Prep", "href": "/interview", "desc": "STAR answers, a question bank, and scam warning signs." },
+            { "label": "Application Tracker", "href": "/tracker", "desc": "Log every application and get nudged on follow-ups." },
+            { "label": "Niches", "href": "/niches", "desc": "Twenty-two lanes with pay bands, demand, and AI risk." }
+          ]
         },
         {
-          "label": "Become Indispensable",
-          "href": "/indispensable"
-        },
-        {
-          "label": "English at Work",
-          "href": "/english"
-        },
-        {
-          "label": "Conduct & Integrity",
-          "href": "/conduct"
-        },
-        {
-          "label": "Career Simulator",
-          "href": "/simulator"
+          "title": "Get paid and stay",
+          "links": [
+            { "label": "Salary Guide", "href": "/salary", "desc": "Cited pay ranges, and how to price your work." },
+            { "label": "Client Markets", "href": "/markets", "desc": "Where clients are, what each market pays, overlap hours." },
+            { "label": "Own Your Clients", "href": "/clients", "desc": "Move from platform gigs to direct clients and retainers." },
+            { "label": "Get Legit", "href": "/legit", "desc": "BIR registration, the 8% option, SSS, and payment rails." },
+            { "label": "Languages", "href": "/languages", "desc": "Japanese, Korean, or Mandarin thins the candidate pool." }
+          ]
         }
       ]
-    },
-    {
-      "title": "Grow",
-      "desc": "Deep-dives and tools for when the basics hold and you want more. Reach for these later.",
-      "links": [
-        {
-          "label": "Find Work",
-          "href": "/apply"
-        },
-        {
-          "label": "Interview Prep",
-          "href": "/interview"
-        },
-        {
-          "label": "Own Your Clients",
-          "href": "/clients"
-        },
-        {
-          "label": "Get Legit",
-          "href": "/legit"
-        },
-        {
-          "label": "Salary Guide",
-          "href": "/salary"
-        },
-        {
-          "label": "Client Markets",
-          "href": "/markets"
-        },
-        {
-          "label": "Tracker",
-          "href": "/tracker"
-        },
-        {
-          "label": "30-Day Plan",
-          "href": "/plan"
-        },
-        {
-          "label": "Niches",
-          "href": "/niches"
-        },
-        {
-          "label": "Languages",
-          "href": "/languages"
-        },
-        {
-          "label": "Equipment",
-          "href": "/equipment"
-        },
-        {
-          "label": "Privacy",
-          "href": "/privacy"
-        }
-      ]
-    }
-  ],
-  "primaryNav": [
-    {
-      "label": "Start here",
-      "href": "/start"
-    },
-    {
-      "label": "The Method",
-      "href": "/method"
-    },
-    {
-      "label": "AI-First",
-      "href": "/ai-first"
     },
     {
       "label": "Reality Check",
       "href": "/reality"
+    }
+  ],
+  "navGroups": [
+    {
+      "title": "The path",
+      "up": { "label": "Your path", "href": "/path" },
+      "links": [
+        { "label": "Start here", "href": "/start" },
+        { "label": "Get Hired", "href": "/get-hired" },
+        { "label": "Deliver", "href": "/deliver" },
+        { "label": "Level Up", "href": "/level-up" },
+        { "label": "Own", "href": "/own" },
+        { "label": "Your dashboard", "href": "/path" },
+        { "label": "Build a 30-day plan", "href": "/plan" }
+      ]
     },
     {
-      "label": "Find Work",
-      "href": "/apply"
+      "title": "Learn",
+      "up": { "label": "Browse the library", "href": "/library?group=learn" },
+      "links": [
+        { "label": "The Method", "href": "/method" },
+        { "label": "AI-First", "href": "/ai-first" },
+        { "label": "How to Learn", "href": "/learn" },
+        { "label": "Micro-Tasks", "href": "/tasks" },
+        { "label": "Build Labs", "href": "/build" },
+        { "label": "Learn Any Tool", "href": "/tools" },
+        { "label": "Portfolio Ladder", "href": "/portfolio" },
+        { "label": "AI Leverage", "href": "/prompts" },
+        { "label": "Equipment", "href": "/equipment" },
+        { "label": "Become Indispensable", "href": "/indispensable" },
+        { "label": "English at Work", "href": "/english" },
+        { "label": "Conduct & Integrity", "href": "/conduct" },
+        { "label": "Career Simulator", "href": "/simulator" },
+        { "label": "Resource Shelf", "href": "/resources" },
+        { "label": "Practice", "href": "/practice", "pending": true },
+        { "label": "Glossary", "href": "/glossary", "pending": true }
+      ]
+    },
+    {
+      "title": "Work",
+      "up": { "label": "Browse the library", "href": "/library?group=work" },
+      "links": [
+        { "label": "Find Work", "href": "/apply" },
+        { "label": "Interview Prep", "href": "/interview" },
+        { "label": "Application Tracker", "href": "/tracker" },
+        { "label": "Niches", "href": "/niches" },
+        { "label": "Salary Guide", "href": "/salary" },
+        { "label": "Client Markets", "href": "/markets" },
+        { "label": "Own Your Clients", "href": "/clients" },
+        { "label": "Get Legit", "href": "/legit" },
+        { "label": "Languages", "href": "/languages" }
+      ]
+    },
+    {
+      "title": "More",
+      "up": { "label": "Browse the library", "href": "/library" },
+      "links": [
+        { "label": "Reality Check", "href": "/reality" },
+        { "label": "Library", "href": "/library" },
+        { "label": "Privacy", "href": "/privacy" },
+        { "label": "For educators", "href": "/educators", "pending": true }
+      ]
     }
   ]
 }

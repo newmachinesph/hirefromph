@@ -1,18 +1,16 @@
 import type { Metadata, Viewport } from "next";
-import { Space_Grotesk, Inter_Tight, Space_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { BASE_URL } from "./sitemap";
+import { inter, cabinet } from "@/lib/fonts";
 import { PathProvider } from "@/lib/path-context";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
-import { MotionProvider } from "@/components/motion-provider";
-import { SWRegister } from "@/components/sw-register";
-import { BackToTop } from "@/components/back-to-top";
-
-const spaceGrotesk = Space_Grotesk({ variable: "--font-space-grotesk", subsets: ["latin"], display: "swap" });
-const interTight = Inter_Tight({ variable: "--font-inter-tight", subsets: ["latin"], display: "swap" });
-const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"], weight: ["400", "700"], display: "swap" });
+import {
+  BackToTop,
+  MotionProvider,
+  SiteFooter,
+  SiteHeader,
+  SWRegister,
+} from "@/components/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -54,7 +52,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#3A35D6",
+  themeColor: "#4B4EF6",
 };
 
 const jsonLd = {
@@ -88,7 +86,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${interTight.variable} ${spaceMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <script
@@ -97,10 +95,13 @@ export default function RootLayout({
             __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
           }}
         />
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
         <PathProvider>
           <MotionProvider>
             <SiteHeader />
-            <main className="relative z-[2] flex-1">{children}</main>
+            <main id="main" tabIndex={-1} className="relative z-[2] flex-1 outline-none">{children}</main>
             <SiteFooter />
             <BackToTop />
           </MotionProvider>

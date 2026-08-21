@@ -1,0 +1,77 @@
+{
+  "_note": "Draft Tagalog summaries; reviewed=false until a native speaker clears them.",
+  "routes": {
+    "/start": {
+      "tl": "Dito ka magsisimula kung wala kang karanasan. Walang hinihinging diploma o puhunan. Unahin mo ang setup: tingnan kung kaya ng laptop at internet mo ang trabaho, tapos gumawa ng isang micro-task na matatapos mo ngayong araw kahit wala ka pang kliyente. Bawat micro-task ay may aktwal na output, kaya may maipapakita ka agad. Pagkatapos, aralin mo kung paano ka natututo, at ang mga tool na hinahanap ng kliyente. Huwag mong dalhin lahat sa isang araw. Isang hakbang lang bawat upo.",
+      "reviewed": false
+    },
+    "/get-hired": {
+      "tl": "Dito mo hahanapin ang unang kliyente mo, at may sistema. Huwag lang maghintay ng job post: matutunan mong maghanap gamit ang search operators, at lapitan ang negosyong may problemang kaya mong solusyunan bago pa sila mag-post. Bago ka mag-apply, i-vet mo muna ang opportunity para hindi ka ma-scam. Itala ang bawat application sa isang tracker, dahil mas maraming nawawalang offer sa katahimikan kaysa sa rejection. Mag-practice ng interview, at kapag nag-usap na kayo ng rate, may ebidensya kang dala.",
+      "reviewed": false
+    },
+    "/deliver": {
+      "tl": "Nakuha mo na ang kliyente. Dito naman ang unang linggo mo, at doon nasusukat kung mapagkakatiwalaan ka. Ayusin ang onboarding: alamin ang access, ang tool na gamit nila, at kung paano ka mag-uulat. Isulat mo sa SOP ang anumang trabahong paulit-ulit, para hindi mo na kailangang ipaliwanag ulit. Bumuo ng tracker para sa bagay na binabantayan mo. Magpadala ng malinaw na status update kahit walang nagtatanong. Ang propesyonal ay may sistema, at iyon ang dahilan kung bakit siya pinapanatili.",
+      "reviewed": false
+    },
+    "/level-up": {
+      "tl": "Kapag matatag na ang basics, dito ka tumataas. Pumili ng isang niche at doon ka lumalim, dahil mas makitid ang lane, mas kaunti ang kalaban mo. Anumang ginagawa mong paulit-ulit, gawing sistema; anumang kayang gawin ng makina, i-automate. Kung gusto mo ng mas mataas na rate, isa sa pinakamabilis na daan ang premium language tulad ng Japanese, Korean, o Mandarin, kaunti kasi ang kandidatong bilingual. Huwag hintaying bigyan ka ng taas. Ipakita mo muna ang bagong halaga mo.",
+      "reviewed": false
+    },
+    "/own": {
+      "tl": "Dito nagiging sa'yo ang karera. Lumipat mula sa platform patungo sa direktang kliyente, kung saan ikaw ang nagtatakda ng rate at ikaw ang may hawak ng relasyon. Mag-register sa BIR bilang self-employed, piliin kung paano ka bubuwisan, at ayusin ang sarili mong SSS, PhilHealth, at Pag-IBIG. Tingnan din kung saang rail dumadaan ang bayad mo, kasi malaki ang ipinagkaiba sa piso na natatanggap mo. Tapos, tulungan mo naman ang isang nagsisimula. Ibaba mo ulit ang hagdan para sa susunod.",
+      "reviewed": false
+    },
+    "/method": {
+      "tl": "Hindi kami nagbibigay ng file na ida-download at ire-rename. Tinuturuan ka naming gawin ito mismo. Anim na prinsipyo at pitong method ang laman ng page na ito: FIND para makahanap ng trabahong hindi pa naipo-post, DECONSTRUCT para makita ang pattern sa limang halimbawa, LEARN, VET para hindi ka madaya, ASK para masagot ang tanong mo, UNSTICK kapag natigil ka, at GIVE. May self-audit din sa dulo. Ang skill na ito ang asset na hindi maaagaw sa'yo.",
+      "reviewed": false
+    },
+    "/learn": {
+      "tl": "Ang page na ito ay hindi tungkol sa isang skill. Tungkol ito sa kung paano nananatili ang natutunan mo. Ang pagbabasa ulit at pag-highlight ay pakiramdam produktibo, pero kaunti ang natatandaan mo mula roon. Ang gumagana: isara ang notes at subukang alalahanin, tapos ulitin pagkalipas ng ilang araw. Mahirap habang ginagawa, at doon nga nangyayari ang pagkatuto. Sa dulo ng page, ikaw mismo ang gagawa ng study protocol na bagay sa oras at buhay mo.",
+      "reviewed": false
+    },
+    "/reality": {
+      "tl": "Ito ang page na hindi ka bibentahan ng pangarap. Bawat numero rito ay may kasamang link sa pinagmulan nito. Makikita mo kung gaano karaming oras ang hindi nababayaran sa freelancing, kung ano ang binago ng AI sa job postings, at kung saan lumalaki ang demand. May listahan din ng mga bagay na walang nakakaalam: gaano katagal bago makakuha ng unang kliyente, ilan ang sumusuko, ilan ang umaabot. Walang datos doon, kaya walang makapagsasabi sa'yo ng tiyak na sagot.",
+      "reviewed": false
+    },
+    "/conduct": {
+      "tl": "Tungkol ito sa asal sa trabaho, at doon nadadapa ang marami. May totoong kaso rito: mga empleyadong natanggal dahil sa pekeng keyboard activity, isang remote accountant na pinagbayad ng korte dahil sa oras na inilagay niya sa timesheet pero walang katumbas na trabaho, at mga abogadong minulta dahil sa citation na imbento ng AI. May bahagi rin tungkol sa Data Privacy Act, dahil sakop nito ang laptop mo kahit nasa Cebu ka. Sa dulo, ikaw mismo ang magsusulat ng sarili mong oath, sa sarili mong salita.",
+      "reviewed": false
+    },
+    "/english": {
+      "tl": "Magaling nang mag-English ang karamihan sa Pilipino. Ang nagpapababa ng singil mo ay mas maliit na bagay: sobrang paghingi ng paumanhin, hedging tulad ng \"just\" at \"maybe\", at pagiging masyadong mapagpakumbaba sa email. Sa page na ito, i-a-audit mo ang isang totoong mensahe mula sa kliyente, matututunan ang apat na istruktura ng pagsulat sa trabaho, at makikita ang tapat na priority order kung gusto mong ayusin ang pagsasalita. Hindi accent ang isyu. Kalinawan ang isyu.",
+      "reviewed": false
+    },
+    "/indispensable": {
+      "tl": "Ang tanong dito: bakit may mga taong hindi natatanggal? Hindi dahil sa bilis o sa dami ng oras. Dahil sila ang may hawak ng resulta, hindi lang ng task. Tinatalakay ng page ang mga uri ng talino na hindi sinusukat ng eskwelahan: paghatol, panlasa, pakikitungo sa tao, at kakayahang mag-adjust. Iyan ang mahirap gayahin ng AI. Nandito rin ang mga ugaling ginagawa silang mahalaga: mag-antabay sa susunod na kailangan, mag-ulat bago tanungin, at ayusin ang problema bago pa ito lumaki.",
+      "reviewed": false
+    },
+    "/ai-first": {
+      "tl": "Lahat ng trabaho ngayon ay may kasamang AI. Hindi ibig sabihin nito na papalitan ka. Ang ibig sabihin, ang hindi gumagamit nito ay nauunahan ng gumagamit. Tinuturo ng page na ito kung paano isasama ang AI sa craft mo: coding agents, open-source at local models, AI image at video, at automation. May apat na ugali rito na siyang nagpapatalas sa output, sa halip na maging generic. Bawat claim ay may link sa pinagmulan. Ikaw pa rin ang may hawak ng resulta.",
+      "reviewed": false
+    },
+    "/legit": {
+      "tl": "Kapag tumagal ka na sa online work, dumarating ang tanong: paano ako magiging legal? Dito iyon nakasulat nang kalmado. Magpaparehistro ka sa BIR bilang self-employed professional, pipili kung paano ka bubuwisan (madalas ang 8% option ang pinakasimple), mag-iisyu ng invoice, at magpa-file kada quarter. Puwede ka ring maging miyembro ng SSS, PhilHealth, at Pag-IBIG kahit walang employer. Huling bahagi: ang payment rail. Malaki ang pinagkaiba ng dumarating na piso depende sa dinaanan ng pera mo.",
+      "reviewed": false
+    },
+    "/salary": {
+      "tl": "Magkano ba ang kinikita sa online work? Ang tapat na sagot: walang malinis na datos. Karamihan ng \"salary guide\" sa internet ay galing sa kumpanyang nagbebenta ng staffing o training, at walang inilalabas na method. Kaya nga tinatawag naming vendor-grade ang mga ito, at ipinapakita kung saan sila nagkakasalungatan. Ang mapagkakatiwalaan mo: buhay na job posts. Nandito rin ang pagkakaiba ng hourly, per-project, at retainer, at kung paano ka magpe-presyo gamit ang ebidensya.",
+      "reviewed": false
+    },
+    "/markets": {
+      "tl": "Saan ba nakatira ang mga kliyente mo? Karamihan sa US, UK at EU, Australia, Middle East, Canada, at ilang bansa sa Asya. Magkaiba sila sa bayad, sa kultura ng trabaho, at sa industriyang naghahanap. Pero ang unang dapat mong tingnan ay ang oras. Nasa UTC+8 tayo, kaya may mga market na kailangan mong gumising nang madaling-araw at may iba namang halos kapareho ng schedule mo. Nandito ang math ng overlap hours, para pumili ka nang may alam.",
+      "reviewed": false
+    },
+    "/languages": {
+      "tl": "Ang English ang nagpapa-hire sa'yo. Ang pangalawang wika ang nagpapataas ng bayad. Hindi dahil mas mahirap ang trabaho, kundi dahil kakaunti ang kandidatong marunong, at kakaunting kalaban ang tanging bagay na palagiang nagpapataas ng rate. Walang mapagkakatiwalaang datos sa bilingual pay, kaya wala kaming binabanggit na numero. Sa halip, magbasa ka ng buhay na job posts na naghahanap ng Japanese, Korean, o Mandarin, at ikaw mismo ang makakakita ng premium. Nandito kung saan mag-aaral nang libre.",
+      "reviewed": false
+    },
+    "/resources": {
+      "tl": "Ito ang libreng shelf: mga kursong walang bayad, programa ng gobyerno, opisyal na docs, at YouTube channel na may aktwal na saysay. Pero hindi listahan lang ito. Nandito rin kung paano mo huhusgahan ang isang libreng kurso bago mo ubusin ang isang linggo dito: sino ang gumawa, kailan huling na-update, at may aktwal bang ginagawa ka. At ang pinakamahalaga: paano mo gagawing patunay ang pinag-aralan mo, hindi lang certificate na walang kasamang output.",
+      "reviewed": false
+    },
+    "/portfolio": {
+      "tl": "May hagdan ang bawat niche. Nasa ibaba ang libreng tool na kaya mong buksan ngayon din. Nasa gitna ang tool na inaasahan ng kliyente. Nasa taas ang bayad na tool na nagtatakda ng rate mo. Hindi mo binibili ang pag-akyat, ginagawa mo. Sa bawat baitang, may natatapos kang aktwal na piraso: isang malinis na dataset, isang gumaganang dashboard, isang tapos na edit. Iyon ang portfolio mo, hindi ang listahan ng software na alam mong buksan.",
+      "reviewed": false
+    }
+  }
+}

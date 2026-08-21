@@ -1,0 +1,1209 @@
+{
+  "lastVerified": "2026-08",
+  "routes": {
+    "/start": {
+      "questions": [
+        {
+          "id": "start-1",
+          "type": "choice",
+          "prompt": "You have no client and no paid experience. What is the fastest way to show someone you can do the work?",
+          "options": [
+            {
+              "text": "Finish one micro-task and keep the output as a portfolio piece.",
+              "correct": true,
+              "why": "Stage 1 wants proof, not promises. A micro-task ends as a real piece you can send today."
+            },
+            {
+              "text": "Download a resume template and change the name on it.",
+              "correct": false,
+              "why": "A template makes you identical to thousands of applicants and stops helping the moment the job differs."
+            },
+            {
+              "text": "Wait until you have finished a certificate course.",
+              "correct": false,
+              "why": "A certificate is a receipt that says you attended. Clients hire evidence that you can do the work."
+            },
+            {
+              "text": "Write that you are hardworking and a fast learner.",
+              "correct": false,
+              "why": "Every applicant writes that, and nothing in it can be checked. Show one thing you built instead."
+            }
+          ]
+        },
+        {
+          "id": "start-2",
+          "type": "choice",
+          "prompt": "Stage 1 sends you to learn how to learn before you touch a single tool. Why put that first?",
+          "options": [
+            {
+              "text": "Most study habits feel productive and quietly fail, so a protocol built on evidence saves months.",
+              "correct": true,
+              "why": "The techniques that feel most productive are usually the least effective. Knowing the difference is the leverage."
+            },
+            {
+              "text": "Because lessons only stick when they match your learning style.",
+              "correct": false,
+              "why": "Reviews of the evidence found no benefit from matching instruction to a claimed style. The material decides the format."
+            },
+            {
+              "text": "Because you should finish every course before you open a real tool.",
+              "correct": false,
+              "why": "Input without building is tutorial hell. Cap the watching, then make something real and broken."
+            },
+            {
+              "text": "Because tools change, so learning any of them is wasted time.",
+              "correct": false,
+              "why": "Tools matter. The point is owning a method that lets you pick up any of them fast."
+            }
+          ]
+        },
+        {
+          "id": "start-3",
+          "type": "reveal",
+          "prompt": "Stage 1 says no degree, no experience and no capital are needed. Think first: so what is the requirement?",
+          "answer": "Dedication to learning, plus a working setup. Age and experience are not the gate. The gate is whether you keep going and finish something real, starting with one micro-task."
+        }
+      ]
+    },
+    "/get-hired": {
+      "questions": [
+        {
+          "id": "get-hired-1",
+          "type": "choice",
+          "prompt": "You sent forty applications and heard nothing back. Stage 2 says most offers are lost to which of these?",
+          "options": [
+            {
+              "text": "Silence, because nobody followed up after the application.",
+              "correct": true,
+              "why": "Most offers are lost to silence, not rejection. The follow-up radar in the tracker exists for this."
+            },
+            {
+              "text": "A resume that did not look designed enough.",
+              "correct": false,
+              "why": "Design is not what loses the reply. A pipeline with no follow-up is."
+            },
+            {
+              "text": "Asking for a rate that was too high.",
+              "correct": false,
+              "why": "You rarely get far enough to discuss rate. The gap is earlier, in the follow-up."
+            },
+            {
+              "text": "Applying to too many roles at the same time.",
+              "correct": false,
+              "why": "Volume is not the problem. Untracked volume with no follow-up is."
+            }
+          ]
+        },
+        {
+          "id": "get-hired-2",
+          "type": "choice",
+          "prompt": "A job post already has three hundred applicants. What does the Find Work method tell you to do instead of joining the queue?",
+          "options": [
+            {
+              "text": "Reverse-source: find businesses that have the problem you solve, before they write a post.",
+              "correct": true,
+              "why": "A post means the fight already started. The pain that leads to hiring is where the competition is thinnest."
+            },
+            {
+              "text": "Bid below everyone else so your proposal stands out.",
+              "correct": false,
+              "why": "That is the race to the bottom, and the prize is the bottom. Compete on a provable outcome."
+            },
+            {
+              "text": "Send the same proposal again every few days until someone replies.",
+              "correct": false,
+              "why": "Repetition is not follow-up. Build a second source of leads instead of pushing on a closed door."
+            },
+            {
+              "text": "Wait for a fresher post on the same board tomorrow.",
+              "correct": false,
+              "why": "Waiting for boards is what everyone else does. A pipeline you run beats a board you watch."
+            }
+          ]
+        },
+        {
+          "id": "get-hired-3",
+          "type": "reveal",
+          "prompt": "You have no paid experience yet. Think first: what goes in the experience section of your application, and why does it count?",
+          "answer": "A micro-task you finished and can show. Present it as real work: the problem, what you did, and the result. Proof beats promises, and a finished piece is proof anyone can check."
+        }
+      ]
+    },
+    "/deliver": {
+      "questions": [
+        {
+          "id": "deliver-1",
+          "type": "choice",
+          "prompt": "Your first week with a new client is described as your audition. What is it mainly testing?",
+          "options": [
+            {
+              "text": "Whether you are organised, responsive, and show up.",
+              "correct": true,
+              "why": "The first week is not about being perfect. It is about being someone the client never has to chase."
+            },
+            {
+              "text": "Whether you can finish the whole project ahead of schedule.",
+              "correct": false,
+              "why": "Speed in week one proves little. Reliability and a system prove you can be trusted with more."
+            },
+            {
+              "text": "Whether you can work through it without asking anything.",
+              "correct": false,
+              "why": "Silence is not competence. A stated assumption with a deadline beats guessing quietly."
+            },
+            {
+              "text": "Whether you already know every tool in their stack.",
+              "correct": false,
+              "why": "Nobody expects that. They expect you to learn a tool fast and say where you are."
+            }
+          ]
+        },
+        {
+          "id": "deliver-2",
+          "type": "choice",
+          "prompt": "A client's overnight data import failed and reports will be wrong until it is cleaned. Which message reads as a professional?",
+          "options": [
+            {
+              "text": "One line on what happened, your read of it, the fix you propose, and a deadline to object.",
+              "correct": true,
+              "why": "Situation, background, assessment, recommendation. Ending with a recommendation makes you the person who solved it."
+            },
+            {
+              "text": "\"The import isn't working. Please advise.\"",
+              "correct": false,
+              "why": "An open question hands the problem back and reads like you need supervision."
+            },
+            {
+              "text": "Say nothing yet and keep retrying until it works.",
+              "correct": false,
+              "why": "Never let a client discover a problem you already knew about. That is how trust ends."
+            },
+            {
+              "text": "\"Sorry to bother you, should I just try again?\"",
+              "correct": false,
+              "why": "Reflex apology plus a question. Recommend the fix instead and invite a correction."
+            }
+          ]
+        },
+        {
+          "id": "deliver-3",
+          "type": "reveal",
+          "prompt": "You have now done the same client task twice, the same way. Think first: what does Stage 3 tell you to do next?",
+          "answer": "Write it down as an SOP, in your own words. Anything you do twice becomes a system, so you never explain it twice and the client can see the process you own."
+        }
+      ]
+    },
+    "/level-up": {
+      "questions": [
+        {
+          "id": "level-up-1",
+          "type": "choice",
+          "prompt": "Why does a second language such as Japanese, Korean, or Mandarin move your rate?",
+          "options": [
+            {
+              "text": "Bilingual roles draw from a far thinner pool of candidates.",
+              "correct": true,
+              "why": "Thinner competition is the thing that reliably moves a rate. Read live bilingual posts and see it yourself."
+            },
+            {
+              "text": "Clients pay a published premium of about forty percent for bilingual work.",
+              "correct": false,
+              "why": "Nobody publishes trustworthy bilingual pay data. A precise premium like that was invented, not counted."
+            },
+            {
+              "text": "A language certificate replaces the need for a portfolio.",
+              "correct": false,
+              "why": "A certificate proves a level, not a result. Clients still want to see the work."
+            },
+            {
+              "text": "It lets you apply across every market at once.",
+              "correct": false,
+              "why": "Language stacks onto one niche and one market. Splitting focus is what stalls people."
+            }
+          ]
+        },
+        {
+          "id": "level-up-2",
+          "type": "choice",
+          "prompt": "Stage 4 says systemize anything you do twice and automate anything a machine can do. What has to come first?",
+          "options": [
+            {
+              "text": "Do the process by hand once, so you know what correct looks like.",
+              "correct": true,
+              "why": "You cannot automate a process you do not understand. Manual first, then let the machine take the boring part."
+            },
+            {
+              "text": "Buy the automation tool, then learn the process inside it.",
+              "correct": false,
+              "why": "The tool teaches you its buttons, not the process. You end up owning neither."
+            },
+            {
+              "text": "Automate immediately and learn the process from the output.",
+              "correct": false,
+              "why": "You cannot spot a wrong output if you have never seen a right one."
+            },
+            {
+              "text": "Hand the whole process to AI and ship what it returns.",
+              "correct": false,
+              "why": "Unchecked output ships under your name. You are the quality bar, always."
+            }
+          ]
+        },
+        {
+          "id": "level-up-3",
+          "type": "reveal",
+          "prompt": "You are solid in your niche and want a higher rate. Think first: what three moves does Stage 4 put in front of you?",
+          "answer": "Specialise deeper into one niche, automate the repetitive middle, and add a premium capability such as a language. Then teach it back, because teaching finds the gaps you cannot see on your own."
+        }
+      ]
+    },
+    "/own": {
+      "questions": [
+        {
+          "id": "own-1",
+          "type": "choice",
+          "prompt": "Stage 5 names three assets no platform can revoke. Which set is it?",
+          "options": [
+            {
+              "text": "Direct client relationships, provable registered income, and a name people vouch for.",
+              "correct": true,
+              "why": "Those three travel with you. Everything else sits on somebody else's platform."
+            },
+            {
+              "text": "A high job success score on one marketplace.",
+              "correct": false,
+              "why": "A platform score lives on the platform. It can be suspended, and it does not travel."
+            },
+            {
+              "text": "A large folder of saved templates and resources.",
+              "correct": false,
+              "why": "A resource you have not used is potential, not progress. Four hundred saved links teach nothing."
+            },
+            {
+              "text": "A five-star rating from your first client.",
+              "correct": false,
+              "why": "One rating is a nice start, not an asset. It cannot be moved or built on."
+            }
+          ]
+        },
+        {
+          "id": "own-2",
+          "type": "choice",
+          "prompt": "The GIVE method says the fastest way into any professional community is which of these?",
+          "options": [
+            {
+              "text": "Put real value into it before you ask anything from it.",
+              "correct": true,
+              "why": "One scoped pro-bono project, one written answer to a beginner. Referrals start arriving before job posts do."
+            },
+            {
+              "text": "Post your rate card and availability every week.",
+              "correct": false,
+              "why": "That is asking, dressed as sharing. Answer a real question first and be the person people tag."
+            },
+            {
+              "text": "Ask the experienced members to send you their templates.",
+              "correct": false,
+              "why": "Never ask for the file. Ask how it is built, and you keep something a file cannot give you."
+            },
+            {
+              "text": "Wait until you are senior enough to have something to say.",
+              "correct": false,
+              "why": "Teach what you just learned. The person one step behind you needs exactly that."
+            }
+          ]
+        },
+        {
+          "id": "own-3",
+          "type": "reveal",
+          "prompt": "Think first: should you register with the BIR in your first week of online work, or later? And why?",
+          "answer": "Later. Set it up in your first three paid months, not your first week. Earn first, then make it official. It is a system you set up once, then a few hours per quarter."
+        }
+      ]
+    },
+    "/method": {
+      "questions": [
+        {
+          "id": "method-1",
+          "type": "choice",
+          "prompt": "You need a document you have never built and there is no template for it. What does DECONSTRUCT tell you to do?",
+          "options": [
+            {
+              "text": "Collect five real examples, extract what they share, write the rules, then build from the rules with the examples closed.",
+              "correct": true,
+              "why": "What every example shares is the function. What differs is the judgment. Rules give you both."
+            },
+            {
+              "text": "Find the closest template and edit the parts that do not fit.",
+              "correct": false,
+              "why": "A template stops helping the moment the situation shifts, and you learn nothing you can reuse."
+            },
+            {
+              "text": "Ask someone experienced to send you theirs.",
+              "correct": false,
+              "why": "Never ask for the file. A file solves today; a method solves every tomorrow."
+            },
+            {
+              "text": "Copy the strongest single example and change the names.",
+              "correct": false,
+              "why": "Copying the artifact skips the judgment. You cannot adapt what you do not understand."
+            }
+          ]
+        },
+        {
+          "id": "method-2",
+          "type": "choice",
+          "prompt": "A course promises guaranteed income and wants your decision today. Which VET move does the most work here?",
+          "options": [
+            {
+              "text": "Ask who profits if you believe it, then run the red-flag check.",
+              "correct": true,
+              "why": "Follow the incentive first. Guaranteed income plus urgency is two hard stops on the same page."
+            },
+            {
+              "text": "Check whether the seller sounds confident and successful.",
+              "correct": false,
+              "why": "Confidence is not accuracy. Screenshots and lifestyle are not evidence."
+            },
+            {
+              "text": "Read the comments to see if it worked for others.",
+              "correct": false,
+              "why": "Comments on a seller's own page are not independent. Triangulate across sources with no stake."
+            },
+            {
+              "text": "Decide whether the price is low enough to risk.",
+              "correct": false,
+              "why": "Cost is not the test. Discomfort is a signal to start, not a reason to spend."
+            }
+          ]
+        },
+        {
+          "id": "method-3",
+          "type": "reveal",
+          "prompt": "You have been stuck on the same problem for two hours. Think first: what does UNSTICK have you do before you ask anyone?",
+          "answer": "Re-read the actual requirement word for word, shrink the problem to the smallest failing piece, change one thing at a time, and say it out loud. Then time-box it, and if you are still stuck, ask well."
+        }
+      ]
+    },
+    "/learn": {
+      "questions": [
+        {
+          "id": "learn-1",
+          "type": "choice",
+          "prompt": "Rereading your notes feels like it is working. Why does it fail anyway?",
+          "options": [
+            {
+              "text": "Familiarity is not recall. You can recognise the answer on the page and still not produce it from a blank one.",
+              "correct": true,
+              "why": "Recognition and retrieval are different skills, and only retrieval gets tested on the job."
+            },
+            {
+              "text": "You are reading too quickly for it to sink in.",
+              "correct": false,
+              "why": "Speed is not the issue. Rereading at any pace strengthens nothing new."
+            },
+            {
+              "text": "Notes are always weaker than the original source.",
+              "correct": false,
+              "why": "The source has the same problem. Reading it again is still recognition, not retrieval."
+            },
+            {
+              "text": "It only works when the notes match your learning style.",
+              "correct": false,
+              "why": "No controlled study found a benefit from matching instruction to a claimed style."
+            }
+          ]
+        },
+        {
+          "id": "learn-2",
+          "type": "choice",
+          "prompt": "You have a list of isolated facts to hold in memory. Which technique fits that material?",
+          "options": [
+            {
+              "text": "Retrieval practice: close the notes and produce them from memory, then check.",
+              "correct": true,
+              "why": "Isolated facts get retrieval practice. The material decides the technique, not the learner."
+            },
+            {
+              "text": "Draw a diagram of them, because you are a visual learner.",
+              "correct": false,
+              "why": "Style is not the variable. A fact with no structure gains nothing from a diagram."
+            },
+            {
+              "text": "Highlight them in three colours as you read.",
+              "correct": false,
+              "why": "Highlighting decides what matters; it does not learn it. Turn it into a question instead."
+            },
+            {
+              "text": "Reread them the night before you need them.",
+              "correct": false,
+              "why": "Cramming loads short-term memory, which decays fast however it got in there."
+            }
+          ]
+        },
+        {
+          "id": "learn-3",
+          "type": "reveal",
+          "prompt": "You have twenty-five minutes today and nobody to check your work. Think first: what is the highest-payoff thing you can do?",
+          "answer": "One retrieval sprint: close the material, write everything you remember, then check what you missed. Then build a feedback loop, either an AI critique against a rubric you wrote first, or teaching it back to a beginner."
+        }
+      ]
+    },
+    "/reality": {
+      "questions": [
+        {
+          "id": "reality-1",
+          "type": "choice",
+          "prompt": "Your gig pays five dollars an hour. Why is that not five dollars for every hour you really spend?",
+          "options": [
+            {
+              "text": "Roughly a quarter of working time goes unpaid: searching, tests, vetting, and proposals nobody answers.",
+              "correct": true,
+              "why": "About twenty unpaid minutes ride on every paid hour, before fees, electricity, and tax."
+            },
+            {
+              "text": "The platform fee is the only real deduction.",
+              "correct": false,
+              "why": "The fee is real and it is the smaller half. Unpaid searching and proposals cost more of your time."
+            },
+            {
+              "text": "Nothing is missing. Five dollars an hour is five dollars an hour.",
+              "correct": false,
+              "why": "Only the billed hour pays. The unbilled minutes around it were still your working day."
+            },
+            {
+              "text": "Currency conversion takes about a quarter of it.",
+              "correct": false,
+              "why": "The rail moves your rate a little. It does not create the unpaid quarter."
+            }
+          ],
+          "source": {
+            "label": "ILO, Digital labour platforms and the future of work (2018), surveys 2015–2017",
+            "url": "https://www.ilo.org/media/414716/download"
+          }
+        },
+        {
+          "id": "reality-2",
+          "type": "choice",
+          "prompt": "A coach promises you will land your first client in ten to fourteen days. How should you read that number?",
+          "options": [
+            {
+              "text": "As invented, because nobody has measured time-to-first-client anywhere.",
+              "correct": true,
+              "why": "It was chosen because it converts, not because it was counted. Plan a runway, not a date."
+            },
+            {
+              "text": "As a fair average to plan your savings around.",
+              "correct": false,
+              "why": "There is no average. Building a budget on an unmeasured number is how people run out of runway."
+            },
+            {
+              "text": "As true for people who apply full-time.",
+              "correct": false,
+              "why": "Adding a condition does not create data. No version of the number was ever measured."
+            },
+            {
+              "text": "As out of date but roughly the right shape.",
+              "correct": false,
+              "why": "There is no older, better version either. A number with no origin is not evidence at all."
+            }
+          ]
+        },
+        {
+          "id": "reality-3",
+          "type": "reveal",
+          "prompt": "Someone shows you that writing job posts fell twenty-eight percent. Think first: what one question changes how you read it?",
+          "answer": "Compared to what. All job postings fell eight percent that year, so minus eight is the real zero. Half the panic online is a number with its baseline quietly removed.",
+          "source": {
+            "label": "Bloomberry, I analyzed 180M jobs",
+            "url": "https://bloomberry.com/blog/i-analyzed-180m-jobs-to-see-what-jobs-ai-is-actually-replacing-today/"
+          }
+        }
+      ]
+    },
+    "/conduct": {
+      "questions": [
+        {
+          "id": "conduct-1",
+          "type": "choice",
+          "prompt": "A friend suggests a mouse jiggler so your tracker never shows idle time. What is the documented risk?",
+          "options": [
+            {
+              "text": "Dismissal for cause, and in a regulated industry the stated reason follows you on a public record.",
+              "correct": true,
+              "why": "Wells Fargo dismissed more than a dozen people over simulated keyboard activity. The record is searchable."
+            },
+            {
+              "text": "A warning, if the client happens to notice.",
+              "correct": false,
+              "why": "It is the single fastest way to be fired for cause, not a first-offence conversation."
+            },
+            {
+              "text": "Nothing, as long as the work gets finished.",
+              "correct": false,
+              "why": "Finishing the work does not make a falsified timesheet honest. It is billed time you did not work."
+            },
+            {
+              "text": "You only lose the platform's payment protection.",
+              "correct": false,
+              "why": "You lose far more than protection. A two-hundred-peso device cost people their industry record."
+            }
+          ],
+          "source": {
+            "label": "Bloomberg / Banking Dive",
+            "url": "https://www.bankingdive.com/news/wells-fires-employees-faking-productivity-finra/719033/"
+          }
+        },
+        {
+          "id": "conduct-2",
+          "type": "choice",
+          "prompt": "Lawyers were fined over AI-invented citations in a court filing. What was the offence they were punished for?",
+          "options": [
+            {
+              "text": "Shipping the output without checking it before their names went on it.",
+              "correct": true,
+              "why": "None were punished for using AI. Concealment and unverified work are the two firing offences."
+            },
+            {
+              "text": "Using AI on the work at all.",
+              "correct": false,
+              "why": "AI use is usually fine when disclosed and verified. The tool was never the problem."
+            },
+            {
+              "text": "Failing to name which model produced the draft.",
+              "correct": false,
+              "why": "Disclose when asked or required. What sank them was the unchecked claims, not the missing model name."
+            },
+            {
+              "text": "Delivering the work faster than expected.",
+              "correct": false,
+              "why": "Speed is not an offence. Confident and wrong, under your signature, is."
+            }
+          ],
+          "source": {
+            "label": "AI Hallucination Cases database (Damien Charlotin, HEC Paris)",
+            "url": "https://www.damiencharlotin.com/hallucinations/"
+          }
+        },
+        {
+          "id": "conduct-3",
+          "type": "reveal",
+          "prompt": "A client's customer list sits on your laptop in Cebu and there is no processing agreement. Think first: what should you do?",
+          "answer": "Ask them for one. The Data Privacy Act covers a person processing personal information on equipment in the Philippines, so the exposure is yours too. Asking protects you; not asking is the risk.",
+          "source": {
+            "label": "National Privacy Commission",
+            "url": "https://privacy.gov.ph/data-privacy-act/"
+          }
+        }
+      ]
+    },
+    "/english": {
+      "questions": [
+        {
+          "id": "english-1",
+          "type": "choice",
+          "prompt": "Filipino writing scores 603 of 800 on the EF index. So what still makes a fluent client message read as junior?",
+          "options": [
+            {
+              "text": "Hedges, reflex apologies, and deference markers. Habits, not grammar.",
+              "correct": true,
+              "why": "Every one of them is fluent, polite, correct English. That is exactly why they are hard to see."
+            },
+            {
+              "text": "Grammar mistakes a checker would flag.",
+              "correct": false,
+              "why": "The score says grammar is not your problem. Nobody needs to fix it."
+            },
+            {
+              "text": "Vocabulary that is too simple for business.",
+              "correct": false,
+              "why": "Senior people write simply. Aim for a lower reading grade, not a higher one."
+            },
+            {
+              "text": "An accent that carries through into your writing.",
+              "correct": false,
+              "why": "Writing carries no accent. It carries how you frame requests, refusals, and status."
+            }
+          ],
+          "source": {
+            "label": "EF English Proficiency Index 2025, Philippines",
+            "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/"
+          }
+        },
+        {
+          "id": "english-2",
+          "type": "choice",
+          "prompt": "You are escalating a failed import to a client. Under SBAR, how should the message end?",
+          "options": [
+            {
+              "text": "With a recommendation and a window to object, not a question.",
+              "correct": true,
+              "why": "The R is the whole point. A recommendation makes you the professional who solved it."
+            },
+            {
+              "text": "With \"please advise\".",
+              "correct": false,
+              "why": "That hands the problem back and makes it theirs again."
+            },
+            {
+              "text": "With an apology for the trouble it caused.",
+              "correct": false,
+              "why": "Save sorry for what you broke. Apologising for existing trains the client to see a subordinate."
+            },
+            {
+              "text": "With every detail you gathered, in order.",
+              "correct": false,
+              "why": "Background is one line, and nothing more. Detail without a recommendation is still an unanswered problem."
+            }
+          ],
+          "source": {
+            "label": "SBAR, Institute for Healthcare Improvement",
+            "url": "https://www.ihi.org/library/tools/sbar-tool-situation-background-assessment-recommendation"
+          }
+        },
+        {
+          "id": "english-3",
+          "type": "reveal",
+          "prompt": "A client asks how long a task will take. Think first: why is \"three days\" a weaker answer than a range?",
+          "answer": "A single number is a promise you will break. \"Three to five days, assuming the API docs are accurate\" is a professional judgment, and when the assumption turns out false you were right rather than late."
+        }
+      ]
+    },
+    "/indispensable": {
+      "questions": [
+        {
+          "id": "indispensable-1",
+          "type": "choice",
+          "prompt": "The fastest-rising skills list for 2026 is half people skills and judgment. What does that tell you to build?",
+          "options": [
+            {
+              "text": "The human half, trust, taste, and communication, on top of a real craft.",
+              "correct": true,
+              "why": "Those are the things a model is structurally bad at, and they are rising in value, not falling."
+            },
+            {
+              "text": "Only technical AI skills, since that is the other half of the list.",
+              "correct": false,
+              "why": "AI skills with no craft underneath have nothing to multiply. The premium lands on expertise."
+            },
+            {
+              "text": "Nothing in particular, since skill lists change every year.",
+              "correct": false,
+              "why": "The shape has held across several years and several sources. Ignoring it keeps you on the falling floor."
+            },
+            {
+              "text": "A longer list of tools on your profile.",
+              "correct": false,
+              "why": "Tools are table stakes now. Judgment and relationships are what a client cannot replace."
+            }
+          ],
+          "source": {
+            "label": "LinkedIn, Skills on the Rise 2026",
+            "url": "https://news.linkedin.com/2026/Skills-on-the-rise-2026"
+          }
+        },
+        {
+          "id": "indispensable-2",
+          "type": "choice",
+          "prompt": "Budgets tighten and the client must cut someone. Who do they keep?",
+          "options": [
+            {
+              "text": "The person whose loss would cost them more than keeping them.",
+              "correct": true,
+              "why": "Nobody is un-fireable. Being expensive to lose is a position you can build on purpose."
+            },
+            {
+              "text": "The cheapest person on the roster.",
+              "correct": false,
+              "why": "Clients do not keep the cheapest. They keep the one who makes their results better."
+            },
+            {
+              "text": "Whoever finishes individual tasks fastest.",
+              "correct": false,
+              "why": "Task speed is replaceable. Owning an outcome end to end is not."
+            },
+            {
+              "text": "Whoever holds the most certificates.",
+              "correct": false,
+              "why": "Certificates record attendance. Reliability, trust, and results decide who stays."
+            }
+          ]
+        },
+        {
+          "id": "indispensable-3",
+          "type": "reveal",
+          "prompt": "You finished exactly what you were asked to do. Think first: what turns \"it's done\" into \"this person is a partner\"?",
+          "answer": "Owning the outcome. Report whether it worked, say what you would do next, and bring the fix before you are asked. \"It's done\" is a worker. \"It worked, and here is what I'd do next\" is a partner."
+        }
+      ]
+    },
+    "/ai-first": {
+      "questions": [
+        {
+          "id": "ai-first-1",
+          "type": "choice",
+          "prompt": "Freelancers doing AI work were measured earning 34% more per hour. Where does that premium land?",
+          "options": [
+            {
+              "text": "On people who already had deep expertise and then layered AI on top of it.",
+              "correct": true,
+              "why": "The multiplier needs something to multiply. A fast lever with nothing on the other end moves nothing."
+            },
+            {
+              "text": "On anyone who learns to write good prompts.",
+              "correct": false,
+              "why": "There are already thousands of them competing on price, on the floor the same data describes."
+            },
+            {
+              "text": "On whoever is using the newest model.",
+              "correct": false,
+              "why": "The tools change every few months. The premium follows the craft, not the release notes."
+            },
+            {
+              "text": "On people who keep their AI use hidden from clients.",
+              "correct": false,
+              "why": "Concealment ends reputations. Most clients now expect AI and will ask how you use it."
+            }
+          ],
+          "source": {
+            "label": "Upwork, In-Demand Skills 2026",
+            "url": "https://investors.upwork.com/news-releases/news-release-details/upworks-demand-skills-2026-demand-top-ai-skills-more-doubles-ai"
+          }
+        },
+        {
+          "id": "ai-first-2",
+          "type": "choice",
+          "prompt": "Of the four AI-fluency habits, which one is the AI premium really paying for?",
+          "options": [
+            {
+              "text": "Discernment: telling good output from confident nonsense.",
+              "correct": true,
+              "why": "Anyone can generate. Reading a draft as the client's harshest critic is the scarce part."
+            },
+            {
+              "text": "Description: writing a longer, more detailed prompt.",
+              "correct": false,
+              "why": "A good brief matters. Judging what comes back is what a client cannot do without you."
+            },
+            {
+              "text": "Delegation: handing over as much of the job as possible.",
+              "correct": false,
+              "why": "Delegation is deciding what to keep. Handing over the judgment is the mistake."
+            },
+            {
+              "text": "Diligence: putting in more hours than the next person.",
+              "correct": false,
+              "why": "Diligence means checking facts and protecting data, not adding hours."
+            }
+          ],
+          "source": {
+            "label": "Anthropic, AI Fluency: Framework & Foundations (open)",
+            "url": "https://www.anthropic.com/ai-fluency/overview"
+          }
+        },
+        {
+          "id": "ai-first-3",
+          "type": "reveal",
+          "prompt": "A client's customer spreadsheet needs cleaning and you want AI to speed it up. Think first: what must you settle before you paste anything?",
+          "answer": "Their AI policy, in writing, and where their data is allowed to go. If it cannot leave their systems, run an open model locally. Never paste client data into a tool you have not cleared with them."
+        }
+      ]
+    },
+    "/legit": {
+      "questions": [
+        {
+          "id": "legit-1",
+          "type": "choice",
+          "prompt": "What does registering with the BIR buy you that matters most to a larger client?",
+          "options": [
+            {
+              "text": "You become invoice-capable, so a company can book you as a supplier.",
+              "correct": true,
+              "why": "That single capability moves you from favour to supplier, and suppliers negotiate."
+            },
+            {
+              "text": "A higher rate, automatically.",
+              "correct": false,
+              "why": "Registration does not set your rate. It opens the contracts that need a real invoice."
+            },
+            {
+              "text": "Protection from clients who do not pay.",
+              "correct": false,
+              "why": "Written scope, milestones, and escrow protect payment. Registration is about standing."
+            },
+            {
+              "text": "Exemption from paying income tax.",
+              "correct": false,
+              "why": "It is the opposite. You register in order to file; the 8% option simply makes the maths simple."
+            }
+          ],
+          "source": {
+            "label": "BIR: official site and forms",
+            "url": "https://www.bir.gov.ph"
+          }
+        },
+        {
+          "id": "legit-2",
+          "type": "choice",
+          "prompt": "Same $500 invoice, two transfer rails. How do you find out which one pays you more?",
+          "options": [
+            {
+              "text": "Receive a real invoice through both once, and write down what landed in pesos.",
+              "correct": true,
+              "why": "Ten minutes of arithmetic, once a year, protects every future invoice. No fee table beats your own receipt."
+            },
+            {
+              "text": "Compare the published fee tables online.",
+              "correct": false,
+              "why": "Fees and spreads change too often to print. The table is stale before you read it."
+            },
+            {
+              "text": "Use whichever rail the client already prefers.",
+              "correct": false,
+              "why": "That is convenience for them. The conversion spread comes out of your side."
+            },
+            {
+              "text": "Pick the one with no upfront fee.",
+              "correct": false,
+              "why": "A disclosed upfront fee often beats a hidden conversion spread. Compare what lands, not what is charged."
+            }
+          ]
+        },
+        {
+          "id": "legit-3",
+          "type": "reveal",
+          "prompt": "Think first: when does Get Legit say to set up registration, benefits, and a payment rail, and why not sooner?",
+          "answer": "In your first three paid months, not your first week. Earn first, then make it official. It is a system you set up once, then a few hours per quarter, not a tax on starting."
+        }
+      ]
+    },
+    "/salary": {
+      "questions": [
+        {
+          "id": "salary-1",
+          "type": "choice",
+          "prompt": "One guide puts an entry support role at ₱18k–31k a month. A viral reel says ₱90k+. What do you do?",
+          "options": [
+            {
+              "text": "Distrust both and read ten live posts in your exact niche this week.",
+              "correct": true,
+              "why": "Live posts are data. Guides and reels are opinion with a chart on it."
+            },
+            {
+              "text": "Average the two and work from the middle.",
+              "correct": false,
+              "why": "Averaging two unsourced numbers produces a third unsourced number."
+            },
+            {
+              "text": "Take the higher one and aim high.",
+              "correct": false,
+              "why": "The higher one never shows where it came from. That makes it the suspect, not the target."
+            },
+            {
+              "text": "Take the lower one to stay safe.",
+              "correct": false,
+              "why": "Anchoring low is how people stay underpaid. Let live posts set the floor, not fear."
+            }
+          ],
+          "source": {
+            "label": "OnlineJobs.ph, live job listings",
+            "url": "https://www.onlinejobs.ph/jobseekers/jobsearch"
+          }
+        },
+        {
+          "id": "salary-2",
+          "type": "choice",
+          "prompt": "You want stability with the freedom of freelancing. Which engagement shape does the Salary Guide call the goal?",
+          "options": [
+            {
+              "text": "A monthly retainer.",
+              "correct": true,
+              "why": "Predictable income you own, a deep relationship that brings referrals, and the most stable business of one."
+            },
+            {
+              "text": "Full-time with a single client.",
+              "correct": false,
+              "why": "Steady, but one income source, capped by their budget, and in practice it becomes a remote job."
+            },
+            {
+              "text": "Hourly work on a marketplace.",
+              "correct": false,
+              "why": "You are paid for time, not results, so getting faster earns you nothing."
+            },
+            {
+              "text": "Fixed-fee projects only.",
+              "correct": false,
+              "why": "Speed pays, and income is lumpy while scope creep eats the margin."
+            }
+          ]
+        },
+        {
+          "id": "salary-3",
+          "type": "reveal",
+          "prompt": "Before you compare a five-dollar-an-hour gig to a local salary, think first: what has to come off the top?",
+          "answer": "The unpaid searching and proposal time, the platform fee, your electricity and internet, and your tax. A five-dollar gig is not five dollars in your pocket. Do that arithmetic before you resign from anything."
+        }
+      ]
+    },
+    "/markets": {
+      "questions": [
+        {
+          "id": "markets-1",
+          "type": "choice",
+          "prompt": "Which client market gives a Philippine-based professional almost a full workday of overlap?",
+          "options": [
+            {
+              "text": "Australia and New Zealand.",
+              "correct": true,
+              "why": "About two to five hours ahead of PH. Your morning is their late morning."
+            },
+            {
+              "text": "The United States.",
+              "correct": false,
+              "why": "About twelve to sixteen hours behind. Real-time work there means a night shift."
+            },
+            {
+              "text": "The United Kingdom.",
+              "correct": false,
+              "why": "About six to eight hours behind. Your afternoon meets their morning, which is better, not full."
+            },
+            {
+              "text": "Canada.",
+              "correct": false,
+              "why": "The same night-shift reality as the US, often with a warmer tone."
+            }
+          ]
+        },
+        {
+          "id": "markets-2",
+          "type": "choice",
+          "prompt": "A US client offers the highest rate you have seen, live hours only. What does the Markets page tell you to weigh?",
+          "options": [
+            {
+              "text": "Whether you can sustain a night shift for years, not months.",
+              "correct": true,
+              "why": "A great client in the wrong time zone becomes a job you burn out of in six months."
+            },
+            {
+              "text": "Nothing. Take the highest rate on offer.",
+              "correct": false,
+              "why": "The highest rate in the worst time zone is the job you quit, not the job you keep."
+            },
+            {
+              "text": "Whether they might let you go async later on.",
+              "correct": false,
+              "why": "Decide on the hours as offered, and say your working style out loud before you start."
+            },
+            {
+              "text": "Whether your connection can handle daily video calls.",
+              "correct": false,
+              "why": "Necessary, and not the question. The question is the schedule you can keep."
+            }
+          ]
+        },
+        {
+          "id": "markets-3",
+          "type": "reveal",
+          "prompt": "Think first: how do you work out your overlap window with a client before you accept the role?",
+          "answer": "Take their 9am in their own time zone and convert it to Philippine time, which is UTC+8. That is roughly where your overlap sits. Do this before you say yes, not after."
+        }
+      ]
+    },
+    "/languages": {
+      "questions": [
+        {
+          "id": "languages-1",
+          "type": "choice",
+          "prompt": "You want to start a premium language with no money to spend. Where does the page send you first?",
+          "options": [
+            {
+              "text": "A TESDA Language Skills Institute slot or a no-cost public-library course.",
+              "correct": true,
+              "why": "No-cost first, so you test your commitment before you spend anything. Slots are limited, so register early."
+            },
+            {
+              "text": "A paid tutor, so that you take it seriously.",
+              "correct": false,
+              "why": "Paying does not create commitment. Start at no cost, then pay once you know you will continue."
+            },
+            {
+              "text": "Two languages at once, to double your options.",
+              "correct": false,
+              "why": "Pick one. Splitting focus is what stops people reaching a working level in any of them."
+            },
+            {
+              "text": "An app streak, and nothing beyond it.",
+              "correct": false,
+              "why": "An app builds a base. Aim at a recognised level, which is the proof clients trust."
+            }
+          ],
+          "source": {
+            "label": "TESDA Language Skills Institute",
+            "url": "https://www.tesda.gov.ph/about/tesda/39"
+          }
+        },
+        {
+          "id": "languages-2",
+          "type": "choice",
+          "prompt": "Why does the Languages page refuse to quote a bilingual pay premium?",
+          "options": [
+            {
+              "text": "Nobody publishes trustworthy bilingual pay data, so you read live listings instead.",
+              "correct": true,
+              "why": "Where the data does not exist, we say so. A live bilingual posting is the number you can check."
+            },
+            {
+              "text": "Because rates move every month anyway.",
+              "correct": false,
+              "why": "They do move, and the real reason is that there is no trustworthy dataset to move."
+            },
+            {
+              "text": "Because it depends entirely on your certificate level.",
+              "correct": false,
+              "why": "Level matters, and it still would not create data nobody has collected."
+            },
+            {
+              "text": "Because Philippine pay data is confidential.",
+              "correct": false,
+              "why": "It is not secret. Bilingual pay is simply unmeasured."
+            }
+          ]
+        },
+        {
+          "id": "languages-3",
+          "type": "reveal",
+          "prompt": "You have reached conversational Japanese. Think first: what does the page say to do next so it moves your rate?",
+          "answer": "Get to a recognised level, JLPT N4 then N3, because a certificate is proof a client trusts. Then stack the language onto one niche. Language plus a niche is where the biggest jumps happen."
+        }
+      ]
+    },
+    "/resources": {
+      "questions": [
+        {
+          "id": "resources-1",
+          "type": "choice",
+          "prompt": "Before you commit a week to an open course, which question filters hardest?",
+          "options": [
+            {
+              "text": "Does it end in a real artifact I can show someone?",
+              "correct": true,
+              "why": "A course you finish with nothing to show taught you nothing a client can see."
+            },
+            {
+              "text": "Does it come with a certificate at the end?",
+              "correct": false,
+              "why": "A certificate is a receipt that says you attended. A portfolio piece is evidence."
+            },
+            {
+              "text": "Is it long enough to be thorough?",
+              "correct": false,
+              "why": "Length is not value. A short course that ends in a built thing beats a long one that does not."
+            },
+            {
+              "text": "Is it popular in Filipino freelancer groups?",
+              "correct": false,
+              "why": "Popularity is not a filter. Check the source, the date, and what you walk away holding."
+            }
+          ]
+        },
+        {
+          "id": "resources-2",
+          "type": "choice",
+          "prompt": "You find a well-reviewed repackaged copy of a course on a marketplace. What does the shelf tell you?",
+          "options": [
+            {
+              "text": "Go to the institution's or tool maker's own site instead.",
+              "correct": true,
+              "why": "The source version is current, no-cost, and correct. A reseller's copy is usually neither."
+            },
+            {
+              "text": "Buy it, since the reviews are strong.",
+              "correct": false,
+              "why": "Reviews do not refresh stale content. They tell you people liked an old version."
+            },
+            {
+              "text": "Either is fine as long as the syllabus matches.",
+              "correct": false,
+              "why": "A syllabus can match while the content is years out of date, especially for anything with AI in it."
+            },
+            {
+              "text": "Prefer the marketplace, because of the certificate.",
+              "correct": false,
+              "why": "The certificate is not the deliverable. What you built with it is."
+            }
+          ]
+        },
+        {
+          "id": "resources-3",
+          "type": "reveal",
+          "prompt": "You finished three open courses this quarter and have nothing to show. Think first: what went wrong, and what is the fix?",
+          "answer": "Learning without proof is entertainment. Decide the deliverable before you start, build as you go instead of watching first, and use the new skill on a real task within a week."
+        }
+      ]
+    },
+    "/portfolio": {
+      "questions": [
+        {
+          "id": "portfolio-1",
+          "type": "choice",
+          "prompt": "The ladder has three rungs per niche. What do you climb it with?",
+          "options": [
+            {
+              "text": "One real piece at a time, since every rung leaves you something to show.",
+              "correct": true,
+              "why": "Nobody gets hired for owning a tool. They get hired for what they built with it."
+            },
+            {
+              "text": "A subscription to the professional tool.",
+              "correct": false,
+              "why": "You do not buy your way up. You build your way up, and a receipt is not a portfolio piece."
+            },
+            {
+              "text": "A certificate for each tool on the rung.",
+              "correct": false,
+              "why": "A badge is not a piece. The rung is the thing you made with the tool."
+            },
+            {
+              "text": "The longest list of tools you can put on a profile.",
+              "correct": false,
+              "why": "A list of tools is a claim. A finished piece is evidence."
+            }
+          ]
+        },
+        {
+          "id": "portfolio-2",
+          "type": "choice",
+          "prompt": "You are on the Start rung with no card and no budget. What is that rung proving?",
+          "options": [
+            {
+              "text": "That you can produce clean, usable work at all.",
+              "correct": true,
+              "why": "The Start rung is deliberately no-card. Money is not the gate; finished work is."
+            },
+            {
+              "text": "That you can afford the professional tools.",
+              "correct": false,
+              "why": "The whole rung exists so cost cannot be the reason you have nothing to show."
+            },
+            {
+              "text": "That you know every feature of the no-cost tool.",
+              "correct": false,
+              "why": "Features are not the point. One usable piece beats a tour of the menus."
+            },
+            {
+              "text": "That you have earned the right to skip to the Pro rung.",
+              "correct": false,
+              "why": "Each rung leaves a piece behind. Skipping means arriving with nothing to show."
+            }
+          ]
+        },
+        {
+          "id": "portfolio-3",
+          "type": "reveal",
+          "prompt": "A tool you learned just moved its no-cost tier behind a paywall. Think first: why is your ladder still fine?",
+          "answer": "The piece you built is yours and stays in your portfolio. Free-tier limits and pricing change often, so check the current pricing page, then climb the same rung on a tool that does the same job."
+        }
+      ]
+    }
+  }
+}

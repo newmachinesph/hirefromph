@@ -1,0 +1,894 @@
+{
+  "lastVerified": "2026-08",
+  "scenarios": [
+    {
+      "id": "late-request",
+      "title": "The 11 pm request",
+      "route": "/conduct",
+      "intro": "Sunday night. You are in bed. Your phone lights up. Nothing below is a trick question, and two of these paths are trade-offs rather than mistakes. Walk one, read the debrief, then walk a different one.",
+      "start": "ping",
+      "nodes": {
+        "ping": {
+          "text": "11:04 pm Sunday, Manila. It is 11:04 am Sunday for your client in New York. \"Small favour: can you build me a 10-slide investor deck? I need it in my inbox before I start, 8 am Monday my time.\" That is 8 pm Monday for you. Your retainer covers inbox, calendar, and a weekly report. It says nothing about decks.",
+          "choices": [
+            {
+              "label": "Reply now: \"Sure, I'll have it by then.\"",
+              "next": "instant-yes",
+              "tests": "Honest claims and estimates: a yes given before you have scoped the work is a guess.",
+              "note": "Sent at 11:06 pm. Your client now knows Sunday night reaches you."
+            },
+            {
+              "label": "Reply with one question about what the deck needs",
+              "next": "clarify",
+              "tests": "ASK: a specific question costs less than a fast yes.",
+              "note": "Two lines, sent at 11:07 pm, and you have promised nothing."
+            },
+            {
+              "label": "Leave it. Answer at 8 am Monday, Manila time.",
+              "next": "hold-till-morning",
+              "tests": "Boundaries: a request that arrives outside your hours can wait for your hours.",
+              "note": "You put the phone face down. It is harder than it sounds."
+            }
+          ]
+        },
+        "instant-yes": {
+          "text": "Monday, 7 am. You open the thread and there is no brief. No figures, no previous deck, no idea what these investors already know. You have promised ten slides by 8 pm, and Monday's inbox and calendar work is still sitting underneath it.",
+          "choices": [
+            {
+              "label": "Build it from whatever you can find",
+              "next": "end-burnout",
+              "tests": "Competence: undisclosed guessing surfaces later, and it surfaces in front of the client.",
+              "note": "You start at 7:20 am on a deck nobody has briefed you on."
+            },
+            {
+              "label": "Message him: \"I said yes too fast.\"",
+              "next": "walk-it-back",
+              "tests": "Correct your own errors out loud, early.",
+              "note": "Nine hours before the deadline still counts as early."
+            },
+            {
+              "label": "Do it free and hope he notices the effort",
+              "next": "free-favour",
+              "tests": "Unnamed generosity reads as spare capacity, not as a gift.",
+              "note": "You decide not to mention that this sits outside the retainer."
+            }
+          ]
+        },
+        "clarify": {
+          "text": "You send: \"Happy to look. Before I say yes: is this a design job or a numbers job, and do you have last quarter's figures ready?\" He answers in four minutes. \"Numbers. I'll send the sheet. Nothing fancy.\" Now you know what it is: half a day of work you have never billed for.",
+          "choices": [
+            {
+              "label": "Price it as a trade-off against Monday's work",
+              "next": "tradeoff",
+              "tests": "Never refuse. Price it, and hand the client the choice.",
+              "note": "You draft four sentences and no apology."
+            },
+            {
+              "label": "Do it free. He is a good client.",
+              "next": "free-favour",
+              "tests": "A favour you do not name becomes a duty you cannot drop.",
+              "note": "Monday's contracted work is now the thing that will slip."
+            },
+            {
+              "label": "Say the deck sits outside what you do",
+              "next": "flat-no",
+              "tests": "Work only where you are competent, and say so plainly.",
+              "note": "You write it in two sentences and read it twice before sending."
+            }
+          ]
+        },
+        "hold-till-morning": {
+          "text": "Monday, 8:02 am Manila. Three more messages overnight, the last one at 2 am your time: \"?\". You slept. His deadline is still twelve hours out and nothing has burned down. The question mark is sitting there anyway.",
+          "choices": [
+            {
+              "label": "Reply with your working hours, then scope the ask",
+              "next": "tradeoff",
+              "tests": "Response-time expectations belong in writing, not in guesswork.",
+              "note": "One line about hours, then straight into the deck question."
+            },
+            {
+              "label": "Apologise for the silence and do it free",
+              "next": "free-favour",
+              "tests": "Save sorry for things you broke.",
+              "note": "You apologise three times before the first full stop."
+            },
+            {
+              "label": "Say decks are outside the retainer",
+              "next": "flat-no",
+              "tests": "Scope is the document, not a mood.",
+              "note": "You open the agreement and quote the line back to yourself first."
+            }
+          ]
+        },
+        "walk-it-back": {
+          "text": "You write: \"I said yes too fast last night. I have not built a deck for you before and I do not have your figures. Two options: I build it and Monday's inbox waits, or I send a clean outline by noon and you fill in the numbers.\" It reaches him at 7 pm Sunday, his time.",
+          "choices": [
+            {
+              "label": "Wait for him to pick one",
+              "next": "tradeoff",
+              "tests": "A trade-off hands back a decision only the client can make.",
+              "note": "He replies in twenty minutes. He had not thought about the inbox at all."
+            },
+            {
+              "label": "Start building anyway while you wait",
+              "next": "free-favour",
+              "tests": "Work started before a decision is work you cannot bill.",
+              "note": "By the time he answers, three slides exist and you are invested."
+            }
+          ]
+        },
+        "tradeoff": {
+          "text": "You name both things as real: \"I can build the deck by 8 pm, or I can run Monday's inbox and calendar. Not both. The deck sits outside the retainer, so it is ₱[amount] on top, or we swap it for this week's report. Which is worth more to you tomorrow?\"",
+          "choices": [
+            {
+              "label": "Send it and stop typing",
+              "next": "end-traded",
+              "tests": "A trade-off works only if you let the silence do its job.",
+              "note": "No \"but I'm happy to try both!\" at the end. Four sentences, sent."
+            },
+            {
+              "label": "Soften it first with \"happy to try both\"",
+              "next": "pushback",
+              "tests": "One hedge at the end cancels the four sentences before it.",
+              "note": "He reads the last line and hears yes."
+            }
+          ]
+        },
+        "pushback": {
+          "text": "He answers: \"It's such a small thing though, and this call matters. Can't you squeeze it in?\" Everything he says is true. The deck is small for him. The call does matter. None of it changes what Monday already holds.",
+          "choices": [
+            {
+              "label": "Restate the two options. Nothing else.",
+              "next": "end-traded",
+              "tests": "Repeating a boundary is not an argument.",
+              "note": "You paste your own sentence back, word for word, and wait."
+            },
+            {
+              "label": "Do both. It is one night.",
+              "next": "end-burnout",
+              "tests": "The exception you make once becomes the baseline he plans around.",
+              "note": "You set an alarm for 4 am and tell yourself this is a one-off."
+            },
+            {
+              "label": "Do it once, in writing, as outside scope",
+              "next": "end-favour-noted",
+              "tests": "Free is fine. Unrecorded is not.",
+              "note": "One sentence in the message names it as a no-charge exception."
+            }
+          ]
+        },
+        "free-favour": {
+          "text": "You build it. Six hours, most of them Monday's, and the deck is good. It is finished at 6:40 pm. Monday's inbox is not.",
+          "choices": [
+            {
+              "label": "Send it with a line: outside scope, no charge",
+              "next": "end-favour-noted",
+              "tests": "Name the gift, or it stops being one.",
+              "note": "Twenty-two words, added at the end, that cost you nothing to write."
+            },
+            {
+              "label": "Send it and say nothing about scope",
+              "next": "end-favour-creep",
+              "tests": "Silence is how a favour becomes the job.",
+              "note": "\"Legend,\" he replies. Nothing else is said about it."
+            }
+          ]
+        },
+        "flat-no": {
+          "text": "You write: \"I can't take the deck. I have not built one, and I would be learning on your investor call.\" It is honest and it is a no. He reads it, says \"no worries\", and the thread goes quiet.",
+          "choices": [
+            {
+              "label": "Leave it there",
+              "next": "end-line-held",
+              "tests": "Disclosed inexperience is a negotiation. Undisclosed inexperience is fraud with a delay on it.",
+              "note": "The quiet is uncomfortable for about four hours."
+            },
+            {
+              "label": "Add what you can do instead, by when",
+              "next": "tradeoff",
+              "tests": "A no is stronger with a yes attached to something else.",
+              "note": "You offer the outline and the figures pulled by noon."
+            }
+          ]
+        },
+        "end-traded": {
+          "text": "He picks the deck, agrees to the add-on, and moves this week's report to Wednesday. You build it Monday in daylight, on your own hours, paid for it. Nothing about next Sunday changed, because nothing about this Sunday did.",
+          "end": true,
+          "debrief": "You never refused. You priced. Naming both jobs as real and handing him the choice turned a favour into a decision he could make and a rate he could agree to. The rule: never refuse, price it, then stop typing. The trade-off shape is on English at Work, under \"Four shapes that carry every hard message\"."
+        },
+        "end-burnout": {
+          "text": "You deliver at 7:50 pm on four hours of sleep. He replies \"legend\". Monday's inbox is sixty messages deep and two of them needed answering by noon. On Thursday he asks for a second deck, at the same notice, in the same tone.",
+          "end": true,
+          "debrief": "Nothing broke, and that is the problem. The overnight exception became the new normal, and you set it, not him. The rule from the conduct standard: tell the client before you exceed the agreed hours, not after. Read \"Your commitments\" in the Conduct dos and don'ts."
+        },
+        "end-favour-noted": {
+          "text": "You send the deck with one line: \"This one is outside the retainer, no charge, so you have it for the call. If decks become regular we should price them.\" He replies: \"Fair. Let's talk Thursday.\"",
+          "end": true,
+          "debrief": "A free piece of work with a label attached stays free once. Without the label it is a rate cut you agreed to by accident. The rule: generosity is fine, unrecorded generosity is not. The scope and terms anatomy is in Build Labs, under \"Build a Contract & Invoice\"."
+        },
+        "end-favour-creep": {
+          "text": "Two weeks later the deck is a standing item. It has never been discussed, never been priced, and never appeared in the agreement. When you finally raise it, you are asking to take away something he believes he already pays for.",
+          "end": true,
+          "debrief": "Every hour you gave without naming it became part of what he thinks the retainer buys. That is not bad faith on his side; it is the only information he had. The rule: scope is defined in writing, or by whatever you last did without objecting. The scope-creep scenario on Own Your Clients walks the recovery."
+        },
+        "end-line-held": {
+          "text": "The deck does not get built by you. He finds someone on a marketplace at 3 am his time and the result is mediocre. On Wednesday he asks you to triage the follow-up emails from the call, which is the work you are good at.",
+          "end": true,
+          "debrief": "Turning down work you cannot do well costs one job and protects the reputation that brings the next ten. The rule from the conduct standard: take the task only if you are qualified, or after disclosing exactly what you do not know. See \"Work only where you're competent\" on the Conduct page."
+        }
+      }
+    },
+    {
+      "id": "interview-that-isnt",
+      "title": "The interview that isn't",
+      "route": "/apply",
+      "intro": "A recruiter messages you about a role you never applied for. All five VET signals are in this conversation: upfront fee, guaranteed income, secrecy, urgency, vagueness. You can end it at any node, and ending it early has a cost of its own.",
+      "start": "dm",
+      "nodes": {
+        "dm": {
+          "text": "Tuesday, 9:14 pm. A message from an account with a stock-photo profile picture: \"Hi po! We are hiring online professionals for a US client. ₱[amount] per month, home-based, no experience needed. Interview tonight if you're free.\" You did not apply for anything.",
+          "choices": [
+            {
+              "label": "Run the ten-minute check on the company first",
+              "next": "research",
+              "tests": "VET: check the footprint before you spend attention.",
+              "note": "You open a notes file and start writing down what you find."
+            },
+            {
+              "label": "Take the interview slot. It costs nothing to look.",
+              "next": "slot",
+              "tests": "Curiosity is fine. Unrecorded curiosity is how people get pulled in.",
+              "note": "You reply \"yes po\" without checking anything."
+            },
+            {
+              "label": "Delete it and block the account",
+              "next": "end-walked-early",
+              "tests": "Trade-off: a fast no is cheap, and it is also uninformed.",
+              "note": "Thirty seconds, and the thread is gone."
+            }
+          ]
+        },
+        "research": {
+          "text": "Ten minutes of checking: the company name returns one Facebook page, created five weeks ago. No website. No employees on LinkedIn. Two five-star reviews posted on the same day. The \"US client\" is never named anywhere.",
+          "choices": [
+            {
+              "label": "Go in anyway, with questions ready and notes kept",
+              "next": "slot",
+              "tests": "You may proceed on evidence. You may not proceed on hope.",
+              "note": "You write five questions before opening the chat."
+            },
+            {
+              "label": "That is enough. End it here.",
+              "next": "end-walked-clean",
+              "tests": "No trail at all is itself the trail.",
+              "note": "You screenshot the page and the two reviews before you close it."
+            }
+          ]
+        },
+        "slot": {
+          "text": "The interview is a text chat on a messaging app at 9 pm, not on the platform where they first messaged you. No video. The interviewer types fast, uses your first name often, and has already called you \"part of the family\".",
+          "choices": [
+            {
+              "label": "Ask for a ten-minute video call first",
+              "next": "flag-guarantee",
+              "tests": "A real employer can show you a face.",
+              "note": "\"Our process is text-based for efficiency,\" they reply, twice."
+            },
+            {
+              "label": "Continue, and screenshot everything with timestamps",
+              "next": "flag-urgency",
+              "tests": "Evidence collected early is evidence you can report later.",
+              "note": "Twelve screenshots by the end of the hour."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "Being moved off-platform before trust exists removes your only safety net.",
+              "note": "You leave the chat without explaining yourself."
+            }
+          ]
+        },
+        "flag-guarantee": {
+          "text": "\"Once onboarded you are guaranteed ₱[amount] every month, whether or not the client gives you work. Everyone on our team earns this. It is guaranteed po.\"",
+          "choices": [
+            {
+              "label": "Ask what the guarantee is based on",
+              "next": "flag-secrecy",
+              "tests": "A guarantee that cannot name its source is a sales line.",
+              "note": "\"Our system,\" they say. You ask again. \"Our system po.\""
+            },
+            {
+              "label": "Ask when you can start",
+              "next": "flag-urgency",
+              "tests": "Accepting the number ends the questioning that would have saved you.",
+              "note": "The number does its job: you stop asking about the work."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "No real client relationship guarantees an outcome before any work exists.",
+              "note": "You save the message with the guarantee in it."
+            }
+          ]
+        },
+        "flag-secrecy": {
+          "text": "\"Please do not discuss this with anyone, including family, until you are onboarded. Other applicants copy our system. Sign the NDA first and I will send the full job description.\" The NDA is a screenshot of text, unsigned, with no company details on it.",
+          "choices": [
+            {
+              "label": "Ask why your family cannot know",
+              "next": "flag-vague",
+              "tests": "Secrecy that covers the job itself is not confidentiality.",
+              "note": "\"It is company policy po.\" No policy is ever shown."
+            },
+            {
+              "label": "Sign it to see the details",
+              "next": "flag-fee",
+              "tests": "Never sign a document that does not name its parties.",
+              "note": "You type your full name into a chat box. That is the whole signature."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "Real confidentiality protects a client's data, not a recruiter's identity.",
+              "note": "You keep the screenshot of the unsigned NDA."
+            }
+          ]
+        },
+        "flag-urgency": {
+          "text": "\"This slot closes at midnight. Twelve people are waiting for it. If you cannot confirm tonight I will have to move to the next applicant.\" It is 10:41 pm and you have work in the morning.",
+          "choices": [
+            {
+              "label": "Say you will decide within 24 hours",
+              "next": "flag-vague",
+              "tests": "A real opportunity survives a 24-hour pause.",
+              "note": "\"Then I release your slot,\" they say. They message again at 7 am."
+            },
+            {
+              "label": "Ask them to hold it, and send what they asked for",
+              "next": "id-ask",
+              "tests": "Urgency exists to stop you from checking.",
+              "note": "You are now moving at their pace, not yours."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "Pressure to decide now is a decision made for you.",
+              "note": "Midnight passes. Nothing happens to you at all."
+            }
+          ]
+        },
+        "flag-vague": {
+          "text": "You ask what you would do on a normal Tuesday, hour by hour. The answer: \"Admin tasks, data work, client support, depending on the account. Flexible po. Full training provided.\" You ask again for one specific task. The second answer is shorter and vaguer than the first.",
+          "choices": [
+            {
+              "label": "Ask for the client's name and the tools used",
+              "next": "flag-fee",
+              "tests": "A real employer can describe the job in one sentence.",
+              "note": "\"You will know after onboarding po.\""
+            },
+            {
+              "label": "Assume you will learn it on the job",
+              "next": "id-ask",
+              "tests": "Vagueness that survives three questions is not shyness.",
+              "note": "You stop asking. That was the point of the vagueness."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "If every answer is vaguer than the last, there is nothing behind it.",
+              "note": "You copy the three non-answers into your notes file."
+            }
+          ]
+        },
+        "flag-fee": {
+          "text": "\"Last step: a ₱[amount] training and starter-kit deposit. It is refunded on your 30th day. Send it to this number and I will send your onboarding link tonight.\" The number is a personal mobile wallet, not a company account.",
+          "choices": [
+            {
+              "label": "Pay it. It is refundable, and you have come this far.",
+              "next": "end-paid",
+              "tests": "Spent attention is not a reason to spend money. It is the mechanism.",
+              "note": "The wallet name is three initials that do not match the recruiter's."
+            },
+            {
+              "label": "Refuse the fee, but keep doing the unpaid trial tasks",
+              "next": "end-strung-along",
+              "tests": "A full deliverable done at no cost is not a test.",
+              "note": "\"No problem po, you can start the trial while we process it.\""
+            },
+            {
+              "label": "End it, screenshot everything, report the account",
+              "next": "end-walked-clean",
+              "tests": "No legitimate employer or client charges you to work for them.",
+              "note": "You report to the platform and to the group where the post appeared."
+            }
+          ]
+        },
+        "id-ask": {
+          "text": "\"Before onboarding, send a photo of your ID and a selfie holding it. Also your bank or wallet details so payroll is ready.\" There is no contract, no company name on any document, and nobody has told you what the job is.",
+          "choices": [
+            {
+              "label": "Send them. Everyone asks for ID.",
+              "next": "end-id-sent",
+              "tests": "Identity documents are the product in some of these operations.",
+              "note": "You take the selfie in bad light at 11 pm and send it."
+            },
+            {
+              "label": "Ask who stores it, for how long, under what agreement",
+              "next": "flag-fee",
+              "tests": "RA 10173 gives you the right to ask. Not asking is the risk.",
+              "note": "The reply changes the subject to the deposit."
+            },
+            {
+              "label": "End it here",
+              "next": "end-walked-clean",
+              "tests": "ID before a contract is backwards, every time.",
+              "note": "Your ID stays on your phone."
+            }
+          ]
+        },
+        "end-walked-early": {
+          "text": "You never find out what it was. It might have been a scam. It might have been a small agency with a bad copywriter and a stock photo. You have your evening back and no evidence either way.",
+          "end": true,
+          "debrief": "Walking on instinct is cheap and it works most of the time. What it does not do is train the instinct. Ten minutes of checking would have given you a pattern you could recognise in the next message, and the one after that. The rule: a fast no protects tonight, a checked no protects the year. The ten-minute check is on Find Work, under \"Research a client before you apply\"."
+        },
+        "end-walked-clean": {
+          "text": "You stop, screenshot the thread with timestamps, and report the account. Nothing left your hands: no money, no ID, no unpaid work. You also learned the shape of it, which is the part you keep.",
+          "end": true,
+          "debrief": "Every flag you saw before stopping is now a pattern you can name in three seconds. One hard-stop flag ends it, no matter how good the rest looks. The rule: upfront fees, guaranteed income, secrecy, urgency, and vagueness about the work are the five signals. See the red-flag checklist on Find Work."
+        },
+        "end-paid": {
+          "text": "The onboarding link never arrives. The account stops replying by Thursday and the page is gone the following week. The money went to a personal wallet number, so there is no merchant to dispute with and no order to cancel.",
+          "end": true,
+          "debrief": "The refund promise was the product. It converted your caution into a payment, and every flag before it was rehearsal for that one moment. The rule: no legitimate employer or client ever charges you to work for them, and \"refundable\" does not change that. See the red-flag list on Find Work."
+        },
+        "end-strung-along": {
+          "text": "Three weeks in, you have written 40 product descriptions, built a spreadsheet, and joined two \"team\" calls. None of it has been paid. Each time you ask, onboarding is \"processing\". You never lost money. You lost three weeks.",
+          "end": true,
+          "debrief": "You refused the obvious trap and stayed for the slower one. A short skills check is normal; a full deliverable at no cost is unpaid labour with a story attached. The rule: unpaid work stops at the first deliverable, not the fifth. See the red flag about a test task that is really the whole deliverable, on Find Work."
+        },
+        "end-id-sent": {
+          "text": "You hear nothing more. Months later there is a lending-app account in your name and you are answering questions about something you never opened. The recruiter's page was deleted a long time ago.",
+          "end": true,
+          "debrief": "Your ID plus a selfie holding it is enough to open accounts in your name, which is why it was requested before any contract existed. The rule: no identity documents before a named party, a written agreement, and a reason you can check. The laptop-farm case on the Conduct page shows what borrowed identities get used for."
+        }
+      }
+    },
+    {
+      "id": "first-week",
+      "title": "First week",
+      "route": "/deliver",
+      "intro": "You start Monday. Your client is in Chicago, thirteen hours behind you, asleep through most of your working day. Nobody will tell you what a good first week looks like. Five days, five decisions: what to ask, what to log, when to escalate, and when to say \"I don't know yet\".",
+      "start": "day1",
+      "nodes": {
+        "day1": {
+          "text": "Monday, 9 am Manila. Your access arrived overnight: their Gmail, their Slack, one shared Sheet. No brief, no first task, no welcome call. It is 8 pm Sunday for your client and he is not online. You have eight hours and no instructions.",
+          "choices": [
+            {
+              "label": "Write what you understood the job to be, and send it",
+              "next": "recap",
+              "tests": "Confirm alignment on day one, not on day thirty.",
+              "note": "Six lines, written in your own words, not copied from the job post."
+            },
+            {
+              "label": "Wait for instructions. He will send them.",
+              "next": "wait",
+              "tests": "Availability is not the same as progress.",
+              "note": "You keep Slack open and refresh it forty times."
+            },
+            {
+              "label": "Start clearing the inbox so you look useful",
+              "next": "tidy",
+              "tests": "Motion without a rule is a risk you took on his behalf.",
+              "note": "Nobody has told you which threads matter."
+            }
+          ]
+        },
+        "recap": {
+          "text": "You send six lines: what you think the priorities are, what you plan to touch first, and two things you are unsure about. He replies at 11:40 pm your time. \"Mostly right. Ignore the AU list, that's Dana's. And the report goes out Fridays, not Mondays.\" One sentence of yours was wrong.",
+          "choices": [
+            {
+              "label": "Log both corrections where you will find them again",
+              "next": "logbook",
+              "tests": "The recap is worth only what you do with the reply.",
+              "note": "Two lines in a file, with the date he said them."
+            },
+            {
+              "label": "Remember it. It is two lines.",
+              "next": "tidy",
+              "tests": "Memory is not a system, and week three will prove it.",
+              "note": "You do remember, until Thursday."
+            },
+            {
+              "label": "Ask the two questions his reply opened up",
+              "next": "logbook",
+              "tests": "ASK: the cheapest question is the one asked on day one.",
+              "note": "Both answered before he logs off. Neither would have been by Friday."
+            }
+          ]
+        },
+        "wait": {
+          "text": "Tuesday, 4 pm. Still nothing. You have been online for twelve billable hours and produced nothing you could name out loud. He is asleep again. Your first invoice will cover a week you cannot describe.",
+          "choices": [
+            {
+              "label": "Send the recap now, late but sent",
+              "next": "recap",
+              "tests": "Late alignment beats no alignment.",
+              "note": "It takes eleven minutes to write. You had twelve hours."
+            },
+            {
+              "label": "Keep waiting. Do not be a bother.",
+              "next": "end-invisible",
+              "tests": "Silence reads as absence, whatever it feels like from your side.",
+              "note": "Wednesday looks exactly like Tuesday."
+            },
+            {
+              "label": "Send three things you could start today, let him pick",
+              "next": "logbook",
+              "tests": "A short menu is easier to answer than an open question.",
+              "note": "He picks one at 10 pm your time and adds a fourth."
+            }
+          ]
+        },
+        "tidy": {
+          "text": "You archive 300 emails in two hours. It looks like progress and it feels like progress. On Wednesday he asks where the thread with the supplier went. You archived it. It was a live negotiation.",
+          "choices": [
+            {
+              "label": "Tell him today, with the thread already restored",
+              "next": "logbook",
+              "tests": "Never let a client discover a problem you already knew about.",
+              "note": "\"Thanks for flagging it,\" he says, and moves on."
+            },
+            {
+              "label": "Restore it quietly. He will not know.",
+              "next": "end-busy",
+              "tests": "A hidden fix is a debt that collects interest.",
+              "note": "He never asks. You think about it for a week."
+            },
+            {
+              "label": "Stop archiving, write down what the inbox rules should be",
+              "next": "day3-stuck",
+              "tests": "Do it by hand once, then write the rule you were missing.",
+              "note": "Four rules, drafted in ten minutes, sent to him as questions."
+            }
+          ]
+        },
+        "logbook": {
+          "text": "You start a running log: what you did, what you assumed, what you are waiting on, each line dated. It takes four minutes at the end of the day. Nobody asked you for it and nobody will ever read it but you.",
+          "choices": [
+            {
+              "label": "Turn Monday's steps into an SOP as you go",
+              "next": "day3-stuck",
+              "tests": "Write it while you are still confused. That is when it is honest.",
+              "note": "The first draft is ugly and it still saves you on Thursday."
+            },
+            {
+              "label": "Keep the log private. It is only for you.",
+              "next": "day4-unknown",
+              "tests": "A private log beats memory. A shared one beats both.",
+              "note": "It works. It just does not help anyone else yet."
+            },
+            {
+              "label": "Skip it. You will remember.",
+              "next": "end-busy",
+              "tests": "The week you cannot reconstruct is the week you cannot bill for.",
+              "note": "By Friday you have four days of vague recollection."
+            }
+          ]
+        },
+        "day3-stuck": {
+          "text": "Thursday, 10 am. The weekly report will not build. The Sheet throws errors on 40 rows and the totals are wrong. You have been at it for fifty minutes. He wakes in nine hours.",
+          "choices": [
+            {
+              "label": "Timebox is up. Ask, with what you tried and what happened.",
+              "next": "escalate",
+              "tests": "UNSTICK: grinding past your own limit is ego, not work.",
+              "note": "You spend six minutes writing the question properly."
+            },
+            {
+              "label": "Keep grinding. You should be able to solve this.",
+              "next": "end-busy",
+              "tests": "A stuck hour is normal. A stuck day is a decision.",
+              "note": "Three more hours. The report goes out Friday, wrong."
+            },
+            {
+              "label": "Cut it down to one failing row, change one thing",
+              "next": "day4-unknown",
+              "tests": "Shrink the problem until it is trivial, then fix it.",
+              "note": "Row 41 holds a date typed as text. Six minutes and the totals are right."
+            }
+          ]
+        },
+        "escalate": {
+          "text": "You send four parts: the goal, what you tried, the literal error message, and what you propose to do about it. He answers in nine minutes with the fix and one line: \"Good question, nobody's ever documented that.\"",
+          "choices": [
+            {
+              "label": "Add the fix to the SOP you started",
+              "next": "day4-unknown",
+              "tests": "The answer you write down is the last time you need to ask it.",
+              "note": "Two lines added. Dana uses them the following month."
+            },
+            {
+              "label": "Move on. It is fixed.",
+              "next": "day5-update",
+              "tests": "A fix you did not record is a question you will ask again.",
+              "note": "It happens again in September and you ask again."
+            }
+          ]
+        },
+        "day4-unknown": {
+          "text": "Friday, 8 am. \"Can you take over the monthly close from Dana next week?\" You have never done a monthly close. He logs off in four minutes and you have no idea what it involves.",
+          "choices": [
+            {
+              "label": "Say yes. You will figure it out.",
+              "next": "end-overreached",
+              "tests": "Undisclosed inexperience surfaces later, in front of the client.",
+              "note": "\"Sure!\" takes one second to type."
+            },
+            {
+              "label": "Name what you have not done, propose a way in",
+              "next": "day5-update",
+              "tests": "Disclosed inexperience is a negotiation, not a rejection.",
+              "note": "\"I've not run a close. I have reconciled six months of books. Can I shadow Dana once?\""
+            },
+            {
+              "label": "Say you do not know yet, and ask for Monday",
+              "next": "day5-update",
+              "tests": "\"I don't know yet\" with a date attached is an answer, not a dodge.",
+              "note": "He says fine. You spend the weekend reading Dana's checklist."
+            }
+          ]
+        },
+        "day5-update": {
+          "text": "Friday, 4 pm Manila. He has not asked for an update. Nobody has told you that one is expected in the first week, or ever.",
+          "choices": [
+            {
+              "label": "Send two finished things, one in progress, one ask, next check-in",
+              "next": "end-momentum",
+              "tests": "Send the update before it is requested. That is the whole trick.",
+              "note": "Nine lines. It takes twelve minutes because you kept the log."
+            },
+            {
+              "label": "Send a long list of everything you touched",
+              "next": "end-busy",
+              "tests": "Volume is not evidence. A finished thing is.",
+              "note": "Forty bullets, none of them closed. He reads six."
+            },
+            {
+              "label": "Skip it. He did not ask.",
+              "next": "end-invisible",
+              "tests": "An unreported week is a week he has to take on faith.",
+              "note": "You log off at 5 pm feeling like you got away with something."
+            }
+          ]
+        },
+        "end-momentum": {
+          "text": "He reads it Friday morning his time and replies with two words and a thumbs up. On Monday he sends the monthly close checklist without being asked, plus a note: \"You're easier to work with than the last three.\"",
+          "end": true,
+          "debrief": "Nothing in the week was impressive on its own: a recap on day one, a log nobody asked for, one question asked properly, and an update sent before it was requested. The rule: in week one, bias toward small finished things over large unfinished ones. The first-week plan anatomy is in Build Labs, under \"Build Your First-Week Plan\"."
+        },
+        "end-invisible": {
+          "text": "Friday passes without a word in either direction. On Monday he asks, politely, \"what did you get done last week?\" and you find you cannot answer it in one message. From here on, you are a thing he has to manage.",
+          "end": true,
+          "debrief": "You were working. He could not see it, and what he cannot see he has to take on trust from someone he met eight days ago. The rule: communicate proactively, because the update is the deliverable that makes every other deliverable visible. See \"Communicate like a professional\" on the Deliver stage."
+        },
+        "end-busy": {
+          "text": "You end the week tired, with 300 archived emails, a half-fixed report, and nothing you could hand to another person. Week two opens with the same questions week one opened with.",
+          "end": true,
+          "debrief": "Effort was never the missing piece. The record was: the log, the SOP, the definition of done that turns work into something transferable. The rule: anything you do twice, write down; anything you write down, you stop re-explaining. The SOP anatomy is in Build Labs, under \"Build a Standard Operating Procedure\"."
+        },
+        "end-overreached": {
+          "text": "Week two, you are three days into a monthly close you do not understand, with the inbox untouched behind it. On Thursday he finds a reconciliation error you missed. He fixes it himself, thanks you, and stops sending new work.",
+          "end": true,
+          "debrief": "The yes was meant to be helpful and it cost him a week he had planned around you. One sentence naming what you had not done would have kept the offer open. The rule: take the task if you are qualified, or after disclosing exactly what you do not know. See \"Work only where you're competent\" on the Conduct page."
+        }
+      }
+    },
+    {
+      "id": "scope-creep",
+      "title": "The scope creep",
+      "route": "/clients",
+      "intro": "You have a retainer: 20 hours a month, inbox, calendar, weekly report. It is month three and you are working 31. Every single addition was small. This one is about the ASK method and about saying no by pricing, not by refusing.",
+      "start": "month3",
+      "nodes": {
+        "month3": {
+          "text": "Month three. The retainer says 20 hours: inbox, calendar, weekly report. Last month you worked 31. Nothing was ever announced as extra. It arrived as \"quick one\", \"while you're in there\", and \"you're so much faster at this than me\".",
+          "choices": [
+            {
+              "label": "Log four weeks of actual hours before saying anything",
+              "next": "evidence",
+              "tests": "Evidence first. A feeling is arguable; a number is not.",
+              "note": "You go back through the calendar and the log. It takes an hour."
+            },
+            {
+              "label": "Raise it now: the workload has grown",
+              "next": "vague-complaint",
+              "tests": "A vague complaint hands the work of solving it back to the client.",
+              "note": "You type it three times before sending, and soften it each time."
+            },
+            {
+              "label": "Absorb it. He is a good client and you need the money.",
+              "next": "absorb",
+              "tests": "Trade-off: absorbing buys peace this month and a lower rate every month after.",
+              "note": "Nothing is said. Nothing changes."
+            }
+          ]
+        },
+        "evidence": {
+          "text": "Four weeks from your log: 31.4 hours, of which 11.2 sat outside the retainer. Three items repeat every single week. The podcast show notes, the CRM cleanup, and the graphics. None of the three appear anywhere in the agreement.",
+          "choices": [
+            {
+              "label": "Send the numbers with a recommendation attached",
+              "next": "ask-well",
+              "tests": "SBAR: end with a recommendation, not with a question.",
+              "note": "You write the recommendation first, then trim the background to fit it."
+            },
+            {
+              "label": "Send the numbers and ask what he wants to do",
+              "next": "open-question",
+              "tests": "\"What should we do?\" makes your problem his to solve.",
+              "note": "He is busy. Your problem goes to the bottom of his list."
+            },
+            {
+              "label": "Hold it until the quarterly review",
+              "next": "absorb",
+              "tests": "A boundary raised late is a boundary you funded yourself.",
+              "note": "That is another eight weeks at 31 hours."
+            }
+          ]
+        },
+        "vague-complaint": {
+          "text": "You wrote: \"Hi! I just wanted to check, I feel like the workload has been growing a bit lately? Sorry to bring it up. Is that okay?\" He replies: \"Oh no! Is it too much? Let me know 😊\". Nothing has changed and it is your move again.",
+          "choices": [
+            {
+              "label": "Go get the hours log and try again",
+              "next": "evidence",
+              "tests": "Hedges made the message easy to agree with and impossible to act on.",
+              "note": "This time you open the log before you open the chat."
+            },
+            {
+              "label": "Reply \"no, it's fine\" and carry on",
+              "next": "absorb",
+              "tests": "Save sorry for what you broke, and answers for what you meant.",
+              "note": "The subject is now harder to raise than it was yesterday."
+            },
+            {
+              "label": "Name the three tasks and what each one costs",
+              "next": "ask-well",
+              "tests": "Specific beats polite when a decision has to be made.",
+              "note": "Three lines. No emoji, no apology, no question mark."
+            }
+          ]
+        },
+        "absorb": {
+          "text": "Week 14. A new one arrives: \"Can you also do the podcast show notes? Twenty minutes tops.\" It takes ninety, because the transcript needs cleaning before anything else can happen.",
+          "choices": [
+            {
+              "label": "Say yes again",
+              "next": "end-erosion",
+              "tests": "The fourth yes is the one that sets the rate.",
+              "note": "Ninety minutes, unbilled, and now it is weekly."
+            },
+            {
+              "label": "Offer the trade: this or the weekly report this week",
+              "next": "tradeoff",
+              "tests": "Never refuse. Price it, in money or in time.",
+              "note": "He picks the report and does the notes himself, once."
+            },
+            {
+              "label": "Stop and build the hours log now",
+              "next": "evidence",
+              "tests": "You can start counting on any day, including a late one.",
+              "note": "Late data is still data. You have four weeks of calendar to mine."
+            }
+          ]
+        },
+        "ask-well": {
+          "text": "You send four parts: what the retainer covers, what you have been doing, the exact hours, and a recommendation. \"Two options: move to 30 hours at the same hourly rate, or I drop the three extras and we stay at 20. I would recommend the first.\"",
+          "choices": [
+            {
+              "label": "Add a date for the decision",
+              "next": "client-reply",
+              "tests": "A recommendation without a date is a suggestion.",
+              "note": "\"Whichever you prefer, by Friday, so next cycle starts clean.\""
+            },
+            {
+              "label": "Leave it open. Do not push.",
+              "next": "open-question",
+              "tests": "An open ask gets an open answer.",
+              "note": "Four days pass. Then six."
+            }
+          ]
+        },
+        "open-question": {
+          "text": "He replies: \"Let's keep it flexible for now, we'll sort it out.\" Flexible means you keep working 31 hours for 20 hours of pay, and the next time this comes up it will be you raising it again.",
+          "choices": [
+            {
+              "label": "Restate the two options with a date",
+              "next": "client-reply",
+              "tests": "Repeating a boundary is not an argument.",
+              "note": "Same two sentences, plus a Friday. He answers on Thursday."
+            },
+            {
+              "label": "Accept it. Flexible sounds friendly.",
+              "next": "end-erosion",
+              "tests": "\"Flexible\" is a decision, made by whoever benefits from it.",
+              "note": "You reply with a thumbs up and go back to work."
+            },
+            {
+              "label": "Start quietly dropping the extras, one at a time",
+              "next": "end-quiet-drop",
+              "tests": "An unannounced change reads as unreliability, not as a boundary.",
+              "note": "You skip the show notes on Tuesday and say nothing."
+            }
+          ]
+        },
+        "client-reply": {
+          "text": "He picks: 30 hours from the next cycle, same hourly rate. Then: \"And the podcast notes can stay inside the 30, right?\" The notes run six hours a month. The increase was ten.",
+          "choices": [
+            {
+              "label": "Price the notes separately and show the arithmetic",
+              "next": "tradeoff",
+              "tests": "Do the sum in front of them. Numbers end this politely.",
+              "note": "Six of the ten new hours, spent on one item, written out."
+            },
+            {
+              "label": "Agree. A yes is a yes.",
+              "next": "end-underpriced",
+              "tests": "An increase spent before it arrives is not an increase.",
+              "note": "\"Of course!\" You feel generous for about a week."
+            },
+            {
+              "label": "Agree, and write down what the 30 hours contains",
+              "next": "end-scoped",
+              "tests": "Scope is defined in writing, or by whatever you last did.",
+              "note": "Four named items, each with a line about what finished looks like."
+            }
+          ]
+        },
+        "tradeoff": {
+          "text": "\"Thirty hours covers inbox, calendar, report and CRM. Or thirty hours covers inbox, calendar, report and the podcast notes. Not both, because the notes run six hours a month. Which is worth more to you?\"",
+          "choices": [
+            {
+              "label": "Send it and stop typing",
+              "next": "end-scoped",
+              "tests": "The silence after a trade-off is doing the work.",
+              "note": "He takes two days. He picks the CRM."
+            },
+            {
+              "label": "Soften it with \"but I'm happy to try both\"",
+              "next": "end-erosion",
+              "tests": "One hedge at the end cancels the four sentences before it.",
+              "note": "He reads the last line and hears both."
+            },
+            {
+              "label": "Add a definition of done for each item",
+              "next": "end-scoped",
+              "tests": "\"Done\" is a checkable condition, not a feeling.",
+              "note": "You write what a finished report and a finished CRM cleanup each look like."
+            }
+          ]
+        },
+        "end-erosion": {
+          "text": "Month six: 34 hours for 20 hours of pay. Your effective rate has fallen by a third and nobody did anything wrong. When you finally raise it, you are asking to take away work he believes he already pays for.",
+          "end": true,
+          "debrief": "No single yes was unreasonable. The sum of them was, and the sum is the only thing that shows up in your rate. The rule: scope is defined in writing, or by whatever you last did without objecting. The retainer and scope anatomy is in Build Labs, under \"Build a Contract & Invoice\"."
+        },
+        "end-quiet-drop": {
+          "text": "You stop doing the show notes and mention it to nobody. Two weeks later he asks where they went. From where he is standing you became unreliable, and the extra work was never the conversation.",
+          "end": true,
+          "debrief": "Doing extra work silently and dropping it silently are the same mistake pointed in opposite directions: both leave the client without the information he needs to decide anything. The rule: change what you deliver by saying so, in advance, with a reason. See \"How you represent yourself\" in the Conduct dos and don'ts."
+        },
+        "end-underpriced": {
+          "text": "The increase arrives and is spent on day one. You now bill 30 hours for 30 hours of work you never renegotiated, and the CRM cleanup, still unnamed anywhere, is still on your Tuesday.",
+          "end": true,
+          "debrief": "You won the number and lost the scope, which is the most common way a rate increase disappears. The rule: agree the hours and the list of what those hours buy in the same message, or the list will be written for you. The scope clause anatomy is in Build Labs, under \"Build a Contract & Invoice\"."
+        },
+        "end-scoped": {
+          "text": "He picks the CRM and sends the show notes to someone who does them faster. Your 30 hours now covers four named items with a definition of done attached to each. Month seven runs at 29.5 hours.",
+          "end": true,
+          "debrief": "You never refused anything. You made the cost visible and let him choose, which is a decision only he could make. Naming what \"done\" means for each item is what stops the next quick one from arriving unpriced. The rule: name both things as real, state the constraint, hand over the choice, then stop typing. The trade-off shape is on English at Work."
+        }
+      }
+    }
+  ]
+}

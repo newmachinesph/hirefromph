@@ -1,0 +1,550 @@
+{
+  "lastVerified": "2026-08",
+  "decks": [
+    {
+      "id": "interview-questions",
+      "title": "Interview questions",
+      "blurb": "The question on the front. What a strong answer has to contain on the back. No script to memorise, because a memorised answer falls apart the moment the wording changes.",
+      "href": "/interview",
+      "cards": [
+        {
+          "id": "iq-tell-me-about-yourself",
+          "front": "\"Tell me about yourself.\"",
+          "back": "A sixty-second arc, not a life story: who you are professionally, one proof of it, why this role. Present, past, future. End by handing the conversation back."
+        },
+        {
+          "id": "iq-why-us",
+          "front": "\"Why do you want to work remotely, or with us?\"",
+          "back": "One specific detail about them that you found yourself, and why it matters to you. Generic enthusiasm reads as \"I applied to fifty of these.\""
+        },
+        {
+          "id": "iq-weakness",
+          "front": "\"What is your biggest weakness?\"",
+          "back": "A real one you are working on, plus the concrete step you take to manage it. A fake weakness signals that you cannot assess your own work."
+        },
+        {
+          "id": "iq-experience",
+          "front": "\"Walk me through your experience.\"",
+          "back": "Proof, not titles. \"Here is a system I built\" beats \"I was responsible for.\" No paid work yet? A portfolio micro-task is real experience; present it as one."
+        },
+        {
+          "id": "iq-deadlines",
+          "front": "\"How do you handle deadlines and several clients at once?\"",
+          "back": "Your real system, named: the tracker, the calendar, the update cadence. Vague answers scare remote clients most, because they cannot see you work."
+        },
+        {
+          "id": "iq-rate",
+          "front": "\"What are your rate expectations?\"",
+          "back": "A range anchored on value, then an invitation to their budget. Read live posts in your niche first, so the number is homework rather than a guess."
+        },
+        {
+          "id": "iq-hard-problem",
+          "front": "\"Tell me about a time you solved a hard problem.\"",
+          "back": "All four STAR parts, with most of the time on Action: what you did, step by step, and the judgment behind the approach you chose."
+        },
+        {
+          "id": "iq-failure",
+          "front": "\"Tell me about a failure, or a mistake you made.\"",
+          "back": "A real mistake you owned and fixed, plus what you changed afterwards. A story with no fault in it is a story nobody believes."
+        },
+        {
+          "id": "iq-learned-fast",
+          "front": "\"Tell me about a time you learned something fast.\"",
+          "back": "The method, not the topic: the outcome you aimed at, what you skipped, what you built, and how you knew it worked. Remote roles have nobody to train you."
+        },
+        {
+          "id": "iq-difficult-client",
+          "front": "\"Tell me about a difficult client or a vague brief.\"",
+          "back": "Composure and communication. What you asked, which assumption you stated, what you shipped. Show the handling, never the complaint."
+        },
+        {
+          "id": "iq-star-situation",
+          "front": "What belongs in the Situation part of a STAR answer?",
+          "back": "One or two sentences of context: where you were and what was at stake. It is the setup, not the story. Do not spend half the answer here."
+        },
+        {
+          "id": "iq-star-task",
+          "front": "What belongs in the Task part of a STAR answer?",
+          "back": "Your specific responsibility, in the first person. Name the problem you personally had to solve. Use \"I\", not \"we\"; they are hiring you, not your old team."
+        },
+        {
+          "id": "iq-star-action",
+          "front": "What belongs in the Action part of a STAR answer?",
+          "back": "Most of the answer. What you did, step by step, and why you chose that approach. Show the judgment, not just which buttons you clicked."
+        },
+        {
+          "id": "iq-star-result",
+          "front": "What belongs in the Result part of a STAR answer?",
+          "back": "How it ended: a real number if you honestly have one, otherwise the concrete change. Never invent a metric. \"I do not have the exact figure, but…\" is more convincing."
+        },
+        {
+          "id": "iq-themes",
+          "front": "How many prepared stories should you walk in with?",
+          "back": "Three or four true ones, each mapped to STAR: a problem solved, a mistake owned, something learned fast, a hard person or constraint. Most questions are those themes in different clothes."
+        },
+        {
+          "id": "iq-any-questions",
+          "front": "\"Do you have any questions for us?\"",
+          "back": "Three prepared questions about the work. Asking nothing looks uninterested. Never lead with pay or time off; the money conversation lands better after."
+        },
+        {
+          "id": "iq-ask-role",
+          "front": "Name a question that makes you look like a professional evaluating a fit.",
+          "back": "\"What does a great first ninety days look like to you?\" or \"What is the biggest challenge the person in this role will face?\" Both make you an evaluator, not a supplicant."
+        },
+        {
+          "id": "iq-format-oneway",
+          "front": "The first round is a one-way video recording, with no live person.",
+          "back": "Treat it as live. Good light, quiet room, look at the lens, and do a test take first. It is still a real first round, and it is the one they compare."
+        },
+        {
+          "id": "iq-format-async",
+          "front": "The whole interview happens in writing, over email or a form.",
+          "back": "Your written English carries everything here. Lead with the point, structure each answer, proofread, and keep it tight."
+        },
+        {
+          "id": "iq-format-test",
+          "front": "They ask you to do a test task before any offer.",
+          "back": "Short and scoped is reasonable. A full finished deliverable is unpaid labour. Offer a small sample at no cost and price the rest in writing."
+        },
+        {
+          "id": "iq-flag-fee",
+          "front": "During the interview they ask for a fee, deposit, or payment for training.",
+          "back": "Stop. No legitimate employer or client charges you to be hired, trained, or equipped. This is the most common job scam there is."
+        },
+        {
+          "id": "iq-flag-otp",
+          "front": "They want your ID, bank details, or an OTP before any contract exists.",
+          "back": "Stop. Those come after a signed agreement, never in a first chat. An OTP request is almost always an attempt to take over an account."
+        },
+        {
+          "id": "iq-flag-chatonly",
+          "front": "The entire \"interview\" happens over WhatsApp or Telegram chat.",
+          "back": "Stop. Real hiring uses email, a real call, or the platform. A rushed chat-only process that skips a proper conversation is a documented scam pattern.",
+          "source": {
+            "label": "PH 2nd most attacked by job scams (Manila Bulletin / SEEK, Nov 2025). Re-verify this ranking going into 2027.",
+            "url": "https://mb.com.ph/2025/11/18/philippines-2nd-most-attacked-by-job-scamsreport"
+          }
+        }
+      ]
+    },
+    {
+      "id": "red-flags",
+      "title": "Red flags",
+      "blurb": "A real situation on the front. The flag it raises and what to do about it on the back. One hard-stop flag ends an opportunity, no matter how good the rest of it looks.",
+      "href": "/apply",
+      "cards": [
+        {
+          "id": "rf-upfront-fee",
+          "front": "A recruiter asks for ₱1,500 for a \"training kit\" before you start.",
+          "back": "Upfront fee, a hard stop. No legitimate employer or client charges you to work for them. This is the single most common scam pattern there is. Walk."
+        },
+        {
+          "id": "rf-guaranteed",
+          "front": "The post promises guaranteed income from your first week.",
+          "back": "Guaranteed outcome, a hard stop. No real client can promise a result before you have done any work. It is a sales tactic, not a fact."
+        },
+        {
+          "id": "rf-vague-work",
+          "front": "Every question about the daily work comes back vaguer than the last.",
+          "back": "Evasive about the work. A real employer describes the job in one sentence. Ask once more in writing; if it stays vague, stop there."
+        },
+        {
+          "id": "rf-urgency",
+          "front": "They want your decision, your payment, or your signature today.",
+          "back": "Manufactured urgency. It exists to stop you checking references or sleeping on it. A real opportunity survives a twenty-four-hour pause, so take the pause."
+        },
+        {
+          "id": "rf-no-footprint",
+          "front": "No real website, no employees on LinkedIn, no reviews anywhere.",
+          "back": "No verifiable footprint. A business that has operated for any length of time leaves a trail. No trail at all is itself the trail. Send nothing."
+        },
+        {
+          "id": "rf-off-platform",
+          "front": "First message on the marketplace: \"let us move this to Telegram.\"",
+          "back": "Pushed off-platform before any trust exists. Escrow and dispute protection are your only safety net. Keep the conversation where the protection lives."
+        },
+        {
+          "id": "rf-unpaid-test",
+          "front": "The \"test task\" is a finished website they could ship tomorrow.",
+          "back": "Unpaid labour dressed as a skills check. A short sample is normal; a full deliverable is not. Offer a scoped sample and price the rest."
+        },
+        {
+          "id": "rf-too-high",
+          "front": "Double the market rate, with no portfolio, skills check, or interview.",
+          "back": "Pay far above market with no bar to entry. When the money is the hook and the work is vague, the money is the bait. Verify the company first."
+        },
+        {
+          "id": "rf-no-contract",
+          "front": "\"No need for a contract, magtiwala na lang tayo.\"",
+          "back": "Nothing in writing. Verbal terms are unenforceable and easy to walk back. Send the scope, price, and timeline yourself, and ask them to confirm it."
+        },
+        {
+          "id": "rf-id-before-contract",
+          "front": "They ask for your ID and bank details before any agreement exists.",
+          "back": "Identity and payment details come after a signed contract, never during a first chat. An OTP request is almost always account theft. Stop."
+        },
+        {
+          "id": "rf-laptop-farm",
+          "front": "Someone offers to pay you to receive a laptop and let them work on it.",
+          "back": "This is the exact favour two US nationals were sentenced for facilitating. Never let anyone work under your name. Refuse, and do not hold the equipment.",
+          "source": {
+            "label": "US Department of Justice",
+            "url": "https://www.justice.gov/opa/pr/justice-department-announces-coordinated-nationwide-actions-combat-north-korean-remote"
+          }
+        },
+        {
+          "id": "rf-account-rental",
+          "front": "Someone offers monthly rent for your verified platform account.",
+          "back": "Account rental is identity fraud and it ends a career, not just a contract. Never sell, rent, or share a platform account, not even with family."
+        },
+        {
+          "id": "rf-jiggler",
+          "front": "A friend suggests a mouse jiggler so your tracker never shows idle.",
+          "back": "Activity simulation is dismissal for cause. Wells Fargo dismissed more than a dozen people over it, and the stated reason sits on their public regulatory record.",
+          "source": {
+            "label": "Bloomberg / Banking Dive",
+            "url": "https://www.bankingdive.com/news/wells-fires-employees-faking-productivity-finra/719033/"
+          }
+        },
+        {
+          "id": "rf-rounding-hours",
+          "front": "You worked forty minutes and think, \"I will just round it to an hour.\"",
+          "back": "Padded hours are a debt you can be ordered to repay. A remote accountant was ordered to pay her employer CAD $2,756.89 after logging unworked time.",
+          "source": {
+            "label": "NPR",
+            "url": "https://www.npr.org/2023/01/13/1148985075/time-tracking-software-canadian-woman-reach-cpa-court"
+          }
+        },
+        {
+          "id": "rf-ghosting",
+          "front": "The contract is going badly and you want to stop replying.",
+          "back": "Ghosting is recorded and scored, and it follows you to future proposals. You may end a contract; you may not vanish from one. Say the hard sentence.",
+          "source": {
+            "label": "Upwork, Job Success Score",
+            "url": "https://support.upwork.com/hc/en-us/articles/211068358-Job-Success-Score"
+          }
+        },
+        {
+          "id": "rf-client-data-ai",
+          "front": "A client asks you to paste their customer list into an AI chat tool.",
+          "back": "Client data into an uncleared tool. Get written permission, or run an open model locally. Under the Data Privacy Act the exposure is yours too.",
+          "source": {
+            "label": "National Privacy Commission",
+            "url": "https://privacy.gov.ph/data-privacy-act/"
+          }
+        },
+        {
+          "id": "rf-shared-login",
+          "front": "The client offers you their own login instead of a named account.",
+          "back": "Shared logins destroy attribution. When five people use one login, the audit log cannot prove you did not do it. Insist on your own account."
+        },
+        {
+          "id": "rf-lingering-access",
+          "front": "The contract ended and you still have access, \"in case they need me.\"",
+          "back": "Keeping access after offboarding is unauthorised access. Hand it back, delete their data, and confirm the deletion in writing the same week."
+        },
+        {
+          "id": "rf-course-guarantee",
+          "front": "A course promises a client within fourteen days if you enrol today.",
+          "back": "Guarantee, urgency, and a fee in one offer. Nobody has measured time-to-first-client, so that number was invented. Run the VET questions before you pay."
+        },
+        {
+          "id": "rf-directory-trust",
+          "front": "\"It was on the Hire From PH directory, so it must be safe.\"",
+          "back": "A listing is convenience, not endorsement. Vet every opportunity yourself. One hard-stop flag ends it, however good everything else looks."
+        }
+      ]
+    },
+    {
+      "id": "get-legit-terms",
+      "title": "Get Legit terms",
+      "blurb": "The vocabulary of a registered Filipino professional: BIR forms, the 8% option, invoices, contributions, and payment rails. Rules and rates change, so every card links the official page that outranks it.",
+      "href": "/legit",
+      "cards": [
+        {
+          "id": "gl-1901",
+          "front": "BIR Form 1901",
+          "back": "The registration form for a self-employed professional. You file it using your existing TIN, or get a TIN if you have never had one.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-orus",
+          "front": "ORUS",
+          "back": "The BIR's online registration portal. You can start registering as self-employed there instead of queueing at a district office.",
+          "source": { "label": "BIR ORUS: online registration portal", "url": "https://orus.bir.gov.ph" }
+        },
+        {
+          "id": "gl-2303",
+          "front": "BIR Form 2303",
+          "back": "Your Certificate of Registration: the document that says you are registered and what you are required to file. Keep it somewhere you can find it.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-8-percent",
+          "front": "The 8% option",
+          "back": "If gross receipts stay within the VAT threshold you may elect 8% on gross receipts above ₱250,000 a year, in place of graduated income tax and percentage tax.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-250k",
+          "front": "₱250,000",
+          "back": "The yearly amount the 8% option leaves out: you pay 8% only on gross receipts above it. Set by law, and it can change. Check the official page.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-3m-threshold",
+          "front": "The ₱3M VAT threshold",
+          "back": "Stay within ₱3M of gross receipts and the 8% option is open to you. Above it, different rules apply. Confirm the current figure with the BIR.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-graduated",
+          "front": "Graduated rates versus the flat 8%",
+          "back": "Graduated income tax can beat the flat 8% when your deductible expenses are high. Do that comparison once, on paper, with your own numbers.",
+          "source": {
+            "label": "Taxumo: freelancer tax guide, 2025 edition (8% option explained; check for a newer version)",
+            "url": "https://www.taxumo.com/blog/taxes-for-freelancers-in-the-philippines-2025-complete-guide/"
+          }
+        },
+        {
+          "id": "gl-invoice",
+          "front": "Invoice",
+          "back": "What a registered professional issues for work done, with sequential numbers that are never reused. It is the paperwork that makes you a supplier instead of a favour.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-or",
+          "front": "Official receipt (OR)",
+          "back": "The document companies often need in order to book you as a supplier. Freelancers who can issue one get considered for bigger contracts; those who cannot stay informal.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-books",
+          "front": "Books of accounts",
+          "back": "The simple record of what you earned and spent that registered professionals keep alongside their invoices. Same discipline the Build Labs teach for trackers.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-filing",
+          "front": "The filing schedule",
+          "back": "Quarterly income tax filings plus an annual return. Put the deadlines in the same calendar you already keep. Missing them is the usual expensive mistake.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-2307",
+          "front": "Form 2307",
+          "back": "Withholding paperwork a corporate client may raise. This guide does not cover it, so do not guess from a group chat. Read the BIR page and ask the client what they need.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-annual-fee",
+          "front": "The annual BIR registration fee",
+          "back": "Scrapped in 2024. One fewer yearly errand, and a reminder that tax rules move: check the agency's own page, never a blog from three years ago.",
+          "source": { "label": "BIR: official site and forms", "url": "https://www.bir.gov.ph" }
+        },
+        {
+          "id": "gl-sss",
+          "front": "SSS without an employer",
+          "back": "Register or switch to self-employed or voluntary through the My.SSS portal and pay monthly or quarterly. Covers sickness, maternity, disability, unemployment, retirement, and salary loans.",
+          "source": { "label": "SSS: official site", "url": "https://www.sss.gov.ph" }
+        },
+        {
+          "id": "gl-philhealth",
+          "front": "PhilHealth without an employer",
+          "back": "Register as a direct contributor for hospitalisation and outpatient coverage. One hospital stay without it can cost more than years of contributions.",
+          "source": { "label": "PhilHealth: official site", "url": "https://www.philhealth.gov.ph" }
+        },
+        {
+          "id": "gl-pagibig",
+          "front": "Pag-IBIG and MP2",
+          "back": "Voluntary members get the housing loans most Filipinos eventually want, plus MP2: a five-year savings program with historically higher dividends than banks.",
+          "source": { "label": "Pag-IBIG Fund: official site", "url": "https://www.pagibigfund.gov.ph" }
+        },
+        {
+          "id": "gl-wise",
+          "front": "Wise, as a payment rail",
+          "back": "Converts at the mid-market rate with a disclosed upfront fee. Usually among the best effective rates for client transfers and invoicing.",
+          "source": { "label": "Wise", "url": "https://wise.com" }
+        },
+        {
+          "id": "gl-payoneer",
+          "front": "Payoneer, as a payment rail",
+          "back": "Built for marketplaces and recurring client billing, and widely used here. Watch the withdrawal and conversion fees: they decide your real rate.",
+          "source": { "label": "Payoneer", "url": "https://www.payoneer.com" }
+        },
+        {
+          "id": "gl-paypal",
+          "front": "PayPal, as a payment rail",
+          "back": "The most familiar to clients, and often the most expensive once its conversion spread is counted. Fine to accept; compare before you make it your default.",
+          "source": { "label": "PayPal", "url": "https://www.paypal.com/ph" }
+        },
+        {
+          "id": "gl-local-rails",
+          "front": "Local rails: GCash, Maya, and your bank",
+          "back": "Where the money usually lands in the end. Several transfer services pay out to them directly. The test never changes: how many pesos arrived?",
+          "source": { "label": "GCash", "url": "https://www.gcash.com" }
+        },
+        {
+          "id": "gl-rail-test",
+          "front": "How do you find out which rail pays you more?",
+          "back": "Invoice a real amount, receive it through two rails once, and write down what landed in pesos. No fee table on the internet beats your own receipt."
+        },
+        {
+          "id": "gl-when",
+          "front": "When should you set all of this up?",
+          "back": "In your first three paid months, not your first week. Earn first, then make it official. After setup it is a few hours per quarter."
+        }
+      ]
+    },
+    {
+      "id": "english-habits",
+      "title": "English habits",
+      "blurb": "The junior habit on the front, the fix on the back. None of these are wrong English. Every one is fluent, polite and correct, which is exactly why they are hard to catch in your own writing.",
+      "href": "/english",
+      "cards": [
+        {
+          "id": "eh-stacked-hedges",
+          "front": "\"I think maybe we might possibly need a bit more time.\"",
+          "back": "Four hedges turn a correct read into a guess. Say it once, plainly: \"This slips two days. Here is the cause and the new date.\""
+        },
+        {
+          "id": "eh-reflex-sorry",
+          "front": "Opening with \"Sorry to bother you.\"",
+          "back": "Reflex apology. Save sorry for what you broke. Apologising for asking trains the client to treat you as a subordinate rather than a peer."
+        },
+        {
+          "id": "eh-revert-back",
+          "front": "\"Kindly revert back at your earliest convenience.\"",
+          "back": "Dated business English that marks the writer as offshore. Plain modern English is stronger anyway: \"Can you confirm by Thursday?\""
+        },
+        {
+          "id": "eh-deference",
+          "front": "\"Hi Sir, thank you po!\" to a US or Australian client.",
+          "back": "Correct and courteous in Philippine register. To that reader it lands as subordination, and a subordinate is not who gets asked for an opinion. Use their name."
+        },
+        {
+          "id": "eh-reach-out",
+          "front": "\"I just wanted to reach out and check in.\"",
+          "back": "Throat-clearing plus a hedge. Delete the runway and start the plane: \"Two questions on the campaign brief.\""
+        },
+        {
+          "id": "eh-hope-well",
+          "front": "\"I hope this email finds you well.\"",
+          "back": "Filler. It carries no information and pushes your point down a line. Open with the ask or the headline instead."
+        },
+        {
+          "id": "eh-backstory-first",
+          "front": "Starting a status update with the backstory.",
+          "back": "Bottom Line Up Front: sentence one is the headline or the ask, on track, at risk, or blocked. Context comes after, for whoever wants it.",
+          "source": {
+            "label": "BLUF (Bottom Line Up Front)",
+            "url": "https://en.wikipedia.org/wiki/BLUF_(communication)"
+          }
+        },
+        {
+          "id": "eh-please-advise",
+          "front": "Ending an escalation with \"Please advise.\"",
+          "back": "That hands the problem back. SBAR ends with a Recommendation: \"Here is what I will do, say no in the next hour.\" The R is the whole point.",
+          "source": {
+            "label": "SBAR, Institute for Healthcare Improvement",
+            "url": "https://www.ihi.org/library/tools/sbar-tool-situation-background-assessment-recommendation"
+          }
+        },
+        {
+          "id": "eh-should-i-try",
+          "front": "\"Should I try again?\"",
+          "back": "A question makes the problem theirs again. State your read, propose the fix, then invite a correction with a deadline attached."
+        },
+        {
+          "id": "eh-saying-no",
+          "front": "\"Sorry, I do not think I can, I am quite busy this week.\"",
+          "back": "Never refuse. Price it. \"I can do the landing page by Friday, or the email sequence by Friday, not both. Which is worth more to you?\""
+        },
+        {
+          "id": "eh-open-question",
+          "front": "\"Who is this campaign for exactly? Sorry, I was not sure.\"",
+          "back": "An open question puts the work back on the client. State the assumption, say what you will build on it, and set a deadline so silence means yes."
+        },
+        {
+          "id": "eh-single-estimate",
+          "front": "\"It will take three days.\"",
+          "back": "A single number is a promise you will break. \"Three to five days, assuming the API docs are accurate\" is a judgment, and a false assumption makes you right, not late."
+        },
+        {
+          "id": "eh-long-to-sound-pro",
+          "front": "Writing longer messages so you sound more professional.",
+          "back": "Senior people write simply. Aim for a lower reading grade, not a higher one. Hemingway Editor kills the passive voice and the padding at no cost."
+        },
+        {
+          "id": "eh-accent-reduction",
+          "front": "Paying for accent reduction to sound American.",
+          "back": "The research field left that goal decades ago. The target is being easily understood, which is not the same thing. Put the money away and work on rhythm.",
+          "source": {
+            "label": "Intelligibility of Philippine English (Languages, MDPI 2025)",
+            "url": "https://www.mdpi.com/2226-471X/10/5/101"
+          }
+        },
+        {
+          "id": "eh-rushing",
+          "front": "Rushing through a spoken answer on a call.",
+          "back": "Rate and pausing is the highest-payoff speaking change there is. Record sixty seconds and count your pauses. Fewer than five means you are rushing.",
+          "source": {
+            "label": "Intelligibility of Philippine English (Languages, MDPI 2025)",
+            "url": "https://www.mdpi.com/2226-471X/10/5/101"
+          }
+        },
+        {
+          "id": "eh-syllable-timing",
+          "front": "Giving every syllable roughly equal weight when you speak.",
+          "back": "English is stress-timed. Punch the content words and let the rest go soft. Underline only the nouns, verbs, and numbers, then say the sentence again.",
+          "source": {
+            "label": "Intelligibility of Philippine English (Languages, MDPI 2025)",
+            "url": "https://www.mdpi.com/2226-471X/10/5/101"
+          }
+        },
+        {
+          "id": "eh-th-first",
+          "front": "Drilling the \"th\" sound before anything else.",
+          "back": "The lowest payoff on the page. Most listeners resolve \"dis\" and \"tink\" from context. Fix rhythm first and come back to this if time is left.",
+          "source": {
+            "label": "Intelligibility of Philippine English (Languages, MDPI 2025)",
+            "url": "https://www.mdpi.com/2226-471X/10/5/101"
+          }
+        },
+        {
+          "id": "eh-f-v-pairs",
+          "front": "Pull and full, berry and very, best and vest sound the same.",
+          "back": "Worth fixing, because these pairs cause real confusion and the listener loses the sentence. Two minutes of minimal pairs a day, out loud.",
+          "source": {
+            "label": "Intelligibility of Philippine English (Languages, MDPI 2025)",
+            "url": "https://www.mdpi.com/2226-471X/10/5/101"
+          }
+        },
+        {
+          "id": "eh-grammar-blame",
+          "front": "Assuming your grammar is what holds you back.",
+          "back": "Filipino writing scores 603 of 800 on the EF index, above the global average. Grammar is not the gap. How you frame requests and refusals is.",
+          "source": {
+            "label": "EF English Proficiency Index 2025, Philippines",
+            "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/"
+          }
+        },
+        {
+          "id": "eh-never-listen-back",
+          "front": "Never listening back to your own client calls.",
+          "back": "Transcribe one call and read yourself back. Count the hedges. Count the apologies. It is the most uncomfortable and most useful drill on the page."
+        },
+        {
+          "id": "eh-blame-yourself",
+          "front": "Reading every rejection as proof your English is not good enough.",
+          "back": "Controlled experiments on simulated freelancer profiles found a consistent preference for US-based freelancers, for identical work. Some of the ceiling is bias, not you.",
+          "source": {
+            "label": "Experimental study on freelancer platform bias (arXiv, 2025)",
+            "url": "https://arxiv.org/pdf/2510.13091"
+          }
+        }
+      ]
+    }
+  ]
+}

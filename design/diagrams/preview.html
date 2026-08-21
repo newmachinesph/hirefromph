@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire From PH — diagram preview</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Committed tokens from app/globals.css — the diagrams read these. */
+    :root {
+      --paper: #FFFFFF;
+      --band: #F7F6FF;
+      --tint: #EEEDFF;
+      --ink: #0E1230;
+      --ink-soft: #4A4F66;
+      --ink-faint: #6B7087;
+      --line: #E4E4EA;
+      --line-strong: #CFCFD8;
+      --primary: #4B4EF6;
+      --primary-deep: #3634D8;
+      --primary-tint: #EEEDFF;
+      --primary-soft: #C9C8FF;
+      --info: #026AA2;
+
+      /* On the site these resolve to Cabinet Grotesk / Inter via next/font.
+         Standalone, Cabinet Grotesk is self-hosted and unreachable, so the
+         display face falls back to Inter — a disclosed fallback, not a match. */
+      --font-cabinet: 'Cabinet Grotesk';
+      --font-inter: 'Inter';
+      --font-display: var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+      --font-text: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-text);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 3rem 1.5rem 5rem;
+    }
+    main { max-width: 1040px; margin: 0 auto; }
+
+    .page-head { border-bottom: 1px solid var(--line); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+    h1 { font-family: var(--font-display); font-size: 2rem; font-weight: 700; letter-spacing: -0.01em; }
+    .lede { color: var(--ink-soft); font-size: 0.9375rem; margin-top: 0.5rem; max-width: 62ch; }
+
+    .figure { margin-bottom: 3.5rem; }
+    .figure + .figure { border-top: 1px solid var(--line); padding-top: 2.5rem; }
+
+    .eyebrow {
+      font-size: 0.625rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.5rem;
+    }
+    .eyebrow code { font-family: inherit; letter-spacing: inherit; }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Stand-in for the site's DiagramFrame: hairline border, scrolls on phones. */
+    svg {
+      display: block;
+      width: 100%;
+      min-width: 560px;
+      height: auto;
+    }
+    .figure > svg {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.25rem;
+      background: var(--paper);
+    }
+    .figure { overflow-x: auto; }
+
+    .caption { color: var(--ink-soft); font-size: 0.8125rem; margin-top: 0.875rem; max-width: 70ch; }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="page-head">
+      <p class="eyebrow">diagram-design · profile hirefromph</p>
+      <h1>Diagram preview</h1>
+      <p class="lede">The four first-wave diagrams, inlined from their plugin HTML sources with the site's tokens on <code>:root</code>. Open this file directly in a browser — nothing here is built. Regenerate with <code>node design/diagrams/build-preview.mjs</code>.</p>
+    </div>
+
+    <section class="figure">
+      <p class="eyebrow">Journey / process · <code>journey-map</code> · &lt;JourneyMap /&gt;</p>
+      <h2>The path — five stages, eleven steps</h2>
+      <svg viewBox="0 0 720 224" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="journey-map-title journey-map-desc">
+            <title id="journey-map-title">The path — five stages, eleven steps</title>
+            <desc id="journey-map-desc">A left-to-right line of the five Hire From PH stages, from Start Right to Own, with the eleven numbered steps shown as tick marks grouped under the stage they belong to; the first stage and the reader's current stage are marked in the accent colour.</desc>
+
+            <!-- Spine (drawn before the stage nodes) -->
+            <line x1="88" y1="72" x2="632" y2="72" stroke="var(--line-strong)" stroke-width="1"/>
+
+            <!-- Step rail segments, one per stage: the segment is the grouping -->
+            <line x1="40"  y1="168" x2="136" y2="168" stroke="var(--line)" stroke-width="1"/>
+            <line x1="176" y1="168" x2="272" y2="168" stroke="var(--line)" stroke-width="1"/>
+            <line x1="312" y1="168" x2="408" y2="168" stroke="var(--line)" stroke-width="1"/>
+            <line x1="448" y1="168" x2="544" y2="168" stroke="var(--line)" stroke-width="1"/>
+            <line x1="584" y1="168" x2="680" y2="168" stroke="var(--line)" stroke-width="1"/>
+
+            <!-- Step ticks + numbers -->
+            <g stroke="var(--line-strong)" stroke-width="1">
+              <line x1="72"  y1="168" x2="72"  y2="180"/>
+              <line x1="104" y1="168" x2="104" y2="180"/>
+              <line x1="200" y1="168" x2="200" y2="180"/>
+              <line x1="224" y1="168" x2="224" y2="180"/>
+              <line x1="248" y1="168" x2="248" y2="180"/>
+              <line x1="336" y1="168" x2="336" y2="180"/>
+              <line x1="360" y1="168" x2="360" y2="180"/>
+              <line x1="384" y1="168" x2="384" y2="180"/>
+              <line x1="496" y1="168" x2="496" y2="180"/>
+              <line x1="616" y1="168" x2="616" y2="180"/>
+              <line x1="648" y1="168" x2="648" y2="180"/>
+            </g>
+            <g fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="middle" style="font-variant-numeric: tabular-nums">
+              <text x="72"  y="196">1</text>
+              <text x="104" y="196">2</text>
+              <text x="200" y="196">3</text>
+              <text x="224" y="196">4</text>
+              <text x="248" y="196">5</text>
+              <text x="336" y="196">6</text>
+              <text x="360" y="196">7</text>
+              <text x="384" y="196">8</text>
+              <text x="496" y="196">9</text>
+              <text x="616" y="196">10</text>
+              <text x="648" y="196">11</text>
+            </g>
+
+            <!-- Stage 1 — focal (the entry point) -->
+            <circle cx="88" cy="72" r="20" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+            <text x="88" y="78" fill="var(--primary)" font-family="'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle" style="font-variant-numeric: tabular-nums">1</text>
+
+            <!-- Stage 2 — focal in this rendering (current = 2) -->
+            <text x="224" y="40" fill="var(--primary)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1.8" text-anchor="middle">YOU ARE HERE</text>
+            <line x1="224" y1="44" x2="224" y2="52" stroke="var(--primary)" stroke-width="1"/>
+            <circle cx="224" cy="72" r="20" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+            <text x="224" y="78" fill="var(--primary)" font-family="'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle" style="font-variant-numeric: tabular-nums">2</text>
+
+            <!-- Stages 3–5 -->
+            <circle cx="360" cy="72" r="20" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="360" y="78" fill="var(--ink)" font-family="'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle" style="font-variant-numeric: tabular-nums">3</text>
+            <circle cx="496" cy="72" r="20" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="496" y="78" fill="var(--ink)" font-family="'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle" style="font-variant-numeric: tabular-nums">4</text>
+            <circle cx="632" cy="72" r="20" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <text x="632" y="78" fill="var(--ink)" font-family="'Cabinet Grotesk', 'Inter', ui-sans-serif, system-ui, sans-serif" font-size="16" font-weight="700" text-anchor="middle" style="font-variant-numeric: tabular-nums">5</text>
+
+            <!-- Stage names -->
+            <g fill="var(--ink)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">
+              <text x="88"  y="120">Start Right</text>
+              <text x="224" y="120">Get Hired</text>
+              <text x="360" y="120">Deliver</text>
+              <text x="496" y="120">Level Up</text>
+              <text x="632" y="120">Own</text>
+            </g>
+            <g fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="middle" style="font-variant-numeric: tabular-nums">
+              <text x="88"  y="136">Steps 1–2</text>
+              <text x="224" y="136">Steps 3–5</text>
+              <text x="360" y="136">Steps 6–8</text>
+              <text x="496" y="136">Step 9</text>
+              <text x="632" y="136">Steps 10–11</text>
+            </g>
+          </svg>
+      <p class="caption">Follow the line: five stages across the top, the eleven steps ticked off beneath the stage that owns them. Stage 1 and the stage you are on are the only things in indigo.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Process with a loop-back · <code>method-loop</code> · &lt;MethodLoop /&gt;</p>
+      <h2>The method — seven ways to get unstuck</h2>
+      <svg viewBox="0 0 704 248" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="method-loop-title method-loop-desc">
+            <title id="method-loop-title">The method — seven ways to get unstuck</title>
+            <desc id="method-loop-desc">Seven methods in order — find, deconstruct, learn, vet, ask, unstick, give — drawn as a serpentine chain, with a dashed return arrow from unstick back to ask labelled "time-box, then ask"; give is the one highlighted step.</desc>
+
+            <defs>
+              <marker id="method-loop-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--ink-soft)"/></marker>
+              <marker id="method-loop-arrow-sm" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="var(--ink-faint)"/></marker>
+            </defs>
+
+            <!-- Connectors first (z-order) -->
+            <line x1="144" y1="56" x2="204" y2="56" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+            <line x1="320" y1="56" x2="380" y2="56" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+            <line x1="496" y1="56" x2="556" y2="56" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+
+            <!-- VET → ASK: right, down the outer corridor, back in from the right -->
+            <path d="M 672,56 H 680 Q 688,56 688,64 V 156 Q 688,164 680,164 H 588"
+                  fill="none" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+
+            <line x1="472" y1="164" x2="412" y2="164" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+            <line x1="296" y1="164" x2="236" y2="164" stroke="var(--ink-soft)" stroke-width="1" marker-end="url(#method-loop-arrow)"/>
+
+            <!-- UNSTICK → ASK: the return loop, dashed -->
+            <path d="M 352,188 V 208 Q 352,216 360,216 H 520 Q 528,216 528,208 V 192"
+                  fill="none" stroke="var(--ink-faint)" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#method-loop-arrow-sm)"/>
+            <rect x="384" y="192" width="112" height="16" rx="4" fill="var(--paper)"/>
+            <text x="440" y="204" fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" letter-spacing="0.6" text-anchor="middle">time-box, then ask</text>
+
+            <!-- Row A -->
+            <rect x="32"  y="32" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <rect x="208" y="32" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <rect x="384" y="32" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <rect x="560" y="32" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+
+            <!-- Row B — GIVE is the single focal node -->
+            <rect x="472" y="140" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <rect x="296" y="140" width="112" height="48" rx="8" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <rect x="120" y="140" width="112" height="48" rx="8" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" text-anchor="middle">
+              <g fill="var(--ink)" font-size="12" font-weight="600">
+                <text x="88"  y="52">FIND</text>
+                <text x="264" y="52">DECONSTRUCT</text>
+                <text x="440" y="52">LEARN</text>
+                <text x="616" y="52">VET</text>
+                <text x="528" y="160">ASK</text>
+                <text x="352" y="160">UNSTICK</text>
+                <text x="176" y="160">GIVE</text>
+              </g>
+              <g fill="var(--ink-soft)" font-size="10" font-weight="500">
+                <text x="88"  y="68">any answer</text>
+                <text x="264" y="68">from 5 examples</text>
+                <text x="440" y="68">by building</text>
+                <text x="616" y="68">who benefits?</text>
+                <text x="528" y="176">four parts</text>
+                <text x="352" y="176">a procedure</text>
+                <text x="176" y="176">value first</text>
+              </g>
+            </g>
+          </svg>
+      <p class="caption">Read left to right, then the second row right to left. The dashed arrow is the only one that goes backwards: when UNSTICK runs out of road, you time-box and return to ASK.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Funnel · <code>hiring-funnel</code> · &lt;HiringFunnel /&gt;</p>
+      <h2>What each stage of the hunt needs</h2>
+      <svg viewBox="0 0 560 288" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hiring-funnel-title hiring-funnel-desc">
+            <title id="hiring-funnel-title">What each stage of the hunt needs</title>
+            <desc id="hiring-funnel-desc">A four-band funnel — applications, replies, interviews, offers — where each band names what that stage needs rather than a count: proof not promises, a tracked follow-up, STAR answers and questions for them, and negotiating with evidence at the narrow end.</desc>
+
+            <!-- Bands, widest to narrowest. Widths are ordinal, not measured. -->
+            <polygon points="60,32 500,32 468,88 92,88"     fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <polygon points="92,88 468,88 436,144 124,144"  fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <polygon points="124,144 436,144 404,200 156,200" fill="var(--paper)" stroke="var(--line-strong)" stroke-width="1"/>
+            <!-- Offers — the one focal band -->
+            <polygon points="156,200 404,200 372,256 188,256" fill="var(--primary-tint)" stroke="var(--primary)" stroke-width="1.2"/>
+
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" text-anchor="middle">
+              <g fill="var(--ink)" font-size="12" font-weight="600">
+                <text x="280" y="56">Applications</text>
+                <text x="280" y="112">Replies</text>
+                <text x="280" y="168">Interviews</text>
+                <text x="280" y="224">Offers</text>
+              </g>
+              <g fill="var(--ink-soft)" font-size="10" font-weight="500">
+                <text x="280" y="72">proof, not promises</text>
+                <text x="280" y="128">a tracked follow-up</text>
+                <text x="280" y="184">STAR answers + questions for them</text>
+                <text x="280" y="240">negotiate with evidence</text>
+              </g>
+            </g>
+
+            <text x="32" y="280" fill="var(--ink-faint)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="12" font-weight="500" font-style="italic">The widths show the shape of the drop-off, not measured rates.</text>
+          </svg>
+      <p class="caption">Each band names what that stage needs, not how many people reach it. The narrow end is where evidence, not enthusiasm, closes the offer.</p>
+    </section>
+
+    <section class="figure">
+      <p class="eyebrow">Timeline · <code>first-week-timeline</code> · &lt;FirstWeekTimeline /&gt;</p>
+      <h2>Your first week, day by day</h2>
+      <svg viewBox="0 0 720 176" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="first-week-timeline-title first-week-timeline-desc">
+            <title id="first-week-timeline-title">Your first week, day by day</title>
+            <desc id="first-week-timeline-desc">Five equally spaced markers on one baseline, day one to day five, each naming the checkpoint for that day: send your recap, start a dated log, turn repeat steps into an SOP, time-box then ask, and send the update before it is requested. Day one is highlighted.</desc>
+
+            <!-- Baseline -->
+            <line x1="32" y1="96" x2="688" y2="96" stroke="var(--line-strong)" stroke-width="1"/>
+
+            <!-- Label drops -->
+            <g stroke="var(--line)" stroke-width="1">
+              <line x1="96"  y1="48" x2="96"  y2="88"/>
+              <line x1="228" y1="48" x2="228" y2="88"/>
+              <line x1="360" y1="48" x2="360" y2="88"/>
+              <line x1="492" y1="48" x2="492" y2="88"/>
+              <line x1="624" y1="48" x2="624" y2="88"/>
+            </g>
+
+            <!-- Day eyebrows -->
+            <g font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1.8" text-anchor="middle">
+              <text x="96"  y="40" fill="var(--primary)">DAY 1</text>
+              <text x="228" y="40" fill="var(--ink-faint)">DAY 2</text>
+              <text x="360" y="40" fill="var(--ink-faint)">DAY 3</text>
+              <text x="492" y="40" fill="var(--ink-faint)">DAY 4</text>
+              <text x="624" y="40" fill="var(--ink-faint)">DAY 5</text>
+            </g>
+
+            <!-- Markers: day 1 is the one focal element -->
+            <circle cx="96"  cy="96" r="8" fill="var(--primary)"/>
+            <circle cx="228" cy="96" r="6" fill="var(--ink)"/>
+            <circle cx="360" cy="96" r="6" fill="var(--ink)"/>
+            <circle cx="492" cy="96" r="6" fill="var(--ink)"/>
+            <circle cx="624" cy="96" r="6" fill="var(--ink)"/>
+
+            <!-- Checkpoints -->
+            <g fill="var(--ink-soft)" font-family="'Inter', ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="500" text-anchor="middle">
+              <text x="96"  y="124">Send your recap</text>
+              <text x="96"  y="140">in your own words</text>
+              <text x="228" y="124">Start a dated log</text>
+              <text x="228" y="140">of what you touched</text>
+              <text x="360" y="124">Turn repeat steps</text>
+              <text x="360" y="140">into one SOP</text>
+              <text x="492" y="124">Time-box, then ask</text>
+              <text x="492" y="140">with what you tried</text>
+              <text x="624" y="124">Send the update</text>
+              <text x="624" y="140">before it is asked for</text>
+            </g>
+          </svg>
+      <p class="caption">Five days, five checkpoints. Day 1 is highlighted because everything after it is easier once the recap is sent.</p>
+    </section>
+  </main>
+</body>
+</html>

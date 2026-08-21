@@ -1,0 +1,316 @@
+{
+  "lastVerified": "2026-08",
+  "terms": [
+    {
+      "id": "sop",
+      "term": "SOP (standard operating procedure)",
+      "definition": "A written procedure for a task that repeats, detailed enough that someone else can run it without asking you. Writing one is how you stop explaining the same thing twice.",
+      "taglish": "Nakasulat na hakbang-hakbang para sa trabahong paulit-ulit.",
+      "href": "/build"
+    },
+    {
+      "id": "retainer",
+      "term": "Retainer",
+      "definition": "A fixed monthly fee for an agreed scope of work, paid whether or not much comes in that month. It gives you a predictable floor and gives the client priority access.",
+      "taglish": "Buwanang bayad para sa napagkasunduang saklaw ng trabaho.",
+      "href": "/salary"
+    },
+    {
+      "id": "scope",
+      "term": "Scope",
+      "definition": "The exact list of what you will deliver, how many revisions are included, and by when. Anything outside that list is a new agreement rather than a favour.",
+      "href": "/clients"
+    },
+    {
+      "id": "scope-creep",
+      "term": "Scope creep",
+      "definition": "Small extra requests that pile up until you are doing far more than you priced. Each one sounds reasonable on its own, which is why it needs naming early.",
+      "taglish": "Unti-unting paglaki ng trabaho na wala sa usapan.",
+      "href": "/clients"
+    },
+    {
+      "id": "deliverable",
+      "term": "Deliverable",
+      "definition": "The finished thing a client can open, use, or ship: a reconciled ledger, a working dashboard, an edited video. Effort is not a deliverable; the artifact is.",
+      "href": "/tasks"
+    },
+    {
+      "id": "async",
+      "term": "Async (asynchronous work)",
+      "definition": "Working without being online at the same time as your client. You leave a complete written update, they read it hours later and reply. It is the default across time zones.",
+      "taglish": "Trabahong hindi kailangang sabay ang oras ninyo ng kliyente.",
+      "href": "/markets"
+    },
+    {
+      "id": "overlap-hours",
+      "term": "Overlap hours",
+      "definition": "The hours when your workday and your client's workday are both live. Two to four is usually enough for calls and quick answers, and it decides how early you wake.",
+      "taglish": "Ang oras na magkasabay kayo ng kliyente sa trabaho.",
+      "href": "/markets"
+    },
+    {
+      "id": "utc-8",
+      "term": "UTC+8",
+      "definition": "The Philippine time zone, eight hours ahead of Coordinated Universal Time. Every overlap calculation on this site is measured from it.",
+      "href": "/markets"
+    },
+    {
+      "id": "time-zone",
+      "term": "Time zone",
+      "definition": "A region that keeps the same clock. You pick a client market partly on how far its clock sits from yours, because that decides your working hours.",
+      "href": "/markets"
+    },
+    {
+      "id": "onboarding",
+      "term": "Onboarding",
+      "definition": "Your first days with a new client: getting access, learning their tools, and agreeing on how you will report. What you set up here shapes the rest of the engagement.",
+      "href": "/deliver"
+    },
+    {
+      "id": "kpi",
+      "term": "KPI (key performance indicator)",
+      "definition": "The number a client uses to judge whether the work is going well, such as replies per week or cost per lead. Ask for it in your first week.",
+      "href": "/deliver"
+    },
+    {
+      "id": "tracker",
+      "term": "Tracker",
+      "definition": "A sheet holding one row per thing you are following and one column per fact about it. Applications, invoices, and content calendars all use the same shape.",
+      "href": "/tracker"
+    },
+    {
+      "id": "crm",
+      "term": "CRM (customer relationship management)",
+      "definition": "Software that stores every contact, conversation, and deal in one place. HubSpot and Salesforce are common ones. Much of client-facing remote work runs inside one.",
+      "href": "/tools"
+    },
+    {
+      "id": "portfolio",
+      "term": "Portfolio",
+      "definition": "The set of finished pieces you show instead of describing yourself. Two real deliverables with their context and result beat a page of adjectives.",
+      "href": "/portfolio"
+    },
+    {
+      "id": "micro-task",
+      "term": "Micro-task",
+      "definition": "A small, self-contained job you can finish without a client, ending in a real artifact. It is how you build proof before anyone has hired you.",
+      "taglish": "Maliit na trabahong kaya mong tapusin mag-isa, may aktwal na output.",
+      "href": "/tasks"
+    },
+    {
+      "id": "niche",
+      "term": "Niche",
+      "definition": "The lane you specialise in, such as bookkeeping for e-commerce or ads reporting for agencies. A narrower lane means fewer competitors bidding against you.",
+      "href": "/niches"
+    },
+    {
+      "id": "rate-card",
+      "term": "Rate card",
+      "definition": "A written list of your services and what each one costs. Having one stops you from inventing a number under pressure and makes a price rise a scheduled decision.",
+      "href": "/clients"
+    },
+    {
+      "id": "pricing-models",
+      "term": "Hourly vs fixed vs retainer",
+      "definition": "Three ways to charge: by the hour, by the project at an agreed price, or monthly for an ongoing scope. Hourly caps your income at the hours you have.",
+      "href": "/salary"
+    },
+    {
+      "id": "invoice",
+      "term": "Invoice",
+      "definition": "The document you send to be paid, carrying a sequential number, the dates covered, the scope, and the amount. Registered professionals here issue invoices and keep books.",
+      "taglish": "Ang papel na ipinapadala mo para mabayaran ka.",
+      "href": "/legit"
+    },
+    {
+      "id": "bir",
+      "term": "BIR (Bureau of Internal Revenue)",
+      "definition": "The Philippine tax agency. Self-employed professionals register with it, choose how they are taxed, and file on a schedule. Its official pages outrank any guide, this one included.",
+      "href": "/legit"
+    },
+    {
+      "id": "eight-percent-option",
+      "term": "8% income tax option",
+      "definition": "A flat 8% on gross receipts above ₱250,000 a year, in place of graduated income tax and percentage tax. The thresholds are set by law and change, so confirm on the BIR page.",
+      "href": "/legit"
+    },
+    {
+      "id": "official-receipt",
+      "term": "OR (official receipt)",
+      "definition": "The older proof-of-payment document for services. Recent BIR rules moved service providers to issuing invoices instead, so check what your own registration requires before printing anything.",
+      "href": "/legit"
+    },
+    {
+      "id": "form-2307",
+      "term": "BIR Form 2307",
+      "definition": "The certificate a Philippine client gives you showing the tax they withheld from your payment. You attach it to your return so that amount counts as already paid.",
+      "taglish": "Patunay na may kinaltas nang buwis ang kliyente mo.",
+      "href": "/legit"
+    },
+    {
+      "id": "withholding-tax",
+      "term": "Withholding tax",
+      "definition": "Tax a Philippine client deducts from your fee and remits to the BIR for you. You receive less cash now and credit that amount against your own return later.",
+      "href": "/legit"
+    },
+    {
+      "id": "philhealth",
+      "term": "PhilHealth",
+      "definition": "The national health insurance program. Self-employed professionals enroll as direct contributors and pay on their own schedule. One hospital stay without it can cost more than years of contributions.",
+      "href": "/legit"
+    },
+    {
+      "id": "sss",
+      "term": "SSS (Social Security System)",
+      "definition": "The government fund covering sickness, maternity, disability, unemployment, and retirement. You can join as a self-employed or voluntary member with no employer involved.",
+      "href": "/legit"
+    },
+    {
+      "id": "pag-ibig",
+      "term": "Pag-IBIG Fund",
+      "definition": "The national savings and housing fund. Voluntary members contribute monthly and can borrow for a home. MP2 is its separate five-year savings program.",
+      "href": "/legit"
+    },
+    {
+      "id": "worker-status",
+      "term": "Freelancer vs contractor vs employee",
+      "definition": "Three relationships, not three job titles. An employee receives benefits and direction. A contractor or freelancer sets their own methods, invoices for the work, and carries their own coverage.",
+      "href": "/clients"
+    },
+    {
+      "id": "nda",
+      "term": "NDA (non-disclosure agreement)",
+      "definition": "A contract saying you will not share what you see inside a client's business. Sign it, then behave as though it applies to every client, signed or not.",
+      "href": "/conduct"
+    },
+    {
+      "id": "milestone",
+      "term": "Milestone",
+      "definition": "A named chunk of a project with its own deadline and its own payment. Milestones stop you from carrying weeks of unpaid work if the relationship goes wrong.",
+      "href": "/clients"
+    },
+    {
+      "id": "upfront-fee",
+      "term": "Upfront fee (red flag)",
+      "definition": "Any payment a supposed employer asks from you before work starts, for training, a starter kit, or registration. No real client charges you to work for them.",
+      "taglish": "Walang totoong kliyente ang naniningil sa'yo para makapagtrabaho.",
+      "href": "/apply"
+    },
+    {
+      "id": "escrow",
+      "term": "Escrow",
+      "definition": "Money a client deposits with a marketplace before you start, released to you once the work is accepted. An unfunded milestone means the money is not there yet.",
+      "href": "/apply"
+    },
+    {
+      "id": "payment-rail",
+      "term": "Payment rail",
+      "definition": "The service that moves your fee from a client abroad into pesos, such as Wise, Payoneer, PayPal, or a bank. Each converts at a different rate, and that gap is real money.",
+      "taglish": "Ang daanan ng pera mo mula sa kliyente hanggang sa'yo.",
+      "href": "/legit"
+    },
+    {
+      "id": "chargeback",
+      "term": "Chargeback",
+      "definition": "A client reversing a card payment after you have already been paid, pulling the money back out of your account. A written scope and a clear paper trail are your defence."
+    },
+    {
+      "id": "star-method",
+      "term": "STAR method",
+      "definition": "A four-part shape for answering interview questions: situation, task, action, result. It stops a story from wandering and puts the outcome at the end where it lands.",
+      "href": "/interview"
+    },
+    {
+      "id": "red-flag",
+      "term": "Red flag",
+      "definition": "A signal that an opportunity is a scam or exploitative. Some are hard stops on their own, like an upfront fee. Others only matter once several appear together.",
+      "href": "/apply"
+    },
+    {
+      "id": "reverse-sourcing",
+      "term": "Reverse-sourcing",
+      "definition": "Finding a business that has the problem you solve and reaching out before they write a job post. There is less competition because no queue has formed yet.",
+      "taglish": "Ikaw ang lumalapit sa kliyente bago pa sila mag-post ng trabaho.",
+      "href": "/apply"
+    },
+    {
+      "id": "search-operators",
+      "term": "Search operators",
+      "definition": "Symbols that narrow a search: quotes for an exact phrase, site: for one domain, a minus sign to cut noise. One precise query beats an hour of scrolling.",
+      "href": "/apply"
+    },
+    {
+      "id": "primary-source",
+      "term": "Primary source",
+      "definition": "The original document behind a claim: the agency page, the dataset, the paper itself. If a number only leads to another blog post, it has no source at all.",
+      "href": "/reality"
+    },
+    {
+      "id": "vendor-grade-data",
+      "term": "Vendor-grade data",
+      "definition": "Numbers published by a company that sells the thing being measured, with no disclosed method. Useful as a rough direction, never as a fact. Most pay guides are this.",
+      "href": "/salary"
+    },
+    {
+      "id": "spaced-retrieval",
+      "term": "Spaced retrieval",
+      "definition": "Recalling the same material again after gaps of days rather than minutes. The gap is what makes it stick. Reviewing while it still feels fresh teaches you little.",
+      "href": "/learn"
+    },
+    {
+      "id": "retrieval-practice",
+      "term": "Retrieval practice",
+      "definition": "Closing the book and pulling the answer out of your head instead of rereading it. Harder and slower in the moment, and far better at making knowledge last.",
+      "taglish": "Subukang alalahanin nang hindi tumitingin, bago mo balikan ang notes.",
+      "href": "/learn"
+    },
+    {
+      "id": "desirable-difficulty",
+      "term": "Desirable difficulty",
+      "definition": "Study that feels harder while you do it and leaves more behind afterwards, like shuffling problem types. Smooth studying usually means you are recognising rather than remembering.",
+      "href": "/learn"
+    },
+    {
+      "id": "prompt",
+      "term": "Prompt",
+      "definition": "The instruction you give an AI model. A good one carries the role, the context, the format you want, and what the model should do when it is unsure.",
+      "href": "/prompts"
+    },
+    {
+      "id": "context-window",
+      "term": "Context window",
+      "definition": "How much text a model can hold in mind at once, counting your prompt and its own reply. Past that limit the earliest parts drop out and it starts forgetting.",
+      "href": "/ai-first"
+    },
+    {
+      "id": "automation",
+      "term": "Automation",
+      "definition": "Making a repeated task run without you, from a spreadsheet formula to a scheduled workflow. Anything you have already done twice is a candidate for it.",
+      "href": "/tools"
+    },
+    {
+      "id": "workflow-automation-tools",
+      "term": "Workflow automation tools",
+      "definition": "Services that connect apps so an event in one triggers an action in another, such as Zapier or Make. You describe the trigger and the steps, no code needed.",
+      "href": "/tools"
+    },
+    {
+      "id": "gtm",
+      "term": "GTM (go-to-market)",
+      "definition": "Everything a company does to reach buyers: the campaigns, the outreach, the tooling underneath. A GTM engineer builds and runs those systems instead of doing outreach by hand.",
+      "href": "/niches"
+    },
+    {
+      "id": "revops",
+      "term": "RevOps (revenue operations)",
+      "definition": "The role that keeps sales, marketing, and support running on one set of data and one process. It is a common end-goal role for people who start in reporting.",
+      "href": "/niches"
+    },
+    {
+      "id": "fractional",
+      "term": "Fractional",
+      "definition": "Working as a senior operator for several companies part-time, a few days a month each, instead of full-time for one. It is how experienced independents price seniority.",
+      "href": "/niches"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "hero": {
+    "kicker": "Free and open · for Filipinos building online careers",
+    "title": "Build the online career you",
+    "accent": "own.",
+    "lead": "Five stages, eleven steps, from setting up your desk to invoicing direct clients. Every deliverable here is one you write yourself.",
+    "primary": { "label": "Find your path", "href": "/start" },
+    "secondary": { "label": "How it works", "href": "#how" },
+    "honesty": "Every number here links to the source it came from, including the ones that argue against starting.",
+    "honestyLink": { "label": "Read the Reality Check", "href": "/reality" }
+  },
+  "howItWorks": {
+    "kicker": "How it works",
+    "title": "Pick a lane, then work the stages",
+    "lead": "Each stage names what to do next, so you never have to guess.",
+    "items": [
+      {
+        "icon": "compass",
+        "title": "Pick a lane",
+        "body": "Twenty-two niches with pay bands, demand, and how AI is changing each one."
+      },
+      {
+        "icon": "list-checks",
+        "title": "Follow five stages",
+        "body": "Eleven ordered steps take you from a bare desk to direct clients."
+      },
+      {
+        "icon": "pencil-ruler",
+        "title": "Build every deliverable yourself",
+        "body": "The labs teach the anatomy and the rules; you write the resume, the SOP, the tracker."
+      }
+    ]
+  },
+  "path": {
+    "kicker": "The path",
+    "title": "Five stages, eleven steps",
+    "lead": "Each stage builds on the one before it. Tick a step when it is done and the map remembers.",
+    "action": { "label": "Open your dashboard", "href": "/path" }
+  },
+  "lane": {
+    "kicker": "Pick your lane",
+    "title": "Go deep in one niche",
+    "lead": "These six carry the strongest demand in our niche data. Twenty-two lanes are listed in full.",
+    "more": { "label": "See all 22 niches", "href": "/niches" }
+  },
+  "build": {
+    "kicker": "What you'll build",
+    "title": "Workshops, not downloads",
+    "lead": "Every tool here ends with something you wrote: a task finished, an application logged, a month you can follow.",
+    "action": { "label": "Browse the library", "href": "/library" },
+    "items": [
+      { "href": "/build", "icon": "pencil-ruler" },
+      { "href": "/tasks", "icon": "target" },
+      { "href": "/apply", "icon": "search" },
+      { "href": "/simulator", "icon": "trending-up" },
+      { "href": "/plan", "icon": "calendar-check" },
+      { "href": "/reality", "icon": "scan-eye" }
+    ]
+  },
+  "standard": {
+    "action": { "label": "Read the method", "href": "/method" }
+  },
+  "questions": {
+    "kicker": "Questions",
+    "title": "The ones people ask first",
+    "lead": "Short answers, each with a link to the page that carries the detail.",
+    "links": {
+      "free": "How your data is stored",
+      "va-course": "Read the method",
+      "degree": "Start with a micro-task",
+      "ai-jobs": "See the Reality Check",
+      "first-client": "See the Reality Check",
+      "who-runs-this": "Read the conduct rules"
+    }
+  },
+  "cta": {
+    "title": "Start with Stage 1.",
+    "body": "Stage one begins with the desk you already have.",
+    "action": { "label": "Find your path", "href": "/start" }
+  }
+}

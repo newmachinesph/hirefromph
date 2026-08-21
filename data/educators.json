@@ -1,0 +1,428 @@
+{
+  "lastVerified": "2026-08",
+  "intro": {
+    "title": "Take the method into your own room.",
+    "lead": "Everything here is built for a facilitator with a room, a projector, and ninety minutes. Take it, run it, adapt it. You do not need us present, and you do not need our permission.",
+    "whoFor": [
+      "Teachers running a livelihood, ICT, or work-immersion class",
+      "TESDA and community trainers with a batch to move",
+      "Barangay, parish, and co-op organisers hosting a no-cost session",
+      "Senior online professionals mentoring juniors in their niche"
+    ],
+    "honestyNote": "We do not know how many rooms this kit reaches. There is no sign-in, no tracking, and no learner count, so we will never publish one. If a session works, the proof is in your room and in what your participants build, not in a number on our page."
+  },
+  "quickStart": [
+    {
+      "n": 1,
+      "title": "Pick one session and read it end to end",
+      "desc": "Read the whole run-sheet before you commit to a date. Each one asks a different thing of the room: DECONSTRUCT needs argument, VET needs honesty, ASK needs quiet. Choose the one your group can carry today."
+    },
+    {
+      "n": 2,
+      "title": "Book the room and test the connection",
+      "desc": "Check the projector, the seating, and the internet the day before, not on the hour. Every session has a fallback in its setup notes for when the line dies. Read yours so a dead line does not end the session."
+    },
+    {
+      "n": 3,
+      "title": "Tell participants what to bring",
+      "desc": "Two of the three sessions need material only the participants can supply: a real opportunity they are undecided about, or a question nobody answered. Send that request days ahead, then remind them the morning of."
+    },
+    {
+      "n": 4,
+      "title": "Print the run-sheet and run the clock out loud",
+      "desc": "Keep the timed steps face up beside you and announce each block as it starts. Saying the clock aloud does more for a workshop than any slide. The timings are deliberate, and the last step is the one that matters."
+    },
+    {
+      "n": 5,
+      "title": "Run it once as written before you change it",
+      "desc": "Adapt after the first run, not before. The steps that look skippable, the blank-page build, the read-aloud, the written verdict, are the ones carrying the learning. Cut them first and you have run a lecture."
+    },
+    {
+      "n": 6,
+      "title": "Close with the drill and the next date",
+      "desc": "Every session ends with a drill the participant does alone, in their own week. Say it out loud, have them write it down, and name when the group meets again. A drill without a next date quietly expires."
+    }
+  ],
+  "sessions": [
+    {
+      "id": "deconstruct-resume",
+      "title": "Deconstruct a resume",
+      "minutes": 90,
+      "method": "DECONSTRUCT",
+      "objectives": [
+        "Participants can state, from evidence they gathered themselves, what every working resume contains and why each part is there.",
+        "Participants leave with a written list of testable rules in their own words, and no file of ours.",
+        "Participants can rebuild a resume from a blank page after this room is gone."
+      ],
+      "setup": [
+        "Room: tables in fours, so five examples can be laid side by side and argued over. The argument is the mechanism of this session, not a disruption of it.",
+        "Materials: one device with internet per pair, paper and pens for the rule sheet, and a wall or whiteboard wide enough for two columns the whole room can read.",
+        "Open on the projector: /method for the DECONSTRUCT card in step one, and /build for the resume lab, which you use for search tactics in step two and the self-critique list in step seven.",
+        "Do not open a template, and do not show your own resume. The moment a room sees one finished example, it stops extracting the pattern and starts copying the page.",
+        "No-internet fallback: have each pair write down from memory the last three resumes they have seen or been sent, then compare those. The skeleton still appears."
+      ],
+      "steps": [
+        {
+          "minutes": 10,
+          "title": "Frame: why there is no file",
+          "facilitator": "Say the standard out loud: we hand out no finished files here. Ask who has downloaded a resume template and how far it got them. Take two honest answers and correct neither. Put the DECONSTRUCT card on the screen and read its five steps once, slowly.",
+          "participants": "Answer honestly. Write the five DECONSTRUCT steps at the top of a blank page. That page becomes their rule sheet for the rest of the session.",
+          "tool": "/method"
+        },
+        {
+          "minutes": 15,
+          "title": "Hunt five real examples",
+          "facilitator": "Set the hunt: five real resumes from people hired into the kind of role this room is aiming at. Real documents, not template galleries, not builder exports. Read out the search tactics from the resume lab, then circulate and reject anything that came from a template site.",
+          "participants": "In pairs, hunt. Save or screenshot five. Say out loud what makes each one real: a named person, a specific employer, work that leaves a trail somewhere you can check.",
+          "tool": "/build"
+        },
+        {
+          "minutes": 15,
+          "title": "Extract the skeleton",
+          "facilitator": "Draw two columns on the wall: in all five, and in some. Take one item at a time from the room and place it. Refuse vague entries. 'A skills section' is not an entry. 'Every example lists skills the writer could defend under a follow-up question' is.",
+          "participants": "Call out what appears in every example. Argue when a pair disagrees, because the argument is where the rule gets found. Copy the finished 'in all five' column onto their own sheet."
+        },
+        {
+          "minutes": 10,
+          "title": "Name the variables",
+          "facilitator": "Move to the second column. For each difference ask the only question that matters: what decision produced it? Length, section order, whether a photo appears, whether projects stand in for employment. Name each one as a judgment the writer made for a reason.",
+          "participants": "Write each difference as a decision they will have to make about their own document, with the reason attached to it."
+        },
+        {
+          "minutes": 15,
+          "title": "Write the rules",
+          "facilitator": "Turn observations into rules. A rule is testable: someone else must be able to hold a page against it and say pass or fail. Walk the room and push back on any rule that cannot fail. 'Be professional' is not a rule. 'Every bullet names a result you can measure' is.",
+          "participants": "Write six to ten testable rules in their own words. Read one aloud to the pair beside them and let it be challenged."
+        },
+        {
+          "minutes": 15,
+          "title": "Blank page, examples closed",
+          "facilitator": "Have every device and every example closed. Hand out blank paper. Say plainly that nothing produced in fifteen minutes will be finished, and that finished is not the goal, ownership is. Keep the clock visible, then stay quiet. Resist filling the silence.",
+          "participants": "From the rules alone, draft their own resume on a blank page. No copying, no examples open. Whatever they cannot fill gets marked and carried home as homework."
+        },
+        {
+          "minutes": 10,
+          "title": "Swap, mark, and take the drill",
+          "facilitator": "Pairs swap drafts and mark them against the rule sheet, pass or fail, line by line. Only now put the resume lab's self-critique list on the screen and ask two questions: what did your rules catch that ours did not, and what did ours catch that yours missed. Close with the drill.",
+          "participants": "Mark a partner's draft against the rules and add any rule the room missed. Take the drill: one deliverable they have never made, five real examples, rules written first, build second.",
+          "tool": "/build"
+        }
+      ],
+      "prompts": [
+        "What did every example do that none of them explained?",
+        "Which of your rules would break if the role changed from customer support to bookkeeping? Is that a bad rule, or a rule that needs a condition attached?",
+        "Who reads this document, and what else are they doing while they read it?",
+        "If a rule cannot fail, is it a rule or a wish?",
+        "What did you copy without noticing, and what does that tell you about how one template spreads through a whole batch?",
+        "If your file disappeared tonight, what would you need to rebuild it tomorrow, better?"
+      ],
+      "mistakes": [
+        {
+          "mistake": "Showing a finished example resume on the screen to save time.",
+          "fix": "Never put one up. The room stops extracting and starts transcribing, and you have run a template session with extra steps. Let them find their own five."
+        },
+        {
+          "mistake": "Answering 'is this good?' with your own opinion.",
+          "fix": "Point at their rule sheet and make them answer it themselves. Your taste does not travel out of the room. Their rules do."
+        },
+        {
+          "mistake": "Letting the hunt overrun because a pair could not find five.",
+          "fix": "Hold the clock. Three real examples produce a workable skeleton. A session that never reaches the blank page produces nothing."
+        },
+        {
+          "mistake": "Accepting vague skeleton entries because the room is agreeing.",
+          "fix": "Push every entry until it names a function or a rule. Agreement on a vague entry feels like progress and teaches nothing."
+        },
+        {
+          "mistake": "Cutting the blank-page build when time runs short.",
+          "fix": "Cut the critique instead. The build is the session. Everything before it is preparation for it."
+        }
+      ]
+    },
+    {
+      "id": "vet-opportunity",
+      "title": "Vet an opportunity",
+      "minutes": 60,
+      "method": "VET",
+      "objectives": [
+        "Participants can run any job post, client message, or paid course through four questions and produce a written verdict.",
+        "Participants can name the hard-stop red flags and act on one without negotiating with themselves.",
+        "Participants leave with one habit: no decision about their money or their weeks without evidence on paper."
+      ],
+      "setup": [
+        "Room: a circle or a horseshoe. This session runs on argument and admission, and people need to see each other to do either.",
+        "Materials: one device per participant and one real opportunity each, brought in advance. A live post beats any case study you could invent.",
+        "Ask ahead: everyone brings one post, message, offer, or paid course they are undecided about. If someone forgets, pair them with someone who did not and give them the partner's post to attack.",
+        "Open on the projector: /method for the VET card, and /apply for the red-flag list and the directory disclaimer. Keep /apply closed until step six.",
+        "Hold two of your own examples in reserve: one that survives all four questions and one that does not. A room trained only on scams learns to reject everything, which is its own failure."
+      ],
+      "steps": [
+        {
+          "minutes": 5,
+          "title": "Frame: the cost of a fast yes",
+          "facilitator": "Ask what a bad yes costs: weeks of unpaid work, a fee that never comes back, personal documents sitting in a stranger's inbox. Take three answers, no correction. Put the VET card up and read the four questions once, in order.",
+          "participants": "Name one thing they said yes to too quickly, in a single sentence. No shaming and no advice, everyone in the room has one.",
+          "tool": "/method"
+        },
+        {
+          "minutes": 10,
+          "title": "Put a real opportunity on the table",
+          "facilitator": "Have each person read their opportunity aloud in thirty seconds: what the work is, who is offering it, what it pays, and what they are being asked to do next. Stop anyone who starts defending it. Write the four questions on the board as the working sheet.",
+          "participants": "Read the opportunity aloud, flat, without arguing for it. Copy the four questions down the left of a page and leave room to write beside each one."
+        },
+        {
+          "minutes": 10,
+          "title": "Who benefits if I believe this?",
+          "facilitator": "Question one. Push past the first answer. Every recommendation has a beneficiary, including a warm one from a relative or a churchmate. Ask what the offer would look like with the beneficiary taken out of the picture.",
+          "participants": "Write who profits if they say yes, and what evidence exists that is independent of that person."
+        },
+        {
+          "minutes": 10,
+          "title": "Evidence, or vibes?",
+          "facilitator": "Question two. Hold up the difference: dates, named sources, and checkable numbers on one side; confidence, screenshots, and lifestyle on the other. Take one participant's post and sort its claims aloud with the room before they do their own.",
+          "participants": "Sort their own post's claims into two columns. Anything that cannot be checked goes in the second column and stays there, however convincing it sounded."
+        },
+        {
+          "minutes": 10,
+          "title": "Is it still true?",
+          "facilitator": "Question three. Ask when each claim was true and what has changed since. Platform rules, rates, and hiring norms move every year, and a confident old answer is still an old answer wearing a suit.",
+          "participants": "Date every claim they can. Mark anything undated as unverified rather than false, then write down where they would go to date it."
+        },
+        {
+          "minutes": 10,
+          "title": "Run the red-flag pass",
+          "facilitator": "Now open the red-flag list and read the hard stops. Make the room say out loud that one hard stop ends it, no matter how good everything else looks. Then have each person score their own post against the list, in writing.",
+          "participants": "Score the opportunity against the flags. Any hard stop, an upfront fee, guaranteed income, secrecy, ends the session for that post, with no negotiation and no exceptions.",
+          "tool": "/apply"
+        },
+        {
+          "minutes": 5,
+          "title": "Verdict on paper",
+          "facilitator": "Each person writes a one-line verdict and reads it out: proceed, pause and verify this one thing by this date, or stop. Make them commit aloud, because a spoken verdict is harder to talk yourself out of. Close with the drill.",
+          "participants": "Write the verdict, name the next action and the date it happens, and say it to the room. Take the drill: no decision about money or time without the four questions in writing."
+        }
+      ],
+      "prompts": [
+        "What would you need to see to change your verdict? If nothing would, you are not vetting, you are defending.",
+        "Who told you this was a good opportunity, and what do they get if you agree?",
+        "Which is more expensive: losing a real chance because you checked, or losing three weeks to one you did not check?",
+        "Why does urgency beat every other flag on the list?",
+        "A client offers a short paid skills test. How is that different from the unpaid deliverable on the board?",
+        "What is the one flag you would still talk yourself past? Say it out loud so the room can hold you to it."
+      ],
+      "mistakes": [
+        {
+          "mistake": "Turning the session into a scam-spotting game.",
+          "fix": "Run one legitimate opportunity through the same four questions. A room that only practises on scams learns to say no to everything, and then applies to nothing."
+        },
+        {
+          "mistake": "Rescuing a participant whose post fails the pass.",
+          "fix": "Let the verdict stand and hand them the sourcing method instead. Losing one bad post in a room full of witnesses is far cheaper than losing three weeks alone."
+        },
+        {
+          "mistake": "Debating a claim instead of dating it.",
+          "fix": "Move the room to 'when was this true' the moment an argument starts. Dates end arguments. Opinions extend them until the clock runs out."
+        },
+        {
+          "mistake": "Opening the red-flag list at the start.",
+          "fix": "Save it for step six. Shown first, the room pattern-matches against the list and skips the reasoning, which is the only part that works on flags nobody has listed yet."
+        }
+      ]
+    },
+    {
+      "id": "ask-well",
+      "title": "Ask a question that gets answered",
+      "minutes": 45,
+      "method": "ASK",
+      "objectives": [
+        "Participants can turn a vague plea into a four-part question a busy professional will answer.",
+        "Participants notice how often writing the second part answers the question before anyone replies.",
+        "Participants send one well-formed question to a real person or a real community before they leave the room."
+      ],
+      "setup": [
+        "Room: pairs, facing each other. This session runs on reading aloud, so keep the space quiet enough that a normal voice carries across one table.",
+        "Materials: a device or paper for each participant, and one real unanswered question each, brought from the past week.",
+        "Ask ahead: everyone brings a question they asked that nobody answered, or one they are afraid to ask. Screenshots are welcome, because the exact wording is the material of this session.",
+        "Open on the projector: /method for the ASK card, and keep the UNSTICK card beside it for the close, since the two methods only work as a pair."
+      ],
+      "steps": [
+        {
+          "minutes": 5,
+          "title": "Frame: why good people ignore your question",
+          "facilitator": "Read two questions aloud: 'hi po, pa help, di gumagana' and a four-part one. Ask which they would answer with four minutes left and a full inbox. Nobody needs convincing after that. Put the ASK card on the screen.",
+          "participants": "Say which one they would answer and why. Write the four parts down the page: goal, tried, happened, ask.",
+          "tool": "/method"
+        },
+        {
+          "minutes": 8,
+          "title": "Put the unanswered question on the table",
+          "facilitator": "Have each person copy their unanswered question word for word. Word for word matters, because the tidied-up version hides the fault. Then have them tick which of the four parts is present and circle what is missing.",
+          "participants": "Write the original question exactly as it was sent. Tick what is there, circle what is not. Most pages end up with one tick and three circles."
+        },
+        {
+          "minutes": 7,
+          "title": "Parts one and two: the goal and the attempts",
+          "facilitator": "Part one is the goal, not the symptom. Part two is what they already tried. Push on both: what are you trying to produce, and what did each attempt rule out? Refuse 'I tried everything', because it tells the reader nothing and costs them time.",
+          "participants": "Write the outcome they want in one sentence, then list what they tried and what each attempt ruled out."
+        },
+        {
+          "minutes": 7,
+          "title": "Part three: what happened, exactly",
+          "facilitator": "Part three is the literal error, the literal reply, the literal number. Take one paraphrase from the room and ask for the exact words instead, in front of everyone, so the gap between the two is visible to all of them.",
+          "participants": "Replace every paraphrase with the exact text, message, or number. Where they cannot find it, write down where they will go to get it before they send."
+        },
+        {
+          "minutes": 8,
+          "title": "Part four: ask for the method, not the file",
+          "facilitator": "Part four is the doctrine in one line. 'Can you send me the file' ends the day that file goes out of date. 'How would you approach this' makes them a colleague and leaves them with something they keep. Have the room write both versions.",
+          "participants": "Write the ask twice, once for the file and once for the method, read both aloud, then keep the second and cross out the first."
+        },
+        {
+          "minutes": 7,
+          "title": "Read it aloud, then send it",
+          "facilitator": "Pairs read the rewritten question aloud to each other. Ask the listener one thing: could you answer this? Then ask the writer whether they can now answer it themselves. Count the hands. That count is the lesson of the session.",
+          "participants": "Read the rewritten question aloud, answer their partner's, then send their own to a real person or a real community before leaving the room."
+        },
+        {
+          "minutes": 3,
+          "title": "Close: the time-box",
+          "facilitator": "Name the rule that stops grinding: a hard limit, then ask. Point at the UNSTICK card so they know when asking is the right move and when it is an escape. Give the drill.",
+          "participants": "Set their own time limit and write it on the page. Take the drill: rewrite the last question they asked anyone into the four parts."
+        }
+      ],
+      "prompts": [
+        "How many of you answered your own question while writing part two?",
+        "What does 'I tried everything' tell the person reading it?",
+        "Why does showing your attempts get a better answer than showing your desperation?",
+        "When is it too early to ask, and when is it too late?",
+        "What is the difference between the answer you wanted and an answer you can reuse next month?"
+      ],
+      "mistakes": [
+        {
+          "mistake": "Rewriting a participant's question for them.",
+          "fix": "Ask the four questions and let them write the words. A question you wrote is a question they cannot reproduce next week without you."
+        },
+        {
+          "mistake": "Letting the room drift into fixing grammar.",
+          "fix": "Move them back to structure. A question in imperfect English with all four parts gets answered. A polished vague one does not."
+        },
+        {
+          "mistake": "Running out of time before anyone sends anything.",
+          "fix": "Protect the last seven minutes. A rewritten question that stays in a notebook has changed nothing about the participant's week."
+        },
+        {
+          "mistake": "Teaching this as a session about politeness.",
+          "fix": "Say plainly that it is about respecting the reader's time. Politeness without structure still gets scrolled past."
+        }
+      ]
+    }
+  ],
+  "slides": [
+    {
+      "id": "title",
+      "kicker": "Hire From PH",
+      "title": "Be the reason they hire from the Philippines",
+      "body": "An open platform that takes Filipinos from zero to a remote career as an online professional. No fee, no sign-up, no catch. This session carries the method, not the files."
+    },
+    {
+      "id": "why",
+      "kicker": "Why this exists",
+      "title": "The standard, not the discount",
+      "body": "The people companies hire from the Philippines should be the ones worth hiring anywhere. Competing on price invites replacement. Competing on judgment does not. Every part of this kit builds toward the second one."
+    },
+    {
+      "id": "doctrine",
+      "kicker": "The doctrine",
+      "title": "Method over material",
+      "body": "We hand out no finished files. We teach why the thing exists, what each part does, and the rules that make it good. Then you build it from a blank page, in your own words."
+    },
+    {
+      "id": "honesty",
+      "kicker": "The honesty rule",
+      "title": "No number without its source",
+      "body": "We ask learners to sign an integrity oath, so we hold ourselves to it. Every figure ships with a link to where it came from. Where the data does not exist, we say so instead of inventing it."
+    },
+    {
+      "id": "stages",
+      "kicker": "The path",
+      "title": "Five stages, one line",
+      "body": "Start Right. Get Hired. Deliver. Level Up. Own. Each stage names who you are at that point: the beginner, the job hunter, the online professional, the growth path, the independent."
+    },
+    {
+      "id": "steps",
+      "kicker": "The path",
+      "title": "Eleven steps, no guessing",
+      "body": "Set up and mindset. Learn the foundation. Build your assets. Apply everywhere. Interview and negotiate. Ace your first week. Systemize your work. Become indispensable. Specialize and automate. Go direct and get legit. Give back."
+    },
+    {
+      "id": "method-find",
+      "kicker": "Method 01",
+      "title": "FIND: how to find any answer",
+      "body": "Primary source first, never a summary of it. Search like an operator, not a customer. Triangulate before you trust. Ask when it was true and who profits. Drill: find a trustworthy answer to something you do not know, in under ten minutes."
+    },
+    {
+      "id": "method-deconstruct",
+      "kicker": "Method 02",
+      "title": "DECONSTRUCT: build what you never built",
+      "body": "You never need a template. Collect five real examples. Extract what they all share, that is the skeleton. Name what differs, those are the judgment calls. Write the rules, then build from them, examples closed. Drill: do it for one deliverable this week."
+    },
+    {
+      "id": "method-learn",
+      "kicker": "Method 03",
+      "title": "LEARN: teach yourself any skill",
+      "body": "Define the outcome, not the topic. Learn the few functions used daily, skip the rest. Build something real and flawed early; the flaws show you what to learn next. Teach it back. Drill: one real artifact and a one-page SOP in 48 hours."
+    },
+    {
+      "id": "method-vet",
+      "kicker": "Method 04",
+      "title": "VET: judge before you commit",
+      "body": "Who benefits if I believe this? Is this evidence, or vibes? Is it still true? Then run the red flags: upfront fees, guaranteed income, secrecy, urgency, vagueness about the work. One hard stop ends it. Drill: write the four answers before you act."
+    },
+    {
+      "id": "method-ask",
+      "kicker": "Method 05",
+      "title": "ASK: get your question answered",
+      "body": "Show what you are trying to do. Show what you already tried. Show what happened, in the exact words. Then ask for the method, not the file. Drill: rewrite the last question you asked into these four parts."
+    },
+    {
+      "id": "method-unstick",
+      "kicker": "Method 06",
+      "title": "UNSTICK: stuck is a step",
+      "body": "Re-read what was asked, word for word. Shrink it to the smallest failing piece. Change one thing at a time. Say the problem out loud. Time-box it, then ask well. Drill: note which step freed you, and find your pattern."
+    },
+    {
+      "id": "method-give",
+      "kicker": "Method 07",
+      "title": "GIVE: grow by giving first",
+      "body": "Do real work for a real need at no cost. Teach what you just learned, where the next beginner will find it. Share the method, not only the win. Show up in your niche's rooms. Drill: one hour of scoped help this week."
+    },
+    {
+      "id": "unlearn",
+      "kicker": "Anti-patterns",
+      "title": "Spoon-fed habits to unlearn",
+      "body": "Asking for the file. Collecting resources instead of finishing one thing. Copying without extracting the rule. Waiting to be taught. Watching tutorials endlessly. Buying the course to feel safe. Each one feels like progress. None is."
+    },
+    {
+      "id": "use-kit",
+      "kicker": "How to use this",
+      "title": "Run it, adapt it, pass it on",
+      "body": "Run a session as written once, then change what your room needs. Nothing here needs our permission or our presence. If you improve a run-sheet, tell the next facilitator. That is the GIVE method applied to this kit."
+    },
+    {
+      "id": "license",
+      "kicker": "Licence",
+      "title": "CC BY 4.0, with attribution",
+      "body": "Share and adapt this material, including inside training you are paid to run, as long as you credit Hire From PH (hirefrom.ph) and say what you changed. The platform itself stays open and at no cost to learners.",
+      "source": {
+        "label": "Creative Commons Attribution 4.0 International",
+        "url": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    }
+  ],
+  "license": {
+    "name": "CC BY 4.0",
+    "url": "https://creativecommons.org/licenses/by/4.0/",
+    "attribution": "Hire From PH (hirefrom.ph), licensed CC BY 4.0",
+    "summary": "Share and adapt this kit in any medium and for any purpose, including training you are paid to run, as long as you credit Hire From PH and note what you changed."
+  }
+}

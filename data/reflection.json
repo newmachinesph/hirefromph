@@ -1,0 +1,52 @@
+{
+  "prompts": [
+    {
+      "week": 1,
+      "prompt": "Name one opportunity you found this week that was not sitting on a job board, and write down how you found it."
+    },
+    {
+      "week": 2,
+      "prompt": "Which claim did you chase back to a primary source this week, and did it survive the check?"
+    },
+    {
+      "week": 3,
+      "prompt": "Which examples did you take apart this week, and what rule did you pull out of them?"
+    },
+    {
+      "week": 4,
+      "prompt": "What did you build from a blank page this week that you could not have written a month ago?"
+    },
+    {
+      "week": 5,
+      "prompt": "Which opportunity did you vet and reject this week, and which flag made the decision for you?"
+    },
+    {
+      "week": 6,
+      "prompt": "Which question did you ask this week that got a real answer, and what made it answerable?"
+    },
+    {
+      "week": 7,
+      "prompt": "Where were you stuck longest this week, and what finally moved it?"
+    },
+    {
+      "week": 8,
+      "prompt": "Which study session was hard while you were doing it, and what do you still remember from it now?"
+    },
+    {
+      "week": 9,
+      "prompt": "Who did you help this week without being asked, and what did it cost you?"
+    },
+    {
+      "week": 10,
+      "prompt": "What did you do twice this week that should have been an SOP or an automation?"
+    },
+    {
+      "week": 11,
+      "prompt": "Which message did you send this week that you would write differently now, and what would change?"
+    },
+    {
+      "week": 12,
+      "prompt": "What can you do now that someone would pay for, and what finished piece proves it?"
+    }
+  ]
+}

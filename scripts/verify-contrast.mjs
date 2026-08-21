@@ -1,27 +1,61 @@
+// WCAG contrast gate over the tokens in app/globals.css.
+// Text pairs need 4.5:1; UI-component pairs (form borders) need 3:1.
+// Run: npm run verify:contrast
 import { readFile } from "node:fs/promises";
 
-const PAIRS = [
-  ["signal", "paper", 4.5],
-  ["signal", "signal-tint", 4.5],
-  ["signal-light", "ink", 4.5],
-  ["verified", "paper", 4.5],
-  ["verified", "verified-tint", 4.5],
-  ["info", "paper", 4.5],
-  ["caution", "paper", 4.5],
-  ["caution-text", "caution-tint", 4.5],
-  ["ink", "paper", 4.5],
-  ["ink-soft", "paper", 4.5],
-  ["ink-faint", "paper", 4.5],
+const TEXT = [
+  ["ink", "paper"],
+  ["ink-soft", "paper"],
+  ["ink-faint", "paper"],
+  ["ink-faint", "band"],
+  ["ink", "band"],
+  ["ink", "tint"],
+  ["primary", "paper"],
+  ["primary", "band"],
+  ["primary-deep", "primary-tint"],
+  ["verified", "paper"],
+  ["verified", "verified-tint"],
+  ["caution", "paper"],
+  ["caution", "caution-tint"],
+  ["info", "paper"],
+  ["info", "info-tint"],
+  ["coral", "paper"],
+  ["coral", "coral-tint"],
+  ["on-navy", "ink"],
+  ["primary-soft", "ink"],
+  // legacy aliases still rendered by pre-overhaul pages
+  ["signal", "paper"],
+  ["signal-deep", "signal-tint"],
+  ["signal-light", "ink"],
+  ["caution-text", "caution-tint"],
 ];
-// White-on-fill pairs, checked against #ffffff rather than a token.
-const ON_FILL = [["signal", 4.5], ["signal-deep", 4.5], ["verified", 4.5], ["info", 4.5]];
+// White text on these fills must pass 4.5:1.
+const WHITE_ON = ["primary", "primary-deep", "ink", "verified", "caution", "info", "coral", "signal", "signal-deep"];
+// Ink text on the vibrant fills must pass 4.5:1.
+const INK_ON = ["verified-fill", "caution-fill", "info-fill", "coral-fill"];
+// Non-text UI boundaries need 3:1.
+const UI = [
+  ["control", "paper", 3],
+  ["control", "band", 3],
+];
 
 const css = await readFile(new URL("../app/globals.css", import.meta.url), "utf8");
 
-function token(name) {
-  const m = css.match(new RegExp(`--${name}:\\s*(#[0-9a-fA-F]{6})`));
+// Anchor lookups to the :root block first (where every colour token lives);
+// fall back to the whole file for names not found there.
+const rootMatch = css.match(/:root\s*\{([\s\S]*?)\}/);
+const rootCss = rootMatch ? rootMatch[1] : css;
+
+function token(name, depth = 0) {
+  const re = new RegExp(`--${name}:\\s*([^;]+);`);
+  const m = rootCss.match(re) ?? css.match(re);
   if (!m) throw new Error(`token --${name} not found in globals.css`);
-  return m[1];
+  const v = m[1].trim();
+  const hex = v.match(/^#[0-9a-fA-F]{6}$/);
+  if (hex) return v.toUpperCase();
+  const ref = v.match(/^var\(--([a-z0-9-]+)\)$/i);
+  if (ref && depth < 3) return token(ref[1], depth + 1);
+  throw new Error(`token --${name} is not a 6-digit hex or var() alias: ${v}`);
 }
 
 function luminance(hex) {
@@ -36,17 +70,20 @@ function ratio(a, b) {
 }
 
 const failures = [];
-for (const [fg, bg, min] of PAIRS) {
-  const r = ratio(token(fg), token(bg));
-  if (r < min) failures.push(`--${fg} on --${bg}: ${r.toFixed(2)}:1 (need ${min}:1)`);
-}
-for (const [fill, min] of ON_FILL) {
-  const r = ratio("#ffffff", token(fill));
-  if (r < min) failures.push(`white on --${fill}: ${r.toFixed(2)}:1 (need ${min}:1)`);
-}
+let checked = 0;
+const check = (label, fg, bg, min) => {
+  checked++;
+  const r = ratio(fg, bg);
+  if (r < min) failures.push(`${label}: ${r.toFixed(2)}:1 (need ${min}:1)`);
+};
+
+for (const [fg, bg] of TEXT) check(`--${fg} on --${bg}`, token(fg), token(bg), 4.5);
+for (const fill of WHITE_ON) check(`white on --${fill}`, "#FFFFFF", token(fill), 4.5);
+for (const fill of INK_ON) check(`--ink on --${fill}`, token("ink"), token(fill), 4.5);
+for (const [fg, bg, min] of UI) check(`--${fg} on --${bg} (UI)`, token(fg), token(bg), min);
 
 if (failures.length) {
   console.error("Contrast failures:\n  " + failures.join("\n  "));
   process.exit(1);
 }
-console.log(`Contrast OK — ${PAIRS.length + ON_FILL.length} pairs pass.`);
+console.log(`Contrast OK — ${checked} pairs pass.`);

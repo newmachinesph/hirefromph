@@ -7,10 +7,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "node --test",
+    "test": "node --test \"**/*.test.mjs\" && vitest run",
+    "test:unit": "vitest run",
+    "test:watch": "vitest",
     "verify:claims": "node scripts/verify-claims.mjs",
     "verify:contrast": "node scripts/verify-contrast.mjs",
-    "verify:links": "node scripts/verify-links.mjs"
+    "verify:links": "node scripts/verify-links.mjs",
+    "verify:primitives": "node scripts/verify-primitives.mjs",
+    "verify:all": "npm run verify:contrast && npm run verify:links && npm run verify:claims && npm run lint && npx tsc --noEmit && npm run verify:primitives",
+    "images:optimize": "node scripts/optimize-images.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.10",
@@ -24,12 +29,20 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.5",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.10",
+    "jsdom": "^30.0.1",
+    "sharp": "^0.35.3",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vite": "^7.3.6",
+    "vitest": "^3.2.7"
   }
 }

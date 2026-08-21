@@ -1,101 +1,69 @@
+/**
+ * Compatibility shim for the 33 pre-overhaul pages.
+ *
+ * The real implementations live in `components/ui/` and `components/layout/`.
+ * Everything below is a thin wrapper around them that keeps the old prop
+ * shapes compiling. Phase 5 migrates the call sites and deletes this file —
+ * do not add anything new here.
+ */
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight } from "lucide-react";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
-import { Reveal } from "@/components/reveal";
+import { Badge, Button, Icon, type BadgeTone } from "@/components/ui/index";
+import {
+  PageHero as LayoutPageHero,
+  SectionHeading as LayoutSectionHeading,
+  type SectionHeadingProps,
+} from "@/components/layout";
 
-export function Kicker({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
-  return (
-    <span className={cn("kicker inline-flex items-center gap-2", className)}>
-      <span className="h-1.5 w-1.5 rounded-full bg-signal" />
-      {children}
-    </span>
-  );
-}
+export * from "./ui/index";
 
+/** @deprecated Use `Badge`. */
 export function Pill({
   children,
   tone = "neutral",
   className,
 }: {
   children: ReactNode;
-  tone?: "neutral" | "signal" | "verified" | "caution" | "info";
+  tone?: BadgeTone;
   className?: string;
 }) {
-  const tones: Record<string, string> = {
-    neutral: "bg-paper-3 text-ink-soft border-line-strong",
-    signal: "bg-signal-tint text-signal-deep border-signal/25",
-    verified: "bg-verified-tint text-verified border-verified/25",
-    caution: "bg-caution-tint text-caution-text border-caution/30",
-    info: "bg-info-tint text-info border-info/25",
-  };
   return (
-    <span
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs font-medium",
-        tones[tone],
-        className,
-      )}
-    >
+    <Badge tone={tone} variant="soft" className={className}>
       {children}
-    </span>
+    </Badge>
   );
 }
 
-type ButtonProps = {
-  href: string;
-  children: ReactNode;
-  variant?: "primary" | "ghost" | "outline";
-  external?: boolean;
-  className?: string;
-};
-
+/** @deprecated Use `Button`. */
 export function ButtonLink({
   href,
   children,
   variant = "primary",
   external,
   className,
-}: ButtonProps) {
-  const base =
-    "group inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 will-change-transform";
-  const variants: Record<string, string> = {
-    primary:
-      "bg-ink text-paper-2 hover:bg-signal hover:shadow-[var(--shadow-signal)] hover:-translate-y-0.5",
-    outline:
-      "border border-line-strong text-ink hover:border-ink hover:-translate-y-0.5 bg-paper-2",
-    ghost: "text-ink hover:text-signal",
-  };
-  const inner = (
-    <>
-      {children}
-      <ArrowRight
-        size={16}
-        className="transition-transform duration-300 group-hover:translate-x-1"
-      />
-    </>
-  );
-  const cls = cn(base, variants[variant], className);
-  if (external) {
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer" className={cls}>
-        {inner}
-      </a>
-    );
-  }
+}: {
+  href: string;
+  children: ReactNode;
+  variant?: "primary" | "ghost" | "outline";
+  external?: boolean;
+  className?: string;
+}) {
   return (
-    <Link href={href} className={cls}>
-      {inner}
-    </Link>
+    <Button
+      href={href}
+      external={external}
+      variant={variant}
+      size="md"
+      className={className}
+      iconEnd={<Icon name="arrow-right" size={16} />}
+    >
+      {children}
+    </Button>
   );
 }
 
+/** @deprecated Use `Button variant="link"`. */
 export function ArrowLink({
   href,
   children,
@@ -109,121 +77,72 @@ export function ArrowLink({
     <Link
       href={href}
       className={cn(
-        "group inline-flex items-center gap-1 text-sm font-semibold text-ink transition-colors hover:text-signal",
+        "inline-flex items-center gap-1 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary",
         className,
       )}
     >
       <span className="link-sweep">{children}</span>
-      <ArrowUpRight
-        size={16}
-        className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-      />
+      <Icon name="arrow-up-right" size={16} />
     </Link>
   );
 }
 
+/** @deprecated Import `SectionHeading` from `@/components/layout`. */
 export function SectionHeading({
   kicker,
   title,
   lead,
   align = "left",
   className,
-}: {
-  kicker?: string;
-  title: ReactNode;
-  lead?: ReactNode;
-  align?: "left" | "center";
-  className?: string;
-}) {
+}: Pick<SectionHeadingProps, "kicker" | "title" | "lead" | "align" | "className">) {
   return (
-    <div
-      className={cn(
-        "flex flex-col gap-4",
-        align === "center" && "items-center text-center",
-        className,
-      )}
-    >
-      {kicker && <Kicker>{kicker}</Kicker>}
-      <h2 className="font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-        {title}
-      </h2>
-      {lead && (
-        <p
-          className={cn(
-            "text-[length:var(--text-lead)] leading-relaxed text-ink-soft",
-            align === "center" ? "max-w-2xl" : "max-w-xl",
-          )}
-        >
-          {lead}
-        </p>
-      )}
-    </div>
+    <LayoutSectionHeading
+      kicker={kicker}
+      title={title}
+      lead={lead}
+      align={align}
+      className={className}
+    />
   );
 }
 
 /**
- * Standard interior-page hero: kicker, headline, optional lead paragraph.
- * One place for headline size, top margin, and hero padding so pages stop
- * drifting. `titleWidth` stays per-page because it tracks headline length.
+ * @deprecated Import `PageHero` from `@/components/layout`.
+ *
+ * `titleWidth` and `backdrop` are accepted and ignored: headline width is now
+ * the type scale's job, and the backdrops were the blur blobs §9 deletes.
+ * The shim also renders its own `<section>` rhythm through the layout
+ * component, so pages keep their spacing without passing anything new.
  */
 export function PageHero({
   kicker,
   title,
   lead,
-  titleWidth = "max-w-3xl",
-  backdrop,
+  titleWidth: _titleWidth,
+  backdrop: _backdrop,
   className,
   children,
 }: {
   kicker: string;
   title: ReactNode;
   lead?: ReactNode;
-  /** Tailwind max-width class for the headline; varies with title length. */
   titleWidth?: string;
-  /** Absolute-positioned decorative element(s) behind the hero. */
   backdrop?: ReactNode;
   className?: string;
-  /** Extra hero content after the lead (buttons, quote, etc.). */
   children?: ReactNode;
 }) {
   return (
-    <section
-      className={cn(
-        "container-x pt-14 pb-10 lg:pt-20",
-        backdrop && "relative",
-        className,
-      )}
-    >
-      {backdrop}
-      <Reveal>
-        <Kicker>{kicker}</Kicker>
-      </Reveal>
-      <Reveal i={1}>
-        <h1
-          className={cn(
-            "mt-5 font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance",
-            titleWidth,
-          )}
-        >
-          {title}
-        </h1>
-      </Reveal>
-      {lead && (
-        <Reveal i={2}>
-          <p className="mt-6 max-w-2xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-            {lead}
-          </p>
-        </Reveal>
-      )}
+    <LayoutPageHero kicker={kicker} title={title} lead={lead} compact className={className}>
       {children}
-    </section>
+    </LayoutPageHero>
   );
 }
 
+/** @deprecated Slop pattern (§9). Unused; deleted in Phase 5. */
 export function Marquee({ items }: { items: string[] }) {
   const doubled = [...items, ...items];
   return (
-    <div className="relative overflow-hidden border-y border-line bg-ink py-4 text-paper-2">
+    <div className="relative overflow-hidden border-y border-line bg-ink py-4 text-on-navy">
       <div className="marquee-track gap-10">
         {doubled.map((it, idx) => (
           <span
@@ -231,7 +150,7 @@ export function Marquee({ items }: { items: string[] }) {
             className="flex shrink-0 items-center gap-10 font-display text-lg tracking-tight"
           >
             {it}
-            <span className="text-signal">✦</span>
+            <span className="text-primary">✦</span>
           </span>
         ))}
       </div>

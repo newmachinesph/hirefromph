@@ -1,6 +1,6 @@
 # Hire From PH — Build Guide (read before building any page)
 
-Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for animation, `lucide-react` icons. Light mode only. TypeScript strict.
+Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `components/icon.tsx` (lucide is being removed; add no new lucide imports). Light mode only. TypeScript strict.
 
 ## THE CORE DOCTRINE (read `data/doctrine.json` — this governs everything)
 
@@ -39,25 +39,84 @@ We ask users to sign an integrity oath. We therefore hold ourselves to it — a 
 - Audience: Filipinos building a remote career. Warm, direct, encouraging. Light Taglish is welcome ("walang bayad, walang catch", "sabi sa'yo eh").
 - **Never** say "virtual assistant" or "assistant". Always **"online professional" / "remote professional"**.
 - Free, path-based, not overwhelming. Depth reveals as the user goes.
-- No external images. Build visuals with CSS/SVG/gradients/`dotgrid`. Emoji flags OK.
+- No hotlinked or third-party images. First-party assets in `public/images/` (manifest `data/visuals.json`) render through the `Figure` primitive; every generated asset is captioned as illustrative (spec §7.1). Emoji flags OK.
 - All content comes from `data/*.json`. Do not hardcode copy that exists in JSON.
 
 ## Design tokens (Tailwind utilities already wired)
-Colors: `paper`, `paper-2`, `paper-3`, `card`, `ink`, `ink-soft`, `ink-faint`, `line`, `line-strong`, `signal`, `signal-deep`, `signal-tint`, `signal-light`, `verified`, `verified-tint`, `info`, `caution`, `caution-text`.
-Fonts: `font-display` (Space Grotesk — headings), default sans (Inter Tight), `font-mono` (Space Mono — kickers/code).
-Type: `text-[length:var(--text-hero)]`, `--text-display`, `--text-h2`, `--text-h3`, `--text-lead` (pair each with its `--line-height`).
-Radius: `rounded-[var(--radius)]` / `--radius-sm` / `--radius-lg`. Shadows: `shadow-[var(--shadow-sm)]`, `--shadow-md`, `--shadow-lg` (pick one token per class).
-Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotgrid`, `.link-sweep`, `.font-display`.
+Spec: `docs/superpowers/specs/2026-08-21-ui-overhaul-design.md` §4. Phase 0 of the overhaul shipped these; Phases 1–5 replace the page structure.
+
+Surfaces: `paper` (white), `band` (lavender section band), `tint`, `card`. Ink: `ink`, `ink-soft`, `ink-faint`, `on-navy`. Lines: `line`, `line-strong`, `control` (form borders, 3:1).
+Primary: `primary`, `primary-deep`, `primary-tint`, `primary-soft`.
+Semantic accents — the bare name is the **text/deep** value (AA on paper and on its tint); `*-fill` is the vibrant shape colour and takes **ink text only**; `*-tint` is the pale surface: `verified`, `caution`, `info`, `coral` (red flags). Stage ids in JSON (`signal|caution|verified|info`) resolve through `lib/accent.ts` — **never re-declare accent maps in a page.**
+White text is allowed only on `primary`, `primary-deep`, `ink`, and the deep semantic values.
+`ink-faint` is for paper/band backgrounds only; on `*-tint` surfaces use `ink-soft` (AA).
+
+Fonts: `font-display` (Cabinet Grotesk — headings, buttons, wordmark), `font-sans` (Inter — everything else). No mono family.
+Type: `text-hero` `text-display` `text-h2` `text-h3` `text-h4` `text-h5` `text-lead` `text-body` `text-small` `text-caption` `text-kicker` — each utility already carries its line-height, weight, and tracking; do not pair with `leading-*`.
+Radius: `rounded-sm` (8) `rounded-md` (12) `rounded-lg` (20) `rounded-pill`. Shadows: `shadow-[var(--shadow-sm)]` (dropdowns) and `--shadow-md` (dialogs) only — cards use borders, never shadows, never hover lifts.
+Helpers (globals.css): `.container-x`, `.skip-link`. Legacy helpers `.kicker`, `.font-display`, `.link-sweep` remain until Phase 5.
 
 ## Shared components (import and REUSE — do not re-invent)
-- `@/components/ui` → `Kicker`, `Pill` (tone: neutral|coral|emerald|amber|indigo), `ButtonLink` (variant: primary|outline|ghost; `external`), `ArrowLink`, `SectionHeading` ({kicker,title,lead,align}), `Marquee`.
-- `@/components/reveal` → `Reveal` ({i?: staggerIndex, as?, className}) — scroll-reveal wrapper (client). Wrap sections/cards.
-- `@/components/icon` → `Icon` ({name}) — resolves kebab icon names from JSON to Lucide. Use for any icon name stored in JSON.
+
+Everything visual is built from two barrels. Pages compose them; pages do not
+re-style borders, radii, inputs, type or accents by hand.
+`npm run verify:primitives` warns when a page bypasses them, and from Phase 5 it
+fails the build.
+
+- `@/components/ui` — primitives, one per file:
+  `Accordion` / `AccordionItem`, `Badge`, `Button`, `Callout`,
+  `Card` / `CardBody` / `CardFooter` / `CardMedia`, `Checkbox`, `ChoiceCard`,
+  `DiagramFrame`, `Dialog`, `EmptyState`, `Field` (+ `controlClass`,
+  `useFieldControl`), `Figure`, `Heading`, `Icon` (+ `ICON_NAMES`), `Input`,
+  `Kicker`, `ProgressBar`, `Radio`, `Range`, `Select`, `Source` / `SourceList`,
+  `Stat` / `StatStrip`, `Step` / `StepList`, `Switch`,
+  `Tabs` / `TabList` / `Tab` / `TabPanel`, `Text`, `Textarea`.
+- `@/components/layout` — page structure: `Breadcrumb`, `CardGrid`, `Container`,
+  `CtaBand`, `FeatureRow`, `PageFooterNav`, `PageHero`, `Section`,
+  `SectionHeading`, `Toc`.
+
+Rules that matter more than the list:
+
+- **`Button` is the only button.** `href` renders a `next/link`; `href` +
+  `external` renders `<a target="_blank" rel="noopener noreferrer">`; no `href`
+  renders a real `<button>`. Never hand-roll a pill.
+- **`Heading` and `Text` are the only way to reach the type scale.** Headline
+  accent colouring is the `Heading accent` prop, never an inline
+  `<span className="text-primary">`.
+- **`Field` owns label, hint and error wiring.** Put a single control inside
+  `Field`; put a set of `Radio`s or `ChoiceCard`s inside `Field as="group"`.
+  `aria-describedby` and `aria-invalid` come for free — do not set them by hand.
+- **`Figure` is the only image path.** Pass a manifest `id` from
+  `data/visuals.json`, or `src` + `alt` + `width` + `height`. Any entry marked
+  `generated` is captioned "Illustrative image" automatically; that caption is
+  honesty doctrine, not decoration.
+- **`Source` is the only way to cite.** `grade="vendor"` tags staffing- and
+  training-vendor data as vendor-grade.
+- **`Dialog` owns modality**: portal, focus trap, Escape, return focus, scroll
+  lock. Do not write another one.
+- **`Card` is a single interactive unit.**
+  - A `Card` with `href` is one link: never nest a `Button`, link, or other
+    interactive element inside it — put secondary actions outside the card or
+    use a non-linked `Card` with a `Button` in `CardFooter`.
+  - Touch targets: every interactive primitive renders ≥ 44px tall; do not
+    override their height classes.
+
+Still current, unchanged by the overhaul:
+
 - `@/components/copy-button` → `CopyButton` ({value, label}).
 - `@/components/path-chooser` → `PathChooser` ({compact?, redirectTo?, onChosen?}).
-- `@/components/path-gate` → `PathGate` ({children, teaser?, unlocks?}) — wrap DEEP content; before the user picks a path it shows a locked invitation + inline chooser, after it reveals children. Use it to gate the heaviest lists (apply directory, full niche detail, full prompt library).
+- `@/components/path-gate` → `PathGate` ({children, teaser?, unlocks?}) — wrap DEEP content; before the user picks a path it shows a locked invitation + inline chooser, after it reveals children.
 - `@/lib/path-context` → `usePath()` → `{state, hydrated, hasPath, choosePath, clearPath, setStage, toggleStep, togglePlanDay, toggleEquipment, setPlanAnswers}`. Client only.
+- `@/lib/accent` → `ACCENT`, `accent(id)`, `isAccent`, `ACCENTS` — the single accent map.
 - `@/lib/utils` → `cn(...)`.
+
+Deprecated, kept only so pre-overhaul pages compile (Phase 5 deletes them):
+`Pill` (use `Badge`), `ButtonLink` (use `Button`), `ArrowLink` (use
+`Button variant="link"`), `Marquee`, and the old `PageHero` / `SectionHeading`
+signatures re-exported from `@/components/ui`. `@/components/reveal` → `Reveal`
+is a no-op wrapper and is being unwrapped as pages migrate — do not add new uses.
+`@/components/icon` re-exports `Icon` from `@/components/ui/icon`; import from
+`@/components/ui` in new code.
 
 ## Page conventions
 - Every route is `app/<slug>/page.tsx`. Add `export const metadata = { title, description }`.
@@ -70,10 +129,8 @@ Helpers (globals.css): `.container-x` (page gutter+max-width), `.kicker`, `.dotg
     <Reveal i={2}><p className="mt-5 max-w-2xl text-[length:var(--text-lead)] text-ink-soft">{intro}</p></Reveal>
   </section>
   ```
-- Cards: `rounded-[var(--radius)] border border-line bg-paper-2 p-6`, hover `hover:-translate-y-1 hover:shadow-[var(--shadow-md)] transition-all duration-300`.
-- accent maps (reuse):
-  - text: signal→`text-signal`, verified→`text-verified`, caution→`text-caution-text`, info→`text-info`
-  - bar/bg: signal→`bg-signal`, verified→`bg-verified`, caution→`bg-caution`, info→`bg-info`
+- Cards: use `<Card>`. Bordered, **never shadowed** — `rounded-md border border-line bg-paper` on paper, `border-line-strong` on a band (`<Card onBand>`). Padding is `padding="sm" | "md" | "lg"`. `interactive` (or `href`) hovers to `border-ink` + `bg-band` only: no translate, no shadow, no scale. Compose media cards as `<Card padding="none"><CardMedia/><CardBody/><CardFooter/></Card>`.
+- Accents: `import { ACCENT, accent, type Accent } from "@/lib/accent"`. Stage ids in JSON stay `signal | caution | verified | info`; `coral` is added for red-flag content. Read classes off the map — `accent(stage.accent).text | .fill | .tint | .border | .ring | .soft` — and **never re-declare an accent map in a page**. `verify:primitives` flags `const accentText`, `accentBar`, `accentSoft`, `accentBorder`.
 - Accessibility: semantic landmarks, `alt`/`aria-label`, keyboard-usable controls, focus-visible is styled globally.
 - Reference implementation for tone & polish: `app/page.tsx`.
 

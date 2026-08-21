@@ -1,178 +1,272 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ */
-/*  Hire From PH — Design tokens.                                      */
-/*  Signal: cool near-white, graphite ink, electric violet.            */
+/*  Hire From PH — design tokens                                       */
+/*  Spec: docs/superpowers/specs/2026-08-21-ui-overhaul-design.md §4   */
+/*  Inter (text) + Cabinet Grotesk (display). Light only.              */
 /* ------------------------------------------------------------------ */
 
 :root {
-  --paper: #F6F7F9;
-  --paper-2: #FFFFFF;
-  --paper-3: #ECEEF2;
+  /* Surfaces */
+  --paper: #FFFFFF;
+  --band: #F7F6FF;
+  --tint: #EEEDFF;
   --card: #FFFFFF;
 
-  --ink: #0F1115;
-  --ink-soft: #464B57;
-  --ink-faint: #676D7C;
-  --line: #E2E5EA;
-  --line-strong: #C9CED8;
+  /* Ink */
+  --ink: #0E1230;
+  --ink-soft: #4A4F66;
+  --ink-faint: #6B7087;
+  --on-navy: #F7F6FF;
 
-  --signal: #3A35D6;
-  --signal-deep: #2A26A8;
-  --signal-tint: #E8E7FC;
-  --signal-light: #8E8AFF;
+  /* Lines */
+  --line: #E4E4EA;
+  --line-strong: #CFCFD8;
+  --control: #858A9E;
 
-  --verified: #12724E;
-  --verified-tint: #DDF1E7;
+  /* Primary */
+  --primary: #4B4EF6;
+  --primary-deep: #3634D8;
+  --primary-tint: #EEEDFF;
+  --primary-soft: #C9C8FF;
 
-  --info: #0E6FA8;
-  --info-tint: #DDEEF8;
-  --caution: #B45309;
-  --caution-tint: #FBEBD5;
-  --caution-text: #8A3F07;
+  /* Semantic accents. Bare name = deep/text value (AA on paper and on its tint).
+     *-fill = vibrant shape colour (ink text only). *-tint = pale surface. */
+  --verified: #067647;
+  --verified-fill: #12B76A;
+  --verified-tint: #E6F7EE;
+  --caution: #9A5B00;
+  --caution-fill: #F5A623;
+  --caution-tint: #FFF4DB;
+  --info: #026AA2;
+  --info-fill: #0BA5EC;
+  --info-tint: #E0F2FE;
+  --coral: #B42318;
+  --coral-fill: #FF5A5F;
+  --coral-tint: #FFECEB;
 
-  --radius: 6px;
-  --radius-sm: 4px;
-  --radius-lg: 10px;
+  /* LEGACY:P5 — consumed by pre-overhaul pages. Removed in Phase 5. */
+  --paper-2: var(--paper);
+  --paper-3: var(--band);
+  --signal: var(--primary);
+  --signal-deep: var(--primary-deep);
+  --signal-tint: var(--primary-tint);
+  --signal-light: #8D8BFF;
+  --caution-text: var(--caution);
 
-  --shadow-sm: 0 1px 2px rgba(14, 31, 27, 0.05), 0 2px 8px rgba(14, 31, 27, 0.04);
-  --shadow-md: 0 4px 12px rgba(14, 31, 27, 0.06), 0 16px 40px rgba(14, 31, 27, 0.07);
-  --shadow-lg: 0 8px 24px rgba(14, 31, 27, 0.08), 0 30px 70px rgba(14, 31, 27, 0.10);
-  --shadow-signal: 0 10px 30px rgba(58, 53, 214, 0.28);
+  /* Shape */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 20px;
+  --r-pill: 999px;
+  /* LEGACY:P5 */
+  --radius: 12px;
 
+  /* Depth — borders carry hierarchy; shadows are for floating layers only */
+  --shadow-sm: 0 1px 2px rgb(14 18 48 / 0.06);
+  --shadow-md: 0 8px 24px rgb(14 18 48 / 0.08);
+  /* LEGACY:P5 */
+  --shadow-lg: 0 8px 24px rgb(14 18 48 / 0.08);
+  --shadow-signal: none;
+
+  /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur: 150ms;
 
-  --maxw: 1536px;
+  /* Layout */
+  --maxw: 1280px;
+  --maxw-wide: 1440px;
+  --maxw-narrow: 720px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
 }
 
 @theme inline {
   --color-paper: var(--paper);
-  --color-paper-2: var(--paper-2);
-  --color-paper-3: var(--paper-3);
+  --color-band: var(--band);
+  --color-tint: var(--tint);
   --color-card: var(--card);
   --color-ink: var(--ink);
   --color-ink-soft: var(--ink-soft);
   --color-ink-faint: var(--ink-faint);
+  --color-on-navy: var(--on-navy);
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
+  --color-control: var(--control);
+  --color-primary: var(--primary);
+  --color-primary-deep: var(--primary-deep);
+  --color-primary-tint: var(--primary-tint);
+  --color-primary-soft: var(--primary-soft);
+  --color-verified: var(--verified);
+  --color-verified-fill: var(--verified-fill);
+  --color-verified-tint: var(--verified-tint);
+  --color-caution: var(--caution);
+  --color-caution-fill: var(--caution-fill);
+  --color-caution-tint: var(--caution-tint);
+  --color-info: var(--info);
+  --color-info-fill: var(--info-fill);
+  --color-info-tint: var(--info-tint);
+  --color-coral: var(--coral);
+  --color-coral-fill: var(--coral-fill);
+  --color-coral-tint: var(--coral-tint);
+
+  /* LEGACY:P5 — colour utilities (Phase 5 removes) */
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
   --color-signal: var(--signal);
   --color-signal-deep: var(--signal-deep);
   --color-signal-tint: var(--signal-tint);
   --color-signal-light: var(--signal-light);
-  --color-verified: var(--verified);
-  --color-verified-tint: var(--verified-tint);
-  --color-info: var(--info);
-  --color-info-tint: var(--info-tint);
-  --color-caution: var(--caution);
-  --color-caution-tint: var(--caution-tint);
   --color-caution-text: var(--caution-text);
 
-  --radius-xl2: var(--radius-lg);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  --font-display: var(--font-space-grotesk);
-  --font-sans: var(--font-inter-tight);
-  --font-mono: var(--font-space-mono);
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-pill: var(--r-pill);
 
-  /* Fluid type scale (dialled down a step for a calmer, more readable feel) */
-  --text-hero: clamp(2.5rem, 1rem + 5.4vw, 5.4rem);
-  --text-hero--line-height: 1;
-  --text-display: clamp(1.9rem, 1rem + 3.2vw, 3.4rem);
-  --text-display--line-height: 1.05;
-  --text-h2: clamp(1.5rem, 1rem + 1.8vw, 2.25rem);
-  --text-h2--line-height: 1.12;
-  --text-h3: clamp(1.15rem, 1rem + 0.6vw, 1.38rem);
-  --text-lead: clamp(1rem, 0.97rem + 0.3vw, 1.18rem);
+  /* Type scale — Learnora's desktop values (78/60/40/32/24/20/18/16/15/13) made fluid */
+  --text-hero: clamp(2.75rem, 1.6rem + 4.2vw, 4.875rem);
+  --text-hero--line-height: 1.1;
+  --text-hero--letter-spacing: -0.01em;
+  --text-hero--font-weight: 800;
+  --text-display: clamp(2.25rem, 1.4rem + 3vw, 3.75rem);
+  --text-display--line-height: 1.1;
+  --text-display--letter-spacing: -0.01em;
+  --text-display--font-weight: 800;
+  --text-h2: clamp(1.875rem, 1.3rem + 1.9vw, 2.5rem);
+  --text-h2--line-height: 1.15;
+  --text-h2--letter-spacing: -0.01em;
+  --text-h2--font-weight: 700;
+  --text-h3: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  --text-h3--line-height: 1.2;
+  --text-h3--font-weight: 700;
+  --text-h4: 1.5rem;
+  --text-h4--line-height: 1.3;
+  --text-h4--font-weight: 700;
+  --text-h5: 1.25rem;
+  --text-h5--line-height: 1.4;
+  --text-h5--font-weight: 700;
+  --text-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.25rem);
+  --text-lead--line-height: 1.6;
+  --text-body: 1.125rem;
+  --text-body--line-height: 1.6;
+  --text-small: 0.9375rem;
+  --text-small--line-height: 1.5;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.4;
+  --text-kicker: 0.8125rem;
+  --text-kicker--line-height: 1;
+  --text-kicker--letter-spacing: 0.06em;
+  --text-kicker--font-weight: 600;
 }
+
+/* ------------------------------------------------------------------ */
+/*  Base                                                               */
+/* ------------------------------------------------------------------ */
 
 * {
   border-color: var(--line);
 }
 
-/* Squared design system: kill every corner radius, including rounded-full pills */
-*,
-*::before,
-*::after {
-  border-radius: var(--radius) !important;
-}
-
-/* Escape hatch: genuinely circular elements (score gauge, status dots, radio
-   marks) opt back into a full radius so they don't render as squares. */
-.is-circle,
-.is-circle::before,
-.is-circle::after {
-  border-radius: 9999px !important;
-}
-
 html {
-  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
   font-size: 16px;
 }
 
 body {
   background: var(--paper);
   color: var(--ink);
+  font-family: var(--font-sans);
   font-size: 1rem;
-  font-family: var(--font-sans), system-ui, sans-serif;
-  font-feature-settings: "ss01", "cv01";
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
 ::selection {
-  background: var(--signal);
+  background: var(--primary);
   color: #fff;
 }
 
-/* Numeric labels/tables use tabular figures so columns line up (the mono
-   family currently resolves to the sans, so this is what actually aligns them). */
-.font-mono {
-  font-variant-numeric: tabular-nums;
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-/* Display font helper — grotesk sans, tight tracking */
-.font-display {
-  font-family: var(--font-display), system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-optical-sizing: auto;
+/* Opt-out for controls whose container already signals focus (e.g. the
+   search palette's combobox: the dialog, caret and highlighted row carry it). */
+[data-bare-focus]:focus-visible {
+  outline: none;
+}
+
+/* Skip link: first focusable element, visible only on focus */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--ink);
+  color: var(--on-navy);
+  border-radius: var(--r-sm);
   font-weight: 600;
-  letter-spacing: -0.03em;
+}
+.skip-link:focus {
+  top: 1rem;
 }
 
-/* Eyebrow / kicker label. In @layer base so a `text-*` utility on the same
-   element wins — otherwise the ink-faint default leaks onto dark surfaces. */
-@layer base {
-  .kicker {
-    font-family: var(--font-mono), monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--ink-faint);
-  }
-}
-
-/* Container */
+/* Page gutter + max width */
 .container-x {
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
-  padding-inline: clamp(1.15rem, 4vw, 2.5rem);
+  padding-inline: var(--gutter);
 }
 
-/* Link underline sweep */
-.link-sweep {
-  background-image: linear-gradient(var(--signal), var(--signal));
-  background-size: 0% 2px;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 0.4s var(--ease);
-}
-.link-sweep:hover {
-  background-size: 100% 2px;
+/* ------------------------------------------------------------------ */
+/*  Legacy helpers (pre-overhaul pages). Phase 1 ships primitives;     */
+/*  Phase 5 deletes these.                                             */
+/* ------------------------------------------------------------------ */
+
+@layer base {
+  /* LEGACY:P5 */
+  .font-display {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .kicker {
+    font-family: var(--font-sans);
+    font-size: var(--text-kicker);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+
+  .font-mono {
+    font-variant-numeric: tabular-nums;
+  }
+
+  .link-sweep {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.2em;
+    transition: text-decoration-color var(--dur) var(--ease-out);
+  }
+  .link-sweep:hover {
+    text-decoration-color: currentColor;
+  }
 }
 
-/* Marquee */
+/* Legacy marquee + dot grid — still rendered by pre-overhaul pages. Phase 5 deletes both. */
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
@@ -182,32 +276,24 @@ body {
   width: max-content;
   animation: marquee 32s linear infinite;
 }
-
-/* Soft dotted grid background for feature panels */
 .dotgrid {
   background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
-/* Focus ring */
-:where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid var(--signal);
-  outline-offset: 3px;
-  border-radius: 6px;
-}
-
-/* Custom scrollbar (subtle) */
-::-webkit-scrollbar { width: 11px; height: 11px; }
-::-webkit-scrollbar-track { background: var(--paper); }
-::-webkit-scrollbar-thumb {
-  background: var(--line-strong);
-  border-radius: 99px;
-  border: 3px solid var(--paper);
-}
-::-webkit-scrollbar-thumb:hover { background: var(--ink-faint); }
-
 @media (prefers-reduced-motion: reduce) {
-  * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; }
-  html { scroll-behavior: auto; }
-  .marquee-track { animation: none; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  /* LEGACY:P5 */
+  .marquee-track {
+    animation: none;
+  }
 }
