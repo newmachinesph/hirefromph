@@ -257,6 +257,21 @@ body {
   text-decoration-color: currentColor;
 }
 
+/* Legacy marquee + dot grid — still rendered by pre-overhaul pages. Phase 5 deletes both. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+.dotgrid {
+  background-image: radial-gradient(var(--line-strong) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -267,5 +282,8 @@ body {
   }
   html {
     scroll-behavior: auto;
+  }
+  .marquee-track {
+    animation: none;
   }
 }
