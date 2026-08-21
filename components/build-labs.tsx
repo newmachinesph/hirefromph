@@ -571,7 +571,7 @@ function BuildRealTab({
   return (
     <div className="max-w-2xl">
       <Card padding="md">
-        <p className="kicker">Where to actually build it</p>
+        <p className="kicker">Where to build it</p>
         <Heading level={3} size="h5" className="mt-2">
           {lab.buildIn.tool}
         </Heading>
