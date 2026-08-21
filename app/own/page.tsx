@@ -10,5 +10,11 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function Page() {
-  return <StagePage id="own" />;
+  return (
+    <>
+      {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/own" /></Section> */}
+      <StagePage id="own" />
+      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/own" /> */}
+    </>
+  );
 }

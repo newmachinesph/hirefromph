@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Download } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Button, Icon } from "@/components/ui";
 
 type Props = {
   value: string;
@@ -13,7 +12,12 @@ type Props = {
 
 /** Downloads `value` as a text/markdown file. The artifact is the user's own
  * words — the whole point of Build Labs is that you leave owning it. */
-export function DownloadButton({ value, filename, label = "Download .md", className }: Props) {
+export function DownloadButton({
+  value,
+  filename,
+  label = "Download .md",
+  className,
+}: Props) {
   const [done, setDone] = useState(false);
 
   function handleDownload() {
@@ -31,18 +35,15 @@ export function DownloadButton({ value, filename, label = "Download .md", classN
   }
 
   return (
-    <button
-      type="button"
+    <Button
+      variant="outline"
+      size="sm"
       onClick={handleDownload}
       aria-label={label}
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper-2 px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink",
-        done && "border-verified text-verified hover:border-verified hover:text-verified",
-        className,
-      )}
+      className={className}
+      icon={<Icon name={done ? "check" : "download"} size={15} />}
     >
-      {done ? <Check size={15} /> : <Download size={15} />}
       {done ? "Saved" : label}
-    </button>
+    </Button>
   );
 }
