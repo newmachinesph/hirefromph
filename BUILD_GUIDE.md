@@ -1,6 +1,6 @@
 # Hire From PH — Build Guide (read before building any page)
 
-Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `Icon` from `@/components/ui` (`lucide-react` was removed in Phase 5; add no lucide imports). Light mode only. TypeScript strict.
+Next.js 16 App Router, React 19, Tailwind v4 (CSS-first, tokens in `app/globals.css`), `motion` for state-change animation only, Phosphor icons via `Icon` from `@/components/ui`. Light mode only. TypeScript strict.
 
 ## THE CORE DOCTRINE (read `data/doctrine.json` — this governs everything)
 
@@ -22,6 +22,10 @@ This applies to EVERY page, not just templates:
 
 Never write copy that implies "download this" / "copy this file and rename it" / "here's the done-for-you X". Lists and examples exist only as **material to study and extract rules from**. Say so explicitly when you show one.
 
+**The rule: export is for what the user wrote, never for anything we wrote.** `ExportButton` and `DownloadButton` only ever hand back the reader's own output (plan, oath, worksheet, resume draft, tracker CSV); they never ship a pre-written artifact.
+
+**Teaching material is not a finished deliverable.** The no-downloads rule protects learners from dependence on a finished artifact, not from material that teaches the method itself — a facilitation guide, run-sheet, or slide deck (see the educator kit, `/educators`) teaches doctrine to someone running a room, so it may be distributed as PDF. The test stays the same: does this make a facilitator more capable, or more dependent?
+
 Test for any section you write: *does this make the reader more capable, or more dependent?* If dependent, rewrite it.
 
 ## THE HONESTY DOCTRINE (equally non-negotiable)
@@ -39,7 +43,7 @@ We ask users to sign an integrity oath. We therefore hold ourselves to it — a 
 - Audience: Filipinos building a remote career. Warm, direct, encouraging. Light Taglish is welcome ("walang bayad, walang catch", "sabi sa'yo eh").
 - **Never** say "virtual assistant" or "assistant". Always **"online professional" / "remote professional"**.
 - Free, path-based, not overwhelming. Depth reveals as the user goes.
-- No hotlinked or third-party images. First-party assets in `public/images/` (manifest `data/visuals.json`) render through the `Figure` primitive; every generated asset is captioned as illustrative (spec §7.1). Emoji flags OK.
+- No hotlinked or third-party images. First-party assets in `public/images/` (manifest `data/visuals.json`) render through the `Figure` primitive; every generated asset is captioned "AI-generated image" (spec §7.1). Emoji flags OK.
 - All content comes from `data/*.json`. Do not hardcode copy that exists in JSON.
 
 ## Design tokens (Tailwind utilities already wired)
@@ -54,14 +58,13 @@ White text is allowed only on `primary`, `primary-deep`, `ink`, and the deep sem
 Fonts: `font-display` (Cabinet Grotesk — headings, buttons, wordmark), `font-sans` (Inter — everything else). No mono family.
 Type: `text-hero` `text-display` `text-h2` `text-h3` `text-h4` `text-h5` `text-lead` `text-body` `text-small` `text-caption` `text-kicker` — each utility already carries its line-height, weight, and tracking; do not pair with `leading-*`.
 Radius: `rounded-sm` (8) `rounded-md` (12) `rounded-lg` (20) `rounded-pill`. Shadows: `shadow-[var(--shadow-sm)]` (dropdowns) and `--shadow-md` (dialogs) only — cards use borders, never shadows, never hover lifts.
-Legacy aliases (`--paper-2`, `--paper-3`, `--signal*`, `--caution-text`, `--radius`, `--shadow-lg`, `--shadow-signal`) and the helper classes (`.kicker`, `.font-display`, `.font-mono`, `.link-sweep`, `.marquee-track`, `.dotgrid`) were removed in Phase 5. The radius vocabulary is exactly `rounded-sm | rounded-md | rounded-lg | rounded-pill`; Tailwind's default scale is wiped, so `rounded-2xl` is not a class.
+Legacy aliases (`--paper-2`, `--paper-3`, `--signal*`, `--caution-text`, `--radius`, `--shadow-lg`, `--shadow-signal`) and the helper classes (`.kicker`, `.font-display`, `.font-mono`, `.link-sweep`, `.marquee-track`, `.dotgrid`) do not exist — do not reintroduce them. The radius vocabulary is exactly `rounded-sm | rounded-md | rounded-lg | rounded-pill`; Tailwind's default scale is wiped, so `rounded-2xl` is not a class.
 
 ## Shared components (import and REUSE — do not re-invent)
 
 Everything visual is built from two barrels. Pages compose them; pages do not
 re-style borders, radii, inputs, type or accents by hand.
-`npm run verify:primitives` warns when a page bypasses them, and from Phase 5 it
-fails the build.
+`npm run verify:primitives` fails the build when a page bypasses them.
 
 - `@/components/ui` — primitives, one per file:
   `Accordion` / `AccordionItem`, `Badge`, `Button`, `Callout`,
@@ -90,7 +93,7 @@ Rules that matter more than the list:
   `aria-describedby` and `aria-invalid` come for free — do not set them by hand.
 - **`Figure` is the only image path.** Pass a manifest `id` from
   `data/visuals.json`, or `src` + `alt` + `width` + `height`. Any entry marked
-  `generated` is captioned "Illustrative image" automatically; that caption is
+  `generated` is captioned "AI-generated image" automatically; that caption is
   honesty doctrine, not decoration.
 - **`Source` is the only way to cite.** `grade="vendor"` tags staffing- and
   training-vendor data as vendor-grade.
@@ -111,11 +114,9 @@ Still current, unchanged by the overhaul:
 - `@/lib/accent` → `ACCENT`, `accent(id)`, `isAccent`, `ACCENTS` — the single accent map.
 - `@/lib/utils` → `cn(...)`.
 
-Phase 5 deleted `Reveal`, the flat `@/components/ui` shim (`Pill`, `ButtonLink`,
-`ArrowLink`, `Marquee`, and the legacy `PageHero` / `SectionHeading` signatures),
-and the `@/components/icon` re-export. Import `Icon`, `Button`, `Badge`,
-`PageHero`, `SectionHeading` etc. from `@/components/ui` / `@/components/layout`
-directly; there is no animation wrapper — sections render plain.
+Import `Icon`, `Button`, `Badge`, `PageHero`, `SectionHeading` etc. from
+`@/components/ui` / `@/components/layout` directly; there is no animation
+wrapper — sections render plain.
 
 ## Page conventions
 - Every route is `app/<slug>/page.tsx`. Add `export const metadata = { title, description }`.
@@ -129,13 +130,13 @@ directly; there is no animation wrapper — sections render plain.
     accent={data.hero.accent}
   />
   ```
-  Body sections use `<Section>`; there is no entrance-animation wrapper — `Reveal` was deleted in Phase 5 and sections render plain.
+  Body sections use `<Section>`; there is no entrance-animation wrapper — sections render plain.
 - Cards: use `<Card>`. Bordered, **never shadowed** — `rounded-md border border-line bg-paper` on paper, `border-line-strong` on a band (`<Card onBand>`). Padding is `padding="sm" | "md" | "lg"`. `interactive` (or `href`) hovers to `border-ink` + `bg-band` only: no translate, no shadow, no scale. Compose media cards as `<Card padding="none"><CardMedia/><CardBody/><CardFooter/></Card>`.
 - Accents: `import { ACCENT, accent, type Accent } from "@/lib/accent"`. Stage ids in JSON stay `signal | caution | verified | info`; `coral` is added for red-flag content. Read classes off the map — `accent(stage.accent).text | .fill | .tint | .border | .ring | .soft` — and **never re-declare an accent map in a page**. `verify:primitives` flags `const accentText`, `accentBar`, `accentSoft`, `accentBorder`.
 - Accessibility: semantic landmarks, `alt`/`aria-label`, keyboard-usable controls, focus-visible is styled globally.
 - Reference implementation for tone & polish: `app/page.tsx`.
 
 ## Data shapes (in `data/`)
-- `site.json` ({brand,wordmarkAccent,meaning,tagline,mission,standard,stats[],**navGroups**[],primaryNav[]} — `navGroups` drives BOTH the mobile nav and the footer; add a route there and it appears in both), `stages.json` (4 stages), `roadmap.json` (9 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json`, `plan.json`, `equipment.json`, `apply.json`, `tools.json`, `languages.json`, `doctrine.json`, `frameworks.json`, `labs.json`, `tasks.json`, `learning.json`, `findwork.json`, `prompting.json`, `learntools.json`.
+- `site.json` ({brand,wordmarkAccent,meaning,tagline,mission,standard,stats[],**nav**[],**navGroups**[],**cta**} — `navGroups` drives BOTH the mobile nav and the footer; add a route there and it appears in both), `stages.json` (5 stages), `roadmap.json` (11 steps), `tracks.json` ({intro,note,tracks[]}), `prompts.json`, `plan.json`, `equipment.json`, `apply.json`, `tools.json`, `languages.json`, `doctrine.json`, `frameworks.json`, `labs.json`, `tasks.json`, `learning.json`, `findwork.json`, `prompting.json`, `learntools.json`, `faq.json`, `library.json`, `visuals.json`, `home.json`, `practice.json`, `decks.json`, `scenarios.json`, `annotated.json`, `glossary.json`, `reflection.json`, `tldr.json`, `educators.json`.
 - Honesty-doctrine pages: `conduct.json` ({intro,creed,principles[],philippineAnchor,cases[],dosDonts[],oath{clauses[]},honesty}), `english.json` ({baseline,threeCauses,honesty,banlist,frameworks[],speaking,resources[],lab}), `reality.json`, `simulator.json`. Each carries `source: {label,url}` objects — render them, never strip them.
 Import JSON directly: `import data from "@/data/x.json";`.

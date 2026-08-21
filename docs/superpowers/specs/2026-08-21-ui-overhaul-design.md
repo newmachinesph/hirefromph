@@ -1,7 +1,7 @@
 # UI/UX Overhaul: Hire From PH
 
 **Date:** 2026-08-21
-**Status:** Design, awaiting approval
+**Status:** Implemented 2026-08-21; see DESIGN_REVIEW.md
 **Scope:** Full visual and structural redesign of the site shell, design system, navigation, homepage, stage template, and every interior page. All learning content, routes (plus one new index route), data files, and interactive-tool behaviour are preserved. Copy changes are limited to the shell (see §11).
 
 ---
