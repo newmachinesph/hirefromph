@@ -1,69 +1,81 @@
 "use client";
 
-import Link from "next/link";
-import { ArrowRight, RotateCcw, Sparkles } from "lucide-react";
-import stages from "@/data/stages.json";
+import { JourneyStepper, PathChooser } from "@/components/journey";
+import { CardGrid, Section, SectionHeading } from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Checkbox,
+  ChoiceCard,
+  EmptyState,
+  Field,
+  Figure,
+  Heading,
+  Icon,
+  ProgressBar,
+  Text,
+  type BadgeTone,
+} from "@/components/ui";
 import roadmap from "@/data/roadmap.json";
 import tracks from "@/data/tracks.json";
+import { isAccent } from "@/lib/accent";
 import { usePath } from "@/lib/path-context";
-import { PathChooser } from "@/components/path-chooser";
-import { Reveal } from "@/components/reveal";
-import { Icon } from "@/components/icon";
-import { ButtonLink, Kicker, Pill, SectionHeading } from "@/components/ui";
+import { STAGES } from "@/lib/stages";
 import { cn } from "@/lib/utils";
 
 type Track = (typeof tracks.tracks)[number];
 
-const accentText: Record<string, string> = {
-  signal: "text-signal",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-const accentSoft: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep border-signal/25",
-  caution: "bg-caution-tint text-caution-text border-caution/30",
-  verified: "bg-verified-tint text-verified border-verified/25",
-  info: "bg-info-tint text-info border-info/25",
-};
-const iconTone: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep",
-  verified: "bg-verified-tint text-verified",
-  caution: "bg-caution-tint text-caution-text",
-  info: "bg-info-tint text-info",
-};
-
-const learnIcon: Record<string, string> = {
+const LEARN_ICON: Record<string, string> = {
   YouTube: "youtube",
   Course: "book-open",
   Template: "layout-template",
 };
 
+function tone(accent: string): BadgeTone {
+  return isAccent(accent) ? accent : "neutral";
+}
+
 export default function PathPage() {
-  const { state, hydrated, hasPath, setStage, toggleStep } =
-    usePath();
+  const { state, hydrated, hasPath, setStage, toggleStep } = usePath();
 
   const track: Track | undefined = state.track
-    ? tracks.tracks.find((t) => t.id === state.track)
+    ? tracks.tracks.find((candidate) => candidate.id === state.track)
     : undefined;
 
   if (!hydrated) return <PathSkeleton />;
   if (!hasPath || !track) return <NoPathState />;
 
-  const currentStage = stages.find((s) => s.num === state.stage);
-  const stageAccent = currentStage?.accent ?? track.accent;
-  const doneCount = roadmap.steps.filter((s) => state.steps[s.n]).length;
+  const currentStage = STAGES.find((stage) => stage.num === state.stage);
+  const doneCount = roadmap.steps.filter((step) => state.steps[step.n]).length;
   const portfolioCount = Object.values(state.tasks).filter(Boolean).length;
   const applied = state.applications.length;
   const interviews = state.applications.filter(
-    (a) => a.status === "interview" || a.status === "offer",
+    (application) => application.status === "interview" || application.status === "offer",
   ).length;
+
+  const counters = [
+    {
+      value: portfolioCount,
+      label: "portfolio pieces",
+      sub: "micro-tasks completed",
+      href: "/tasks",
+    },
+    { value: applied, label: "applications sent", sub: "live pipeline", href: "/tracker" },
+    {
+      value: interviews,
+      label: "interviews and offers",
+      sub: "converting",
+      href: "/tracker",
+    },
+    {
+      value: `${doneCount}/${roadmap.steps.length}`,
+      label: "roadmap steps",
+      sub: "zero to independent",
+      href: "#roadmap",
+    },
+  ];
 
   const nextMoves = [
     {
@@ -88,7 +100,7 @@ export default function PathPage() {
       title: "Write your own prompts",
       desc: "Learn the anatomy of a prompt instead of pasting someone else's.",
       href: "/prompts",
-      icon: "sparkles",
+      icon: "pen-line",
     },
     {
       title: "Find work yourself",
@@ -110,349 +122,286 @@ export default function PathPage() {
     },
   ];
 
-  // Changing path swaps the track via choosePath() on /niches and keeps every
-  // other bit of saved progress (tracker, oath, plan). Nothing destructive here.
-
   return (
     <>
-      {/* ---------------------------------------------------------------- HEADER */}
-      <section className="container-x pt-14 pb-8 lg:pt-20">
-        <Reveal>
-          <Kicker>Your path</Kicker>
-        </Reveal>
-        <Reveal i={1}>
-          <div className="mt-5 flex flex-wrap items-start justify-between gap-5">
-            <div className="flex items-center gap-4">
-              <span
-                className={cn(
-                  "grid h-14 w-14 shrink-0 place-items-center rounded-2xl",
-                  iconTone[track.accent],
-                )}
-              >
-                <Icon name={track.icon} size={26} />
-              </span>
-              <div>
-                <h1 className="font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-                  {track.name}
-                </h1>
-                <p className="mt-1 text-ink-soft">{track.tagline}</p>
-              </div>
+      {/* HEADER */}
+      <Section spacing="default">
+        <div className="flex flex-wrap items-start justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <span className="grid h-14 w-14 shrink-0 place-items-center rounded-md bg-primary-tint text-primary-deep">
+              <Icon name={track.icon} size={26} weight="duotone" />
+            </span>
+            <div className="min-w-0">
+              <Heading level={1} size="h2" balance>
+                {track.name}
+              </Heading>
+              <Text tone="soft" className="mt-1">
+                {track.tagline}
+              </Text>
             </div>
-            <Link
-              href="/niches"
-              className="inline-flex items-center gap-2 rounded-full border border-line-strong bg-paper-2 px-5 py-2.5 text-sm font-semibold text-ink-soft transition-all hover:border-ink hover:text-ink"
-            >
-              <RotateCcw size={15} />
-              Change path
-            </Link>
           </div>
-        </Reveal>
-        <Reveal i={2}>
-          <div className="mt-6 flex flex-wrap gap-2.5">
-            <Pill tone={track.accent as "signal"}>{track.pay}</Pill>
-            <Pill tone="neutral">{track.demandLabel} demand</Pill>
-            <Pill tone="neutral">{track.difficulty}</Pill>
-          </div>
-        </Reveal>
+          <Button
+            href="/niches"
+            variant="outline"
+            icon={<Icon name="rotate-ccw" size={16} />}
+          >
+            Change path
+          </Button>
+        </div>
 
-        <Reveal i={3}>
-          <dl className="mt-8 grid grid-cols-2 gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-4">
-            {[
-              { value: portfolioCount, label: "portfolio pieces", sub: "micro-tasks completed", href: "/tasks" },
-              { value: applied, label: "applications sent", sub: "live pipeline", href: "/tracker" },
-              { value: interviews, label: "interviews & offers", sub: "converting", href: "/tracker" },
-              { value: `${doneCount}/${roadmap.steps.length}`, label: "roadmap steps", sub: "zero to independent", href: "#roadmap" },
-            ].map((s) => (
-              <Link
-                key={s.label}
-                href={s.href}
-                className="group bg-paper-2 p-5 transition-colors hover:bg-paper-3/60"
-              >
-                <dt className="font-display text-3xl tracking-tight text-ink">
-                  {s.value}
-                </dt>
-                <dd className="mt-1 text-sm font-medium text-ink">{s.label}</dd>
-                <dd className="text-xs text-ink-faint">{s.sub}</dd>
-              </Link>
+        <div className="mt-6 flex flex-wrap gap-2.5">
+          <Badge tone={tone(track.accent)}>{track.pay}</Badge>
+          <Badge tone="neutral">{track.demandLabel} demand</Badge>
+          <Badge tone="neutral">{track.difficulty}</Badge>
+        </div>
+
+        <CardGrid cols={4} as="ul" className="mt-8">
+          {counters.map((counter) => (
+            <li key={counter.label} className="flex">
+              <Card href={counter.href} padding="sm" className="w-full">
+                <span className="font-display text-h3 tabular-nums text-ink">
+                  {counter.value}
+                </span>
+                <Text size="small" className="mt-1">
+                  {counter.label}
+                </Text>
+                <Text size="caption" tone="faint">
+                  {counter.sub}
+                </Text>
+              </Card>
+            </li>
+          ))}
+        </CardGrid>
+
+        <JourneyStepper current={state.stage} className="mt-10" />
+      </Section>
+
+      {/* CURRENT STAGE */}
+      <Section band="tint">
+        <SectionHeading
+          kicker="Where you are"
+          title="Your current stage"
+          lead="Set it here, or let it follow the roadmap ticks below."
+        />
+
+        <Field as="group" label="Your current stage" hideLabel className="mt-8">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {STAGES.map((stage) => (
+              <ChoiceCard
+                key={stage.id}
+                name="current-stage"
+                value={String(stage.num)}
+                checked={state.stage === stage.num}
+                onChange={(value) => setStage(Number(value))}
+                label={`${stage.num}. ${stage.title}`}
+                description={stage.role}
+              />
             ))}
-          </dl>
-        </Reveal>
-      </section>
-
-      {/* ------------------------------------------------------------- STAGE */}
-      <section className="container-x py-10 lg:py-14">
-        <Reveal>
-          <SectionHeading
-            kicker="Where you are"
-            title="Your current stage"
-            lead="Set your stage, or let it follow your roadmap progress below."
-          />
-        </Reveal>
-        <Reveal i={1}>
-          <div className="mt-7 flex flex-wrap gap-2.5">
-            {stages.map((st) => {
-              const active = state.stage === st.num;
-              return (
-                <button
-                  key={st.id}
-                  type="button"
-                  onClick={() => setStage(st.num)}
-                  aria-pressed={active}
-                  className={cn(
-                    "rounded-full border px-5 py-2.5 text-sm font-semibold transition-all",
-                    active
-                      ? accentSoft[st.accent]
-                      : "border-line-strong bg-paper-2 text-ink-soft hover:border-ink hover:text-ink",
-                  )}
-                >
-                  {st.num}. {st.title}
-                </button>
-              );
-            })}
           </div>
-        </Reveal>
+        </Field>
 
         {currentStage && (
-          <Reveal i={2}>
-            <div
-              className={cn(
-                "mt-6 rounded-2xl border p-6 lg:p-8",
-                accentSoft[currentStage.accent],
-              )}
-            >
-              <p className="kicker">{currentStage.kicker}</p>
-              <h3 className="mt-2 font-display text-2xl leading-tight text-ink">
-                {currentStage.title}
-              </h3>
-              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink-soft">
-                {currentStage.summary}
-              </p>
-              <div className="mt-5">
-                <ButtonLink href={currentStage.href}>
-                  Open {currentStage.title}
-                </ButtonLink>
-              </div>
+          <Callout
+            tone={isAccent(currentStage.accent) ? currentStage.accent : "neutral"}
+            title={currentStage.title}
+            className="mt-6"
+          >
+            <Text size="small">{currentStage.summary}</Text>
+            <div className="mt-4">
+              <Button href={currentStage.href} variant="primary" size="sm">
+                Open {currentStage.title}
+              </Button>
             </div>
-          </Reveal>
+          </Callout>
         )}
-      </section>
+      </Section>
 
-      {/* ----------------------------------------------------------- ROADMAP */}
-      <section
-        id="roadmap"
-        className="scroll-mt-24 bg-paper-3/60 py-14 lg:py-20"
-      >
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="Eleven steps, five stages"
-              title="Your roadmap progress"
-              lead={roadmap.intro}
-            />
-          </Reveal>
+      {/* ROADMAP */}
+      <Section id="roadmap" className="scroll-mt-28">
+        <SectionHeading
+          kicker="Eleven steps, five stages"
+          title="Your roadmap progress"
+          lead={roadmap.intro}
+        />
 
-          <Reveal i={1}>
-            <div className="mt-7">
-              <div className="h-2.5 w-full overflow-hidden rounded-full bg-paper-3">
-                <div
-                  className={cn(
-                    "h-full rounded-full transition-all duration-500",
-                    accentBar[track.accent],
-                  )}
-                  style={{ width: `${(doneCount / roadmap.steps.length) * 100}%` }}
-                />
-              </div>
-              <p className="mt-2 text-sm font-semibold text-ink-soft">
-                {doneCount}/{roadmap.steps.length} steps complete
-              </p>
-            </div>
-          </Reveal>
+        <ProgressBar
+          value={doneCount}
+          max={roadmap.steps.length}
+          label="Roadmap steps complete"
+          showValue
+          className="mt-8"
+        />
 
-          <div className="mt-6 grid gap-3 sm:grid-cols-3">
-            {roadmap.steps.map((step, idx) => {
-              const inCurrentStage = step.stage === state.stage;
-              const checked = !!state.steps[step.n];
+        <Field as="group" label="Roadmap steps" hideLabel className="mt-6">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {roadmap.steps.map((step) => {
+              const checked = Boolean(state.steps[step.n]);
               return (
-                <Reveal key={step.n} i={idx % roadmap.steps.length}>
-                  <label
-                    htmlFor={`step-${step.n}`}
-                    className={cn(
-                      "flex h-full cursor-pointer items-start gap-3 rounded-xl border p-4 transition-colors",
-                      inCurrentStage
-                        ? accentSoft[stageAccent]
-                        : "border-line bg-paper-2",
-                      checked && "opacity-70",
-                    )}
-                  >
-                    <input
-                      id={`step-${step.n}`}
-                      type="checkbox"
-                      checked={checked}
-                      onChange={() => toggleStep(step.n)}
-                      className="mt-0.5 h-5 w-5 shrink-0 accent-signal"
-                    />
-                    <span>
-                      <span className="block text-sm font-semibold text-ink">
-                        {step.n}. {step.title}
+                <Card
+                  key={step.n}
+                  padding="sm"
+                  onBand={false}
+                  className={cn(checked && "bg-band")}
+                >
+                  <Checkbox
+                    id={`step-${step.n}`}
+                    checked={checked}
+                    onChange={() => toggleStep(step.n)}
+                    label={
+                      <span>
+                        <span className="block text-base font-medium text-ink">
+                          {step.n}. {step.title}
+                        </span>
+                        <span className="mt-0.5 block text-caption text-ink-soft">
+                          {step.desc}
+                        </span>
                       </span>
-                      <span className="mt-0.5 block text-xs leading-relaxed text-ink-soft">
-                        {step.desc}
-                      </span>
-                    </span>
-                  </label>
-                </Reveal>
+                    }
+                  />
+                </Card>
               );
             })}
           </div>
-        </div>
-      </section>
+        </Field>
+      </Section>
 
-      {/* --------------------------------------------------------- NEXT MOVES */}
-      <section className="container-x py-14 lg:py-20">
-        <Reveal>
-          <SectionHeading
-            kicker="Your next moves"
-            title="What to do right now"
-            lead={`Curated for ${track.name}, start here.`}
-          />
-        </Reveal>
+      {/* NEXT MOVES */}
+      <Section band="tint">
+        <SectionHeading
+          kicker="Your next moves"
+          title="What to do right now"
+          lead={`Curated for ${track.name}. Start at the top.`}
+        />
 
-        <div className="mt-8 flex flex-wrap gap-3">
-          {track.learn.map((l, idx) => (
-            <Reveal key={l.title} i={idx % 3} as="span">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-line bg-paper-2 px-4 py-2.5 text-sm">
-                <Icon
-                  name={learnIcon[l.type] ?? "sparkles"}
-                  size={15}
-                  className={accentText[track.accent]}
-                />
-                <span className="font-semibold text-ink">{l.title}</span>
-                <span className="text-ink-faint">· {l.provider}</span>
-              </div>
-            </Reveal>
+        <div className="mt-8 flex flex-wrap gap-2.5">
+          {track.learn.map((resource) => (
+            <span
+              key={resource.title}
+              className="inline-flex items-center gap-2 rounded-pill border border-line-strong bg-paper px-4 py-2 text-small"
+            >
+              <Icon name={LEARN_ICON[resource.type] ?? "book-open"} size={15} />
+              <span className="font-medium text-ink">{resource.title}</span>
+              <span className="text-ink-faint">· {resource.provider}</span>
+            </span>
           ))}
         </div>
 
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {nextMoves.map((m, idx) => (
-            <Reveal key={m.href} i={idx % 3}>
-              <Link
-                href={m.href}
-                className="group flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink hover:shadow-[var(--shadow-md)]"
-              >
-                <span
-                  className={cn(
-                    "grid h-11 w-11 place-items-center rounded-xl",
-                    iconTone[track.accent],
-                  )}
-                >
-                  <Icon name={m.icon} size={20} />
+        <CardGrid cols={3} as="ul" className="mt-8">
+          {nextMoves.map((move) => (
+            <li key={move.href} className="flex">
+              <Card href={move.href} onBand className="w-full">
+                <span className="grid h-11 w-11 place-items-center rounded-md bg-primary-tint text-primary-deep">
+                  <Icon name={move.icon} size={20} weight="duotone" />
                 </span>
-                <h3 className="mt-5 font-display text-lg leading-tight">
-                  {m.title}
-                </h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                  {m.desc}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-ink">
+                <Heading level={3} size="h5" className="mt-5">
+                  {move.title}
+                </Heading>
+                <Text size="small" className="mt-2">
+                  {move.desc}
+                </Text>
+                <span className="mt-4 inline-flex items-center gap-1 text-small font-medium text-primary">
                   Open
-                  <ArrowRight
-                    size={15}
-                    className="transition-transform group-hover:translate-x-1"
-                  />
+                  <Icon name="arrow-right" size={14} />
                 </span>
-              </Link>
-            </Reveal>
+              </Card>
+            </li>
           ))}
+        </CardGrid>
+      </Section>
+
+      {/* NICHE TOOLKIT */}
+      <Section>
+        <SectionHeading kicker="Your niche toolkit" title={`Master ${track.name}`} />
+
+        <div className="mt-8 grid gap-8 lg:grid-cols-3">
+          <div>
+            <Text size="small" tone="faint">
+              Core skills
+            </Text>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {track.skills.map((skill) => (
+                <Badge key={skill} tone="neutral">
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <Text size="small" tone="faint">
+              Tools you will use
+            </Text>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {track.tools.map((tool) => (
+                <Badge key={tool} tone={tone(track.accent)}>
+                  {tool}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div>
+            <Text size="small" tone="faint">
+              Certifications
+            </Text>
+            <div className="mt-3 flex flex-wrap gap-2">
+              {track.certs.map((cert) => (
+                <Badge key={cert} tone="verified">
+                  {cert}
+                </Badge>
+              ))}
+            </div>
+          </div>
         </div>
-      </section>
 
-      {/* ------------------------------------------------------------ TOOLKIT */}
-      <section className="container-x pb-24">
-        <Reveal>
-          <SectionHeading
-            kicker="Your niche toolkit"
-            title={`Master ${track.name}`}
-          />
-        </Reveal>
-
-        <div className="mt-8 grid gap-6 lg:grid-cols-3">
-          <div>
-            <p className="kicker mb-3">Core skills</p>
-            <div className="flex flex-wrap gap-2">
-              {track.skills.map((s) => (
-                <Pill key={s} tone="neutral">
-                  {s}
-                </Pill>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="kicker mb-3">Tools you&rsquo;ll use</p>
-            <div className="flex flex-wrap gap-2">
-              {track.tools.map((t) => (
-                <Pill key={t} tone={track.accent as "signal"}>
-                  {t}
-                </Pill>
-              ))}
-            </div>
-          </div>
-          <div>
-            <p className="kicker mb-3">Certifications</p>
-            <div className="flex flex-wrap gap-2">
-              {track.certs.map((c) => (
-                <Pill key={c} tone="verified">
-                  <Sparkles size={11} />
-                  {c}
-                </Pill>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <Reveal i={1}>
-          <div className="mt-8 rounded-2xl border border-line bg-paper-2 p-6">
-            <p className="kicker mb-2">Who you&rsquo;ll work with</p>
-            <p className="text-ink-soft">{track.clients}</p>
-          </div>
-        </Reveal>
-      </section>
+        <Card padding="lg" className="mt-8">
+          <Text size="small" tone="faint">
+            Who you will work with
+          </Text>
+          <Text className="mt-2">{track.clients}</Text>
+        </Card>
+      </Section>
     </>
   );
 }
 
+/** No path chosen yet: the dashboard is an invitation, not an error. */
 function NoPathState() {
   return (
-    <section className="container-x py-20 lg:py-28">
-      <Reveal>
-        <Kicker>Your path</Kicker>
-      </Reveal>
-      <Reveal i={1}>
-        <h1 className="mt-5 max-w-2xl font-display text-[length:var(--text-display)] leading-[var(--text-display--line-height)] text-balance">
-          You haven&rsquo;t chosen a path yet.
-        </h1>
-      </Reveal>
-      <Reveal i={2}>
-        <p className="mt-5 max-w-xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-          Pick a niche and this page becomes your personal hub, progress,
-          next moves, and your toolkit, tailored to you.
-        </p>
-      </Reveal>
-      <Reveal i={3} className="mt-10">
-        <PathChooser redirectTo="/path" />
-      </Reveal>
-    </section>
+    <Section spacing="hero">
+      <EmptyState
+        title="You have not chosen a path yet"
+        body="Pick a lane and this page becomes your hub: progress, next moves, and the toolkit for that niche."
+        media={
+          <Figure
+            id="path-dashboard"
+            ratio="3/2"
+            radius="md"
+            sizes="(min-width: 640px) 24rem, 100vw"
+            className="w-full max-w-sm"
+          />
+        }
+      />
+      <PathChooser
+        limit={6}
+        moreHref="/niches"
+        moreLabel="See all 22 niches"
+        redirectTo="/path"
+        className="mt-10"
+      />
+    </Section>
   );
 }
 
+/** Pre-hydration placeholder. Aria-hidden: there is nothing here to read yet. */
 function PathSkeleton() {
   return (
-    <div className="container-x py-20 lg:py-28" aria-hidden>
-      <div className="h-4 w-32 animate-pulse rounded-full bg-paper-3" />
-      <div className="mt-6 h-12 w-2/3 max-w-lg animate-pulse rounded-xl bg-paper-3" />
-      <div className="mt-4 h-4 w-1/2 max-w-sm animate-pulse rounded bg-paper-3" />
-      <div className="mt-10 h-40 w-full animate-pulse rounded-2xl bg-paper-3" />
-      <div className="mt-4 h-40 w-full animate-pulse rounded-2xl bg-paper-3" />
-    </div>
+    <Section spacing="hero">
+      <div aria-hidden className="flex flex-col gap-4">
+        <div className="h-4 w-32 animate-pulse rounded-pill bg-band" />
+        <div className="h-12 w-2/3 max-w-lg animate-pulse rounded-md bg-band" />
+        <div className="h-4 w-1/2 max-w-sm animate-pulse rounded-pill bg-band" />
+        <div className="mt-6 h-40 w-full animate-pulse rounded-md bg-band" />
+        <div className="h-40 w-full animate-pulse rounded-md bg-band" />
+      </div>
+    </Section>
   );
 }
