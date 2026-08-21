@@ -11,6 +11,18 @@
  * architecture but its route ships in a later phase, so the whole object is
  * skipped and counted. See lib/nav.ts for the convention.
  *
+ * Three categories are out of the audit's scope entirely and are excluded
+ * before scanning, rather than filtered out of the problem list:
+ * - `*.test.{js,jsx,ts,tsx}` files: their hrefs are fixtures, not real UI.
+ * - `app/(dev)/**`: the component gallery 404s in production, is disallowed
+ *   in robots.ts, and is deliberately kept out of navGroups, so it is never
+ *   linked from real pages.
+ * - Same-page `#anchor` hrefs authored in a non-`.jsx`/`.tsx` file (JSON data,
+ *   `.ts` modules): the id they target lives in whatever component eventually
+ *   renders that data, not in the source file, so a same-file id search can
+ *   never succeed for them. `#anchor` hrefs written directly in a `.jsx`/
+ *   `.tsx` file are still checked against that file's `id=` attributes.
+ *
  * Run: npm run verify:links (part of npm run verify:all)
  */
 import fs from "node:fs";
@@ -25,6 +37,19 @@ const PAGE_FILE = /^page\.(?:js|jsx|ts|tsx)$/;
 
 /** Links skipped because their route ships in a later phase. */
 let pendingLinks = 0;
+
+/** Same-page anchors authored ahead of the component that will render their target id. */
+let dataAuthoredAnchors = 0;
+
+/** Test-fixture hrefs never reach a real user, so they are not part of the audit. */
+function isTestFile(file) {
+  return /\.test\.[jt]sx?$/.test(file);
+}
+
+/** The `/dev/ui` gallery 404s in production and is never linked from real pages (see robots.ts). */
+function isDevRoute(file) {
+  return relative(file).startsWith("app/(dev)/");
+}
 
 function walk(directory) {
   if (!fs.existsSync(directory)) return [];
@@ -133,7 +158,9 @@ function extractCodeReferences(file, source) {
   return references;
 }
 
-const pageFiles = walk(APP_DIR).filter((file) => PAGE_FILE.test(path.basename(file)));
+const pageFiles = walk(APP_DIR)
+  .filter((file) => PAGE_FILE.test(path.basename(file)))
+  .filter((file) => !isDevRoute(file));
 const routes = new Set(pageFiles.map(routeForPage));
 
 const publicAssets = new Set(
@@ -147,9 +174,10 @@ for (const file of walk(APP_DIR)) {
   }
 }
 
-const sourceFiles = SOURCE_DIRS.flatMap((directory) => walk(path.join(ROOT, directory))).filter(
-  (file) => SOURCE_EXTENSIONS.has(path.extname(file)),
-);
+const sourceFiles = SOURCE_DIRS.flatMap((directory) => walk(path.join(ROOT, directory)))
+  .filter((file) => SOURCE_EXTENSIONS.has(path.extname(file)))
+  .filter((file) => !isTestFile(file))
+  .filter((file) => !isDevRoute(file));
 
 const references = sourceFiles.flatMap((file) => {
   const source = fs.readFileSync(file, "utf8");
@@ -183,6 +211,16 @@ for (const reference of references) {
 
   if (reference.value.startsWith("#")) {
     const id = reference.value.slice(1);
+
+    // Only a `.jsx`/`.tsx` file can carry the matching `id=`; a `#anchor`
+    // authored in JSON data or a `.ts` module targets an id that lives in
+    // whatever component eventually renders it, so it is out of reach for a
+    // same-file check and is counted instead of flagged.
+    if (!/\.[jt]sx$/.test(reference.file)) {
+      dataAuthoredAnchors += 1;
+      continue;
+    }
+
     if (!idsByFile.get(reference.file)?.has(id)) {
       problems.push({ ...reference, reason: `missing #${id} target in the same file` });
     }
@@ -207,6 +245,7 @@ if (problems.length) {
   console.log(
     `Link audit passed: ${routes.size} routes, ${references.length} internal references, ` +
       `${publicAssets.size} public assets, ${intentionalPlaceholders} intentional placeholders, ` +
-      `${pendingLinks} links pending a later phase.`,
+      `${pendingLinks} links pending a later phase, ${dataAuthoredAnchors} same-page anchors ` +
+      `authored ahead of their target component.`,
   );
 }
