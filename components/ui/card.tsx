@@ -15,6 +15,8 @@ export type CardProps = {
   as?: "div" | "article" | "li" | "section";
   /** Sitting on a `band` section: use the stronger hairline. */
   onBand?: boolean;
+  /** Anchor id (e.g. a glossary term) — gets `scroll-mt` so the header never covers it. */
+  id?: string;
   className?: string;
 };
 
@@ -32,6 +34,7 @@ export function Card({
   href,
   as: Tag = "div",
   onBand = false,
+  id,
   className,
 }: CardProps) {
   const cls = cn(
@@ -40,17 +43,22 @@ export function Card({
     PADDING[padding],
     (interactive || href) &&
       "transition-colors duration-150 ease-out hover:border-ink hover:bg-band",
+    id && "scroll-mt-24",
     className,
   );
 
   if (href) {
     return (
-      <Link href={href} className={cls}>
+      <Link href={href} id={id} className={cls}>
         {children}
       </Link>
     );
   }
-  return <Tag className={cls}>{children}</Tag>;
+  return (
+    <Tag id={id} className={cls}>
+      {children}
+    </Tag>
+  );
 }
 
 const RATIO: Record<CardMediaRatio, string> = {

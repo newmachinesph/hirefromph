@@ -46,7 +46,7 @@ export function GlossaryBrowser() {
           </Heading>
           <CardGrid cols={2} as="ul">
             {group.terms.map((term) => (
-              <Card key={term.id} as="li" padding="md">
+              <Card key={term.id} id={term.id} as="li" padding="md">
                 <div className="flex flex-col gap-2">
                   <Heading level={3} size="h5">
                     {term.term}
