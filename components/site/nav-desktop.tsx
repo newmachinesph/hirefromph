@@ -4,8 +4,34 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from "react";
 import { Icon } from "@/components/ui";
-import { NAV, isLive, isMenu, type NavMenu } from "@/lib/nav";
+import { NAV, isLive, isMenu, type NavColumn, type NavLink, type NavMenu } from "@/lib/nav";
 import { cn } from "@/lib/utils";
+
+/** Longest a menu column may run before the group wraps into a second column. */
+const MAX_LINKS_PER_COLUMN = 5;
+const PANEL_WIDTH = ["w-[22rem]", "w-[36rem]", "w-[52rem]", "w-[66rem]"] as const;
+const GRID_COLS = ["", "sm:grid-cols-2", "sm:grid-cols-3", "sm:grid-cols-4"] as const;
+
+type NavPanelColumn = { title: string; part: number; links: NavLink[] };
+
+/**
+ * Lays a menu's groups out as columns of at most MAX_LINKS_PER_COLUMN live
+ * links each, so one long group ("Build skills", nine pages) wraps into two
+ * columns instead of one scroll-length list. Continuation columns keep the
+ * group title only as an invisible spacer so the rows line up.
+ */
+export function splitColumns(groups: NavColumn[]): NavPanelColumn[] {
+  return groups.flatMap((group) => {
+    const live = group.links.filter(isLive);
+    const parts = Math.max(1, Math.ceil(live.length / MAX_LINKS_PER_COLUMN));
+    const size = Math.ceil(live.length / parts);
+    return Array.from({ length: parts }, (_, part) => ({
+      title: group.title,
+      part,
+      links: live.slice(part * size, (part + 1) * size),
+    }));
+  });
+}
 
 /** Marks the focusable rows inside an open panel, in visual order. */
 const ITEM_SELECTOR = "a[data-nav-item]";
@@ -78,6 +104,7 @@ function NavDropdown({
   const panelRef = useRef<HTMLDivElement>(null);
 
   const footerLinks = (item.footerLinks ?? []).filter(isLive);
+  const columns = splitColumns(item.groups);
   const active = [...item.groups.flatMap((group) => group.links), ...footerLinks].some(
     (link) => link.href === pathname,
   );
@@ -167,17 +194,23 @@ function NavDropdown({
           className={cn(
             "absolute left-0 top-[calc(100%+0.75rem)] z-50 max-w-[calc(100vw-3rem)]",
             "rounded-md border border-line bg-paper p-5 shadow-[var(--shadow-sm)]",
-            item.groups.length > 1 ? "w-[36rem]" : "w-[22rem]",
+            PANEL_WIDTH[Math.min(columns.length, 4) - 1],
           )}
         >
-          <div
-            className={cn("grid gap-x-8 gap-y-6", item.groups.length > 1 && "sm:grid-cols-2")}
-          >
-            {item.groups.map((group) => (
-              <div key={group.title}>
-                <p className="text-kicker uppercase text-ink-faint">{group.title}</p>
+          <div className={cn("grid gap-x-8 gap-y-6", GRID_COLS[Math.min(columns.length, 4) - 1])}>
+            {columns.map((column) => (
+              <div key={`${column.title}-${column.part}`} data-nav-column>
+                <p
+                  className={cn(
+                    "text-kicker uppercase text-ink-faint",
+                    column.part > 0 && "invisible",
+                  )}
+                  aria-hidden={column.part > 0 || undefined}
+                >
+                  {column.title}
+                </p>
                 <ul className="mt-3 flex flex-col gap-0.5">
-                  {group.links.filter(isLive).map((link) => (
+                  {column.links.map((link) => (
                     <li key={link.href}>
                       <Link
                         data-nav-item

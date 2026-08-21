@@ -199,6 +199,12 @@ body {
   outline-offset: 2px;
 }
 
+/* Opt-out for controls whose container already signals focus (e.g. the
+   search palette's combobox: the dialog, caret and highlighted row carry it). */
+[data-bare-focus]:focus-visible {
+  outline: none;
+}
+
 /* Skip link: first focusable element, visible only on focus */
 .skip-link {
   position: absolute;

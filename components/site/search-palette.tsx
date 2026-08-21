@@ -85,6 +85,7 @@ export function SearchPalette() {
         hideTitle
         placement="top"
         flush
+        hideClose
       >
         <div className="flex items-center gap-3 border-b border-line px-4">
           <span aria-hidden className="inline-flex shrink-0 text-ink-faint">
@@ -117,6 +118,7 @@ export function SearchPalette() {
                 go(active);
               }
             }}
+            data-bare-focus
             className="h-14 w-full bg-transparent text-base text-ink outline-none placeholder:text-ink-faint"
           />
           <kbd className="hidden shrink-0 rounded-sm border border-line px-1.5 py-0.5 text-caption text-ink-faint sm:block">

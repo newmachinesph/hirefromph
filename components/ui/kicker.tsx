@@ -22,7 +22,7 @@ export function Kicker({
   return (
     <span
       className={cn(
-        "inline-flex items-center rounded-pill border px-3 py-1 text-kicker uppercase",
+        "inline-flex w-fit items-center self-start rounded-pill border px-3 py-1 text-kicker uppercase",
         a ? cn(a.text, a.border) : "border-line-strong text-ink-faint",
         className,
       )}
