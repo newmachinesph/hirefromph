@@ -37,7 +37,7 @@ const VARIANTS: Record<ButtonVariant, string> = {
   secondary: "bg-tint text-primary-deep hover:bg-primary-soft",
   outline: "border border-line-strong bg-paper text-ink hover:border-ink hover:bg-band",
   ghost: "text-ink hover:bg-band",
-  link: "h-auto px-0 text-primary underline decoration-transparent underline-offset-4 hover:decoration-current",
+  link: "min-h-11 px-0 text-primary underline decoration-transparent underline-offset-4 hover:decoration-current",
 };
 
 export function Button({
