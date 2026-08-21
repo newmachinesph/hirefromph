@@ -26,6 +26,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/english";
@@ -68,7 +69,7 @@ export default function EnglishPage() {
         <Callout tone="signal" className="max-w-2xl">
           {english.creed}
         </Callout>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/english" /></Section> */}
+        <Section spacing="none"><Tldr route="/english" /></Section>
       </PageHero>
 
       <Section>
@@ -430,7 +431,7 @@ export default function EnglishPage() {
                         href={r.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-6 inline-flex items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                        className="mt-6 inline-flex min-h-11 items-center gap-1.5 border-t border-line pt-4 text-small font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
                       >
                         Open {r.name}
                         <Icon name="arrow-up-right" size={14} />
@@ -444,7 +445,7 @@ export default function EnglishPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/english" /> */}
+      <PracticeFooter route="/english" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

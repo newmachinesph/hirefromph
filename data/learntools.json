@@ -15,8 +15,8 @@
     {
       "n": 2,
       "title": "Find the 20%",
-      "desc": "Every tool has a fat manual and a thin daily reality. Most of what's in the docs, you'll touch once a year or never. Real job posts and real workflows show you which functions actually get used, ignore the rest for now.",
-      "doThis": "Read 3 real job posts or workflow guides for the role. List the 5–8 functions they actually mention.",
+      "desc": "Every tool has a fat manual and a thin daily reality. Most of what's in the docs, you'll touch once a year or never. Real job posts and real workflows show you which functions get used, ignore the rest for now.",
+      "doThis": "Read 3 real job posts or workflow guides for the role. List the 5–8 functions they mention.",
       "icon": "search",
       "accent": "info"
     },
@@ -39,7 +39,7 @@
     {
       "n": 5,
       "title": "Teach it back",
-      "desc": "Explaining something out loud, to a beginner, or in a one-page SOP, is the fastest way to find the parts you only half-understand. If you stumble explaining a step, that's the part you haven't actually learned yet.",
+      "desc": "Explaining something out loud, to a beginner, or in a one-page SOP, is the fastest way to find the parts you only half-understand. If you stumble explaining a step, that's the part you haven't learned yet.",
       "doThis": "Write a one-page SOP for the artifact you built, as if training someone else to redo it tomorrow.",
       "icon": "graduation-cap",
       "accent": "signal"
@@ -112,13 +112,13 @@
       },
       {
         "n": 3,
-        "title": "Confirm it's actually no-cost before you start",
+        "title": "Confirm it's no-cost before you start",
         "desc": "Some gate the exam behind a trial that wants a card. Read the fine print for ninety seconds before you commit an afternoon to it."
       }
     ]
   },
   "codeLiteracy": {
-    "intro": "The snippets below aren't a library to paste blindly, they're worked examples. Study one closely and you can write your own for any spreadsheet or inbox task you actually have.",
+    "intro": "The snippets below aren't a library to paste blindly, they're worked examples. Study one closely and you can write your own for any spreadsheet or inbox task you have.",
     "questions": [
       {
         "q": "What triggers it?",
@@ -156,7 +156,7 @@
     },
     {
       "title": "The cold rebuild",
-      "desc": "A week later, close every tab and rebuild the same artifact from a blank page. Whatever you forgot is what you didn't actually learn.",
+      "desc": "A week later, close every tab and rebuild the same artifact from a blank page. Whatever you forgot is what you didn't learn.",
       "icon": "rotate-ccw"
     }
   ]

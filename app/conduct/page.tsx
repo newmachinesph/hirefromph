@@ -21,6 +21,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/conduct";
@@ -49,7 +50,7 @@ export default function ConductPage() {
         <Text size="small" className="max-w-2xl">
           {conduct.whyItMatters}
         </Text>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/conduct" /></Section> */}
+        <Section spacing="none"><Tldr route="/conduct" /></Section>
       </PageHero>
 
       {/* --------------------------------------------------------- PRINCIPLES */}
@@ -57,7 +58,7 @@ export default function ConductPage() {
         <SectionHeading
           kicker="Six principles · borrowed from the codes that govern real professions"
           title="These rules are older than remote work"
-          lead="None of this was invented for freelancers. Engineers, doctors, and accountants have been bound by these exact clauses for decades, we've simply translated them into the situations you'll actually meet."
+          lead="None of this was invented for freelancers. Engineers, doctors, and accountants have been bound by these exact clauses for decades, we've simply translated them into the situations you'll meet."
         />
         <CardGrid cols={3} className="mt-12">
           {conduct.principles.map((p) => (
@@ -97,7 +98,7 @@ export default function ConductPage() {
       <Section>
         <SectionHeading
           kicker="The price list"
-          title="What it actually costs when this goes wrong"
+          title="What it costs when this goes wrong"
           lead={conduct.casesIntro}
         />
 
@@ -235,7 +236,7 @@ export default function ConductPage() {
         </Callout>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/conduct" /> */}
+      <PracticeFooter route="/conduct" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

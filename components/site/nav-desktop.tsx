@@ -107,7 +107,7 @@ function NavDropdown({
   const columns = splitColumns(item.groups);
   // Panels three columns and wider are centred under the whole nav (so they
   // never clip at the viewport edge); narrower ones hang from their trigger.
-  const wide = columns.length >= 3;
+  const wide = columns.length >= 2;
   const active = [...item.groups.flatMap((group) => group.links), ...footerLinks].some(
     (link) => link.href === pathname,
   );

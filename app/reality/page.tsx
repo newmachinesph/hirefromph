@@ -26,6 +26,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/reality";
@@ -74,7 +75,7 @@ export default function RealityPage() {
           {reality.whyItMatters}
         </Text>
         <FreshnessNote date={reality.lastVerified} />
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/reality" /></Section> */}
+        <Section spacing="none"><Tldr route="/reality" /></Section>
       </PageHero>
 
       <Section>
@@ -518,7 +519,7 @@ export default function RealityPage() {
         </Text>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/reality" /> */}
+      <PracticeFooter route="/reality" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

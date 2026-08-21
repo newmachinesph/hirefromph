@@ -1,7 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { Plus, RotateCcw, Trash2, Info } from "lucide-react";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Field,
+  Heading,
+  Icon,
+  Input,
+  Kicker,
+  Select,
+  Stat,
+  StatStrip,
+  Text,
+} from "@/components/ui";
 import {
   type Post,
   type RateUnit,
@@ -85,34 +99,39 @@ export function RateWorksheet() {
   }
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 lg:p-8">
+    <div className="flex flex-col">
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
-          <p className="kicker text-signal">Price from live posts</p>
-          <h3 className="mt-2 max-w-xl font-display text-[length:var(--text-h3)] leading-snug">
+          <Kicker tone="signal">Price from live posts</Kicker>
+          <Heading level={3} className="mt-2 max-w-xl leading-snug">
             Don&rsquo;t quote a number. Read it off the market.
-          </h3>
+          </Heading>
         </div>
-        <label className="flex items-center gap-2 text-sm text-ink-soft">
-          Assumed FX
-          <span className="text-ink-faint">₱</span>
-          <input
-            type="number"
-            min={1}
-            value={fx}
-            onChange={(e) => setFx(Number(e.target.value) || DEFAULT_FX)}
-            aria-label="Assumed pesos per US dollar"
-            className="w-16 rounded-lg border border-line-strong bg-paper px-2 py-1 text-right font-mono text-sm"
-          />
-          <span className="text-ink-faint">/ $1</span>
-        </label>
+        <Field label="Assumed pesos per US dollar" hideLabel className="w-auto">
+          <div className="flex items-center gap-2">
+            <Text size="small" as="span">
+              Assumed FX ₱
+            </Text>
+            <Input
+              type="number"
+              min={1}
+              value={fx}
+              onChange={(e) => setFx(Number(e.target.value) || DEFAULT_FX)}
+              aria-label="Assumed pesos per US dollar"
+              className="w-20 text-right tabular-nums"
+            />
+            <Text size="small" as="span">
+              / $1
+            </Text>
+          </div>
+        </Field>
       </div>
 
-      <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-soft">
+      <Text size="small" className="mt-4 max-w-2xl leading-relaxed">
         Paste in real listings you found for your role, each normalized to ₱/month
         at full-time hours. Five posts beat any salary guide, because they are what
-        clients are actually paying right now.
-      </p>
+        clients are paying right now.
+      </Text>
 
       {/* rows */}
       <div className="mt-6 space-y-2">
@@ -128,117 +147,112 @@ export function RateWorksheet() {
           return (
             <div
               key={p.id}
-              className="grid grid-cols-2 gap-2 rounded-xl border border-line bg-paper p-2 sm:grid-cols-[1fr_7rem_8rem_7rem_2rem] sm:items-center sm:border-transparent sm:bg-transparent sm:p-1"
+              className="grid grid-cols-2 gap-2 rounded-sm border border-line bg-paper p-2 sm:grid-cols-[1fr_7rem_8rem_7rem_2rem] sm:items-center sm:border-transparent sm:bg-transparent sm:p-1"
             >
-              <input
+              <Input
                 value={p.role}
                 onChange={(e) => update(p.id, { role: e.target.value })}
                 placeholder="e.g. Bookkeeper"
                 aria-label="Role"
-                className="col-span-2 rounded-lg border border-line-strong bg-paper px-2.5 py-1.5 text-sm sm:col-span-1"
+                className="col-span-2 sm:col-span-1"
               />
-              <input
+              <Input
                 type="number"
                 min={0}
                 value={p.amount || ""}
                 onChange={(e) => update(p.id, { amount: Number(e.target.value) || 0 })}
                 placeholder="0"
                 aria-label="Rate amount"
-                className="rounded-lg border border-line-strong bg-paper px-2.5 py-1.5 text-right font-mono text-sm"
+                className="text-right tabular-nums"
               />
-              <select
+              <Select
                 value={p.unit}
                 onChange={(e) => update(p.id, { unit: e.target.value as RateUnit })}
                 aria-label="Rate unit"
-                className="rounded-lg border border-line-strong bg-paper px-2 py-1.5 text-sm"
               >
                 {UNITS.map((u) => (
                   <option key={u.value} value={u.value}>
                     {u.label}
                   </option>
                 ))}
-              </select>
+              </Select>
               <span
                 className={cn(
-                  "text-right font-mono text-sm",
+                  "text-right text-small tabular-nums",
                   monthly === null ? "text-ink-faint" : "text-ink",
                 )}
               >
                 {monthly === null ? "—" : php(monthly)}
               </span>
-              <button
-                type="button"
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => remove(p.id)}
                 aria-label="Remove post"
-                className="grid h-8 w-8 place-items-center justify-self-end rounded-lg text-ink-faint transition-colors hover:bg-paper-3 hover:text-signal"
+                className="justify-self-end"
+                icon={<Icon name="trash" size={15} />}
               >
-                <Trash2 size={15} />
-              </button>
+                <span className="sr-only">Remove</span>
+              </Button>
             </div>
           );
         })}
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <button
-          type="button"
-          onClick={add}
-          className="inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
-        >
-          <Plus size={15} /> Add a post you found
-        </button>
-        <button
-          type="button"
+        <Button variant="outline" size="sm" onClick={add} icon={<Icon name="plus" size={15} />}>
+          Add a post you found
+        </Button>
+        <Button
+          variant="outline"
+          size="sm"
           onClick={() => setPosts(SEED)}
-          className="inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink"
+          icon={<Icon name="rotate-ccw" size={15} />}
         >
-          <RotateCcw size={15} /> Reset to examples
-        </button>
+          Reset to examples
+        </Button>
       </div>
 
       {/* result */}
       {spread ? (
-        <div className="mt-7 rounded-2xl border border-line bg-paper-3/60 p-6">
-          <p className="kicker">
-            Your evidence range · {spread.n} post{spread.n === 1 ? "" : "s"} with a stated rate
-          </p>
-          <div className="mt-4 grid grid-cols-3 gap-4 text-center">
+        <Card padding="md" className="mt-7">
+          <div className="flex flex-wrap items-center gap-2">
+            <Kicker>Your evidence range</Kicker>
+            <Badge>
+              {spread.n} post{spread.n === 1 ? "" : "s"} with a stated rate
+            </Badge>
+          </div>
+          <StatStrip className="mt-4">
             {[
               { label: "Floor", value: spread.low },
               { label: "Middle", value: spread.median, hero: true },
               { label: "Ceiling", value: spread.high },
             ].map((c) => (
-              <div
+              <Card
                 key={c.label}
-                className={cn(
-                  "rounded-xl border p-4",
-                  c.hero ? "border-signal bg-signal-tint/40" : "border-line bg-paper-2",
-                )}
+                padding="sm"
+                className={c.hero ? "border-primary bg-primary-tint" : undefined}
               >
-                <p className="kicker text-ink-faint">{c.label}</p>
-                <p className="mt-2 font-display text-xl leading-none sm:text-2xl">
-                  {php(c.value)}
-                </p>
-                <p className="mt-1 font-mono text-[0.7rem] text-ink-faint">/month</p>
-              </div>
+                <Stat value={php(c.value)} label={c.label} sub="/month" />
+              </Card>
             ))}
-          </div>
-          <p className="mt-5 border-l-2 border-signal pl-4 text-sm leading-relaxed text-ink">
+          </StatStrip>
+          <Callout tone="signal" className="mt-5">
             Just starting and can prove the skill? Aim near the{" "}
             <strong>middle</strong>, not the floor — the floor is where
             under-priced beginners cluster. Experienced with a portfolio? Ask
             between middle and ceiling, and let them talk you down, not up.
-          </p>
-        </div>
+          </Callout>
+        </Card>
       ) : (
-        <p className="mt-7 text-sm text-ink-faint">
+        <Text size="small" tone="faint" className="mt-7">
           Add at least one post with a stated rate to see a range.
-        </p>
+        </Text>
       )}
 
       {hidden > 0 && (
         <p className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-ink-faint">
-          <Info size={14} className="mt-0.5 shrink-0" />
+          <Icon name="info" size={14} className="mt-0.5 shrink-0" />
           {hidden} post{hidden === 1 ? "" : "s"} here state no rate, so{" "}
           {hidden === 1 ? "it" : "they"} can&rsquo;t price you. A hidden number is
           missing on purpose — never anchor your ask to one.

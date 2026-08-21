@@ -1,351 +1,341 @@
-import { ExternalLink, Check, X } from "lucide-react";
+import type { Metadata } from "next";
 import salary from "@/data/salary.json";
-import { Icon } from "@/components/icon";
-import { Reveal } from "@/components/reveal";
-import { ArrowLink, ButtonLink, Kicker, PageHero, Pill, SectionHeading } from "@/components/ui";
 import { RateCalculator } from "@/components/rate-calculator";
 import { RateWorksheet } from "@/components/rate-worksheet";
 import { FreshnessNote } from "@/components/freshness-note";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+  Toc,
+} from "@/components/layout";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  Heading,
+  Icon,
+  Kicker,
+  Source,
+  SourceList,
+  Stat,
+  StatStrip,
+  Step,
+  StepList,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
+import { cn } from "@/lib/utils";
 
-export const metadata = pageMeta({
-  path: "/salary",
+const HREF = "/salary";
+
+export const metadata: Metadata = pageMeta({
+  path: HREF,
   title: "Salary Guide",
   description:
     "What online work really pays for Filipino professionals right now. In-demand roles from live OnlineJobs.ph listings, honest vendor-grade pay ranges, full-time vs part-time vs hourly vs project vs retainer, and how to price yourself. Every number labeled for what it is.",
 });
 
-const accentText: Record<string, string> = {
-  signal: "text-signal",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-
-function Source({ label, url }: { label: string; url: string }) {
-  if (!label || !url) return null;
-  return (
-    <a
-      href={url}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group inline-flex items-start gap-1 text-xs font-medium text-ink-faint transition-colors hover:text-signal"
-    >
-      <span className="text-balance">Source: {label}</span>
-      <ExternalLink size={11} className="mt-0.5 shrink-0 opacity-60" />
-    </a>
-  );
-}
+const TOC = [
+  { id: "warning", label: "Warning label" },
+  { id: "in-demand", label: "In demand" },
+  { id: "emerging", label: "Emerging" },
+  { id: "rates", label: "The ranges" },
+  { id: "worksheet", label: "Price it yourself" },
+  { id: "engagement", label: "Engagement types" },
+  { id: "price", label: "How to price" },
+  { id: "calculator", label: "Real rate" },
+];
 
 export default function SalaryPage() {
-  const { hero, warning, inDemand, emerging, rates, engagement, price, closing } =
-    salary;
+  const { hero, warning, inDemand, emerging, rates, engagement, price, closing } = salary;
 
   return (
     <>
-      {/* --------------------------------------------------------------- HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker={hero.kicker}
-        titleWidth="max-w-4xl"
-        title={
-          <>
-            {hero.line1}
-            <br />
-            <span className="text-signal">{hero.line2}</span>
-          </>
-        }
+        title={hero.line1}
+        accent={hero.line2}
         lead={hero.intro}
       >
-        <Reveal i={3}>
-          <blockquote className="mt-8 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-            {hero.creed}
-          </blockquote>
-        </Reveal>
-        <Reveal i={4}>
-          <div className="mt-6">
-            <FreshnessNote date={salary.lastVerified} />
-          </div>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {hero.creed}
+        </Callout>
+        <FreshnessNote date={salary.lastVerified} />
+        <Section spacing="none"><Tldr route="/salary" /></Section>
       </PageHero>
 
-      {/* ------------------------------------------------------------ WARNING */}
-      <section className="container-x pb-8">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-caution/40 bg-caution-tint p-8 lg:p-10">
-            <Pill tone="caution">Warning label</Pill>
-            <h2 className="mt-5 max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance text-ink">
-              {warning.title}
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {warning.body}
-            </p>
-          </div>
-        </Reveal>
-      </section>
+      <Section>
+        <div className="grid gap-12 xl:grid-cols-[200px_minmax(0,1fr)]">
+          <Toc items={TOC} />
 
-      {/* ---------------------------------------------------------- IN DEMAND */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading kicker={inDemand.kicker} title={inDemand.title} lead={inDemand.lead} />
-          </Reveal>
+          <div className="flex min-w-0 flex-col gap-20">
+            {/* ----------------------------------------------------- WARNING */}
+            <section id="warning">
+              <Callout tone="caution" title={warning.title}>
+                <Badge tone="caution">Warning label</Badge>
+                <Text size="small" className="mt-4 max-w-3xl">
+                  {warning.body}
+                </Text>
+              </Callout>
+            </section>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {inDemand.roles.map((r, idx) => (
-              <Reveal key={r.role} i={idx % 4}>
-                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                  <span className="grid h-11 w-11 place-items-center rounded-xl bg-ink text-paper-2">
-                    <Icon name={r.icon} size={20} />
-                  </span>
-                  <h3 className="mt-5 font-display text-lg leading-snug text-balance">{r.role}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{r.blurb}</p>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <Reveal i={1}>
-            <div className="mt-8 flex flex-col gap-3">
-              <p className="max-w-3xl border-l-2 border-verified pl-5 font-display text-xl leading-snug text-ink">
-                {inDemand.note}
-              </p>
-              <Source label={inDemand.source.label} url={inDemand.source.url} />
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      {/* ----------------------------------------------------------- EMERGING */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading kicker={emerging.kicker} title={emerging.title} lead={emerging.lead} />
-        </Reveal>
-
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {emerging.roles.map((r, idx) => (
-            <Reveal key={r.role} i={idx % 3}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-signal text-white">
-                  <Icon name={r.icon} size={20} />
-                </span>
-                <h3 className="mt-5 font-display text-lg leading-snug text-balance">{r.role}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">{r.blurb}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal i={1}>
-          <p className="mt-8 max-w-3xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-            {emerging.note}
-          </p>
-        </Reveal>
-        <Reveal i={2}>
-          <div className="mt-5 flex flex-col gap-3">
-            <p className="max-w-3xl text-sm font-medium leading-relaxed text-ink-soft">
-              {emerging.note2}
-            </p>
-            <Source label={emerging.source.label} url={emerging.source.url} />
-          </div>
-        </Reveal>
-      </section>
-
-      {/* -------------------------------------------------------------- RATES */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <SectionHeading kicker={rates.kicker} title={rates.title} />
-        </Reveal>
-        <Reveal i={1}>
-          <p className="mt-6 max-w-2xl text-sm font-medium leading-relaxed text-ink">
-            {rates.monthlyNote}
-          </p>
-        </Reveal>
-
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {rates.tiers.map((t, idx) => (
-            <Reveal key={t.level} i={idx % 3}>
-              <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]">
-                <span aria-hidden className={`h-1 w-10 rounded-full ${accentBar[t.accent]}`} />
-                <p className={`mt-5 kicker ${accentText[t.accent]}`}>{t.level}</p>
-                <p className="mt-3 font-display text-3xl leading-none">{t.monthly}</p>
-                <p className="mt-2 font-mono text-xs text-ink-faint">{t.hourly}</p>
-                <p className="mt-5 flex-1 text-sm leading-relaxed text-ink-soft">{t.what}</p>
-              </article>
-            </Reveal>
-          ))}
-        </div>
-
-        <Reveal i={1}>
-          <div className="mt-5 rounded-[var(--radius-lg)] border border-line-strong bg-paper-3/70 p-8 lg:p-10">
-            <h3 className="max-w-2xl font-display text-[length:var(--text-h3)] leading-snug text-balance">
-              {rates.contradiction.title}
-            </h3>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-soft">
-              {rates.contradiction.body}
-            </p>
-
-            <div className="mt-7 grid max-w-2xl gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
-              <div className="rounded-2xl border border-line bg-paper-2 p-5 text-center">
-                <p className="kicker">{rates.contradiction.a.label}</p>
-                <p className="mt-3 font-display text-2xl leading-none text-ink">
-                  {rates.contradiction.a.value}
-                </p>
-              </div>
-              <p className="text-center font-display text-xl text-signal">vs</p>
-              <div className="rounded-2xl border border-line bg-paper-2 p-5 text-center">
-                <p className="kicker">{rates.contradiction.b.label}</p>
-                <p className="mt-3 font-display text-2xl leading-none text-ink">
-                  {rates.contradiction.b.value}
-                </p>
-              </div>
-            </div>
-
-            <p className="mt-7 max-w-3xl border-l-2 border-signal pl-5 text-sm font-medium leading-relaxed text-ink">
-              {rates.contradiction.lesson}
-            </p>
-
-            <div className="mt-7 flex flex-col gap-2 border-t border-line pt-5">
-              {rates.sources.map((s) => (
-                <Source key={s.url} label={s.label} url={s.url} />
-              ))}
-            </div>
-          </div>
-        </Reveal>
-      </section>
-
-      {/* ---------------------------------------------------------- WORKSHEET */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <RateWorksheet />
-        </Reveal>
-      </section>
-
-      {/* --------------------------------------------------------- ENGAGEMENT */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading kicker={engagement.kicker} title={engagement.title} lead={engagement.lead} />
-          </Reveal>
-
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {engagement.types.map((t, idx) => (
-              <Reveal key={t.name} i={idx % 3}>
-                <article className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                  <div className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-ink text-paper-2">
-                      <Icon name={t.icon} size={18} />
+            {/* --------------------------------------------------- IN DEMAND */}
+            <section id="in-demand">
+              <SectionHeading
+                kicker={inDemand.kicker}
+                title={inDemand.title}
+                lead={inDemand.lead}
+              />
+              <CardGrid cols={4} className="mt-12">
+                {inDemand.roles.map((r) => (
+                  <Card key={r.role} as="article">
+                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-ink text-on-navy">
+                      <Icon name={r.icon} size={20} />
                     </span>
-                    <h3 className="font-display text-lg leading-tight">{t.name}</h3>
-                  </div>
-                  <p className="mt-3 text-xs font-medium leading-relaxed text-verified">{t.best}</p>
+                    <Heading level={3} size="h5" className="mt-5" balance>
+                      {r.role}
+                    </Heading>
+                    <Text size="small" className="mt-2 flex-1">
+                      {r.blurb}
+                    </Text>
+                  </Card>
+                ))}
+              </CardGrid>
+              <Callout tone="verified" className="mt-8">
+                <Text size="lead" tone="ink" className="font-display">
+                  {inDemand.note}
+                </Text>
+                <Source
+                  label={inDemand.source.label}
+                  url={inDemand.source.url}
+                  className="mt-3"
+                />
+              </Callout>
+            </section>
 
-                  <ul className="mt-4 flex flex-col gap-2">
-                    {t.pros.map((p) => (
-                      <li key={p} className="flex items-start gap-2 text-sm leading-snug text-ink">
-                        <Check size={15} className="mt-0.5 shrink-0 text-verified" />
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                  <ul className="mt-3 flex flex-col gap-2">
-                    {t.cons.map((c) => (
-                      <li key={c} className="flex items-start gap-2 text-sm leading-snug text-ink-soft">
-                        <X size={15} className="mt-0.5 shrink-0 text-signal" />
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+            {/* ---------------------------------------------------- EMERGING */}
+            <section id="emerging">
+              <SectionHeading
+                kicker={emerging.kicker}
+                title={emerging.title}
+                lead={emerging.lead}
+              />
+              <CardGrid cols={3} className="mt-12">
+                {emerging.roles.map((r) => (
+                  <Card key={r.role} as="article">
+                    <span className="grid h-11 w-11 place-items-center rounded-sm bg-primary text-white">
+                      <Icon name={r.icon} size={20} />
+                    </span>
+                    <Heading level={3} size="h5" className="mt-5" balance>
+                      {r.role}
+                    </Heading>
+                    <Text size="small" className="mt-2 flex-1">
+                      {r.blurb}
+                    </Text>
+                  </Card>
+                ))}
+              </CardGrid>
+              <Callout tone="signal" className="mt-8 max-w-3xl">
+                {emerging.note}
+              </Callout>
+              <Text size="small" tone="ink" className="mt-5 max-w-3xl font-medium">
+                {emerging.note2}
+              </Text>
+              <Source
+                label={emerging.source.label}
+                url={emerging.source.url}
+                className="mt-3"
+              />
+            </section>
 
-      {/* -------------------------------------------------------------- PRICE */}
-      <section className="bg-ink py-20 text-paper-2 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <Kicker className="text-paper-2/60">{price.kicker}</Kicker>
-            <h2 className="mt-5 max-w-3xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {price.title}
-            </h2>
-            <p className="mt-5 max-w-2xl text-paper-2/70">{price.lead}</p>
-          </Reveal>
+            {/* ------------------------------------------------------- RATES */}
+            <section id="rates">
+              <SectionHeading kicker={rates.kicker} title={rates.title} />
+              <Text size="small" tone="ink" className="mt-6 max-w-2xl font-medium">
+                {rates.monthlyNote}
+              </Text>
 
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
-            {price.steps.map((s, idx) => (
-              <Reveal key={s.n} i={idx % 5}>
-                <div className="flex h-full flex-col rounded-2xl border border-white/10 bg-white/[0.03] p-6">
-                  <span className="font-display text-4xl leading-none text-signal">0{s.n}</span>
-                  <h3 className="mt-4 font-display text-lg leading-tight text-paper-2">{s.title}</h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-paper-2/70">{s.desc}</p>
+              <CardGrid cols={3} className="mt-10">
+                {rates.tiers.map((t) => {
+                  const a = accent(t.accent);
+                  return (
+                    <Card key={t.level} as="article">
+                      <span aria-hidden className={cn("h-1 w-10 rounded-pill", a.fill)} />
+                      <div className="mt-5">
+                        <Kicker tone={t.accent as "signal"}>{t.level}</Kicker>
+                      </div>
+                      <StatStrip className="mt-3">
+                        <Stat value={t.monthly} label={t.hourly} />
+                      </StatStrip>
+                      <Text size="small" className="mt-5 flex-1">
+                        {t.what}
+                      </Text>
+                    </Card>
+                  );
+                })}
+              </CardGrid>
+
+              <Card padding="lg" className="mt-6">
+                <Heading level={3} size="h3" balance>
+                  {rates.contradiction.title}
+                </Heading>
+                <Text size="small" className="mt-4 max-w-3xl">
+                  {rates.contradiction.body}
+                </Text>
+
+                <div className="mt-7 grid max-w-2xl gap-4 sm:grid-cols-[1fr_auto_1fr] sm:items-center">
+                  <Card padding="sm" className="text-center">
+                    <StatStrip className="justify-center">
+                      <Stat
+                        value={rates.contradiction.a.value}
+                        label={rates.contradiction.a.label}
+                      />
+                    </StatStrip>
+                  </Card>
+                  <Text size="lead" tone="inherit" className="text-center font-display text-primary">
+                    vs
+                  </Text>
+                  <Card padding="sm" className="text-center">
+                    <StatStrip className="justify-center">
+                      <Stat
+                        value={rates.contradiction.b.value}
+                        label={rates.contradiction.b.label}
+                      />
+                    </StatStrip>
+                  </Card>
                 </div>
-              </Reveal>
-            ))}
+
+                <Callout tone="signal" className="mt-7 max-w-3xl">
+                  {rates.contradiction.lesson}
+                </Callout>
+
+                <SourceList sources={rates.sources} className="mt-7 border-t border-line pt-5" />
+              </Card>
+            </section>
+
+            {/* --------------------------------------------------- WORKSHEET */}
+            <section id="worksheet">
+              <Card padding="lg">
+                <RateWorksheet />
+              </Card>
+            </section>
+
+            {/* -------------------------------------------------- ENGAGEMENT */}
+            <section id="engagement">
+              <SectionHeading
+                kicker={engagement.kicker}
+                title={engagement.title}
+                lead={engagement.lead}
+              />
+              <CardGrid cols={3} className="mt-12">
+                {engagement.types.map((t) => (
+                  <Card key={t.name} as="article">
+                    <div className="flex items-center gap-3">
+                      <span className="grid h-10 w-10 shrink-0 place-items-center rounded-sm bg-ink text-on-navy">
+                        <Icon name={t.icon} size={18} />
+                      </span>
+                      <Heading level={3} size="h5">
+                        {t.name}
+                      </Heading>
+                    </div>
+                    <Text size="caption" className="mt-3 font-medium text-verified">
+                      {t.best}
+                    </Text>
+
+                    <ul className="mt-4 flex flex-col gap-2">
+                      {t.pros.map((p) => (
+                        <li key={p} className="flex items-start gap-2">
+                          <Icon name="check" size={15} className="mt-0.5 shrink-0 text-verified" />
+                          <Text size="small" tone="ink" as="span">
+                            {p}
+                          </Text>
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="mt-3 flex flex-col gap-2">
+                      {t.cons.map((c) => (
+                        <li key={c} className="flex items-start gap-2">
+                          <Icon name="x" size={15} className="mt-0.5 shrink-0 text-coral" />
+                          <Text size="small" as="span">
+                            {c}
+                          </Text>
+                        </li>
+                      ))}
+                    </ul>
+                  </Card>
+                ))}
+              </CardGrid>
+            </section>
+
+            {/* ------------------------------------------------------- PRICE */}
+            <section id="price">
+              <SectionHeading kicker={price.kicker} title={price.title} lead={price.lead} />
+              <StepList className="mt-14">
+                {price.steps.map((s) => (
+                  <Step key={s.n} n={s.n} title={s.title}>
+                    {s.desc}
+                  </Step>
+                ))}
+              </StepList>
+            </section>
+
+            {/* -------------------------------------------------- CALCULATOR */}
+            <section id="calculator">
+              <SectionHeading
+                kicker="Do the math yourself"
+                title="Your real rate calculator."
+                lead="Drag the sliders with your own numbers. Watch your headline rate shrink into what you take home, once the fees, the costs, the tax, and the unpaid time are counted. This is the honest number to plan your life around."
+              />
+              <Card padding="lg" className="mt-12">
+                <RateCalculator />
+              </Card>
+            </section>
           </div>
         </div>
-      </section>
-
-      {/* --------------------------------------------------------- CALCULATOR */}
-      <section className="bg-paper-3/60 py-20 lg:py-24">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="Do the math yourself"
-              title="Your real rate calculator."
-              lead="Drag the sliders with your own numbers. Watch your headline rate shrink into what you actually take home, once the fees, the costs, the tax, and the unpaid time are counted. This is the honest number to plan your life around."
-            />
-          </Reveal>
-          <Reveal i={1}>
-            <div className="mt-12">
-              <RateCalculator />
-            </div>
-          </Reveal>
-        </div>
-      </section>
+      </Section>
 
       {/* ------------------------------------------------------------ CLOSING */}
-      <section className="container-x py-20 lg:py-24">
-        <Reveal>
-          <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-8 lg:p-12">
-            <Kicker>{closing.kicker}</Kicker>
-            <h2 className="mt-6 max-w-4xl font-display text-[length:var(--text-h2)] leading-[var(--text-h2--line-height)] text-balance">
-              {closing.title}
-            </h2>
-            <p className="mt-6 max-w-3xl text-[length:var(--text-lead)] leading-relaxed text-ink-soft">
-              {closing.body}
-            </p>
-            <p className="mt-6 max-w-2xl border-l-2 border-signal pl-5 font-display text-xl leading-snug text-ink">
-              {closing.point}
-            </p>
+      <Section band="tint">
+        <SectionHeading kicker={closing.kicker} title={closing.title} lead={closing.body} />
+        <Callout tone="signal" className="mt-6 max-w-2xl">
+          {closing.point}
+        </Callout>
 
-            <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {closing.links.map((l, idx) => (
-                <Reveal key={l.href} i={idx % 4}>
-                  <div className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6">
-                    <ArrowLink href={l.href}>{l.label}</ArrowLink>
-                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">{l.desc}</p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+        <CardGrid cols={4} className="mt-10">
+          {closing.links.map((l) => (
+            <Card key={l.href} href={l.href} onBand>
+              <Heading level={3} size="h5">
+                {l.label}
+              </Heading>
+              <Text size="small" className="mt-3 flex-1">
+                {l.desc}
+              </Text>
+            </Card>
+          ))}
+        </CardGrid>
 
-            <div className="mt-10 flex flex-wrap items-center gap-4">
-              <ButtonLink href="/niches">Pick your lane</ButtonLink>
-              <ButtonLink href="/reality" variant="outline">
-                See the full market data
-              </ButtonLink>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+        <div className="mt-10 flex flex-wrap items-center gap-4">
+          <Button href="/niches">Pick your lane</Button>
+          <Button href="/reality" variant="outline">
+            See the full market data
+          </Button>
+        </div>
+      </Section>
+
+      <PracticeFooter route="/salary" />
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }

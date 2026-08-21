@@ -27,6 +27,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/ai-first";
@@ -88,7 +89,7 @@ export default function AiFirstPage() {
           {hero.creed}
         </Callout>
         <FreshnessNote date={aifirst.lastVerified} />
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/ai-first" /></Section> */}
+        <Section spacing="none"><Tldr route="/ai-first" /></Section>
       </PageHero>
 
       <Section>
@@ -240,7 +241,8 @@ export default function AiFirstPage() {
                                   href={t.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="mt-3 inline-flex items-center gap-1 text-caption font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
+                                  aria-label={`Open ${t.name}`}
+                                  className="mt-3 inline-flex min-h-11 items-center gap-1 text-caption font-semibold text-ink transition-colors duration-150 ease-out hover:text-primary"
                                 >
                                   Open
                                   <Icon name="arrow-up-right" size={11} />
@@ -410,7 +412,7 @@ export default function AiFirstPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/ai-first" /> */}
+      <PracticeFooter route="/ai-first" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

@@ -77,7 +77,7 @@
       { "title": "Build proof before you pitch", "how": "Ship two or three real, visible pieces of work, even self-made or for a cause you like. Nobody hires a claim. They hire evidence they can see.", "crossref": { "href": "/tasks", "label": "Build real proof" } },
       { "title": "Turn your warm network on first", "how": "Tell everyone you know, former colleagues, batchmates, past clients, exactly what you now do and who you help. Your first direct clients almost always come from people who already trust you.", "crossref": null },
       { "title": "Do focused outbound", "how": "Make a short list of businesses that fit your lane and reach out with one specific, useful observation about their work, not a generic I am available. A good list beats a big one.", "crossref": { "href": "/apply", "label": "Source & vet clients yourself" } },
-      { "title": "Let content pull people in", "how": "Post what you know where your clients look, a tip, a teardown, a before-and-after. Over time it makes clients come to you, already half-sold. Slow to start, compounding forever.", "crossref": null },
+      { "title": "Let content pull people in", "how": "Post what you know where your clients look, a tip, a teardown, a before-and-after. Over time it makes clients come to you, already half-sold. Slow to start, compounding.", "crossref": null },
       { "title": "Run the discovery call like a diagnosis", "how": "Ask more than you pitch. Understand the client's real problem and what a good outcome is worth to them before you ever talk price. You are prescribing, not selling.", "crossref": null },
       { "title": "Propose the outcome, not the hours", "how": "Send a short proposal that restates their goal, your plan, the deliverables, and a clear price. Sell the result you will produce, not the time you will spend.", "crossref": { "href": "/build", "label": "Write it from a blank page" } },
       { "title": "Convert one-off wins into retainers", "how": "After you deliver, propose the ongoing version, the monthly relationship that turns a project into predictable income. Retainers are how direct work becomes stable.", "crossref": { "href": "/tracker", "label": "Run a pipeline" } }
@@ -88,7 +88,7 @@
   "protect": {
     "kicker": "Protect yourself like a business",
     "title": "No agency is standing behind you now. Your contract is.",
-    "lead": "The freedom of direct work comes with the responsibility an employer used to carry. In the Philippines there is still no dedicated law that will collect an unpaid invoice from a foreign client for you, which is exactly why the habits below are not optional paperwork. They are the only protection that actually holds.",
+    "lead": "The freedom of direct work comes with the responsibility an employer used to carry. In the Philippines there is still no dedicated law that will collect an unpaid invoice from a foreign client for you, which is exactly why the habits below are not optional paperwork. They are the only protection that holds.",
     "items": [
       {
         "title": "There is still no freelancer protection law",

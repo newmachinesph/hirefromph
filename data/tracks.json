@@ -215,7 +215,7 @@
               }
             ],
             "stack": "Xero, QuickBooks, and country-native tools (Exact, DATEV, Fortnox) depending on the market.",
-            "watchOut": "Do not sell yourself as an EU bookkeeper. Sell yourself as an Irish, Dutch, or German-market bookkeeper. The generalist claim reads as inexperience to anyone who actually files there."
+            "watchOut": "Do not sell yourself as an EU bookkeeper. Sell yourself as an Irish, Dutch, or German-market bookkeeper. The generalist claim reads as inexperience to anyone who files there."
           },
           {
             "market": "Canada",
@@ -224,7 +224,7 @@
             "different": "A federal GST layered with provincial sales tax, combined into HST in some provinces and kept separate in others. Which one applies depends on where the customer is, not where the business is. Payroll runs on CRA remittances, with T4 slips for employees and T4A for many contractors.",
             "learn": [
               "GST, HST, PST, and QST: which provinces use which, and how to code a sale to each.",
-              "Input tax credits: what a business can actually claim back.",
+              "Input tax credits: what a business can claim back.",
               "CRA payroll remittance schedules, and the year-end T4 and T4A run.",
               "Quebec specifics if the client is there. Revenu Quebec is a separate filing relationship."
             ],
@@ -239,7 +239,7 @@
           }
         ],
         "howToStart": [
-          "Pick the market whose hours you can actually live with. Time zone first, rules second.",
+          "Pick the market whose hours you can live with. Time zone first, rules second.",
           "Certify in the tool that market really uses: QuickBooks Online for the US and Canada, Xero for Australia, New Zealand, and the UK. Both certifications are free.",
           "Read the official regulator page for that market end to end. It is dry, free, and more current than any course you can buy.",
           "Rebuild one full month-end close on invented data for that market: bank reconciliation, the sales tax or GST or VAT summary, and a two-paragraph plain-English report for the owner. That file is your portfolio piece.",
@@ -880,7 +880,7 @@
       "clients": "Shopify, Amazon FBA, and TikTok Shop sellers, plus DTC brands drowning in day-to-day store admin who need one operator to keep it running and reporting.",
       "ai": {
         "change": "AI now writes the product descriptions, drafts the customer replies, and summarizes the week's numbers in seconds. The busywork half of store management is automating, and by some estimates the VAs who wield AI ship two to three times the output of the ones who don't.",
-        "human": "But AI does not own account health, win a Seller-Support case, spot the supplier about to run you out of stock, or know which of forty products is actually worth pushing. Judgment, relationships, and account trust are the job. AI is the leverage; you are still the operator."
+        "human": "But AI does not own account health, win a Seller-Support case, spot the supplier about to run you out of stock, or know which of forty products is worth pushing. Judgment, relationships, and account trust are the job. AI is the leverage; you are still the operator."
       }
     },
     {
@@ -986,7 +986,7 @@
       "clients": "Content agencies, marketing teams, and SaaS companies publishing AI-drafted blogs, emails, and support docs at a volume no single writer can review alone.",
       "ai": {
         "change": "AI now drafts the first version of almost everything: blog posts, emails, product copy, support replies. The blank page is gone, and so is the cost of a first draft.",
-        "human": "A draft that reads well but gets a fact wrong, or sounds nothing like the brand, still costs the client trust. Someone has to catch the hallucinated statistic, tighten the voice, and decide what actually ships. That someone is you."
+        "human": "A draft that reads well but gets a fact wrong, or sounds nothing like the brand, still costs the client trust. Someone has to catch the hallucinated statistic, tighten the voice, and decide what ships. That someone is you."
       }
     },
     {
@@ -1142,10 +1142,10 @@
         "Microsoft Power BI Data Analyst Associate (PL-300)",
         "Google Data Analytics Certificate"
       ],
-      "clients": "Founders and marketing or ops leads drowning in spreadsheets who need one weekly dashboard that actually answers whether the business is winning.",
+      "clients": "Founders and marketing or ops leads drowning in spreadsheets who need one weekly dashboard that answers whether the business is winning.",
       "ai": {
         "change": "AI now writes the query, cleans the messy export, and drafts a summary of what changed this week. The grunt work between raw data and a finished chart is collapsing fast.",
-        "human": "AI does not know which number the founder actually cares about, or that the spike in week 12 was a tracking bug, not real growth. Reading the data in context and saying what to do next is the analyst's job now. You are the one who tells the story straight."
+        "human": "AI does not know which number the founder cares about, or that the spike in week 12 was a tracking bug, not real growth. Reading the data in context and saying what to do next is the analyst's job now. You are the one who tells the story straight."
       }
     },
     {
@@ -1153,7 +1153,7 @@
       "name": "Localization & Subtitling Ops",
       "icon": "languages",
       "accent": "signal",
-      "tagline": "More than translation: make content actually land",
+      "tagline": "More than translation: make content land",
       "blurb": "Run the AI-generated first pass on subtitles, dubbing, or translated content, then QA it for timing, accuracy, and tone before it ships. Philippine multilingual fluency is the edge here.",
       "pay": "$700–$1,900/mo",
       "demandLabel": "Steady",
@@ -1285,7 +1285,7 @@
               }
             ],
             "stack": "DAT, Truckstop, McLeod, Aljex, Turvo, Samsara and project44 dashboards.",
-            "watchOut": "There is no government licence to be a truck dispatcher. Anyone selling you a mandatory 'dispatcher certification' is selling recycled video, sometimes for over a thousand dollars. Compare that against CargoWise, which is free and comes from the vendor whose software employers actually name in job ads."
+            "watchOut": "There is no government licence to be a truck dispatcher. Anyone selling you a mandatory 'dispatcher certification' is selling recycled video, sometimes for over a thousand dollars. Compare that against CargoWise, which is free and comes from the vendor whose software employers name in job ads."
           },
           {
             "market": "Australia & New Zealand forwarding",
@@ -1462,7 +1462,7 @@
             "different": "The paperwork engine of a build: progress claims, variations registers, RFQ chasing, purchase orders, tender document control. Posted PH-based roles combine this with estimating under one title. Town-planning application prep, assembling the documents for an Australian development application, is legally open to anyone and looks like a natural extension, but be honest with yourself: it is an emerging add-on inside admin roles, not yet a proven standalone job title.",
             "learn": [
               "The progress-claim cycle: claim, assessment, payment schedule, and why the dates matter.",
-              "A variations register that actually protects the builder: scope change, price, approval trail.",
+              "A variations register that protects the builder: scope change, price, approval trail.",
               "Document control habits: one register, one naming convention, no orphan revisions.",
               "How a development application is assembled and lodged, using a state planning portal as the map."
             ],

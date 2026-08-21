@@ -1,9 +1,18 @@
 "use client";
 
 import { useEffect, useId, useMemo, useState } from "react";
-import { ArrowDown, Check, ShieldCheck } from "lucide-react";
 import english from "@/data/english.json";
-import { Pill } from "@/components/ui";
+import {
+  Badge,
+  Callout,
+  Card,
+  Checkbox,
+  Field,
+  Icon,
+  Kicker,
+  Textarea,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 /* ---------------------------------------------------------------- LOGIC */
@@ -128,26 +137,6 @@ function readDirectness({ total, words }: ScanResult): Verdict {
 }
 
 /* ------------------------------------------------------------------ VIEW */
-const accentText: Record<string, string> = {
-  signal: "text-signal-deep",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-const accentBar: Record<string, string> = {
-  signal: "bg-signal",
-  caution: "bg-caution",
-  verified: "bg-verified",
-  info: "bg-info",
-};
-const verdictText: Record<Tone, string> = {
-  neutral: "text-ink-faint",
-  signal: "text-signal-deep",
-  caution: "text-caution-text",
-  verified: "text-verified",
-  info: "text-info",
-};
-
 function Results({
   result,
   labelledBy,
@@ -161,16 +150,11 @@ function Results({
   const verdict = readDirectness(result);
 
   return (
-    <aside
-      aria-labelledby={labelledBy}
-      className="flex flex-col gap-5 rounded-2xl border border-line bg-paper p-6"
-    >
+    <Card as="section" padding="md" className="flex flex-col gap-5">
       <div className="flex items-start justify-between gap-4">
         <div>
-          <p id={labelledBy} className="kicker">
-            Flags found
-          </p>
-          <p className="mt-1 font-display text-4xl leading-none text-ink">
+          <Kicker>Flags found</Kicker>
+          <p id={labelledBy} className="mt-1 font-display text-h2 tabular-nums text-ink">
             {result.total}
           </p>
           <p className="mt-2 text-xs text-ink-faint">
@@ -178,11 +162,11 @@ function Results({
           </p>
         </div>
         <div className="text-right">
-          <p className="kicker">Directness</p>
+          <Kicker>Directness</Kicker>
           <p
             className={cn(
               "mt-1 text-sm font-semibold",
-              verdictText[verdict.tone],
+              accent(verdict.tone).text,
             )}
           >
             {verdict.label}
@@ -193,10 +177,10 @@ function Results({
       <p className="text-xs leading-relaxed text-ink-soft">{verdict.note}</p>
 
       {result.total === 0 ? (
-        <div className="rounded-xl border border-verified/30 bg-verified-tint p-4">
+        <Callout tone="verified">
           {typeof cleared === "number" && cleared > 0 && result.words > 0 && (
             <p className="mb-2 flex items-center gap-1.5 text-xs font-semibold text-verified">
-              <ShieldCheck size={14} aria-hidden />
+              <Icon name="shield-check" size={14} />
               You cut {cleared} {cleared === 1 ? "flag" : "flags"}. That was you,
               not us.
             </p>
@@ -207,7 +191,7 @@ function Results({
           <p className="mt-1.5 text-xs leading-relaxed text-ink-soft">
             {english.lab.cleanBody}
           </p>
-        </div>
+        </Callout>
       ) : (
         <ul className="flex flex-col gap-4 border-t border-line pt-5">
           {result.groups.map((g) => (
@@ -215,23 +199,22 @@ function Results({
               <div className="flex items-center gap-2">
                 <span
                   aria-hidden
-                  className={cn("h-2 w-2 shrink-0 rounded-full", accentBar[g.accent])}
+                  className={cn("h-2 w-2 shrink-0 rounded-full", accent(g.accent).fill)}
                 />
-                <p className={cn("kicker", accentText[g.accent])}>{g.label}</p>
+                <p className={cn("text-kicker uppercase", accent(g.accent).text)}>{g.label}</p>
                 <span className="ml-auto text-xs font-semibold text-ink">
                   {g.total}
                 </span>
               </div>
               <ul className="mt-2 flex flex-wrap gap-1.5">
                 {g.phrases.map((p) => (
-                  <li
-                    key={p.phrase}
-                    className="rounded-md border border-line-strong bg-paper-2 px-2 py-1 font-mono text-[11px] text-ink"
-                  >
-                    {p.phrase}
-                    {p.count > 1 && (
-                      <span className="text-ink-faint"> ×{p.count}</span>
-                    )}
+                  <li key={p.phrase}>
+                    <Badge className="font-mono tabular-nums">
+                      {p.phrase}
+                      {p.count > 1 && (
+                        <span className="text-ink-faint"> ×{p.count}</span>
+                      )}
+                    </Badge>
                   </li>
                 ))}
                 {g.hidden > 0 && (
@@ -245,7 +228,7 @@ function Results({
           ))}
         </ul>
       )}
-    </aside>
+    </Card>
   );
 }
 
@@ -273,11 +256,11 @@ export function CommsLab() {
   );
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line-strong bg-paper-2 p-6 shadow-[var(--shadow-lg)] lg:p-8">
-      <Pill tone="verified">
-        <ShieldCheck size={13} aria-hidden />
+    <div className="flex flex-col">
+      <Badge tone="verified">
+        <Icon name="shield-check" size={13} />
         Runs in your browser. Nothing is uploaded, stored, or sent anywhere.
-      </Pill>
+      </Badge>
 
       <p aria-live="polite" className="sr-only">
         {liveOriginal}
@@ -288,23 +271,15 @@ export function CommsLab() {
 
       {/* ------------------------------------------------------ PASS 1 */}
       <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-        <div className="flex flex-col gap-2">
-          <label
-            htmlFor={`${uid}-original`}
-            className="text-sm font-semibold text-ink"
-          >
-            Paste a real message you sent a client
-          </label>
-          <textarea
-            id={`${uid}-original`}
+        <Field label="Paste a real message you sent a client">
+          <Textarea
             value={original}
             onChange={(e) => setOriginal(e.target.value)}
             rows={10}
             spellCheck={false}
             placeholder={english.lab.placeholder}
-            className="w-full resize-y rounded-2xl border border-line-strong bg-paper px-4 py-3 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink"
           />
-        </div>
+        </Field>
 
         <Results result={originalResult} labelledBy={`${uid}-r1`} />
       </div>
@@ -314,9 +289,9 @@ export function CommsLab() {
         <div className="flex items-start gap-3">
           <span
             aria-hidden
-            className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-ink text-paper-2"
+            className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-sm bg-ink text-on-navy"
           >
-            <ArrowDown size={16} />
+            <Icon name="arrow-down" size={16} />
           </span>
           <p className="max-w-2xl font-display text-lg leading-snug text-ink">
             {english.lab.rewritePrompt}
@@ -324,23 +299,15 @@ export function CommsLab() {
         </div>
 
         <div className="mt-6 grid gap-6 lg:grid-cols-[1fr_340px] lg:items-start">
-          <div className="flex flex-col gap-2">
-            <label
-              htmlFor={`${uid}-rewrite`}
-              className="text-sm font-semibold text-ink"
-            >
-              Your rewrite, in your own words
-            </label>
-            <textarea
-              id={`${uid}-rewrite`}
+          <Field label="Your rewrite, in your own words">
+            <Textarea
               value={rewrite}
               onChange={(e) => setRewrite(e.target.value)}
               rows={10}
               spellCheck={false}
               placeholder={english.lab.rewritePlaceholder}
-              className="w-full resize-y rounded-2xl border border-line-strong bg-paper px-4 py-3 text-sm leading-relaxed text-ink outline-none placeholder:text-ink-faint focus-visible:border-ink"
             />
-          </div>
+          </Field>
 
           <Results
             result={rewriteResult}
@@ -351,30 +318,17 @@ export function CommsLab() {
       </div>
 
       {/* ----------------------------------------------- SELF-CRITIQUE */}
-      <fieldset className="mt-10 rounded-2xl border border-line bg-paper p-6">
-        <legend className="kicker px-2">
-          Judge it yourself, five questions, no scores from us
-        </legend>
-        <ul className="mt-3 flex flex-col gap-3">
-          {english.lab.selfCritique.map((q, idx) => {
-            const id = `${uid}-critique-${idx}`;
-            return (
+      <Card padding="md" className="mt-10">
+        <Field as="group" label="Judge it yourself, five questions, no scores from us">
+          <ul className="mt-3 flex flex-col gap-3">
+            {english.lab.selfCritique.map((q, idx) => (
               <li key={q}>
-                <input type="checkbox" id={id} className="peer sr-only" />
-                <label
-                  htmlFor={id}
-                  className="group flex cursor-pointer items-start gap-3 text-sm leading-relaxed text-ink-soft transition-colors hover:text-ink peer-checked:text-ink-faint peer-checked:line-through peer-checked:[&>span]:border-verified peer-checked:[&>span]:bg-verified peer-checked:[&>span]:text-white peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-4 peer-focus-visible:outline-signal"
-                >
-                  <span className="mt-0.5 grid h-5 w-5 shrink-0 place-items-center rounded-md border border-line-strong bg-paper-2 text-transparent transition-colors group-hover:border-ink">
-                    <Check size={13} strokeWidth={3} aria-hidden />
-                  </span>
-                  {q}
-                </label>
+                <Checkbox id={`${uid}-critique-${idx}`} label={q} />
               </li>
-            );
-          })}
-        </ul>
-      </fieldset>
+            ))}
+          </ul>
+        </Field>
+      </Card>
     </div>
   );
 }

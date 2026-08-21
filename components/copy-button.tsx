@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Copy, X } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Button, Icon } from "@/components/ui";
 
 type Props = {
   value: string;
@@ -48,19 +47,15 @@ export function CopyButton({ value, label = "Copy", className }: Props) {
   const text = copied ? "Copied" : failed ? "Copy blocked" : label;
 
   return (
-    <button
-      type="button"
+    <Button
+      variant="outline"
+      size="sm"
       onClick={handleCopy}
       aria-label={text}
-      className={cn(
-        "inline-flex items-center gap-1.5 rounded-full border border-line-strong bg-paper-2 px-3.5 py-1.5 text-sm font-medium text-ink-soft transition-colors hover:border-ink hover:text-ink",
-        copied && "border-verified text-verified hover:border-verified hover:text-verified",
-        failed && "border-signal text-signal hover:border-signal hover:text-signal",
-        className,
-      )}
+      className={className}
+      icon={<Icon name={copied ? "check" : failed ? "x" : "copy"} size={15} />}
     >
-      {copied ? <Check size={15} /> : failed ? <X size={15} /> : <Copy size={15} />}
       {text}
-    </button>
+    </Button>
   );
 }

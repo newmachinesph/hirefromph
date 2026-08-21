@@ -1,19 +1,22 @@
 "use client";
 
-import { useMemo, useState, type ReactNode } from "react";
+import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import {
-  ExternalLink,
-  MapPin,
-  OctagonAlert,
-  Search,
-  ShieldAlert,
-  ShieldCheck,
-} from "lucide-react";
 import apply from "@/data/apply.json";
 import findwork from "@/data/findwork.json";
-import { PathGate } from "@/components/path-gate";
-import { Pill } from "@/components/ui";
+import { PathGate } from "@/components/journey";
+import {
+  Badge,
+  Button,
+  Card,
+  Checkbox,
+  EmptyState,
+  Field,
+  Icon,
+  Input,
+} from "@/components/ui";
+import { Container } from "@/components/layout";
+import { accent } from "@/lib/accent";
 import { cn } from "@/lib/utils";
 
 /** How many directory entries show ungated, as a taste, before the path is chosen. */
@@ -34,33 +37,27 @@ const verdictCopy: Record<
     title: string;
     body: string;
     tone: "verified" | "caution" | "signal";
-    icon: typeof ShieldCheck;
+    icon: string;
   }
 > = {
   clear: {
-    title: "No red flags checked, still verify independently.",
-    body: "A clean checklist isn't proof by itself. Run the research steps below before you commit to anything.",
+    title: "No red flags checked. Verify the lead anyway.",
+    body: "A clean checklist is not proof. Run the research steps below before you send anything or sign anything.",
     tone: "verified",
-    icon: ShieldCheck,
+    icon: "shield-check",
   },
   caution: {
     title: "Proceed with caution.",
     body: "One or two flags aren't always fatal on their own, but they're a reason to slow down and ask more questions before you commit.",
     tone: "caution",
-    icon: ShieldAlert,
+    icon: "shield-alert",
   },
   stop: {
     title: "STOP. Walk away.",
     body: "This one has crossed the line. No fee, no rate, and no urgency is worth what happens next.",
     tone: "signal",
-    icon: OctagonAlert,
+    icon: "octagon-alert",
   },
-};
-
-const toneClasses: Record<"verified" | "caution" | "signal", string> = {
-  verified: "border-verified/40 bg-verified-tint text-verified",
-  caution: "border-caution/30 bg-caution-tint text-caution-text",
-  signal: "border-signal/40 bg-signal-tint text-signal-deep",
 };
 
 /**
@@ -88,59 +85,48 @@ export function VettingTool() {
       ? "clear"
       : "caution";
 
-  const { title, body, tone, icon: VerdictIcon } = verdictCopy[verdict];
+  const { title, body, tone, icon: verdictIcon } = verdictCopy[verdict];
 
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_320px] lg:items-start">
-      <fieldset className="grid gap-3 sm:grid-cols-2">
-        <legend className="sr-only">
-          Check every box that describes this opportunity
-        </legend>
-        {redFlags.map((flag) => {
-          const isChecked = !!checked[flag.id];
-          const whyId = `flag-why-${flag.id}`;
-          return (
-            <label
-              key={flag.id}
-              htmlFor={`flag-${flag.id}`}
-              className={cn(
-                "flex cursor-pointer gap-3 rounded-2xl border p-4 transition-all duration-200",
-                isChecked
-                  ? "border-signal/40 bg-signal-tint"
-                  : "border-line bg-paper-2 hover:border-line-strong",
-              )}
-            >
-              <input
-                type="checkbox"
-                id={`flag-${flag.id}`}
-                checked={isChecked}
-                onChange={() => toggle(flag.id)}
-                aria-describedby={whyId}
-                className="mt-0.5 h-4 w-4 shrink-0 accent-signal"
-              />
-              <span>
-                <span className="flex flex-wrap items-center gap-2 text-sm font-semibold text-ink">
-                  {flag.flag}
-                  {flag.weight >= INSTANT_STOP_WEIGHT && (
-                    <Pill tone="signal" className="shrink-0">
-                      Instant stop
-                    </Pill>
-                  )}
-                </span>
-                <span
-                  id={whyId}
-                  className="mt-1 block text-xs leading-relaxed text-ink-soft"
-                >
-                  {flag.why}
-                </span>
-              </span>
-            </label>
-          );
-        })}
-      </fieldset>
+      <Field as="group" label="Check every box that describes this opportunity" hideLabel>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {redFlags.map((flag) => {
+            const isChecked = !!checked[flag.id];
+            const whyId = `flag-why-${flag.id}`;
+            return (
+              <Card
+                key={flag.id}
+                padding="sm"
+                className={cn(isChecked && "border-coral bg-coral-tint")}
+              >
+                <Checkbox
+                  id={`flag-${flag.id}`}
+                  checked={isChecked}
+                  onChange={() => toggle(flag.id)}
+                  aria-describedby={whyId}
+                  label={
+                    <span className="flex flex-col gap-1">
+                      <span className="flex flex-wrap items-center gap-2 text-small font-semibold text-ink">
+                        {flag.flag}
+                        {flag.weight >= INSTANT_STOP_WEIGHT && (
+                          <Badge tone="coral">Instant stop</Badge>
+                        )}
+                      </span>
+                      <span id={whyId} className="text-caption leading-relaxed text-ink-soft">
+                        {flag.why}
+                      </span>
+                    </span>
+                  }
+                />
+              </Card>
+            );
+          })}
+        </div>
+      </Field>
 
-      <aside className="rounded-2xl border border-line bg-paper-2 p-6 shadow-[var(--shadow-md)] lg:sticky lg:top-24">
-        <p className="kicker">Live verdict</p>
+      <aside className="rounded-md border border-line bg-paper p-6 lg:sticky lg:top-24">
+        <p className="text-kicker uppercase text-ink-faint">Live verdict</p>
         <div role="status" aria-live="polite" className="mt-4">
           <AnimatePresence mode="wait">
             <motion.div
@@ -150,11 +136,11 @@ export function VettingTool() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               className={cn(
-                "flex flex-col gap-3 rounded-xl border p-5",
-                toneClasses[tone],
+                "flex flex-col gap-3 rounded-sm border p-5",
+                accent(tone).soft,
               )}
             >
-              <VerdictIcon size={26} aria-hidden />
+              <Icon name={verdictIcon} size={26} />
               <p className="font-display text-lg leading-tight">{title}</p>
               <p className="text-xs leading-relaxed opacity-90">{body}</p>
             </motion.div>
@@ -194,108 +180,84 @@ export function FindWorkDirectory() {
   const rest = filtered.slice(TASTE_COUNT);
 
   return (
-    <section className="container-x pb-20 lg:pb-28">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-        <div
-          className="flex flex-wrap gap-2"
-          role="group"
-          aria-label="Filter by category"
-        >
-          <FilterChip
-            active={category === "all"}
-            onClick={() => setCategory("all")}
+    <Container>
+      <div className="pb-20 lg:pb-28">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div
+            className="flex flex-wrap gap-2"
+            role="group"
+            aria-label="Filter by category"
           >
-            All
-          </FilterChip>
-          {apply.categories.map((c) => (
-            <FilterChip
-              key={c.id}
-              active={category === c.id}
-              onClick={() => setCategory(c.id)}
+            <Button
+              size="sm"
+              variant={category === "all" ? "primary" : "outline"}
+              onClick={() => setCategory("all")}
+              aria-pressed={category === "all"}
             >
-              {c.label}
-            </FilterChip>
-          ))}
+              All
+            </Button>
+            {apply.categories.map((c) => (
+              <Button
+                key={c.id}
+                size="sm"
+                variant={category === c.id ? "primary" : "outline"}
+                onClick={() => setCategory(c.id)}
+                aria-pressed={category === c.id}
+              >
+                {c.label}
+              </Button>
+            ))}
+          </div>
+          <Field label="Search the directory" hideLabel className="w-full sm:w-72">
+            <Input
+              type="search"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              placeholder="Search by name, tag, niche…"
+            />
+          </Field>
         </div>
-        <label className="relative block w-full sm:w-72">
-          <span className="sr-only">Search the directory</span>
-          <Search
-            size={16}
-            aria-hidden
-            className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-ink-faint"
-          />
-          <input
-            type="search"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search by name, tag, niche…"
-            className="w-full rounded-full border border-line-strong bg-paper-2 py-2.5 pl-10 pr-4 text-sm text-ink placeholder:text-ink-faint outline-none focus:border-ink"
-          />
-        </label>
-      </div>
 
-      <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
-        Studying <span className="font-semibold text-ink">{taste.length}</span>{" "}
-        of {apply.entries.length}, extract the pattern, don&rsquo;t just click
-      </p>
-
-      <motion.div layout className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        <AnimatePresence mode="popLayout">
-          {taste.map((entry) => (
-            <EntryCard key={entry.name} entry={entry} />
-          ))}
-        </AnimatePresence>
-      </motion.div>
-
-      {rest.length > 0 && (
-        <div className="mt-5">
-          <PathGate unlocks="the full study set of vetted places matched to your niche">
-            <motion.div
-              layout
-              className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-            >
-              <AnimatePresence mode="popLayout">
-                {rest.map((entry) => (
-                  <EntryCard key={entry.name} entry={entry} />
-                ))}
-              </AnimatePresence>
-            </motion.div>
-          </PathGate>
-        </div>
-      )}
-
-      {filtered.length === 0 && (
-        <p className="mt-10 rounded-2xl border border-dashed border-line-strong bg-paper-2 p-8 text-center text-sm text-ink-soft">
-          No matches. Try a different category or search term.
+        <p className="mt-5 text-sm text-ink-faint" aria-live="polite">
+          Studying <span className="font-semibold text-ink">{taste.length}</span>{" "}
+          of {apply.entries.length}, extract the pattern, don&rsquo;t just click
         </p>
-      )}
-    </section>
-  );
-}
 
-function FilterChip({
-  active,
-  onClick,
-  children,
-}: {
-  active: boolean;
-  onClick: () => void;
-  children: ReactNode;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={cn(
-        "rounded-full border px-4 py-2 text-sm font-medium transition-all duration-200",
-        active
-          ? "border-ink bg-ink text-paper-2"
-          : "border-line-strong bg-paper-2 text-ink-soft hover:border-ink hover:text-ink",
-      )}
-    >
-      {children}
-    </button>
+        <motion.div layout className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <AnimatePresence mode="popLayout">
+            {taste.map((entry) => (
+              <EntryCard key={entry.name} entry={entry} />
+            ))}
+          </AnimatePresence>
+        </motion.div>
+
+        {rest.length > 0 && (
+          <div className="mt-5">
+            <PathGate unlocks="the full study set of vetted places matched to your niche">
+              <motion.div
+                layout
+                className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+              >
+                <AnimatePresence mode="popLayout">
+                  {rest.map((entry) => (
+                    <EntryCard key={entry.name} entry={entry} />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            </PathGate>
+          </div>
+        )}
+
+        {filtered.length === 0 && (
+          <EmptyState
+            className="mt-10"
+            icon="search"
+            title="No matches"
+            body="Try a different category or search term."
+          />
+        )}
+      </div>
+    </Container>
   );
 }
 
@@ -307,16 +269,16 @@ function EntryCard({ entry }: { entry: Entry }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
       transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-      className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-md)]"
+      className="flex h-full flex-col rounded-md border border-line bg-paper p-6 transition-colors duration-150 ease-out hover:border-ink hover:bg-band"
     >
       <div className="flex items-start justify-between gap-3">
         <h3 className="font-display text-lg leading-tight">{entry.name}</h3>
-        <Pill tone="neutral" className="shrink-0">
+        <Badge tone="neutral" className="shrink-0">
           {entry.type}
-        </Pill>
+        </Badge>
       </div>
       <p className="mt-1.5 flex items-center gap-1 text-xs font-medium text-ink-faint">
-        <MapPin size={12} aria-hidden /> {entry.region}
+        <Icon name="map-pin" size={12} /> {entry.region}
       </p>
       <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-soft">
         {entry.blurb}
@@ -325,7 +287,7 @@ function EntryCard({ entry }: { entry: Entry }) {
         {entry.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded-full bg-paper-3 px-2.5 py-1 text-[11px] font-medium text-ink-soft"
+            className="rounded-pill bg-band px-2.5 py-1 text-[11px] font-medium text-ink-soft"
           >
             {tag}
           </span>
@@ -335,13 +297,13 @@ function EntryCard({ entry }: { entry: Entry }) {
         href={entry.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-signal"
+        className="group mt-5 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-ink hover:text-primary"
       >
         Visit
-        <ExternalLink
+        <Icon
+          name="arrow-up-right"
           size={14}
-          aria-hidden
-          className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          className="transition-transform group-hover:translate-x-0.5"
         />
       </a>
     </motion.div>

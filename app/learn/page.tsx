@@ -25,6 +25,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, StudyTimer, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/learn";
@@ -88,7 +89,7 @@ export default function LearnPage() {
         <Callout tone="signal" className="max-w-2xl">
           {learning.creed}
         </Callout>
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/learn" /></Section> */}
+        <Section spacing="none"><Tldr route="/learn" /></Section>
       </PageHero>
 
       <Section>
@@ -160,11 +161,11 @@ export default function LearnPage() {
               <SourceList sources={learning.forgettingCurve.sources} className="mt-4" />
             </section>
 
-            {/* ---------------------------------------- WHAT ACTUALLY WORKS */}
+            {/* ---------------------------------------- WHAT REALLY WORKS */}
             <section id="works">
               <SectionHeading
                 kicker="The curriculum"
-                title="What actually works"
+                title="What works"
                 lead="Eight techniques with real evidence behind them, not tips, findings. The first two carry the most weight in the research, so lean on them the hardest."
               />
 
@@ -334,6 +335,9 @@ export default function LearnPage() {
               />
               <Card padding="lg" className="mt-12">
                 <StudyProtocol />
+                <div className="mt-10">
+                  <StudyTimer />
+                </div>
               </Card>
             </section>
           </div>
@@ -356,7 +360,7 @@ export default function LearnPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/learn" /> */}
+      <PracticeFooter route="/learn" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

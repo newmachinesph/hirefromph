@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Accordion, AccordionItem, Button, Dialog, Icon } from "@/components/ui";
+import { ReaderControls } from "@/components/practice";
 import { NAV, NAV_CTA, SECONDARY_LINKS, isLive, isMenu, type NavDirect, type NavLink } from "@/lib/nav";
 import { cn } from "@/lib/utils";
 
@@ -87,6 +88,10 @@ export function MobileDrawer() {
               {NAV.filter((item): item is NavDirect => !isMenu(item)).map(row)}
             </ul>
           </nav>
+
+          <div className="border-t border-line p-4">
+            <ReaderControls layout="stack" />
+          </div>
 
           <ul className="flex flex-col border-t border-line p-2">
             {SECONDARY_LINKS.map((link) => (

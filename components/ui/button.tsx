@@ -27,7 +27,7 @@ const BASE =
   "inline-flex shrink-0 items-center justify-center gap-2 rounded-pill font-display font-bold transition-colors duration-150 ease-out";
 
 const SIZES: Record<ButtonSize, string> = {
-  sm: "h-9 px-4 text-small",
+  sm: "min-h-11 px-4 text-small",
   md: "h-11 px-5 text-base",
   lg: "h-12 px-6 text-body",
 };

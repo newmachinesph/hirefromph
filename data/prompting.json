@@ -1,7 +1,7 @@
 {
   "kicker": "AI leverage",
   "headline": "Stop copying prompts. Learn to write them.",
-  "intro": "A copy-pasted prompt solves today's task and leaves you helpless the moment the situation is slightly different, a different client, a different tool, a different day. Learn the anatomy of a prompt that actually works and you can write the exact right one, from a blank page, for anything a remote career throws at you.",
+  "intro": "A copy-pasted prompt solves today's task and leaves you helpless the moment the situation is slightly different, a different client, a different tool, a different day. Learn the anatomy of a prompt that works and you can write the exact right one, from a blank page, for anything a remote career throws at you.",
   "creed": "A prompt library makes you dependent on someone else's imagination. Learn the anatomy and you can write a better prompt than any library, for any situation you'll ever face.",
 
   "anatomy": [
@@ -149,10 +149,10 @@
     },
     {
       "q": "Would I send this exactly as-is?",
-      "why": "If you're already planning to edit half of it, the prompt was missing something, go back to the loop instead of hand-fixing forever."
+      "why": "If you're already planning to edit half of it, the prompt was missing something, go back to the loop instead of hand-fixing."
     },
     {
-      "q": "Does it actually follow my constraints?",
+      "q": "Does it follow my constraints?",
       "why": "AI drifts past word limits and sneaks in the words you banned. Check the numbers, not just the vibe."
     },
     {
@@ -172,7 +172,7 @@
     },
     {
       "tell": "Perfectly balanced sentences with no rough edges",
-      "fix": "Add the specific, slightly awkward detail a real person would actually say."
+      "fix": "Add the specific, slightly awkward detail a real person would say."
     },
     {
       "tell": "Em dashes doing the work a period should do",
@@ -189,14 +189,14 @@
   ],
 
   "builder": {
-    "intro": "This quick builder covers the 6 core parts; Examples and Success criteria from the full anatomy above aren't included here. Fill in what you actually know. Skip what you don't have yet, the meter below will tell you exactly what that gap costs you.",
+    "intro": "This quick builder covers the 6 core parts; Examples and Success criteria from the full anatomy above aren't included here. Fill in what you know. Skip what you don't have yet, the meter below will tell you exactly what that gap costs you.",
     "fields": [
-      { "id": "role", "label": "Role", "hint": "Who should the AI be, and what's the stake if it gets this wrong?", "placeholder": "e.g. A meticulous editor who rejects any sentence that could be shorter." },
+      { "id": "role", "label": "Role", "hint": "Who should the AI be, and what's the stake if it gets this wrong?", "placeholder": "e.g. A careful editor who rejects any sentence that could be shorter." },
       { "id": "context", "label": "Context", "hint": "Paste your real material here, not a summary of it.", "placeholder": "e.g. Paste the actual job post, email, or draft you're working from." },
-      { "id": "task", "label": "Task", "hint": "One verb, one object. What should it actually do?", "placeholder": "e.g. Rewrite the second paragraph to lead with the result." },
+      { "id": "task", "label": "Task", "hint": "One verb, one object. What should it do?", "placeholder": "e.g. Rewrite the second paragraph to lead with the result." },
       { "id": "constraints", "label": "Constraints", "hint": "Numbers and rules, not adjectives.", "placeholder": "e.g. Under 150 words. No exclamation points. Don't invent numbers." },
       { "id": "format", "label": "Format", "hint": "The exact shape you need back.", "placeholder": "e.g. 3 bullet points, each under 15 words." },
-      { "id": "voice", "label": "Voice", "hint": "How you actually sound, sentence length, what you never say.", "placeholder": "e.g. Direct, short sentences, no corporate speak." }
+      { "id": "voice", "label": "Voice", "hint": "How you sound, sentence length, what you never say.", "placeholder": "e.g. Direct, short sentences, no corporate speak." }
     ],
     "qualityLevels": [
       { "count": 0, "label": "Empty", "tone": "neutral", "note": "A prompt needs at least a Task before it can do anything." },

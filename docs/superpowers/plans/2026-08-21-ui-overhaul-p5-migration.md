@@ -11994,24 +11994,24 @@ _Fill this in as the phase runs. The `before` numbers were measured on `redesign
 
 | Measure | Before | After | Target |
 |---|---|---|---|
-| `verify:primitives` violations | **620** | _fill in_ | 0 |
-| — `radius` (`rounded-xl\|2xl\|3xl`) | 315 | _fill in_ | 0 |
-| — `raw-card` | 138 | _fill in_ | 0 |
-| — `lift` (`hover:-translate-y`) | 59 | _fill in_ | 0 |
-| — `lucide` imports | 47 | _fill in_ | 0 |
-| — `accent-map` literals | 40 | _fill in_ | 0 |
-| — `raw-control` | 12 | _fill in_ | 0 |
-| — `blur` | 9 | _fill in_ | 0 |
-| `<Reveal>` call sites | 200+ | _fill in_ | 0 |
-| `components/ui.tsx` shim importers | 42 | _fill in_ | n/a (file deleted) |
-| Legacy `PageHero` prop call sites (`titleWidth`/`backdrop`) | 18 | _fill in_ | 0 |
-| Registered diagrams | 4 | _fill in_ | 7 |
-| Chart primitives | 0 | _fill in_ | 5 (`Axis`, `Bars`, `Line`, `Legend`, `ValueLabel`) |
-| Workshop RTL smoke tests | 0 | _fill in_ | 16 |
-| `verify:contrast` pairs | _fill in_ | _fill in_ | 6 fewer (legacy pairs dropped) |
-| `voice-audit` aphorism count | _fill in_ | _fill in_ | not higher than before |
-| `npm run build` | green | _fill in_ | green |
-| `npm test` | green | _fill in_ | green |
+| `verify:primitives` violations | **620** | **0** | 0 |
+| — `radius` (`rounded-xl\|2xl\|3xl`) | 315 | 0 | 0 |
+| — `raw-card` | 138 | 0 | 0 |
+| — `lift` (`hover:-translate-y`) | 59 | 0 | 0 |
+| — `lucide` imports | 47 | 0 | 0 |
+| — `accent-map` literals | 40 | 0 | 0 |
+| — `raw-control` | 12 | 0 | 0 |
+| — `blur` | 9 | 0 | 0 |
+| `<Reveal>` call sites | 200+ | 0 | 0 |
+| `components/ui.tsx` shim importers | 42 | n/a — file deleted (Task 21) | n/a (file deleted) |
+| Legacy `PageHero` prop call sites (`titleWidth`/`backdrop`) | 18 | 0 | 0 |
+| Registered diagrams | 4 | 7 | 7 |
+| Chart primitives | 0 | 5 (`ValueLabel`, `Axis`, `Bars`, `Line`, `Legend`) | 5 (`Axis`, `Bars`, `Line`, `Legend`, `ValueLabel`) |
+| Workshop RTL smoke tests | 0 | 17 (target 16; extra file is `copy-button.test.tsx`) | 16 |
+| `verify:contrast` pairs | 38 (inferred: Task 21's report states "32 pairs, 6 fewer" — not independently re-measured pre-Phase-5) | 32 | 6 fewer (legacy pairs dropped) |
+| `voice-audit` aphorism count | not recorded — no baseline exists in any Task 1–21 report or this table; Task 1 Step 1 never captured it | 659 strings / 40 pages (measured while `data/*.json` was under a concurrent Phase 8 copy sweep — moving target, not a stable Phase 5 reading) | not higher than before |
+| `npm run build` | green | not run (instructed not to build in the shared tree); `tsc --noEmit` clean apart from one out-of-scope file, dev server serves 200 | green |
+| `npm test` | green | green — `node --test` 12/12, `vitest` 490/490 outside `lib/voice-lint.test.ts` (out of scope, concurrent agent); full-suite run is flaky under shared-machine load, confirmed non-reproducing on isolated per-file re-run | green |
 
 **Exit criterion (spec §14 row 5):** `verify:primitives` switched to fail-on-violation and passing repo-wide. That is Task 22 Steps 1–4.
 

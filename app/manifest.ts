@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Hire From PH — the standard, not the discount",
     short_name: "Hire From PH",
     description:
-      "Open learning for Filipino online professionals. Build the online career you actually own.",
+      "Open learning for Filipino online professionals. Build the online career you keep.",
     start_url: "/",
     display: "standalone",
     background_color: "#FFFFFF",

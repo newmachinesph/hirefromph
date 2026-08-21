@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
 import { StagePage } from "@/components/journey";
 import { pageMeta } from "@/lib/meta";
+import { Section } from "@/components/layout";
+import { PracticeFooter, Tldr } from "@/components/practice";
 
 export const metadata: Metadata = pageMeta({
   path: "/level-up",
   title: "Level Up, Stage 4",
   description:
-    "From good to indispensable. Specialize into a high-value niche, automate the repetitive, learn a premium language, and raise your rate.",
+    "Stage 4: pick one niche and go deep. Automate what repeats, add a premium language, and raise your rate on evidence you can show.",
 });
 
 export default function Page() {
-  return <StagePage id="level-up" />;
+  return (
+    <>
+      <Section spacing="none"><Tldr route="/level-up" /></Section>
+      <StagePage id="level-up" />
+      <PracticeFooter route="/level-up" />
+    </>
+  );
 }

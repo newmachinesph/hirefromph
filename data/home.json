@@ -2,8 +2,8 @@
   "hero": {
     "kicker": "Free and open · for Filipinos building online careers",
     "title": "Build the online career you",
-    "accent": "own.",
-    "lead": "Five stages, eleven steps, from setting up your desk to invoicing direct clients. Every deliverable here is one you write yourself.",
+    "accent": "keep.",
+    "lead": "Eleven ordered steps, starting with the desk you already own and the first task you can finish today.",
     "primary": { "label": "Find your path", "href": "/start" },
     "secondary": { "label": "How it works", "href": "#how" },
     "honesty": "Every number here links to the source it came from, including the ones that argue against starting.",
@@ -12,41 +12,41 @@
   "howItWorks": {
     "kicker": "How it works",
     "title": "Pick a lane, then work the stages",
-    "lead": "Each stage names what to do next, so you never have to guess.",
+    "lead": "Each stage names the one thing to do next, so no session starts with a guess.",
     "items": [
       {
         "icon": "compass",
         "title": "Pick a lane",
-        "body": "Twenty-two niches with pay bands, demand, and how AI is changing each one."
+        "body": "Twenty-two niches, each with a cited pay band and a note on what AI changed."
       },
       {
         "icon": "list-checks",
-        "title": "Follow five stages",
-        "body": "Eleven ordered steps take you from a bare desk to direct clients."
+        "title": "Work the stages in order",
+        "body": "Eleven steps in order, each naming the single thing to do next."
       },
       {
         "icon": "pencil-ruler",
-        "title": "Build every deliverable yourself",
-        "body": "The labs teach the anatomy and the rules; you write the resume, the SOP, the tracker."
+        "title": "Write every deliverable yourself",
+        "body": "The labs teach the anatomy and the rules; the resume you send is one you wrote."
       }
     ]
   },
   "path": {
     "kicker": "The path",
     "title": "Five stages, eleven steps",
-    "lead": "Each stage builds on the one before it. Tick a step when it is done and the map remembers.",
+    "lead": "Each stage builds on the one before it, and the map remembers every step you tick off.",
     "action": { "label": "Open your dashboard", "href": "/path" }
   },
   "lane": {
     "kicker": "Pick your lane",
     "title": "Go deep in one niche",
-    "lead": "These six carry the strongest demand in our niche data. Twenty-two lanes are listed in full.",
+    "lead": "These six rank highest on the demand field in our niche data; all twenty-two are listed in full.",
     "more": { "label": "See all 22 niches", "href": "/niches" }
   },
   "build": {
     "kicker": "What you'll build",
-    "title": "Workshops, not downloads",
-    "lead": "Every tool here ends with something you wrote: a task finished, an application logged, a month you can follow.",
+    "title": "You leave with what you wrote",
+    "lead": "Every tool here ends in something you wrote, whether that is a finished task or a month of plan days.",
     "action": { "label": "Browse the library", "href": "/library" },
     "items": [
       { "href": "/build", "icon": "pencil-ruler" },
@@ -75,7 +75,7 @@
   },
   "cta": {
     "title": "Start with Stage 1.",
-    "body": "Stage one begins with the desk you already have.",
+    "body": "Stage one asks for one micro-task, finished today, with no client involved.",
     "action": { "label": "Find your path", "href": "/start" }
   }
 }

@@ -1,231 +1,213 @@
 import type { Metadata } from "next";
-import { AlertTriangle } from "lucide-react";
 import apply from "@/data/apply.json";
 import findwork from "@/data/findwork.json";
-import { Reveal } from "@/components/reveal";
-import { Icon } from "@/components/icon";
+import { VettingFlow } from "@/components/diagrams/vetting-flow";
 import { CopyButton } from "@/components/copy-button";
 import { FindWorkDirectory, VettingTool } from "@/components/find-work";
-import { ButtonLink, Kicker, PageHero, SectionHeading } from "@/components/ui";
+import {
+  CardGrid,
+  PageFooterNav,
+  PageHero,
+  Section,
+  SectionHeading,
+} from "@/components/layout";
+import {
+  Button,
+  Callout,
+  Card,
+  DiagramFrame,
+  Heading,
+  Icon,
+  Kicker,
+  Step,
+  StepList,
+  Text,
+} from "@/components/ui";
+import { accent } from "@/lib/accent";
+import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { cn } from "@/lib/utils";
+
+const HREF = "/apply";
 
 export const metadata: Metadata = pageMeta({
-  path: "/apply",
+  path: HREF,
   title: "Find Work",
   description: findwork.intro,
 });
 
-const accentBg: Record<string, string> = {
-  signal: "bg-signal-tint text-signal-deep",
-  info: "bg-info-tint text-info",
-  caution: "bg-caution-tint text-caution-text",
-  verified: "bg-verified-tint text-verified",
-};
-
 export default function Page() {
   return (
     <>
-      {/* HERO */}
       <PageHero
+        compact
+        breadcrumb={getBreadcrumb(HREF)}
         kicker="Find work"
-        title={
-          <>
-            Don&rsquo;t wait for a list.{" "}
-            <span className="text-signal">Learn to find the work.</span>
-          </>
-        }
+        title="Don’t wait for a list."
+        accent="Learn to find the work."
         lead={findwork.intro}
       >
-        <Reveal i={3}>
-          <p className="mt-6 max-w-2xl rounded-2xl border border-line-strong bg-paper-3 px-6 py-5 font-display text-lg leading-snug text-ink text-balance">
-            {findwork.creed}
-          </p>
-        </Reveal>
-
-        <Reveal i={4}>
-          <div className="mt-6 flex items-start gap-4 rounded-2xl border border-caution/30 bg-caution-tint px-6 py-5">
-            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-caution/25 text-caution-text">
-              <AlertTriangle size={20} aria-hidden />
-            </span>
-            <p className="text-sm font-medium leading-relaxed text-[#6b4d00]">
-              {apply.disclaimer}
-            </p>
-          </div>
-        </Reveal>
+        <Callout tone="signal" className="max-w-2xl">
+          {findwork.creed}
+        </Callout>
+        <Callout tone="caution" icon="alert-triangle" className="max-w-2xl">
+          {apply.disclaimer}
+        </Callout>
       </PageHero>
 
       {/* HOW TO SOURCE OPPORTUNITIES */}
-      <section className="container-x pb-20 lg:pb-28">
-        <Reveal>
-          <SectionHeading
-            kicker="The FIND method, applied"
-            title="How to source opportunities yourself"
-            lead="Five ways to find work before it's posted, before it's crowded, and long after this page is out of date."
-          />
-        </Reveal>
+      <Section>
+        <SectionHeading
+          kicker="The FIND method, applied"
+          title="How to source opportunities yourself"
+          lead="Five ways to find work before it's posted, before it's crowded, and long after this page is out of date."
+        />
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {findwork.sourcing.map((method, idx) => (
-            <Reveal key={method.id} i={idx % 4}>
-              <div className="flex h-full flex-col rounded-2xl border border-line bg-paper-2 p-6">
-                <span
-                  className={`grid h-11 w-11 place-items-center rounded-xl ${accentBg[method.accent]}`}
-                >
-                  <Icon name={method.icon} size={20} />
-                </span>
-                <h3 className="mt-4 font-display text-xl leading-tight">
-                  {method.name}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-ink-soft">
-                  {method.how}
-                </p>
-                <p className="mt-3 text-sm leading-relaxed text-ink-faint">
-                  <strong className="font-semibold text-ink-soft">
-                    Why it works:{" "}
-                  </strong>
-                  {method.why}
-                </p>
-                <div className="mt-4 flex flex-col gap-2">
-                  {method.example.map((ex) => (
-                    <div
-                      key={ex}
-                      className="flex items-center justify-between gap-3 rounded-xl border border-line-strong bg-paper-3 px-3.5 py-2.5"
-                    >
-                      <code className="min-w-0 flex-1 overflow-x-auto whitespace-pre font-mono text-xs text-ink-soft">
-                        {ex}
-                      </code>
-                      <CopyButton value={ex} label="Copy" />
-                    </div>
-                  ))}
-                </div>
+          {findwork.sourcing.map((method) => (
+            <Card key={method.id} as="article">
+              <span
+                className={cn(
+                  "grid h-11 w-11 place-items-center rounded-sm border",
+                  accent(method.accent).soft,
+                )}
+              >
+                <Icon name={method.icon} size={20} />
+              </span>
+              <Heading level={3} size="h4" className="mt-4">
+                {method.name}
+              </Heading>
+              <Text size="small" className="mt-2">
+                {method.how}
+              </Text>
+              <Text size="small" tone="faint" className="mt-3">
+                <span className="font-semibold text-ink-soft">Why it works: </span>
+                {method.why}
+              </Text>
+              <div className="mt-4 flex flex-col gap-2">
+                {method.example.map((ex) => (
+                  <div
+                    key={ex}
+                    className="flex items-center justify-between gap-3 rounded-sm border border-line-strong bg-band px-3.5 py-2.5"
+                  >
+                    <code className="min-w-0 flex-1 overflow-x-auto whitespace-pre text-caption text-ink-soft">
+                      {ex}
+                    </code>
+                    <CopyButton value={ex} label="Copy" />
+                  </div>
+                ))}
               </div>
-            </Reveal>
+            </Card>
           ))}
         </div>
-      </section>
+      </Section>
 
       {/* VETTING TOOL */}
-      <section className="bg-paper-3/60 py-20 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="The VET method, applied"
-              title="Is this opportunity legit?"
-              lead={findwork.vetting.intro}
-            />
-          </Reveal>
-          <div className="mt-12">
-            <VettingTool />
-          </div>
-        </div>
-      </section>
+      <Section band="tint">
+        <SectionHeading
+          kicker="The VET method, applied"
+          title="Is this opportunity legit?"
+          lead={findwork.vetting.intro}
+        />
+
+        <DiagramFrame
+          title="Vetting an opportunity, gate by gate"
+          caption="Read top to bottom. Every downward arrow is a no; a single yes exits right and ends the conversation."
+          className="mt-12"
+        >
+          <VettingFlow />
+        </DiagramFrame>
+
+        <Card padding="lg" className="mt-10">
+          <VettingTool />
+        </Card>
+      </Section>
 
       {/* RESEARCH BEFORE YOU APPLY */}
-      <section className="container-x py-20 lg:py-28">
-        <Reveal>
-          <SectionHeading
-            kicker="Before you hit apply"
-            title="Research the client before you apply"
-            lead="A generic application gets ignored. A specific one, that names their actual problem, gets a reply."
-          />
-        </Reveal>
-        <ol className="mt-10 grid gap-4 sm:grid-cols-2">
+      <Section>
+        <SectionHeading
+          kicker="Before you hit apply"
+          title="Research the client before you apply"
+          lead="A generic application gets ignored. A specific one, that names their actual problem, gets a reply."
+        />
+        <StepList className="mt-10">
           {findwork.research.map((step, idx) => (
-            <Reveal key={step.title} i={idx % 4} as="li">
-              <div className="flex h-full gap-4 rounded-2xl border border-line bg-paper-2 p-6">
-                <span className="font-display text-2xl text-line-strong">
-                  0{idx + 1}
-                </span>
-                <div>
-                  <h3 className="font-display text-lg leading-tight">
-                    {step.title}
-                  </h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-ink-soft">
-                    {step.desc}
-                  </p>
-                </div>
-              </div>
-            </Reveal>
+            <Step key={step.title} n={idx + 1} title={step.title}>
+              {step.desc}
+            </Step>
           ))}
-        </ol>
-      </section>
+        </StepList>
+      </Section>
 
       {/* THE DIRECTORY, REFRAMED AS STUDY MATERIAL */}
-      <section className="container-x pb-10">
-        <Reveal>
-          <SectionHeading
-            kicker="Study material, not a shortcut"
-            title="The directory below, study it, don't just click it"
-            lead="These are real, working places Filipino online professionals get hired. Study the pattern across all of them, who they are, what they need, how they're structured, then use the method above to add your own. This list is a seed, not a substitute for knowing how to find work."
-          />
-        </Reveal>
-      </section>
+      <Section>
+        <SectionHeading
+          kicker="Study material, not a shortcut"
+          title="The directory below, study it, don't just click it"
+          lead="These are real, working places Filipino online professionals get hired. Study the pattern across all of them, who they are, what they need, how they're structured, then use the method above to add your own. This list is a seed, not a substitute for knowing how to find work."
+        />
+      </Section>
       <FindWorkDirectory />
 
       {/* BUILD YOUR OWN DIRECTORY */}
-      <section className="bg-paper-3/60 py-20 lg:py-28">
-        <div className="container-x">
-          <Reveal>
-            <SectionHeading
-              kicker="The closing move"
-              title="Build your own directory"
-              lead={findwork.buildYourOwnDirectory.intro}
-            />
-          </Reveal>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {findwork.buildYourOwnDirectory.steps.map((step, idx) => (
-              <Reveal key={step.title} i={idx % 3}>
-                <div className="flex h-full flex-col rounded-2xl border border-line bg-paper p-6">
-                  <span className="font-display text-2xl text-line-strong">
-                    0{idx + 1}
-                  </span>
-                  <h3 className="mt-3 font-display text-lg leading-tight">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                    {step.desc}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Section band="tint">
+        <SectionHeading
+          kicker="The closing move"
+          title="Build your own directory"
+          lead={findwork.buildYourOwnDirectory.intro}
+        />
+        <CardGrid cols={3} className="mt-12">
+          {findwork.buildYourOwnDirectory.steps.map((step, idx) => (
+            <Card key={step.title} onBand>
+              <span className="font-display text-h3 tabular-nums text-line-strong">
+                0{idx + 1}
+              </span>
+              <Heading level={3} size="h5" className="mt-3">
+                {step.title}
+              </Heading>
+              <Text size="small" className="mt-2 flex-1">
+                {step.desc}
+              </Text>
+            </Card>
+          ))}
+        </CardGrid>
+      </Section>
 
       {/* CLOSE BAND */}
-      <section className="container-x py-20 lg:pb-28">
-        <Reveal>
-          <div className="grid gap-8 rounded-[var(--radius-lg)] border border-line bg-paper-3/70 p-8 sm:grid-cols-2 lg:p-12">
-            <div className="flex flex-col">
-              <Kicker>The method</Kicker>
-              <h2 className="mt-4 font-display text-2xl leading-tight text-balance">
-                Seven habits that make you resourceful, forever
-              </h2>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                FIND and VET, the two methods behind this page, are two of
-                seven. See all of them.
-              </p>
-              <div className="mt-5">
-                <ButtonLink href="/method" variant="outline">
-                  See the full method
-                </ButtonLink>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <Kicker>Stage 2</Kicker>
-              <h2 className="mt-4 font-display text-2xl leading-tight text-balance">
-                The full Get Hired playbook
-              </h2>
-              <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-soft">
-                Assets, outreach, tracking, and closing the offer, systematically, not randomly.
-              </p>
-              <div className="mt-5">
-                <ButtonLink href="/get-hired">Go to Get Hired</ButtonLink>
-              </div>
+      <Section band="tint">
+        <div className="grid gap-8 sm:grid-cols-2">
+          <div className="flex flex-col">
+            <Kicker>The method</Kicker>
+            <Heading level={2} size="h3" className="mt-4" balance>
+              Seven habits that make you resourceful, for good
+            </Heading>
+            <Text size="small" className="mt-2 flex-1">
+              FIND and VET, the two methods behind this page, are two of seven. See all of them.
+            </Text>
+            <div className="mt-5">
+              <Button href="/method" variant="outline">
+                See the full method
+              </Button>
             </div>
           </div>
-        </Reveal>
-      </section>
+          <div className="flex flex-col">
+            <Kicker>Stage 2</Kicker>
+            <Heading level={2} size="h3" className="mt-4" balance>
+              The full Get Hired playbook
+            </Heading>
+            <Text size="small" className="mt-2 flex-1">
+              Assets, outreach, tracking, and closing the offer, systematically, not randomly.
+            </Text>
+            <div className="mt-5">
+              <Button href="/get-hired">Go to Get Hired</Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <PageFooterNav {...findNavNeighbours(HREF)} />
+      </Section>
     </>
   );
 }

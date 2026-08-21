@@ -69,7 +69,7 @@
       "title": "Wells Fargo fired a dozen people for simulating keyboard activity",
       "when": "May 2024",
       "what": "Wells Fargo dismissed more than a dozen employees from its wealth- and investment-management unit. FINRA disclosures filed in June 2024 state they were discharged after review of allegations involving 'simulation of keyboard activity creating impression of active work'. At least one had been at the bank over seven years.",
-      "sting": "Because they were FINRA-registered, the reason for discharge is now permanently attached to their public regulatory record. This is what 'blacklisted' actually means, not a rumour in a Facebook group. A database entry, searchable, forever.",
+      "sting": "Because they were FINRA-registered, the reason for discharge is now permanently attached to their public regulatory record. This is what 'blacklisted' means, not a rumour in a Facebook group. A database entry, searchable.",
       "lesson": "A mouse jiggler costs ₱200. It cost these people their licence to work in their industry.",
       "source": { "label": "Bloomberg / Banking Dive", "url": "https://www.bankingdive.com/news/wells-fires-employees-faking-productivity-finra/719033/" }
     },
@@ -138,7 +138,7 @@
       "icon": "clock",
       "accent": "signal",
       "dos": [
-        "Track only the time you actually worked, to the minute.",
+        "Track only the time you worked, to the minute.",
         "Use the client's official tracker. On Upwork, only tracker-logged time with genuine activity is covered by Hourly Payment Protection, manual time is not.",
         "If you got stuck for two hours and produced nothing, say so and bill it honestly, or don't bill it. Both are defensible. Hiding it isn't.",
         "Tell the client before you exceed the agreed hours, not after."
@@ -193,7 +193,7 @@
       "icon": "user-check",
       "accent": "info",
       "dos": [
-        "Show only work you actually did. If it was a team effort, say exactly which part was yours.",
+        "Show only work you did. If it was a team effort, say exactly which part was yours.",
         "State your real experience level. 'I haven't done this specific thing, but here's the closest thing I have done, and here's how I'd approach it' wins more jobs than bluffing.",
         "Give estimates as a range with the assumption attached: '3–5 days, assuming the API docs are accurate.'",
         "Correct your own errors, out loud, early."
@@ -227,12 +227,12 @@
   "oath": {
     "kicker": "The oath",
     "title": "Write it. Sign it. Nobody is watching, that's the point.",
-    "lead": "There's no file to download here, and there never will be. An oath somebody else wrote for you is a decoration. Read each clause, decide whether you can actually keep it, and then write in your own words why it matters to you, because the version you have to defend in your own language is the one you'll remember at 2am when nobody would ever find out.",
+    "lead": "There's no file to download here, and there never will be. An oath somebody else wrote for you is a decoration. Read each clause, decide whether you can keep it, and then write in your own words why it matters to you, because the version you have to defend in your own language is the one you'll remember at 2am when nobody would ever find out.",
     "clauses": [
-      { "id": "hours", "text": "I will bill only for time I actually worked. I will never simulate activity, pad an hour, or bill two clients for the same minute." },
+      { "id": "hours", "text": "I will bill only for time I worked. I will never simulate activity, pad an hour, or bill two clients for the same minute." },
       { "id": "competence", "text": "I will take on work I am qualified to do, or I will disclose exactly what I don't yet know before I accept it." },
       { "id": "claims", "text": "I will be honest and realistic in my claims and estimates, even when honesty costs me the job." },
-      { "id": "ownwork", "text": "I will show only work I actually did, and I will name my exact contribution when it was a team effort." },
+      { "id": "ownwork", "text": "I will show only work I did, and I will name my exact contribution when it was a team effort." },
       { "id": "ai", "text": "I will verify everything an AI produces before I put my name on it, and I will disclose my use of AI whenever the client's rules or the nature of the work require it." },
       { "id": "data", "text": "I will treat my client's data as theirs, not mine. I will never share a credential, never move their data to my personal accounts, and never take a copy when I leave." },
       { "id": "confidentiality", "text": "I will keep what I'm told in confidence, and I will keep it after the contract ends." },

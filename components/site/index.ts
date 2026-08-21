@@ -5,7 +5,7 @@ export { NavDesktop } from "./nav-desktop";
 export { MobileDrawer } from "./mobile-drawer";
 export { SearchPalette } from "./search-palette";
 export { LibraryBrowser } from "./library-browser";
-export { Logo, LogoMark, Bracket } from "./logo";
+export { Logo, LogoMark } from "./logo";
 export { BackToTop } from "./back-to-top";
 export { SWRegister } from "./sw-register";
 export { MotionProvider } from "./motion-provider";

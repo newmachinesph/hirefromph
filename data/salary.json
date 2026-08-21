@@ -15,7 +15,7 @@
 
   "inDemand": {
     "kicker": "In demand right now · OnlineJobs.ph, July 2026",
-    "title": "What clients are actually hiring for.",
+    "title": "What clients are hiring for.",
     "lead": "We looked at live listings on OnlineJobs.ph, the biggest board for Filipino remote workers. These are the roles clients are posting for right now. Notice the pattern: the best-paid ones are not general, they are specific. Clients want someone who solves one problem very well, not someone who does a little of everything.",
     "note": "Pick one of these and go deep. A specialist in any single row out-earns a generalist who dabbles in all of them.",
     "roles": [
@@ -116,7 +116,7 @@
         "icon": "timer",
         "best": "Best when the scope is unclear or the work is ongoing and varied.",
         "pros": [
-          "You get paid for every hour you actually work.",
+          "You get paid for every hour you work.",
           "Low risk if the client keeps changing what they want.",
           "Simple to start and easy for a new client to say yes to."
         ],

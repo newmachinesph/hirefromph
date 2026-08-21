@@ -200,7 +200,7 @@ export function StagePage({ id }: { id: string }) {
               </Button>
             )}
             <Button href="/plan" variant="outline">
-              Build a 30-day plan around this
+              Build a 30-day plan
             </Button>
           </div>
         </div>

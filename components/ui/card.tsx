@@ -38,7 +38,7 @@ export function Card({
   className,
 }: CardProps) {
   const cls = cn(
-    "flex flex-col overflow-hidden rounded-md bg-paper",
+    "flex min-w-0 flex-col overflow-hidden rounded-md bg-paper",
     onBand ? "border border-line-strong" : "border border-line",
     PADDING[padding],
     (interactive || href) &&

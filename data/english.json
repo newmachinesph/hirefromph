@@ -1,5 +1,5 @@
 {
-  "intro": "Your English is not the problem. Filipino professionals score 603 out of 800 on the EF English Proficiency Index's written-English measure, above the global average, and stronger than most of the region. What actually costs you money is smaller and more fixable than 'my English isn't good enough': it's the handful of habits that make a fluent message read as junior.",
+  "intro": "Your English is not the problem. Filipino professionals score 603 out of 800 on the EF English Proficiency Index's written-English measure, above the global average, and stronger than most of the region. What costs you money is smaller and more fixable than 'my English isn't good enough': it's the handful of habits that make a fluent message read as junior.",
   "creed": "You are not trying to sound American. You are trying to sound like the person in charge of the thing you're in charge of.",
 
   "baseline": {
@@ -16,7 +16,7 @@
   },
 
   "threeCauses": {
-    "kicker": "Be precise about what's actually happening",
+    "kicker": "Be precise about what's happening",
     "title": "Three different things make you read as junior. Only two are yours to fix.",
     "lead": "Most advice lumps these together and quietly blames you for all three, which points you at the wrong work.",
     "causes": [
@@ -57,8 +57,8 @@
     "title": "What we refuse to tell you",
     "points": [
       "We will not claim that better English raises your rate by some percentage. Upwork asserts that strong communication leads to higher rates, but that's a platform's marketing research, not a controlled study. Any specific number you see quoted (\"improve your English, earn 40% more\") is invented.",
-      "We will not tell you that Filipinos are 'too indirect' as a matter of fact. Every article claiming that traces back to BPO and outsourcing-vendor blogs, not research. There is no peer-reviewed study showing Filipino remote workers are perceived as less senior because of po, sir/ma'am, or indirectness. Treat the habits below as things to audit in your own writing, not as a diagnosis of your culture.",
-      "We will not sell you accent reduction. The research field moved away from that decades ago. The goal is being understood, not sounding American, and the two are not the same thing."
+      "Nobody here will tell you that Filipinos are 'too indirect' as a matter of fact. Every article claiming that traces back to BPO and outsourcing-vendor blogs, not research. There is no peer-reviewed study showing Filipino remote workers are perceived as less senior because of po, sir/ma'am, or indirectness. Treat the habits below as things to audit in your own writing, not as a diagnosis of your culture.",
+      "Accent reduction is not on sale here either. The research field moved away from that decades ago. The goal is being understood, not sounding American, and the two are not the same thing."
     ]
   },
 
@@ -76,7 +76,7 @@
       {
         "id": "apology",
         "label": "Reflex apologies",
-        "why": "Save 'sorry' for when you actually broke something. Apologizing for existing, for asking, or for taking up space trains the client to see you as a subordinate rather than a peer.",
+        "why": "Save 'sorry' for when you broke something. Apologizing for existing, for asking, or for taking up space trains the client to see you as a subordinate rather than a peer.",
         "accent": "signal"
       },
       {
@@ -220,7 +220,7 @@
         "impact": "Lowest, do this last",
         "accent": "info",
         "title": "The 'th' sound",
-        "what": "Genuinely the lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, the evidence is not on their side.",
+        "what": "The lowest payoff on this page. Most Western listeners resolve 'dis' and 'tink' from context without noticing. Spend your time on rhythm first. If someone tells you your 'th' is the reason you're not getting hired, the evidence is not on their side.",
         "drill": "Optional. Tongue lightly between the teeth: think, three, this, that. Two minutes, then go back to rhythm work."
       }
     ],
@@ -229,7 +229,7 @@
 
   "resources": {
     "kicker": "Open, live, and honestly priced",
-    "title": "Where to actually practise",
+    "title": "Where to practise",
     "lead": "We checked every one of these, including the price. Two things commonly recommended as 'no-cost' are not no-cost, and we've said so rather than let you find out later.",
     "items": [
       {
@@ -283,7 +283,7 @@
       {
         "name": "Toastmasters (District 75, Philippines)",
         "url": "https://d75.toastmastersdistricts.org/",
-        "what": "Genuinely excellent for speaking under pressure. Several PH clubs meet online.",
+        "what": "Excellent for speaking under pressure. Several PH clubs meet online.",
         "use": "Worth it, but budget for it. It is routinely described as no-cost; it is not.",
         "cost": "PAID, modest dues, paid per half-year (check the current rates), plus club dues",
         "tone": "signal"
@@ -293,7 +293,7 @@
 
   "lab": {
     "kicker": "The workshop",
-    "title": "Audit a message you actually sent",
+    "title": "Audit a message you sent",
     "lead": "We're not going to hand you scripts to copy, you'd sound like ten thousand other people using the same ones. Paste in a real message you sent a client this week. The lab flags every habit above so you can see your own patterns, then you rewrite it yourself.",
     "placeholder": "Paste a real Slack message, email, or proposal you sent a client…\n\nTry this one if you don't have anything handy:\n\"Hi Sir, sorry to bother you! I just wanted to kindly follow up on the designs. I think maybe there might be a small issue with the spacing but I'm not sure. Please revert back when you can. Sorry again and thank you po!\"",
     "cleanTitle": "Nothing flagged.",

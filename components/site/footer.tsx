@@ -1,17 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/layout";
+import { ReaderControls } from "@/components/practice";
 import site from "@/data/site.json";
 import { NAV, NAV_GROUPS, isLive, isMenu, type NavLink, type NavMenu } from "@/lib/nav";
 import { Logo } from "./logo";
-
-/** Shell copy. Phase 8 owns the final wording; the honesty rule does not move. */
-const HONESTY =
-  "Hire From PH is an independent, non-commercial project. Every page is free to read, and every figure carries its source.";
-
-/** Not a copyright line: the owner asserts none, this just flags that the
- *  figures elsewhere on the page are cited estimates, not promises. */
-const DATA_NOTE =
-  "Pay figures and market data are cited to their sources. They are estimates, not promises.";
 
 type FooterColumn = { title: string; links: NavLink[] };
 
@@ -42,7 +34,7 @@ export function SiteFooter() {
               <Logo markSize={32} />
             </Link>
             <p className="mt-5 text-small leading-relaxed text-ink-soft">{site.meaning}</p>
-            <p className="mt-4 text-caption leading-relaxed text-ink-faint">{HONESTY}</p>
+            <p className="mt-4 text-caption leading-relaxed text-ink-faint">{site.footer.honesty}</p>
           </div>
 
           <nav aria-label="Footer" className="contents">
@@ -67,8 +59,11 @@ export function SiteFooter() {
         </div>
 
         <div className="border-t border-line py-8">
+          <div className="mb-6">
+            <ReaderControls layout="row" />
+          </div>
           <p className="text-caption text-ink-faint">
-            {site.brand}. {DATA_NOTE}
+            {site.brand}. {site.footer.note}
           </p>
         </div>
       </Container>

@@ -60,7 +60,7 @@
       {
         "letter": "3",
         "name": "Discernment",
-        "purpose": "Judging whether the output is actually good. The skill the AI premium is really paying for.",
+        "purpose": "Judging whether the output is good. The skill the AI premium is really paying for.",
         "doThis": "Read the draft as the client's harshest critic. Where is it generic? What did it make up? A person who can tell good output from confident nonsense is worth more than the model.",
         "icon": "scan-eye",
         "accent": "verified"
@@ -80,7 +80,7 @@
 
   "landscape": {
     "kicker": "The landscape · specimens, not a shopping list",
-    "title": "Five layers of AI a modern professional actually uses.",
+    "title": "Five layers of AI a modern professional uses.",
     "lead": "These are not tools to memorize. The specific names will change, and half of them will have new rivals by the time you read this. They are here as worked examples of five things you can now put under any craft. For each layer we name what it unlocks in paid work, then a few real tools to go and try. When one of them changes, you will still have the layer.",
     "note": "Prefer the open options while you learn. You should never need a company card to find out whether a layer is for you. And whichever tool you pick, learn it the transferable way, not by memorizing buttons. Once you're ready to sell the work, many freemium tools gate commercial use behind a paid tier, and paying it needs an internationally-billable card (Wise or Payoneer).",
     "categories": [
@@ -123,7 +123,7 @@
         "unlocks": "Thumbnails, ad creative, product mockups, social graphics, and narration: the creative volume a small business needs weekly and cannot afford a studio for. Taste and direction are the scarce part. The render is cheap.",
         "tools": [
           { "name": "Canva (Magic Studio)", "url": "https://www.canva.com/ai-image-generator/", "cost": "freemium", "oneLiner": "The all-in-one design platform with text-to-image built right into its editor and templates.", "useInWork": "The volume workhorse for social and design gigs: on-brand graphics, thumbnails, and ad banners, fast." },
-          { "name": "Adobe Firefly", "url": "https://www.adobe.com/products/firefly.html", "cost": "freemium", "oneLiner": "Adobe's generative image tool, trained on licensed content and marketed as commercially safe.", "useInWork": "Commercially-safe images plus generative fill for client ad creative where usage rights actually matter." },
+          { "name": "Adobe Firefly", "url": "https://www.adobe.com/products/firefly.html", "cost": "freemium", "oneLiner": "Adobe's generative image tool, trained on licensed content and marketed as commercially safe.", "useInWork": "Commercially-safe images plus generative fill for client ad creative where usage rights matter." },
           { "name": "Midjourney", "url": "https://www.midjourney.com/", "cost": "paid", "oneLiner": "The image generator known for the highest-quality, most stylized and photorealistic output.", "useInWork": "Premium hero images, ad creative, and editorial illustration for social, print, and pitch decks. (Paid only.)" },
           { "name": "Ideogram", "url": "https://ideogram.ai/", "cost": "freemium", "oneLiner": "The image generator that is best at rendering accurate, readable text inside an image.", "useInWork": "The go-to when a deliverable needs real words: posters, ad graphics, logos, and typographic thumbnails." },
           { "name": "ComfyUI", "url": "https://github.com/comfyanonymous/ComfyUI", "cost": "open-source", "oneLiner": "A no-cost, open, node-based interface for running Stable Diffusion and other image models locally.", "useInWork": "Build repeatable pipelines, consistent characters, batch generation, upscaling, for high volume at zero per-image cost." },
@@ -176,7 +176,7 @@
       { "niche": "Customer support & success", "icon": "headset", "workflow": "AI drafts routine replies and thread summaries; you take the tense, judgment-heavy conversations a model cannot be trusted with." },
       { "niche": "Design & creative", "icon": "palette", "workflow": "AI produces first-pass concepts and assets in bulk; you art-direct, curate, and supply the taste that keeps everything coherent." },
       { "niche": "Writing & marketing", "icon": "pen-tool", "workflow": "AI accelerates drafting and research; you bring the angle, the real specifics, and the checking that makes it true and worth reading." },
-      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI runs the listings, sequences, and data entry; you handle the people, the exceptions, and the trust the client is actually paying for." }
+      { "niche": "Real estate & admin support", "icon": "building-2", "workflow": "AI runs the listings, sequences, and data entry; you handle the people, the exceptions, and the trust the client is paying for." }
     ]
   },
 
@@ -187,7 +187,7 @@
     "steps": [
       { "n": 1, "title": "Name the outcome, not the tool", "desc": "Not learn Runway. Instead: turn this one client testimonial into three captioned 20-second vertical clips. A real deliverable tells you exactly which features to ignore." },
       { "n": 2, "title": "Find the no-cost tier and ship one real thing", "desc": "Skip the tutorial marathon. Use the no-cost tier to make one finished-if-rough thing in the first hour. A broken result teaches you what to learn next. A video never does." },
-      { "n": 3, "title": "Describe, then discern", "desc": "Give it a proper brief, get three options, and judge them hard against what the client actually needs. The skill is not generating. It is choosing and refining." },
+      { "n": 3, "title": "Describe, then discern", "desc": "Give it a proper brief, get three options, and judge them hard against what the client needs. The skill is not generating. It is choosing and refining." },
       { "n": 4, "title": "Keep a human in the loop", "desc": "Check every fact, protect the client's data, and never ship a first draft unread. You are the quality bar and the person responsible, always." },
       { "n": 5, "title": "Turn it into an offer", "desc": "Once you can do it reliably, name it as a service with a price. I turn your long videos into a month of shorts is a business. I know Runway is a hobby." }
     ],
@@ -218,7 +218,7 @@
     "items": [
       { "icon": "robot", "term": "Agents", "desc": "AI that doesn't just answer: it acts. It reads files, browses, runs steps in a loop until the job is done. You manage it like a junior teammate: brief it well, then check the work." },
       { "icon": "file-text", "term": "Context files (AGENTS.md)", "desc": "A plain text file that teaches an agent a client's rules, tone, and quirks once, so every future task starts already briefed. Write one per client and your judgment becomes a reusable asset." },
-      { "icon": "list-checks", "term": "Skills & commands", "desc": "Reusable procedures an agent loads on demand: 'how we do the monthly report', written once, run forever. The SOPs you learn to write in the Build Labs become executable." },
+      { "icon": "list-checks", "term": "Skills & commands", "desc": "Reusable procedures an agent loads on demand: 'how we do the monthly report', written once, run. The SOPs you learn to write in the Build Labs become executable." },
       { "icon": "git-fork", "term": "Subagents", "desc": "One agent delegating pieces of a job to others working in parallel. The underlying skill is decomposition: cutting a job into clean, checkable pieces. That is a manager's skill, and it is learnable." },
       { "icon": "plugs-connected", "term": "MCP", "desc": "Model Context Protocol, the open standard that plugs an agent into real tools: the client's sheets, inbox, CRM, database. It is why an agent can act on the actual business instead of just talking about it." },
       { "icon": "shield-check", "term": "Hooks & guardrails", "desc": "Rules that fire automatically around an agent's actions: block the dangerous ones, double-check the important ones. Trust in automation is built with brakes, not hope." },

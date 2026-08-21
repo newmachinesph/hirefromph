@@ -21,6 +21,7 @@ import {
 import { accent } from "@/lib/accent";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/portfolio";
@@ -55,7 +56,7 @@ export default function PortfolioPage() {
           {portfolio.creed}
         </Callout>
         <FreshnessNote date={portfolio.lastVerified} />
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/portfolio" /></Section> */}
+        <Section spacing="none"><Tldr route="/portfolio" /></Section>
       </PageHero>
 
       {/* -------------------------------------------------------- HOW IT WORKS */}
@@ -175,7 +176,7 @@ export default function PortfolioPage() {
         </div>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/portfolio" /> */}
+      <PracticeFooter route="/portfolio" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

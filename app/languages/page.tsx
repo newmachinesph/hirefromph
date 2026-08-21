@@ -21,6 +21,7 @@ import {
 } from "@/components/ui";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 import { pageMeta } from "@/lib/meta";
+import { PracticeFooter, Tldr } from "@/components/practice";
 import { cn } from "@/lib/utils";
 
 const HREF = "/languages";
@@ -62,7 +63,7 @@ export default function LanguagesPage() {
         accent="double your pay."
         lead={languagesData.intro}
       >
-        {/* practice: Phase 6 replaces this line with <Section spacing="none"><Tldr route="/languages" /></Section> */}
+        <Section spacing="none"><Tldr route="/languages" /></Section>
       </PageHero>
 
       {/* ---------------------------------------------------------- LANGUAGES */}
@@ -120,7 +121,7 @@ export default function LanguagesPage() {
         </Card>
       </Section>
 
-      {/* practice: Phase 6 replaces this line with <PracticeFooter route="/languages" /> */}
+      <PracticeFooter route="/languages" />
 
       <Section>
         <PageFooterNav {...findNavNeighbours(HREF)} />

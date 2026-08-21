@@ -11,7 +11,7 @@
     "kicker": "Stage 01",
     "subtitle": "Your foundation as an online professional",
     "summary": "No degree, no experience, no capital needed. Set up your workspace, learn the core skills, and build the mindset that lasts.",
-    "quote": "Age doesn't matter. Experience doesn't matter. What matters is your dedication to learning.",
+    "quote": "Nobody checks your diploma here; what you finish this week is the thing that counts.",
     "outcome": "You'll have a working setup and the foundational skills to apply with confidence.",
     "doFirst": [
       { "title": "Check your equipment", "desc": "Run the interactive Equipment Checker, see what you have, plan what to buy in ₱.", "href": "/equipment", "cta": "Open checker" },
@@ -27,7 +27,7 @@
       { "label": "Build Labs", "href": "/build" },
       { "label": "Niche Explorer", "href": "/niches" }
     ],
-    "closing": "You don't need to be perfect. You just need to start."
+    "closing": "Finish one micro-task this week and you have something to send."
   },
   {
     "id": "get-hired",
@@ -42,7 +42,7 @@
     "kicker": "Stage 02",
     "subtitle": "Land your first client, systematically",
     "summary": "Build assets that get replies, work the vetted directory of places to apply, track everything, and close the offer.",
-    "quote": "Don't wait until you feel ready. You'll never feel 100% ready. Just apply, learn from every interview, and adjust.",
+    "quote": "You will not feel ready, so send the application anyway and let the interviews teach you.",
     "outcome": "You'll have a live pipeline of applications and the prep to convert interviews into offers.",
     "doFirst": [
       { "title": "Learn to source work yourself", "desc": "Search operators, reverse-sourcing, and a red-flag scorer, build your own pipeline, not a bookmark list.", "href": "/apply", "cta": "Find work" },
@@ -57,7 +57,7 @@
       { "label": "Micro-Tasks", "href": "/tasks" },
       { "label": "Build Labs", "href": "/build" }
     ],
-    "closing": "Every 'no' moves you closer to the right 'yes'. The system is here, the work now is to apply, consistently, and follow up."
+    "closing": "Most offers are lost to silence, so apply on a schedule and follow up on every one."
   },
   {
     "id": "deliver",
@@ -72,8 +72,8 @@
     "kicker": "Stage 03",
     "subtitle": "Impress your client and become reliable",
     "summary": "Onboard like a pro, systemize your work with SOPs and trackers, and communicate in a way that makes clients trust you with more.",
-    "quote": "Your first week is your audition. It's not about being perfect, it's about being organized, responsive, and showing up.",
-    "outcome": "You'll run your work on systems, not vibes, the reason clients keep and refer you.",
+    "quote": "Your first week is an audition for the second one, and organisation is what it scores.",
+    "outcome": "You'll run the work on written systems, which is the reason clients keep you and refer you.",
     "doFirst": [
       { "title": "Write your own first-week plan", "desc": "Learn what a first week must prove, then write the plan yourself.", "href": "/build", "cta": "Open the lab" },
       { "title": "Learn any tool, fast", "desc": "The transferable method for mastering software in a weekend, not a tutorial to follow.", "href": "/tools", "cta": "Learn the method" },
@@ -88,22 +88,22 @@
       { "label": "The Method", "href": "/method" },
       { "label": "Niche Hub", "href": "/niches" }
     ],
-    "closing": "This is what separates a hire from a professional: systems, reliability, and follow-through."
+    "closing": "A professional runs on written systems; a hire runs on memory."
   },
   {
     "id": "level-up",
     "num": 4,
-    "role": "The Growth Path",
+    "role": "The Specialist",
     "title": "Level Up",
     "href": "/level-up",
     "steps": "Step 9",
     "accent": "info",
     "image": "stage-level-up",
     "kicker": "Stage 04",
-    "subtitle": "From good to indispensable",
+    "subtitle": "Where specialising starts paying",
     "summary": "Specialize into a high-value niche, automate the repetitive, learn a premium language, and raise your rate.",
-    "quote": "Anything you do twice, systemize. Anything a machine can do, automate. That is how professionals scale their value.",
-    "outcome": "You'll own a niche, command a premium rate, and build a career that compounds.",
+    "quote": "Systemise anything you do twice, and hand the rest to a machine that does not get bored.",
+    "outcome": "You'll own a niche and have the evidence to ask for a higher rate.",
     "doFirst": [
       { "title": "Pick and master a niche", "desc": "Curated learning per specialization in the Niche Learning Hub.", "href": "/niches", "cta": "Choose niche" },
       { "title": "Learn a premium language", "desc": "Japanese, Korean, or Mandarin draws from a far thinner pool of candidates, and a thinner pool is what moves a rate. Here's where to learn.", "href": "/languages", "cta": "Language premium" },
@@ -117,7 +117,7 @@
       { "label": "Learn Any Tool", "href": "/tools" },
       { "label": "Build Labs", "href": "/build" }
     ],
-    "closing": "The work compounds from here. Specialize, automate, and let your rate follow your value."
+    "closing": "Specialise in one lane, then raise the rate the evidence supports."
   },
   {
     "id": "own",
@@ -146,6 +146,6 @@
       { "label": "Client Markets", "href": "/markets" },
       { "label": "The Method", "href": "/method" }
     ],
-    "closing": "Build the things nobody can take: the skill, the relationships, the name. Then hold the door open for the next one coming up."
+    "closing": "Build the things nobody can revoke: your skill, your client list, and the name people vouch for. Then hold the door for whoever is next."
   }
 ]

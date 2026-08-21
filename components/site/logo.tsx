@@ -84,13 +84,3 @@ export function Logo({
     </span>
   );
 }
-
-/** A single rail-and-rung glyph for pull-quotes and section rules. */
-export function Bracket({ className }: { className?: string }) {
-  return (
-    <svg width="12" height="32" viewBox="0 0 12 32" fill="currentColor" className={className} aria-hidden>
-      <rect x="0" y="2" width="4" height="28" rx="1" />
-      <rect x="4" y="14" width="8" height="4" />
-    </svg>
-  );
-}

@@ -2,11 +2,21 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnimatePresence, motion, type Variants } from "motion/react";
-import { Check, ChevronLeft, RotateCcw } from "lucide-react";
 import learning from "@/data/learning.json";
 import { CopyButton } from "@/components/copy-button";
-import { Pill } from "@/components/ui";
-import { cn } from "@/lib/utils";
+import {
+  Badge,
+  Button,
+  Callout,
+  Card,
+  ChoiceCard,
+  Field,
+  Heading,
+  Icon,
+  Kicker,
+  ProgressBar,
+  Text,
+} from "@/components/ui";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 const ADVANCE_DELAY_MS = 260;
@@ -129,9 +139,6 @@ export function StudyProtocol() {
 
   const isResults = step >= QUESTIONS.length;
   const question = QUESTIONS[Math.min(step, QUESTIONS.length - 1)];
-  const progressPct = Math.round(
-    (Math.min(step, QUESTIONS.length) / QUESTIONS.length) * 100,
-  );
   const summary = useMemo(
     () => (isResults ? buildProtocol(answers) : null),
     [isResults, answers],
@@ -158,28 +165,15 @@ export function StudyProtocol() {
   }
 
   return (
-    <div className="rounded-[var(--radius-lg)] border border-line bg-paper-2 p-6 shadow-[var(--shadow-md)] sm:p-10 lg:p-14">
+    <div className="rounded-lg border border-line bg-paper p-6 sm:p-10 lg:p-14">
       {!isResults && (
         <div className="mx-auto max-w-2xl">
-          <div className="flex items-center justify-between">
-            <p className="kicker">
-              Question {step + 1} of {QUESTIONS.length}
-            </p>
-            <p className="kicker">{progressPct}%</p>
-          </div>
-          <div
-            className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-line"
-            role="progressbar"
-            aria-valuenow={step + 1}
-            aria-valuemin={1}
-            aria-valuemax={QUESTIONS.length}
-            aria-label={`Question ${step + 1} of ${QUESTIONS.length}`}
-          >
-            <div
-              className="h-full rounded-full bg-signal transition-[width] duration-500 ease-out"
-              style={{ width: `${progressPct}%` }}
-            />
-          </div>
+          <ProgressBar
+            value={Math.min(step, QUESTIONS.length)}
+            max={QUESTIONS.length}
+            label="Protocol progress"
+            showValue
+          />
         </div>
       )}
 
@@ -204,61 +198,36 @@ export function StudyProtocol() {
             exit="exit"
             className="mx-auto mt-8 max-w-2xl"
           >
-            <fieldset>
-              <legend className="font-display text-2xl leading-tight text-balance sm:text-3xl">
-                {question.q}
-              </legend>
-              <p className="mt-2 text-sm text-ink-soft">{question.help}</p>
+            <Field
+              as="group"
+              label={question.q}
+              hint={question.help}
+              className="[&>legend]:font-display [&>legend]:text-h3"
+            >
               <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                {question.options.map((opt) => {
-                  const id = `${question.id}-${opt.value}`;
-                  const selected = answers[question.id] === opt.value;
-                  return (
-                    <div key={opt.value}>
-                      <input
-                        type="radio"
-                        id={id}
-                        name={question.id}
-                        value={opt.value}
-                        checked={selected}
-                        onChange={() => selectOption(question.id, opt.value)}
-                        className="peer sr-only"
-                      />
-                      <label
-                        htmlFor={id}
-                        className={cn(
-                          "group relative flex cursor-pointer flex-col gap-1.5 rounded-2xl border border-line bg-paper p-5 text-left transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[var(--shadow-md)] peer-checked:border-signal peer-checked:bg-signal-tint peer-focus-visible:ring-2 peer-focus-visible:ring-signal",
-                        )}
-                      >
-                        <span className="pr-6 font-display text-lg leading-tight">
-                          {opt.label}
-                        </span>
-                        <span className="text-sm leading-snug text-ink-soft">
-                          {opt.desc}
-                        </span>
-                        <span
-                          className={cn(
-                            "absolute right-4 top-4 grid h-6 w-6 place-items-center rounded-full bg-verified text-white opacity-0 transition-opacity",
-                            selected && "opacity-100",
-                          )}
-                        >
-                          <Check size={14} />
-                        </span>
-                      </label>
-                    </div>
-                  );
-                })}
+                {question.options.map((opt) => (
+                  <ChoiceCard
+                    key={opt.value}
+                    name={question.id}
+                    value={opt.value}
+                    label={opt.label}
+                    description={opt.desc}
+                    checked={answers[question.id] === opt.value}
+                    onChange={(value) => selectOption(question.id, value)}
+                  />
+                ))}
               </div>
-            </fieldset>
+            </Field>
             {step > 0 && (
-              <button
-                type="button"
-                onClick={goBack}
-                className="mt-8 inline-flex items-center gap-1 text-sm font-medium text-ink-faint transition-colors hover:text-ink"
-              >
-                <ChevronLeft size={14} />
-                Back
-              </button>
+              <div className="mt-8">
+                <Button
+                  variant="link"
+                  onClick={goBack}
+                  icon={<Icon name="chevron-left" size={14} />}
+                >
+                  Back
+                </Button>
+              </div>
             )}
           </motion.div>
         )}
@@ -278,61 +247,57 @@ function ProtocolResult({
     <div>
       <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
         <div>
-          <p className="kicker">Your study protocol</p>
-          <h3 className="mt-2 font-display text-2xl leading-tight text-balance sm:text-3xl">
-            {summary.sessionShape.label}, {" "}
-            <span className="text-signal">{summary.sessionShape.pattern}</span>
-          </h3>
-          <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-soft">
+          <Kicker>Your study protocol</Kicker>
+          <Heading level={3} size="h3" balance className="mt-2">
+            {summary.sessionShape.label},{" "}
+            <span className="text-primary">{summary.sessionShape.pattern}</span>
+          </Heading>
+          <Text size="small" className="mt-2 max-w-xl">
             {summary.sessionShape.desc}
-          </p>
+          </Text>
         </div>
-        <Pill tone="verified" className="shrink-0">
+        <Badge tone="verified" className="shrink-0">
           {summary.sessionShape.perDay}
-        </Pill>
+        </Badge>
       </div>
 
-      <div className="mt-8 rounded-2xl border border-line-strong bg-paper-3/60 p-5">
-        <p className="text-sm leading-relaxed text-ink">
+      <Card padding="md" onBand className="mt-8">
+        <Text tone="ink" size="small">
           <span className="font-semibold">Fit to your day: </span>
           {summary.timeNote} {summary.energyNote} {summary.environmentNote}
-        </p>
-      </div>
+        </Text>
+      </Card>
 
       <div className="mt-8">
-        <p className="kicker">Your 3 techniques</p>
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-soft">
+        <Kicker>Your 3 techniques</Kicker>
+        <Text size="small" className="mt-2 max-w-2xl">
           {summary.goalNote}
-        </p>
+        </Text>
         <div className="mt-4 grid gap-3">
           {summary.techniques.map((t, i) => (
-            <div
-              key={t.id}
-              className="rounded-2xl border border-line bg-paper p-5"
-            >
+            <Card key={t.id} padding="md">
               <div className="flex items-center gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-ink font-display text-sm text-paper-2">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-ink font-display text-sm text-paper">
                   {i + 1}
                 </span>
                 <span className="font-display text-lg leading-tight">
                   {t.name}
                 </span>
               </div>
-              <p className="mt-2.5 text-sm leading-relaxed text-ink-soft">
+              <Text size="small" className="mt-2.5">
                 {t.how}
-              </p>
-            </div>
+              </Text>
+            </Card>
           ))}
         </div>
       </div>
 
       <div className="mt-8 grid gap-5 sm:grid-cols-2">
-        <div className="rounded-2xl border border-signal/25 bg-signal-tint p-5">
-          <p className="kicker text-signal-deep">Stop doing</p>
-          <ul className="mt-3 space-y-3">
+        <Callout tone="signal" title="Stop doing">
+          <ul className="mt-1 space-y-3">
             {summary.stopDoing.map((f) => (
-              <li key={f.id} className="text-sm leading-relaxed">
-                <span className="font-semibold text-signal-deep line-through decoration-signal/50">
+              <li key={f.id} className="text-small leading-relaxed">
+                <span className="font-semibold text-primary-deep line-through decoration-primary/50">
                   {f.habit}
                 </span>
                 <span className="mt-0.5 block text-ink-soft">
@@ -341,25 +306,23 @@ function ProtocolResult({
               </li>
             ))}
           </ul>
-        </div>
-        <div className="rounded-2xl border border-verified/25 bg-verified-tint p-5">
-          <p className="kicker text-verified">Close your feedback loop</p>
-          <p className="mt-3 text-sm leading-relaxed text-ink">
+        </Callout>
+        <Callout tone="verified" title="Close your feedback loop">
+          <Text tone="ink" size="small">
             {summary.feedbackNote}
-          </p>
-        </div>
+          </Text>
+        </Callout>
       </div>
 
       <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-line pt-8">
         <CopyButton value={summary.text} label="Copy my protocol" />
-        <button
-          type="button"
+        <Button
+          variant="ghost"
           onClick={onRestart}
-          className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-ink-soft transition-colors hover:text-signal"
+          icon={<Icon name="rotate-ccw" size={14} />}
         >
-          <RotateCcw size={14} />
           Start over
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -19,4 +19,14 @@ if (typeof Element !== "undefined" && !Element.prototype.scrollIntoView) {
 // multiple renders — see components/ui/button.test.tsx.
 afterEach(() => {
   cleanup();
+  // Components persist to localStorage on mount/effects; without this, one
+  // test's saved state leaks into the next within the same file.
+  if (typeof window !== "undefined") {
+    try {
+      window.localStorage.clear();
+      window.sessionStorage.clear();
+    } catch {
+      /* storage unavailable in this environment */
+    }
+  }
 });
