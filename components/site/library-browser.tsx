@@ -35,7 +35,7 @@ function asType(value: string | null): TypeFilter {
 }
 
 const CHIP =
-  "rounded-pill border px-3.5 py-2 text-small font-medium transition-colors duration-150";
+  "min-h-11 inline-flex items-center rounded-pill border px-3.5 py-2 text-small font-medium transition-colors duration-150";
 const CHIP_ON = "border-primary bg-tint text-primary-deep";
 const CHIP_OFF = "border-line text-ink-soft hover:border-ink hover:text-ink";
 

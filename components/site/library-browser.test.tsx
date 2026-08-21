@@ -74,4 +74,16 @@ describe("LibraryBrowser", () => {
     expect(screen.queryAllByRole("link")).toHaveLength(0);
     expect(screen.getByText(/no pages match/i)).toBeInTheDocument();
   });
+
+  it("gives every filter chip a 44px minimum touch target", () => {
+    render(<LibraryBrowser />);
+    const chips = screen
+      .getAllByRole("button")
+      .filter((button) => button.hasAttribute("aria-pressed"));
+
+    expect(chips.length).toBeGreaterThan(0);
+    chips.forEach((chip) => {
+      expect(chip).toHaveClass("min-h-11");
+    });
+  });
 });
