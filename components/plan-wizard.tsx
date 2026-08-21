@@ -6,6 +6,7 @@ import plan from "@/data/plan.json";
 import tracksData from "@/data/tracks.json";
 import site from "@/data/site.json";
 import { usePath } from "@/lib/path-context";
+import { ExportButton, usePlanDays } from "@/components/practice";
 import {
   Badge,
   Button,
@@ -19,6 +20,9 @@ import {
   Text,
 } from "@/components/ui";
 import { accent } from "@/lib/accent";
+import { todayISO } from "@/lib/dates";
+import { planToIcs } from "@/lib/ics";
+import { labToMarkdown } from "@/lib/markdown-export";
 import { cn } from "@/lib/utils";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -117,7 +121,11 @@ function ProgressRing({ value, max }: { value: number; max: number }) {
 }
 
 export function PlanWizard() {
-  const { state, hydrated, choosePath, togglePlanDay, setPlanAnswers } = usePath();
+  const { state, hydrated, choosePath, setPlanAnswers } = usePath();
+  // markPlanDay calls the context's togglePlanDay and records the date in the
+  // practice store, which is what `Streak` counts. lib/path-context.tsx is
+  // unchanged.
+  const { markPlanDay } = usePlanDays();
   const [step, setStep] = useState(0);
   const [direction, setDirection] = useState(1);
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -291,7 +299,7 @@ export function PlanWizard() {
                               <Checkbox
                                 id={`plan-day-${day.day}`}
                                 checked={checked}
-                                onChange={() => togglePlanDay(day.day)}
+                                onChange={() => markPlanDay(day.day)}
                                 aria-label={`Mark day ${day.day} complete: ${day.task}`}
                                 className="flex-1"
                                 label={
@@ -326,6 +334,45 @@ export function PlanWizard() {
                 <Button variant="outline" onClick={changePath}>
                   Change my path
                 </Button>
+                <ExportButton
+                  title="my 30-day plan"
+                  kind="ics"
+                  filename="hire-from-ph-30-day-plan.ics"
+                  label="Add to calendar"
+                  build={() =>
+                    planToIcs({
+                      title: "My 30-day plan",
+                      startDate: todayISO(),
+                      days: plan.weeks
+                        .flatMap((week) => week.days)
+                        .filter((day) => !state.planDays[day.day])
+                        .map((day) => ({
+                          n: day.day,
+                          title: day.task,
+                          desc: `Open ${day.tool} on hirefrom.ph`,
+                        })),
+                    })
+                  }
+                />
+                <ExportButton
+                  title="my 30-day plan"
+                  kind="markdown"
+                  filename="hire-from-ph-30-day-plan.md"
+                  build={() =>
+                    labToMarkdown(
+                      "My 30-day plan",
+                      plan.weeks.map((week) => ({
+                        label: `Week ${week.week} — ${week.title}`,
+                        body: week.days
+                          .map(
+                            (day) =>
+                              `- [${state.planDays[day.day] ? "x" : " "}] Day ${day.day}: ${day.task}`,
+                          )
+                          .join("\n"),
+                      })),
+                    )
+                  }
+                />
                 <Button
                   variant="ghost"
                   onClick={startOver}

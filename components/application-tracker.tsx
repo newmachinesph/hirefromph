@@ -8,6 +8,8 @@ import {
   usePath,
 } from "@/lib/path-context";
 import { CopyButton } from "@/components/copy-button";
+import { ExportButton } from "@/components/practice";
+import { rowsToCsv } from "@/lib/markdown-export";
 import {
   Badge,
   Button,
@@ -147,6 +149,24 @@ export function ApplicationTracker() {
     );
     return [header, ...rows].join("\n");
   }, [applications]);
+
+  const csv = useMemo(
+    () =>
+      rowsToCsv(
+        ["Company", "Role", "Source", "Link", "Status", "Applied", "Follow-up", "Notes"],
+        applications.map((a) => [
+          a.company,
+          a.role,
+          a.source,
+          a.link,
+          STATUS_LABEL[a.status],
+          a.appliedAt,
+          a.followUpAt,
+          a.notes,
+        ]),
+      ),
+    [applications],
+  );
 
   if (!hydrated) {
     return (
@@ -388,7 +408,15 @@ export function ApplicationTracker() {
         <div className="flex flex-wrap items-center justify-between gap-3">
           <p className="kicker">The pipeline, {applications.length} total</p>
           {applications.length > 0 && (
-            <CopyButton value={tsv} label="Copy pipeline as TSV" />
+            <div className="flex flex-wrap items-center gap-2">
+              <CopyButton value={tsv} label="Copy pipeline as TSV" />
+              <ExportButton
+                title="my application pipeline"
+                kind="csv"
+                filename="my-applications.csv"
+                build={() => csv}
+              />
+            </div>
           )}
         </div>
 

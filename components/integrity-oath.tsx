@@ -3,6 +3,8 @@
 import { useId } from "react";
 import conduct from "@/data/conduct.json";
 import { usePath } from "@/lib/path-context";
+import { ExportButton } from "@/components/practice";
+import { labToMarkdown } from "@/lib/markdown-export";
 import {
   Button,
   Callout,
@@ -165,14 +167,32 @@ export function IntegrityOath() {
                 </p>
               </div>
             </div>
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={unsign}
-              icon={<Icon name="rotate-ccw" size={14} />}
-            >
-              Revise it
-            </Button>
+            <div className="flex shrink-0 flex-wrap items-center gap-2">
+              <ExportButton
+                title="my integrity oath"
+                kind="markdown"
+                filename="my-integrity-oath.md"
+                label="Save what I wrote"
+                build={() =>
+                  labToMarkdown("My integrity oath", [
+                    { label: "My commitment", body: commitment.trim() },
+                    { label: "Signed", body: `${name.trim()} · ${signedDate}` },
+                    {
+                      label: "Clauses accepted",
+                      body: `${accepted} of ${oath.clauses.length}`,
+                    },
+                  ])
+                }
+              />
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={unsign}
+                icon={<Icon name="rotate-ccw" size={14} />}
+              >
+                Revise it
+              </Button>
+            </div>
           </Callout>
         ) : (
           <Field label={`Step 4 · ${oath.signPrompt}`}>

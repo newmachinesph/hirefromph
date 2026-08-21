@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import labsData from "@/data/labs.json";
 import { CopyButton } from "@/components/copy-button";
-import { DownloadButton } from "@/components/download-button";
+import { ExportButton } from "@/components/practice";
+import { labToMarkdown } from "@/lib/markdown-export";
 import {
   Accordion,
   AccordionItem,
@@ -59,6 +60,17 @@ function buildDocument(lab: Lab, laAnswers: Record<string, string>): string {
     })
     .filter((s): s is string => Boolean(s))
     .join("\n\n");
+}
+
+/** The same answers as `buildDocument`, as Markdown. Still never our copy. */
+function buildMarkdown(lab: Lab, labAnswers: Record<string, string>): string {
+  return labToMarkdown(
+    lab.name,
+    lab.builder.steps.map((step) => ({
+      label: step.label,
+      body: labAnswers[step.id]?.trim() ?? "",
+    })),
+  );
 }
 
 export function BuildLabs() {
@@ -452,7 +464,12 @@ function WorkshopTab({
               {document.length > 0 ? (
                 <div className="flex items-center gap-2">
                   <CopyButton value={document} label="Copy what I wrote" />
-                  <DownloadButton value={document} filename={`${lab.id}.md`} />
+                  <ExportButton
+                    title={lab.name}
+                    kind="markdown"
+                    filename={`${lab.id}.md`}
+                    build={() => buildMarkdown(lab, answers)}
+                  />
                 </div>
               ) : (
                 <p className="text-xs text-ink-faint">Write something first</p>
@@ -565,7 +582,12 @@ function BuildRealTab({
         {hasDraft ? (
           <>
             <CopyButton value={document} label="Copy my draft" />
-            <DownloadButton value={document} filename={`${lab.id}.md`} />
+            <ExportButton
+              title={lab.name}
+              kind="markdown"
+              filename={`${lab.id}.md`}
+              build={() => buildMarkdown(lab, answers)}
+            />
           </>
         ) : (
           <Button onClick={onGoToWorkshop} iconEnd={<Icon name="arrow-right" size={15} />}>
