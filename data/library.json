@@ -231,6 +231,7 @@
       "href": "/practice",
       "group": "tools",
       "type": "tool",
+      "pending": true,
       "desc": "Flashcards and quizzes on a spacing schedule, so what you read stays."
     },
     {
@@ -238,6 +239,7 @@
       "href": "/glossary",
       "group": "tools",
       "type": "tool",
+      "pending": true,
       "desc": "Plain definitions for every term this site uses, with Tagalog glosses."
     },
     {
@@ -245,6 +247,7 @@
       "href": "/educators",
       "group": "tools",
       "type": "guide",
+      "pending": true,
       "desc": "Run a session from this material: run-sheets, slides, and the licence."
     }
   ]
