@@ -2,8 +2,8 @@
   "brand": "Hire From PH",
   "wordmarkAccent": "PH",
   "meaning": "Be the reason they hire from the Philippines.",
-  "tagline": "Be the reason they hire from the Philippines. The complete platform for building an online career, open to every Filipino.",
-  "mission": "Hire From PH is built on one idea: the people companies hire from the Philippines should be the ones worth hiring anywhere. Every step compounds on the last, and every skill you gain is one you keep. An open, path-based platform that takes Filipinos from zero to a thriving remote career as an online professional, trusted with outcomes, not just tasks. Built to the standard of a real operations team, and given openly.",
+  "tagline": "Be the reason they hire from the Philippines. A free, path-based site for Filipinos building an online career.",
+  "mission": "Hire From PH is built on one idea: the people companies hire from the Philippines should be the ones worth hiring anywhere. Everything here is free to read, and every figure carries a link to its source.",
   "standard": {
     "kicker": "The Hire From PH standard",
     "title": "We don't hand you files. We make you resourceful.",
@@ -16,7 +16,7 @@
       },
       {
         "title": "You build it, you own it",
-        "desc": "The artifact you leave with is written in your words, from your situation. You can rebuild it anywhere, for any client.",
+        "desc": "The artifact you leave with is written in your words, from your situation, so you can rebuild it anywhere.",
         "icon": "pencil-ruler"
       },
       {
@@ -29,9 +29,13 @@
   "stats": [
     { "value": "5", "label": "stages", "sub": "zero to independent" },
     { "value": "11", "label": "steps", "sub": "one ordered roadmap" },
-    { "value": "22", "label": "niches", "sub": "pay, demand, and AI risk" },
+    { "value": "22", "label": "niches", "sub": "pay bands and AI risk" },
     { "value": "40", "label": "micro-tasks", "sub": "each ends as portfolio proof" }
   ],
+  "footer": {
+    "honesty": "Independent and non-commercial. Nothing on this site is for sale, and no page asks for your email.",
+    "note": "Pay figures and market data are cited to their sources, and every one of them is an estimate rather than a promise."
+  },
   "cta": {
     "label": "Find your path",
     "href": "/start"
@@ -43,11 +47,11 @@
         {
           "title": "The path",
           "links": [
-            { "label": "Start Right", "href": "/start", "desc": "Stage 1. Set up your desk, build first proof." },
-            { "label": "Get Hired", "href": "/get-hired", "desc": "Stage 2. Source leads, apply, and close the offer." },
-            { "label": "Deliver", "href": "/deliver", "desc": "Stage 3. Onboard, write SOPs, keep the client." },
-            { "label": "Level Up", "href": "/level-up", "desc": "Stage 4. Specialise, automate, and raise your rate." },
-            { "label": "Own", "href": "/own", "desc": "Stage 5. Go direct, register, and set your terms." },
+            { "label": "Start Right", "href": "/start", "desc": "Set up your desk and finish one micro-task." },
+            { "label": "Get Hired", "href": "/get-hired", "desc": "Source your own leads and close the first offer." },
+            { "label": "Deliver", "href": "/deliver", "desc": "Write the SOPs and trackers that keep a client." },
+            { "label": "Level Up", "href": "/level-up", "desc": "Specialise in one niche and raise your rate on evidence." },
+            { "label": "Own", "href": "/own", "desc": "Move to direct clients and register with the BIR." },
             { "label": "Your dashboard", "href": "/path", "desc": "See your saved track and how far you are." },
             { "label": "Build a 30-day plan", "href": "/plan", "desc": "Answer five questions, get a day-by-day month." }
           ]
@@ -61,12 +65,12 @@
           "title": "Build skills",
           "links": [
             { "label": "The Method", "href": "/method", "desc": "Six principles and seven methods for building anything." },
-            { "label": "AI-First", "href": "/ai-first", "desc": "Coding agents, local models, and four working habits." },
+            { "label": "AI-First", "href": "/ai-first", "desc": "Fold coding agents and local models into your craft." },
             { "label": "How to Learn", "href": "/learn", "desc": "How memory works, and a study protocol you write." },
             { "label": "Micro-Tasks", "href": "/tasks", "desc": "Forty small jobs that each end as portfolio proof." },
             { "label": "Build Labs", "href": "/build", "desc": "Learn a resume's anatomy, then write your own." },
             { "label": "Learn Any Tool", "href": "/tools", "desc": "Pick up unfamiliar software in a single weekend." },
-            { "label": "Portfolio Ladder", "href": "/portfolio", "desc": "Each niche's tool ladder, free to paid, rung by rung." },
+            { "label": "Portfolio Ladder", "href": "/portfolio", "desc": "Each niche's tool ladder, free tools on the bottom rung." },
             { "label": "AI Leverage", "href": "/prompts", "desc": "Prompt anatomy, so you can write your own." },
             { "label": "Equipment", "href": "/equipment", "desc": "Check what you own, budget pesos for the rest." }
           ]
@@ -93,8 +97,8 @@
         {
           "title": "Get hired",
           "links": [
-            { "label": "Find Work", "href": "/apply", "desc": "Search operators, reverse-sourcing, and a red-flag scorer." },
-            { "label": "Interview Prep", "href": "/interview", "desc": "STAR answers, a question bank, and scam warning signs." },
+            { "label": "Find Work", "href": "/apply", "desc": "Search operators and a red-flag scorer for any lead." },
+            { "label": "Interview Prep", "href": "/interview", "desc": "STAR answers and the warning signs of a scam interview." },
             { "label": "Application Tracker", "href": "/tracker", "desc": "Log every application and get nudged on follow-ups." },
             { "label": "Niches", "href": "/niches", "desc": "Twenty-two lanes with pay bands, demand, and AI risk." }
           ]
@@ -103,9 +107,9 @@
           "title": "Get paid and stay",
           "links": [
             { "label": "Salary Guide", "href": "/salary", "desc": "Cited pay ranges, and how to price your work." },
-            { "label": "Client Markets", "href": "/markets", "desc": "Where clients are, what each market pays, overlap hours." },
-            { "label": "Own Your Clients", "href": "/clients", "desc": "Move from platform gigs to direct clients and retainers." },
-            { "label": "Get Legit", "href": "/legit", "desc": "BIR registration, the 8% option, SSS, and payment rails." },
+            { "label": "Client Markets", "href": "/markets", "desc": "What each market pays, and your overlap hours from UTC+8." },
+            { "label": "Own Your Clients", "href": "/clients", "desc": "Leave the platforms for direct clients and retainers." },
+            { "label": "Get Legit", "href": "/legit", "desc": "Register with the BIR and pick the 8% option." },
             { "label": "Languages", "href": "/languages", "desc": "Japanese, Korean, or Mandarin thins the candidate pool." }
           ]
         }

@@ -4,15 +4,6 @@ import site from "@/data/site.json";
 import { NAV, NAV_GROUPS, isLive, isMenu, type NavLink, type NavMenu } from "@/lib/nav";
 import { Logo } from "./logo";
 
-/** Shell copy. Phase 8 owns the final wording; the honesty rule does not move. */
-const HONESTY =
-  "Hire From PH is an independent, non-commercial project. Every page is free to read, and every figure carries its source.";
-
-/** Not a copyright line: the owner asserts none, this just flags that the
- *  figures elsewhere on the page are cited estimates, not promises. */
-const DATA_NOTE =
-  "Pay figures and market data are cited to their sources. They are estimates, not promises.";
-
 type FooterColumn = { title: string; links: NavLink[] };
 
 /** Learn's navGroups bucket is 14-16 links deep — over double any other
@@ -42,7 +33,7 @@ export function SiteFooter() {
               <Logo markSize={32} />
             </Link>
             <p className="mt-5 text-small leading-relaxed text-ink-soft">{site.meaning}</p>
-            <p className="mt-4 text-caption leading-relaxed text-ink-faint">{HONESTY}</p>
+            <p className="mt-4 text-caption leading-relaxed text-ink-faint">{site.footer.honesty}</p>
           </div>
 
           <nav aria-label="Footer" className="contents">
@@ -68,7 +59,7 @@ export function SiteFooter() {
 
         <div className="border-t border-line py-8">
           <p className="text-caption text-ink-faint">
-            {site.brand}. {DATA_NOTE}
+            © 2026 {site.brand}. {site.footer.note}
           </p>
         </div>
       </Container>

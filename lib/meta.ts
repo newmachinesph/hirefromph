@@ -4,7 +4,7 @@ const socialImage = {
   url: "/opengraph-image",
   width: 1200,
   height: 630,
-  alt: "Hire From PH — build the online career you own",
+  alt: "Hire From PH — build the online career you keep",
 };
 
 /**

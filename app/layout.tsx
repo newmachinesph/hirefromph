@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s · Hire From PH",
   },
   description:
-    "Open learning for Filipino online professionals. Real talk on remote work, AI, direct clients, pay, and the skills that make you layoff-proof. We teach you to build it yourself, so you own it.",
+    "Free, open learning for Filipino online professionals: eleven ordered steps, twenty-two niches, and a source under every number.",
   applicationName: "Hire From PH",
   keywords: [
     "online jobs Philippines",
@@ -35,9 +35,9 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Hire From PH — Build the online career you own.",
+    title: "Hire From PH — Build the online career you keep.",
     description:
-      "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, taxes, and becoming layoff-proof.",
+      "Free, open learning for Filipino online professionals. Eleven ordered steps, and a link to the source under every number.",
     url: BASE_URL,
     siteName: "Hire From PH",
     locale: "en_PH",
@@ -45,9 +45,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire From PH — Build the online career you own.",
+    title: "Hire From PH — Build the online career you keep.",
     description:
-      "Open learning for Filipino online professionals. Real talk on AI, direct clients, pay, and becoming layoff-proof.",
+      "Free, open learning for Filipino online professionals. Eleven ordered steps, and a link to the source under every number.",
   },
   robots: { index: true, follow: true },
 };

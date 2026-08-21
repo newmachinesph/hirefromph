@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMeta({
   path: "/level-up",
   title: "Level Up, Stage 4",
   description:
-    "From good to indispensable. Specialize into a high-value niche, automate the repetitive, learn a premium language, and raise your rate.",
+    "Stage 4: pick one niche and go deep. Automate what repeats, add a premium language, and raise your rate on evidence you can show.",
 });
 
 export default function Page() {

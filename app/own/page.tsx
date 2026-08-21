@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMeta({
   path: "/own",
   title: "Own, Stage 5",
   description:
-    "The career becomes yours. Go direct, get legit, grow into an end-goal role, then send the ladder back down.",
+    "Stage 5: move to direct clients, register with the BIR and pick the 8% option, then hold the door for whoever is coming up behind you.",
 });
 
 export default function Page() {

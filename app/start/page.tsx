@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMeta({
   path: "/start",
   title: "Start Right, Stage 1",
   description:
-    "Your foundation as an online professional. Set up your workspace, learn the core skills, and build the mindset that lasts. No degree or capital needed.",
+    "Stage 1 for Filipinos with no experience: check your equipment, finish one micro-task with no client, and learn a study protocol you write yourself.",
 });
 
 export default function Page() {
