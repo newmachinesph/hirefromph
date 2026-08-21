@@ -75,7 +75,7 @@
   --dur: 150ms;
 
   /* Layout */
-  --maxw: 1280px;
+  --maxw: 1536px; /* Tailwind screen-2xl */
   --maxw-wide: 1440px;
   --maxw-narrow: 720px;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
