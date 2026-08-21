@@ -9,7 +9,7 @@ afterEach(() => {
 });
 
 function stubDownload() {
-  const createObjectURL = vi.fn((_blob: Blob) => "blob:fake");
+  const createObjectURL = vi.fn<(blob: Blob) => string>(() => "blob:fake");
   const revokeObjectURL = vi.fn();
   vi.stubGlobal("URL", { ...URL, createObjectURL, revokeObjectURL });
   const click = vi.spyOn(HTMLAnchorElement.prototype, "click").mockImplementation(() => {});
@@ -58,7 +58,10 @@ describe("ExportButton", () => {
     );
     await user.click(screen.getByRole("button", { name: /Download CSV/i }));
     const blob = createObjectURL.mock.calls[0][0] as Blob;
-    expect(await blob.text()).toBe("\uFEFFCompany\r\nAcme");
+    // Blob.text() strips a leading BOM (WHATWG decode), so check the raw bytes.
+    const bytes = new Uint8Array(await blob.arrayBuffer());
+    expect([...bytes.slice(0, 3)]).toEqual([0xef, 0xbb, 0xbf]);
+    expect(new TextDecoder().decode(bytes)).toBe("Company\r\nAcme");
   });
 
   it("names the file for assistive technology", () => {
