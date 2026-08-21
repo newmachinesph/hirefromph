@@ -1,0 +1,554 @@
+{
+  "lastVerified": "2026-08",
+  "doctrineNote": "Study it, extract the rules, then close it and write your own.",
+  "examples": [
+    {
+      "id": "resume-junior",
+      "kind": "resume",
+      "title": "A one-page resume for a junior online professional",
+      "route": "/build",
+      "blocks": [
+        {
+          "id": "header",
+          "label": "Header",
+          "text": "J. DELA CRUZ\nBookkeeping and admin support for small online sellers\nQuezon City, Philippines (UTC+8) · [email] · [portfolio link]"
+        },
+        {
+          "id": "summary",
+          "label": "Professional summary",
+          "text": "Bookkeeping and admin support for small e-commerce sellers. Trained on QuickBooks Online and Google Sheets. Reconciled six months of transactions for a family retail business and cut its month-end close from three days to four hours. Looking for a part-time books role with an online seller running 100 to 500 orders a month."
+        },
+        {
+          "id": "skills",
+          "label": "Core skills",
+          "text": "QuickBooks Online · Google Sheets (pivot tables, XLOOKUP, IMPORTRANGE) · bank reconciliation · accounts payable · invoicing and collections · Gmail and Google Calendar management · Notion"
+        },
+        {
+          "id": "experience",
+          "label": "Experience and projects",
+          "text": "Bookkeeping — family retail business (unpaid, Jan–Jun 2026)\n· Reconciled 1,400 transactions across six months, with every month closed inside four hours of the cut-off.\n· Rebuilt the chart of accounts, which cut month-end close from three days to four hours.\n\nAdmin support — community learning centre (pro bono, 2026)\n· Cleared a 380-email backlog in nine days and wrote the SOP the next volunteer now follows.\n\nRetail sales associate (2023–2025)\n· Reconciled daily cash for a two-register store, with no unexplained variance across 18 months."
+        },
+        {
+          "id": "training",
+          "label": "Certifications and training",
+          "text": "QuickBooks Online certification (2026)\nGoogle Sheets, advanced formulas — self-taught, evidenced by the reconciliation tracker at the portfolio link above"
+        },
+        {
+          "id": "languages",
+          "label": "Languages",
+          "text": "Filipino (native) · English (professional working proficiency)"
+        }
+      ],
+      "hotspots": [
+        {
+          "block": "header",
+          "n": 1,
+          "title": "One way to reach you, one way to see the work",
+          "why": "The header exists so a reader who already decided to contact you can do it without hunting, and check your work without asking.",
+          "rule": "One email, one link. No home address, no photo unless the region expects one, no handle you would not read aloud."
+        },
+        {
+          "block": "header",
+          "n": 2,
+          "title": "The line under the name does the sorting",
+          "why": "It tells a recruiter in one second which pile this belongs in, before the summary has to argue for it.",
+          "rule": "Name the work and who it is for, not a job title you hope to be given."
+        },
+        {
+          "block": "summary",
+          "n": 3,
+          "title": "Six seconds, spent on the target role",
+          "why": "This is the only paragraph most readers finish, and it decides whether the rest gets read at all.",
+          "rule": "Two or three lines. Name the role, the tools, and one proof point. Nothing else fits."
+        },
+        {
+          "block": "summary",
+          "n": 4,
+          "title": "One proof point beats five adjectives",
+          "why": "\"Three days to four hours\" can be questioned, checked, and discussed. \"Hardworking\" cannot be any of those.",
+          "rule": "If a sentence would still be true for a stranger, cut it and put a number there instead."
+        },
+        {
+          "block": "skills",
+          "n": 5,
+          "title": "Every item here is an interview question",
+          "why": "The list feeds keyword scanning, and it also hands the interviewer their opening. Both readers use it the same way.",
+          "rule": "List only what survives a 30-second follow-up. If you cannot defend it today, it does not belong here."
+        },
+        {
+          "block": "experience",
+          "n": 6,
+          "title": "The number is the bullet",
+          "why": "Duties prove attendance. Numbers prove outcomes, and outcomes are the only thing a client is buying.",
+          "rule": "Every bullet carries a count, a percentage, a time saved, or a volume handled. No number means the bullet is unfinished."
+        },
+        {
+          "block": "experience",
+          "n": 7,
+          "title": "Unpaid work counts, labelled as unpaid",
+          "why": "Volunteer and pro bono work is real evidence of real output, and hiding the arrangement is the part that would cost you the job.",
+          "rule": "Show the work, name the arrangement. Disclosed unpaid experience is credible; undisclosed paid-sounding experience is not."
+        },
+        {
+          "block": "experience",
+          "n": 8,
+          "title": "The old job, mined for the transferable proof",
+          "why": "A retail job looks irrelevant until it is written as the reconciliation record it was. The proof was always there.",
+          "rule": "Translate old work into the language of the target role, without claiming a title you never held."
+        },
+        {
+          "block": "training",
+          "n": 9,
+          "title": "Only what you can explain",
+          "why": "A course listed but not understood becomes the moment the interview turns, and it turns fast.",
+          "rule": "List a certificate only if you can say in one sentence what you learned and where you used it."
+        },
+        {
+          "block": "languages",
+          "n": 10,
+          "title": "Fluency stated at the level you can defend",
+          "why": "Language claims get tested on the first client call, which is the worst possible place to be found out.",
+          "rule": "Use a named level: native, professional working, conversational. An inflated claim collapses in five minutes."
+        }
+      ]
+    },
+    {
+      "id": "sop-weekly-report",
+      "kind": "sop",
+      "title": "An SOP for the weekly client report",
+      "route": "/build",
+      "blocks": [
+        {
+          "id": "title",
+          "label": "Title block",
+          "text": "SOP · Weekly client report\nOwner: [your name] · Last updated: 2026-08-14 · Version 3"
+        },
+        {
+          "id": "purpose",
+          "label": "Purpose",
+          "text": "So the client can see, in five minutes every Friday, what moved this week, what is at risk, and what needs a decision from him."
+        },
+        {
+          "id": "tools",
+          "label": "Tools and access needed",
+          "text": "Google Sheets — \"Ops tracker\", Reports and Tasks tabs (edit access)\nClient analytics dashboard (viewer access)\nGoogle Docs — \"Weekly report\" template (edit access)\nGmail, sending from the client's domain"
+        },
+        {
+          "id": "trigger",
+          "label": "Frequency and trigger",
+          "text": "Every Friday at 2 pm Manila time (UTC+8), which is Friday morning for the client. Sent before 4 pm the same day."
+        },
+        {
+          "id": "steps",
+          "label": "Steps",
+          "text": "1. Open the Ops tracker. Filter Status to \"Done\" and Date to the last seven days.\n2. Copy the Done rows into the Weekly report doc, under \"Shipped\".\n3. Filter Status to \"At risk\". Copy those rows under \"At risk\".\n4. For each at-risk row, write one sentence naming the cause, not the symptom.\n5. Open the analytics dashboard. Record the three agreed numbers in the \"Numbers\" table.\n6. Write the top line: on track, at risk, or blocked. One word, first line of the doc.\n7. Write \"Needs a decision\": each item, the options, your recommendation, and the date you need an answer.\n8. Read the whole doc out loud once. Delete every sentence that does not change what the client does next.\n9. Paste the doc body into an email. Subject: \"Weekly report · [week ending date] · [status word]\".\n10. Send, then paste the sent link into the Reports tab of the Ops tracker."
+        },
+        {
+          "id": "mistakes",
+          "label": "Common mistakes (real ones)",
+          "text": "· Week ending 12 June: sent with last week's numbers, because step 5 was done from memory. Step 5 now comes before any writing.\n· Twice, the top line said \"on track\" while At risk held two items. The top line is written after the sections, never before.\n· Sending at 6 pm Manila lands after the client's Friday has ended. It sits unread until Monday, and the decisions slip a week."
+        },
+        {
+          "id": "done",
+          "label": "Definition of done",
+          "text": "The email is sent before 4 pm Friday Manila time, the sent link is in the Reports tab, and every item under \"Needs a decision\" carries a named option, a recommendation, and a date."
+        }
+      ],
+      "hotspots": [
+        {
+          "block": "title",
+          "n": 1,
+          "title": "An owner and a date, at the top",
+          "why": "A document with no owner and no date is one nobody updates and everybody half-trusts.",
+          "rule": "Name the owner and stamp the date. A stale SOP is worse than none, because people follow it."
+        },
+        {
+          "block": "purpose",
+          "n": 2,
+          "title": "One sentence, written from the reader's side",
+          "why": "The purpose says what the process is for, so anyone following it understands the goal instead of only the motions.",
+          "rule": "One sentence. If you cannot write it, you do not understand the process well enough to document it yet."
+        },
+        {
+          "block": "tools",
+          "n": 3,
+          "title": "Exact names, and the access level",
+          "why": "\"The tracker\" costs the next person a message and a day. The tab name and the permission level cost you eight words.",
+          "rule": "Name the exact tool, the exact file, the exact tab, and the access needed. Never a category."
+        },
+        {
+          "block": "trigger",
+          "n": 4,
+          "title": "A trigger is a time or an event",
+          "why": "\"Weekly\" gets run on Tuesday by the next person, and the client's Friday decision does not happen.",
+          "rule": "State a clock time with a zone, or a named event. \"Weekly\" is not a trigger."
+        },
+        {
+          "block": "steps",
+          "n": 5,
+          "title": "One action per numbered step",
+          "why": "A step joining two actions with \"and\" is the step people half-complete, and nobody can tell which half.",
+          "rule": "Start each step with an imperative verb. If you write \"then\", that is a new step."
+        },
+        {
+          "block": "steps",
+          "n": 6,
+          "title": "The step that carries the judgment",
+          "why": "Step 4 is the only one that cannot be done mechanically, so it is written as an instruction about thinking, not clicking.",
+          "rule": "When a step needs judgment, name the standard it has to meet. Cause, not symptom."
+        },
+        {
+          "block": "steps",
+          "n": 7,
+          "title": "An editing rule inside the procedure",
+          "why": "Step 8 stops the report bloating over months into something the client stops reading.",
+          "rule": "Build the quality check into the steps. A rule you have to remember is a rule you will skip."
+        },
+        {
+          "block": "mistakes",
+          "n": 8,
+          "title": "Real mistakes, with dates on them",
+          "why": "Dated failures are believable and specific, so the next person avoids them instead of skimming past a generic warning.",
+          "rule": "Record mistakes that happened, with the date and the fix. Never invent a hypothetical one."
+        },
+        {
+          "block": "done",
+          "n": 9,
+          "title": "A condition you can check, not a feeling",
+          "why": "Without it, \"finished\" means something different to you, to the client, and to whoever covers for you next month.",
+          "rule": "Write done as a checkable fact. \"Sent and logged\" beats \"it looks good\" every time."
+        }
+      ]
+    },
+    {
+      "id": "status-update-message",
+      "kind": "message",
+      "title": "A status update that gets a decision, not a reply",
+      "route": "/english",
+      "blocks": [
+        {
+          "id": "subject",
+          "label": "Subject line",
+          "text": "Weekly report · week ending 14 Aug · at risk (launch moves 2 days)"
+        },
+        {
+          "id": "bottomline",
+          "label": "Line one: the bottom line",
+          "text": "Status: at risk. The store launch moves from Tuesday to Thursday. One decision needed from you today."
+        },
+        {
+          "id": "done",
+          "label": "Done since the last update",
+          "text": "Product pages: 48 of 48 built and proofread.\nPayment gateway connected and tested with two live transactions of ₱[amount], both refunded.\nShipping rates loaded for Luzon, Visayas, and Mindanao."
+        },
+        {
+          "id": "risk",
+          "label": "What is at risk, and why",
+          "text": "The supplier's product photos arrived at 1,200 px, half the width the theme needs. Re-shooting is not possible this week. Upscaling them looks soft on desktop, and the product page is where the sale happens."
+        },
+        {
+          "id": "recommendation",
+          "label": "Recommendation",
+          "text": "I recommend launching Thursday with the 18 best photos re-cropped, and holding the other 30 products as \"coming soon\". The alternative is launching Tuesday with soft images on every page, which I would not do to a first impression."
+        },
+        {
+          "id": "ask",
+          "label": "What I need, and by when",
+          "text": "Your yes or no on the Thursday date by 6 pm your time today. If I have not heard by then I will proceed with Thursday, because the re-crop has to start tomorrow morning."
+        },
+        {
+          "id": "next",
+          "label": "Next check-in",
+          "text": "Next update Wednesday 9 am your time, or sooner if the date moves again."
+        },
+        {
+          "id": "signoff",
+          "label": "Sign-off",
+          "text": "— [your name]"
+        }
+      ],
+      "hotspots": [
+        {
+          "block": "subject",
+          "n": 1,
+          "title": "The subject line carries the status",
+          "why": "It is read on a phone lock screen, hours before the message is opened, and it sets whether the message gets opened at all.",
+          "rule": "Put the status and the change in the subject. Never send a subject that only names the topic."
+        },
+        {
+          "block": "bottomline",
+          "n": 2,
+          "title": "The decision is in sentence one",
+          "why": "A reader who stops after twelve words still knows what happened and that something is needed from him.",
+          "rule": "Bottom line first: the status, the change, and whether you need something. Context comes after, for whoever wants it."
+        },
+        {
+          "block": "done",
+          "n": 3,
+          "title": "Finished things, counted",
+          "why": "\"48 of 48\" is checkable. \"Made good progress\" asks the client to take your word for it every week.",
+          "rule": "Report closed work with counts. In-progress items belong under risk, not under done."
+        },
+        {
+          "block": "risk",
+          "n": 4,
+          "title": "The cause, not the symptom",
+          "why": "Naming the pixel width lets the client judge the risk himself instead of judging your mood about it.",
+          "rule": "State the specific cause in one sentence. \"Some issues came up\" is a symptom, and it moves nothing."
+        },
+        {
+          "block": "recommendation",
+          "n": 5,
+          "title": "End with a recommendation, not a question",
+          "why": "\"What should I do?\" moves the problem to the client's desk. A recommendation leaves it on yours and asks only for a yes.",
+          "rule": "Always propose. Give the alternative and say why you rejected it, in one line each."
+        },
+        {
+          "block": "ask",
+          "n": 6,
+          "title": "Silence means yes, because you said so",
+          "why": "A deadline plus a default turns a blocking question into a decision that happens whether or not he answers.",
+          "rule": "Name what you need, the time you need it by, and what you will do if nothing arrives."
+        },
+        {
+          "block": "next",
+          "n": 7,
+          "title": "Name the next contact",
+          "why": "It removes the quiet question every client carries about a remote worker: when will I hear from this person again?",
+          "rule": "End every update with the date of the next one. Then send it on that date."
+        },
+        {
+          "block": "signoff",
+          "n": 8,
+          "title": "No apology anywhere in this message",
+          "why": "Nothing was broken, so nothing needs an apology. The slip is reported, priced in days, and already handled.",
+          "rule": "Save sorry for what you broke. Apologising for reporting news trains the client to read you as junior."
+        }
+      ]
+    },
+    {
+      "id": "supplier-invoice",
+      "kind": "invoice",
+      "title": "A supplier invoice from a registered professional",
+      "route": "/legit",
+      "blocks": [
+        {
+          "id": "header",
+          "label": "Document header",
+          "text": "INVOICE\nNo. 2026-014\nIssued: 2026-08-14 · Due: 2026-08-28 (Net 14)"
+        },
+        {
+          "id": "from",
+          "label": "From — you, the supplier",
+          "text": "[Your registered name]\nSelf-employed professional · TIN [TIN]\n[address line] · [email] · [mobile]"
+        },
+        {
+          "id": "to",
+          "label": "Bill to",
+          "text": "[Client legal entity name]\n[Client billing address]\nAttn: [name], [role] · [email]"
+        },
+        {
+          "id": "reference",
+          "label": "Reference",
+          "text": "Retainer agreement dated 2026-05-01\nPeriod covered: 1–31 July 2026\nClient reference / PO: [client reference]"
+        },
+        {
+          "id": "lines",
+          "label": "Line items",
+          "text": "1. Inbox and calendar management, 1–31 July 2026 — 20.0 hrs @ ₱[amount]/hr — ₱[amount]\n2. Weekly client report ×4 (weeks ending 5, 12, 19, 26 July 2026) — fixed fee — ₱[amount]\n3. CRM data cleanup, agreed by email 12 July 2026 — 6.0 hrs @ ₱[amount]/hr — ₱[amount]"
+        },
+        {
+          "id": "totals",
+          "label": "Totals",
+          "text": "Subtotal — ₱[amount]\nWithholding tax, where applicable (BIR Form 2307 to be issued) — ₱[amount]\nTotal due — ₱[amount]"
+        },
+        {
+          "id": "terms",
+          "label": "Payment terms",
+          "text": "Net 14 from the issue date. Work on the following period pauses if an invoice is 7 days past due. Sender-side transfer charges are the sender's."
+        },
+        {
+          "id": "remit",
+          "label": "Remittance details",
+          "text": "[bank name] · Account name: [registered name] · Account number: [account number] · SWIFT: [code]\nOr: [transfer service] to [registered name], [email on file]"
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "text": "Questions about this invoice: [email]. Please quote invoice no. 2026-014 on the transfer."
+        }
+      ],
+      "hotspots": [
+        {
+          "block": "header",
+          "n": 1,
+          "title": "A sequential number, never reused",
+          "why": "It is how you and the client both find this document again during a payment dispute, an audit, or a tax filing.",
+          "rule": "Number invoices in an unbroken sequence. Never reuse one, never skip one, never leave one unnumbered."
+        },
+        {
+          "block": "header",
+          "n": 2,
+          "title": "Two dates, not one",
+          "why": "An issue date alone leaves \"when is this due\" to interpretation, and interpretation always favours the payer.",
+          "rule": "Print the issue date and the due date, and put the terms next to them in words."
+        },
+        {
+          "block": "from",
+          "n": 3,
+          "title": "The TIN turns you from a favour into a supplier",
+          "why": "A company's finance team needs a taxpayer identity to book the payment at all. Without it you are an expense nobody can file.",
+          "rule": "Show your registered name and TIN exactly as they appear on your certificate of registration."
+        },
+        {
+          "block": "to",
+          "n": 4,
+          "title": "Bill the entity, address a human",
+          "why": "The legal entity is who owes the money. The named person is who moves it, and the invoice reaches neither by accident.",
+          "rule": "Address the legal entity, then name one person and their role for the attention line."
+        },
+        {
+          "block": "reference",
+          "n": 5,
+          "title": "The period covered, spelled out",
+          "why": "It is the first thing questioned when two invoices arrive close together, and the fastest question to close.",
+          "rule": "State the agreement it comes from and the exact dates it covers. Both, on every invoice."
+        },
+        {
+          "block": "lines",
+          "n": 6,
+          "title": "Each line names the service and the period",
+          "why": "\"Services rendered\" gets held for a query, and a held invoice becomes a late invoice without anyone deciding to be late.",
+          "rule": "Every line: what it was, when it was, how it was measured, what it costs. No line item is self-evident."
+        },
+        {
+          "block": "lines",
+          "n": 7,
+          "title": "The out-of-scope item, approved in writing, billed separately",
+          "why": "Line 3 sits outside the retainer, so it appears with the date of the email that approved it, on its own line.",
+          "rule": "Bill extra work as its own line, with the date it was approved. Buried extras look like padding."
+        },
+        {
+          "block": "totals",
+          "n": 8,
+          "title": "The withholding line, before it surprises you",
+          "why": "A Philippine client may remit less than the total and send a 2307 for the difference. That is normal, and it is not a shortfall.",
+          "rule": "Show withholding as its own line so the amount landing in your account is never a surprise."
+        },
+        {
+          "block": "terms",
+          "n": 9,
+          "title": "A consequence, not just a due date",
+          "why": "A due date with nothing behind it is a wish. A stated pause is the only leverage most freelance contracts carry.",
+          "rule": "State what happens when payment is late, in the same sentence as the term. Then hold to it."
+        },
+        {
+          "block": "remit",
+          "n": 10,
+          "title": "One rail, spelled out, so nobody improvises",
+          "why": "Vague payment details invite a client to pick the cheapest route for himself, and the spread comes out of your rate.",
+          "rule": "Name one payment method and the exact details. Offer a second only if you tested what lands from each."
+        }
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "id": "late-delivery",
+      "route": "/english",
+      "title": "Telling a client you will be late",
+      "before": "Hi Sir, sorry to bother you! I just wanted to give a quick update on the report. I think there might be a small delay, some things came up on my end and the data was a bit messy. I'm doing my best po. Sorry again! Please revert back if that's a problem, thank you!",
+      "after": "The July report moves from Friday to Tuesday.\n\nCause: 40 rows in the tracker have dates typed as text, so the totals do not add up. I found it Thursday morning.\n\nWhat I am doing: cleaning the 40 rows by hand today, then rebuilding the totals. Tuesday 9 am your time is a date I can hold.\n\nWhat I need: nothing, unless Friday is fixed for a reason I do not know about. Tell me before 5 pm today if it is.",
+      "changes": [
+        {
+          "from": "sorry to bother you! I just wanted to give a quick update on the report",
+          "to": "The July report moves from Friday to Tuesday.",
+          "why": "Twelve words of throat-clearing became the news itself. The reader knows the outcome before deciding whether to keep reading."
+        },
+        {
+          "from": "I think there might be a small delay",
+          "to": "moves from Friday to Tuesday",
+          "why": "Two hedges and a vague size became a specific date, which is the only part a client can plan around."
+        },
+        {
+          "from": "some things came up on my end and the data was a bit messy",
+          "to": "40 rows in the tracker have dates typed as text",
+          "why": "The cause replaced the symptom, so the client can judge the risk instead of trusting your read on it."
+        },
+        {
+          "from": "I'm doing my best po. Sorry again!",
+          "to": "cleaning the 40 rows by hand today, then rebuilding the totals",
+          "why": "Effort is not a plan. Naming the fix and the sequence shows the problem is already under control."
+        },
+        {
+          "from": "Please revert back if that's a problem, thank you!",
+          "to": "Tell me before 5 pm today if it is.",
+          "why": "Dated business English and an open-ended request became a deadline, so silence is an answer and you are never blocked."
+        }
+      ]
+    },
+    {
+      "id": "clarification",
+      "route": "/english",
+      "title": "Asking a question without looking lost",
+      "before": "Hi po, just wanted to check, who is this campaign for exactly? Sorry, I wasn't sure and I didn't want to assume anything. I'll hold off until I hear from you. Let me know when you can, thanks!",
+      "after": "I'm assuming this campaign targets existing US customers only, not new leads and not the AU list. I'll build it that way and have a draft to you Thursday. Tell me before noon tomorrow if that's wrong.",
+      "changes": [
+        {
+          "from": "Hi po, just wanted to check, who is this campaign for exactly?",
+          "to": "I'm assuming this campaign targets existing US customers only, not new leads and not the AU list.",
+          "why": "An open question hands the thinking back to the client. A stated assumption shows you already did it and names the edges."
+        },
+        {
+          "from": "Sorry, I wasn't sure and I didn't want to assume anything.",
+          "to": "",
+          "why": "Two apologies for asking a normal question. Neither carries information, and both cost standing with a client who has no other read on you."
+        },
+        {
+          "from": "I'll hold off until I hear from you.",
+          "to": "I'll build it that way and have a draft to you Thursday.",
+          "why": "Waiting turns a two-line question into a lost week. Moving on a stated assumption keeps the work alive and covers you if it was wrong."
+        },
+        {
+          "from": "Let me know when you can, thanks!",
+          "to": "Tell me before noon tomorrow if that's wrong.",
+          "why": "A deadline makes silence a decision, so you are never blocked and never at fault for having started."
+        }
+      ]
+    },
+    {
+      "id": "rate-increase",
+      "route": "/english",
+      "title": "Raising your rate with a client you like",
+      "before": "Hi Sir! I hope this message finds you well. Sorry to bring this up, but I was hoping, if it's okay, maybe we could possibly discuss my rate? I've been working with you for a while now and prices have gone up. But I totally understand if it's not possible right now! Thank you po for everything.",
+      "after": "From the October cycle I'm moving to ₱[amount] per hour, up from ₱[amount].\n\nWhy: over the last three months the work grew from inbox and calendar into the CRM and the weekly report, and I now run the report without you reviewing it. The scope in the May agreement no longer matches what I do.\n\nWhat stays the same: the 20-hour cap, the Friday report, and my response window.\n\nIf the new rate doesn't work, I'd rather cut scope than quality. Tell me by 30 September and we'll pick which items I keep.",
+      "changes": [
+        {
+          "from": "I hope this message finds you well. Sorry to bring this up, but",
+          "to": "From the October cycle I'm moving to ₱[amount] per hour",
+          "why": "Filler plus a reflex apology delayed the point by twenty words. The new rate and its start date now come first."
+        },
+        {
+          "from": "I was hoping, if it's okay, maybe we could possibly discuss my rate?",
+          "to": "I'm moving to ₱[amount] per hour, up from ₱[amount].",
+          "why": "Four hedges in one sentence read as asking permission. A stated decision with both numbers reads as a supplier's notice."
+        },
+        {
+          "from": "I've been working with you for a while now and prices have gone up.",
+          "to": "the work grew from inbox and calendar into the CRM and the weekly report",
+          "why": "Tenure and inflation are your reasons. Expanded scope is his, and it is the one he can check against his own records."
+        },
+        {
+          "from": "But I totally understand if it's not possible right now!",
+          "to": "If the new rate doesn't work, I'd rather cut scope than quality.",
+          "why": "The retreat became a trade-off. He now chooses between two real options instead of being handed an exit."
+        },
+        {
+          "from": "Thank you po for everything.",
+          "to": "Tell me by 30 September and we'll pick which items I keep.",
+          "why": "A closing pleasantry became a date, which is what turns a message into a decision rather than a topic."
+        }
+      ]
+    }
+  ]
+}
