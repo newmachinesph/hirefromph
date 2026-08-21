@@ -50,7 +50,10 @@ describe("accent map", () => {
       if (node && typeof node === "object") {
         for (const [key, value] of Object.entries(node as Record<string, unknown>)) {
           const nextPath = keyPath ? `${keyPath}.${key}` : key;
-          if ((key === "accent" || key === "tone") && typeof value === "string") {
+          // `hero.accent` is the headline's trailing segment (see `Heading accent`
+          // and `PageHero accent`), not a colour id — skip that convention.
+          const isHeadlineSegment = key === "accent" && keyPath.endsWith("hero");
+          if ((key === "accent" || key === "tone") && typeof value === "string" && !isHeadlineSegment) {
             if (!isAccent(value)) offenders.push(`${file}:${nextPath} = "${value}"`);
           }
           walk(value, file, nextPath);
