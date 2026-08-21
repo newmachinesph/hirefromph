@@ -5,6 +5,7 @@ import userEvent from "@testing-library/user-event";
 import { Field } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
+import { Checkbox } from "@/components/ui/checkbox";
 
 function describedText(el: HTMLElement) {
   const ids = (el.getAttribute("aria-describedby") ?? "").split(" ").filter(Boolean);
@@ -88,5 +89,26 @@ describe("Switch", () => {
     );
     await userEvent.click(screen.getByRole("switch", { name: "Low-data mode" }));
     expect(onChange).not.toHaveBeenCalled();
+  });
+
+  it("toggles when the label text is clicked", async () => {
+    function Harness() {
+      const [on, setOn] = useState(false);
+      return <Switch checked={on} onChange={setOn} label="Comfortable reading" />;
+    }
+    render(<Harness />);
+    const control = screen.getByRole("switch", { name: "Comfortable reading" });
+    expect(control).toHaveAttribute("aria-checked", "false");
+    await userEvent.click(screen.getByText("Comfortable reading"));
+    expect(control).toHaveAttribute("aria-checked", "true");
+  });
+});
+
+describe("Checkbox", () => {
+  it("gives its label a 44px-minimum touch target", () => {
+    render(<Checkbox label="Subscribe to updates" />);
+    const label = screen.getByText("Subscribe to updates");
+    expect(label.tagName).toBe("LABEL");
+    expect(label).toHaveClass("min-h-11");
   });
 });

@@ -17,15 +17,18 @@ export function Radio({
   const ownId = useId();
   const controlId = id ?? field.id ?? ownId;
   return (
-    <div className={cn("flex items-start gap-2.5", className)}>
+    <div className={cn("flex items-center gap-2.5", className)}>
       <input
         {...rest}
         type="radio"
         id={controlId}
         aria-describedby={describedBy ?? field.describedBy}
-        className="mt-0.5 h-5 w-5 shrink-0 border border-control accent-primary disabled:cursor-not-allowed"
+        className="h-5 w-5 shrink-0 border border-control accent-primary disabled:cursor-not-allowed"
       />
-      <label htmlFor={controlId} className="text-base text-ink">
+      <label
+        htmlFor={controlId}
+        className="flex min-h-11 cursor-pointer items-center py-2 text-base text-ink"
+      >
         {label}
       </label>
     </div>

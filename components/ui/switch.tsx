@@ -40,22 +40,32 @@ export function Switch({
         disabled={disabled}
         onClick={() => onChange(!checked)}
         className={cn(
-          "relative inline-flex h-6 w-11 shrink-0 items-center rounded-pill border transition-colors duration-150 ease-out",
-          checked ? "border-primary bg-primary" : "border-control bg-band",
+          "inline-flex min-h-11 min-w-11 shrink-0 items-center justify-center",
           disabled && "cursor-not-allowed opacity-50",
         )}
       >
         <span
           aria-hidden
           className={cn(
-            "ml-0.5 h-5 w-5 rounded-pill bg-paper transition-transform duration-150 ease-out",
-            checked && "translate-x-5",
+            "relative inline-flex h-6 w-11 items-center rounded-pill border transition-colors duration-150 ease-out",
+            checked ? "border-primary bg-primary" : "border-control bg-band",
           )}
-        />
+        >
+          <span
+            className={cn(
+              "ml-0.5 h-5 w-5 rounded-pill bg-paper transition-transform duration-150 ease-out",
+              checked && "translate-x-5",
+            )}
+          />
+        </span>
       </button>
-      <span id={labelId} className={cn("text-base text-ink", hideLabel && "sr-only")}>
+      <label
+        htmlFor={controlId}
+        id={labelId}
+        className={cn("cursor-pointer text-base text-ink", hideLabel && "sr-only")}
+      >
         {label}
-      </span>
+      </label>
     </div>
   );
 }

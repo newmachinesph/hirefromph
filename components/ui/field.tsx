@@ -27,7 +27,7 @@ export function useFieldControl(): FieldContextValue {
 
 /** Shared control chrome. `border-control` is the 3:1 UI-minimum grey. */
 export const controlClass =
-  "w-full rounded-sm border border-control bg-paper px-3 py-2 text-base text-ink transition-colors duration-150 ease-out placeholder:text-ink-faint hover:border-ink-faint focus:border-primary disabled:cursor-not-allowed disabled:bg-band disabled:text-ink-faint";
+  "w-full min-h-11 rounded-sm border border-control bg-paper px-3 py-2 text-base text-ink transition-colors duration-150 ease-out placeholder:text-ink-faint hover:border-ink-faint focus:border-primary disabled:cursor-not-allowed disabled:bg-band disabled:text-ink-faint";
 
 export type FieldProps = {
   label: ReactNode;
