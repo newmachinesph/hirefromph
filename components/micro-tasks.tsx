@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import tasksData from "@/data/tasks.json";
@@ -72,9 +74,13 @@ function Linkify({ text }: { text: string }) {
     <>
       {parts.map((part, i) =>
         KNOWN_ROUTES.includes(part) ? (
-          <Button key={i} href={part} variant="link">
+          <Link
+            key={i}
+            href={part}
+            className="font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors duration-150 hover:text-primary-deep"
+          >
             {part}
-          </Button>
+          </Link>
         ) : (
           part
         ),
