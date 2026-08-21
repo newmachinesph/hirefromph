@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { StagePage } from "@/components/stage-page";
+import { StagePage } from "@/components/journey";
 import { pageMeta } from "@/lib/meta";
 
 export const metadata: Metadata = pageMeta({
