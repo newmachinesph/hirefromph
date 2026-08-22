@@ -1,0 +1,306 @@
+{
+  "slug": "beyond-the-call-center-human-intelligence-outsourcing",
+  "title": "Beyond the Call Center: How Human Intelligence Outsourcing Could Power the Philippines' Next BPO Boom",
+  "description": "Philippine BPO is not collapsing, it is changing. The case for Human Intelligence Outsourcing: Filipino judgment that trains, tests and supervises AI systems.",
+  "kicker": "Insights · Industry",
+  "author": {
+    "name": "newmachinesph",
+    "role": "Founder, Hire From PH"
+  },
+  "published": "2026-08-22",
+  "figuresVerified": "2026-08",
+  "keywords": [
+    "Human Intelligence Outsourcing",
+    "Philippine BPO and AI",
+    "RLHF jobs Philippines",
+    "AI training data Philippines",
+    "IT-BPM Roadmap 2028"
+  ],
+  "tags": [
+    "Industry",
+    "AI",
+    "BPO",
+    "Careers"
+  ],
+  "hero": {
+    "src": "hero.jpg",
+    "alt": "A contact-center floor at night, seen from behind a row of agents in headsets, their monitors glowing and city lights visible through the window",
+    "caption": "Illustrative image",
+    "credit": ""
+  },
+  "pullQuotes": [
+    "This is a structural transition, and the question is which side of that line Filipino workers are standing on.",
+    "Empathy and English got the Philippines into the room. They will not, on their own, keep it there.",
+    "Supplying anonymous labour to a foreign platform is a subcontracting opportunity. Owning the platform is a national one."
+  ],
+  "disclaimer": "Human Intelligence Outsourcing (HIO) is a proposed industry concept and category coined in this article. It is not an official IBPAP classification and is not used by IBPAP, Scale AI or any other organisation unless a cited source says so.",
+  "sources": [
+    {
+      "n": 1,
+      "publisher": "Newsbytes (reporting IBPAP)",
+      "title": "Converge, IBPAP team up on AI upskilling for BPO workers",
+      "date": "2026-07-03",
+      "url": "https://newsbytes.ph/2026/07/03/converge-ibpap-team-up-on-ai-upskilling-for/"
+    },
+    {
+      "n": 2,
+      "publisher": "AMRO (ASEAN+3 Macroeconomic Research Office)",
+      "title": "Can the Philippines IT-BPM Industry Stay Ahead Amid the AI Wave?",
+      "date": "2025-12-10",
+      "url": "https://amro-asia.org/can-the-philippines-it-bpm-industry-stay-ahead-amid-the-ai-wave"
+    },
+    {
+      "n": 3,
+      "publisher": "Inquirer Technology",
+      "title": "AI vs AI: PH gov't uses job security threat to train BPO workers",
+      "date": "2018-05-24",
+      "url": "https://technology.inquirer.net/76052/ai-vs-ai-ph-govt-uses-job-security-threat-train-bpo-workers-bpo-dti-call-centers-artificial-intelligence-employment-jobless-it"
+    },
+    {
+      "n": 4,
+      "publisher": "Philippine Daily Inquirer (reporting IBPAP)",
+      "title": "IT-business process management revenues top $40B in 2025",
+      "date": "2026-01-29",
+      "url": "https://business.inquirer.net/571179/it-bpm-revenues-top-40b"
+    },
+    {
+      "n": 5,
+      "publisher": "Philstar / The Freeman (reporting CXAP)",
+      "title": "Philippines contact center industry braces for AI-driven future",
+      "date": "2026-05-29",
+      "url": "https://www.philstar.com/the-freeman/cebu-business/2026/05/29/2531292/philippines-contact-center-industry-braces-ai-driven-future"
+    },
+    {
+      "n": 6,
+      "publisher": "Newsbytes (reporting IBPAP)",
+      "title": "IBPAP sets skills-focused agenda for 2026 as AI reshapes IT-BPM industry",
+      "date": "2026-01-30",
+      "url": "https://newsbytes.ph/2026/01/30/ibpap-sets-skills-focused-agenda-for-2026-as-ai-reshapes-it-bpm-industry/"
+    },
+    {
+      "n": 7,
+      "publisher": "BusinessMirror (reporting IBPAP)",
+      "title": "IT-BPM cuts 2028 targets, but keeps 2026 growth intact",
+      "date": "2026-07-15",
+      "url": "https://businessmirror.com.ph/2026/07/15/it-bpm-cuts-2028-targets-but-keeps-2026-growth-intact/"
+    },
+    {
+      "n": 8,
+      "publisher": "Manila Bulletin (reporting IBPAP)",
+      "title": "IBPAP launches industry pride campaign to reach 2.5-M jobs by 2028",
+      "date": "2024-03-06",
+      "url": "https://mb.com.ph/2024/3/6/ibpap-launches-industry-pride-campaign-to-reach-2-5-m-jobs-by-2028"
+    },
+    {
+      "n": 9,
+      "publisher": "IMF, Cucio & Hennig (abstract via RePEc)",
+      "title": "Artificial Intelligence and the Philippine Labor Market: Mapping Occupational Exposure and Complementarity (WP/2025/043)",
+      "date": "2025-02",
+      "url": "https://ideas.repec.org/p/imf/imfwpa/2025-043.html"
+    },
+    {
+      "n": 10,
+      "publisher": "ILO, Phu Huynh",
+      "title": "Generative AI and jobs in the Philippines: Labour market exposure and policy implications",
+      "date": "2026-02-05",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-philippines-labour-market-exposure-and-policy"
+    },
+    {
+      "n": 11,
+      "publisher": "ILO",
+      "title": "One in four jobs at risk of being transformed by GenAI, new ILO–NASK global index shows",
+      "date": "2025-05-20",
+      "url": "https://www.ilo.org/resource/news/one-four-jobs-risk-being-transformed-genai-new-ilo%E2%80%93nask-global-index-shows"
+    },
+    {
+      "n": 12,
+      "publisher": "World Bank",
+      "title": "AI Offers Lifeline to Developing Economies in an Era of Weak Growth (World Development Report 2026 press release)",
+      "date": "2026-08-04",
+      "url": "https://www.worldbank.org/en/news/press-release/2026/08/04/ai-offers-lifeline-to-developing-economies-in-an-era-of-weak-growth"
+    },
+    {
+      "n": 13,
+      "publisher": "NBER, Brynjolfsson, Li & Raymond (published in the Quarterly Journal of Economics, 2025)",
+      "title": "Generative AI at Work (Working Paper 31161)",
+      "date": "2023-04",
+      "url": "https://www.nber.org/papers/w31161"
+    },
+    {
+      "n": 14,
+      "publisher": "Stanford Digital Economy Lab, Brynjolfsson, Chandar & Chen",
+      "title": "No Widespread Displacement, but the AI Employment Gap for Young Workers Has Widened to 19%",
+      "date": "2026-08-12",
+      "url": "https://digitaleconomy.stanford.edu/news/canariesaug26/"
+    },
+    {
+      "n": 15,
+      "publisher": "Manila Bulletin",
+      "title": "Balisacan says AI threat to Philippine BPO jobs may be overstated",
+      "date": "2026-08-14",
+      "url": "https://mb.com.ph/2026/08/14/balisacan-says-ai-threat-to-philippine-bpo-jobs-may-be-overstated"
+    },
+    {
+      "n": 16,
+      "publisher": "U.S. International Trade Administration",
+      "title": "Philippines – Strategic Technologies (Country Commercial Guide)",
+      "date": "2025-12",
+      "url": "https://www.trade.gov/country-commercial-guides/philippines-strategic-technologies"
+    },
+    {
+      "n": 17,
+      "publisher": "TechCrunch",
+      "title": "Mercor quintuples valuation to $10B with $350M Series C",
+      "date": "2025-10-27",
+      "url": "https://techcrunch.com/2025/10/27/mercor-quintuples-valuation-to-10b-with-350m-series-c/"
+    },
+    {
+      "n": 18,
+      "publisher": "TechCrunch",
+      "title": "Scale AI confirms 'significant' investment from Meta, says CEO Alexandr Wang is leaving",
+      "date": "2025-06-13",
+      "url": "https://techcrunch.com/2025/06/13/scale-ai-confirms-significant-investment-from-meta-says-ceo-alexandr-wang-is-leaving/"
+    },
+    {
+      "n": 19,
+      "publisher": "Scale AI",
+      "title": "Founder, Alexandr Wang, Joins Meta to Work on AI Efforts",
+      "date": "2025-06-12",
+      "url": "https://scale.com/blog/scale-ai-announces-next-phase-of-company-evolution"
+    },
+    {
+      "n": 20,
+      "publisher": "Sacra (company-reported figures)",
+      "title": "Turing revenue, funding & news",
+      "date": "2025-03",
+      "url": "https://sacra.com/c/turing/"
+    },
+    {
+      "n": 21,
+      "publisher": "EF Education First",
+      "title": "EF English Proficiency Index 2025: Philippines",
+      "date": "2025-11",
+      "url": "https://www.ef.com/wwen/epi/regions/asia/philippines/"
+    },
+    {
+      "n": 22,
+      "publisher": "Human Resources Online",
+      "title": "2025 ranking: English proficiency levels around Asia",
+      "date": "2026-02-04",
+      "url": "https://www.humanresourcesonline.net/2025-ranking-english-proficiency-levels-around-asia"
+    },
+    {
+      "n": 23,
+      "publisher": "transform! europe (republishing Théophile Simon, ETUI HesaMag)",
+      "title": "The Filipino workers at the sharp end of AI",
+      "date": "2026-06-17",
+      "url": "https://transform-network.net/blog/analysis/the-filipino-workers-at-the-sharp-end-of-ai/"
+    },
+    {
+      "n": 24,
+      "publisher": "Business & Human Rights Resource Centre (summarising The Washington Post)",
+      "title": "Philippines: Scale AI creating 'race to the bottom' as outsourced workers face poor conditions in digital sweatshops",
+      "date": "2023-08-30",
+      "url": "https://www.business-humanrights.org/en/latest-news/philippines-scale-ai-creating-race-to-the-bottom-as-outsourced-workers-face-poor-conditions-in-digital-sweatshops-incl-low-wages-withheld-payments/"
+    },
+    {
+      "n": 25,
+      "publisher": "Business Today (reporting Nasscom Strategic Review 2025)",
+      "title": "Indian tech industry to reach $300 billion revenue milestone in FY26: Nasscom",
+      "date": "2025-02-24",
+      "url": "https://www.businesstoday.in/technology/news/story/indian-tech-industry-to-reach-300-billion-revenue-milestone-in-fy26-nasscom-465747-2025-02-24"
+    },
+    {
+      "n": 26,
+      "publisher": "Philstar (reporting the Department of Energy)",
+      "title": "DOE: Philippines power rates now highest in SEA",
+      "date": "2026-07-21",
+      "url": "https://www.philstar.com/headlines/2026/07/21/2543545/doe-philippines-power-rates-now-highest-sea"
+    },
+    {
+      "n": 27,
+      "publisher": "Philippine Institute for Development Studies",
+      "title": "Philippines facing oversupply in IT graduates, STEM shortage",
+      "date": "2021-02-26",
+      "url": "https://www.pids.gov.ph/details/philippines-facing-oversupply-in-it-graduates-stem-shortage"
+    },
+    {
+      "n": 28,
+      "publisher": "PhilSTAR Life (reporting TESDA)",
+      "title": "TESDA offers courses on digital skills, AI for free",
+      "date": "2026-06-01",
+      "url": "https://philstarlife.com/geeky/347531-tesda-offers-ai-digital-skills-courses"
+    },
+    {
+      "n": 29,
+      "publisher": "The Manila Times, Sheila Lobien",
+      "title": "The AI Reckoning: What artificial intelligence means for Philippine jobs, BPO, and real estate",
+      "date": "2026-06-30",
+      "url": "https://www.manilatimes.net/2026/06/30/the-manila-times-500/the-ai-reckoning-what-artificial-intelligence-means-for-philippine-jobs-bpo-and-real-estate/2379588"
+    },
+    {
+      "n": 30,
+      "publisher": "King & Siegel LLP",
+      "title": "Scale AI Pays $12.5 Million Over Claims It Built Its AI Pipeline on Misclassified Workers",
+      "date": "2026-08-04",
+      "url": "https://www.kingsiegel.com/blog/scale-ai-misclassification-settlement-california-class-action/"
+    },
+    {
+      "n": 31,
+      "publisher": "Oxford Internet Institute (Fairwork Cloudwork Ratings 2023)",
+      "title": "New Oxford Report Sheds Light on Labour Malpractices in the Remote Work and AI Booms",
+      "date": "2023-07-20",
+      "url": "https://www.oii.ox.ac.uk/news-events/new-oxford-report-sheds-light-on-labour-malpractices-in-the-remote-work-and-ai-booms/"
+    },
+    {
+      "n": 32,
+      "publisher": "Business & Human Rights Resource Centre (summarising The Washington Post)",
+      "title": "Philippines: Report highlights psychological distress outsourced social media content moderators experience",
+      "date": "2019-07-29",
+      "url": "https://www.business-humanrights.org/en/latest-news/philippines-report-highlights-psychological-distress-outsourced-social-media-content-moderators-experience/"
+    },
+    {
+      "n": 33,
+      "publisher": "PhilSTAR Life, Renso Bajala (BIEN)",
+      "title": "We trained the AI that replaced us",
+      "date": "2026-07-27",
+      "url": "https://philstarlife.com/news-and-views/410656-workers-push-back-against-ai-in-the-bpo-industry"
+    },
+    {
+      "n": 34,
+      "publisher": "GMA News",
+      "title": "Lacking job security, Filipino call center workers face AI threat",
+      "date": "2024-12-03",
+      "url": "https://www.gmanetwork.com/news/money/companies/928904/lacking-job-security-filipino-call-center-workers-face-ai-threat/story/"
+    },
+    {
+      "n": 35,
+      "publisher": "Newsbytes (reporting DOST and the Presidential Communications Office)",
+      "title": "Marcos Jr. approves national AI strategy to position PH as regional AI leader",
+      "date": "2025-05-23",
+      "url": "https://newsbytes.ph/2025/05/23/marcos-jr-approves-national-ai-strategy-to-position-ph-as-regional-ai-leader/"
+    },
+    {
+      "n": 36,
+      "publisher": "Foundation for Media Alternatives",
+      "title": "Regulating Risk: The 20th Congress of the Philippines Response to Artificial Intelligence",
+      "date": "2026-05-28",
+      "url": "https://fma.ph/regulating-risk-the-20th-congress-of-the-philippines-response-to-artificial-intelligence/"
+    }
+  ],
+  "related": [
+    {
+      "label": "See the twenty-two niches",
+      "href": "/niches"
+    },
+    {
+      "label": "Fold AI into your craft",
+      "href": "/ai-first"
+    },
+    {
+      "label": "Check the reality numbers",
+      "href": "/reality"
+    }
+  ],
+  "status": "published"
+}

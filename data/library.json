@@ -248,6 +248,13 @@
       "desc": "What the evidence says about online work here, and what nobody knows."
     },
     {
+      "label": "Insights",
+      "href": "/insights",
+      "group": "more",
+      "type": "guide",
+      "desc": "Evidence-based essays on where Filipino online work is heading."
+    },
+    {
       "label": "For Educators",
       "href": "/educators",
       "group": "more",

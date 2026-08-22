@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -35,9 +36,20 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  // content/insights/<slug>/index.mdx is imported by app/insights/[slug]/page.tsx.
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];
   },
 };
 
-export default nextConfig;
+// Plugin names as strings: Turbopack cannot take plugin functions. remark-gfm for
+// tables, rehype-slug for heading ids (the TOC and deep links depend on them).
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm"],
+    rehypePlugins: ["rehype-slug"],
+  },
+});
+
+export default withMDX(nextConfig);

@@ -142,5 +142,23 @@
     "alt": "Seen from behind, an older woman shows a younger woman something on a laptop at a kitchen table in the evening, a single lamp lighting the scene.",
     "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen or paper, no logos, no posed smiles, nobody looks at the camera. Scene: at a small kitchen table in a Philippine home in the evening, an older Filipina leans in to show a younger woman something on a laptop, both seen from behind and three-quarter so no faces are readable. The laptop screen is a soft, unreadable glow. One warm table lamp and a kitchen light in the background, a plate with bread, a glass of water, a plastic tablecloth. Intimate, quiet, hand-me-down knowledge; nothing staged.",
     "caption": "Illustrative image"
+  },
+  {
+    "id": "insight-hio-hero",
+    "where": "/insights/beyond-the-call-center hero",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "A contact-center floor at night seen from behind a row of agents in headsets, monitors glowing, a city skyline through the window.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen, badge or paper, no logos, no posed smiles, nobody looks at the camera. Scene: a large contact-center floor in a Metro Manila office tower at around two in the morning, photographed from behind a long row of agents in headsets so we see the backs of heads, shoulders and chairs, rows of monitors glowing with soft unreadable interfaces, low partitions, a few desk fans and water bottles, and beyond the floor-to-ceiling windows the lights of the city and the dark sky. Cool fluorescent light mixed with the warm glow of the screens. Wide, slightly elevated camera. Real, tired, working; nothing staged.",
+    "caption": "Illustrative image"
+  },
+  {
+    "id": "insight-hio-expert",
+    "where": "/insights/beyond-the-call-center body",
+    "ratio": "16:9",
+    "size": "1536x1024",
+    "alt": "Three-quarter view from behind of a woman in a plain uniform top comparing two columns of unreadable text on a laptop at a small office desk, pen in hand.",
+    "prompt": "Documentary editorial photograph on a 50mm prime, available light only, slight film grain, honest and unstyled, no added text anywhere in the frame, no readable writing on any screen, badge or paper, no logos, no posed smiles, nobody looks at the camera. Scene: a Filipina in her thirties wearing a plain pale-blue uniform top, seated at a small office desk, photographed from three-quarters behind her left shoulder so her face is not visible. On her laptop two side-by-side columns of softly out-of-focus text, as if she is comparing two answers; a printed page with unreadable lines and a pen in her hand, a cup of coffee, a small potted plant, daylight from a window on the right, blinds half drawn. Quiet, concentrated, a judgment being made. Natural colour, no staging.",
+    "caption": "Illustrative image"
   }
 ]
