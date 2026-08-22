@@ -58,3 +58,6 @@ design/images/raw/
 
 # stale Next build dirs left by concurrent builds
 .next-stale-*/
+
+# Social drafts (posts and graphics) are not part of the site
+social/
