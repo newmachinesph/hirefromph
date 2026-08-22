@@ -7,12 +7,17 @@ import { assetUrl, formatDate, listInsights, type Insight } from "@/lib/insights
 import { pageMeta } from "@/lib/meta";
 import { findNavNeighbours, getBreadcrumb } from "@/lib/nav";
 
-export const metadata: Metadata = pageMeta({
+const INDEX_META = pageMeta({
   path: "/insights",
   title: "Insights",
   description:
     "Evidence-based essays on where Filipino online work is heading: the industry, the tools, the jobs, and what to do about it. Every figure links to its source.",
 });
+
+export const metadata: Metadata = {
+  ...INDEX_META,
+  alternates: { canonical: "/insights", types: { "application/rss+xml": "/insights/feed.xml" } },
+};
 
 function ArticleCard({ insight, featured }: { insight: Insight; featured?: boolean }) {
   return (

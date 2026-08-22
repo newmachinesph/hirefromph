@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articleComponents } from "@/components/insights/mdx";
+import { ShareBar } from "@/components/insights/share-bar";
 import { PageFooterNav, PageHero, Section, Toc } from "@/components/layout";
 import { Button, Callout, Text } from "@/components/ui";
 import { assetUrl, formatDate, getInsight, listInsights } from "@/lib/insights";
@@ -21,17 +22,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const insight = getInsight(slug);
   if (!insight) return {};
   const base = pageMeta({ path: insight.href, title: insight.title, description: insight.description });
+  const banner = { url: `${insight.href}/opengraph-image`, width: 1200, height: 630, alt: insight.title };
   return {
     ...base,
     keywords: insight.keywords,
-    authors: [{ name: insight.author.name }],
+    authors: [{ name: insight.author.name, url: BASE_URL }],
+    category: insight.tags[0],
+    alternates: {
+      canonical: insight.href,
+      types: { "application/rss+xml": "/insights/feed.xml" },
+    },
     openGraph: {
       ...base.openGraph,
       type: "article",
       publishedTime: insight.published,
       modifiedTime: insight.updated ?? insight.published,
       authors: [insight.author.name],
+      section: insight.tags[0],
       tags: insight.tags,
+      images: [banner],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: insight.title,
+      description: insight.description,
+      images: [banner.url],
     },
   };
 }
@@ -52,20 +67,42 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
   const neighbours = findNavNeighbours("/insights");
   const components = articleComponents(insight);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: insight.title,
-    description: insight.description,
-    datePublished: insight.published,
-    dateModified: insight.updated ?? insight.published,
-    author: { "@type": "Person", name: insight.author.name, jobTitle: insight.author.role },
-    publisher: { "@type": "Organization", name: "Hire From PH", url: BASE_URL },
-    image: `${BASE_URL}${assetUrl(insight.slug, insight.hero.src)}`,
-    mainEntityOfPage: `${BASE_URL}${insight.href}`,
-    keywords: insight.keywords.join(", "),
-    wordCount: insight.words,
-  };
+  const pageUrl = `${BASE_URL}${insight.href}`;
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: insight.title,
+      description: insight.description,
+      datePublished: insight.published,
+      dateModified: insight.updated ?? insight.published,
+      author: { "@type": "Organization", name: insight.author.name, url: BASE_URL },
+      publisher: {
+        "@type": "Organization",
+        name: "Hire From PH",
+        url: BASE_URL,
+        logo: { "@type": "ImageObject", url: `${BASE_URL}/icon.svg` },
+      },
+      image: [`${BASE_URL}${insight.href}/opengraph-image`, `${BASE_URL}${assetUrl(insight.slug, insight.hero.src)}`],
+      mainEntityOfPage: { "@type": "WebPage", "@id": pageUrl },
+      url: pageUrl,
+      inLanguage: "en-PH",
+      articleSection: insight.tags[0],
+      keywords: insight.keywords.join(", "),
+      wordCount: insight.words,
+      timeRequired: `PT${insight.minutes}M`,
+      isAccessibleForFree: true,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
+        { "@type": "ListItem", position: 2, name: "Insights", item: `${BASE_URL}/insights` },
+        { "@type": "ListItem", position: 3, name: insight.title, item: pageUrl },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -83,7 +120,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
         <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
           <Text size="small" as="span">
             <span className="font-semibold text-ink">{insight.author.name}</span>
-            <span className="text-ink-faint"> · {insight.author.role}</span>
+            {insight.author.role && <span className="text-ink-faint"> · {insight.author.role}</span>}
           </Text>
           <Text size="small" tone="faint" as="span">
             {formatDate(insight.published)}
@@ -96,6 +133,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             Figures verified · {verifiedLabel(insight.figuresVerified)}
           </Text>
         </div>
+        <ShareBar url={pageUrl} title={insight.title} description={insight.description} className="mt-6" />
         <Toc items={insight.toc} mobile className="mt-8" />
       </PageHero>
 
@@ -122,6 +160,14 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             <div className="prose-insight mt-10">
               <Body components={components} />
             </div>
+
+            <ShareBar
+              url={pageUrl}
+              title={insight.title}
+              description={insight.description}
+              label="Found this useful? Pass it on."
+              className="mt-12 border-t border-line pt-8"
+            />
 
             {insight.disclaimer && (
               <Callout tone="neutral" title="A note on the term" className="mt-12">
