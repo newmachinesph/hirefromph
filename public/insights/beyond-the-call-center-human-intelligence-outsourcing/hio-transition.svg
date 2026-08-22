@@ -1,0 +1,87 @@
+<svg viewBox="14 92 1242 484" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="hio-transition-title hio-transition-desc">
+  <title id="hio-transition-title">From call center to intelligence center</title>
+  <desc id="hio-transition-desc">Two rows compared across the same four slots — client need, work, measured by, deliverable. Traditional BPO runs a repeatable business process through scripted handling, measured by handling time, satisfaction and volume, to produce processed transactions. Human intelligence outsourcing takes an AI system that must be trained, tested and supervised through judgment work, measured by accuracy, agreement, calibration and safety findings, to produce datasets, evaluations, findings and managed review. A dashed arrow from the BPO work to the HIO work reads "same workforce, retrained".</desc>
+
+  <defs>
+    <marker id="hio-transition-arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#4A4F66"/></marker>
+    <marker id="hio-transition-arrow-sm" markerWidth="6" markerHeight="5" refX="5" refY="2.5" orient="auto"><polygon points="0 0, 6 2.5, 0 5" fill="#6B7087"/></marker>
+  </defs>
+
+  <rect x="14" y="92" width="1242" height="484" fill="#FFFFFF"/>
+
+  <!-- Connectors first (z-order). Row 1: BPO -->
+  <line x1="464" y1="216" x2="496" y2="216" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+  <line x1="720" y1="216" x2="752" y2="216" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+  <line x1="976" y1="216" x2="1008" y2="216" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+  <!-- Row 2: HIO -->
+  <line x1="464" y1="496" x2="496" y2="496" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+  <line x1="720" y1="496" x2="752" y2="496" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+  <line x1="976" y1="496" x2="1008" y2="496" stroke="#4A4F66" stroke-width="1" marker-end="url(#hio-transition-arrow)"/>
+
+  <!-- BPO Work to HIO Work: the same people, retrained (dashed, same-x vertical) -->
+  <line x1="608" y1="272" x2="608" y2="440" stroke="#6B7087" stroke-width="1" stroke-dasharray="5,4" marker-end="url(#hio-transition-arrow-sm)"/>
+  <rect x="616" y="348" width="196" height="16" rx="4" fill="#FFFFFF"/>
+  <text x="624" y="360" fill="#6B7087" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="1">SAME WORKFORCE, RETRAINED</text>
+
+  <!-- Row 1 nodes: Traditional BPO -->
+  <rect x="240"  y="160" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+  <rect x="496"  y="160" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+  <rect x="752"  y="160" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+  <rect x="1008" y="160" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+
+  <!-- Row 2 nodes: HIO — Work is the single focal node -->
+  <rect x="240"  y="440" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+  <rect x="496"  y="440" width="224" height="112" rx="8" fill="#EEEDFF" stroke="#4B4EF6" stroke-width="1.2"/>
+  <rect x="752"  y="440" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+  <rect x="1008" y="440" width="224" height="112" rx="8" fill="#FFFFFF" stroke="#CFCFD8" stroke-width="1"/>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <!-- Slot headers -->
+    <g fill="#6B7087" font-size="10" font-weight="600" letter-spacing="1.6" text-anchor="middle">
+      <text x="352"  y="128">CLIENT NEED</text>
+      <text x="608"  y="128">WORK</text>
+      <text x="864"  y="128">MEASURED BY</text>
+      <text x="1120" y="128">DELIVERABLE</text>
+    </g>
+
+    <!-- Row labels -->
+    <g fill="#6B7087" font-size="10" font-weight="600" letter-spacing="1.6">
+      <text x="40" y="200">TODAY</text>
+      <text x="40" y="472">NEXT</text>
+    </g>
+    <g fill="#0E1230" font-size="12" font-weight="600">
+      <text x="40" y="220">Traditional BPO</text>
+      <text x="40" y="492">Human Intelligence</text>
+      <text x="40" y="508">Outsourcing (HIO)</text>
+    </g>
+
+    <!-- Node names -->
+    <g fill="#0E1230" font-size="12" font-weight="600" text-anchor="middle">
+      <text x="352"  y="204">Business process</text>
+      <text x="608"  y="204">Scripted handling</text>
+      <text x="864"  y="204">AHT · CSAT · volume</text>
+      <text x="1120" y="204">Processed transactions</text>
+      <text x="352"  y="484">An AI system</text>
+      <text x="608"  y="484">Judgment</text>
+      <text x="864"  y="484">Accuracy · agreement</text>
+      <text x="1120" y="484">Datasets · evaluations</text>
+    </g>
+
+    <!-- Sublabels -->
+    <g fill="#4A4F66" font-size="10" font-weight="500" text-anchor="middle">
+      <text x="352"  y="224">repeatable</text>
+      <text x="608"  y="224">calls, tickets,</text>
+      <text x="608"  y="240">back-office queues</text>
+      <text x="864"  y="224">handling time,</text>
+      <text x="864"  y="240">satisfaction, count</text>
+      <text x="1120" y="224">closed calls, tickets, cases</text>
+      <text x="352"  y="504">to be trained, tested,</text>
+      <text x="352"  y="520">supervised</text>
+      <text x="608"  y="504">labeling, comparing, evaluating,</text>
+      <text x="608"  y="520">red-teaming, reviewing</text>
+      <text x="864"  y="504">calibration,</text>
+      <text x="864"  y="520">safety findings</text>
+      <text x="1120" y="504">findings, managed review</text>
+    </g>
+  </g>
+</svg>

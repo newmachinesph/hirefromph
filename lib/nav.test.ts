@@ -45,7 +45,7 @@ describe("findNavNeighbours", () => {
   it("walks to the last live link in More and stops there", () => {
     // "For educators" shipped, so it is the last live link in More.
     expect(findNavNeighbours("/privacy").next).toEqual({ label: "For educators", href: "/educators" });
-    expect(findNavNeighbours("/privacy").prev).toEqual({ label: "Library", href: "/library" });
+    expect(findNavNeighbours("/privacy").prev).toEqual({ label: "Insights", href: "/insights" });
     expect(findNavNeighbours("/educators").next).toBeUndefined();
   });
 
@@ -135,8 +135,8 @@ describe("nav data", () => {
     expect(menuLinks().filter((l) => banned.test(l.desc ?? "")).map((l) => l.href)).toEqual([]);
   });
 
-  it("offers Library, Privacy and For educators as secondary links, without the pending ones", () => {
-    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/privacy", "/educators"]);
+  it("offers Library, Insights, Privacy and For educators as secondary links, without the pending ones", () => {
+    expect(SECONDARY_LINKS.map((l) => l.href)).toEqual(["/library", "/insights", "/privacy", "/educators"]);
   });
 });
 

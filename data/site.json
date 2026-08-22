@@ -177,6 +177,7 @@
       "links": [
         { "label": "Reality Check", "href": "/reality" },
         { "label": "Library", "href": "/library" },
+        { "label": "Insights", "href": "/insights" },
         { "label": "Privacy", "href": "/privacy" },
         { "label": "For educators", "href": "/educators" }
       ]

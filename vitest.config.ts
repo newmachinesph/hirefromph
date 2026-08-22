@@ -6,6 +6,8 @@ export default defineConfig({
   plugins: [react()],
   test: {
     environment: "jsdom",
+    // Component tests that render large data sets (22 ladders, 57 terms) can pass 5s on a loaded machine.
+    testTimeout: 15_000,
     globals: false,
     setupFiles: ["./vitest.setup.ts"],
     include: ["**/*.test.{ts,tsx}"],

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { NAV_GROUPS, isLive } from "@/lib/nav";
+import { listInsights } from "@/lib/insights";
 
 export const BASE_URL = "https://hirefrom.ph";
 
@@ -22,10 +23,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...NAV_GROUPS.flatMap((group) => group.links.filter(isLive).map((link) => link.href)),
   ].filter((href) => !EXCLUDED.has(href));
 
-  return Array.from(new Set(routes)).map((href) => ({
+  const pages = Array.from(new Set(routes)).map((href) => ({
     url: `${BASE_URL}${href === "/" ? "" : href}`,
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: href === "/" ? 1 : 0.7,
   }));
+
+  // Published articles: content/insights/<slug>/meta.json is the source of truth.
+  const articles = listInsights().map((insight) => ({
+    url: `${BASE_URL}${insight.href}`,
+    lastModified: new Date(`${insight.updated ?? insight.published}T00:00:00Z`),
+    changeFrequency: "yearly" as const,
+    priority: 0.6,
+  }));
+
+  return [...pages, ...articles];
 }

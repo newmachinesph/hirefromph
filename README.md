@@ -117,3 +117,22 @@ primitive (generated images are always captioned "AI-generated image"), and SVG 
 `docs/superpowers/specs/2026-08-21-ui-overhaul-design.md`; the review of what shipped is
 `DESIGN_REVIEW.md`. Shared conventions are in `BUILD_GUIDE.md` — **read it before building
 any page.**
+
+## Insights (articles)
+
+One folder per article, so the content can move to a database later without rewriting anything:
+
+```
+content/insights/<slug>/meta.json   # the future row: title, description, author, dates, sources, pull quotes…
+content/insights/<slug>/index.mdx   # the body (markdown + <Figure/>, <PullQuote/>, <Cite/>, <DataTable/>, <Aside/>)
+public/insights/<slug>/             # that article's assets only: hero.jpg, diagrams as .svg
+```
+
+The folder name is the slug and the URL (`/insights/<slug>`). `lib/insights.ts` loads and validates the folders; the rules include the site's honesty rule — a paragraph that states a number must carry a source link.
+
+```bash
+npm run verify:insights              # validate every article folder (also part of the vitest suite)
+npm run insights:images <slug> <rawId>=<name>   # place a generated photo from design/images/raw into the article folder
+```
+
+`/insights` lists published articles; `/insights/feed.xml` is the RSS feed; each article gets its own OpenGraph image and Article JSON-LD. Diagrams are authored with the `diagram-design` plugin (`design/diagrams/<id>.html` is the source of truth) and exported as bare SVG into the article folder, where the page inlines them.
