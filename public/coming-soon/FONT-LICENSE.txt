@@ -1,0 +1,4 @@
+Cabinet Grotesk — designed by Indian Type Foundry, distributed by Fontshare.
+Licensed under the ITF Free Font License (https://www.fontshare.com/licenses/itf-ffl).
+Self-hosted copies: Medium (500), Bold (700), Extrabold (800) as woff2; Bold as ttf for server-side OG image rendering.
+Downloaded 2026-08-21 from https://cdn.fontshare.com/.

@@ -90,7 +90,7 @@ export default async function SessionRunSheet({
                     <>
                       <br />
                       <a href={step.tool} className="kit-url">
-                        hirefrom.ph{step.tool}
+                        learn.hirefrom.ph{step.tool}
                       </a>
                     </>
                   )}

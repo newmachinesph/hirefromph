@@ -414,7 +414,7 @@ export function PlanWizard() {
                         .map((day) => ({
                           n: day.day,
                           title: day.task,
-                          desc: `Open ${day.tool} on hirefrom.ph`,
+                          desc: `Open ${day.tool} on learn.hirefrom.ph`,
                         })),
                     })
                   }

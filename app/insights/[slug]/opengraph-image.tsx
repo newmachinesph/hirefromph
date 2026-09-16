@@ -101,7 +101,7 @@ export default async function InsightOgImage({ params }: { params: Promise<{ slu
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 24, color: "#D6D7EA" }}>
               <div style={{ display: "flex" }}>{insight ? `${insight.minutes} min read · every figure linked to its source` : "Evidence-based essays"}</div>
-              <div style={{ display: "flex" }}>hirefrom.ph/insights</div>
+              <div style={{ display: "flex" }}>learn.hirefrom.ph/insights</div>
             </div>
           </div>
         </div>

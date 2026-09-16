@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { NAV_GROUPS, isLive } from "@/lib/nav";
 import { listInsights } from "@/lib/insights";
 
-export const BASE_URL = "https://hirefrom.ph";
+export const BASE_URL = "https://learn.hirefrom.ph";
 
 /**
  * Every content route, derived from `site.json.navGroups` so a new page can't

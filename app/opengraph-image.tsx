@@ -87,7 +87,7 @@ export default async function OpengraphImage() {
             color: "rgba(255,255,255,0.85)",
           }}
         >
-          <span style={{ fontWeight: 700 }}>hirefrom.ph</span>
+          <span style={{ fontWeight: 700 }}>learn.hirefrom.ph</span>
         </div>
       </div>
     ),
