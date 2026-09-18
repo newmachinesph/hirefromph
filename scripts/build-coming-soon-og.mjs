@@ -1,0 +1,56 @@
+// Regenerate the committed share image: node scripts/build-coming-soon-og.mjs
+// Uses the same local font and renderer as app/opengraph-image.tsx.
+import { readFile, writeFile } from "node:fs/promises";
+import { fileURLToPath } from "node:url";
+import { createElement as h } from "react";
+import { ImageResponse } from "next/og.js";
+
+const root = new URL("../", import.meta.url);
+const font = await readFile(new URL("app/fonts/CabinetGrotesk-Bold.ttf", root));
+const icon = await readFile(new URL("app/icon.svg", root));
+const purple = "#4B4EF6";
+const ink = "#0E1230";
+const box = (style, ...children) => h("div", { style: { display: "flex", ...style } }, ...children);
+const text = (value, style = {}) => box(style, value);
+const arrow = (color) => h("svg", { width: 18, height: 18, viewBox: "0 0 24 24", fill: "none" },
+  h("path", { d: "M5 19 19 5M5 5h14v14", stroke: color, strokeWidth: 2.5 }),
+);
+
+const image = new ImageResponse(
+  box({ width: "100%", height: "100%", background: "#FFFFFF", color: ink, fontFamily: "Cabinet", padding: 56, flexDirection: "column" },
+    box({ alignItems: "center", gap: 14 },
+      h("img", { src: `data:image/svg+xml;base64,${icon.toString("base64")}`, width: 40, height: 40, alt: "" }),
+      box({ fontSize: 32, letterSpacing: -1 }, text("hirefrom"), text(".ph", { color: purple })),
+    ),
+    box({ marginTop: 42, flex: 1, gap: 32 },
+      box({ flexDirection: "column", width: 600 },
+        box({ alignItems: "center", gap: 10, fontSize: 16, letterSpacing: 2 },
+          box({ width: 9, height: 9, borderRadius: "50%", background: purple }),
+          "A NEW CHAPTER · COMING SOON",
+        ),
+        box({ flexDirection: "column", marginTop: 22, fontSize: 82, lineHeight: 1.02, letterSpacing: -3 },
+          text("Great talent."), text("Right here."), text("Going places.", { color: purple }),
+        ),
+        text("Filipino talent. Global opportunity.", { fontSize: 24, color: "#4A4F66", marginTop: 26 }),
+      ),
+      box({ position: "relative", width: 456, height: 398, background: "#EEEDFF", borderRadius: 24, flexDirection: "column", overflow: "hidden" },
+        text("ROOTED IN THE PHILIPPINES", { position: "absolute", top: 26, left: 28, fontSize: 13, letterSpacing: 2 }),
+        box({ position: "absolute", width: 480, height: 155, left: -14, top: 126, border: "1px solid #C9C8FF", borderRadius: "50%", transform: "rotate(-30deg)" }),
+        box({ position: "absolute", width: 400, height: 125, left: 26, top: 141, border: "1px solid #C9C8FF", borderRadius: "50%", transform: "rotate(-30deg)" }),
+        text("ph", { position: "absolute", top: 65, left: 105, fontSize: 216, letterSpacing: -15, color: purple, transform: "rotate(-9deg)" }),
+        box({ position: "absolute", top: 75, left: 24, background: "#FFFFFF", padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(-7deg)", alignItems: "center", gap: 12 }, text("Filipino talent"), arrow(purple)),
+        box({ position: "absolute", top: 280, right: 24, background: purple, color: "#FFFFFF", padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(5deg)", alignItems: "center", gap: 12 }, arrow("#FFFFFF"), text("Global opportunity")),
+        text("A new connection is coming.", { position: "absolute", bottom: 22, left: 28, fontSize: 17 }),
+      ),
+    ),
+    box({ borderTop: "1px solid #E4E4EA", paddingTop: 18, justifyContent: "space-between", fontSize: 17 },
+      text("Built for Filipino potential.", { color: "#4A4F66" }),
+      text("hirefrom.ph", { color: purple }),
+    ),
+  ),
+  { width: 1200, height: 630, fonts: [{ name: "Cabinet", data: font, weight: 700, style: "normal" }] },
+);
+
+const output = fileURLToPath(new URL("public/coming-soon/og-image.png", root));
+await writeFile(output, Buffer.from(await image.arrayBuffer()));
+console.log(`Created ${output}`);
