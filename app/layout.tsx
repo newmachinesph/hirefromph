@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./globals.css";
 import { BASE_URL } from "./sitemap";
-import { inter, cabinet } from "@/lib/fonts";
+import { inter } from "@/lib/fonts";
 import { PathProvider } from "@/lib/path-context";
 import { CONSENT_SCRIPT, GA_ID } from "@/lib/consent";
 import {
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#4B4EF6",
+  themeColor: "#043882",
 };
 
 const jsonLd = {
@@ -88,7 +88,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${cabinet.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <script dangerouslySetInnerHTML={{ __html: CONSENT_SCRIPT }} />

@@ -10,7 +10,7 @@
 // BUMP `CACHE` whenever a non-hashed asset under public/ changes shape — a redesign,
 // a new photo set, a regenerated kit PDF. The activate handler deletes every other
 // hfph-* cache, so a bump is a full purge for returning visitors.
-const CACHE = "hfph-v2";
+const CACHE = "hfph-v3";
 
 self.addEventListener("install", (e) => {
   // Warm the shell so the very first offline hit still renders something.

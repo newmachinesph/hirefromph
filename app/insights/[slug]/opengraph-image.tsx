@@ -1,3 +1,4 @@
+import { BrandMark } from "@/components/site/brand-mark-og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
@@ -18,7 +19,7 @@ export function generateStaticParams() {
 export default async function InsightOgImage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const insight = getInsight(slug);
-  const cabinetBold = await readFile(join(process.cwd(), "app/fonts/CabinetGrotesk-Bold.ttf"));
+  const interBold = await readFile(join(process.cwd(), "app/fonts/Inter-Bold.woff"));
 
   let photo: string | null = null;
   if (insight) {
@@ -42,9 +43,9 @@ export default async function InsightOgImage({ params }: { params: Promise<{ slu
           height: "100%",
           display: "flex",
           position: "relative",
-          background: "#0E1230",
+          background: "#043882",
           color: "#FFFFFF",
-          fontFamily: "sans-serif",
+          fontFamily: "Inter",
         }}
       >
         {photo && (
@@ -61,7 +62,7 @@ export default async function InsightOgImage({ params }: { params: Promise<{ slu
           style={{
             position: "absolute",
             inset: 0,
-            background: "linear-gradient(180deg, rgba(14,18,48,0.35) 0%, rgba(14,18,48,0.72) 55%, rgba(14,18,48,0.94) 100%)",
+            background: "linear-gradient(180deg, rgba(4,56,130,0.35) 0%, rgba(4,56,130,0.72) 55%, rgba(4,56,130,0.94) 100%)",
           }}
         />
         <div
@@ -75,22 +76,16 @@ export default async function InsightOgImage({ params }: { params: Promise<{ slu
           }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <svg width={48} height={48} viewBox="0 0 32 32" fill="none" style={{ display: "flex" }}>
-              <rect x="6" y="3" width="4" height="26" rx="1" fill="#C9C8FF" />
-              <rect x="22" y="3" width="4" height="26" rx="1" fill="#C9C8FF" />
-              <rect x="10" y="5" width="12" height="4" fill="#FFFFFF" />
-              <rect x="10" y="14" width="12" height="4" fill="#FFFFFF" />
-              <rect x="10" y="23" width="12" height="4" fill="#FFFFFF" />
-            </svg>
-            <div style={{ display: "flex", fontSize: 24, letterSpacing: "0.14em", color: "#C9C8FF" }}>
-              HIRE FROM PH · {kicker}
+            <BrandMark size={48} />
+            <div style={{ display: "flex", fontSize: 24, letterSpacing: "0.14em", color: "#FCC449" }}>
+              HIREFROMPH · {kicker}
             </div>
           </div>
           <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
             <div
               style={{
                 display: "flex",
-                fontFamily: "Cabinet Grotesk",
+                fontFamily: "Inter",
                 fontSize: titleSize,
                 lineHeight: 1.05,
                 letterSpacing: "-0.02em",
@@ -107,6 +102,6 @@ export default async function InsightOgImage({ params }: { params: Promise<{ slu
         </div>
       </div>
     ),
-    { ...size, fonts: [{ name: "Cabinet Grotesk", data: cabinetBold, weight: 700, style: "normal" }] },
+    { ...size, fonts: [{ name: "Inter", data: interBold, weight: 700, style: "normal" }] },
   );
 }

@@ -15,7 +15,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 bg-paper py-3">
       <Container>
-        <div className="flex h-[72px] items-center justify-between gap-4 rounded-pill border border-line bg-paper px-4 sm:px-6">
+        <div className="flex h-[72px] items-center justify-between gap-2 min-[400px]:gap-4 rounded-pill border border-line bg-paper px-2 min-[400px]:px-4 sm:px-6">
           <Link href="/" className="shrink-0 rounded-md" aria-label="Hire From PH, the standard, not the discount — home">
             <Logo markSize={30} showTagline />
           </Link>

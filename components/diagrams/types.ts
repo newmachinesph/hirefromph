@@ -19,4 +19,4 @@ export const DIAGRAM_MIN_WIDTH = 560;
 
 export const INTER = "var(--font-inter), ui-sans-serif, system-ui, sans-serif";
 export const CABINET =
-  "var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif";
+  "var(--font-inter), ui-sans-serif, system-ui, sans-serif";

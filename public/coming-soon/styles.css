@@ -1,27 +1,28 @@
+@font-face { font-family: Inter; src: url("/coming-soon/Inter-Regular.woff") format("woff"); font-weight: 400; font-display: swap; }
 @font-face {
-  font-family: Cabinet;
-  src: url("/coming-soon/CabinetGrotesk-Extrabold.woff2") format("woff2");
+  font-family: Inter;
+  src: url("/coming-soon/Inter-Bold.woff") format("woff");
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   font-display: swap;
 }
 :root {
   --paper: #fff;
-  --ink: #0e1230;
-  --muted: #4a4f66;
-  --primary: #4b4ef6;
-  --tint: #eeedff;
-  --line: #e4e4ea;
+  --ink: #161A24;
+  --muted: #464C5C;
+  --primary: #043882;
+  --tint: #EAF0FB;
+  --line: #E3E5EA;
 }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Inter, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-underline-offset: 4px; }
 a:focus-visible { outline: 3px solid var(--primary); outline-offset: 6px; }
 .skip-link { position: absolute; left: 20px; top: -80px; z-index: 2; padding: 16px; background: var(--paper); }
 .skip-link:focus { top: 12px; }
 .page { max-width: 1440px; padding: 0 64px; margin: auto; }
 .header { min-height: 112px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
-.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font: 800 29px Cabinet, Arial, sans-serif; letter-spacing: -1px; }
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font: 800 29px Inter, Arial, sans-serif; letter-spacing: -1px; }
 .brand-domain { color: var(--primary); }
 .learn-link { display: flex; gap: 20px; align-items: center; font-size: 14px; font-weight: 700; text-decoration: none; }
 .learn-link span { font-size: 22px; color: var(--primary); }
@@ -29,28 +30,28 @@ main:focus { outline: none; }
 .hero { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; align-items: center; padding: 76px 0 72px; }
 .status { display: flex; align-items: center; gap: 10px; margin: 0 0 28px; font-size: 12px; font-weight: 700; letter-spacing: 1.1px; text-transform: uppercase; }
 .status > span { height: 8px; width: 8px; flex: 0 0 8px; border-radius: 50%; background: var(--primary); }
-h1 { margin: 0; font: 800 clamp(56px, 5.6vw, 82px)/1.02 Cabinet, Arial, sans-serif; letter-spacing: -2.8px; }
+h1 { margin: 0; font: 800 clamp(56px, 5.6vw, 82px)/1.02 Inter, Arial, sans-serif; letter-spacing: -2.8px; }
 h1 > span { color: var(--primary); }
 .description { max-width: 435px; margin: 28px 0 0; color: var(--muted); font-size: 17px; line-height: 1.7; }
 .invitation { margin: 25px 0 22px; font-size: 15px; line-height: 1.7; }
 .button { display: inline-flex; align-items: center; justify-content: space-between; gap: 30px; padding: 18px 22px; background: var(--primary); border-radius: 10px; color: var(--paper); text-decoration: none; font-size: 15px; font-weight: 700; transition: background 150ms; }
-.button:hover { background: #3634d8; }
+.button:hover { background: #032A62; }
 .button span { font-size: 22px; line-height: 1; }
 .button-note { color: var(--muted); margin: 13px 0 0; font-size: 12px; }
 .connection { background: var(--tint); border-radius: 24px; overflow: hidden; align-self: stretch; display: flex; flex-direction: column; min-height: 520px; max-height: 620px; }
 .connection-top { display: flex; align-items: center; justify-content: space-between; padding: 29px 30px; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
 .connection-top > span:last-child { color: var(--primary); font-size: 24px; }
 .connection-art { position: relative; flex: 1; display: grid; place-items: center; isolation: isolate; }
-.monogram { position: relative; color: var(--primary); font: 800 clamp(155px, 18vw, 248px)/1 Cabinet, Arial, sans-serif; letter-spacing: -18px; transform: rotate(-9deg); padding-right: 22px; }
+.monogram { position: relative; color: var(--primary); font: 800 clamp(155px, 18vw, 248px)/1 Inter, Arial, sans-serif; letter-spacing: -18px; transform: rotate(-9deg); padding-right: 22px; }
 .spark { position: absolute; font: 65px Arial, sans-serif; right: -30px; top: 0; letter-spacing: 0; }
-.orbit { position: absolute; width: 120%; height: 45%; border: 1px solid #c9c8ff; border-radius: 50%; z-index: -1; transform: rotate(-35deg); }
+.orbit { position: absolute; width: 120%; height: 45%; border: 1px solid #AFC5EE; border-radius: 50%; z-index: -1; transform: rotate(-35deg); }
 .orbit-two { transform: rotate(-35deg) scale(.82); }
 .talent-tag, .opportunity-tag { position: absolute; z-index: 1; display: flex; gap: 25px; align-items: center; padding: 14px 18px; border-radius: 8px; font-size: 13px; font-weight: 700; }
 .talent-tag { top: 8%; left: 7%; background: var(--paper); transform: rotate(-7deg); }
 .talent-tag span { color: var(--primary); font-size: 20px; }
 .opportunity-tag { right: 6%; bottom: 8%; background: var(--primary); color: var(--paper); transform: rotate(5deg); }
 .opportunity-tag span { font-size: 20px; }
-.connection-bottom { border-top: 1px solid #c9c8ff; padding: 25px 30px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
+.connection-bottom { border-top: 1px solid #AFC5EE; padding: 25px 30px; display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13px; }
 .connection-dot { width: 8px; height: 8px; background: var(--primary); border-radius: 50%; }
 .learning-note { display: flex; align-items: center; gap: 20px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
 .learning-icon { flex: 0 0 46px; height: 46px; display: grid; place-items: center; background: var(--tint); border-radius: 12px; color: var(--primary); font-size: 24px; }

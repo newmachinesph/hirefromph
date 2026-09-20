@@ -1,10 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-  <rect width="32" height="32" rx="7" fill="#4B4EF6"/>
-  <g fill="#FFFFFF" transform="translate(16 16) scale(0.78) translate(-16 -16)">
-    <rect x="6" y="3" width="4" height="26" rx="1"/>
-    <rect x="22" y="3" width="4" height="26" rx="1"/>
-    <rect x="10" y="5" width="12" height="4"/>
-    <rect x="10" y="14" width="12" height="4"/>
-    <rect x="10" y="23" width="12" height="4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <!-- HireFromPH mark: two bamboo culms joined by a golden bridge. -->
+  <rect width="256" height="256" rx="56" fill="#043882"/>
+  <g fill="#FEFBF5">
+    <!-- left culm -->
+    <path d="M62 62h30c-3 9-3 20 0 30v6c-3 9-3 20 0 30v6c-3 9-3 20 0 30v6c-3 9-3 20 0 30H62c3-10 3-20 0-30v-6c3-10 3-20 0-30v-6c3-10 3-20 0-30v-6c3-10 3-20 0-30z"/>
+    <!-- right culm -->
+    <path d="M164 62h30c-3 9-3 20 0 30v6c-3 9-3 20 0 30v6c-3 9-3 20 0 30v6c-3 9-3 20 0 30h-30c3-10 3-20 0-30v-6c3-10 3-20 0-30v-6c3-10 3-20 0-30v-6c3-10 3-20 0-30z"/>
+  </g>
+  <!-- culm nodes -->
+  <g stroke="#043882" stroke-width="5" stroke-linecap="round">
+    <path d="M62 98q15 4 30 0M62 134q15 4 30 0M62 170q15 4 30 0"/>
+    <path d="M164 98q15 4 30 0M164 134q15 4 30 0M164 170q15 4 30 0"/>
+  </g>
+  <!-- golden bridge -->
+  <path d="M92 130c20-22 52-22 72 0v18c-20-20-52-20-72 0z" fill="#FCC449"/>
+  <!-- leaves -->
+  <g fill="#FCC449">
+    <path d="M60 86c-14-8-22-14-24-26 12 2 20 10 26 22z"/>
+    <path d="M60 110c-8-4-14-8-16-16 8 2 12 6 16 14z"/>
+    <path d="M196 86c14-8 22-14 24-26-12 2-20 10-26 22z"/>
+    <path d="M196 110c8-4 14-8 16-16-8 2-12 6-16 14z"/>
   </g>
 </svg>

@@ -15,16 +15,16 @@ const PX = 144;
 const px = (n) => n / PX;
 
 export const COLORS = {
-  ink: "0E1230",
-  inkSoft: "4A4F66",
-  inkFaint: "6B7087",
+  ink: "161A24",
+  inkSoft: "464C5C",
+  inkFaint: "5F6575",
   paper: "FFFFFF",
-  band: "F7F6FF",
-  tint: "EEEDFF",
-  primary: "4B4EF6",
-  primarySoft: "C9C8FF",
+  band: "F3F4F6",
+  tint: "EAF0FB",
+  primary: "043882",
+  primarySoft: "AFC5EE",
   onNavy: "FFFFFF",
-  onNavySoft: "D6D7EA",
+  onNavySoft: "EAF0FB",
 };
 
 const FONT = "Inter";

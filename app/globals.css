@@ -2,58 +2,62 @@
 
 /* ------------------------------------------------------------------ */
 /*  Hire From PH — design tokens                                       */
-/*  Spec: docs/superpowers/specs/2026-08-21-ui-overhaul-design.md §4   */
-/*  Inter (text) + Cabinet Grotesk (display). Light only.              */
+/*  Branding shared with hirefromphjobs-frontend.                    */
+/*  Inter throughout. Navy and gold. Light only.                     */
 /* ------------------------------------------------------------------ */
 
 :root {
   /* Surfaces */
   --paper: #FFFFFF;
-  --band: #F7F6FF;
-  --tint: #EEEDFF;
+  --band: #F3F4F6;
+  --tint: #EAF0FB;
   --card: #FFFFFF;
 
   /* Ink */
-  --ink: #0E1230;
-  --ink-soft: #4A4F66;
-  --ink-faint: #6B7087;
-  --on-navy: #F7F6FF;
+  --ink: #161A24;
+  --ink-soft: #464C5C;
+  --ink-faint: #5F6575;
+  --on-navy: #FFFFFF;
 
   /* Lines */
-  --line: #E4E4EA;
-  --line-strong: #CFCFD8;
-  --control: #858A9E;
+  --line: #E3E5EA;
+  --line-strong: #C9CCD4;
+  --control: #767C8A;
 
   /* Primary */
-  --primary: #4B4EF6;
-  --primary-deep: #3634D8;
-  --primary-tint: #EEEDFF;
-  --primary-soft: #C9C8FF;
+  --primary: #043882;
+  --primary-deep: #032A62;
+  --primary-tint: #EAF0FB;
+  --primary-soft: #AFC5EE;
+
+  --gold: #FCC449;
+  --gold-deep: #E0A61E;
+  --gold-tint: #FFF6DA;
 
   /* Semantic accents. Bare name = deep/text value (AA on paper and on its tint).
      *-fill = vibrant shape colour (ink text only). *-tint = pale surface. */
-  --verified: #067647;
-  --verified-fill: #12B76A;
-  --verified-tint: #E6F7EE;
-  --caution: #9A5B00;
-  --caution-fill: #F5A623;
-  --caution-tint: #FFF4DB;
-  --info: #026AA2;
-  --info-fill: #0BA5EC;
-  --info-tint: #E0F2FE;
-  --coral: #B42318;
-  --coral-fill: #FF5A5F;
-  --coral-tint: #FFECEB;
+  --verified: #1B6B3F;
+  --verified-fill: #4CB77A;
+  --verified-tint: #E6F5EC;
+  --caution: #7A5606;
+  --caution-fill: #FCC449;
+  --caution-tint: #FFF6DA;
+  --info: #1E5AA5;
+  --info-fill: #86B4EA;
+  --info-tint: #E8F0FB;
+  --coral: #B3261E;
+  --coral-fill: #F09B96;
+  --coral-tint: #FCE9E7;
 
   /* Shape */
-  --r-sm: 8px;
-  --r-md: 12px;
-  --r-lg: 20px;
+  --r-sm: 6px;
+  --r-md: 8px;
+  --r-lg: 12px;
   --r-pill: 999px;
 
   /* Depth — borders carry hierarchy; shadows are for floating layers only */
-  --shadow-sm: 0 1px 2px rgb(14 18 48 / 0.06);
-  --shadow-md: 0 8px 24px rgb(14 18 48 / 0.08);
+  --shadow-sm: 0 1px 2px rgb(22 26 36 / 0.06), 0 1px 3px rgb(22 26 36 / 0.08);
+  --shadow-md: 0 8px 24px -8px rgb(22 26 36 / 0.18);
 
   /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
@@ -83,6 +87,9 @@
   --color-primary-deep: var(--primary-deep);
   --color-primary-tint: var(--primary-tint);
   --color-primary-soft: var(--primary-soft);
+  --color-gold: var(--gold);
+  --color-gold-deep: var(--gold-deep);
+  --color-gold-tint: var(--gold-tint);
   --color-verified: var(--verified);
   --color-verified-fill: var(--verified-fill);
   --color-verified-tint: var(--verified-tint);
@@ -97,7 +104,7 @@
   --color-coral-tint: var(--coral-tint);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-cabinet), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
   /* Wipe Tailwind's shipped scale (xs…4xl) so `rounded-2xl` cannot resolve;

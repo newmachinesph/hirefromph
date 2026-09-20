@@ -1,13 +1,14 @@
+import { BrandMark } from "@/components/site/brand-mark-og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "Hire From PH — Be the reason they hire from the Philippines.";
+export const alt = "HireFromPH — Be the reason they hire from the Philippines.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 export default async function OpengraphImage() {
-  const cabinetBold = await readFile(join(process.cwd(), "app/fonts/CabinetGrotesk-Bold.ttf"));
+  const interBold = await readFile(join(process.cwd(), "app/fonts/Inter-Bold.woff"));
 
   return new ImageResponse(
     (
@@ -19,20 +20,14 @@ export default async function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px",
-          background: "#4B4EF6",
+          background: "#043882",
           color: "#FFFFFF",
-          fontFamily: "sans-serif",
+          fontFamily: "Inter",
         }}
       >
         {/* brand row */}
         <div style={{ display: "flex", alignItems: "center", gap: 22 }}>
-          <svg width={82} height={82} viewBox="0 0 32 32" fill="none" style={{ display: "flex" }}>
-            <rect x="6" y="3" width="4" height="26" rx="1" fill="#FFFFFF" />
-            <rect x="22" y="3" width="4" height="26" rx="1" fill="#FFFFFF" />
-            <rect x="10" y="5" width="12" height="4" fill="#FFFFFF" />
-            <rect x="10" y="14" width="12" height="4" fill="#FFFFFF" />
-            <rect x="10" y="23" width="12" height="4" fill="#FFFFFF" />
-          </svg>
+          <BrandMark size={82} />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div
               style={{
@@ -42,7 +37,7 @@ export default async function OpengraphImage() {
                 lineHeight: 1,
               }}
             >
-              <span>Hire From PH</span>
+              <span>HireFromPH</span>
             </div>
             <div
               style={{
@@ -65,7 +60,7 @@ export default async function OpengraphImage() {
             style={{
               display: "flex",
               flexWrap: "wrap",
-              fontFamily: "Cabinet Grotesk",
+              fontFamily: "Inter",
               fontSize: 68,
               fontWeight: 700,
               lineHeight: 1.05,
@@ -91,6 +86,6 @@ export default async function OpengraphImage() {
         </div>
       </div>
     ),
-    { ...size, fonts: [{ name: "Cabinet Grotesk", data: cabinetBold, weight: 700, style: "normal" }] },
+    { ...size, fonts: [{ name: "Inter", data: interBold, weight: 700, style: "normal" }] },
   );
 }

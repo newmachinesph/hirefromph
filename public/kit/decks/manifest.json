@@ -1,6 +1,6 @@
 {
   "hash": "1203bb24d5a72f8dfc945242b6650fe263ba132baa0985c1fc91769e39d56a26",
-  "builtAt": "2026-08-21",
+  "builtAt": "2026-09-20",
   "decks": [
     {
       "id": "master",
@@ -12,7 +12,7 @@
         "presenter": "kit/decks/master-presenter.pptx"
       },
       "bytes": {
-        "pdf": 1238639
+        "pdf": 1311583
       }
     },
     {
@@ -25,7 +25,7 @@
         "presenter": "kit/decks/session-ask-well-presenter.pptx"
       },
       "bytes": {
-        "pdf": 443653
+        "pdf": 501070
       }
     },
     {
@@ -38,7 +38,7 @@
         "presenter": "kit/decks/session-deconstruct-resume-presenter.pptx"
       },
       "bytes": {
-        "pdf": 434143
+        "pdf": 490748
       }
     },
     {
@@ -51,7 +51,7 @@
         "presenter": "kit/decks/session-vet-opportunity-presenter.pptx"
       },
       "bytes": {
-        "pdf": 426683
+        "pdf": 480855
       }
     }
   ]
