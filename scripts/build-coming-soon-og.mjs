@@ -9,6 +9,7 @@ const root = new URL("../", import.meta.url);
 const font = await readFile(new URL("app/fonts/Inter-Bold.woff", root));
 const icon = await readFile(new URL("app/icon.svg", root));
 const navy = "#043882";
+const gold = "#FCC449";
 const ink = "#161A24";
 const box = (style, ...children) => h("div", { style: { display: "flex", ...style } }, ...children);
 const text = (value, style = {}) => box(style, value);
@@ -20,12 +21,12 @@ const image = new ImageResponse(
   box({ width: "100%", height: "100%", background: "#FFFFFF", color: ink, fontFamily: "Inter", padding: 56, flexDirection: "column" },
     box({ alignItems: "center", gap: 14 },
       h("img", { src: `data:image/svg+xml;base64,${icon.toString("base64")}`, width: 40, height: 40, alt: "" }),
-      box({ fontSize: 32, letterSpacing: -1 }, text("hirefrom"), text(".ph", { color: navy })),
+      box({ fontSize: 32, letterSpacing: -1 }, text("HireFrom"), text("PH", { color: navy })),
     ),
     box({ marginTop: 42, flex: 1, gap: 32 },
       box({ flexDirection: "column", width: 600 },
         box({ alignItems: "center", gap: 10, fontSize: 16, letterSpacing: 2 },
-          box({ width: 9, height: 9, borderRadius: "50%", background: navy }),
+          box({ width: 9, height: 9, borderRadius: "50%", background: gold }),
           "A NEW CHAPTER · COMING SOON",
         ),
         box({ flexDirection: "column", marginTop: 22, fontSize: 82, lineHeight: 1.02, letterSpacing: -3 },
@@ -33,13 +34,11 @@ const image = new ImageResponse(
         ),
         text("Filipino talent. Global opportunity.", { fontSize: 24, color: "#464C5C", marginTop: 26 }),
       ),
-      box({ position: "relative", width: 456, height: 398, background: "#EAF0FB", borderRadius: 24, flexDirection: "column", overflow: "hidden" },
+      box({ position: "relative", width: 456, height: 398, background: navy, color: "#FFFFFF", borderRadius: 12, flexDirection: "column", overflow: "hidden" },
         text("ROOTED IN THE PHILIPPINES", { position: "absolute", top: 26, left: 28, fontSize: 13, letterSpacing: 2 }),
-        box({ position: "absolute", width: 480, height: 155, left: -14, top: 126, border: "1px solid #AFC5EE", borderRadius: "50%", transform: "rotate(-30deg)" }),
-        box({ position: "absolute", width: 400, height: 125, left: 26, top: 141, border: "1px solid #AFC5EE", borderRadius: "50%", transform: "rotate(-30deg)" }),
-        text("ph", { position: "absolute", top: 65, left: 105, fontSize: 216, letterSpacing: -15, color: navy, transform: "rotate(-9deg)" }),
-        box({ position: "absolute", top: 75, left: 24, background: "#FFFFFF", padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(-7deg)", alignItems: "center", gap: 12 }, text("Filipino talent"), arrow(navy)),
-        box({ position: "absolute", top: 280, right: 24, background: navy, color: "#FFFFFF", padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(5deg)", alignItems: "center", gap: 12 }, arrow("#FFFFFF"), text("Global opportunity")),
+        h("img", { src: `data:image/svg+xml;base64,${icon.toString("base64")}`, width: 216, height: 216, alt: "", style: { position: "absolute", top: 88, left: 120 } }),
+        box({ position: "absolute", top: 62, left: 24, background: "#FFFFFF", color: ink, padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(-7deg)", alignItems: "center", gap: 12 }, text("Filipino talent"), arrow(navy)),
+        box({ position: "absolute", top: 280, right: 24, background: gold, color: navy, padding: "12px 18px", borderRadius: 8, fontSize: 18, transform: "rotate(5deg)", alignItems: "center", gap: 12 }, arrow(navy), text("Global opportunity")),
         text("A new connection is coming.", { position: "absolute", bottom: 22, left: 28, fontSize: 17 }),
       ),
     ),
