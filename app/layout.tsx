@@ -17,12 +17,12 @@ import {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Hire From PH — Be the reason they hire from the Philippines.",
-    template: "%s · Hire From PH",
+    default: "HireFromPH — Be the reason they hire from the Philippines.",
+    template: "%s · HireFromPH",
   },
   description:
     "Free, open learning for Filipino online professionals: eleven ordered steps, twenty-two niches, and a source under every number.",
-  applicationName: "Hire From PH",
+  applicationName: "HireFromPH",
   keywords: [
     "online jobs Philippines",
     "online career Philippines",
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Hire From PH — Build the online career you keep.",
+    title: "HireFromPH — Build the online career you keep.",
     description:
       "Free, open learning for Filipino online professionals. Eleven ordered steps, and a link to the source under every number.",
     url: BASE_URL,
-    siteName: "Hire From PH",
+    siteName: "HireFromPH",
     locale: "en_PH",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hire From PH — Build the online career you keep.",
+    title: "HireFromPH — Build the online career you keep.",
     description:
       "Free, open learning for Filipino online professionals. Eleven ordered steps, and a link to the source under every number.",
   },
@@ -63,7 +63,7 @@ const jsonLd = {
     {
       "@type": "Organization",
       "@id": `${BASE_URL}/#org`,
-      name: "Hire From PH",
+      name: "HireFromPH",
       url: BASE_URL,
       description:
         "An open, anonymous, non-commercial learning platform that helps Filipinos build an independent online career.",
@@ -73,7 +73,7 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
-      name: "Hire From PH",
+      name: "HireFromPH",
       inLanguage: "en-PH",
       description:
         "Open learning for Filipino online professionals: AI, remote work, direct clients, pay, and the skills that make you layoff-proof.",

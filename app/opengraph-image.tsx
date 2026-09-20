@@ -37,7 +37,8 @@ export default async function OpengraphImage() {
                 lineHeight: 1,
               }}
             >
-              <span>HireFromPH</span>
+              <span>HireFrom</span>
+              <span style={{ color: "#FCC449" }}>PH</span>
             </div>
             <div
               style={{

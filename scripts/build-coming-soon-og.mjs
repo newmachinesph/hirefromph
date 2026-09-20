@@ -25,9 +25,9 @@ const image = new ImageResponse(
     ),
     box({ marginTop: 42, flex: 1, gap: 32 },
       box({ flexDirection: "column", width: 600 },
-        box({ alignItems: "center", gap: 10, fontSize: 16, letterSpacing: 2 },
+        box({ alignItems: "center", gap: 10, fontSize: 20, letterSpacing: 2 },
           box({ width: 9, height: 9, borderRadius: "50%", background: gold }),
-          "A NEW CHAPTER · COMING SOON",
+          "COMING SOON",
         ),
         box({ flexDirection: "column", marginTop: 22, fontSize: 82, lineHeight: 1.02, letterSpacing: -3 },
           text("Great talent."), text("Right here."), text("Going places.", { color: navy }),
@@ -50,6 +50,11 @@ const image = new ImageResponse(
   { width: 1200, height: 630, fonts: [{ name: "Inter", data: font, weight: 700, style: "normal" }] },
 );
 
-const output = fileURLToPath(new URL("public/coming-soon/og-image.png", root));
-await writeFile(output, Buffer.from(await image.arrayBuffer()));
-console.log(`Created ${output}`);
+const bytes = Buffer.from(await image.arrayBuffer());
+// Keep the original URL working for links already shared; new metadata uses
+// a distinct filename so social crawlers can fetch the current brand artwork.
+for (const filename of ["hirefromph-coming-soon-v3.png", "og-image.png"]) {
+  const output = fileURLToPath(new URL(`public/coming-soon/${filename}`, root));
+  await writeFile(output, bytes);
+  console.log(`Created ${output}`);
+}
