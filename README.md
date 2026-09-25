@@ -29,6 +29,12 @@ npm run kit:decks                    # re-render public/kit/decks/* (PDF + edita
 npm run kit:icons                    # lift the generated method icons to transparent PNGs in public/images/deck/icons/
 ```
 
+For production monitoring, set `SENTRY_DSN` and `NEXT_PUBLIC_SENTRY_DSN`
+from the marketing site's Sentry project. Optional source map upload needs
+`SENTRY_AUTH_TOKEN`, `SENTRY_ORG`, and `SENTRY_PROJECT` at build time. Set
+`R2_PUBLIC_URL` only after public brand artwork is available on that CDN;
+`/brand/*` then redirects there. See `.env.example`.
+
 `verify:kit` (checks the kit PDFs are current) exists but is not wired into `verify:all` yet —
 run it by hand after touching `data/educators.json`. A voice-cadence linter and a screenshot/
 measurement pipeline are planned but not yet scripted in `package.json`.

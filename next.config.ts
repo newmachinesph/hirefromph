@@ -1,7 +1,24 @@
 import type { NextConfig } from "next";
 import createMDX from "@next/mdx";
+import { withSentryConfig } from "@sentry/nextjs/config";
 
 const isDev = process.env.NODE_ENV !== "production";
+const sentryOrigin = (() => {
+  try {
+    const url = new URL(process.env.NEXT_PUBLIC_SENTRY_DSN ?? "");
+    return url.protocol === "https:" ? ` ${url.origin}` : "";
+  } catch {
+    return "";
+  }
+})();
+const publicAssets = (() => {
+  if (!process.env.R2_PUBLIC_URL) return undefined;
+  const url = new URL(process.env.R2_PUBLIC_URL);
+  if (url.protocol !== "https:" || url.search || url.hash) {
+    throw new Error("R2_PUBLIC_URL must be an HTTPS brand asset base URL");
+  }
+  return url.toString().replace(/\/+$/, "");
+})();
 
 // Sent on every route. CSP keeps 'unsafe-inline' for scripts because Next injects
 // inline hydration/bootstrap scripts and there is no per-request nonce middleware
@@ -20,7 +37,7 @@ const securityHeaders = [
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https:",
       "font-src 'self' data:",
-      "connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com",
+      `connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com${sentryOrigin}`,
       "frame-src 'none'",
       "frame-ancestors 'none'",
       "base-uri 'self'",
@@ -47,6 +64,9 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...(publicAssets
+        ? [{ source: "/brand/:path*", destination: `${publicAssets}/brand/:path*`, permanent: false }]
+        : []),
       {
         source: "/",
         has: [{ type: "host", value: "www\\.hirefrom\\.ph" }],
@@ -100,4 +120,12 @@ const withMDX = createMDX({
   },
 });
 
-export default withMDX(nextConfig);
+const config = withMDX(nextConfig);
+export default process.env.SENTRY_AUTH_TOKEN && process.env.SENTRY_ORG && process.env.SENTRY_PROJECT
+  ? withSentryConfig(config, {
+      org: process.env.SENTRY_ORG,
+      project: process.env.SENTRY_PROJECT,
+      authToken: process.env.SENTRY_AUTH_TOKEN,
+      silent: true,
+    })
+  : config;
