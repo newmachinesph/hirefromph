@@ -1,5 +1,11 @@
 # Move learning to learn.hirefrom.ph
 
+> **Current state (25 September 2026):** The jobs app now serves `hirefrom.ph`
+> from the `hirefrom-beta` Vercel project. This learning project serves only
+> `learn.hirefrom.ph`. The jobs app owns redirects from old apex learning paths
+> to Learn. The coming-soon page and apex host rules below describe the earlier
+> release and are kept as historical deployment notes.
+
 This repository serves both sites from one Vercel project. No changes are needed
 in `hirefromphjobs-frontend` for this release.
 

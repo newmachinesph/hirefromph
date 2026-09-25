@@ -58,7 +58,6 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
-      { source: "/coming-soon/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex" }] },
       { source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache" }] },
     ];
   },
@@ -67,47 +66,8 @@ const nextConfig: NextConfig = {
       ...(publicAssets
         ? [{ source: "/brand/:path*", destination: `${publicAssets}/brand/:path*`, permanent: false }]
         : []),
-      {
-        source: "/",
-        has: [{ type: "host", value: "www\\.hirefrom\\.ph" }],
-        destination: "https://hirefrom.ph/",
-        permanent: true,
-      },
-      {
-        // The public file is also a local preview; production has one canonical URL.
-        source: "/coming-soon/index.html",
-        has: [{ type: "host", value: "(?:www\\.|learn\\.)?hirefrom\\.ph" }],
-        destination: "https://hirefrom.ph/",
-        permanent: true,
-      },
-      {
-        // Keep the apex homepage, crawler files, assets and worker local. Everything
-        // else moves to the same path on Learn, including downloads and deep links.
-        // `.+` deliberately excludes `/`. Next preserves the query string.
-        source: "/:path((?!_next(?:/|$)|coming-soon(?:/|$)|robots\\.txt$|sitemap\\.xml$|sw\\.js$|icon\\.svg$|favicon\\.ico$).+)",
-        has: [{ type: "host", value: "(?:www\\.)?hirefrom\\.ph" }],
-        destination: "https://learn.hirefrom.ph/:path",
-        permanent: true,
-      },
+      { source: "/coming-soon/:path*", destination: "/", permanent: true },
     ];
-  },
-  async rewrites() {
-    return {
-      // beforeFiles overrides the existing static learning homepage only on the
-      // main domain. Learn, localhost and Vercel previews retain the learning app.
-      beforeFiles: [
-        ["/", "/coming-soon/index.html"],
-        ["/robots.txt", "/coming-soon/robots.txt"],
-        ["/sitemap.xml", "/coming-soon/sitemap.xml"],
-        ["/sw.js", "/coming-soon/retire-sw.js"],
-      ].map(([source, destination]) => ({
-        source,
-        destination,
-        has: [{ type: "host" as const, value: "(?:www\\.)?hirefrom\\.ph" }],
-      })),
-      afterFiles: [],
-      fallback: [],
-    };
   },
 };
 
