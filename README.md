@@ -1,6 +1,8 @@
 # Hire From PH — Online Career Portal
 
-**Hire From PH** — *Be the reason they hire from the Philippines.*: every step compounds on the last, and every skill you gain is one you keep. A light-mode learning portal that takes Filipinos from zero to a thriving remote career as an **online professional** (never an "assistant"). Next.js 16 · React 19 · Tailwind v4 · `motion`. Frontend only — all content lives in `data/*.json`, no backend.
+Hire From PH (*Be the reason they hire from the Philippines.*) is a light-mode learning portal that takes Filipinos from zero to a remote career as an **online professional** (never an "assistant"). Every step compounds on the last, and every skill you gain is one you keep. It is for Filipinos starting or growing remote work, and for educators who run sessions for them. It is deployed as `learn.hirefrom.ph`.
+
+**Stack:** Next.js 16 (App Router) · React 19 · Tailwind CSS v4 · `motion` · MDX · Sentry · Vitest. Frontend only: all content lives in `data/*.json`, with no backend or database.
 
 ## The idea: path-gated depth
 
@@ -142,3 +144,21 @@ npm run insights:images <slug> <rawId>=<name>   # place a generated photo from d
 ```
 
 `/insights` lists published articles; `/insights/feed.xml` is the RSS feed; each article gets its own OpenGraph image and Article JSON-LD. Diagrams are authored with the `diagram-design` plugin (`design/diagrams/<id>.html` is the source of truth) and exported as bare SVG into the article folder, where the page inlines them.
+
+## Checks
+
+```bash
+npm run lint          # eslint
+npx tsc --noEmit      # type check
+npm test              # node --test math suites + vitest
+npm run verify:all    # contrast, links, claims, eslint, tsc, primitives
+npm run build         # production build
+```
+
+## Deployment
+
+The app deploys to Vercel and serves `learn.hirefrom.ph`; the jobs app owns `hirefrom.ph` and redirects old apex learning paths here. Host and path rules live in code, and the history is in [docs/domain-migration.md](docs/domain-migration.md). Sentry and the optional brand CDN are configured through the variables in `.env.example`.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
